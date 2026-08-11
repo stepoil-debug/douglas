@@ -8,6 +8,7 @@ from datetime import date, datetime
 from zoneinfo import ZoneInfo
 
 from tennis_quant.config import ROOT, load_model_config
+from tennis_quant.history import record_analysis_history
 from tennis_quant.pipeline import analyze_day
 from tennis_quant.providers.public_tennis import PublicTennisProvider
 from tennis_quant.results import aggregate_metrics, reconcile_recent
@@ -39,7 +40,6 @@ def _diagnostics(payload: dict, cfg: dict, provider: PublicTennisProvider) -> No
         odd = (row.get("selected_market") or {}).get("best_odd")
         if odd is None or not (s["min_odd"] <= float(odd) <= s["max_odd"]):
             continue
-        # Near-miss is diagnostic only: fewer failed gates first, then strongest confidence.
         reasons = list(row.get("reject_reasons", []) or [])
         near.append({
             "selected_player": row.get("selected_player"),
@@ -74,6 +74,21 @@ def main() -> None:
     provider = PublicTennisProvider(ROOT)
     payload = analyze_day(provider, target_date, cfg, ROOT, args.h2h_budget)
 
+    # The provider caches the day, so these calls do not scrape the source again.
+    fixtures = provider.fixtures(target_date)
+    odds_by_match = provider.odds(target_date)
+    all_candidates = (payload.get("approved", []) or []) + (payload.get("shadow", []) or []) + (payload.get("rejected", []) or [])
+    ledger = record_analysis_history(
+        ROOT,
+        target_date.isoformat(),
+        fixtures,
+        odds_by_match,
+        all_candidates,
+        cfg["model_version"],
+        provider.live_source,
+    )
+    payload["history_summary"] = ledger.get("summary", {})
+
     # Result reconciliation is best-effort because public result sources can lag. It never blocks
     # today's pre-match analysis if yesterday's page is unavailable.
     try:
@@ -88,7 +103,6 @@ def main() -> None:
     payload["source_requests"] = provider.source_requests
     _diagnostics(payload, cfg, provider)
 
-    # Rewrite both views after diagnostics/metrics so the repository and dashboard tell the same story.
     write_json(ROOT / "data" / "daily" / f"{target_date.isoformat()}.json", payload)
     write_json(ROOT / "dashboard" / "data.json", payload)
 
@@ -108,6 +122,7 @@ def main() -> None:
         "source_requests": provider.source_requests,
         "unresolved_players": payload.get("unresolved_players"),
         "bootstrap": payload.get("bootstrap"),
+        "history": payload.get("history_summary"),
         "results_reconciled": len(resolved),
         "resolved_approved_total": metrics["total_approved_resolved"],
     }, indent=2, ensure_ascii=False))
