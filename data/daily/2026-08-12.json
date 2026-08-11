@@ -1,0 +1,29 @@
+{
+  "approved": [],
+  "bootstrap": {
+    "completed": true,
+    "end": "2026-08-10",
+    "matches": 2249,
+    "source": "sackmann-public-mirror-v2",
+    "source_reset": false,
+    "start": "2025-08-11",
+    "status": "READY"
+  },
+  "candidate_sides": 0,
+  "data_mode": "NO_API",
+  "data_sources": [
+    "OddsHarvester/OddsPortal",
+    "JeffSackmann/tennis_atp"
+  ],
+  "date": "2026-08-12",
+  "deep_analyzed_matches": 0,
+  "fixtures_analyzed": 1,
+  "generated_at_timezone": "America/Sao_Paulo",
+  "matches_with_odds": 1,
+  "model_version": "champion-v0.3.0-no-api",
+  "prematch_atp_singles": 1,
+  "rejected": [],
+  "shadow": [],
+  "source_requests": 1,
+  "unresolved_players": []
+}

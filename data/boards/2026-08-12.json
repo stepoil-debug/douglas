@@ -2,16 +2,39 @@
   "approved": [],
   "board_date": "2026-08-12",
   "board_mode": "D+1",
-  "board_status": "WAITING_FOR_D1_SCHEDULE",
+  "board_status": "PROVISIONAL_UNTIL_DAY_ROLLOVER",
+  "bootstrap": {
+    "completed": true,
+    "end": "2026-08-10",
+    "matches": 2249,
+    "source": "sackmann-public-mirror-v2",
+    "source_reset": false,
+    "start": "2025-08-11",
+    "status": "READY"
+  },
+  "candidate_sides": 0,
   "data_mode": "NO_API",
   "data_sources": [
-    "Live D+1: aguardando publicação da agenda pública",
-    "Histórico: Sackmann-format ATP"
+    "Live: TennisExplorer detail",
+    "Histórico: Sackmann-format ATP (espelho público + fallback original)"
   ],
   "date": "2026-08-12",
   "deep_analyzed_matches": 0,
-  "fixtures_analyzed": 0,
-  "history_summary": {},
+  "fixtures_analyzed": 1,
+  "generated_at_timezone": "America/Sao_Paulo",
+  "history_summary": {
+    "accuracy": null,
+    "approved": 0,
+    "bookmaker_count": 2,
+    "bookmakers": [
+      "Clay",
+      "Hard"
+    ],
+    "games": 1,
+    "losses": 0,
+    "resolved_approved": 0,
+    "wins": 0
+  },
   "knowledge": {
     "by_confidence": {},
     "by_decision": {},
@@ -35,15 +58,14 @@
       "misses": 0,
       "n": 0
     },
-    "updated_at": "2026-08-11T18:11:29.449351+00:00"
+    "updated_at": "2026-08-11T19:11:06.583383+00:00"
   },
-  "last_refresh_attempt_at": "2026-08-11T15:11:44.699764-03:00",
-  "last_run_at": "2026-08-11T15:11:44.699785-03:00",
+  "last_run_at": "2026-08-11T16:11:09.721525-03:00",
   "learning_summary": {
     "matches": 0,
-    "status": "WAITING_FOR_D1_SCHEDULE"
+    "status": "PROVISIONAL_D1"
   },
-  "matches_with_odds": 0,
+  "matches_with_odds": 1,
   "metrics": {
     "last_10": {
       "accuracy": null,
@@ -71,10 +93,11 @@
   "model_version": "champion-v0.3.0-no-api",
   "near_misses": [],
   "operational_date": "2026-08-11",
-  "prematch_atp_singles": 0,
-  "refresh_error": "'Tennis Explorer: Tennis Results, WTA & ATP Results', bytes=218995, tables=5, result_tables=4, tr=228); https://noproxy.tennisexplorer.com/results: zero parsed matches (title='Tennis Explorer: Tennis Results, WTA & ATP Results', bytes=218997, tables=5, result_tables=4, tr=228)\n[TQE] D+1 dated page unavailable; discovering active ATP tournaments.\n[TQE] Tournament fallback unavailable: no D+1 matches published on active tournament pages\n[TQE] D+1 schedule not published on lightweight sources yet.\n",
-  "refresh_status": "WAITING",
+  "prematch_atp_singles": 1,
+  "refresh_error": null,
+  "refresh_status": "SUCCESS",
   "rejected": [],
+  "rejection_summary": {},
   "result_reconciliation": {
     "resolved": 0,
     "status": "OK"

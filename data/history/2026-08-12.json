@@ -1,0 +1,112 @@
+{
+  "created_at": "2026-08-11T19:11:09.718780+00:00",
+  "date": "2026-08-12",
+  "games": [
+    {
+      "analyses": [],
+      "date": "2026-08-12",
+      "event_type": "ATP Singles",
+      "first_seen_at": "2026-08-11T19:11:09.718900+00:00",
+      "last_seen_at": "2026-08-11T19:11:09.718906+00:00",
+      "market": {
+        "away": [
+          {
+            "bookmaker": "Clay",
+            "odd": 8.0
+          },
+          {
+            "bookmaker": "Hard",
+            "odd": 6.0
+          }
+        ],
+        "bookmaker_count": 2,
+        "bookmakers": [
+          "Clay",
+          "Hard"
+        ],
+        "home": [
+          {
+            "bookmaker": "Clay",
+            "odd": 2.0
+          },
+          {
+            "bookmaker": "Hard",
+            "odd": 27.0
+          }
+        ]
+      },
+      "match_id": "pub-cfdeba5b50ffe4a0e433",
+      "player_a": {
+        "key": "name-770d10159883c0",
+        "name": "Wong C."
+      },
+      "player_b": {
+        "key": "202261",
+        "name": "Otto Virtanen"
+      },
+      "result": {
+        "resolved": false,
+        "score": null,
+        "status": "PENDING",
+        "updated_at": "2026-08-11T19:11:09.718911+00:00",
+        "winner": null
+      },
+      "snapshots": [
+        {
+          "analyses": [],
+          "captured_at": "2026-08-11T19:11:09.718915+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "Clay",
+                "odd": 8.0
+              },
+              {
+                "bookmaker": "Hard",
+                "odd": 6.0
+              }
+            ],
+            "bookmaker_count": 2,
+            "bookmakers": [
+              "Clay",
+              "Hard"
+            ],
+            "home": [
+              {
+                "bookmaker": "Clay",
+                "odd": 2.0
+              },
+              {
+                "bookmaker": "Hard",
+                "odd": 27.0
+              }
+            ]
+          }
+        }
+      ],
+      "surface": null,
+      "time": "12:00",
+      "tournament": "ATP Cincinnati"
+    }
+  ],
+  "live_sources": [
+    "TennisExplorer detail"
+  ],
+  "model_versions": [
+    "champion-v0.3.0-no-api"
+  ],
+  "summary": {
+    "accuracy": null,
+    "approved": 0,
+    "bookmaker_count": 2,
+    "bookmakers": [
+      "Clay",
+      "Hard"
+    ],
+    "games": 1,
+    "losses": 0,
+    "resolved_approved": 0,
+    "wins": 0
+  },
+  "updated_at": "2026-08-11T19:11:09.718918+00:00"
+}
