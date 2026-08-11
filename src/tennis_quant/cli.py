@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+from collections import Counter
 from datetime import date, datetime
 from zoneinfo import ZoneInfo
 
@@ -17,6 +18,48 @@ TIMEZONE = ZoneInfo("America/Sao_Paulo")
 
 def _today_brazil() -> str:
     return datetime.now(TIMEZONE).date().isoformat()
+
+
+def _diagnostics(payload: dict, cfg: dict, provider: PublicTennisProvider) -> None:
+    """Add observability only. This never changes approval/rejection decisions."""
+    payload["data_sources"] = [
+        f"Live: {provider.live_source}",
+        "Histórico: Sackmann-format ATP (espelho público + fallback original)",
+    ]
+
+    rejected = payload.get("rejected", []) or []
+    counts: Counter[str] = Counter()
+    for row in rejected:
+        counts.update(row.get("reject_reasons", []) or [])
+    payload["rejection_summary"] = dict(counts.most_common())
+
+    s = cfg["selection"]
+    near: list[dict] = []
+    for row in rejected:
+        odd = (row.get("selected_market") or {}).get("best_odd")
+        if odd is None or not (s["min_odd"] <= float(odd) <= s["max_odd"]):
+            continue
+        # Near-miss is diagnostic only: fewer failed gates first, then strongest confidence.
+        reasons = list(row.get("reject_reasons", []) or [])
+        near.append({
+            "selected_player": row.get("selected_player"),
+            "opponent": row.get("opponent"),
+            "match": row.get("match"),
+            "odd": odd,
+            "final_probability": row.get("final_probability"),
+            "confidence": row.get("confidence"),
+            "edge_pp": row.get("edge_pp"),
+            "data_quality": row.get("data_quality"),
+            "disagreement_pp": row.get("disagreement_pp"),
+            "reject_reasons": reasons,
+            "failed_gates": len(reasons),
+        })
+    near.sort(key=lambda x: (
+        x["failed_gates"],
+        -(float(x.get("confidence") or 0)),
+        -(float(x.get("final_probability") or 0)),
+    ))
+    payload["near_misses"] = near[:10]
 
 
 def main() -> None:
@@ -43,6 +86,10 @@ def main() -> None:
     payload["metrics"] = metrics
     payload["last_run_at"] = datetime.now(TIMEZONE).isoformat()
     payload["source_requests"] = provider.source_requests
+    _diagnostics(payload, cfg, provider)
+
+    # Rewrite both views after diagnostics/metrics so the repository and dashboard tell the same story.
+    write_json(ROOT / "data" / "daily" / f"{target_date.isoformat()}.json", payload)
     write_json(ROOT / "dashboard" / "data.json", payload)
 
     print(json.dumps({
@@ -56,6 +103,8 @@ def main() -> None:
         "deep_analyzed_matches": payload.get("deep_analyzed_matches"),
         "approved": len(payload["approved"]),
         "shadow": len(payload["shadow"]),
+        "near_misses": len(payload.get("near_misses", [])),
+        "rejection_summary": payload.get("rejection_summary"),
         "source_requests": provider.source_requests,
         "unresolved_players": payload.get("unresolved_players"),
         "bootstrap": payload.get("bootstrap"),
