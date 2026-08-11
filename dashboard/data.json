@@ -15,19 +15,20 @@
   "candidate_sides": 4,
   "data_mode": "NO_API",
   "data_sources": [
-    "Live: TennisExplorer detail",
+    "Live: TennisExplorer schedule",
     "Histórico: Sackmann-format ATP (espelho público + fallback original)"
   ],
   "date": "2026-08-12",
   "deep_analyzed_matches": 2,
-  "fixtures_analyzed": 2,
+  "fixtures_analyzed": 3,
   "generated_at_timezone": "America/Sao_Paulo",
   "history_summary": {
     "accuracy": null,
     "approved": 0,
-    "bookmaker_count": 10,
+    "bookmaker_count": 12,
     "bookmakers": [
       "bet-at-home",
+      "bet365",
       "Betfair",
       "Betsson",
       "BetVictor",
@@ -36,9 +37,10 @@
       "Coral",
       "Interwetten",
       "Ladbrokes",
+      "TennisExplorer avg",
       "William Hill"
     ],
-    "games": 2,
+    "games": 3,
     "losses": 0,
     "resolved_approved": 0,
     "wins": 0
@@ -66,14 +68,14 @@
       "misses": 0,
       "n": 0
     },
-    "updated_at": "2026-08-11T21:23:50.678907+00:00"
+    "updated_at": "2026-08-11T22:20:16.583399+00:00"
   },
-  "last_run_at": "2026-08-11T18:23:54.844850-03:00",
+  "last_run_at": "2026-08-11T19:20:20.899805-03:00",
   "learning_summary": {
     "matches": 2,
     "status": "PROVISIONAL_D1"
   },
-  "matches_with_odds": 2,
+  "matches_with_odds": 3,
   "metrics": {
     "last_10": {
       "accuracy": null,
@@ -101,12 +103,12 @@
   "model_version": "champion-v0.3.0-no-api",
   "near_misses": [
     {
-      "confidence": 46.28703435525582,
-      "data_quality": 0.9339999999999999,
-      "disagreement_pp": 3.1651532154062565,
-      "edge_pp": 3.039545754000933,
+      "confidence": 47.86515059042322,
+      "data_quality": 1.0,
+      "disagreement_pp": 3.1920925676354135,
+      "edge_pp": 3.118249144820706,
       "failed_gates": 3,
-      "final_probability": 0.5249900521346039,
+      "final_probability": 0.5244439469738136,
       "match": {
         "date": "2026-08-12",
         "event_type": "ATP Singles",
@@ -139,9 +141,9 @@
       "selected_market": {
         "best_odd": 1.95,
         "bookmaker_odds": {},
-        "bookmakers": 7,
-        "fair_probability": 0.4945945945945946,
-        "median_odd": 1.87,
+        "bookmakers": 10,
+        "fair_probability": 0.4932614555256065,
+        "median_odd": 1.88,
         "player_key": "207686"
       },
       "selected_player": {
@@ -151,19 +153,19 @@
       "signals": {
         "elo": 0.533195961314695,
         "fatigue": 0.5,
-        "market": 0.4945945945945946,
+        "market": 0.4932614555256065,
         "ranking": 0.5829103214890017,
         "recent_form": 0.5226257883936846,
         "season_profile": 0.5621428571428572
       }
     },
     {
-      "confidence": 38.31684678459374,
-      "data_quality": 0.9339999999999999,
-      "disagreement_pp": 3.165153215406255,
-      "edge_pp": -3.039545754000944,
+      "confidence": 39.80790743236459,
+      "data_quality": 1.0,
+      "disagreement_pp": 3.1920925676354135,
+      "edge_pp": -3.1182491448207115,
       "failed_gates": 3,
-      "final_probability": 0.475009947865396,
+      "final_probability": 0.47555605302618636,
       "match": {
         "date": "2026-08-12",
         "event_type": "ATP Singles",
@@ -196,8 +198,8 @@
       "selected_market": {
         "best_odd": 1.85,
         "bookmaker_odds": {},
-        "bookmakers": 7,
-        "fair_probability": 0.5054054054054055,
+        "bookmakers": 10,
+        "fair_probability": 0.5067385444743935,
         "median_odd": 1.83,
         "player_key": "106331"
       },
@@ -208,19 +210,19 @@
       "signals": {
         "elo": 0.46680403868530496,
         "fatigue": 0.5,
-        "market": 0.5054054054054054,
+        "market": 0.5067385444743935,
         "ranking": 0.4170896785109983,
         "recent_form": 0.47737421160631544,
         "season_profile": 0.43785714285714283
       }
     },
     {
-      "confidence": 31.81012134663055,
+      "confidence": 31.80457283680177,
       "data_quality": 0.55,
-      "disagreement_pp": 3.6703032224592147,
-      "edge_pp": -1.101090966737761,
+      "disagreement_pp": 3.66237677984666,
+      "edge_pp": -1.0987130339539908,
       "failed_gates": 4,
-      "final_probability": 0.5283042456908976,
+      "final_probability": 0.5281694961664842,
       "match": {
         "date": "2026-08-12",
         "event_type": "ATP Singles",
@@ -254,8 +256,8 @@
       "selected_market": {
         "best_odd": 1.75,
         "bookmaker_odds": {},
-        "bookmakers": 10,
-        "fair_probability": 0.5393151553582752,
+        "bookmakers": 11,
+        "fair_probability": 0.5391566265060241,
         "median_odd": 1.73,
         "player_key": "202261"
       },
@@ -264,23 +266,23 @@
         "name": "Otto Virtanen"
       },
       "signals": {
-        "market": 0.5393151553582752,
+        "market": 0.5391566265060241,
         "season_profile": 0.46590909090909094
       }
     }
   ],
   "operational_date": "2026-08-11",
-  "prematch_atp_singles": 2,
+  "prematch_atp_singles": 3,
   "refresh_error": null,
   "refresh_status": "SUCCESS",
   "rejected": [
     {
-      "confidence": 46.28703435525582,
-      "data_quality": 0.9339999999999999,
-      "disagreement_pp": 3.1651532154062565,
-      "edge_pp": 3.039545754000933,
-      "final_probability": 0.5249900521346039,
-      "market_probability": 0.4945945945945946,
+      "confidence": 47.86515059042322,
+      "data_quality": 1.0,
+      "disagreement_pp": 3.1920925676354135,
+      "edge_pp": 3.118249144820706,
+      "final_probability": 0.5244439469738136,
+      "market_probability": 0.4932614555256065,
       "match": {
         "date": "2026-08-12",
         "event_type": "ATP Singles",
@@ -308,8 +310,8 @@
       "opponent_market": {
         "best_odd": 1.85,
         "bookmaker_odds": {},
-        "bookmakers": 7,
-        "fair_probability": 0.5054054054054055,
+        "bookmakers": 10,
+        "fair_probability": 0.5067385444743935,
         "median_odd": 1.83,
         "player_key": "106331"
       },
@@ -322,9 +324,9 @@
       "selected_market": {
         "best_odd": 1.95,
         "bookmaker_odds": {},
-        "bookmakers": 7,
-        "fair_probability": 0.4945945945945946,
-        "median_odd": 1.87,
+        "bookmakers": 10,
+        "fair_probability": 0.4932614555256065,
+        "median_odd": 1.88,
         "player_key": "207686"
       },
       "selected_player": {
@@ -334,7 +336,7 @@
       "signals": {
         "elo": 0.533195961314695,
         "fatigue": 0.5,
-        "market": 0.4945945945945946,
+        "market": 0.4932614555256065,
         "ranking": 0.5829103214890017,
         "recent_form": 0.5226257883936846,
         "season_profile": 0.5621428571428572
@@ -342,12 +344,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 38.31684678459374,
-      "data_quality": 0.9339999999999999,
-      "disagreement_pp": 3.165153215406255,
-      "edge_pp": -3.039545754000944,
-      "final_probability": 0.475009947865396,
-      "market_probability": 0.5054054054054055,
+      "confidence": 39.80790743236459,
+      "data_quality": 1.0,
+      "disagreement_pp": 3.1920925676354135,
+      "edge_pp": -3.1182491448207115,
+      "final_probability": 0.47555605302618636,
+      "market_probability": 0.5067385444743935,
       "match": {
         "date": "2026-08-12",
         "event_type": "ATP Singles",
@@ -375,9 +377,9 @@
       "opponent_market": {
         "best_odd": 1.95,
         "bookmaker_odds": {},
-        "bookmakers": 7,
-        "fair_probability": 0.4945945945945946,
-        "median_odd": 1.87,
+        "bookmakers": 10,
+        "fair_probability": 0.4932614555256065,
+        "median_odd": 1.88,
         "player_key": "207686"
       },
       "rank": null,
@@ -389,8 +391,8 @@
       "selected_market": {
         "best_odd": 1.85,
         "bookmaker_odds": {},
-        "bookmakers": 7,
-        "fair_probability": 0.5054054054054055,
+        "bookmakers": 10,
+        "fair_probability": 0.5067385444743935,
         "median_odd": 1.83,
         "player_key": "106331"
       },
@@ -401,7 +403,7 @@
       "signals": {
         "elo": 0.46680403868530496,
         "fatigue": 0.5,
-        "market": 0.5054054054054054,
+        "market": 0.5067385444743935,
         "ranking": 0.4170896785109983,
         "recent_form": 0.47737421160631544,
         "season_profile": 0.43785714285714283
@@ -409,12 +411,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 31.81012134663055,
+      "confidence": 31.80457283680177,
       "data_quality": 0.55,
-      "disagreement_pp": 3.6703032224592147,
-      "edge_pp": -1.101090966737761,
-      "final_probability": 0.5283042456908976,
-      "market_probability": 0.5393151553582752,
+      "disagreement_pp": 3.66237677984666,
+      "edge_pp": -1.0987130339539908,
+      "final_probability": 0.5281694961664842,
+      "market_probability": 0.5391566265060241,
       "match": {
         "date": "2026-08-12",
         "event_type": "ATP Singles",
@@ -442,8 +444,8 @@
       "opponent_market": {
         "best_odd": 2.05,
         "bookmaker_odds": {},
-        "bookmakers": 10,
-        "fair_probability": 0.46068484464172477,
+        "bookmakers": 11,
+        "fair_probability": 0.46084337349397586,
         "median_odd": 2.0,
         "player_key": "name-770d10159883c0"
       },
@@ -457,8 +459,8 @@
       "selected_market": {
         "best_odd": 1.75,
         "bookmaker_odds": {},
-        "bookmakers": 10,
-        "fair_probability": 0.5393151553582752,
+        "bookmakers": 11,
+        "fair_probability": 0.5391566265060241,
         "median_odd": 1.73,
         "player_key": "202261"
       },
@@ -467,18 +469,18 @@
         "name": "Otto Virtanen"
       },
       "signals": {
-        "market": 0.5393151553582752,
+        "market": 0.5391566265060241,
         "season_profile": 0.46590909090909094
       },
       "status": "REJECTED"
     },
     {
-      "confidence": 30.961660517668772,
+      "confidence": 30.965306681270537,
       "data_quality": 0.55,
-      "disagreement_pp": 3.6703032224592147,
-      "edge_pp": 1.1010909667377666,
-      "final_probability": 0.47169575430910243,
-      "market_probability": 0.46068484464172477,
+      "disagreement_pp": 3.66237677984666,
+      "edge_pp": 1.0987130339539963,
+      "final_probability": 0.4718305038335158,
+      "market_probability": 0.46084337349397586,
       "match": {
         "date": "2026-08-12",
         "event_type": "ATP Singles",
@@ -506,8 +508,8 @@
       "opponent_market": {
         "best_odd": 1.75,
         "bookmaker_odds": {},
-        "bookmakers": 10,
-        "fair_probability": 0.5393151553582752,
+        "bookmakers": 11,
+        "fair_probability": 0.5391566265060241,
         "median_odd": 1.73,
         "player_key": "202261"
       },
@@ -522,8 +524,8 @@
       "selected_market": {
         "best_odd": 2.05,
         "bookmaker_odds": {},
-        "bookmakers": 10,
-        "fair_probability": 0.46068484464172477,
+        "bookmakers": 11,
+        "fair_probability": 0.46084337349397586,
         "median_odd": 2.0,
         "player_key": "name-770d10159883c0"
       },
@@ -532,7 +534,7 @@
         "name": "Wong C."
       },
       "signals": {
-        "market": 0.46068484464172477,
+        "market": 0.46084337349397586,
         "season_profile": 0.5340909090909091
       },
       "status": "REJECTED"

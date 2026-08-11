@@ -2,14 +2,14 @@
   "date": "2026-08-12",
   "matches": [
     {
-      "bookmakers": 7,
-      "confidence": 46.28703435525582,
-      "data_quality": 0.9339999999999999,
+      "bookmakers": 10,
+      "confidence": 47.86515059042322,
+      "data_quality": 1.0,
       "date": "2026-08-12",
       "decision": "REJECTED",
-      "disagreement_pp": 3.1651532154062565,
-      "edge_pp": 3.039545754000933,
-      "final_probability": 0.5249900521346039,
+      "disagreement_pp": 3.1920925676354135,
+      "edge_pp": 3.118249144820706,
+      "final_probability": 0.5244439469738136,
       "match_id": "pub-c85473950c26a469e109",
       "odd": 1.95,
       "opponent": {
@@ -35,7 +35,7 @@
       "signals": {
         "elo": 0.533195961314695,
         "fatigue": 0.5,
-        "market": 0.4945945945945946,
+        "market": 0.4932614555256065,
         "ranking": 0.5829103214890017,
         "recent_form": 0.5226257883936846,
         "season_profile": 0.5621428571428572
@@ -45,14 +45,14 @@
       "tournament": "ATP Cincinnati"
     },
     {
-      "bookmakers": 10,
-      "confidence": 31.81012134663055,
+      "bookmakers": 11,
+      "confidence": 31.80457283680177,
       "data_quality": 0.55,
       "date": "2026-08-12",
       "decision": "REJECTED",
-      "disagreement_pp": 3.6703032224592147,
-      "edge_pp": -1.101090966737761,
-      "final_probability": 0.5283042456908976,
+      "disagreement_pp": 3.66237677984666,
+      "edge_pp": -1.0987130339539908,
+      "final_probability": 0.5281694961664842,
       "match_id": "pub-cfdeba5b50ffe4a0e433",
       "odd": 1.75,
       "opponent": {
@@ -77,7 +77,7 @@
         "winner": null
       },
       "signals": {
-        "market": 0.5393151553582752,
+        "market": 0.5391566265060241,
         "season_profile": 0.46590909090909094
       },
       "surface": null,
@@ -86,7 +86,7 @@
     }
   ],
   "model_version": "champion-v0.3.0-no-api",
-  "source": "TennisExplorer detail",
+  "source": "TennisExplorer schedule",
   "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-11T21:23:54.844594+00:00"
+  "updated_at": "2026-08-11T22:20:20.899450+00:00"
 }
