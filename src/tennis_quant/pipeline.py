@@ -31,10 +31,9 @@ def _extract_home_away(raw: dict[str, Any]) -> tuple[dict, dict]:
 
 def _is_prematch(match) -> bool:
     status = str(match.status or "").strip().lower()
-    live = str(match.raw.get("event_live", "0")).strip().lower()
     winner = str(match.winner or "").strip()
-    terminal = ("finished", "cancel", "retired", "walkover", "abandoned", "postponed")
-    if winner or live in {"1", "true", "yes"}:
+    terminal = ("finished", "started", "live", "cancel", "retired", "walkover", "abandoned", "postponed")
+    if winner:
         return False
     return not any(token in status for token in terminal)
 
@@ -49,8 +48,10 @@ def _winner_loser(match) -> tuple[str, str] | None:
 
 
 def _bootstrap_ratings(provider, ratings: RatingStore, target_date: date, days: int = 365) -> dict[str, Any]:
-    if ratings.bootstrap_done():
-        return {"status": "READY", **ratings.data.get("bootstrap", {})}
+    source = str(getattr(provider, "history_source_id", "public-history"))
+    source_reset = ratings.ensure_source(source)
+    if ratings.bootstrap_done(source):
+        return {"status": "READY", "source_reset": source_reset, **ratings.data.get("bootstrap", {})}
     start = target_date - timedelta(days=days)
     end = target_date - timedelta(days=1)
     updated = 0
@@ -70,12 +71,24 @@ def _bootstrap_ratings(provider, ratings: RatingStore, target_date: date, days: 
                 k=margin_k(match.raw.get("event_final_result")),
             ):
                 updated += 1
-        ratings.mark_bootstrap(start.isoformat(), end.isoformat(), updated)
+        ratings.mark_bootstrap(start.isoformat(), end.isoformat(), updated, source=source)
         ratings.save()
-        return {"status": "BUILT", "start": start.isoformat(), "end": end.isoformat(), "matches": updated}
+        return {
+            "status": "BUILT",
+            "source": source,
+            "source_reset": source_reset,
+            "start": start.isoformat(),
+            "end": end.isoformat(),
+            "matches": updated,
+        }
     except Exception as exc:
-        # Analysis still runs using ranking/market/form if historical bootstrap is temporarily unavailable.
-        return {"status": "DEGRADED", "error": str(exc)[:300], "matches": len(ratings.data.get("processed_matches", []))}
+        return {
+            "status": "DEGRADED",
+            "source": source,
+            "source_reset": source_reset,
+            "error": str(exc)[:300],
+            "matches": len(ratings.data.get("processed_matches", [])),
+        }
 
 
 def _load_enrichment_cache(root: Path, day: str) -> tuple[Path, dict[str, Any]]:
@@ -147,15 +160,17 @@ def _quality_score(
     serve_samples: int,
     bootstrap_ok: bool,
     has_surface: bool,
+    identity_resolved: bool,
 ) -> float:
-    score = 0.20
-    score += min(bookmakers, 10) * 0.025
-    score += min(recent_seen, 16) * 0.0125
+    score = 0.17
+    score += min(bookmakers, 10) * 0.026
+    score += min(recent_seen, 16) * 0.012
     score += 0.09 if ranking_ok else 0.0
     score += min(profile_samples, 20) * 0.006
     score += min(serve_samples, 10) * 0.010
     score += 0.09 if bootstrap_ok else 0.0
     score += 0.04 if has_surface else 0.0
+    score += 0.06 if identity_resolved else 0.0
     return min(1.0, score)
 
 
@@ -177,6 +192,7 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
     h2h_calls = 0
     odds_matches = 0
     deep_matches = 0
+    unresolved_players: set[str] = set()
 
     for match in prematch:
         raw_odds = odds_by_match.get(match.match_id, {})
@@ -185,12 +201,16 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
         if not market["bookmakers"]:
             continue
         odds_matches += 1
-
-        # Stage 1: every ATP Singles fixture is screened by market. Expensive enrichment only runs
-        # when at least one side can actually become a 1.50-2.00 selection.
         if not _market_in_scope(market, cfg):
             continue
         deep_matches += 1
+
+        resolved_a = not str(match.player_a.key).startswith("name-")
+        resolved_b = not str(match.player_b.key).startswith("name-")
+        if not resolved_a:
+            unresolved_players.add(match.player_a.name)
+        if not resolved_b:
+            unresolved_players.add(match.player_b.name)
 
         elo_a, surf_a = ratings.probability(match.player_a.key, match.player_b.key, match.surface)
         rank_a = standings.get(match.player_a.key)
@@ -198,7 +218,7 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
         rank_prob_a = ranking_probability(rank_a, rank_b)
 
         context: dict[str, Any] = {}
-        if h2h_calls < h2h_budget:
+        if resolved_a and resolved_b and h2h_calls < h2h_budget:
             try:
                 context = provider.h2h(match.player_a.key, match.player_b.key)
                 h2h_calls += 1
@@ -209,7 +229,7 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
         recent_b_rows = context.get("secondPlayerResults", []) or []
         recent_a, a_seen = combined_recent_strength(recent_a_rows, match.player_a.key)
         recent_b, b_seen = combined_recent_strength(recent_b_rows, match.player_b.key)
-        form_prob_a = pair_probability(recent_a, recent_b, scale=0.85)
+        form_prob_a = pair_probability(recent_a, recent_b, scale=0.85) if (a_seen or b_seen) else None
 
         h2h_prob_a, h_seen = h2h_rate(context.get("H2H", []) or [], match.player_a.key)
         if h_seen < 2:
@@ -217,28 +237,24 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
 
         ready_a, fatigue_a = fatigue_readiness(recent_a_rows, target_date)
         ready_b, fatigue_b = fatigue_readiness(recent_b_rows, target_date)
-        fatigue_prob_a = pair_probability(ready_a, ready_b, scale=0.45)
+        fatigue_prob_a = pair_probability(ready_a, ready_b, scale=0.35) if (a_seen and b_seen) else None
 
-        profile_a = _get_profile(provider, enrichment_cache, match.player_a.key)
-        profile_b = _get_profile(provider, enrichment_cache, match.player_b.key)
+        profile_a = _get_profile(provider, enrichment_cache, match.player_a.key) if resolved_a else {}
+        profile_b = _get_profile(provider, enrichment_cache, match.player_b.key) if resolved_b else {}
         p_strength_a, p_seen_a = profile_strength(profile_a, target_date.year, match.surface)
         p_strength_b, p_seen_b = profile_strength(profile_b, target_date.year, match.surface)
         profile_prob_a = pair_probability(p_strength_a, p_strength_b, scale=0.75) if (p_seen_a or p_seen_b) else None
 
-        hist_a = _get_history(provider, enrichment_cache, match.player_a.key, target_date)
-        hist_b = _get_history(provider, enrichment_cache, match.player_b.key, target_date)
+        hist_a = _get_history(provider, enrichment_cache, match.player_a.key, target_date) if resolved_a else []
+        hist_b = _get_history(provider, enrichment_cache, match.player_b.key, target_date) if resolved_b else []
         serve_a, serve_seen_a = serve_strength(hist_a, match.player_a.key)
         serve_b, serve_seen_b = serve_strength(hist_b, match.player_b.key)
-        serve_prob_a = (
-            pair_probability(serve_a, serve_b, scale=1.10)
-            if serve_a is not None and serve_b is not None
-            else None
-        )
+        serve_prob_a = pair_probability(serve_a, serve_b, scale=1.10) if serve_a is not None and serve_b is not None else None
 
         signals_a: dict[str, float | None] = {
             "market": market["home_fair"],
-            "elo": elo_a,
-            "surface_elo": surf_a if match.surface else None,
+            "elo": elo_a if resolved_a and resolved_b else None,
+            "surface_elo": surf_a if match.surface and resolved_a and resolved_b else None,
             "ranking": rank_prob_a,
             "recent_form": form_prob_a,
             "season_profile": profile_prob_a,
@@ -251,6 +267,7 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
         ranking_ok = rank_prob_a is not None
         profile_samples = p_seen_a + p_seen_b
         serve_samples = serve_seen_a + serve_seen_b
+        identity_resolved = resolved_a and resolved_b
         data_quality = _quality_score(
             int(market["bookmakers"]),
             a_seen + b_seen,
@@ -259,27 +276,18 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
             serve_samples,
             bootstrap.get("status") in {"READY", "BUILT"},
             bool(match.surface),
+            identity_resolved,
         )
 
         sides = [
-            (
-                match.player_a, match.player_b,
-                market["home_best"], market["home_median"], market["home_fair"],
-                market["away_best"], market["away_median"], market["away_fair"],
-                signals_a,
-            ),
-            (
-                match.player_b, match.player_a,
-                market["away_best"], market["away_median"], market["away_fair"],
-                market["home_best"], market["home_median"], market["home_fair"],
-                signals_b,
-            ),
+            (match.player_a, match.player_b, market["home_best"], market["home_median"], market["home_fair"], market["away_best"], market["away_median"], market["away_fair"], signals_a),
+            (match.player_b, match.player_a, market["away_best"], market["away_median"], market["away_fair"], market["home_best"], market["home_median"], market["home_fair"], signals_b),
         ]
 
         for selected, opponent, best, med, fair, obest, omed, ofair, signals in sides:
             if best is None or fair is None:
                 continue
-            clean_signals = {k: v for k, v in signals.items() if v is not None}
+            clean_signals = {k: float(v) for k, v in signals.items() if v is not None}
             final = weighted_probability(clean_signals, cfg["ensemble_weights"])
             edge = (final - float(fair)) * 100.0
             disagree = disagreement_pp(clean_signals)
@@ -299,12 +307,11 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
                 confidence=confidence,
                 model_version=cfg["model_version"],
             )
-            # Keep audit-only context outside the model signals. It is removed from immutable match.raw
-            # by Candidate.to_dict(), so no oversized API payload leaks into the dashboard.
             candidate.match.raw.setdefault("analysis_context", {})[selected.key] = {
                 "rank": (rank_a if selected.key == match.player_a.key else rank_b),
                 "fatigue": (fatigue_a if selected.key == match.player_a.key else fatigue_b),
                 "serve_sample": (serve_seen_a if selected.key == match.player_a.key else serve_seen_b),
+                "identity_resolved": not str(selected.key).startswith("name-"),
             }
             candidates.append(candidate)
 
@@ -314,12 +321,15 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
         "date": day,
         "model_version": cfg["model_version"],
         "generated_at_timezone": "America/Sao_Paulo",
+        "data_mode": "NO_API",
+        "data_sources": ["OddsHarvester/OddsPortal", "JeffSackmann/tennis_atp"],
         "fixtures_analyzed": len(fixtures),
         "prematch_atp_singles": len(prematch),
         "matches_with_odds": odds_matches,
         "deep_analyzed_matches": deep_matches,
         "candidate_sides": len(ranked),
-        "api_requests": getattr(provider, "request_count", None),
+        "source_requests": getattr(provider, "source_requests", None),
+        "unresolved_players": sorted(unresolved_players),
         "bootstrap": bootstrap,
         "approved": [c.to_dict() for c in ranked if c.status == "APPROVED"],
         "shadow": [c.to_dict() for c in ranked if c.status == "SHADOW"],
