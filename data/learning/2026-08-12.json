@@ -45,30 +45,29 @@
       "tournament": "ATP Cincinnati"
     },
     {
-      "bookmakers": 11,
-      "confidence": 31.80457283680177,
-      "data_quality": 0.55,
+      "bookmakers": 9,
+      "confidence": 34.97327931808596,
+      "data_quality": 0.8940000000000001,
       "date": "2026-08-12",
       "decision": "REJECTED",
-      "disagreement_pp": 3.66237677984666,
-      "edge_pp": -1.0987130339539908,
-      "final_probability": 0.5281694961664842,
-      "match_id": "pub-cfdeba5b50ffe4a0e433",
-      "odd": 1.75,
+      "disagreement_pp": 6.191896874820833,
+      "edge_pp": -1.8443762546456632,
+      "final_probability": 0.5060317619290678,
+      "match_id": "pub-4403f5a46913ba6ff207",
+      "odd": 1.83,
       "opponent": {
-        "key": "name-770d10159883c0",
-        "name": "Wong C."
+        "key": "210136",
+        "name": "Mark Lajal"
       },
       "predicted_player": {
-        "key": "202261",
-        "name": "Otto Virtanen"
+        "key": "207494",
+        "name": "Dalibor Svrcina"
       },
       "rank": null,
       "reject_reasons": [
         "PROBABILITY_TOO_LOW",
         "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW",
-        "DATA_QUALITY_TOO_LOW"
+        "CONFIDENCE_TOO_LOW"
       ],
       "result": {
         "hit": null,
@@ -77,8 +76,56 @@
         "winner": null
       },
       "signals": {
-        "market": 0.5391566265060241,
-        "season_profile": 0.46590909090909094
+        "elo": 0.4975272289597107,
+        "fatigue": 0.5,
+        "market": 0.5244755244755245,
+        "ranking": 0.5913513513513513,
+        "recent_form": 0.41162131070398644,
+        "season_profile": 0.41758241758241765
+      },
+      "surface": null,
+      "time": "12:00",
+      "tournament": "ATP Cincinnati"
+    },
+    {
+      "bookmakers": 9,
+      "confidence": 32.43085644828182,
+      "data_quality": 0.9279999999999999,
+      "date": "2026-08-12",
+      "decision": "REJECTED",
+      "disagreement_pp": 10.542624017355617,
+      "edge_pp": -2.2166733805164096,
+      "final_probability": 0.5162948046563743,
+      "match_id": "pub-f9ab157ea74250427484",
+      "odd": 2.5,
+      "opponent": {
+        "key": "210464",
+        "name": "Darwin Blanch"
+      },
+      "predicted_player": {
+        "key": "126846",
+        "name": "Aleksandar Vukic"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.4210480694711054,
+        "fatigue": 0.5,
+        "market": 0.5384615384615384,
+        "ranking": 0.72,
+        "recent_form": 0.4546315089364657,
+        "season_profile": 0.40625
       },
       "surface": null,
       "time": "12:00",
@@ -88,5 +135,5 @@
   "model_version": "champion-v0.3.0-no-api",
   "source": "TennisExplorer schedule",
   "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-11T22:20:20.899450+00:00"
+  "updated_at": "2026-08-11T23:19:57.072027+00:00"
 }
