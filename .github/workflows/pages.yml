@@ -1,11 +1,15 @@
 name: Deploy dashboard
 
 on:
+  workflow_run:
+    workflows: ["Tennis Quant - Analyze"]
+    types: [completed]
   push:
     branches: [main]
     paths:
       - 'dashboard/**'
       - 'data/history/**'
+      - 'data/learning/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -20,18 +24,27 @@ concurrency:
 
 jobs:
   deploy:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Stage historical ledgers for Pages
+        with:
+          ref: main
+      - name: Stage InvestBet dashboard data
         run: |
-          mkdir -p dashboard/history
+          mkdir -p dashboard/history dashboard/learning
           if compgen -G "data/history/*.json" > /dev/null; then
             cp data/history/*.json dashboard/history/
           fi
+          if compgen -G "data/learning/????-??-??.json" > /dev/null; then
+            cp data/learning/????-??-??.json dashboard/learning/
+          fi
+          # v2 is the canonical production dashboard. Keeping the source file separate
+          # lets the previous panel remain recoverable while Pages serves the new UI.
+          cp dashboard/v2.html dashboard/index.html
           python - <<'PY'
           import json
           from datetime import datetime, timezone
