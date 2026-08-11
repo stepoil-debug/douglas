@@ -7,7 +7,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475791+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475793+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158204+00:00",
       "market": {
         "away": [
           {
@@ -39,7 +39,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475795+00:00",
+        "updated_at": "2026-08-11T16:44:20.158207+00:00",
         "winner": null
       },
       "snapshots": [
@@ -75,7 +75,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475749+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475751+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158151+00:00",
       "market": {
         "away": [
           {
@@ -170,7 +170,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475754+00:00",
+        "updated_at": "2026-08-11T16:44:20.158155+00:00",
         "winner": null
       },
       "snapshots": [
@@ -383,7 +383,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475775+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475777+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158183+00:00",
       "market": {
         "away": [
           {
@@ -487,7 +487,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475779+00:00",
+        "updated_at": "2026-08-11T16:44:20.158189+00:00",
         "winner": null
       },
       "snapshots": [
@@ -709,7 +709,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475806+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475808+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158218+00:00",
       "market": {
         "away": [
           {
@@ -741,7 +741,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475837+00:00",
+        "updated_at": "2026-08-11T16:44:20.158221+00:00",
         "winner": null
       },
       "snapshots": [
@@ -777,7 +777,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475621+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475625+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.157986+00:00",
       "market": {
         "away": [
           {
@@ -809,7 +809,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475631+00:00",
+        "updated_at": "2026-08-11T16:44:20.157998+00:00",
         "winner": null
       },
       "snapshots": [
@@ -959,7 +959,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475924+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475926+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158304+00:00",
       "market": {
         "away": [
           {
@@ -1063,7 +1063,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475928+00:00",
+        "updated_at": "2026-08-11T16:44:20.158310+00:00",
         "winner": null
       },
       "snapshots": [
@@ -1285,7 +1285,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475874+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475876+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158252+00:00",
       "market": {
         "away": [
           {
@@ -1298,7 +1298,7 @@
           },
           {
             "bookmaker": "BetVictor",
-            "odd": 1.75
+            "odd": 1.73
           },
           {
             "bookmaker": "Betway",
@@ -1306,19 +1306,19 @@
           },
           {
             "bookmaker": "bwin",
-            "odd": 1.7
+            "odd": 1.62
           },
           {
             "bookmaker": "Coral",
-            "odd": 1.65
+            "odd": 1.6
           },
           {
             "bookmaker": "Interwetten",
-            "odd": 1.45
+            "odd": 1.43
           },
           {
             "bookmaker": "Ladbrokes",
-            "odd": 1.65
+            "odd": 1.6
           },
           {
             "bookmaker": "Unibet",
@@ -1389,7 +1389,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475878+00:00",
+        "updated_at": "2026-08-11T16:44:20.158257+00:00",
         "winner": null
       },
       "snapshots": [
@@ -1486,6 +1486,100 @@
               }
             ]
           }
+        },
+        {
+          "analyses": [],
+          "captured_at": "2026-08-11T16:44:20.158259+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 1.1
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 1.74
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 1.73
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 1.25
+              },
+              {
+                "bookmaker": "bwin",
+                "odd": 1.62
+              },
+              {
+                "bookmaker": "Coral",
+                "odd": 1.6
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 1.43
+              },
+              {
+                "bookmaker": "Ladbrokes",
+                "odd": 1.6
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 2.2
+              }
+            ],
+            "bookmaker_count": 9,
+            "bookmakers": [
+              "bet-at-home",
+              "Betsson",
+              "BetVictor",
+              "Betway",
+              "bwin",
+              "Coral",
+              "Interwetten",
+              "Ladbrokes",
+              "Unibet"
+            ],
+            "home": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 6.5
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 3.5
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 3.5
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 5.5
+              },
+              {
+                "bookmaker": "bwin",
+                "odd": 3.5
+              },
+              {
+                "bookmaker": "Coral",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 4.5
+              },
+              {
+                "bookmaker": "Ladbrokes",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 2.5
+              }
+            ]
+          }
         }
       ],
       "surface": null,
@@ -1497,7 +1591,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475850+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475852+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158231+00:00",
       "market": {
         "away": [
           {
@@ -1529,7 +1623,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475854+00:00",
+        "updated_at": "2026-08-11T16:44:20.158234+00:00",
         "winner": null
       },
       "snapshots": [
@@ -1634,7 +1728,7 @@
           "bookmaker_odds": {
             "BetVictor": 1.83,
             "Betsson": 1.81,
-            "Betway": 1.85,
+            "Betway": 1.8,
             "Coral": 1.28,
             "Interwetten": 1.8,
             "Ladbrokes": 1.28,
@@ -1650,7 +1744,7 @@
           "final_probability": 0.47645349027727135,
           "market_probability": 0.45454545454545453,
           "model_version": "champion-v0.3.0-no-api",
-          "odd": 1.85,
+          "odd": 1.83,
           "opponent": {
             "key": "111460",
             "name": "Quentin Halys"
@@ -1679,7 +1773,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475900+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475902+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158277+00:00",
       "market": {
         "away": [
           {
@@ -1696,7 +1790,7 @@
           },
           {
             "bookmaker": "Betway",
-            "odd": 1.85
+            "odd": 1.8
           },
           {
             "bookmaker": "bwin",
@@ -1783,7 +1877,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475904+00:00",
+        "updated_at": "2026-08-11T16:44:20.158282+00:00",
         "winner": null
       },
       "snapshots": [
@@ -1994,6 +2088,214 @@
               }
             ]
           }
+        },
+        {
+          "analyses": [
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "bwin",
+                "Coral",
+                "Interwetten",
+                "Ladbrokes",
+                "Unibet"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.5,
+                "Betsson": 1.5,
+                "Betway": 1.5,
+                "Coral": 1.5,
+                "Interwetten": 1.5,
+                "Ladbrokes": 1.5,
+                "Unibet": 1.5,
+                "bet-at-home": 2.5,
+                "bwin": 1.5
+              },
+              "bookmakers": 9,
+              "confidence": 34.01411658708893,
+              "data_quality": 0.956,
+              "disagreement_pp": 10.328534385183934,
+              "edge_pp": -2.1908035731816766,
+              "final_probability": 0.5235465097227286,
+              "market_probability": 0.5454545454545454,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 2.5,
+              "opponent": {
+                "key": "126952",
+                "name": "Soon Woo Kwon"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "ODD_OUT_OF_RANGE",
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "111460",
+                "name": "Quentin Halys"
+              },
+              "signals": {
+                "elo": 0.42705899116005225,
+                "fatigue": 0.5,
+                "market": 0.5454545454545454,
+                "ranking": 0.72,
+                "recent_form": 0.47902259383308926,
+                "season_profile": 0.40625
+              },
+              "status": "REJECTED"
+            },
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "bwin",
+                "Coral",
+                "Interwetten",
+                "Ladbrokes",
+                "Unibet"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.83,
+                "Betsson": 1.81,
+                "Betway": 1.8,
+                "Coral": 1.28,
+                "Interwetten": 1.8,
+                "Ladbrokes": 1.28,
+                "Unibet": 1.75,
+                "bet-at-home": 1.35,
+                "bwin": 1.8
+              },
+              "bookmakers": 9,
+              "confidence": 35.602912046543096,
+              "data_quality": 0.956,
+              "disagreement_pp": 10.328534385183934,
+              "edge_pp": 2.1908035731816824,
+              "final_probability": 0.47645349027727135,
+              "market_probability": 0.45454545454545453,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 1.83,
+              "opponent": {
+                "key": "111460",
+                "name": "Quentin Halys"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "126952",
+                "name": "Soon Woo Kwon"
+              },
+              "signals": {
+                "elo": 0.5729410088399478,
+                "fatigue": 0.5,
+                "market": 0.4545454545454546,
+                "ranking": 0.28,
+                "recent_form": 0.5209774061669108,
+                "season_profile": 0.59375
+              },
+              "status": "REJECTED"
+            }
+          ],
+          "captured_at": "2026-08-11T16:44:20.158284+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 1.35
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 1.81
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 1.83
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 1.8
+              },
+              {
+                "bookmaker": "bwin",
+                "odd": 1.8
+              },
+              {
+                "bookmaker": "Coral",
+                "odd": 1.28
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 1.8
+              },
+              {
+                "bookmaker": "Ladbrokes",
+                "odd": 1.28
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 1.75
+              }
+            ],
+            "bookmaker_count": 9,
+            "bookmakers": [
+              "bet-at-home",
+              "Betsson",
+              "BetVictor",
+              "Betway",
+              "bwin",
+              "Coral",
+              "Interwetten",
+              "Ladbrokes",
+              "Unibet"
+            ],
+            "home": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 2.5
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "bwin",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Coral",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Ladbrokes",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 1.5
+              }
+            ]
+          }
         }
       ],
       "surface": null,
@@ -2125,7 +2427,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475668+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475670+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158041+00:00",
       "market": {
         "away": [
           {
@@ -2238,7 +2540,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475674+00:00",
+        "updated_at": "2026-08-11T16:44:20.158050+00:00",
         "winner": null
       },
       "snapshots": [
@@ -2588,7 +2890,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.476028+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.476030+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158421+00:00",
       "market": {
         "away": [
           {
@@ -2692,7 +2994,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.476032+00:00",
+        "updated_at": "2026-08-11T16:44:20.158426+00:00",
         "winner": null
       },
       "snapshots": [
@@ -2913,7 +3215,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.476042+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.476044+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158440+00:00",
       "market": {
         "away": [
           {
@@ -2928,7 +3230,7 @@
         "home": [
           {
             "bookmaker": "TennisExplorer avg",
-            "odd": 6.92
+            "odd": 6.9
           }
         ]
       },
@@ -2945,7 +3247,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.476046+00:00",
+        "updated_at": "2026-08-11T16:44:20.158443+00:00",
         "winner": null
       },
       "snapshots": [
@@ -2970,6 +3272,28 @@
               }
             ]
           }
+        },
+        {
+          "analyses": [],
+          "captured_at": "2026-08-11T16:44:20.158445+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 1.09
+              }
+            ],
+            "bookmaker_count": 1,
+            "bookmakers": [
+              "TennisExplorer avg"
+            ],
+            "home": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 6.9
+              }
+            ]
+          }
         }
       ],
       "surface": null,
@@ -2981,7 +3305,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475953+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475955+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158336+00:00",
       "market": {
         "away": [
           {
@@ -3013,7 +3337,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475957+00:00",
+        "updated_at": "2026-08-11T16:44:20.158339+00:00",
         "winner": null
       },
       "snapshots": [
@@ -3049,7 +3373,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475940+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475941+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158324+00:00",
       "market": {
         "away": [
           {
@@ -3081,7 +3405,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475944+00:00",
+        "updated_at": "2026-08-11T16:44:20.158327+00:00",
         "winner": null
       },
       "snapshots": [
@@ -3191,7 +3515,7 @@
             "Ladbrokes": 1.61,
             "Unibet": 1.79,
             "bet-at-home": 1.11,
-            "bwin": 2.0
+            "bwin": 1.95
           },
           "bookmakers": 9,
           "confidence": 48.71736354688162,
@@ -3201,7 +3525,7 @@
           "final_probability": 0.6225958709148153,
           "market_probability": 0.6679389312977099,
           "model_version": "champion-v0.3.0-no-api",
-          "odd": 2.0,
+          "odd": 1.95,
           "opponent": {
             "key": "111456",
             "name": "Mackenzie Mcdonald"
@@ -3230,7 +3554,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475984+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475986+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158359+00:00",
       "market": {
         "away": [
           {
@@ -3251,7 +3575,7 @@
           },
           {
             "bookmaker": "bwin",
-            "odd": 2.0
+            "odd": 1.95
           },
           {
             "bookmaker": "Coral",
@@ -3334,7 +3658,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475988+00:00",
+        "updated_at": "2026-08-11T16:44:20.158364+00:00",
         "winner": null
       },
       "snapshots": [
@@ -3544,6 +3868,213 @@
               }
             ]
           }
+        },
+        {
+          "analyses": [
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "bwin",
+                "Coral",
+                "Interwetten",
+                "Ladbrokes",
+                "Unibet"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 4.5,
+                "Betsson": 3.5,
+                "Betway": 5.5,
+                "Coral": 1.5,
+                "Interwetten": 4.5,
+                "Ladbrokes": 1.5,
+                "Unibet": 3.5,
+                "bet-at-home": 6.5,
+                "bwin": 2.5
+              },
+              "bookmakers": 9,
+              "confidence": 44.61952732432113,
+              "data_quality": 0.944,
+              "disagreement_pp": 5.254223544599905,
+              "edge_pp": 4.534306038289465,
+              "final_probability": 0.3774041290851847,
+              "market_probability": 0.3320610687022901,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 6.5,
+              "opponent": {
+                "key": "200059",
+                "name": "Yibing Wu"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "ODD_OUT_OF_RANGE",
+                "PROBABILITY_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "111456",
+                "name": "Mackenzie Mcdonald"
+              },
+              "signals": {
+                "elo": 0.39574927008623145,
+                "fatigue": 0.5,
+                "market": 0.3320610687022901,
+                "ranking": 0.4333910034602076,
+                "recent_form": 0.379378893494535,
+                "season_profile": 0.4375
+              },
+              "status": "REJECTED"
+            },
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "bwin",
+                "Coral",
+                "Interwetten",
+                "Ladbrokes",
+                "Unibet"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.73,
+                "Betsson": 1.74,
+                "Betway": 1.29,
+                "Coral": 1.61,
+                "Interwetten": 1.45,
+                "Ladbrokes": 1.61,
+                "Unibet": 1.79,
+                "bet-at-home": 1.11,
+                "bwin": 1.95
+              },
+              "bookmakers": 9,
+              "confidence": 48.71736354688162,
+              "data_quality": 0.944,
+              "disagreement_pp": 5.254223544599906,
+              "edge_pp": -4.5343060382894596,
+              "final_probability": 0.6225958709148153,
+              "market_probability": 0.6679389312977099,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 1.95,
+              "opponent": {
+                "key": "111456",
+                "name": "Mackenzie Mcdonald"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "200059",
+                "name": "Yibing Wu"
+              },
+              "signals": {
+                "elo": 0.6042507299137685,
+                "fatigue": 0.5,
+                "market": 0.66793893129771,
+                "ranking": 0.5666089965397925,
+                "recent_form": 0.620621106505465,
+                "season_profile": 0.5625
+              },
+              "status": "REJECTED"
+            }
+          ],
+          "captured_at": "2026-08-11T16:44:20.158366+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 1.11
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 1.74
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 1.73
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 1.29
+              },
+              {
+                "bookmaker": "bwin",
+                "odd": 1.95
+              },
+              {
+                "bookmaker": "Coral",
+                "odd": 1.61
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 1.45
+              },
+              {
+                "bookmaker": "Ladbrokes",
+                "odd": 1.61
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 1.79
+              }
+            ],
+            "bookmaker_count": 9,
+            "bookmakers": [
+              "bet-at-home",
+              "Betsson",
+              "BetVictor",
+              "Betway",
+              "bwin",
+              "Coral",
+              "Interwetten",
+              "Ladbrokes",
+              "Unibet"
+            ],
+            "home": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 6.5
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 3.5
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 4.5
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 5.5
+              },
+              {
+                "bookmaker": "bwin",
+                "odd": 2.5
+              },
+              {
+                "bookmaker": "Coral",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 4.5
+              },
+              {
+                "bookmaker": "Ladbrokes",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 3.5
+              }
+            ]
+          }
         }
       ],
       "surface": null,
@@ -3555,7 +4086,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.476005+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.476007+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158383+00:00",
       "market": {
         "away": [
           {
@@ -3659,7 +4190,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.476009+00:00",
+        "updated_at": "2026-08-11T16:44:20.158387+00:00",
         "winner": null
       },
       "snapshots": [
@@ -3767,12 +4298,12 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.476133+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.476135+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158534+00:00",
       "market": {
         "away": [
           {
             "bookmaker": "TennisExplorer avg",
-            "odd": 3.28
+            "odd": 3.29
           }
         ],
         "bookmaker_count": 1,
@@ -3799,7 +4330,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.476138+00:00",
+        "updated_at": "2026-08-11T16:44:20.158537+00:00",
         "winner": null
       },
       "snapshots": [
@@ -3811,6 +4342,28 @@
               {
                 "bookmaker": "TennisExplorer avg",
                 "odd": 3.28
+              }
+            ],
+            "bookmaker_count": 1,
+            "bookmakers": [
+              "TennisExplorer avg"
+            ],
+            "home": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 1.31
+              }
+            ]
+          }
+        },
+        {
+          "analyses": [],
+          "captured_at": "2026-08-11T16:44:20.158539+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 3.29
               }
             ],
             "bookmaker_count": 1,
@@ -3939,7 +4492,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.476080+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.476082+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158474+00:00",
       "market": {
         "away": [
           {
@@ -4034,7 +4587,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.476084+00:00",
+        "updated_at": "2026-08-11T16:44:20.158479+00:00",
         "winner": null
       },
       "snapshots": [
@@ -4237,12 +4790,12 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.476056+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.476058+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158453+00:00",
       "market": {
         "away": [
           {
             "bookmaker": "TennisExplorer avg",
-            "odd": 4.44
+            "odd": 4.46
           }
         ],
         "bookmaker_count": 1,
@@ -4269,7 +4822,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.476060+00:00",
+        "updated_at": "2026-08-11T16:44:20.158455+00:00",
         "winner": null
       },
       "snapshots": [
@@ -4294,6 +4847,28 @@
               }
             ]
           }
+        },
+        {
+          "analyses": [],
+          "captured_at": "2026-08-11T16:44:20.158457+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 4.46
+              }
+            ],
+            "bookmaker_count": 1,
+            "bookmakers": [
+              "TennisExplorer avg"
+            ],
+            "home": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 1.19
+              }
+            ]
+          }
         }
       ],
       "surface": null,
@@ -4305,7 +4880,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.476119+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.476121+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158522+00:00",
       "market": {
         "away": [
           {
@@ -4337,7 +4912,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.476123+00:00",
+        "updated_at": "2026-08-11T16:44:20.158525+00:00",
         "winner": null
       },
       "snapshots": [
@@ -4488,7 +5063,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.476105+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.476107+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158502+00:00",
       "market": {
         "away": [
           {
@@ -4592,7 +5167,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.476109+00:00",
+        "updated_at": "2026-08-11T16:44:20.158508+00:00",
         "winner": null
       },
       "snapshots": [
@@ -4815,7 +5390,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.476155+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.476157+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158553+00:00",
       "market": {
         "away": [
           {
@@ -4910,7 +5485,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.476159+00:00",
+        "updated_at": "2026-08-11T16:44:20.158557+00:00",
         "winner": null
       },
       "snapshots": [
@@ -5009,7 +5584,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.476169+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.476171+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158568+00:00",
       "market": {
         "away": [
           {
@@ -5041,7 +5616,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.476173+00:00",
+        "updated_at": "2026-08-11T16:44:20.158571+00:00",
         "winner": null
       },
       "snapshots": [
@@ -5191,7 +5766,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.476230+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.476232+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158631+00:00",
       "market": {
         "away": [
           {
@@ -5295,7 +5870,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.476234+00:00",
+        "updated_at": "2026-08-11T16:44:20.158636+00:00",
         "winner": null
       },
       "snapshots": [
@@ -5517,7 +6092,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.476183+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.476184+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158581+00:00",
       "market": {
         "away": [
           {
@@ -5549,7 +6124,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.476187+00:00",
+        "updated_at": "2026-08-11T16:44:20.158583+00:00",
         "winner": null
       },
       "snapshots": [
@@ -5699,7 +6274,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.476207+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.476208+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158603+00:00",
       "market": {
         "away": [
           {
@@ -5803,7 +6378,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.476211+00:00",
+        "updated_at": "2026-08-11T16:44:20.158608+00:00",
         "winner": null
       },
       "snapshots": [
@@ -6025,7 +6600,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475696+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475699+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158082+00:00",
       "market": {
         "away": [
           {
@@ -6129,7 +6704,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475702+00:00",
+        "updated_at": "2026-08-11T16:44:20.158090+00:00",
         "winner": null
       },
       "snapshots": [
@@ -6356,7 +6931,7 @@
       "date": "2026-08-11",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T16:38:16.475726+00:00",
-      "last_seen_at": "2026-08-11T16:38:16.475728+00:00",
+      "last_seen_at": "2026-08-11T16:44:20.158120+00:00",
       "market": {
         "away": [
           {
@@ -6469,7 +7044,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T16:38:16.475731+00:00",
+        "updated_at": "2026-08-11T16:44:20.158127+00:00",
         "winner": null
       },
       "snapshots": [
@@ -6729,5 +7304,5 @@
     "resolved_approved": 0,
     "wins": 0
   },
-  "updated_at": "2026-08-11T16:38:16.476239+00:00"
+  "updated_at": "2026-08-11T16:44:20.158645+00:00"
 }
