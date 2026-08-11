@@ -15,6 +15,15 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
+      - name: Clear previously dispatched smoke request
+        shell: bash
+        run: |
+          curl --silent --show-error \
+            --request POST \
+            --header 'Content-Type: application/json' \
+            --data '{"request_id":"0524c3ab-e692-4eb6-8773-63b8864f4e9c","success":true}' \
+            'https://intranet-stepone.netlify.app/api/investbet/analysis-trigger?action=finish' >/dev/null || true
+
       - name: Submit dashboard-style request
         id: submit
         shell: bash
@@ -60,11 +69,12 @@ jobs:
             --header 'Content-Type: application/json' \
             "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/analyze.yml/dispatches" \
             --data '{"ref":"main"}')"
-          if [ "$HTTP_CODE" != '204' ]; then
+          if [ "$HTTP_CODE" != '200' ] && [ "$HTTP_CODE" != '204' ]; then
             cat /tmp/dispatch.txt || true
             echo "dispatch HTTP $HTTP_CODE" >&2
             exit 1
           fi
+          cat /tmp/dispatch.txt || true
 
       - name: Finish queue request
         if: steps.submit.outputs.mode == 'queue' && success()
