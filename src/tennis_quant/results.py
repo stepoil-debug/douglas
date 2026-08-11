@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from tennis_quant.failure import classify_postmortem
+from tennis_quant.ratings import RatingStore
 from tennis_quant.storage import write_json
 
 
@@ -40,6 +41,19 @@ def reconcile_results(provider, root: Path, target_day: date) -> list[dict[str, 
         return []
 
     fixtures = {m.match_id: m for m in provider.fixtures(target_day)}
+    ratings = RatingStore(root / "data" / "state" / "ratings.json")
+    ratings_changed = False
+    for fixture in fixtures.values():
+        if str(fixture.status).lower() != "finished":
+            continue
+        winner = str(fixture.winner or "").strip().lower()
+        if winner == "first player":
+            ratings_changed |= ratings.record_match(fixture.match_id, fixture.player_a.key, fixture.player_b.key, fixture.surface)
+        elif winner == "second player":
+            ratings_changed |= ratings.record_match(fixture.match_id, fixture.player_b.key, fixture.player_a.key, fixture.surface)
+    if ratings_changed:
+        ratings.save()
+
     output: list[dict[str, Any]] = []
     for snapshot_path in sorted(prediction_dir.glob("*.json")):
         snapshot = _load(snapshot_path)
