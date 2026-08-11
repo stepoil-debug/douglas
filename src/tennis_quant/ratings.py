@@ -25,7 +25,6 @@ def margin_k(raw_result: str | None, base_k: float = K) -> float:
         margin = abs(a - b)
     except (ValueError, TypeError):
         margin = 1
-    # Small, capped margin adjustment; it improves responsiveness without letting one blowout dominate.
     multiplier = 1.0 + min(0.24, max(0, margin - 1) * 0.12)
     return base_k * multiplier
 
@@ -89,15 +88,32 @@ class RatingStore:
         self.data["processed_matches"].append(match_id)
         return True
 
-    def bootstrap_done(self) -> bool:
-        return bool(self.data.get("bootstrap", {}).get("completed")) and len(self._processed) >= 200
+    def bootstrap_done(self, source: str | None = None) -> bool:
+        meta = self.data.get("bootstrap", {})
+        if source and meta.get("source") != source:
+            return False
+        return bool(meta.get("completed")) and len(self._processed) >= 200
 
-    def mark_bootstrap(self, start: str, end: str, matches: int) -> None:
+    def reset(self) -> None:
+        self.data = {"global": {}, "surface": {}, "processed_matches": [], "bootstrap": {}}
+        self._processed = set()
+
+    def ensure_source(self, source: str) -> bool:
+        current = self.data.get("bootstrap", {}).get("source")
+        if current == source:
+            return False
+        if self.data.get("global") or self.data.get("processed_matches") or self.data.get("bootstrap"):
+            self.reset()
+            return True
+        return False
+
+    def mark_bootstrap(self, start: str, end: str, matches: int, source: str | None = None) -> None:
         self.data["bootstrap"] = {
             "completed": True,
             "start": start,
             "end": end,
             "matches": matches,
+            "source": source,
         }
 
     def save(self) -> None:
