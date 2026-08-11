@@ -1,0 +1,82 @@
+name: Tokenless Trigger Smoke Test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tokenless-trigger-smoke.yml'
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Submit dashboard-style request
+        id: submit
+        shell: bash
+        run: |
+          set -euo pipefail
+          RESPONSE="$(curl --fail --silent --show-error \
+            --request POST \
+            --header 'Content-Type: application/json' \
+            --data '{"source":"smoke-test"}' \
+            'https://intranet-stepone.netlify.app/api/investbet/analysis-trigger')"
+          echo "$RESPONSE"
+          MODE="$(printf '%s' "$RESPONSE" | jq -r '.mode // ""')"
+          REQUEST_ID="$(printf '%s' "$RESPONSE" | jq -r '.state.request_id // ""')"
+          test -n "$REQUEST_ID"
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+          echo "request_id=$REQUEST_ID" >> "$GITHUB_OUTPUT"
+
+      - name: Claim queue fallback
+        if: steps.submit.outputs.mode == 'queue'
+        id: claim
+        shell: bash
+        run: |
+          set -euo pipefail
+          sleep 2
+          RESPONSE="$(curl --fail --silent --show-error \
+            'https://intranet-stepone.netlify.app/api/investbet/analysis-trigger?action=claim')"
+          echo "$RESPONSE"
+          CLAIMED="$(printf '%s' "$RESPONSE" | jq -r '.claimed // false')"
+          test "$CLAIMED" = 'true'
+
+      - name: Dispatch analysis through internal GitHub token
+        if: steps.submit.outputs.mode == 'queue'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          HTTP_CODE="$(curl --silent --show-error --output /tmp/dispatch.txt --write-out '%{http_code}' \
+            --request POST \
+            --header 'Accept: application/vnd.github+json' \
+            --header "Authorization: Bearer $GH_TOKEN" \
+            --header 'X-GitHub-Api-Version: 2026-03-10' \
+            --header 'Content-Type: application/json' \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/analyze.yml/dispatches" \
+            --data '{"ref":"main"}')"
+          if [ "$HTTP_CODE" != '204' ]; then
+            cat /tmp/dispatch.txt || true
+            echo "dispatch HTTP $HTTP_CODE" >&2
+            exit 1
+          fi
+
+      - name: Finish queue request
+        if: steps.submit.outputs.mode == 'queue' && success()
+        env:
+          REQUEST_ID: ${{ steps.submit.outputs.request_id }}
+        shell: bash
+        run: |
+          curl --fail --silent --show-error \
+            --request POST \
+            --header 'Content-Type: application/json' \
+            --data "{\"request_id\":\"${REQUEST_ID}\",\"success\":true}" \
+            'https://intranet-stepone.netlify.app/api/investbet/analysis-trigger?action=finish' >/dev/null
+
+      - name: Confirm trigger path
+        run: echo "Tokenless trigger validated in mode ${{ steps.submit.outputs.mode }}."
