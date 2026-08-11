@@ -132,12 +132,12 @@ jobs:
 
       - name: Test engine
         env:
-          PYTHONPATH: src
+          PYTHONPATH: src:.
         run: pytest -q
 
       - name: Analyze today's ATP Singles without sports API
         env:
-          PYTHONPATH: src
+          PYTHONPATH: src:.
           H2H_BUDGET: '40'
         run: |
           set -o pipefail
