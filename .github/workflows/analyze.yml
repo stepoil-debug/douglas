@@ -49,7 +49,7 @@ jobs:
               json.dump(payload, f, ensure_ascii=False, indent=2)
           PY
           git add dashboard/run_status.json
-          git commit -m "status: tennis analysis running [skip ci]"
+          git commit -m "status: tennis analysis running"
           git push
 
       - uses: actions/setup-python@v5
@@ -108,7 +108,7 @@ jobs:
         if: success()
         run: |
           git add data dashboard/data.json
-          git diff --cached --quiet || git commit -m "data: update no-api tennis analysis [skip ci]"
+          git diff --cached --quiet || git commit -m "data: update no-api tennis analysis"
           git push
 
       - name: Mark analysis success
@@ -131,7 +131,7 @@ jobs:
               json.dump(payload, f, ensure_ascii=False, indent=2)
           PY
           git add dashboard/run_status.json
-          git commit -m "status: tennis analysis success [skip ci]"
+          git commit -m "status: tennis analysis success"
           git push
 
       - name: Mark analysis failure
@@ -156,5 +156,5 @@ jobs:
               json.dump(payload, f, ensure_ascii=False, indent=2)
           PY
           git add dashboard/run_status.json
-          git commit -m "status: tennis analysis failed [skip ci]" || true
+          git commit -m "status: tennis analysis failed" || true
           git push || true
