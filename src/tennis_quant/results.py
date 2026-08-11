@@ -7,6 +7,7 @@ from typing import Any
 
 from tennis_quant.failure import classify_postmortem
 from tennis_quant.history import update_history_results
+from tennis_quant.public_results import finished_fixtures
 from tennis_quant.ratings import RatingStore, margin_k
 from tennis_quant.storage import write_json
 
@@ -46,9 +47,9 @@ def _quality_label(snapshot: dict[str, Any], won: bool) -> str:
 
 
 def reconcile_results(provider, root: Path, target_day: date) -> list[dict[str, Any]]:
-    # Load the public result page even when there were no approved/shadow snapshots.
-    # This keeps the full daily game ledger updated for every analyzed match.
-    fixtures = {m.match_id: m for m in provider.fixtures(target_day)}
+    # Results use TennisExplorer's dedicated /results/ page, not the upcoming-match collector.
+    # This keeps previous-day reconciliation fast and allows the daily ledger to receive WIN/LOSS.
+    fixtures = {m.match_id: m for m in finished_fixtures(provider, root, target_day)}
     update_history_results(root, target_day.isoformat(), fixtures.values())
 
     prediction_dir = root / "data" / "predictions" / target_day.isoformat()
@@ -58,8 +59,6 @@ def reconcile_results(provider, root: Path, target_day: date) -> list[dict[str, 
     ratings = RatingStore(root / "data" / "state" / "ratings.json")
     ratings_changed = False
     for fixture in fixtures.values():
-        if str(fixture.status).lower() != "finished":
-            continue
         winner = str(fixture.winner or "").strip().lower()
         k = margin_k(fixture.raw.get("event_final_result"))
         if winner == "first player":
@@ -74,7 +73,7 @@ def reconcile_results(provider, root: Path, target_day: date) -> list[dict[str, 
         snapshot = _load(snapshot_path)
         match_id = str(snapshot["match"]["match_id"])
         fixture = fixtures.get(match_id)
-        if not fixture or str(fixture.status).lower() != "finished":
+        if not fixture:
             continue
         won = _selected_won(snapshot, fixture)
         if won is None:
@@ -100,8 +99,7 @@ def reconcile_results(provider, root: Path, target_day: date) -> list[dict[str, 
             "model_version": snapshot.get("model_version"),
             "postmortem": postmortem,
         }
-        result_path = root / "data" / "results" / target_day.isoformat() / snapshot_path.name
-        write_json(result_path, result)
+        write_json(root / "data" / "results" / target_day.isoformat() / snapshot_path.name, result)
         output.append(result)
     return output
 
@@ -109,7 +107,13 @@ def reconcile_results(provider, root: Path, target_day: date) -> list[dict[str, 
 def reconcile_recent(provider, root: Path, today: date, days_back: int = 3) -> list[dict[str, Any]]:
     all_results: list[dict[str, Any]] = []
     for offset in range(days_back + 1):
-        all_results.extend(reconcile_results(provider, root, today - timedelta(days=offset)))
+        target = today - timedelta(days=offset)
+        try:
+            all_results.extend(reconcile_results(provider, root, target))
+        except Exception:
+            # Public result pages can temporarily lag or be unavailable. A single day must not
+            # block today's pre-match analysis or reconciliation of other dates.
+            continue
     return all_results
 
 
