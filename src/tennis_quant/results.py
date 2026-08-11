@@ -7,6 +7,7 @@ from typing import Any
 
 from tennis_quant.failure import classify_postmortem
 from tennis_quant.history import update_history_results
+from tennis_quant.learning import reconcile_learning_results
 from tennis_quant.public_results import finished_fixtures
 from tennis_quant.ratings import RatingStore, margin_k
 from tennis_quant.storage import write_json
@@ -47,15 +48,12 @@ def _quality_label(snapshot: dict[str, Any], won: bool) -> str:
 
 
 def reconcile_results(provider, root: Path, target_day: date) -> list[dict[str, Any]]:
-    # Results use TennisExplorer's dedicated /results/ page, not the upcoming-match collector.
-    # This keeps previous-day reconciliation fast and allows the daily ledger to receive WIN/LOSS.
     fixtures = {m.match_id: m for m in finished_fixtures(provider, root, target_day)}
     update_history_results(root, target_day.isoformat(), fixtures.values())
+    reconcile_learning_results(root, target_day.isoformat(), fixtures.values())
 
-    prediction_dir = root / "data" / "predictions" / target_day.isoformat()
-    if not prediction_dir.exists():
-        return []
-
+    # Ratings learn from every finished result, independently of whether there was
+    # an approved betting snapshot for that match.
     ratings = RatingStore(root / "data" / "state" / "ratings.json")
     ratings_changed = False
     for fixture in fixtures.values():
@@ -67,6 +65,10 @@ def reconcile_results(provider, root: Path, target_day: date) -> list[dict[str, 
             ratings_changed |= ratings.record_match(fixture.match_id, fixture.player_b.key, fixture.player_a.key, fixture.surface, k=k)
     if ratings_changed:
         ratings.save()
+
+    prediction_dir = root / "data" / "predictions" / target_day.isoformat()
+    if not prediction_dir.exists():
+        return []
 
     output: list[dict[str, Any]] = []
     for snapshot_path in sorted(prediction_dir.glob("*.json")):
@@ -111,8 +113,6 @@ def reconcile_recent(provider, root: Path, today: date, days_back: int = 3) -> l
         try:
             all_results.extend(reconcile_results(provider, root, target))
         except Exception:
-            # Public result pages can temporarily lag or be unavailable. A single day must not
-            # block today's pre-match analysis or reconciliation of other dates.
             continue
     return all_results
 
