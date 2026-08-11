@@ -32,6 +32,7 @@ class MarketSide:
     median_odd: float | None
     fair_probability: float | None
     bookmakers: int
+    bookmaker_odds: dict[str, float] = field(default_factory=dict)
 
 
 @dataclass

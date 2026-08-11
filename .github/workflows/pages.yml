@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'dashboard/**'
+      - 'data/history/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -25,6 +26,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Stage historical ledgers for Pages
+        run: |
+          mkdir -p dashboard/history
+          if compgen -G "data/history/*.json" > /dev/null; then
+            cp data/history/*.json dashboard/history/
+          fi
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          out = []
+          for path in sorted(Path('data/history').glob('????-??-??.json'), reverse=True):
+              try:
+                  row = json.loads(path.read_text(encoding='utf-8'))
+              except Exception:
+                  continue
+              out.append({
+                  'date': row.get('date', path.stem),
+                  'updated_at': row.get('updated_at'),
+                  'summary': row.get('summary', {}),
+              })
+          index = {'updated_at': datetime.now(timezone.utc).isoformat(), 'dates': out}
+          Path('dashboard/history/index.json').write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding='utf-8')
+          PY
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
