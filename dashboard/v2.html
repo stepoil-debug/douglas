@@ -50,4 +50,4 @@ $('refreshBtn').onclick=refreshAll;
 $('analyzeBtn').onclick=()=>{window.open(WORKFLOW_URL,'_blank','noopener');const tip=$('manualTip');tip.classList.add('show');setTimeout(()=>tip.classList.remove('show'),9000)};
 refreshAll().catch(e=>{console.error(e);$('runState').textContent='Dados indisponíveis';$('approvedList').innerHTML='<div class="empty">Aguardando a próxima execução automática do motor.</div>'});
 setInterval(()=>loadStatus().catch(()=>{}),15000);setInterval(()=>render().catch(()=>{}),60000);
-</script></body></html>
+</script><script src="manual-trigger.js"></script></body></html>
