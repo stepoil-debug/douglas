@@ -5,9 +5,10 @@ import hashlib
 import json
 import re
 import subprocess
+import sys
 import unicodedata
 from collections import defaultdict
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
@@ -17,7 +18,13 @@ import requests
 
 from tennis_quant.domain import Match, Player
 
-SACKMANN_URL = "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_matches_{year}.csv"
+# Same Sackmann-format public dataset. The original raw host is retained as a
+# secondary source, while the verified public mirror avoids GitHub raw 404s seen
+# from Actions/web fetches.
+SACKMANN_URLS = (
+    "https://raw.githubusercontent.com/Kadantte/tennis_atp/master/atp_matches_{year}.csv",
+    "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_matches_{year}.csv",
+)
 SAO_PAULO = ZoneInfo("America/Sao_Paulo")
 
 
@@ -60,7 +67,7 @@ def _stable_match_id(record: dict[str, Any]) -> str:
             str(record.get(k) or "")
             for k in ("match_date", "league_name", "home_team", "away_team")
         )
-    return "oh-" + hashlib.sha1(raw.encode("utf-8")).hexdigest()[:20]
+    return "pub-" + hashlib.sha1(raw.encode("utf-8")).hexdigest()[:20]
 
 
 def odds_home_away(record: dict[str, Any]) -> dict[str, Any]:
@@ -117,6 +124,14 @@ def _set_count_from_score(score: Any) -> str | None:
     return f"{left} - {right}"
 
 
+def _record_live_source(record: dict[str, Any]) -> str:
+    markets = record.get("match_winner_market", []) or []
+    for row in markets:
+        if isinstance(row, dict) and row.get("source"):
+            return str(row["source"])
+    return "OddsHarvester/OddsPortal"
+
+
 class SackmannStore:
     """Static-file ATP history. No API key and no sports API is required."""
 
@@ -130,26 +145,49 @@ class SackmannStore:
         self.alias_to_ids: dict[str, set[str]] = defaultdict(set)
         self.latest_rank: dict[str, dict[str, Any]] = {}
         self._profiles: dict[str, dict[str, Any]] = {}
+        self.source_used: dict[int, str] = {}
 
     def _path(self, year: int) -> Path:
         return self.cache_dir / f"atp_matches_{year}.csv"
+
+    def _download_year(self, year: int, path: Path) -> bool:
+        errors: list[str] = []
+        for template in SACKMANN_URLS:
+            url = template.format(year=year)
+            try:
+                response = self.session.get(url, timeout=60)
+                if response.status_code == 404:
+                    errors.append(f"{url}: 404")
+                    continue
+                response.raise_for_status()
+                content = response.content
+                if not content.startswith(b"tourney_id,"):
+                    errors.append(f"{url}: unexpected content")
+                    continue
+                path.write_bytes(content)
+                self.source_used[year] = url
+                return True
+            except requests.RequestException as exc:
+                errors.append(f"{url}: {exc}")
+        print(f"[TQE] ATP history {year} unavailable: {'; '.join(errors)}", file=sys.stderr, flush=True)
+        return False
 
     def ensure_year(self, year: int) -> list[dict[str, str]]:
         if year in self.rows_by_year:
             return self.rows_by_year[year]
         path = self._path(year)
+        # Current season is refreshed on every workflow run; older years use Actions cache.
         refresh = year == date.today().year
         if not path.exists() or refresh:
-            response = self.session.get(SACKMANN_URL.format(year=year), timeout=60)
-            if response.status_code == 404:
+            downloaded = self._download_year(year, path)
+            if not downloaded and not path.exists():
                 self.rows_by_year[year] = []
                 return []
-            response.raise_for_status()
-            path.write_bytes(response.content)
         with path.open("r", encoding="utf-8-sig", newline="") as fh:
             rows = list(csv.DictReader(fh))
         self.rows_by_year[year] = rows
         self._index_rows(rows)
+        print(f"[TQE] ATP history {year}: {len(rows)} rows", file=sys.stderr, flush=True)
         return rows
 
     def ensure_window(self, start: date, end: date) -> None:
@@ -223,29 +261,32 @@ class SackmannStore:
         return output
 
     def _stats_for_side(self, row: dict[str, str], prefix: str, player_key: str) -> list[dict[str, Any]]:
-        def pair(name: str, won_col: str, total_col: str) -> dict[str, Any] | None:
+        def pair(name: str, won_col: str, total_value: float) -> dict[str, Any] | None:
             try:
                 won = float(row.get(won_col) or 0)
-                total = float(row.get(total_col) or 0)
+                total = float(total_value)
             except (TypeError, ValueError):
                 return None
             if total <= 0:
                 return None
             return {"player_key": player_key, "stat_name": name, "stat_won": won, "stat_total": total}
 
-        svpt = f"{prefix}_svpt"
-        first_in = f"{prefix}_1stIn"
+        try:
+            svpt = float(row.get(f"{prefix}_svpt") or 0)
+            first_in = float(row.get(f"{prefix}_1stIn") or 0)
+        except (TypeError, ValueError):
+            svpt = first_in = 0.0
+        second_attempts = max(0.0, svpt - first_in)
         rows = [
             pair("1st Serve Points Won", f"{prefix}_1stWon", first_in),
-            pair("2nd Serve Points Won", f"{prefix}_2ndWon", svpt),
-            pair("Break Points Saved", f"{prefix}_bpSaved", f"{prefix}_bpFaced"),
+            pair("2nd Serve Points Won", f"{prefix}_2ndWon", second_attempts),
+            pair("Break Points Saved", f"{prefix}_bpSaved", float(row.get(f"{prefix}_bpFaced") or 0)),
         ]
         try:
             first_won = float(row.get(f"{prefix}_1stWon") or 0)
             second_won = float(row.get(f"{prefix}_2ndWon") or 0)
-            total = float(row.get(svpt) or 0)
-            if total > 0:
-                rows.append({"player_key": player_key, "stat_name": "Service Points Won", "stat_won": first_won + second_won, "stat_total": total})
+            if svpt > 0:
+                rows.append({"player_key": player_key, "stat_name": "Service Points Won", "stat_won": first_won + second_won, "stat_total": svpt})
         except (TypeError, ValueError):
             pass
         return [x for x in rows if x]
@@ -281,7 +322,7 @@ class SackmannStore:
                 "first_player_key": winner_key,
                 "second_player_key": loser_key,
                 "statistics": stats,
-                "source": "JeffSackmann/tennis_atp",
+                "source": "Sackmann-format public ATP history",
             },
         )
 
@@ -296,7 +337,7 @@ class SackmannStore:
         return matches
 
     def h2h(self, a: str, b: str, today: date) -> dict[str, Any]:
-        start = today.replace(year=max(1968, today.year - 3))
+        start = today - timedelta(days=1096)
         rows = self.rows_between(start, today)
         h2h: list[dict[str, Any]] = []
         first: list[dict[str, Any]] = []
@@ -363,9 +404,9 @@ class SackmannStore:
 
 
 class PublicTennisProvider:
-    """OddsPortal via OddsHarvester + Jeff Sackmann static CSV history."""
+    """Public HTML current odds + Sackmann-format static ATP history."""
 
-    history_source_id = "jeff-sackmann-v1"
+    history_source_id = "sackmann-public-mirror-v2"
 
     def __init__(self, root: Path):
         self.root = root
@@ -373,11 +414,12 @@ class PublicTennisProvider:
         self._day_cache: dict[str, tuple[list[Match], dict[str, Any]]] = {}
         self.source_requests = 0
         self.current_context_date = date.today()
+        self.live_source = "unknown"
 
     def _run_scraper(self, target_date: date) -> list[dict[str, Any]]:
         runtime = self.root / "data" / "runtime"
         runtime.mkdir(parents=True, exist_ok=True)
-        output = runtime / f"oddsharvester_{target_date.isoformat()}.json"
+        output = runtime / f"live_tennis_{target_date.isoformat()}.json"
         if output.exists():
             output.unlink()
         cmd = [
@@ -396,20 +438,34 @@ class PublicTennisProvider:
         ]
         completed = subprocess.run(cmd, capture_output=True, text=True, timeout=1200)
         self.source_requests += 1
+        if completed.stdout:
+            print(completed.stdout[-4000:], file=sys.stderr, flush=True)
+        if completed.stderr:
+            print(completed.stderr[-6000:], file=sys.stderr, flush=True)
         if completed.returncode != 0:
-            tail = (completed.stderr or completed.stdout or "unknown OddsHarvester failure")[-1200:]
-            raise RuntimeError(f"OddsHarvester failed: {tail}")
+            tail = (completed.stderr or completed.stdout or "unknown public scraper failure")[-1600:]
+            raise RuntimeError(f"Live collector failed: {tail}")
         candidates = [output, output.with_suffix(output.suffix + ".json"), Path(str(output) + ".json")]
         actual = next((p for p in candidates if p.exists()), None)
         if not actual:
-            return []
+            raise RuntimeError("Live collector returned success but no output file")
         payload = json.loads(actual.read_text(encoding="utf-8"))
         if isinstance(payload, dict):
+            rows: list[dict[str, Any]] = []
             for key in ("data", "results", "matches"):
                 if isinstance(payload.get(key), list):
-                    return payload[key]
-            return [payload]
-        return payload if isinstance(payload, list) else []
+                    rows = payload[key]
+                    break
+            if not rows and payload.get("home_team"):
+                rows = [payload]
+        elif isinstance(payload, list):
+            rows = payload
+        else:
+            rows = []
+        if not rows:
+            raise RuntimeError("Live collector returned zero match rows; refusing false SUCCESS")
+        self.live_source = _record_live_source(rows[0])
+        return rows
 
     def _load_day(self, target_date: date) -> tuple[list[Match], dict[str, Any]]:
         key = target_date.isoformat()
@@ -444,6 +500,7 @@ class PublicTennisProvider:
                 status = "Started"
             match_id = _stable_match_id(record)
             surface = self.sackmann.surface_for_tournament(league, target_date.year)
+            source_name = _record_live_source(record)
             match = Match(
                 match_id=match_id,
                 date=(local.date().isoformat() if local else target_date.isoformat()),
@@ -464,12 +521,14 @@ class PublicTennisProvider:
                     "event_winner": winner,
                     "first_player_key": player_a.key,
                     "second_player_key": player_b.key,
-                    "source": "OddsHarvester/OddsPortal",
+                    "source": source_name,
                     "source_url": record.get("match_link"),
                 },
             )
             matches.append(match)
             odds[match_id] = odds_home_away(record)
+        if not matches:
+            raise RuntimeError("Live source returned rows but no ATP Singles survived normalization")
         self._day_cache[key] = (matches, odds)
         return matches, odds
 

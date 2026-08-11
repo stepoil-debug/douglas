@@ -25,6 +25,7 @@ UTC = timezone.utc
 
 EXCLUDED_TOURNAMENT_TOKENS = (
     "challenger",
+    "chall.",
     "itf",
     "futures",
     "utr",
@@ -44,7 +45,6 @@ def _player_name(cell: Tag | None) -> str:
         return ""
     anchor = cell.find("a")
     raw = _clean(anchor.get_text(" ", strip=True) if anchor else cell.get_text(" ", strip=True))
-    # TennisExplorer commonly appends the tournament seed: "Fritz T. (4)".
     return re.sub(r"\s*\([^)]*\)\s*$", "", raw).strip()
 
 
@@ -77,7 +77,6 @@ def _odds_from_row(row: Tag) -> tuple[float | None, float | None]:
 def _match_time(row: Tag) -> str | None:
     cell = row.select_one("td.first.time")
     if not cell:
-        # fallback for small markup changes
         for td in row.find_all("td"):
             classes = {str(x).lower() for x in (td.get("class") or [])}
             if "time" in classes:
@@ -107,26 +106,16 @@ def _is_target_tournament(name: str) -> bool:
     return bool(name) and not any(token in lower for token in EXCLUDED_TOURNAMENT_TOKENS)
 
 
-def _find_match_table(soup: BeautifulSoup) -> Tag | None:
-    tables = soup.find_all("table", class_="result")
-    if not tables:
-        return None
-    # With type=atp-single TennisExplorer normally returns one result table. If it returns
-    # more, choose the table that actually contains tournament headers.
-    for table in tables:
-        if table.select_one("tr.head.flags td.t-name"):
-            return table
-    return tables[0]
+def _candidate_tables(soup: BeautifulSoup) -> list[Tag]:
+    tables = [t for t in soup.find_all("table") if isinstance(t, Tag)]
+    result = [t for t in tables if "result" in {str(x).lower() for x in (t.get("class") or [])}]
+    return result or tables
 
 
-def parse_matches(html: str, target: date, base_url: str) -> list[dict[str, Any]]:
-    soup = BeautifulSoup(html, "html.parser")
-    table = _find_match_table(soup)
-    if table is None:
-        raise RuntimeError("TennisExplorer result table not found")
+def _parse_table(table: Tag, target: date, base_url: str) -> list[dict[str, Any]]:
     tbody = table.find("tbody") or table
-    rows = [row for row in tbody.find_all("tr", recursive=False) if isinstance(row, Tag)]
-
+    # recursive=True is deliberate. Some current renderings wrap rows while older ones did not.
+    rows = [row for row in tbody.find_all("tr") if isinstance(row, Tag)]
     records: list[dict[str, Any]] = []
     tournament = ""
     index = 0
@@ -145,8 +134,6 @@ def parse_matches(html: str, target: date, base_url: str) -> list[dict[str, Any]
             index += 1
             continue
 
-        # A match is represented by two consecutive player rows; only the first normally
-        # carries time and the H/A odds columns.
         opponent_row: Tag | None = None
         look = index + 1
         while look < len(rows):
@@ -170,7 +157,7 @@ def parse_matches(html: str, target: date, base_url: str) -> list[dict[str, Any]
             continue
 
         detail = _detail_link(row, opponent_row, base_url)
-        record = {
+        records.append({
             "match_date": _utc_match_date(target, hhmm),
             "home_team": first,
             "away_team": second,
@@ -178,31 +165,50 @@ def parse_matches(html: str, target: date, base_url: str) -> list[dict[str, Any]
             "match_link": detail or f"{base_url}/matches/{target.isoformat()}/{tournament}/{first}/{second}",
             "home_score": "",
             "away_score": "",
-            "match_winner_market": [
-                {
-                    "player_1": f"{home_odd:.3f}",
-                    "player_2": f"{away_odd:.3f}",
-                    "bookmaker_name": "TennisExplorer avg",
-                    "period": "FullTime",
-                    "submarket_name": "Home/Away",
-                    "source": "TennisExplorer schedule",
-                }
-            ],
-        }
-        records.append(record)
+            "match_winner_market": [{
+                "player_1": f"{home_odd:.3f}",
+                "player_2": f"{away_odd:.3f}",
+                "bookmaker_name": "TennisExplorer avg",
+                "period": "FullTime",
+                "submarket_name": "Home/Away",
+                "source": "TennisExplorer schedule",
+            }],
+        })
         index = look + 1
-
     return records
 
 
+def parse_matches(html: str, target: date, base_url: str) -> list[dict[str, Any]]:
+    soup = BeautifulSoup(html, "html.parser")
+    tables = _candidate_tables(soup)
+    if not tables:
+        raise RuntimeError("TennisExplorer returned no tables")
+    records: list[dict[str, Any]] = []
+    seen: set[tuple[str, str, str]] = set()
+    for table in tables:
+        for record in _parse_table(table, target, base_url):
+            key = (record["match_date"], record["home_team"], record["away_team"])
+            if key not in seen:
+                seen.add(key)
+                records.append(record)
+    return records
+
+
+def _diagnostic(html: str) -> str:
+    soup = BeautifulSoup(html, "html.parser")
+    title = _clean(soup.title.get_text(" ", strip=True) if soup.title else "")
+    tables = len(soup.find_all("table"))
+    result_tables = len(soup.find_all("table", class_="result"))
+    trs = len(soup.find_all("tr"))
+    text = _clean(soup.get_text(" ", strip=True))[:450]
+    return f"title={title!r}, bytes={len(html)}, tables={tables}, result_tables={result_tables}, tr={trs}, sample={text!r}"
+
+
 def collect(target: date) -> tuple[list[dict[str, Any]], str]:
-    params = {
-        "type": "atp-single",
-        "year": str(target.year),
-        "month": f"{target.month:02d}",
-        "day": f"{target.day:02d}",
-        "timezone": "-3",
-    }
+    param_variants = [
+        {"type": "atp-single", "year": str(target.year), "month": str(target.month), "day": str(target.day), "timezone": "-3"},
+        {"type": "atp-single", "year": str(target.year), "month": f"{target.month:02d}", "day": f"{target.day:02d}", "timezone": "-3"},
+    ]
     headers = {
         "User-Agent": USER_AGENT,
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -212,17 +218,23 @@ def collect(target: date) -> tuple[list[dict[str, Any]], str]:
     errors: list[str] = []
     for base in BASE_URLS:
         url = f"{base}/matches/"
-        try:
-            response = requests.get(url, params=params, headers=headers, timeout=35)
-            if response.status_code != 200:
-                errors.append(f"{base}: HTTP {response.status_code}")
-                continue
-            rows = parse_matches(response.text, target, base)
-            print(f"[TQE] TennisExplorer source {base}: {len(rows)} ATP matches with H/A odds", file=sys.stderr)
-            return rows, base
-        except Exception as exc:
-            errors.append(f"{base}: {exc}")
-    raise RuntimeError("; ".join(errors) or "TennisExplorer collection failed")
+        for params in param_variants:
+            try:
+                response = requests.get(url, params=params, headers=headers, timeout=35)
+                if response.status_code != 200:
+                    errors.append(f"{base}: HTTP {response.status_code}")
+                    continue
+                rows = parse_matches(response.text, target, base)
+                if not rows:
+                    diag = _diagnostic(response.text)
+                    errors.append(f"{base}: zero parsed matches ({diag})")
+                    print(f"[TQE] TennisExplorer zero rows: {diag}", file=sys.stderr, flush=True)
+                    continue
+                print(f"[TQE] TennisExplorer source {base}: {len(rows)} ATP matches with H/A odds", file=sys.stderr, flush=True)
+                return rows, base
+            except Exception as exc:
+                errors.append(f"{base}: {exc}")
+    raise RuntimeError("; ".join(errors[-6:]) or "TennisExplorer collection failed")
 
 
 def main() -> int:
@@ -233,6 +245,9 @@ def main() -> int:
     raw = args.date.replace("-", "")
     target = datetime.strptime(raw, "%Y%m%d").date()
     records, source = collect(target)
+    if not records:
+        print("[TQE] TennisExplorer returned zero records", file=sys.stderr)
+        return 2
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8")
