@@ -1,0 +1,25 @@
+{
+  "model_version": "champion-v0.1.0",
+  "selection": {
+    "min_odd": 1.5,
+    "max_odd": 2.0,
+    "max_approved": 10,
+    "shadow_size": 10,
+    "min_final_probability": 0.64,
+    "min_edge_pp": 3.0,
+    "min_confidence": 70.0,
+    "max_disagreement_pp": 13.0
+  },
+  "ensemble_weights": {
+    "market": 0.55,
+    "elo": 0.20,
+    "surface_elo": 0.15,
+    "recent_form": 0.10
+  },
+  "confidence_weights": {
+    "probability": 0.30,
+    "edge": 0.30,
+    "agreement": 0.20,
+    "data_quality": 0.20
+  }
+}

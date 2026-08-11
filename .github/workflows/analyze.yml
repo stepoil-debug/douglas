@@ -1,0 +1,48 @@
+name: Tennis Quant - Analyze
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7 9-23 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tennis-quant-analysis
+  cancel-in-progress: false
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    env:
+      API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - run: pip install -r requirements.txt
+      - name: Test
+        env:
+          PYTHONPATH: src
+        run: pytest -q
+      - name: API key not configured
+        if: env.API_TENNIS_KEY == ''
+        run: echo "API_TENNIS_KEY is not configured; analysis skipped safely."
+      - name: Analyze today's ATP singles and reconcile results
+        if: env.API_TENNIS_KEY != ''
+        env:
+          PYTHONPATH: src
+          H2H_BUDGET: '40'
+        run: python -m tennis_quant.cli
+      - name: Commit immutable snapshots, results, ratings and dashboard data
+        if: env.API_TENNIS_KEY != ''
+        run: |
+          git config user.name "tennis-quant-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data dashboard/data.json
+          git diff --cached --quiet && exit 0
+          git commit -m "data: update tennis analysis"
+          git push
