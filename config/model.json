@@ -1,25 +1,33 @@
 {
-  "model_version": "champion-v0.1.0",
+  "model_version": "champion-v0.2.0",
+  "bootstrap_days": 365,
   "selection": {
     "min_odd": 1.5,
     "max_odd": 2.0,
     "max_approved": 10,
     "shadow_size": 10,
-    "min_final_probability": 0.64,
-    "min_edge_pp": 3.0,
-    "min_confidence": 70.0,
-    "max_disagreement_pp": 13.0
+    "min_final_probability": 0.65,
+    "min_edge_pp": 3.5,
+    "min_confidence": 72.0,
+    "min_data_quality": 0.62,
+    "max_disagreement_pp": 12.5,
+    "allow_qualification": false
   },
   "ensemble_weights": {
-    "market": 0.55,
-    "elo": 0.20,
-    "surface_elo": 0.15,
-    "recent_form": 0.10
+    "market": 0.34,
+    "elo": 0.18,
+    "surface_elo": 0.08,
+    "ranking": 0.12,
+    "recent_form": 0.10,
+    "season_profile": 0.06,
+    "fatigue": 0.04,
+    "serve": 0.06,
+    "h2h": 0.02
   },
   "confidence_weights": {
     "probability": 0.30,
-    "edge": 0.30,
+    "edge": 0.27,
     "agreement": 0.20,
-    "data_quality": 0.20
+    "data_quality": 0.23
   }
 }
