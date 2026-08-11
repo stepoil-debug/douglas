@@ -27,7 +27,7 @@ def _market(raw_odds: dict[str, Any]) -> dict[str, Any]:
     away = home_away.get("Away", {}) or {}
 
     def side(rows: dict[str, Any]) -> list[dict[str, Any]]:
-        out: list[dict[str, Any]] = []
+        out = []
         for book, odd in sorted(rows.items(), key=lambda x: str(x[0]).lower()):
             try:
                 value = float(odd)
@@ -36,15 +36,9 @@ def _market(raw_odds: dict[str, Any]) -> dict[str, Any]:
             out.append({"bookmaker": str(book), "odd": value})
         return out
 
-    home_rows = side(home)
-    away_rows = side(away)
+    home_rows, away_rows = side(home), side(away)
     names = sorted({x["bookmaker"] for x in home_rows + away_rows}, key=str.lower)
-    return {
-        "bookmakers": names,
-        "bookmaker_count": len(names),
-        "home": home_rows,
-        "away": away_rows,
-    }
+    return {"bookmakers": names, "bookmaker_count": len(names), "home": home_rows, "away": away_rows}
 
 
 def _result_from_fixture(fixture: Any) -> dict[str, Any]:
@@ -52,32 +46,29 @@ def _result_from_fixture(fixture: Any) -> dict[str, Any]:
     winner = str(getattr(fixture, "winner", "") or "").strip().lower()
     winner_player = None
     if winner == "first player":
-        winner_player = {
-            "key": fixture.player_a.key,
-            "name": fixture.player_a.name,
-        }
+        winner_player = {"key": fixture.player_a.key, "name": fixture.player_a.name}
     elif winner == "second player":
-        winner_player = {
-            "key": fixture.player_b.key,
-            "name": fixture.player_b.name,
-        }
-    score = None
+        winner_player = {"key": fixture.player_b.key, "name": fixture.player_b.name}
     raw = getattr(fixture, "raw", {}) or {}
-    score = raw.get("event_final_result")
     finished = status.lower() == "finished" and winner_player is not None
     return {
         "status": "FINISHED" if finished else (status.upper() or "PENDING"),
         "winner": winner_player,
-        "score": score,
+        "score": raw.get("event_final_result"),
         "resolved": finished,
         "updated_at": _now(),
     }
 
 
-def _analysis_row(candidate: Any) -> dict[str, Any]:
-    row = candidate.to_dict() if hasattr(candidate, "to_dict") else dict(candidate)
+def _candidate_dict(candidate: Any) -> dict[str, Any]:
+    return candidate.to_dict() if hasattr(candidate, "to_dict") else dict(candidate)
+
+
+def _analysis_row(candidate: Any) -> tuple[str, dict[str, Any]]:
+    row = _candidate_dict(candidate)
     selected_market = row.get("selected_market") or {}
-    return {
+    match_id = str(((row.get("match") or {}).get("match_id")) or "")
+    return match_id, {
         "selected_player": row.get("selected_player"),
         "opponent": row.get("opponent"),
         "status": row.get("status"),
@@ -97,48 +88,30 @@ def _analysis_row(candidate: Any) -> dict[str, Any]:
     }
 
 
-def _snapshot_payload(market: dict[str, Any], analyses: list[dict[str, Any]]) -> dict[str, Any]:
-    return {
-        "captured_at": _now(),
-        "market": market,
-        "analyses": analyses,
-    }
+def _day_paths(root: Path, day: str) -> tuple[Path, Path]:
+    return root / "data" / "history" / f"{day}.json", root / "dashboard" / "history" / f"{day}.json"
 
 
 def _same_snapshot(a: dict[str, Any] | None, b: dict[str, Any]) -> bool:
     if not a:
         return False
-    a_cmp = {k: v for k, v in a.items() if k != "captured_at"}
-    b_cmp = {k: v for k, v in b.items() if k != "captured_at"}
-    return a_cmp == b_cmp
+    return {k: v for k, v in a.items() if k != "captured_at"} == {k: v for k, v in b.items() if k != "captured_at"}
 
 
-def _day_paths(root: Path, day: str) -> tuple[Path, Path]:
-    return (
-        root / "data" / "history" / f"{day}.json",
-        root / "dashboard" / "history" / f"{day}.json",
-    )
+def _attach_bookmaker_odds(analyses: list[dict[str, Any]], fixture: Any, market: dict[str, Any]) -> None:
+    home = {x["bookmaker"]: x["odd"] for x in market.get("home", [])}
+    away = {x["bookmaker"]: x["odd"] for x in market.get("away", [])}
+    for row in analyses:
+        key = str(((row.get("selected_player") or {}).get("key")) or "")
+        odds = home if key == str(fixture.player_a.key) else away if key == str(fixture.player_b.key) else {}
+        row["bookmaker_odds"] = odds
+        row["bookmaker_names"] = sorted(odds, key=str.lower)
+        row["bookmakers"] = len(odds)
 
 
-def record_analysis_history(
-    root: Path,
-    day: str,
-    fixtures: Iterable[Any],
-    odds_by_match: dict[str, Any],
-    ranked_candidates: Iterable[Any],
-    model_version: str,
-    live_source: str,
-) -> dict[str, Any]:
+def record_analysis_history(root: Path, day: str, fixtures: Iterable[Any], odds_by_match: dict[str, Any], ranked_candidates: Iterable[Any], model_version: str, live_source: str) -> dict[str, Any]:
     data_path, dashboard_path = _day_paths(root, day)
-    ledger = _load(data_path, {
-        "date": day,
-        "created_at": _now(),
-        "updated_at": _now(),
-        "model_versions": [],
-        "live_sources": [],
-        "games": [],
-    })
-
+    ledger = _load(data_path, {"date": day, "created_at": _now(), "updated_at": _now(), "model_versions": [], "live_sources": [], "games": []})
     if model_version and model_version not in ledger["model_versions"]:
         ledger["model_versions"].append(model_version)
     if live_source and live_source not in ledger["live_sources"]:
@@ -147,9 +120,7 @@ def record_analysis_history(
     existing = {str(g.get("match_id")): g for g in ledger.get("games", [])}
     by_match: dict[str, list[dict[str, Any]]] = {}
     for candidate in ranked_candidates:
-        row = _analysis_row(candidate)
-        match = candidate.match if hasattr(candidate, "match") else None
-        match_id = str(getattr(match, "match_id", "") or "")
+        match_id, row = _analysis_row(candidate)
         if match_id:
             by_match.setdefault(match_id, []).append(row)
 
@@ -159,25 +130,17 @@ def record_analysis_history(
         match_id = str(fixture.match_id)
         market = _market(odds_by_match.get(match_id, {}))
         analyses = by_match.get(match_id, [])
+        _attach_bookmaker_odds(analyses, fixture, market)
         analyses.sort(key=lambda x: (x.get("rank") is None, x.get("rank") or 9999, str((x.get("selected_player") or {}).get("name", ""))))
-
         game = existing.get(match_id)
         if game is None:
             game = {
-                "match_id": match_id,
-                "date": fixture.date,
-                "time": fixture.time,
-                "tournament": fixture.tournament,
-                "surface": fixture.surface,
-                "event_type": fixture.event_type,
+                "match_id": match_id, "date": fixture.date, "time": fixture.time, "tournament": fixture.tournament,
+                "surface": fixture.surface, "event_type": fixture.event_type,
                 "player_a": {"key": fixture.player_a.key, "name": fixture.player_a.name},
                 "player_b": {"key": fixture.player_b.key, "name": fixture.player_b.name},
-                "first_seen_at": _now(),
-                "last_seen_at": _now(),
-                "market": market,
-                "analyses": analyses,
-                "snapshots": [],
-                "result": _result_from_fixture(fixture),
+                "first_seen_at": _now(), "last_seen_at": _now(), "market": market, "analyses": analyses,
+                "snapshots": [], "result": _result_from_fixture(fixture),
             }
             existing[match_id] = game
         else:
@@ -192,7 +155,7 @@ def record_analysis_history(
             if result.get("resolved") or not (game.get("result") or {}).get("resolved"):
                 game["result"] = result
 
-        snapshot = _snapshot_payload(game.get("market", market), game.get("analyses", analyses))
+        snapshot = {"captured_at": _now(), "market": game.get("market", market), "analyses": game.get("analyses", analyses)}
         snapshots = game.setdefault("snapshots", [])
         if not _same_snapshot(snapshots[-1] if snapshots else None, snapshot):
             snapshots.append(snapshot)
@@ -208,8 +171,6 @@ def record_analysis_history(
 
 def update_history_results(root: Path, day: str, fixtures: Iterable[Any]) -> None:
     data_path, dashboard_path = _day_paths(root, day)
-    if not data_path.exists():
-        return
     ledger = _load(data_path, {})
     if not ledger:
         return
@@ -220,8 +181,7 @@ def update_history_results(root: Path, day: str, fixtures: Iterable[Any]) -> Non
         if not game:
             continue
         result = _result_from_fixture(fixture)
-        current = game.get("result") or {}
-        if result.get("resolved") and result != current:
+        if result.get("resolved") and result != (game.get("result") or {}):
             game["result"] = result
             changed = True
     if changed:
@@ -235,10 +195,7 @@ def update_history_results(root: Path, day: str, fixtures: Iterable[Any]) -> Non
 
 def summarize_day(ledger: dict[str, Any]) -> dict[str, Any]:
     games = ledger.get("games", []) or []
-    approved = 0
-    resolved_approved = 0
-    wins = 0
-    losses = 0
+    approved = resolved_approved = wins = losses = 0
     bookmaker_names: set[str] = set()
     for game in games:
         bookmaker_names.update((game.get("market") or {}).get("bookmakers", []) or [])
@@ -256,30 +213,20 @@ def summarize_day(ledger: dict[str, Any]) -> dict[str, Any]:
                 else:
                     losses += 1
     return {
-        "games": len(games),
-        "approved": approved,
-        "resolved_approved": resolved_approved,
-        "wins": wins,
-        "losses": losses,
-        "accuracy": (wins / resolved_approved) if resolved_approved else None,
-        "bookmakers": sorted(bookmaker_names, key=str.lower),
-        "bookmaker_count": len(bookmaker_names),
+        "games": len(games), "approved": approved, "resolved_approved": resolved_approved,
+        "wins": wins, "losses": losses, "accuracy": (wins / resolved_approved) if resolved_approved else None,
+        "bookmakers": sorted(bookmaker_names, key=str.lower), "bookmaker_count": len(bookmaker_names),
     }
 
 
 def rebuild_history_index(root: Path) -> dict[str, Any]:
     history_root = root / "data" / "history"
-    dates: list[dict[str, Any]] = []
+    dates = []
     if history_root.exists():
         for path in sorted(history_root.glob("????-??-??.json"), reverse=True):
             ledger = _load(path, {})
-            if not ledger:
-                continue
-            dates.append({
-                "date": ledger.get("date") or path.stem,
-                "updated_at": ledger.get("updated_at"),
-                "summary": ledger.get("summary") or summarize_day(ledger),
-            })
+            if ledger:
+                dates.append({"date": ledger.get("date") or path.stem, "updated_at": ledger.get("updated_at"), "summary": ledger.get("summary") or summarize_day(ledger)})
     index = {"updated_at": _now(), "dates": dates}
     write_json(root / "dashboard" / "history" / "index.json", index)
     return index
