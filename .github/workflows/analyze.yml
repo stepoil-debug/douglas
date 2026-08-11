@@ -4,6 +4,13 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 9-23/3 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'config/**'
+      - 'requirements.txt'
+      - '.github/workflows/analyze.yml'
 
 permissions:
   contents: write
