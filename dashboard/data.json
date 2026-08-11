@@ -12,23 +12,31 @@
     "start": "2025-08-11",
     "status": "READY"
   },
-  "candidate_sides": 0,
+  "candidate_sides": 2,
   "data_mode": "NO_API",
   "data_sources": [
     "Live: TennisExplorer detail",
     "Histórico: Sackmann-format ATP (espelho público + fallback original)"
   ],
   "date": "2026-08-12",
-  "deep_analyzed_matches": 0,
+  "deep_analyzed_matches": 1,
   "fixtures_analyzed": 1,
   "generated_at_timezone": "America/Sao_Paulo",
   "history_summary": {
     "accuracy": null,
     "approved": 0,
-    "bookmaker_count": 2,
+    "bookmaker_count": 10,
     "bookmakers": [
-      "Clay",
-      "Hard"
+      "bet-at-home",
+      "Betfair",
+      "Betsson",
+      "BetVictor",
+      "Betway",
+      "bwin",
+      "Coral",
+      "Interwetten",
+      "Ladbrokes",
+      "William Hill"
     ],
     "games": 1,
     "losses": 0,
@@ -58,11 +66,11 @@
       "misses": 0,
       "n": 0
     },
-    "updated_at": "2026-08-11T19:11:06.583383+00:00"
+    "updated_at": "2026-08-11T20:11:11.461172+00:00"
   },
-  "last_run_at": "2026-08-11T16:11:09.721525-03:00",
+  "last_run_at": "2026-08-11T17:11:15.054597-03:00",
   "learning_summary": {
-    "matches": 0,
+    "matches": 1,
     "status": "PROVISIONAL_D1"
   },
   "matches_with_odds": 1,
@@ -91,18 +99,211 @@
     "total_approved_resolved": 0
   },
   "model_version": "champion-v0.3.0-no-api",
-  "near_misses": [],
+  "near_misses": [
+    {
+      "confidence": 31.88429110929112,
+      "data_quality": 0.55,
+      "disagreement_pp": 3.7762600262600254,
+      "edge_pp": -1.132878007877991,
+      "failed_gates": 4,
+      "final_probability": 0.5301055113555114,
+      "match": {
+        "date": "2026-08-12",
+        "event_type": "ATP Singles",
+        "match_id": "pub-cfdeba5b50ffe4a0e433",
+        "player_a": {
+          "key": "name-770d10159883c0",
+          "name": "Wong C."
+        },
+        "player_b": {
+          "key": "202261",
+          "name": "Otto Virtanen"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "12:00",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.75,
+      "opponent": {
+        "key": "name-770d10159883c0",
+        "name": "Wong C."
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "DATA_QUALITY_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.75,
+        "bookmaker_odds": {},
+        "bookmakers": 10,
+        "fair_probability": 0.5414342914342913,
+        "median_odd": 1.73,
+        "player_key": "202261"
+      },
+      "selected_player": {
+        "key": "202261",
+        "name": "Otto Virtanen"
+      },
+      "signals": {
+        "market": 0.5414342914342914,
+        "season_profile": 0.46590909090909094
+      }
+    }
+  ],
   "operational_date": "2026-08-11",
   "prematch_atp_singles": 1,
   "refresh_error": null,
   "refresh_status": "SUCCESS",
-  "rejected": [],
-  "rejection_summary": {},
+  "rejected": [
+    {
+      "confidence": 31.88429110929112,
+      "data_quality": 0.55,
+      "disagreement_pp": 3.7762600262600254,
+      "edge_pp": -1.132878007877991,
+      "final_probability": 0.5301055113555114,
+      "market_probability": 0.5414342914342913,
+      "match": {
+        "date": "2026-08-12",
+        "event_type": "ATP Singles",
+        "match_id": "pub-cfdeba5b50ffe4a0e433",
+        "player_a": {
+          "key": "name-770d10159883c0",
+          "name": "Wong C."
+        },
+        "player_b": {
+          "key": "202261",
+          "name": "Otto Virtanen"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "12:00",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.0-no-api",
+      "opponent": {
+        "key": "name-770d10159883c0",
+        "name": "Wong C."
+      },
+      "opponent_market": {
+        "best_odd": 2.1,
+        "bookmaker_odds": {},
+        "bookmakers": 10,
+        "fair_probability": 0.45856570856570855,
+        "median_odd": 2.0,
+        "player_key": "name-770d10159883c0"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "DATA_QUALITY_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.75,
+        "bookmaker_odds": {},
+        "bookmakers": 10,
+        "fair_probability": 0.5414342914342913,
+        "median_odd": 1.73,
+        "player_key": "202261"
+      },
+      "selected_player": {
+        "key": "202261",
+        "name": "Otto Virtanen"
+      },
+      "signals": {
+        "market": 0.5414342914342914,
+        "season_profile": 0.46590909090909094
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 30.912920387920394,
+      "data_quality": 0.55,
+      "disagreement_pp": 3.7762600262600254,
+      "edge_pp": 1.1328780078780076,
+      "final_probability": 0.46989448864448863,
+      "market_probability": 0.45856570856570855,
+      "match": {
+        "date": "2026-08-12",
+        "event_type": "ATP Singles",
+        "match_id": "pub-cfdeba5b50ffe4a0e433",
+        "player_a": {
+          "key": "name-770d10159883c0",
+          "name": "Wong C."
+        },
+        "player_b": {
+          "key": "202261",
+          "name": "Otto Virtanen"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "12:00",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.0-no-api",
+      "opponent": {
+        "key": "202261",
+        "name": "Otto Virtanen"
+      },
+      "opponent_market": {
+        "best_odd": 1.75,
+        "bookmaker_odds": {},
+        "bookmakers": 10,
+        "fair_probability": 0.5414342914342913,
+        "median_odd": 1.73,
+        "player_key": "202261"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "DATA_QUALITY_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 2.1,
+        "bookmaker_odds": {},
+        "bookmakers": 10,
+        "fair_probability": 0.45856570856570855,
+        "median_odd": 2.0,
+        "player_key": "name-770d10159883c0"
+      },
+      "selected_player": {
+        "key": "name-770d10159883c0",
+        "name": "Wong C."
+      },
+      "signals": {
+        "market": 0.45856570856570855,
+        "season_profile": 0.5340909090909091
+      },
+      "status": "REJECTED"
+    }
+  ],
+  "rejection_summary": {
+    "CONFIDENCE_TOO_LOW": 2,
+    "DATA_QUALITY_TOO_LOW": 2,
+    "EDGE_TOO_LOW": 2,
+    "ODD_OUT_OF_RANGE": 1,
+    "PROBABILITY_TOO_LOW": 2
+  },
   "result_reconciliation": {
     "resolved": 0,
     "status": "OK"
   },
   "shadow": [],
   "source_requests": 1,
-  "unresolved_players": []
+  "unresolved_players": [
+    "Wong C."
+  ]
 }
