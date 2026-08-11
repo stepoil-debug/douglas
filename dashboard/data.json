@@ -9,18 +9,18 @@
     "start": "2025-08-11",
     "status": "READY"
   },
-  "candidate_sides": 22,
+  "candidate_sides": 26,
   "data_mode": "NO_API",
   "data_sources": [
     "Live: TennisExplorer schedule",
     "Histórico: Sackmann-format ATP (espelho público + fallback original)"
   ],
   "date": "2026-08-11",
-  "deep_analyzed_matches": 11,
+  "deep_analyzed_matches": 13,
   "fixtures_analyzed": 28,
   "generated_at_timezone": "America/Sao_Paulo",
-  "last_run_at": "2026-08-11T12:47:34.214539-03:00",
-  "matches_with_odds": 24,
+  "last_run_at": "2026-08-11T13:05:32.928204-03:00",
+  "matches_with_odds": 28,
   "metrics": {
     "last_10": {
       "accuracy": null,
@@ -48,12 +48,12 @@
   "model_version": "champion-v0.3.0-no-api",
   "near_misses": [
     {
-      "confidence": 50.15675098308192,
+      "confidence": 50.05051481555868,
       "data_quality": 0.782,
-      "disagreement_pp": 5.122161921108792,
-      "edge_pp": 6.74899677823465,
+      "disagreement_pp": 5.05379593670885,
+      "edge_pp": 6.591146124281943,
       "failed_gates": 2,
-      "final_probability": 0.5514471870336835,
+      "final_probability": 0.5525424772856002,
       "match": {
         "date": "2026-08-11",
         "event_type": "ATP Singles",
@@ -69,11 +69,11 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "15:30",
+        "time": "17:00",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
-      "odd": 1.93,
+      "odd": 1.92,
       "opponent": {
         "key": "207681",
         "name": "Francisco Comesana"
@@ -85,6 +85,47 @@
       "selected_player": {
         "key": "105453",
         "name": "Kei Nishikori"
+      }
+    },
+    {
+      "confidence": 38.9333947742416,
+      "data_quality": 0.8079999999999998,
+      "disagreement_pp": 4.817090796318088,
+      "edge_pp": 2.6050518375099196,
+      "failed_gates": 3,
+      "final_probability": 0.5047739226304183,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-363b190127f7104ca70d",
+        "player_a": {
+          "key": "207686",
+          "name": "Alexander Shevchenko"
+        },
+        "player_b": {
+          "key": "208010",
+          "name": "Pablo Llamas Ruiz"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "14:10",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.96,
+      "opponent": {
+        "key": "207686",
+        "name": "Alexander Shevchenko"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_player": {
+        "key": "208010",
+        "name": "Pablo Llamas Ruiz"
       }
     },
     {
@@ -150,7 +191,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "15:30",
+        "time": "17:00",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -170,12 +211,94 @@
       }
     },
     {
-      "confidence": 32.86383807889121,
-      "data_quality": 0.782,
-      "disagreement_pp": 5.122161921108792,
-      "edge_pp": -6.748996778234673,
+      "confidence": 33.76690920368191,
+      "data_quality": 0.8079999999999998,
+      "disagreement_pp": 4.817090796318089,
+      "edge_pp": -2.6050518375099085,
       "failed_gates": 3,
-      "final_probability": 0.44855281296631644,
+      "final_probability": 0.4952260773695817,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-363b190127f7104ca70d",
+        "player_a": {
+          "key": "207686",
+          "name": "Alexander Shevchenko"
+        },
+        "player_b": {
+          "key": "208010",
+          "name": "Pablo Llamas Ruiz"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "14:10",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.8,
+      "opponent": {
+        "key": "208010",
+        "name": "Pablo Llamas Ruiz"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_player": {
+        "key": "207686",
+        "name": "Alexander Shevchenko"
+      }
+    },
+    {
+      "confidence": 32.952649577688994,
+      "data_quality": 0.694,
+      "disagreement_pp": 7.322709770135704,
+      "edge_pp": -7.746942159712988,
+      "failed_gates": 3,
+      "final_probability": 0.543133593478247,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-a05f27602b8771734986",
+        "player_a": {
+          "key": "106331",
+          "name": "Christopher Oconnell"
+        },
+        "player_b": {
+          "key": "208013",
+          "name": "Dane Sweeny"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "14:10",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.51,
+      "opponent": {
+        "key": "208013",
+        "name": "Dane Sweeny"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_player": {
+        "key": "106331",
+        "name": "Christopher Oconnell"
+      }
+    },
+    {
+      "confidence": 32.93220406329115,
+      "data_quality": 0.782,
+      "disagreement_pp": 5.05379593670885,
+      "edge_pp": -6.591146124281955,
+      "failed_gates": 3,
+      "final_probability": 0.44745752271439965,
       "match": {
         "date": "2026-08-11",
         "event_type": "ATP Singles",
@@ -191,11 +314,11 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "15:30",
+        "time": "17:00",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
-      "odd": 1.81,
+      "odd": 1.82,
       "opponent": {
         "key": "105453",
         "name": "Kei Nishikori"
@@ -232,7 +355,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "17:00",
+        "time": "18:30",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -273,7 +396,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "17:00",
+        "time": "18:30",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -332,140 +455,17 @@
         "key": "210097",
         "name": "Ben Shelton"
       }
-    },
-    {
-      "confidence": 31.814333563784373,
-      "data_quality": 0.6859999999999999,
-      "disagreement_pp": 6.103306497331387,
-      "edge_pp": 1.1886889228420905,
-      "failed_gates": 3,
-      "final_probability": 0.4985179052712017,
-      "match": {
-        "date": "2026-08-11",
-        "event_type": "ATP Singles",
-        "match_id": "pub-4403f5a46913ba6ff207",
-        "player_a": {
-          "key": "210136",
-          "name": "Mark Lajal"
-        },
-        "player_b": {
-          "key": "207494",
-          "name": "Dalibor Svrcina"
-        },
-        "raw": {},
-        "status": "",
-        "surface": null,
-        "time": "18:30",
-        "tournament": "ATP Cincinnati",
-        "winner": null
-      },
-      "odd": 1.92,
-      "opponent": {
-        "key": "207494",
-        "name": "Dalibor Svrcina"
-      },
-      "reject_reasons": [
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_player": {
-        "key": "210136",
-        "name": "Mark Lajal"
-      }
-    },
-    {
-      "confidence": 30.338563720161147,
-      "data_quality": 0.724,
-      "disagreement_pp": 10.955975329748117,
-      "edge_pp": -6.426163240167071,
-      "failed_gates": 3,
-      "final_probability": 0.5464253904990927,
-      "match": {
-        "date": "2026-08-11",
-        "event_type": "ATP Singles",
-        "match_id": "pub-04cbe78613aa309ad0de",
-        "player_a": {
-          "key": "208659",
-          "name": "Giovanni Mpetshi Perricard"
-        },
-        "player_b": {
-          "key": "212216",
-          "name": "Trevor Svajda"
-        },
-        "raw": {},
-        "status": "",
-        "surface": null,
-        "time": "14:00",
-        "tournament": "ATP Cincinnati",
-        "winner": null
-      },
-      "odd": 1.53,
-      "opponent": {
-        "key": "212216",
-        "name": "Trevor Svajda"
-      },
-      "reject_reasons": [
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_player": {
-        "key": "208659",
-        "name": "Giovanni Mpetshi Perricard"
-      }
-    },
-    {
-      "confidence": 29.967190120798094,
-      "data_quality": 0.748,
-      "disagreement_pp": 10.471142786085085,
-      "edge_pp": -3.458580478943596,
-      "failed_gates": 3,
-      "final_probability": 0.5323433290688317,
-      "match": {
-        "date": "2026-08-11",
-        "event_type": "ATP Singles",
-        "match_id": "pub-a163c50f6814d5633b9f",
-        "player_a": {
-          "key": "111460",
-          "name": "Quentin Halys"
-        },
-        "player_b": {
-          "key": "126952",
-          "name": "Soon Woo Kwon"
-        },
-        "raw": {},
-        "status": "",
-        "surface": null,
-        "time": "14:00",
-        "tournament": "ATP Cincinnati",
-        "winner": null
-      },
-      "odd": 1.65,
-      "opponent": {
-        "key": "126952",
-        "name": "Soon Woo Kwon"
-      },
-      "reject_reasons": [
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_player": {
-        "key": "111460",
-        "name": "Quentin Halys"
-      }
     }
   ],
-  "prematch_atp_singles": 24,
+  "prematch_atp_singles": 28,
   "rejected": [
     {
-      "confidence": 50.15675098308192,
+      "confidence": 50.05051481555868,
       "data_quality": 0.782,
-      "disagreement_pp": 5.122161921108792,
-      "edge_pp": 6.74899677823465,
-      "final_probability": 0.5514471870336835,
-      "market_probability": 0.48395721925133695,
+      "disagreement_pp": 5.05379593670885,
+      "edge_pp": 6.591146124281943,
+      "final_probability": 0.5525424772856002,
+      "market_probability": 0.4866310160427808,
       "match": {
         "date": "2026-08-11",
         "event_type": "ATP Singles",
@@ -481,7 +481,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "15:30",
+        "time": "17:00",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -491,10 +491,10 @@
         "name": "Francisco Comesana"
       },
       "opponent_market": {
-        "best_odd": 1.81,
+        "best_odd": 1.82,
         "bookmakers": 1,
-        "fair_probability": 0.5160427807486632,
-        "median_odd": 1.81,
+        "fair_probability": 0.5133689839572192,
+        "median_odd": 1.82,
         "player_key": "207681"
       },
       "rank": null,
@@ -503,10 +503,10 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 1.93,
+        "best_odd": 1.92,
         "bookmakers": 1,
-        "fair_probability": 0.48395721925133695,
-        "median_odd": 1.93,
+        "fair_probability": 0.4866310160427808,
+        "median_odd": 1.92,
         "player_key": "105453"
       },
       "selected_player": {
@@ -516,7 +516,7 @@
       "signals": {
         "elo": 0.6089630517171503,
         "fatigue": 0.5,
-        "market": 0.48395721925133695,
+        "market": 0.4866310160427808,
         "ranking": 0.5989268947015426,
         "recent_form": 0.5819187298488759,
         "season_profile": 0.605
@@ -545,7 +545,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "15:30",
+        "time": "17:00",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -656,6 +656,71 @@
       "status": "REJECTED"
     },
     {
+      "confidence": 42.58378611734768,
+      "data_quality": 0.694,
+      "disagreement_pp": 7.322709770135704,
+      "edge_pp": 7.746942159712988,
+      "final_probability": 0.456866406521753,
+      "market_probability": 0.3793969849246231,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-a05f27602b8771734986",
+        "player_a": {
+          "key": "106331",
+          "name": "Christopher Oconnell"
+        },
+        "player_b": {
+          "key": "208013",
+          "name": "Dane Sweeny"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "14:10",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.0-no-api",
+      "opponent": {
+        "key": "106331",
+        "name": "Christopher Oconnell"
+      },
+      "opponent_market": {
+        "best_odd": 1.51,
+        "bookmakers": 1,
+        "fair_probability": 0.6206030150753769,
+        "median_odd": 1.51,
+        "player_key": "106331"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 2.47,
+        "bookmakers": 1,
+        "fair_probability": 0.3793969849246231,
+        "median_odd": 2.47,
+        "player_key": "208013"
+      },
+      "selected_player": {
+        "key": "208013",
+        "name": "Dane Sweeny"
+      },
+      "signals": {
+        "elo": 0.5524862952317378,
+        "fatigue": 0.5,
+        "market": 0.37939698492462315,
+        "ranking": 0.39731051344743273,
+        "recent_form": 0.5310105045007223,
+        "season_profile": 0.5654761904761905
+      },
+      "status": "REJECTED"
+    },
+    {
       "confidence": 40.3725531229755,
       "data_quality": 0.746,
       "disagreement_pp": 5.117741491350217,
@@ -677,7 +742,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "17:00",
+        "time": "18:30",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -743,7 +808,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "17:00",
+        "time": "18:30",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -788,12 +853,78 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 37.26311850255258,
+      "confidence": 38.9333947742416,
+      "data_quality": 0.8079999999999998,
+      "disagreement_pp": 4.817090796318088,
+      "edge_pp": 2.6050518375099196,
+      "final_probability": 0.5047739226304183,
+      "market_probability": 0.4787234042553191,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-363b190127f7104ca70d",
+        "player_a": {
+          "key": "207686",
+          "name": "Alexander Shevchenko"
+        },
+        "player_b": {
+          "key": "208010",
+          "name": "Pablo Llamas Ruiz"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "14:10",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.0-no-api",
+      "opponent": {
+        "key": "207686",
+        "name": "Alexander Shevchenko"
+      },
+      "opponent_market": {
+        "best_odd": 1.8,
+        "bookmakers": 1,
+        "fair_probability": 0.5212765957446808,
+        "median_odd": 1.8,
+        "player_key": "207686"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.96,
+        "bookmakers": 1,
+        "fair_probability": 0.4787234042553191,
+        "median_odd": 1.96,
+        "player_key": "208010"
+      },
+      "selected_player": {
+        "key": "208010",
+        "name": "Pablo Llamas Ruiz"
+      },
+      "signals": {
+        "elo": 0.5371975165290652,
+        "fatigue": 0.5,
+        "market": 0.47872340425531923,
+        "ranking": 0.4277408637873754,
+        "recent_form": 0.5904397909268333,
+        "season_profile": 0.5449999999999999,
+        "serve": 0.5184541682995638
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 37.354734651405266,
       "data_quality": 0.724,
-      "disagreement_pp": 10.955975329748119,
-      "edge_pp": 6.426163240167054,
-      "final_probability": 0.4535746095009072,
-      "market_probability": 0.3893129770992367,
+      "disagreement_pp": 10.969360112276265,
+      "edge_pp": 6.484497090934182,
+      "final_probability": 0.4531698440057885,
+      "market_probability": 0.3883248730964467,
       "match": {
         "date": "2026-08-11",
         "event_type": "ATP Singles",
@@ -809,7 +940,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "14:00",
+        "time": "15:30",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -821,7 +952,7 @@
       "opponent_market": {
         "best_odd": 1.53,
         "bookmakers": 1,
-        "fair_probability": 0.6106870229007634,
+        "fair_probability": 0.6116751269035533,
         "median_odd": 1.53,
         "player_key": "208659"
       },
@@ -832,10 +963,10 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 2.4,
+        "best_odd": 2.41,
         "bookmakers": 1,
-        "fair_probability": 0.3893129770992367,
-        "median_odd": 2.4,
+        "fair_probability": 0.3883248730964467,
+        "median_odd": 2.41,
         "player_key": "212216"
       },
       "selected_player": {
@@ -845,7 +976,7 @@
       "signals": {
         "elo": 0.5723838381296625,
         "fatigue": 0.5,
-        "market": 0.3893129770992366,
+        "market": 0.3883248730964467,
         "ranking": 0.28,
         "recent_form": 0.5861303176036579,
         "season_profile": 0.5401785714285714
@@ -940,7 +1071,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "15:30",
+        "time": "17:00",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1053,12 +1184,78 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 33.203615128396656,
+      "confidence": 33.76690920368191,
+      "data_quality": 0.8079999999999998,
+      "disagreement_pp": 4.817090796318089,
+      "edge_pp": -2.6050518375099085,
+      "final_probability": 0.4952260773695817,
+      "market_probability": 0.5212765957446808,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-363b190127f7104ca70d",
+        "player_a": {
+          "key": "207686",
+          "name": "Alexander Shevchenko"
+        },
+        "player_b": {
+          "key": "208010",
+          "name": "Pablo Llamas Ruiz"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "14:10",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.0-no-api",
+      "opponent": {
+        "key": "208010",
+        "name": "Pablo Llamas Ruiz"
+      },
+      "opponent_market": {
+        "best_odd": 1.96,
+        "bookmakers": 1,
+        "fair_probability": 0.4787234042553191,
+        "median_odd": 1.96,
+        "player_key": "208010"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.8,
+        "bookmakers": 1,
+        "fair_probability": 0.5212765957446808,
+        "median_odd": 1.8,
+        "player_key": "207686"
+      },
+      "selected_player": {
+        "key": "207686",
+        "name": "Alexander Shevchenko"
+      },
+      "signals": {
+        "elo": 0.46280248347093483,
+        "fatigue": 0.5,
+        "market": 0.5212765957446808,
+        "ranking": 0.5722591362126246,
+        "recent_form": 0.40956020907316665,
+        "season_profile": 0.455,
+        "serve": 0.48154583170043613
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 33.312494243251244,
       "data_quality": 0.72,
-      "disagreement_pp": 10.770160476177312,
-      "edge_pp": 4.118764224763316,
-      "final_probability": 0.4705070139753818,
-      "market_probability": 0.42931937172774864,
+      "disagreement_pp": 10.780397938083192,
+      "edge_pp": 4.184940100741352,
+      "final_probability": 0.47004783442777903,
+      "market_probability": 0.4281984334203655,
       "match": {
         "date": "2026-08-11",
         "event_type": "ATP Singles",
@@ -1074,7 +1271,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "18:30",
+        "time": "20:00",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1086,7 +1283,7 @@
       "opponent_market": {
         "best_odd": 1.64,
         "bookmakers": 1,
-        "fair_probability": 0.5706806282722513,
+        "fair_probability": 0.5718015665796344,
         "median_odd": 1.64,
         "player_key": "126846"
       },
@@ -1097,10 +1294,10 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 2.18,
+        "best_odd": 2.19,
         "bookmakers": 1,
-        "fair_probability": 0.42931937172774864,
-        "median_odd": 2.18,
+        "fair_probability": 0.4281984334203655,
+        "median_odd": 2.19,
         "player_key": "210464"
       },
       "selected_player": {
@@ -1110,7 +1307,7 @@
       "signals": {
         "elo": 0.5789519305288946,
         "fatigue": 0.5,
-        "market": 0.4293193717277487,
+        "market": 0.42819843342036557,
         "ranking": 0.28,
         "recent_form": 0.5453684910635344,
         "season_profile": 0.59375
@@ -1139,7 +1336,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "14:00",
+        "time": "15:30",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1184,12 +1381,77 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 32.86383807889121,
+      "confidence": 32.952649577688994,
+      "data_quality": 0.694,
+      "disagreement_pp": 7.322709770135704,
+      "edge_pp": -7.746942159712988,
+      "final_probability": 0.543133593478247,
+      "market_probability": 0.6206030150753769,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-a05f27602b8771734986",
+        "player_a": {
+          "key": "106331",
+          "name": "Christopher Oconnell"
+        },
+        "player_b": {
+          "key": "208013",
+          "name": "Dane Sweeny"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "14:10",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.0-no-api",
+      "opponent": {
+        "key": "208013",
+        "name": "Dane Sweeny"
+      },
+      "opponent_market": {
+        "best_odd": 2.47,
+        "bookmakers": 1,
+        "fair_probability": 0.3793969849246231,
+        "median_odd": 2.47,
+        "player_key": "208013"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.51,
+        "bookmakers": 1,
+        "fair_probability": 0.6206030150753769,
+        "median_odd": 1.51,
+        "player_key": "106331"
+      },
+      "selected_player": {
+        "key": "106331",
+        "name": "Christopher Oconnell"
+      },
+      "signals": {
+        "elo": 0.4475137047682623,
+        "fatigue": 0.5,
+        "market": 0.6206030150753769,
+        "ranking": 0.6026894865525673,
+        "recent_form": 0.4689894954992777,
+        "season_profile": 0.43452380952380953
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 32.93220406329115,
       "data_quality": 0.782,
-      "disagreement_pp": 5.122161921108792,
-      "edge_pp": -6.748996778234673,
-      "final_probability": 0.44855281296631644,
-      "market_probability": 0.5160427807486632,
+      "disagreement_pp": 5.05379593670885,
+      "edge_pp": -6.591146124281955,
+      "final_probability": 0.44745752271439965,
+      "market_probability": 0.5133689839572192,
       "match": {
         "date": "2026-08-11",
         "event_type": "ATP Singles",
@@ -1205,7 +1467,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "15:30",
+        "time": "17:00",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1215,10 +1477,10 @@
         "name": "Kei Nishikori"
       },
       "opponent_market": {
-        "best_odd": 1.93,
+        "best_odd": 1.92,
         "bookmakers": 1,
-        "fair_probability": 0.48395721925133695,
-        "median_odd": 1.93,
+        "fair_probability": 0.4866310160427808,
+        "median_odd": 1.92,
         "player_key": "105453"
       },
       "rank": null,
@@ -1228,10 +1490,10 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 1.81,
+        "best_odd": 1.82,
         "bookmakers": 1,
-        "fair_probability": 0.5160427807486632,
-        "median_odd": 1.81,
+        "fair_probability": 0.5133689839572192,
+        "median_odd": 1.82,
         "player_key": "207681"
       },
       "selected_player": {
@@ -1241,7 +1503,7 @@
       "signals": {
         "elo": 0.39103694828284974,
         "fatigue": 0.5,
-        "market": 0.516042780748663,
+        "market": 0.5133689839572192,
         "ranking": 0.4010731052984574,
         "recent_form": 0.41808127015112406,
         "season_profile": 0.395
@@ -1270,7 +1532,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "17:00",
+        "time": "18:30",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1336,7 +1598,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "17:00",
+        "time": "18:30",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1469,7 +1731,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "18:30",
+        "time": "20:00",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1513,12 +1775,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 30.338563720161147,
+      "confidence": 30.36565548714488,
       "data_quality": 0.724,
-      "disagreement_pp": 10.955975329748117,
-      "edge_pp": -6.426163240167071,
-      "final_probability": 0.5464253904990927,
-      "market_probability": 0.6106870229007634,
+      "disagreement_pp": 10.969360112276263,
+      "edge_pp": -6.484497090934182,
+      "final_probability": 0.5468301559942115,
+      "market_probability": 0.6116751269035533,
       "match": {
         "date": "2026-08-11",
         "event_type": "ATP Singles",
@@ -1534,7 +1796,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "14:00",
+        "time": "15:30",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1544,10 +1806,10 @@
         "name": "Trevor Svajda"
       },
       "opponent_market": {
-        "best_odd": 2.4,
+        "best_odd": 2.41,
         "bookmakers": 1,
-        "fair_probability": 0.3893129770992367,
-        "median_odd": 2.4,
+        "fair_probability": 0.3883248730964467,
+        "median_odd": 2.41,
         "player_key": "212216"
       },
       "rank": null,
@@ -1559,7 +1821,7 @@
       "selected_market": {
         "best_odd": 1.53,
         "bookmakers": 1,
-        "fair_probability": 0.6106870229007634,
+        "fair_probability": 0.6116751269035533,
         "median_odd": 1.53,
         "player_key": "208659"
       },
@@ -1570,7 +1832,7 @@
       "signals": {
         "elo": 0.42761616187033746,
         "fatigue": 0.5,
-        "market": 0.6106870229007634,
+        "market": 0.6116751269035533,
         "ranking": 0.72,
         "recent_form": 0.4138696823963422,
         "season_profile": 0.4598214285714286
@@ -1599,7 +1861,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "14:00",
+        "time": "15:30",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1664,7 +1926,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "18:30",
+        "time": "20:00",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1708,12 +1970,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 28.7391381262845,
+      "confidence": 28.774818619138898,
       "data_quality": 0.72,
-      "disagreement_pp": 10.770160476177312,
-      "edge_pp": -4.118764224763316,
-      "final_probability": 0.5294929860246181,
-      "market_probability": 0.5706806282722513,
+      "disagreement_pp": 10.780397938083192,
+      "edge_pp": -4.184940100741352,
+      "final_probability": 0.5299521655722209,
+      "market_probability": 0.5718015665796344,
       "match": {
         "date": "2026-08-11",
         "event_type": "ATP Singles",
@@ -1729,7 +1991,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "18:30",
+        "time": "20:00",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1739,10 +2001,10 @@
         "name": "Darwin Blanch"
       },
       "opponent_market": {
-        "best_odd": 2.18,
+        "best_odd": 2.19,
         "bookmakers": 1,
-        "fair_probability": 0.42931937172774864,
-        "median_odd": 2.18,
+        "fair_probability": 0.4281984334203655,
+        "median_odd": 2.19,
         "player_key": "210464"
       },
       "rank": null,
@@ -1754,7 +2016,7 @@
       "selected_market": {
         "best_odd": 1.64,
         "bookmakers": 1,
-        "fair_probability": 0.5706806282722513,
+        "fair_probability": 0.5718015665796344,
         "median_odd": 1.64,
         "player_key": "126846"
       },
@@ -1765,7 +2027,7 @@
       "signals": {
         "elo": 0.4210480694711054,
         "fatigue": 0.5,
-        "market": 0.5706806282722513,
+        "market": 0.5718015665796344,
         "ranking": 0.72,
         "recent_form": 0.4546315089364657,
         "season_profile": 0.40625
@@ -1794,7 +2056,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "17:00",
+        "time": "18:30",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1856,7 +2118,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "17:00",
+        "time": "18:30",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1899,11 +2161,11 @@
     }
   ],
   "rejection_summary": {
-    "CONFIDENCE_TOO_LOW": 22,
+    "CONFIDENCE_TOO_LOW": 26,
     "DATA_QUALITY_TOO_LOW": 2,
-    "EDGE_TOO_LOW": 15,
-    "ODD_OUT_OF_RANGE": 9,
-    "PROBABILITY_TOO_LOW": 22
+    "EDGE_TOO_LOW": 18,
+    "ODD_OUT_OF_RANGE": 10,
+    "PROBABILITY_TOO_LOW": 26
   },
   "shadow": [],
   "source_requests": 1,
