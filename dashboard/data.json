@@ -1,24 +1,25 @@
 {
   "approved": [],
   "bootstrap": {
+    "completed": true,
     "end": "2026-08-10",
     "matches": 2249,
     "source": "sackmann-public-mirror-v2",
-    "source_reset": true,
+    "source_reset": false,
     "start": "2025-08-11",
-    "status": "BUILT"
+    "status": "READY"
   },
   "candidate_sides": 22,
   "data_mode": "NO_API",
   "data_sources": [
-    "OddsHarvester/OddsPortal",
-    "JeffSackmann/tennis_atp"
+    "Live: TennisExplorer schedule",
+    "Histórico: Sackmann-format ATP (espelho público + fallback original)"
   ],
   "date": "2026-08-11",
   "deep_analyzed_matches": 11,
   "fixtures_analyzed": 28,
   "generated_at_timezone": "America/Sao_Paulo",
-  "last_run_at": "2026-08-11T12:40:52.649234-03:00",
+  "last_run_at": "2026-08-11T12:47:34.214539-03:00",
   "matches_with_odds": 24,
   "metrics": {
     "last_10": {
@@ -45,6 +46,417 @@
     "total_approved_resolved": 0
   },
   "model_version": "champion-v0.3.0-no-api",
+  "near_misses": [
+    {
+      "confidence": 50.15675098308192,
+      "data_quality": 0.782,
+      "disagreement_pp": 5.122161921108792,
+      "edge_pp": 6.74899677823465,
+      "failed_gates": 2,
+      "final_probability": 0.5514471870336835,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-450c0e701cc0ccb74ab7",
+        "player_a": {
+          "key": "105453",
+          "name": "Kei Nishikori"
+        },
+        "player_b": {
+          "key": "207681",
+          "name": "Francisco Comesana"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "15:30",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.93,
+      "opponent": {
+        "key": "207681",
+        "name": "Francisco Comesana"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_player": {
+        "key": "105453",
+        "name": "Kei Nishikori"
+      }
+    },
+    {
+      "confidence": 35.08870273777674,
+      "data_quality": 0.8479999999999999,
+      "disagreement_pp": 4.605994542773291,
+      "edge_pp": -6.545054014786755,
+      "failed_gates": 3,
+      "final_probability": 0.5019069728055003,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-ce39c31f5a3ee0bbbb7b",
+        "player_a": {
+          "key": "212588",
+          "name": "Rafael Jodar"
+        },
+        "player_b": {
+          "key": "209950",
+          "name": "Arthur Fils"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "16:00",
+        "tournament": "ATP Montreal",
+        "winner": null
+      },
+      "odd": 1.67,
+      "opponent": {
+        "key": "209950",
+        "name": "Arthur Fils"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_player": {
+        "key": "212588",
+        "name": "Rafael Jodar"
+      }
+    },
+    {
+      "confidence": 35.01041115342651,
+      "data_quality": 0.8379999999999999,
+      "disagreement_pp": 5.527525419519854,
+      "edge_pp": -7.544353582494045,
+      "failed_gates": 3,
+      "final_probability": 0.5126393657294637,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-bc3644a7be14f5904c6d",
+        "player_a": {
+          "key": "105477",
+          "name": "Marco Trungelliti"
+        },
+        "player_b": {
+          "key": "124116",
+          "name": "Sebastian Ofner"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "15:30",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.59,
+      "opponent": {
+        "key": "105477",
+        "name": "Marco Trungelliti"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_player": {
+        "key": "124116",
+        "name": "Sebastian Ofner"
+      }
+    },
+    {
+      "confidence": 32.86383807889121,
+      "data_quality": 0.782,
+      "disagreement_pp": 5.122161921108792,
+      "edge_pp": -6.748996778234673,
+      "failed_gates": 3,
+      "final_probability": 0.44855281296631644,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-450c0e701cc0ccb74ab7",
+        "player_a": {
+          "key": "105453",
+          "name": "Kei Nishikori"
+        },
+        "player_b": {
+          "key": "207681",
+          "name": "Francisco Comesana"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "15:30",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.81,
+      "opponent": {
+        "key": "105453",
+        "name": "Kei Nishikori"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_player": {
+        "key": "207681",
+        "name": "Francisco Comesana"
+      }
+    },
+    {
+      "confidence": 32.2065805306757,
+      "data_quality": 0.8279999999999998,
+      "disagreement_pp": 6.8374194693242965,
+      "edge_pp": -4.4558980151651495,
+      "failed_gates": 3,
+      "final_probability": 0.49920759809768533,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-fc1dd5881e7be01f0211",
+        "player_a": {
+          "key": "200615",
+          "name": "Alexei Popyrin"
+        },
+        "player_b": {
+          "key": "208169",
+          "name": "Titouan Droguet"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "17:00",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.72,
+      "opponent": {
+        "key": "208169",
+        "name": "Titouan Droguet"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_player": {
+        "key": "200615",
+        "name": "Alexei Popyrin"
+      }
+    },
+    {
+      "confidence": 32.05311575945912,
+      "data_quality": 0.746,
+      "disagreement_pp": 5.117741491350217,
+      "edge_pp": -4.62905256351428,
+      "failed_gates": 3,
+      "final_probability": 0.5001285725080933,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-eec4124b0998f84e8f18",
+        "player_a": {
+          "key": "200384",
+          "name": "Hugo Gaston"
+        },
+        "player_b": {
+          "key": "149282",
+          "name": "Nicolai Budkov Kjaer"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "17:00",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.71,
+      "opponent": {
+        "key": "149282",
+        "name": "Nicolai Budkov Kjaer"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_player": {
+        "key": "200384",
+        "name": "Hugo Gaston"
+      }
+    },
+    {
+      "confidence": 31.861552545185024,
+      "data_quality": 0.8479999999999999,
+      "disagreement_pp": 10.097128805231916,
+      "edge_pp": -2.753651982916394,
+      "failed_gates": 3,
+      "final_probability": 0.5245468135041694,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-4a4e5bee70e6c5fa0d7d",
+        "player_a": {
+          "key": "210150",
+          "name": "Jakub Mensik"
+        },
+        "player_b": {
+          "key": "210097",
+          "name": "Ben Shelton"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "20:00",
+        "tournament": "ATP Montreal",
+        "winner": null
+      },
+      "odd": 1.72,
+      "opponent": {
+        "key": "210150",
+        "name": "Jakub Mensik"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_player": {
+        "key": "210097",
+        "name": "Ben Shelton"
+      }
+    },
+    {
+      "confidence": 31.814333563784373,
+      "data_quality": 0.6859999999999999,
+      "disagreement_pp": 6.103306497331387,
+      "edge_pp": 1.1886889228420905,
+      "failed_gates": 3,
+      "final_probability": 0.4985179052712017,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-4403f5a46913ba6ff207",
+        "player_a": {
+          "key": "210136",
+          "name": "Mark Lajal"
+        },
+        "player_b": {
+          "key": "207494",
+          "name": "Dalibor Svrcina"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "18:30",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.92,
+      "opponent": {
+        "key": "207494",
+        "name": "Dalibor Svrcina"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_player": {
+        "key": "210136",
+        "name": "Mark Lajal"
+      }
+    },
+    {
+      "confidence": 30.338563720161147,
+      "data_quality": 0.724,
+      "disagreement_pp": 10.955975329748117,
+      "edge_pp": -6.426163240167071,
+      "failed_gates": 3,
+      "final_probability": 0.5464253904990927,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-04cbe78613aa309ad0de",
+        "player_a": {
+          "key": "208659",
+          "name": "Giovanni Mpetshi Perricard"
+        },
+        "player_b": {
+          "key": "212216",
+          "name": "Trevor Svajda"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "14:00",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.53,
+      "opponent": {
+        "key": "212216",
+        "name": "Trevor Svajda"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_player": {
+        "key": "208659",
+        "name": "Giovanni Mpetshi Perricard"
+      }
+    },
+    {
+      "confidence": 29.967190120798094,
+      "data_quality": 0.748,
+      "disagreement_pp": 10.471142786085085,
+      "edge_pp": -3.458580478943596,
+      "failed_gates": 3,
+      "final_probability": 0.5323433290688317,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-a163c50f6814d5633b9f",
+        "player_a": {
+          "key": "111460",
+          "name": "Quentin Halys"
+        },
+        "player_b": {
+          "key": "126952",
+          "name": "Soon Woo Kwon"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "14:00",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.65,
+      "opponent": {
+        "key": "126952",
+        "name": "Soon Woo Kwon"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_player": {
+        "key": "111460",
+        "name": "Quentin Halys"
+      }
+    }
+  ],
   "prematch_atp_singles": 24,
   "rejected": [
     {
@@ -112,12 +524,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 47.41882987880322,
+      "confidence": 47.326311028969414,
       "data_quality": 0.8379999999999999,
-      "disagreement_pp": 5.55257276057433,
-      "edge_pp": 7.6096681329875295,
-      "final_probability": 0.48694939450816993,
-      "market_probability": 0.41085271317829464,
+      "disagreement_pp": 5.527525419519854,
+      "edge_pp": 7.54435358249404,
+      "final_probability": 0.4873606342705363,
+      "market_probability": 0.4119170984455959,
       "match": {
         "date": "2026-08-11",
         "event_type": "ATP Singles",
@@ -145,7 +557,7 @@
       "opponent_market": {
         "best_odd": 1.59,
         "bookmakers": 1,
-        "fair_probability": 0.5891472868217055,
+        "fair_probability": 0.5880829015544041,
         "median_odd": 1.59,
         "player_key": "124116"
       },
@@ -156,10 +568,10 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 2.28,
+        "best_odd": 2.27,
         "bookmakers": 1,
-        "fair_probability": 0.41085271317829464,
-        "median_odd": 2.28,
+        "fair_probability": 0.4119170984455959,
+        "median_odd": 2.27,
         "player_key": "105477"
       },
       "selected_player": {
@@ -169,7 +581,7 @@
       "signals": {
         "elo": 0.5434089638563168,
         "fatigue": 0.5,
-        "market": 0.41085271317829464,
+        "market": 0.4119170984455959,
         "ranking": 0.5671062839410396,
         "recent_form": 0.5397490622901708,
         "season_profile": 0.5273279352226721,
@@ -507,12 +919,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 35.02648778860868,
+      "confidence": 35.01041115342651,
       "data_quality": 0.8379999999999999,
-      "disagreement_pp": 5.55257276057433,
-      "edge_pp": -7.609668132987535,
-      "final_probability": 0.5130506054918301,
-      "market_probability": 0.5891472868217055,
+      "disagreement_pp": 5.527525419519854,
+      "edge_pp": -7.544353582494045,
+      "final_probability": 0.5126393657294637,
+      "market_probability": 0.5880829015544041,
       "match": {
         "date": "2026-08-11",
         "event_type": "ATP Singles",
@@ -538,10 +950,10 @@
         "name": "Marco Trungelliti"
       },
       "opponent_market": {
-        "best_odd": 2.28,
+        "best_odd": 2.27,
         "bookmakers": 1,
-        "fair_probability": 0.41085271317829464,
-        "median_odd": 2.28,
+        "fair_probability": 0.4119170984455959,
+        "median_odd": 2.27,
         "player_key": "105477"
       },
       "rank": null,
@@ -553,7 +965,7 @@
       "selected_market": {
         "best_odd": 1.59,
         "bookmakers": 1,
-        "fair_probability": 0.5891472868217055,
+        "fair_probability": 0.5880829015544041,
         "median_odd": 1.59,
         "player_key": "124116"
       },
@@ -564,7 +976,7 @@
       "signals": {
         "elo": 0.45659103614368324,
         "fatigue": 0.5,
-        "market": 0.5891472868217054,
+        "market": 0.5880829015544041,
         "ranking": 0.43289371605896043,
         "recent_form": 0.46025093770982917,
         "season_profile": 0.4726720647773279,
@@ -1361,12 +1773,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 25.83829578515479,
+      "confidence": 25.877086309523804,
       "data_quality": 0.29200000000000004,
-      "disagreement_pp": 6.399198060425215,
-      "edge_pp": -1.9197594181275646,
-      "final_probability": 0.5552149384558001,
-      "market_probability": 0.5744125326370757,
+      "disagreement_pp": 6.454613095238093,
+      "edge_pp": -1.936383928571439,
+      "final_probability": 0.556156994047619,
+      "market_probability": 0.5755208333333334,
       "match": {
         "date": "2026-08-11",
         "event_type": "ATP Singles",
@@ -1392,10 +1804,10 @@
         "name": "Wolf J."
       },
       "opponent_market": {
-        "best_odd": 2.2,
+        "best_odd": 2.21,
         "bookmakers": 1,
-        "fair_probability": 0.42558746736292424,
-        "median_odd": 2.2,
+        "fair_probability": 0.4244791666666667,
+        "median_odd": 2.21,
         "player_key": "name-18bd3839d817ee"
       },
       "rank": null,
@@ -1408,7 +1820,7 @@
       "selected_market": {
         "best_odd": 1.63,
         "bookmakers": 1,
-        "fair_probability": 0.5744125326370757,
+        "fair_probability": 0.5755208333333334,
         "median_odd": 1.63,
         "player_key": "210389"
       },
@@ -1417,18 +1829,18 @@
         "name": "Toby Samuel"
       },
       "signals": {
-        "market": 0.5744125326370757,
+        "market": 0.5755208333333333,
         "season_profile": 0.4464285714285714
       },
       "status": "REJECTED"
     },
     {
-      "confidence": 23.7723688922044,
+      "confidence": 23.746877976190486,
       "data_quality": 0.29200000000000004,
-      "disagreement_pp": 6.399198060425218,
-      "edge_pp": 1.9197594181275646,
-      "final_probability": 0.4447850615441999,
-      "market_probability": 0.42558746736292424,
+      "disagreement_pp": 6.454613095238096,
+      "edge_pp": 1.9363839285714335,
+      "final_probability": 0.443843005952381,
+      "market_probability": 0.4244791666666667,
       "match": {
         "date": "2026-08-11",
         "event_type": "ATP Singles",
@@ -1456,7 +1868,7 @@
       "opponent_market": {
         "best_odd": 1.63,
         "bookmakers": 1,
-        "fair_probability": 0.5744125326370757,
+        "fair_probability": 0.5755208333333334,
         "median_odd": 1.63,
         "player_key": "210389"
       },
@@ -1469,10 +1881,10 @@
         "DATA_QUALITY_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 2.2,
+        "best_odd": 2.21,
         "bookmakers": 1,
-        "fair_probability": 0.42558746736292424,
-        "median_odd": 2.2,
+        "fair_probability": 0.4244791666666667,
+        "median_odd": 2.21,
         "player_key": "name-18bd3839d817ee"
       },
       "selected_player": {
@@ -1480,12 +1892,19 @@
         "name": "Wolf J."
       },
       "signals": {
-        "market": 0.42558746736292424,
+        "market": 0.4244791666666667,
         "season_profile": 0.5535714285714286
       },
       "status": "REJECTED"
     }
   ],
+  "rejection_summary": {
+    "CONFIDENCE_TOO_LOW": 22,
+    "DATA_QUALITY_TOO_LOW": 2,
+    "EDGE_TOO_LOW": 15,
+    "ODD_OUT_OF_RANGE": 9,
+    "PROBABILITY_TOO_LOW": 22
+  },
   "shadow": [],
   "source_requests": 1,
   "unresolved_players": [
