@@ -15,6 +15,8 @@ concurrency:
 jobs:
   analyze:
     runs-on: ubuntu-latest
+    env:
+      API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -26,13 +28,17 @@ jobs:
         env:
           PYTHONPATH: src
         run: pytest -q
-      - name: Analyze today's ATP singles
+      - name: API key not configured
+        if: env.API_TENNIS_KEY == ''
+        run: echo "API_TENNIS_KEY is not configured; analysis skipped safely."
+      - name: Analyze today's ATP singles and reconcile results
+        if: env.API_TENNIS_KEY != ''
         env:
           PYTHONPATH: src
-          API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
           H2H_BUDGET: '40'
         run: python -m tennis_quant.cli
-      - name: Commit immutable snapshots and dashboard data
+      - name: Commit immutable snapshots, results, ratings and dashboard data
+        if: env.API_TENNIS_KEY != ''
         run: |
           git config user.name "tennis-quant-bot"
           git config user.email "actions@users.noreply.github.com"
