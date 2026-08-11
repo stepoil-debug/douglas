@@ -3,7 +3,9 @@ name: Tennis Quant - Analyze
 on:
   workflow_dispatch:
   schedule:
-    - cron: '17 9-23/3 * * *'
+    # 09:00-23:30 America/Sao_Paulo (UTC-3), every 30 minutes.
+    - cron: '0,30 12-23 * * *'
+    - cron: '0,30 0-2 * * *'
   push:
     branches: [main]
     paths:
@@ -69,9 +71,6 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Install Chromium for OddsPortal fallback
-        run: python -m playwright install --with-deps chromium
-
       - name: Configure multi-source live collector
         run: |
           mkdir -p "$RUNNER_TEMP/tqe-bin"
@@ -93,7 +92,7 @@ jobs:
           target_date = option_value('-d', '--date')
           output_path = option_value('-o', '--output')
 
-          # Primary source: lightweight public HTML with ATP schedule and H/A odds.
+          # Primary source: public TennisExplorer HTML. This path needs no browser.
           if target_date and output_path:
               print('[TQE] Live source attempt: TennisExplorer', file=sys.stderr, flush=True)
               completed = subprocess.run([
@@ -105,7 +104,15 @@ jobs:
               if completed.returncode == 0:
                   print('[TQE] Live source selected: TennisExplorer', file=sys.stderr, flush=True)
                   raise SystemExit(0)
-              print('[TQE] TennisExplorer unavailable; falling back to OddsPortal mirrors.', file=sys.stderr, flush=True)
+              print('[TQE] TennisExplorer unavailable; preparing browser fallback.', file=sys.stderr, flush=True)
+
+          # Chromium is installed only if the lightweight source failed. This keeps the
+          # normal 30-minute schedule fast and avoids downloading a browser every run.
+          browser = subprocess.run([
+              sys.executable, '-m', 'playwright', 'install', '--with-deps', 'chromium'
+          ])
+          if browser.returncode != 0:
+              raise SystemExit(browser.returncode)
 
           attempts = [
               ('Brazil mirror', 'https://www.oddsagora.com.br', 'pt-BR'),
@@ -150,8 +157,9 @@ jobs:
           echo '```' >> "$GITHUB_STEP_SUMMARY"
           cat /tmp/tennis-analysis.log >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
+          echo "Schedule: every 30 minutes, 09:00-23:30 America/Sao_Paulo" >> "$GITHUB_STEP_SUMMARY"
           echo "Live: TennisExplorer -> OddsPortal mirrors fallback" >> "$GITHUB_STEP_SUMMARY"
-          echo "History: Jeff Sackmann" >> "$GITHUB_STEP_SUMMARY"
+          echo "History: Sackmann-format ATP public history" >> "$GITHUB_STEP_SUMMARY"
           echo "Painel: https://stepoil-debug.github.io/douglas/" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit analysis state and dashboard data
@@ -175,7 +183,7 @@ jobs:
               "run_id": int(os.environ["RUN_ID"]),
               "run_url": os.environ["RUN_URL"],
               "updated_at": datetime.now(timezone.utc).isoformat(),
-              "message": "Análise sem API concluída e dados publicados"
+              "message": "Análise automática sem API concluída e dados publicados"
           }
           with open("dashboard/run_status.json", "w", encoding="utf-8") as f:
               json.dump(payload, f, ensure_ascii=False, indent=2)
@@ -200,7 +208,7 @@ jobs:
               "run_id": int(os.environ["RUN_ID"]),
               "run_url": os.environ["RUN_URL"],
               "updated_at": datetime.now(timezone.utc).isoformat(),
-              "message": "A coleta/análise falhou. Use run_id/run_url para consultar o log."
+              "message": "A coleta/análise automática falhou. O próximo ciclo tentará novamente."
           }
           with open("dashboard/run_status.json", "w", encoding="utf-8") as f:
               json.dump(payload, f, ensure_ascii=False, indent=2)
