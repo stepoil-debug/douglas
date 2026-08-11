@@ -1,6 +1,6 @@
 from datetime import date
 
-from scripts.tennisexplorer_collector import parse_matches
+from scripts.tennisexplorer_collector import parse_detail_bookmakers, parse_matches
 
 
 def test_parse_tennisexplorer_atp_schedule_pair():
@@ -43,3 +43,20 @@ def test_parse_tennisexplorer_excludes_lower_level_tournaments():
     </tbody></table>
     """
     assert parse_matches(html, date(2026, 8, 11), "https://www.tennisexplorer.com") == []
+
+
+def test_parse_detail_bookmakers_home_away_table():
+    html = """
+    <html><body>
+      <table><tbody>
+        <tr><th></th><th>Player A</th><th>Player B</th></tr>
+        <tr><td>bet365</td><td>1.72<br/>Opening odds 1.80</td><td>2.10<br/>Opening odds 2.00</td></tr>
+        <tr><td>Pinnacle</td><td>1.76</td><td>2.08</td></tr>
+        <tr><td>Average odds</td><td>1.74</td><td>2.09</td></tr>
+      </tbody></table>
+    </body></html>
+    """
+    rows = parse_detail_bookmakers(html)
+    assert [r["bookmaker_name"] for r in rows] == ["bet365", "Pinnacle"]
+    assert rows[0]["player_1"] == "1.720"
+    assert rows[0]["player_2"] == "2.100"
