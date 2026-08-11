@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - 'src/**'
+      - 'scripts/**'
       - 'config/**'
       - 'requirements.txt'
       - '.github/workflows/analyze.yml'
@@ -68,10 +69,10 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Install Chromium for OddsHarvester
+      - name: Install Chromium for OddsPortal fallback
         run: python -m playwright install --with-deps chromium
 
-      - name: Configure resilient OddsHarvester collector
+      - name: Configure multi-source live collector
         run: |
           mkdir -p "$RUNNER_TEMP/tqe-bin"
           cat > "$RUNNER_TEMP/tqe-bin/oddsharvester" <<'EOF'
@@ -80,26 +81,50 @@ jobs:
           import sys
 
           original = sys.argv[1:]
-          attempts = [
-              ("Brazil mirror", "https://www.oddsagora.com.br", "pt-BR"),
-              ("OddsPortal", None, "en-US"),
-              ("LATAM mirror", "https://www.cuotasahora.com", "es-ES"),
-              ("Italy mirror", "https://www.centroquote.it", "it-IT"),
-          ]
 
+          def option_value(*names):
+              for name in names:
+                  if name in original:
+                      idx = original.index(name)
+                      if idx + 1 < len(original):
+                          return original[idx + 1]
+              return None
+
+          target_date = option_value('-d', '--date')
+          output_path = option_value('-o', '--output')
+
+          # Primary source: lightweight public HTML with ATP schedule and H/A odds.
+          if target_date and output_path:
+              print('[TQE] Live source attempt: TennisExplorer', file=sys.stderr, flush=True)
+              completed = subprocess.run([
+                  sys.executable,
+                  'scripts/tennisexplorer_collector.py',
+                  '--date', target_date,
+                  '--output', output_path,
+              ])
+              if completed.returncode == 0:
+                  print('[TQE] Live source selected: TennisExplorer', file=sys.stderr, flush=True)
+                  raise SystemExit(0)
+              print('[TQE] TennisExplorer unavailable; falling back to OddsPortal mirrors.', file=sys.stderr, flush=True)
+
+          attempts = [
+              ('Brazil mirror', 'https://www.oddsagora.com.br', 'pt-BR'),
+              ('OddsPortal', None, 'en-US'),
+              ('LATAM mirror', 'https://www.cuotasahora.com', 'es-ES'),
+              ('Italy mirror', 'https://www.centroquote.it', 'it-IT'),
+          ]
           last_code = 1
           for label, base_url, locale in attempts:
               args = list(original)
-              args.extend(["--locale", locale])
+              args.extend(['--locale', locale])
               if base_url:
-                  args.extend(["--base-url", base_url])
-              print(f"[TQE] OddsHarvester attempt: {label}", file=sys.stderr, flush=True)
-              completed = subprocess.run([sys.executable, "-m", "oddsharvester", *args])
+                  args.extend(['--base-url', base_url])
+              print(f'[TQE] OddsHarvester attempt: {label}', file=sys.stderr, flush=True)
+              completed = subprocess.run([sys.executable, '-m', 'oddsharvester', *args])
               last_code = completed.returncode
               if completed.returncode == 0:
-                  print(f"[TQE] Odds source selected: {label}", file=sys.stderr, flush=True)
+                  print(f'[TQE] Live source selected: {label}', file=sys.stderr, flush=True)
                   raise SystemExit(0)
-              print(f"[TQE] {label} returned {completed.returncode}; trying next source.", file=sys.stderr, flush=True)
           raise SystemExit(last_code)
           EOF
           chmod +x "$RUNNER_TEMP/tqe-bin/oddsharvester"
@@ -125,7 +150,8 @@ jobs:
           echo '```' >> "$GITHUB_STEP_SUMMARY"
           cat /tmp/tennis-analysis.log >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
-          echo "Fontes: OddsHarvester/OddsPortal mirrors + Jeff Sackmann" >> "$GITHUB_STEP_SUMMARY"
+          echo "Live: TennisExplorer -> OddsPortal mirrors fallback" >> "$GITHUB_STEP_SUMMARY"
+          echo "History: Jeff Sackmann" >> "$GITHUB_STEP_SUMMARY"
           echo "Painel: https://stepoil-debug.github.io/douglas/" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit analysis state and dashboard data
