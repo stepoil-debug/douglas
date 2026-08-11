@@ -50,10 +50,13 @@ jobs:
             --header 'Content-Type: application/json' \
             "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/analyze.yml/dispatches" \
             --data '{"ref":"main"}')"
-          if [ "$HTTP_CODE" != '204' ]; then
+          if [ "$HTTP_CODE" != '200' ] && [ "$HTTP_CODE" != '204' ]; then
             cat /tmp/dispatch-response.txt || true
             echo "Workflow dispatch failed with HTTP $HTTP_CODE" >&2
             exit 1
+          fi
+          if [ -s /tmp/dispatch-response.txt ]; then
+            cat /tmp/dispatch-response.txt
           fi
           echo 'Tennis Quant - Analyze dispatched successfully.'
 
