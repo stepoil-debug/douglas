@@ -5,6 +5,7 @@ import json
 import os
 from collections import Counter
 from datetime import date, datetime, timedelta
+from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from tennis_quant.config import ROOT, load_model_config
@@ -20,6 +21,13 @@ TIMEZONE = ZoneInfo("America/Sao_Paulo")
 
 def _today_brazil() -> str:
     return datetime.now(TIMEZONE).date().isoformat()
+
+
+def _read_json(path: Path) -> dict:
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
 
 
 def _diagnostics(payload: dict, cfg: dict, provider: PublicTennisProvider) -> None:
@@ -63,6 +71,68 @@ def _diagnostics(payload: dict, cfg: dict, provider: PublicTennisProvider) -> No
     payload["near_misses"] = near[:10]
 
 
+def _waiting_or_stale_board(
+    board_path: Path,
+    operational_day: date,
+    board_date: date,
+    cfg: dict,
+    provider: PublicTennisProvider,
+    error: Exception,
+    reconciliation: dict,
+    metrics: dict,
+    knowledge: dict,
+) -> dict:
+    previous = _read_json(board_path) if board_path.exists() else {}
+    has_good_previous = bool(
+        previous
+        and previous.get("board_date") == board_date.isoformat()
+        and int(previous.get("fixtures_analyzed") or 0) > 0
+        and previous.get("board_status") != "WAITING_FOR_D1_SCHEDULE"
+    )
+    if has_good_previous:
+        payload = previous
+        payload["board_status"] = "STALE_LAST_GOOD_BOARD"
+        payload["refresh_status"] = "DEGRADED"
+    else:
+        payload = {
+            "date": board_date.isoformat(),
+            "operational_date": operational_day.isoformat(),
+            "board_date": board_date.isoformat(),
+            "board_mode": "D+1",
+            "board_status": "WAITING_FOR_D1_SCHEDULE",
+            "refresh_status": "WAITING",
+            "model_version": cfg["model_version"],
+            "data_mode": "NO_API",
+            "fixtures_analyzed": 0,
+            "prematch_atp_singles": 0,
+            "matches_with_odds": 0,
+            "deep_analyzed_matches": 0,
+            "approved": [],
+            "shadow": [],
+            "rejected": [],
+            "near_misses": [],
+            "unresolved_players": [],
+            "history_summary": {},
+            "learning_summary": {"matches": 0, "status": "WAITING_FOR_D1_SCHEDULE"},
+        }
+    payload["operational_date"] = operational_day.isoformat()
+    payload["board_date"] = board_date.isoformat()
+    payload["board_mode"] = "D+1"
+    payload["last_refresh_attempt_at"] = datetime.now(TIMEZONE).isoformat()
+    payload["refresh_error"] = str(error)[-500:]
+    payload["result_reconciliation"] = reconciliation
+    payload["metrics"] = metrics
+    payload["knowledge"] = knowledge
+    payload["source_requests"] = provider.source_requests
+    payload["last_run_at"] = datetime.now(TIMEZONE).isoformat()
+    if not payload.get("data_sources"):
+        payload["data_sources"] = [
+            "Live D+1: aguardando publicação da agenda pública",
+            "Histórico: Sackmann-format ATP",
+        ]
+    return payload
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Tennis Quant Engine - D+1 no sports API")
     parser.add_argument("--date", default=_today_brazil(), help="Operational day in America/Sao_Paulo")
@@ -74,8 +144,10 @@ def main() -> None:
     board_date = operational_day + timedelta(days=1)
     cfg = load_model_config()
     provider = PublicTennisProvider(ROOT)
+    board_path = ROOT / "data" / "boards" / f"{board_date.isoformat()}.json"
 
-    # Lane 1: today/past are result-only. Never recompute their pre-match thesis.
+    # Lane 1: current/past dates are result-only. Their pre-match thesis is never
+    # recomputed after the day rolls over.
     try:
         resolved = reconcile_recent(provider, ROOT, operational_day, args.results_days)
     except Exception as exc:
@@ -84,75 +156,89 @@ def main() -> None:
     else:
         reconciliation = {"status": "OK", "resolved": len(resolved)}
 
+    # Result learning is independent from tomorrow's source availability.
     knowledge = aggregate_knowledge(ROOT)
     metrics = aggregate_metrics(ROOT)
 
-    # Lane 2: all available ATP Singles for tomorrow are analyzed repeatedly during
-    # the current day. The last D-1 run naturally becomes the final board; on match
-    # day this date is no longer analyzed, only reconciled above.
-    payload = analyze_day(provider, board_date, cfg, ROOT, args.h2h_budget)
-    fixtures = provider.fixtures(board_date)
-    odds_by_match = provider.odds(board_date)
-    all_candidates = (
-        (payload.get("approved", []) or [])
-        + (payload.get("shadow", []) or [])
-        + (payload.get("rejected", []) or [])
-    )
-    ledger = record_analysis_history(
-        ROOT,
-        board_date.isoformat(),
-        fixtures,
-        odds_by_match,
-        all_candidates,
-        cfg["model_version"],
-        provider.live_source,
-    )
-    learning = record_learning_board(
-        ROOT,
-        board_date.isoformat(),
-        all_candidates,
-        cfg["model_version"],
-        provider.live_source,
-    )
+    # Lane 2: repeatedly refresh every available ATP Singles match for tomorrow.
+    # A D+1 schedule not published yet is a normal waiting state, not a system
+    # failure. This keeps today's result/learning lane alive and preserves the last
+    # valid future board rather than replacing it with zeros.
+    try:
+        payload = analyze_day(provider, board_date, cfg, ROOT, args.h2h_budget)
+        fixtures = provider.fixtures(board_date)
+        odds_by_match = provider.odds(board_date)
+        all_candidates = (
+            (payload.get("approved", []) or [])
+            + (payload.get("shadow", []) or [])
+            + (payload.get("rejected", []) or [])
+        )
+        ledger = record_analysis_history(
+            ROOT,
+            board_date.isoformat(),
+            fixtures,
+            odds_by_match,
+            all_candidates,
+            cfg["model_version"],
+            provider.live_source,
+        )
+        learning = record_learning_board(
+            ROOT,
+            board_date.isoformat(),
+            all_candidates,
+            cfg["model_version"],
+            provider.live_source,
+        )
+        payload["board_status"] = "PROVISIONAL_UNTIL_DAY_ROLLOVER"
+        payload["refresh_status"] = "SUCCESS"
+        payload["history_summary"] = ledger.get("summary", {})
+        payload["learning_summary"] = {
+            "matches": len(learning.get("matches", [])),
+            "status": learning.get("status"),
+        }
+        payload["result_reconciliation"] = reconciliation
+        payload["metrics"] = metrics
+        payload["knowledge"] = knowledge
+        payload["last_run_at"] = datetime.now(TIMEZONE).isoformat()
+        payload["source_requests"] = provider.source_requests
+        payload["refresh_error"] = None
+        payload["operational_date"] = operational_day.isoformat()
+        payload["board_date"] = board_date.isoformat()
+        payload["board_mode"] = "D+1"
+        _diagnostics(payload, cfg, provider)
+    except Exception as exc:
+        payload = _waiting_or_stale_board(
+            board_path,
+            operational_day,
+            board_date,
+            cfg,
+            provider,
+            exc,
+            reconciliation,
+            metrics,
+            knowledge,
+        )
 
-    payload["operational_date"] = operational_day.isoformat()
-    payload["board_date"] = board_date.isoformat()
-    payload["board_mode"] = "D+1"
-    payload["board_status"] = "PROVISIONAL_UNTIL_DAY_ROLLOVER"
-    payload["history_summary"] = ledger.get("summary", {})
-    payload["learning_summary"] = {
-        "matches": len(learning.get("matches", [])),
-        "status": learning.get("status"),
-    }
-    payload["result_reconciliation"] = reconciliation
-    payload["metrics"] = metrics
-    payload["knowledge"] = knowledge
-    payload["last_run_at"] = datetime.now(TIMEZONE).isoformat()
-    payload["source_requests"] = provider.source_requests
-    _diagnostics(payload, cfg, provider)
-
-    write_json(ROOT / "data" / "boards" / f"{board_date.isoformat()}.json", payload)
+    write_json(board_path, payload)
     write_json(ROOT / "dashboard" / "data.json", payload)
 
     print(json.dumps({
         "operational_date": operational_day.isoformat(),
         "board_date": board_date.isoformat(),
-        "model_version": payload["model_version"],
-        "data_mode": payload.get("data_mode"),
-        "fixtures_tomorrow": payload["fixtures_analyzed"],
-        "prematch_atp_singles": payload.get("prematch_atp_singles"),
-        "matches_with_odds": payload.get("matches_with_odds"),
-        "deep_analyzed_matches": payload.get("deep_analyzed_matches"),
-        "approved": len(payload["approved"]),
-        "shadow": len(payload["shadow"]),
-        "near_misses": len(payload.get("near_misses", [])),
-        "learning_matches": len(learning.get("matches", [])),
+        "board_status": payload.get("board_status"),
+        "refresh_status": payload.get("refresh_status"),
+        "model_version": payload.get("model_version"),
+        "fixtures_tomorrow": payload.get("fixtures_analyzed", 0),
+        "matches_with_odds": payload.get("matches_with_odds", 0),
+        "deep_analyzed_matches": payload.get("deep_analyzed_matches", 0),
+        "approved": len(payload.get("approved", []) or []),
+        "shadow": len(payload.get("shadow", []) or []),
+        "near_misses": len(payload.get("near_misses", []) or []),
+        "learning_matches": (payload.get("learning_summary") or {}).get("matches", 0),
         "knowledge_resolved": (knowledge.get("overall") or {}).get("n", 0),
         "results_reconciled": len(resolved),
-        "rejection_summary": payload.get("rejection_summary"),
         "source_requests": provider.source_requests,
-        "unresolved_players": payload.get("unresolved_players"),
-        "bootstrap": payload.get("bootstrap"),
+        "refresh_error": payload.get("refresh_error"),
     }, indent=2, ensure_ascii=False))
 
 
