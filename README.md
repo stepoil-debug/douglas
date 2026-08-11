@@ -9,25 +9,32 @@ A análise não depende de Supabase, API-Tennis, RapidAPI ou qualquer chave de d
 ### Fontes atuais
 
 - **TennisExplorer**: fonte primária validada para agenda ATP Singles e odds H/A do dia via HTML público (`requests + BeautifulSoup`).
-- **OddsHarvester 0.10 + Playwright/OddsPortal e espelhos regionais**: fallback para coleta ao vivo quando o ambiente permitir; IPs de datacenter podem receber proteção anti-bot.
+- **OddsHarvester 0.10 + Playwright/OddsPortal e espelhos regionais**: fallback quando a fonte primária falhar; Chromium é instalado somente nessa situação.
 - **Histórico ATP em formato Sackmann**: CSV público via espelho `Kadantte/tennis_atp`, com fallback para a origem Jeff Sackmann; usado para histórico, ranking disponível nos jogos, Elo, superfície, forma, H2H e saque.
 - **GitHub Actions**: executa coletores, testes e motor quantitativo e versiona apenas estados/resultados úteis.
 - **GitHub Pages**: publica o painel.
 
 Os CSVs públicos grandes e os arquivos temporários ficam no cache/runner e não são versionados no repositório.
 
-## Fluxo validado em produção
+## Automação
 
-1. O runner busca a agenda ATP Singles e as odds H/A no TennisExplorer.
-2. Se a fonte primária falhar, tenta OddsPortal e espelhos por OddsHarvester/Playwright.
-3. O provider associa nomes abreviados da fonte ao ID histórico do jogador.
-4. Antes da primeira previsão, o Elo é reconstruído com até 365 dias de histórico público.
-5. Todos os jogos com mercado são triados; somente confrontos com pelo menos um lado entre 1.50 e 2.00 entram na análise profunda.
-6. O Selection Engine aplica probabilidade, edge, confiança, qualidade de dados e discordância e libera de 0 a 10 seleções.
-7. APPROVED e SHADOW recebem snapshots imutáveis.
-8. Rejeições também ficam registradas; `near_misses` é apenas diagnóstico e nunca vira aposta automaticamente.
+O robô roda automaticamente **a cada 30 minutos entre 09:00 e 23:30 no horário de Brasília**.
 
-### Primeira execução real validada — 11/08/2026
+O fluxo é:
+
+1. GitHub Actions inicia a rodada automática.
+2. O runner busca agenda ATP Singles e odds H/A no TennisExplorer.
+3. Se a fonte primária falhar, instala Chromium e tenta OddsPortal/espelhos via OddsHarvester.
+4. O provider associa nomes da fonte ao ID histórico do jogador.
+5. O Elo usa até 365 dias de histórico público.
+6. Jogos com pelo menos um lado entre 1.50 e 2.00 entram na análise profunda.
+7. O Selection Engine aplica probabilidade, edge, confiança, qualidade dos dados e discordância.
+8. No máximo 10 partidas são aprovadas; zero aprovados é permitido.
+9. O resultado é gravado no GitHub e publicado no painel.
+
+O painel não possui token, login de API ou credencial salva no navegador. O botão **Atualizar análise** apenas recarrega o resultado mais recente. O próprio painel acompanha `dashboard/run_status.json` e mostra se a automação está rodando, concluiu ou falhou.
+
+## Primeira execução real validada — 11/08/2026
 
 - 28 partidas ATP coletadas da fonte ao vivo;
 - 24 partidas ainda pré-jogo;
@@ -75,15 +82,9 @@ O Champion atual mantém:
 
 Esses cortes são experimentais e só serão alterados depois de backtest/walk-forward; não serão reduzidos apenas para gerar picks.
 
-## Painel e botão Iniciar análises
+## Execução manual opcional
 
-O painel continua sem backend. Para o botão **Iniciar análises** disparar o GitHub Action diretamente, configure uma única vez um GitHub token restrito ao repositório com permissão `Actions: Read and write`. O token fica somente no navegador.
-
-Nenhuma chave de API de tênis é necessária.
-
-Também é possível iniciar manualmente em **Actions → Tennis Quant - Analyze → Run workflow** sem configurar token no painel.
-
-O workflow mantém `dashboard/run_status.json` com `RUNNING`, `SUCCESS` ou `FAILED`, além do `run_id` e do link do log.
+Mesmo com a automação ativa, ainda é possível iniciar manualmente em **Actions → Tennis Quant - Analyze → Run workflow**. Isso é apenas uma opção administrativa e não é necessário para o funcionamento normal do painel.
 
 ## Execução local
 
@@ -91,10 +92,11 @@ O workflow mantém `dashboard/run_status.json` com `RUNNING`, `SUCCESS` ou `FAIL
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python -m playwright install chromium
 export PYTHONPATH=src:.
 python -m tennis_quant.cli
 ```
+
+O Playwright/Chromium só é necessário localmente caso o coletor precise recorrer ao fallback OddsPortal.
 
 ## Segurança contra viés
 
@@ -120,9 +122,9 @@ O projeto mantém a estrutura para:
 
 ## Testes e observabilidade
 
-O CI compila o código e os coletores e executa testes unitários em cada Pull Request. O dashboard mostra fixtures encontrados, ATP pré-jogo, jogos com odds, análise profunda, bootstrap, fontes, jogadores não resolvidos e causas de rejeição.
+O CI compila o código e os coletores e executa testes unitários em cada Pull Request. O dashboard mostra fixtures encontrados, ATP pré-jogo, jogos com odds, análise profunda, bootstrap, fontes, jogadores não resolvidos, causas de rejeição e até 10 `near_misses` apenas para diagnóstico.
 
-O motor também grava `rejection_summary` e os até 10 `near_misses` mais próximos dos gates, sem alterar a decisão original.
+O workflow mantém `dashboard/run_status.json` com `RUNNING`, `SUCCESS` ou `FAILED`, além do `run_id` e do link do log.
 
 ## Regras científicas
 
