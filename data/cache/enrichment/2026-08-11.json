@@ -253,6 +253,124 @@
         ]
       }
     ],
+    "105583": [
+      {
+        "event_date": "2026-04-22",
+        "event_final_result": "2 - 0",
+        "event_key": "js-bf22ae50fdd50526fce1",
+        "event_winner": "First Player",
+        "first_player_key": "126239",
+        "second_player_key": "105583",
+        "statistics": [
+          {
+            "player_key": "126239",
+            "stat_name": "1st Serve Points Won",
+            "stat_total": 42.0,
+            "stat_won": 33.0
+          },
+          {
+            "player_key": "126239",
+            "stat_name": "2nd Serve Points Won",
+            "stat_total": 11.0,
+            "stat_won": 7.0
+          },
+          {
+            "player_key": "126239",
+            "stat_name": "Break Points Saved",
+            "stat_total": 3.0,
+            "stat_won": 3.0
+          },
+          {
+            "player_key": "126239",
+            "stat_name": "Service Points Won",
+            "stat_total": 53.0,
+            "stat_won": 40.0
+          },
+          {
+            "player_key": "105583",
+            "stat_name": "1st Serve Points Won",
+            "stat_total": 33.0,
+            "stat_won": 20.0
+          },
+          {
+            "player_key": "105583",
+            "stat_name": "2nd Serve Points Won",
+            "stat_total": 15.0,
+            "stat_won": 6.0
+          },
+          {
+            "player_key": "105583",
+            "stat_name": "Break Points Saved",
+            "stat_total": 6.0,
+            "stat_won": 3.0
+          },
+          {
+            "player_key": "105583",
+            "stat_name": "Service Points Won",
+            "stat_total": 48.0,
+            "stat_won": 26.0
+          }
+        ]
+      },
+      {
+        "event_date": "2026-04-22",
+        "event_final_result": "2 - 0",
+        "event_key": "js-50d8776cc272fafd41f9",
+        "event_winner": "First Player",
+        "first_player_key": "105583",
+        "second_player_key": "132283",
+        "statistics": [
+          {
+            "player_key": "105583",
+            "stat_name": "1st Serve Points Won",
+            "stat_total": 41.0,
+            "stat_won": 31.0
+          },
+          {
+            "player_key": "105583",
+            "stat_name": "2nd Serve Points Won",
+            "stat_total": 19.0,
+            "stat_won": 14.0
+          },
+          {
+            "player_key": "105583",
+            "stat_name": "Break Points Saved",
+            "stat_total": 2.0,
+            "stat_won": 1.0
+          },
+          {
+            "player_key": "105583",
+            "stat_name": "Service Points Won",
+            "stat_total": 60.0,
+            "stat_won": 45.0
+          },
+          {
+            "player_key": "132283",
+            "stat_name": "1st Serve Points Won",
+            "stat_total": 36.0,
+            "stat_won": 26.0
+          },
+          {
+            "player_key": "132283",
+            "stat_name": "2nd Serve Points Won",
+            "stat_total": 19.0,
+            "stat_won": 10.0
+          },
+          {
+            "player_key": "132283",
+            "stat_name": "Break Points Saved",
+            "stat_total": 6.0,
+            "stat_won": 4.0
+          },
+          {
+            "player_key": "132283",
+            "stat_name": "Service Points Won",
+            "stat_total": 55.0,
+            "stat_won": 36.0
+          }
+        ]
+      }
+    ],
     "106331": [],
     "111456": [],
     "111460": [
@@ -569,6 +687,127 @@
             "stat_name": "Service Points Won",
             "stat_total": 74.0,
             "stat_won": 47.0
+          }
+        ]
+      }
+    ],
+    "126127": [
+      {
+        "event_date": "2026-05-25",
+        "event_final_result": "3 - 0",
+        "event_key": "js-e7536f6955be13867f81",
+        "event_winner": "First Player",
+        "first_player_key": "100644",
+        "second_player_key": "126127",
+        "statistics": []
+      },
+      {
+        "event_date": "2026-04-22",
+        "event_final_result": "2 - 1",
+        "event_key": "js-a4e899ac0236f91b0e1f",
+        "event_winner": "First Player",
+        "first_player_key": "206173",
+        "second_player_key": "126127",
+        "statistics": [
+          {
+            "player_key": "206173",
+            "stat_name": "1st Serve Points Won",
+            "stat_total": 53.0,
+            "stat_won": 45.0
+          },
+          {
+            "player_key": "206173",
+            "stat_name": "2nd Serve Points Won",
+            "stat_total": 29.0,
+            "stat_won": 20.0
+          },
+          {
+            "player_key": "206173",
+            "stat_name": "Service Points Won",
+            "stat_total": 82.0,
+            "stat_won": 65.0
+          },
+          {
+            "player_key": "126127",
+            "stat_name": "1st Serve Points Won",
+            "stat_total": 66.0,
+            "stat_won": 45.0
+          },
+          {
+            "player_key": "126127",
+            "stat_name": "2nd Serve Points Won",
+            "stat_total": 29.0,
+            "stat_won": 15.0
+          },
+          {
+            "player_key": "126127",
+            "stat_name": "Break Points Saved",
+            "stat_total": 13.0,
+            "stat_won": 10.0
+          },
+          {
+            "player_key": "126127",
+            "stat_name": "Service Points Won",
+            "stat_total": 95.0,
+            "stat_won": 60.0
+          }
+        ]
+      },
+      {
+        "event_date": "2026-04-22",
+        "event_final_result": "2 - 1",
+        "event_key": "js-c14caffa76d4e13c3cff",
+        "event_winner": "First Player",
+        "first_player_key": "126127",
+        "second_player_key": "208169",
+        "statistics": [
+          {
+            "player_key": "126127",
+            "stat_name": "1st Serve Points Won",
+            "stat_total": 63.0,
+            "stat_won": 53.0
+          },
+          {
+            "player_key": "126127",
+            "stat_name": "2nd Serve Points Won",
+            "stat_total": 37.0,
+            "stat_won": 23.0
+          },
+          {
+            "player_key": "126127",
+            "stat_name": "Break Points Saved",
+            "stat_total": 1.0,
+            "stat_won": 1.0
+          },
+          {
+            "player_key": "126127",
+            "stat_name": "Service Points Won",
+            "stat_total": 100.0,
+            "stat_won": 76.0
+          },
+          {
+            "player_key": "208169",
+            "stat_name": "1st Serve Points Won",
+            "stat_total": 64.0,
+            "stat_won": 48.0
+          },
+          {
+            "player_key": "208169",
+            "stat_name": "2nd Serve Points Won",
+            "stat_total": 54.0,
+            "stat_won": 31.0
+          },
+          {
+            "player_key": "208169",
+            "stat_name": "Break Points Saved",
+            "stat_total": 9.0,
+            "stat_won": 8.0
+          },
+          {
+            "player_key": "208169",
+            "stat_name": "Service Points Won",
+            "stat_total": 118.0,
+            "stat_won": 79.0
           }
         ]
       }
@@ -5327,6 +5566,22 @@
         }
       ]
     },
+    "105583": {
+      "stats": [
+        {
+          "clay_lost": 5,
+          "clay_won": 2,
+          "grass_lost": 0,
+          "grass_won": 0,
+          "hard_lost": 0,
+          "hard_won": 0,
+          "matches_lost": 5,
+          "matches_won": 2,
+          "season": "2026",
+          "type": "Singles"
+        }
+      ]
+    },
     "106331": {
       "stats": [
         {
@@ -5385,6 +5640,22 @@
           "hard_lost": 1,
           "hard_won": 0,
           "matches_lost": 5,
+          "matches_won": 2,
+          "season": "2026",
+          "type": "Singles"
+        }
+      ]
+    },
+    "126127": {
+      "stats": [
+        {
+          "clay_lost": 2,
+          "clay_won": 1,
+          "grass_lost": 0,
+          "grass_won": 0,
+          "hard_lost": 2,
+          "hard_won": 1,
+          "matches_lost": 4,
           "matches_won": 2,
           "season": "2026",
           "type": "Singles"

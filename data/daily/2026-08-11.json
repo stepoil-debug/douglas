@@ -41,8 +41,8 @@
     "resolved_approved": 0,
     "wins": 0
   },
-  "last_run_at": "2026-08-11T13:50:06.770795-03:00",
-  "matches_with_odds": 28,
+  "last_run_at": "2026-08-11T14:30:55.878831-03:00",
+  "matches_with_odds": 24,
   "metrics": {
     "last_10": {
       "accuracy": null,
@@ -70,12 +70,12 @@
   "model_version": "champion-v0.3.0-no-api",
   "near_misses": [
     {
-      "confidence": 53.40313106051164,
+      "confidence": 54.29383612226471,
       "data_quality": 1.0,
-      "disagreement_pp": 8.194666187791645,
-      "edge_pp": -2.0530884555982287,
+      "disagreement_pp": 8.744819147652914,
+      "edge_pp": -4.341510019338579,
       "failed_gates": 2,
-      "final_probability": 0.6859779724830329,
+      "final_probability": 0.7003865526991762,
       "match": {
         "date": "2026-08-11",
         "event_type": "ATP Singles",
@@ -135,7 +135,7 @@
         "tournament": "ATP Cincinnati",
         "winner": null
       },
-      "odd": 1.95,
+      "odd": 2.0,
       "opponent": {
         "key": "111456",
         "name": "Mackenzie Mcdonald"
@@ -148,6 +148,47 @@
       "selected_player": {
         "key": "200059",
         "name": "Yibing Wu"
+      }
+    },
+    {
+      "confidence": 47.14980198737304,
+      "data_quality": 0.954,
+      "disagreement_pp": 6.7138917463342205,
+      "edge_pp": -4.999912384839589,
+      "failed_gates": 3,
+      "final_probability": 0.6192169373370726,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-076d2d1902437f8474f7",
+        "player_a": {
+          "key": "105583",
+          "name": "Dusan Lajovic"
+        },
+        "player_b": {
+          "key": "126127",
+          "name": "Benjamin Bonzi"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "15:45",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.98,
+      "opponent": {
+        "key": "105583",
+        "name": "Dusan Lajovic"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_player": {
+        "key": "126127",
+        "name": "Benjamin Bonzi"
       }
     },
     {
@@ -189,47 +230,6 @@
       "selected_player": {
         "key": "209950",
         "name": "Arthur Fils"
-      }
-    },
-    {
-      "confidence": 37.88876732346633,
-      "data_quality": 0.9019999999999999,
-      "disagreement_pp": 5.7600075473254755,
-      "edge_pp": -2.6527806847637447,
-      "failed_gates": 3,
-      "final_probability": 0.5290277487079181,
-      "match": {
-        "date": "2026-08-11",
-        "event_type": "ATP Singles",
-        "match_id": "pub-a05f27602b8771734986",
-        "player_a": {
-          "key": "106331",
-          "name": "Christopher Oconnell"
-        },
-        "player_b": {
-          "key": "208013",
-          "name": "Dane Sweeny"
-        },
-        "raw": {},
-        "status": "",
-        "surface": null,
-        "time": "14:10",
-        "tournament": "ATP Cincinnati",
-        "winner": null
-      },
-      "odd": 1.8,
-      "opponent": {
-        "key": "106331",
-        "name": "Christopher Oconnell"
-      },
-      "reject_reasons": [
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_player": {
-        "key": "208013",
-        "name": "Dane Sweeny"
       }
     },
     {
@@ -336,7 +336,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "15:30",
+        "time": "15:45",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -479,7 +479,7 @@
       }
     }
   ],
-  "prematch_atp_singles": 28,
+  "prematch_atp_singles": 24,
   "rejected": [
     {
       "confidence": 55.26935804814882,
@@ -549,12 +549,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 53.40313106051164,
+      "confidence": 54.29383612226471,
       "data_quality": 1.0,
-      "disagreement_pp": 8.194666187791645,
-      "edge_pp": -2.0530884555982287,
-      "final_probability": 0.6859779724830329,
-      "market_probability": 0.7065088570390152,
+      "disagreement_pp": 8.744819147652914,
+      "edge_pp": -4.341510019338579,
+      "final_probability": 0.7003865526991762,
+      "market_probability": 0.743801652892562,
       "match": {
         "date": "2026-08-11",
         "event_type": "ATP Singles",
@@ -583,8 +583,8 @@
         "best_odd": 7.5,
         "bookmaker_odds": {},
         "bookmakers": 10,
-        "fair_probability": 0.2934911429609848,
-        "median_odd": 4.0,
+        "fair_probability": 0.256198347107438,
+        "median_odd": 4.5,
         "player_key": "210017"
       },
       "rank": null,
@@ -596,8 +596,8 @@
         "best_odd": 1.8,
         "bookmaker_odds": {},
         "bookmakers": 10,
-        "fair_probability": 0.7065088570390152,
-        "median_odd": 1.6,
+        "fair_probability": 0.743801652892562,
+        "median_odd": 1.55,
         "player_key": "210530"
       },
       "selected_player": {
@@ -607,7 +607,7 @@
       "signals": {
         "elo": 0.7119252124137732,
         "fatigue": 0.5,
-        "market": 0.7065088570390152,
+        "market": 0.743801652892562,
         "ranking": 0.72,
         "recent_form": 0.6716153489125386,
         "season_profile": 0.5743697478991596,
@@ -661,7 +661,7 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 1.95,
+        "best_odd": 2.0,
         "bookmaker_odds": {},
         "bookmakers": 9,
         "fair_probability": 0.6679389312977099,
@@ -679,6 +679,74 @@
         "ranking": 0.5666089965397925,
         "recent_form": 0.620621106505465,
         "season_profile": 0.5625
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 47.14980198737304,
+      "data_quality": 0.954,
+      "disagreement_pp": 6.7138917463342205,
+      "edge_pp": -4.999912384839589,
+      "final_probability": 0.6192169373370726,
+      "market_probability": 0.6692160611854685,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-076d2d1902437f8474f7",
+        "player_a": {
+          "key": "105583",
+          "name": "Dusan Lajovic"
+        },
+        "player_b": {
+          "key": "126127",
+          "name": "Benjamin Bonzi"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "15:45",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.0-no-api",
+      "opponent": {
+        "key": "105583",
+        "name": "Dusan Lajovic"
+      },
+      "opponent_market": {
+        "best_odd": 6.5,
+        "bookmaker_odds": {},
+        "bookmakers": 9,
+        "fair_probability": 0.3307839388145315,
+        "median_odd": 3.5,
+        "player_key": "105583"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.98,
+        "bookmaker_odds": {},
+        "bookmakers": 9,
+        "fair_probability": 0.6692160611854685,
+        "median_odd": 1.6,
+        "player_key": "126127"
+      },
+      "selected_player": {
+        "key": "126127",
+        "name": "Benjamin Bonzi"
+      },
+      "signals": {
+        "elo": 0.556718526628422,
+        "fatigue": 0.5,
+        "market": 0.6692160611854685,
+        "ranking": 0.5824074074074075,
+        "recent_form": 0.6976340955773483,
+        "season_profile": 0.5240384615384616,
+        "serve": 0.5987826517789745
       },
       "status": "REJECTED"
     },
@@ -850,7 +918,7 @@
         "name": "Yibing Wu"
       },
       "opponent_market": {
-        "best_odd": 1.95,
+        "best_odd": 2.0,
         "bookmaker_odds": {},
         "bookmakers": 9,
         "fair_probability": 0.6679389312977099,
@@ -882,6 +950,142 @@
         "ranking": 0.4333910034602076,
         "recent_form": 0.379378893494535,
         "season_profile": 0.4375
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 44.22795054637705,
+      "data_quality": 0.954,
+      "disagreement_pp": 6.7138917463342205,
+      "edge_pp": 4.999912384839594,
+      "final_probability": 0.38078306266292744,
+      "market_probability": 0.3307839388145315,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-076d2d1902437f8474f7",
+        "player_a": {
+          "key": "105583",
+          "name": "Dusan Lajovic"
+        },
+        "player_b": {
+          "key": "126127",
+          "name": "Benjamin Bonzi"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "15:45",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.0-no-api",
+      "opponent": {
+        "key": "126127",
+        "name": "Benjamin Bonzi"
+      },
+      "opponent_market": {
+        "best_odd": 1.98,
+        "bookmaker_odds": {},
+        "bookmakers": 9,
+        "fair_probability": 0.6692160611854685,
+        "median_odd": 1.6,
+        "player_key": "126127"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 6.5,
+        "bookmaker_odds": {},
+        "bookmakers": 9,
+        "fair_probability": 0.3307839388145315,
+        "median_odd": 3.5,
+        "player_key": "105583"
+      },
+      "selected_player": {
+        "key": "105583",
+        "name": "Dusan Lajovic"
+      },
+      "signals": {
+        "elo": 0.4432814733715779,
+        "fatigue": 0.5,
+        "market": 0.3307839388145315,
+        "ranking": 0.41759259259259257,
+        "recent_form": 0.30236590442265165,
+        "season_profile": 0.47596153846153844,
+        "serve": 0.4012173482210255
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 42.06989888715656,
+      "data_quality": 1.0,
+      "disagreement_pp": 8.744819147652914,
+      "edge_pp": 4.341510019338596,
+      "final_probability": 0.29961344730082395,
+      "market_probability": 0.256198347107438,
+      "match": {
+        "date": "2026-08-11",
+        "event_type": "ATP Singles",
+        "match_id": "pub-5345ce79096bc3b13840",
+        "player_a": {
+          "key": "210017",
+          "name": "Daniel Merida Aguilar"
+        },
+        "player_b": {
+          "key": "210530",
+          "name": "Learner Tien"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "21:30",
+        "tournament": "ATP Montreal",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.0-no-api",
+      "opponent": {
+        "key": "210530",
+        "name": "Learner Tien"
+      },
+      "opponent_market": {
+        "best_odd": 1.8,
+        "bookmaker_odds": {},
+        "bookmakers": 10,
+        "fair_probability": 0.743801652892562,
+        "median_odd": 1.55,
+        "player_key": "210530"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 7.5,
+        "bookmaker_odds": {},
+        "bookmakers": 10,
+        "fair_probability": 0.256198347107438,
+        "median_odd": 4.5,
+        "player_key": "210017"
+      },
+      "selected_player": {
+        "key": "210017",
+        "name": "Daniel Merida Aguilar"
+      },
+      "signals": {
+        "elo": 0.2880747875862269,
+        "fatigue": 0.5,
+        "market": 0.256198347107438,
+        "ranking": 0.28,
+        "recent_form": 0.3283846510874614,
+        "season_profile": 0.4256302521008404,
+        "serve": 0.4392231571230842
       },
       "status": "REJECTED"
     },
@@ -951,210 +1155,6 @@
         "recent_form": 0.5002870258737324,
         "season_profile": 0.4705357142857143,
         "serve": 0.4501611833035618
-      },
-      "status": "REJECTED"
-    },
-    {
-      "confidence": 39.76099768524925,
-      "data_quality": 0.9019999999999999,
-      "disagreement_pp": 5.7600075473254755,
-      "edge_pp": 2.652780684763739,
-      "final_probability": 0.4709722512920818,
-      "market_probability": 0.4444444444444444,
-      "match": {
-        "date": "2026-08-11",
-        "event_type": "ATP Singles",
-        "match_id": "pub-a05f27602b8771734986",
-        "player_a": {
-          "key": "106331",
-          "name": "Christopher Oconnell"
-        },
-        "player_b": {
-          "key": "208013",
-          "name": "Dane Sweeny"
-        },
-        "raw": {},
-        "status": "",
-        "surface": null,
-        "time": "14:10",
-        "tournament": "ATP Cincinnati",
-        "winner": null
-      },
-      "model_version": "champion-v0.3.0-no-api",
-      "opponent": {
-        "key": "208013",
-        "name": "Dane Sweeny"
-      },
-      "opponent_market": {
-        "best_odd": 1.8,
-        "bookmaker_odds": {},
-        "bookmakers": 9,
-        "fair_probability": 0.5555555555555556,
-        "median_odd": 1.4,
-        "player_key": "208013"
-      },
-      "rank": null,
-      "reject_reasons": [
-        "ODD_OUT_OF_RANGE",
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_market": {
-        "best_odd": 2.5,
-        "bookmaker_odds": {},
-        "bookmakers": 9,
-        "fair_probability": 0.4444444444444444,
-        "median_odd": 1.5,
-        "player_key": "106331"
-      },
-      "selected_player": {
-        "key": "106331",
-        "name": "Christopher Oconnell"
-      },
-      "signals": {
-        "elo": 0.4475137047682623,
-        "fatigue": 0.5,
-        "market": 0.4444444444444444,
-        "ranking": 0.6026894865525673,
-        "recent_form": 0.4689894954992777,
-        "season_profile": 0.43452380952380953
-      },
-      "status": "REJECTED"
-    },
-    {
-      "confidence": 38.50089303228516,
-      "data_quality": 1.0,
-      "disagreement_pp": 8.194666187791643,
-      "edge_pp": 2.053088455598223,
-      "final_probability": 0.314022027516967,
-      "market_probability": 0.2934911429609848,
-      "match": {
-        "date": "2026-08-11",
-        "event_type": "ATP Singles",
-        "match_id": "pub-5345ce79096bc3b13840",
-        "player_a": {
-          "key": "210017",
-          "name": "Daniel Merida Aguilar"
-        },
-        "player_b": {
-          "key": "210530",
-          "name": "Learner Tien"
-        },
-        "raw": {},
-        "status": "",
-        "surface": null,
-        "time": "21:30",
-        "tournament": "ATP Montreal",
-        "winner": null
-      },
-      "model_version": "champion-v0.3.0-no-api",
-      "opponent": {
-        "key": "210530",
-        "name": "Learner Tien"
-      },
-      "opponent_market": {
-        "best_odd": 1.8,
-        "bookmaker_odds": {},
-        "bookmakers": 10,
-        "fair_probability": 0.7065088570390152,
-        "median_odd": 1.6,
-        "player_key": "210530"
-      },
-      "rank": null,
-      "reject_reasons": [
-        "ODD_OUT_OF_RANGE",
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_market": {
-        "best_odd": 7.5,
-        "bookmaker_odds": {},
-        "bookmakers": 10,
-        "fair_probability": 0.2934911429609848,
-        "median_odd": 4.0,
-        "player_key": "210017"
-      },
-      "selected_player": {
-        "key": "210017",
-        "name": "Daniel Merida Aguilar"
-      },
-      "signals": {
-        "elo": 0.2880747875862269,
-        "fatigue": 0.5,
-        "market": 0.2934911429609848,
-        "ranking": 0.28,
-        "recent_form": 0.3283846510874614,
-        "season_profile": 0.4256302521008404,
-        "serve": 0.4392231571230842
-      },
-      "status": "REJECTED"
-    },
-    {
-      "confidence": 37.88876732346633,
-      "data_quality": 0.9019999999999999,
-      "disagreement_pp": 5.7600075473254755,
-      "edge_pp": -2.6527806847637447,
-      "final_probability": 0.5290277487079181,
-      "market_probability": 0.5555555555555556,
-      "match": {
-        "date": "2026-08-11",
-        "event_type": "ATP Singles",
-        "match_id": "pub-a05f27602b8771734986",
-        "player_a": {
-          "key": "106331",
-          "name": "Christopher Oconnell"
-        },
-        "player_b": {
-          "key": "208013",
-          "name": "Dane Sweeny"
-        },
-        "raw": {},
-        "status": "",
-        "surface": null,
-        "time": "14:10",
-        "tournament": "ATP Cincinnati",
-        "winner": null
-      },
-      "model_version": "champion-v0.3.0-no-api",
-      "opponent": {
-        "key": "106331",
-        "name": "Christopher Oconnell"
-      },
-      "opponent_market": {
-        "best_odd": 2.5,
-        "bookmaker_odds": {},
-        "bookmakers": 9,
-        "fair_probability": 0.4444444444444444,
-        "median_odd": 1.5,
-        "player_key": "106331"
-      },
-      "rank": null,
-      "reject_reasons": [
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_market": {
-        "best_odd": 1.8,
-        "bookmaker_odds": {},
-        "bookmakers": 9,
-        "fair_probability": 0.5555555555555556,
-        "median_odd": 1.4,
-        "player_key": "208013"
-      },
-      "selected_player": {
-        "key": "208013",
-        "name": "Dane Sweeny"
-      },
-      "signals": {
-        "elo": 0.5524862952317378,
-        "fatigue": 0.5,
-        "market": 0.5555555555555556,
-        "ranking": 0.39731051344743273,
-        "recent_form": 0.5310105045007223,
-        "season_profile": 0.5654761904761905
       },
       "status": "REJECTED"
     },
@@ -1397,7 +1397,7 @@
         "bookmaker_odds": {},
         "bookmakers": 9,
         "fair_probability": 0.5514705882352942,
-        "median_odd": 1.7,
+        "median_odd": 1.72,
         "player_key": "212216"
       },
       "rank": null,
@@ -1451,7 +1451,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "15:30",
+        "time": "15:45",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1652,7 +1652,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "15:30",
+        "time": "15:45",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1748,7 +1748,7 @@
         "bookmaker_odds": {},
         "bookmakers": 9,
         "fair_probability": 0.5514705882352942,
-        "median_odd": 1.7,
+        "median_odd": 1.72,
         "player_key": "212216"
       },
       "selected_player": {
@@ -1855,7 +1855,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "18:30",
+        "time": "19:00",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1919,7 +1919,7 @@
         "raw": {},
         "status": "",
         "surface": null,
-        "time": "18:30",
+        "time": "19:00",
         "tournament": "ATP Cincinnati",
         "winner": null
       },
@@ -1966,7 +1966,7 @@
   "rejection_summary": {
     "CONFIDENCE_TOO_LOW": 22,
     "DATA_QUALITY_TOO_LOW": 2,
-    "EDGE_TOO_LOW": 19,
+    "EDGE_TOO_LOW": 17,
     "ODD_OUT_OF_RANGE": 11,
     "PROBABILITY_TOO_LOW": 21
   },
