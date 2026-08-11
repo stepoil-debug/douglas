@@ -1,7 +1,7 @@
 {
-  "status": "RUNNING",
+  "status": "SUCCESS",
   "run_id": 31505446548,
   "run_url": "https://github.com/stepoil-debug/douglas/actions/runs/31505446548",
-  "updated_at": "2026-08-11T15:08:58.898168+00:00",
-  "message": "Coletando jogos e processando o motor sem API esportiva"
+  "updated_at": "2026-08-11T15:10:00.761018+00:00",
+  "message": "Análise sem API concluída e dados publicados"
 }
