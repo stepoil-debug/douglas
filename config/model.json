@@ -1,6 +1,7 @@
 {
-  "model_version": "champion-v0.2.0",
+  "model_version": "champion-v0.3.0-no-api",
   "bootstrap_days": 365,
+  "data_mode": "NO_API",
   "selection": {
     "min_odd": 1.5,
     "max_odd": 2.0,
@@ -15,13 +16,13 @@
   },
   "ensemble_weights": {
     "market": 0.34,
-    "elo": 0.18,
-    "surface_elo": 0.08,
+    "elo": 0.20,
+    "surface_elo": 0.10,
     "ranking": 0.12,
     "recent_form": 0.10,
     "season_profile": 0.06,
-    "fatigue": 0.04,
-    "serve": 0.06,
+    "fatigue": 0.01,
+    "serve": 0.05,
     "h2h": 0.02
   },
   "confidence_weights": {
