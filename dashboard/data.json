@@ -12,15 +12,15 @@
     "start": "2025-08-11",
     "status": "READY"
   },
-  "candidate_sides": 2,
+  "candidate_sides": 4,
   "data_mode": "NO_API",
   "data_sources": [
     "Live: TennisExplorer detail",
     "Histórico: Sackmann-format ATP (espelho público + fallback original)"
   ],
   "date": "2026-08-12",
-  "deep_analyzed_matches": 1,
-  "fixtures_analyzed": 1,
+  "deep_analyzed_matches": 2,
+  "fixtures_analyzed": 2,
   "generated_at_timezone": "America/Sao_Paulo",
   "history_summary": {
     "accuracy": null,
@@ -38,7 +38,7 @@
       "Ladbrokes",
       "William Hill"
     ],
-    "games": 1,
+    "games": 2,
     "losses": 0,
     "resolved_approved": 0,
     "wins": 0
@@ -66,14 +66,14 @@
       "misses": 0,
       "n": 0
     },
-    "updated_at": "2026-08-11T20:30:30.037861+00:00"
+    "updated_at": "2026-08-11T21:23:50.678907+00:00"
   },
-  "last_run_at": "2026-08-11T17:30:32.688478-03:00",
+  "last_run_at": "2026-08-11T18:23:54.844850-03:00",
   "learning_summary": {
-    "matches": 1,
+    "matches": 2,
     "status": "PROVISIONAL_D1"
   },
-  "matches_with_odds": 1,
+  "matches_with_odds": 2,
   "metrics": {
     "last_10": {
       "accuracy": null,
@@ -101,12 +101,126 @@
   "model_version": "champion-v0.3.0-no-api",
   "near_misses": [
     {
-      "confidence": 31.88429110929112,
+      "confidence": 46.28703435525582,
+      "data_quality": 0.9339999999999999,
+      "disagreement_pp": 3.1651532154062565,
+      "edge_pp": 3.039545754000933,
+      "failed_gates": 3,
+      "final_probability": 0.5249900521346039,
+      "match": {
+        "date": "2026-08-12",
+        "event_type": "ATP Singles",
+        "match_id": "pub-c85473950c26a469e109",
+        "player_a": {
+          "key": "207686",
+          "name": "Alexander Shevchenko"
+        },
+        "player_b": {
+          "key": "106331",
+          "name": "Christopher Oconnell"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "12:00",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.95,
+      "opponent": {
+        "key": "106331",
+        "name": "Christopher Oconnell"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.95,
+        "bookmaker_odds": {},
+        "bookmakers": 7,
+        "fair_probability": 0.4945945945945946,
+        "median_odd": 1.87,
+        "player_key": "207686"
+      },
+      "selected_player": {
+        "key": "207686",
+        "name": "Alexander Shevchenko"
+      },
+      "signals": {
+        "elo": 0.533195961314695,
+        "fatigue": 0.5,
+        "market": 0.4945945945945946,
+        "ranking": 0.5829103214890017,
+        "recent_form": 0.5226257883936846,
+        "season_profile": 0.5621428571428572
+      }
+    },
+    {
+      "confidence": 38.31684678459374,
+      "data_quality": 0.9339999999999999,
+      "disagreement_pp": 3.165153215406255,
+      "edge_pp": -3.039545754000944,
+      "failed_gates": 3,
+      "final_probability": 0.475009947865396,
+      "match": {
+        "date": "2026-08-12",
+        "event_type": "ATP Singles",
+        "match_id": "pub-c85473950c26a469e109",
+        "player_a": {
+          "key": "207686",
+          "name": "Alexander Shevchenko"
+        },
+        "player_b": {
+          "key": "106331",
+          "name": "Christopher Oconnell"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "12:00",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.85,
+      "opponent": {
+        "key": "207686",
+        "name": "Alexander Shevchenko"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.85,
+        "bookmaker_odds": {},
+        "bookmakers": 7,
+        "fair_probability": 0.5054054054054055,
+        "median_odd": 1.83,
+        "player_key": "106331"
+      },
+      "selected_player": {
+        "key": "106331",
+        "name": "Christopher Oconnell"
+      },
+      "signals": {
+        "elo": 0.46680403868530496,
+        "fatigue": 0.5,
+        "market": 0.5054054054054054,
+        "ranking": 0.4170896785109983,
+        "recent_form": 0.47737421160631544,
+        "season_profile": 0.43785714285714283
+      }
+    },
+    {
+      "confidence": 31.81012134663055,
       "data_quality": 0.55,
-      "disagreement_pp": 3.7762600262600254,
-      "edge_pp": -1.132878007877991,
+      "disagreement_pp": 3.6703032224592147,
+      "edge_pp": -1.101090966737761,
       "failed_gates": 4,
-      "final_probability": 0.5301055113555114,
+      "final_probability": 0.5283042456908976,
       "match": {
         "date": "2026-08-12",
         "event_type": "ATP Singles",
@@ -141,7 +255,7 @@
         "best_odd": 1.75,
         "bookmaker_odds": {},
         "bookmakers": 10,
-        "fair_probability": 0.5414342914342913,
+        "fair_probability": 0.5393151553582752,
         "median_odd": 1.73,
         "player_key": "202261"
       },
@@ -150,23 +264,157 @@
         "name": "Otto Virtanen"
       },
       "signals": {
-        "market": 0.5414342914342914,
+        "market": 0.5393151553582752,
         "season_profile": 0.46590909090909094
       }
     }
   ],
   "operational_date": "2026-08-11",
-  "prematch_atp_singles": 1,
+  "prematch_atp_singles": 2,
   "refresh_error": null,
   "refresh_status": "SUCCESS",
   "rejected": [
     {
-      "confidence": 31.88429110929112,
+      "confidence": 46.28703435525582,
+      "data_quality": 0.9339999999999999,
+      "disagreement_pp": 3.1651532154062565,
+      "edge_pp": 3.039545754000933,
+      "final_probability": 0.5249900521346039,
+      "market_probability": 0.4945945945945946,
+      "match": {
+        "date": "2026-08-12",
+        "event_type": "ATP Singles",
+        "match_id": "pub-c85473950c26a469e109",
+        "player_a": {
+          "key": "207686",
+          "name": "Alexander Shevchenko"
+        },
+        "player_b": {
+          "key": "106331",
+          "name": "Christopher Oconnell"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "12:00",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.0-no-api",
+      "opponent": {
+        "key": "106331",
+        "name": "Christopher Oconnell"
+      },
+      "opponent_market": {
+        "best_odd": 1.85,
+        "bookmaker_odds": {},
+        "bookmakers": 7,
+        "fair_probability": 0.5054054054054055,
+        "median_odd": 1.83,
+        "player_key": "106331"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.95,
+        "bookmaker_odds": {},
+        "bookmakers": 7,
+        "fair_probability": 0.4945945945945946,
+        "median_odd": 1.87,
+        "player_key": "207686"
+      },
+      "selected_player": {
+        "key": "207686",
+        "name": "Alexander Shevchenko"
+      },
+      "signals": {
+        "elo": 0.533195961314695,
+        "fatigue": 0.5,
+        "market": 0.4945945945945946,
+        "ranking": 0.5829103214890017,
+        "recent_form": 0.5226257883936846,
+        "season_profile": 0.5621428571428572
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 38.31684678459374,
+      "data_quality": 0.9339999999999999,
+      "disagreement_pp": 3.165153215406255,
+      "edge_pp": -3.039545754000944,
+      "final_probability": 0.475009947865396,
+      "market_probability": 0.5054054054054055,
+      "match": {
+        "date": "2026-08-12",
+        "event_type": "ATP Singles",
+        "match_id": "pub-c85473950c26a469e109",
+        "player_a": {
+          "key": "207686",
+          "name": "Alexander Shevchenko"
+        },
+        "player_b": {
+          "key": "106331",
+          "name": "Christopher Oconnell"
+        },
+        "raw": {},
+        "status": "",
+        "surface": null,
+        "time": "12:00",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.0-no-api",
+      "opponent": {
+        "key": "207686",
+        "name": "Alexander Shevchenko"
+      },
+      "opponent_market": {
+        "best_odd": 1.95,
+        "bookmaker_odds": {},
+        "bookmakers": 7,
+        "fair_probability": 0.4945945945945946,
+        "median_odd": 1.87,
+        "player_key": "207686"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.85,
+        "bookmaker_odds": {},
+        "bookmakers": 7,
+        "fair_probability": 0.5054054054054055,
+        "median_odd": 1.83,
+        "player_key": "106331"
+      },
+      "selected_player": {
+        "key": "106331",
+        "name": "Christopher Oconnell"
+      },
+      "signals": {
+        "elo": 0.46680403868530496,
+        "fatigue": 0.5,
+        "market": 0.5054054054054054,
+        "ranking": 0.4170896785109983,
+        "recent_form": 0.47737421160631544,
+        "season_profile": 0.43785714285714283
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 31.81012134663055,
       "data_quality": 0.55,
-      "disagreement_pp": 3.7762600262600254,
-      "edge_pp": -1.132878007877991,
-      "final_probability": 0.5301055113555114,
-      "market_probability": 0.5414342914342913,
+      "disagreement_pp": 3.6703032224592147,
+      "edge_pp": -1.101090966737761,
+      "final_probability": 0.5283042456908976,
+      "market_probability": 0.5393151553582752,
       "match": {
         "date": "2026-08-12",
         "event_type": "ATP Singles",
@@ -192,10 +440,10 @@
         "name": "Wong C."
       },
       "opponent_market": {
-        "best_odd": 2.1,
+        "best_odd": 2.05,
         "bookmaker_odds": {},
         "bookmakers": 10,
-        "fair_probability": 0.45856570856570855,
+        "fair_probability": 0.46068484464172477,
         "median_odd": 2.0,
         "player_key": "name-770d10159883c0"
       },
@@ -210,7 +458,7 @@
         "best_odd": 1.75,
         "bookmaker_odds": {},
         "bookmakers": 10,
-        "fair_probability": 0.5414342914342913,
+        "fair_probability": 0.5393151553582752,
         "median_odd": 1.73,
         "player_key": "202261"
       },
@@ -219,18 +467,18 @@
         "name": "Otto Virtanen"
       },
       "signals": {
-        "market": 0.5414342914342914,
+        "market": 0.5393151553582752,
         "season_profile": 0.46590909090909094
       },
       "status": "REJECTED"
     },
     {
-      "confidence": 30.912920387920394,
+      "confidence": 30.961660517668772,
       "data_quality": 0.55,
-      "disagreement_pp": 3.7762600262600254,
-      "edge_pp": 1.1328780078780076,
-      "final_probability": 0.46989448864448863,
-      "market_probability": 0.45856570856570855,
+      "disagreement_pp": 3.6703032224592147,
+      "edge_pp": 1.1010909667377666,
+      "final_probability": 0.47169575430910243,
+      "market_probability": 0.46068484464172477,
       "match": {
         "date": "2026-08-12",
         "event_type": "ATP Singles",
@@ -259,7 +507,7 @@
         "best_odd": 1.75,
         "bookmaker_odds": {},
         "bookmakers": 10,
-        "fair_probability": 0.5414342914342913,
+        "fair_probability": 0.5393151553582752,
         "median_odd": 1.73,
         "player_key": "202261"
       },
@@ -272,10 +520,10 @@
         "DATA_QUALITY_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 2.1,
+        "best_odd": 2.05,
         "bookmaker_odds": {},
         "bookmakers": 10,
-        "fair_probability": 0.45856570856570855,
+        "fair_probability": 0.46068484464172477,
         "median_odd": 2.0,
         "player_key": "name-770d10159883c0"
       },
@@ -284,18 +532,18 @@
         "name": "Wong C."
       },
       "signals": {
-        "market": 0.45856570856570855,
+        "market": 0.46068484464172477,
         "season_profile": 0.5340909090909091
       },
       "status": "REJECTED"
     }
   ],
   "rejection_summary": {
-    "CONFIDENCE_TOO_LOW": 2,
+    "CONFIDENCE_TOO_LOW": 4,
     "DATA_QUALITY_TOO_LOW": 2,
-    "EDGE_TOO_LOW": 2,
+    "EDGE_TOO_LOW": 4,
     "ODD_OUT_OF_RANGE": 1,
-    "PROBABILITY_TOO_LOW": 2
+    "PROBABILITY_TOO_LOW": 4
   },
   "result_reconciliation": {
     "resolved": 0,
