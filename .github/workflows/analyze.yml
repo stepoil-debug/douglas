@@ -71,14 +71,36 @@ jobs:
       - name: Install Chromium for OddsHarvester
         run: python -m playwright install --with-deps chromium
 
-      - name: OddsHarvester compatibility shim
+      - name: Configure resilient OddsHarvester collector
         run: |
           mkdir -p "$RUNNER_TEMP/tqe-bin"
           cat > "$RUNNER_TEMP/tqe-bin/oddsharvester" <<'EOF'
           #!/usr/bin/env python3
-          import subprocess, sys
-          args = [a for a in sys.argv[1:] if a != '--include-started']
-          raise SystemExit(subprocess.call([sys.executable, '-m', 'oddsharvester', *args]))
+          import subprocess
+          import sys
+
+          original = sys.argv[1:]
+          attempts = [
+              ("Brazil mirror", "https://www.oddsagora.com.br", "pt-BR"),
+              ("OddsPortal", None, "en-US"),
+              ("LATAM mirror", "https://www.cuotasahora.com", "es-ES"),
+              ("Italy mirror", "https://www.centroquote.it", "it-IT"),
+          ]
+
+          last_code = 1
+          for label, base_url, locale in attempts:
+              args = list(original)
+              args.extend(["--locale", locale])
+              if base_url:
+                  args.extend(["--base-url", base_url])
+              print(f"[TQE] OddsHarvester attempt: {label}", file=sys.stderr, flush=True)
+              completed = subprocess.run([sys.executable, "-m", "oddsharvester", *args])
+              last_code = completed.returncode
+              if completed.returncode == 0:
+                  print(f"[TQE] Odds source selected: {label}", file=sys.stderr, flush=True)
+                  raise SystemExit(0)
+              print(f"[TQE] {label} returned {completed.returncode}; trying next source.", file=sys.stderr, flush=True)
+          raise SystemExit(last_code)
           EOF
           chmod +x "$RUNNER_TEMP/tqe-bin/oddsharvester"
           echo "$RUNNER_TEMP/tqe-bin" >> "$GITHUB_PATH"
@@ -92,7 +114,9 @@ jobs:
         env:
           PYTHONPATH: src
           H2H_BUDGET: '40'
-        run: python -m tennis_quant.cli | tee /tmp/tennis-analysis.log
+        run: |
+          set -o pipefail
+          python -m tennis_quant.cli 2>&1 | tee /tmp/tennis-analysis.log
 
       - name: Write execution summary
         if: success()
@@ -101,7 +125,7 @@ jobs:
           echo '```' >> "$GITHUB_STEP_SUMMARY"
           cat /tmp/tennis-analysis.log >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
-          echo "Fontes: OddsHarvester/OddsPortal + Jeff Sackmann" >> "$GITHUB_STEP_SUMMARY"
+          echo "Fontes: OddsHarvester/OddsPortal mirrors + Jeff Sackmann" >> "$GITHUB_STEP_SUMMARY"
           echo "Painel: https://stepoil-debug.github.io/douglas/" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit analysis state and dashboard data
@@ -150,7 +174,7 @@ jobs:
               "run_id": int(os.environ["RUN_ID"]),
               "run_url": os.environ["RUN_URL"],
               "updated_at": datetime.now(timezone.utc).isoformat(),
-              "message": "A execução falhou. Use run_id/run_url para consultar o log."
+              "message": "A coleta/análise falhou. Use run_id/run_url para consultar o log."
           }
           with open("dashboard/run_status.json", "w", encoding="utf-8") as f:
               json.dump(payload, f, ensure_ascii=False, indent=2)
