@@ -25,7 +25,15 @@ BRAZIL_TZ = timezone(timedelta(hours=-3))
 UTC = timezone.utc
 
 EXCLUDED_TOURNAMENT_TOKENS = (
-    "challenger", "chall.", "itf", "futures", "utr", "davis cup", "uk pro", "exhibition", "laver cup",
+    "challenger",
+    "chall.",
+    "itf",
+    "futures",
+    "utr",
+    "davis cup",
+    "uk pro",
+    "exhibition",
+    "laver cup",
 )
 
 
@@ -62,14 +70,17 @@ def _odds_from_row(row: Tag) -> tuple[float | None, float | None]:
         value = _float(cell.get_text(" ", strip=True))
         if value is not None:
             values.append(value)
-    return (values[0], values[1]) if len(values) >= 2 else (None, None)
+    if len(values) >= 2:
+        return values[0], values[1]
+    return None, None
 
 
 def _match_time(row: Tag) -> str | None:
     cell = row.select_one("td.first.time")
     if not cell:
         for td in row.find_all("td"):
-            if "time" in {str(x).lower() for x in (td.get("class") or [])}:
+            classes = {str(x).lower() for x in (td.get("class") or [])}
+            if "time" in classes:
                 cell = td
                 break
     raw = _clean(cell.get_text(" ", strip=True) if cell else "")
@@ -116,16 +127,19 @@ def _parse_table(table: Tag, target: date, base_url: str) -> list[dict[str, Any]
             tournament = _clean(name_cell.get_text(" ", strip=True) if name_cell else "")
             index += 1
             continue
+
         name_cell = row.find("td", class_="t-name")
         hhmm = _match_time(row)
         if not name_cell or not hhmm or not _is_target_tournament(tournament):
             index += 1
             continue
+
         opponent_row: Tag | None = None
         look = index + 1
         while look < len(rows):
             candidate = rows[look]
-            if "head" in {str(x).lower() for x in (candidate.get("class") or [])}:
+            candidate_classes = {str(x).lower() for x in (candidate.get("class") or [])}
+            if "head" in candidate_classes:
                 break
             if candidate.find("td", class_="t-name"):
                 opponent_row = candidate
@@ -134,22 +148,30 @@ def _parse_table(table: Tag, target: date, base_url: str) -> list[dict[str, Any]
         if opponent_row is None:
             index += 1
             continue
+
         first = _player_name(name_cell)
         second = _player_name(opponent_row.find("td", class_="t-name"))
         home_odd, away_odd = _odds_from_row(row)
         if not first or not second or home_odd is None or away_odd is None:
             index = look + 1
             continue
+
         detail = _detail_link(row, opponent_row, base_url)
         records.append({
-            "match_date": _utc_match_date(target, hhmm), "home_team": first, "away_team": second,
+            "match_date": _utc_match_date(target, hhmm),
+            "home_team": first,
+            "away_team": second,
             "league_name": f"ATP {tournament}",
             "match_link": detail or f"{base_url}/matches/{target.isoformat()}/{tournament}/{first}/{second}",
-            "home_score": "", "away_score": "",
+            "home_score": "",
+            "away_score": "",
             "match_winner_market": [{
-                "player_1": f"{home_odd:.3f}", "player_2": f"{away_odd:.3f}",
-                "bookmaker_name": "TennisExplorer avg", "period": "FullTime",
-                "submarket_name": "Home/Away", "source": "TennisExplorer schedule",
+                "player_1": f"{home_odd:.3f}",
+                "player_2": f"{away_odd:.3f}",
+                "bookmaker_name": "TennisExplorer avg",
+                "period": "FullTime",
+                "submarket_name": "Home/Away",
+                "source": "TennisExplorer schedule",
             }],
         })
         index = look + 1
@@ -173,20 +195,25 @@ def parse_matches(html: str, target: date, base_url: str) -> list[dict[str, Any]
 
 
 def _first_odd(cell: Tag) -> float | None:
-    # Detail cells may contain current odd plus timestamp/opening odd. The first
-    # decimal > 1 is the current displayed price.
+    # Detail pages can contain arrows/movement text next to the current price. The
+    # first decimal number is the displayed current price in the H/A table.
     return _float(cell.get_text(" ", strip=True))
 
 
 def parse_detail_bookmakers(html: str) -> list[dict[str, Any]]:
-    """Extract current Home/Away prices by bookmaker from a TennisExplorer detail page."""
     soup = BeautifulSoup(html, "html.parser")
     best: list[dict[str, Any]] = []
     for table in soup.find_all("table"):
         if not isinstance(table, Tag):
             continue
+        rows = [r for r in table.find_all("tr") if isinstance(r, Tag)]
+        if not rows:
+            continue
+        header = " ".join(_clean(x.get_text(" ", strip=True)).casefold() for x in rows[0].find_all(["th", "td"]))
+        if not any(token in header for token in ("home", "away", "1", "2", "h", "a")):
+            continue
         parsed: list[dict[str, Any]] = []
-        for row in table.find_all("tr"):
+        for row in rows[1:]:
             cells = [c for c in row.find_all("td", recursive=False) if isinstance(c, Tag)]
             if len(cells) < 3:
                 continue
@@ -196,7 +223,6 @@ def parse_detail_bookmakers(html: str) -> list[dict[str, Any]]:
             p1 = _first_odd(cells[1]); p2 = _first_odd(cells[2])
             if p1 is None or p2 is None:
                 continue
-            # Reject table rows that clearly are not bookmaker labels.
             if len(book) > 42 or re.match(r"^\d", book):
                 continue
             parsed.append({
@@ -217,7 +243,6 @@ def _needs_detail(record: dict[str, Any]) -> bool:
         a = float(rows[0].get("player_1")); b = float(rows[0].get("player_2"))
     except (TypeError, ValueError, AttributeError):
         return False
-    # Enrich only matches that can plausibly enter the 1.50-2.00 selection window.
     return (1.45 <= a <= 2.05) or (1.45 <= b <= 2.05)
 
 
@@ -252,37 +277,61 @@ def collect(target: date) -> tuple[list[dict[str, Any]], str]:
         {"type": "atp-single", "year": str(target.year), "month": str(target.month), "day": str(target.day), "timezone": "-3"},
         {"type": "atp-single", "year": str(target.year), "month": f"{target.month:02d}", "day": f"{target.day:02d}", "timezone": "-3"},
     ]
-    headers = {"User-Agent": USER_AGENT, "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7", "Cache-Control": "no-cache"}
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Cache-Control": "no-cache",
+    }
     errors: list[str] = []
-    for base in BASE_URLS:
-        url = f"{base}/matches/"
-        for params in param_variants:
-            try:
-                response = requests.get(url, params=params, headers=headers, timeout=35)
-                if response.status_code != 200:
-                    errors.append(f"{base}: HTTP {response.status_code}"); continue
-                rows = parse_matches(response.text, target, base)
-                if not rows:
-                    diag = _diagnostic(response.text); errors.append(f"{base}: zero parsed matches ({diag})")
-                    print(f"[TQE] TennisExplorer zero rows: {diag}", file=sys.stderr, flush=True); continue
-                enriched = enrich_bookmakers(rows, headers)
-                print(f"[TQE] TennisExplorer source {base}: {len(rows)} ATP matches; {enriched} enriched with bookmaker tables", file=sys.stderr, flush=True)
-                return rows, base
-            except Exception as exc:
-                errors.append(f"{base}: {exc}")
-    raise RuntimeError("; ".join(errors[-6:]) or "TennisExplorer collection failed")
+
+    # /matches/ is best for the current day. For D+1 TennisExplorer sometimes
+    # exposes the schedule first through /results/?day=... before /matches/ starts
+    # honoring that date. Both endpoints use the same result-table structure.
+    for endpoint in ("matches", "results"):
+        for base in BASE_URLS:
+            url = f"{base}/{endpoint}/"
+            for params in param_variants:
+                try:
+                    response = requests.get(url, params=params, headers=headers, timeout=35)
+                    if response.status_code != 200:
+                        errors.append(f"{base}/{endpoint}: HTTP {response.status_code}")
+                        continue
+                    rows = parse_matches(response.text, target, base)
+                    if not rows:
+                        diag = _diagnostic(response.text)
+                        errors.append(f"{base}/{endpoint}: zero parsed matches ({diag})")
+                        print(f"[TQE] TennisExplorer {endpoint} zero rows: {diag}", file=sys.stderr, flush=True)
+                        continue
+                    enriched = enrich_bookmakers(rows, headers)
+                    source = f"{base}/{endpoint}"
+                    print(
+                        f"[TQE] TennisExplorer source {source}: {len(rows)} ATP matches; "
+                        f"{enriched} enriched with bookmaker tables",
+                        file=sys.stderr,
+                        flush=True,
+                    )
+                    return rows, source
+                except Exception as exc:
+                    errors.append(f"{base}/{endpoint}: {exc}")
+    raise RuntimeError("; ".join(errors[-8:]) or "TennisExplorer collection failed")
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Collect ATP Match Winner odds from TennisExplorer HTML")
-    parser.add_argument("--date", required=True, help="YYYYMMDD or YYYY-MM-DD"); parser.add_argument("--output", required=True)
-    args = parser.parse_args(); target = datetime.strptime(args.date.replace("-", ""), "%Y%m%d").date()
+    parser.add_argument("--date", required=True, help="YYYYMMDD or YYYY-MM-DD")
+    parser.add_argument("--output", required=True)
+    args = parser.parse_args()
+    target = datetime.strptime(args.date.replace("-", ""), "%Y%m%d").date()
     records, source = collect(target)
     if not records:
-        print("[TQE] TennisExplorer returned zero records", file=sys.stderr); return 2
-    output = Path(args.output); output.parent.mkdir(parents=True, exist_ok=True)
+        print("[TQE] TennisExplorer returned zero records", file=sys.stderr)
+        return 2
+    output = Path(args.output)
+    output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(json.dumps({"source": source, "matches": len(records), "output": str(output)}, ensure_ascii=False)); return 0
+    print(json.dumps({"source": source, "matches": len(records), "output": str(output)}, ensure_ascii=False))
+    return 0
 
 
 if __name__ == "__main__":
