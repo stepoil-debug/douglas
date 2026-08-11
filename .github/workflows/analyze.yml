@@ -48,7 +48,7 @@ jobs:
               "run_id": int(os.environ["RUN_ID"]),
               "run_url": os.environ["RUN_URL"],
               "updated_at": datetime.now(timezone.utc).isoformat(),
-              "message": "Coletando jogos e processando o motor sem API esportiva"
+              "message": "Atualizando resultados de hoje e procurando o board D+1"
           }
           with open("dashboard/run_status.json", "w", encoding="utf-8") as f:
               json.dump(payload, f, ensure_ascii=False, indent=2)
@@ -80,6 +80,8 @@ jobs:
           #!/usr/bin/env python3
           import subprocess
           import sys
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
 
           original = sys.argv[1:]
 
@@ -95,7 +97,7 @@ jobs:
           output_path = option_value('-o', '--output')
 
           if target_date and output_path:
-              print('[TQE] Live source attempt: TennisExplorer', file=sys.stderr, flush=True)
+              print('[TQE] D+1 source attempt: TennisExplorer dated pages', file=sys.stderr, flush=True)
               completed = subprocess.run([
                   sys.executable,
                   'scripts/tennisexplorer_collector.py',
@@ -103,10 +105,28 @@ jobs:
                   '--output', output_path,
               ])
               if completed.returncode == 0:
-                  print('[TQE] Live source selected: TennisExplorer', file=sys.stderr, flush=True)
+                  print('[TQE] D+1 source selected: TennisExplorer dated page', file=sys.stderr, flush=True)
                   raise SystemExit(0)
-              print('[TQE] TennisExplorer unavailable; preparing browser fallback.', file=sys.stderr, flush=True)
 
+              print('[TQE] D+1 dated page unavailable; discovering active ATP tournaments.', file=sys.stderr, flush=True)
+              completed = subprocess.run([
+                  sys.executable,
+                  'scripts/tennisexplorer_tournament_fallback.py',
+                  '--date', target_date,
+                  '--output', output_path,
+              ])
+              if completed.returncode == 0:
+                  print('[TQE] D+1 source selected: active tournament pages', file=sys.stderr, flush=True)
+                  raise SystemExit(0)
+
+              # A future schedule can legitimately be unpublished yet. Do not spend
+              # several minutes downloading Chromium on every 30-minute D+1 cycle.
+              today = datetime.now(ZoneInfo('America/Sao_Paulo')).strftime('%Y%m%d')
+              if target_date.replace('-', '') > today:
+                  print('[TQE] D+1 schedule not published on lightweight sources yet.', file=sys.stderr, flush=True)
+                  raise SystemExit(42)
+
+          # Browser fallback remains available for a same-day recovery path only.
           browser = subprocess.run([
               sys.executable, '-m', 'playwright', 'install', '--with-deps', 'chromium'
           ])
@@ -125,7 +145,7 @@ jobs:
               args.extend(['--locale', locale])
               if base_url:
                   args.extend(['--base-url', base_url])
-              print(f'[TQE] OddsHarvester attempt: {label}', file=sys.stderr, flush=True)
+              print(f'[TQE] Browser fallback: {label}', file=sys.stderr, flush=True)
               completed = subprocess.run([sys.executable, '-m', 'oddsharvester', *args])
               last_code = completed.returncode
               if completed.returncode == 0:
@@ -141,7 +161,7 @@ jobs:
           PYTHONPATH: src:.
         run: pytest -q
 
-      - name: Analyze today's ATP Singles without sports API
+      - name: Update results and analyze D+1 ATP Singles
         env:
           PYTHONPATH: src:.
           H2H_BUDGET: '40'
@@ -152,20 +172,21 @@ jobs:
       - name: Write execution summary
         if: success()
         run: |
-          echo "## Tennis Quant Engine — NO API" >> "$GITHUB_STEP_SUMMARY"
+          echo "## InvestBet Tennis Engine — D+1" >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
           cat /tmp/tennis-analysis.log >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
           echo "Schedule: every 30 minutes, 09:00-23:30 America/Sao_Paulo" >> "$GITHUB_STEP_SUMMARY"
-          echo "Live: TennisExplorer -> OddsPortal mirrors fallback" >> "$GITHUB_STEP_SUMMARY"
+          echo "D+1: TennisExplorer dated pages -> active ATP tournament pages" >> "$GITHUB_STEP_SUMMARY"
+          echo "Results: TennisExplorer public results" >> "$GITHUB_STEP_SUMMARY"
           echo "History: Sackmann-format ATP public history" >> "$GITHUB_STEP_SUMMARY"
           echo "Painel: https://stepoil-debug.github.io/douglas/" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit analysis state and dashboard data
         if: success()
         run: |
-          git add data dashboard/data.json
-          git diff --cached --quiet || git commit -m "data: update no-api tennis analysis"
+          git add data dashboard/data.json dashboard/learning.json
+          git diff --cached --quiet || git commit -m "data: update D+1 board and learning"
           git push
 
       - name: Mark analysis success
@@ -177,12 +198,23 @@ jobs:
           python - <<'PY'
           import json, os
           from datetime import datetime, timezone
+          try:
+              data = json.load(open('dashboard/data.json', encoding='utf-8'))
+              board_status = data.get('board_status', 'UNKNOWN')
+          except Exception:
+              board_status = 'UNKNOWN'
+          message = (
+              'Agenda D+1 ainda não publicada; resultados/aprendizado atualizados e nova tentativa ocorrerá no próximo ciclo.'
+              if board_status == 'WAITING_FOR_D1_SCHEDULE'
+              else 'Board D+1, resultados e aprendizado atualizados.'
+          )
           payload = {
               "status": "SUCCESS",
               "run_id": int(os.environ["RUN_ID"]),
               "run_url": os.environ["RUN_URL"],
               "updated_at": datetime.now(timezone.utc).isoformat(),
-              "message": "Análise automática sem API concluída e dados publicados"
+              "message": message,
+              "board_status": board_status,
           }
           with open("dashboard/run_status.json", "w", encoding="utf-8") as f:
               json.dump(payload, f, ensure_ascii=False, indent=2)
@@ -207,7 +239,7 @@ jobs:
               "run_id": int(os.environ["RUN_ID"]),
               "run_url": os.environ["RUN_URL"],
               "updated_at": datetime.now(timezone.utc).isoformat(),
-              "message": "A coleta/análise automática falhou. O próximo ciclo tentará novamente."
+              "message": "O motor falhou fora do estado normal de espera D+1. O próximo ciclo tentará novamente."
           }
           with open("dashboard/run_status.json", "w", encoding="utf-8") as f:
               json.dump(payload, f, ensure_ascii=False, indent=2)
@@ -237,12 +269,16 @@ jobs:
           ref: main
           fetch-depth: 1
 
-      - name: Stage dated history for dashboard
+      - name: Stage InvestBet dashboard
         run: |
-          mkdir -p dashboard/history
+          mkdir -p dashboard/history dashboard/learning
           if compgen -G "data/history/*.json" > /dev/null; then
             cp data/history/*.json dashboard/history/
           fi
+          if compgen -G "data/learning/????-??-??.json" > /dev/null; then
+            cp data/learning/????-??-??.json dashboard/learning/
+          fi
+          cp dashboard/v2.html dashboard/index.html
           python - <<'PY'
           import json
           from datetime import datetime, timezone
@@ -268,6 +304,6 @@ jobs:
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dashboard
-      - name: Deploy latest dashboard
+      - name: Deploy latest InvestBet dashboard
         id: deployment
         uses: actions/deploy-pages@v4
