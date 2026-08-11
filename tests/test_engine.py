@@ -1,5 +1,8 @@
+from pathlib import Path
+
 from tennis_quant.market import consensus_market, no_vig_probability
 from tennis_quant.prediction import confidence_score, disagreement_pp, weighted_probability
+from tennis_quant.storage import write_snapshot
 
 
 def test_no_vig_sums_to_one():
@@ -24,3 +27,12 @@ def test_disagreement_and_confidence_are_bounded():
     assert d == 0
     c = confidence_score(0.72, 8.0, d, 1.0, {"probability": .3, "edge": .3, "agreement": .2, "data_quality": .2})
     assert 0 <= c <= 100
+
+
+def test_snapshot_key_includes_selected_player(tmp_path: Path):
+    base = {"match": {"match_id": "m1"}, "selected_player": {"key": "p1"}}
+    other = {"match": {"match_id": "m1"}, "selected_player": {"key": "p2"}}
+    a = write_snapshot(tmp_path, "2026-08-11", base)
+    b = write_snapshot(tmp_path, "2026-08-11", other)
+    assert a != b
+    assert a.exists() and b.exists()
