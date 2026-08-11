@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="112" viewBox="0 0 420 112" fill="none">
+  <defs>
+    <linearGradient id="g" x1="8" y1="8" x2="99" y2="102" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7CF7B7"/>
+      <stop offset="1" stop-color="#27C983"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(4 4)">
+    <path d="M52 4C34 4 18 10 8 17v30c0 27 18 46 44 57 26-11 44-30 44-57V17C86 10 70 4 52 4Z" fill="#0B1826" stroke="url(#g)" stroke-width="4"/>
+    <circle cx="52" cy="49" r="26" fill="url(#g)" filter="url(#glow)"/>
+    <path d="M31 36c9 4 14 11 16 21M73 62c-9-4-14-11-16-21" stroke="#092015" stroke-width="4" stroke-linecap="round"/>
+    <path d="M18 19c9-5 21-8 34-8 14 0 26 3 35 8" stroke="#A8FFD2" stroke-width="2" opacity=".75"/>
+  </g>
+  <g transform="translate(120 22)">
+    <text x="0" y="36" fill="#F5F9FC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800" letter-spacing="1.5">ODD</text>
+    <text x="82" y="36" fill="#65EBA7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800" letter-spacing="1.5">SAFE</text>
+    <text x="1" y="62" fill="#7891A8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" letter-spacing="3.2">TENNIS QUANT ENGINE</text>
+  </g>
+</svg>
