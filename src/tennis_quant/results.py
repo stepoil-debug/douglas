@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from tennis_quant.failure import classify_postmortem
+from tennis_quant.history import update_history_results
 from tennis_quant.ratings import RatingStore, margin_k
 from tennis_quant.storage import write_json
 
@@ -24,6 +25,15 @@ def _selected_won(snapshot: dict[str, Any], fixture: Any) -> bool | None:
     return None
 
 
+def _winner_player(fixture: Any) -> dict[str, Any] | None:
+    winner = str(fixture.winner or "").strip().lower()
+    if winner == "first player":
+        return {"key": fixture.player_a.key, "name": fixture.player_a.name}
+    if winner == "second player":
+        return {"key": fixture.player_b.key, "name": fixture.player_b.name}
+    return None
+
+
 def _quality_label(snapshot: dict[str, Any], won: bool) -> str:
     strong = (
         float(snapshot.get("edge_pp", 0)) >= 5.0
@@ -36,11 +46,15 @@ def _quality_label(snapshot: dict[str, Any], won: bool) -> str:
 
 
 def reconcile_results(provider, root: Path, target_day: date) -> list[dict[str, Any]]:
+    # Load the public result page even when there were no approved/shadow snapshots.
+    # This keeps the full daily game ledger updated for every analyzed match.
+    fixtures = {m.match_id: m for m in provider.fixtures(target_day)}
+    update_history_results(root, target_day.isoformat(), fixtures.values())
+
     prediction_dir = root / "data" / "predictions" / target_day.isoformat()
     if not prediction_dir.exists():
         return []
 
-    fixtures = {m.match_id: m for m in provider.fixtures(target_day)}
     ratings = RatingStore(root / "data" / "state" / "ratings.json")
     ratings_changed = False
     for fixture in fixtures.values():
@@ -76,9 +90,12 @@ def reconcile_results(provider, root: Path, target_day: date) -> list[dict[str, 
             "selection_status": snapshot.get("status"),
             "rank": snapshot.get("rank"),
             "odd": snapshot.get("selected_market", {}).get("best_odd"),
+            "bookmakers": snapshot.get("selected_market", {}).get("bookmakers"),
             "final_probability": snapshot.get("final_probability"),
             "confidence": snapshot.get("confidence"),
             "won": won,
+            "winner": _winner_player(fixture),
+            "score": (fixture.raw or {}).get("event_final_result"),
             "quality_label": label,
             "model_version": snapshot.get("model_version"),
             "postmortem": postmortem,
