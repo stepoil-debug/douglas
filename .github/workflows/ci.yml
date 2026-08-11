@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - 'src/**'
+      - 'scripts/**'
       - 'tests/**'
       - 'config/**'
       - 'requirements.txt'
@@ -26,10 +27,10 @@ jobs:
           python-version: '3.12'
           cache: 'pip'
       - name: Install test dependencies
-        run: pip install requests pytest
-      - name: Compile source
-        run: python -m compileall -q src
+        run: pip install requests beautifulsoup4 pytest
+      - name: Compile source and collectors
+        run: python -m compileall -q src scripts
       - name: Unit tests
         env:
-          PYTHONPATH: src
+          PYTHONPATH: src:.
         run: pytest -q
