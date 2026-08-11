@@ -74,7 +74,7 @@
           ],
           "bookmaker_odds": {
             "BetVictor": 2.0,
-            "Betfair": 1.7,
+            "Betfair": 1.77,
             "Betsson": 1.99,
             "Betway": 2.1,
             "Coral": 2.05,
@@ -119,7 +119,7 @@
       "date": "2026-08-12",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-11T19:11:09.718900+00:00",
-      "last_seen_at": "2026-08-11T20:11:15.050757+00:00",
+      "last_seen_at": "2026-08-11T20:28:15.997010+00:00",
       "market": {
         "away": [
           {
@@ -183,7 +183,7 @@
           },
           {
             "bookmaker": "Betfair",
-            "odd": 1.7
+            "odd": 1.77
           },
           {
             "bookmaker": "Betsson",
@@ -232,7 +232,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-11T20:11:15.050768+00:00",
+        "updated_at": "2026-08-11T20:28:15.997024+00:00",
         "winner": null
       },
       "snapshots": [
@@ -481,6 +481,221 @@
               }
             ]
           }
+        },
+        {
+          "analyses": [
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "Betfair",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "bwin",
+                "Coral",
+                "Interwetten",
+                "Ladbrokes",
+                "William Hill"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.73,
+                "Betfair": 1.21,
+                "Betsson": 1.73,
+                "Betway": 1.73,
+                "Coral": 1.73,
+                "Interwetten": 1.75,
+                "Ladbrokes": 1.73,
+                "William Hill": 1.73,
+                "bet-at-home": 1.7,
+                "bwin": 1.72
+              },
+              "bookmakers": 10,
+              "confidence": 31.88429110929112,
+              "data_quality": 0.55,
+              "disagreement_pp": 3.7762600262600254,
+              "edge_pp": -1.132878007877991,
+              "final_probability": 0.5301055113555114,
+              "market_probability": 0.5414342914342913,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 1.75,
+              "opponent": {
+                "key": "name-770d10159883c0",
+                "name": "Wong C."
+              },
+              "rank": null,
+              "reject_reasons": [
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW",
+                "DATA_QUALITY_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "202261",
+                "name": "Otto Virtanen"
+              },
+              "signals": {
+                "market": 0.5414342914342914,
+                "season_profile": 0.46590909090909094
+              },
+              "status": "REJECTED"
+            },
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "Betfair",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "bwin",
+                "Coral",
+                "Interwetten",
+                "Ladbrokes",
+                "William Hill"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 2.0,
+                "Betfair": 1.77,
+                "Betsson": 1.99,
+                "Betway": 2.1,
+                "Coral": 2.05,
+                "Interwetten": 1.95,
+                "Ladbrokes": 2.05,
+                "William Hill": 2.0,
+                "bet-at-home": 2.0,
+                "bwin": 2.05
+              },
+              "bookmakers": 10,
+              "confidence": 30.912920387920394,
+              "data_quality": 0.55,
+              "disagreement_pp": 3.7762600262600254,
+              "edge_pp": 1.1328780078780076,
+              "final_probability": 0.46989448864448863,
+              "market_probability": 0.45856570856570855,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 2.1,
+              "opponent": {
+                "key": "202261",
+                "name": "Otto Virtanen"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "ODD_OUT_OF_RANGE",
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW",
+                "DATA_QUALITY_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "name-770d10159883c0",
+                "name": "Wong C."
+              },
+              "signals": {
+                "market": 0.45856570856570855,
+                "season_profile": 0.5340909090909091
+              },
+              "status": "REJECTED"
+            }
+          ],
+          "captured_at": "2026-08-11T20:28:15.997028+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 1.7
+              },
+              {
+                "bookmaker": "Betfair",
+                "odd": 1.21
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 1.73
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 1.73
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 1.73
+              },
+              {
+                "bookmaker": "bwin",
+                "odd": 1.72
+              },
+              {
+                "bookmaker": "Coral",
+                "odd": 1.73
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 1.75
+              },
+              {
+                "bookmaker": "Ladbrokes",
+                "odd": 1.73
+              },
+              {
+                "bookmaker": "William Hill",
+                "odd": 1.73
+              }
+            ],
+            "bookmaker_count": 10,
+            "bookmakers": [
+              "bet-at-home",
+              "Betfair",
+              "Betsson",
+              "BetVictor",
+              "Betway",
+              "bwin",
+              "Coral",
+              "Interwetten",
+              "Ladbrokes",
+              "William Hill"
+            ],
+            "home": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 2.0
+              },
+              {
+                "bookmaker": "Betfair",
+                "odd": 1.77
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 1.99
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 2.0
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 2.1
+              },
+              {
+                "bookmaker": "bwin",
+                "odd": 2.05
+              },
+              {
+                "bookmaker": "Coral",
+                "odd": 2.05
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 1.95
+              },
+              {
+                "bookmaker": "Ladbrokes",
+                "odd": 2.05
+              },
+              {
+                "bookmaker": "William Hill",
+                "odd": 2.0
+              }
+            ]
+          }
         }
       ],
       "surface": null,
@@ -515,5 +730,5 @@
     "resolved_approved": 0,
     "wins": 0
   },
-  "updated_at": "2026-08-11T20:11:15.050778+00:00"
+  "updated_at": "2026-08-11T20:28:15.997038+00:00"
 }
