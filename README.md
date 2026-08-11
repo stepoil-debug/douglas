@@ -8,34 +8,49 @@ A análise não depende de Supabase, API-Tennis, RapidAPI ou qualquer chave de d
 
 ### Fontes atuais
 
-- **OddsHarvester + Playwright/OddsPortal**: coleta os jogos ATP e as odds Match Winner por bookmaker diretamente das páginas públicas.
-- **Jeff Sackmann / tennis_atp**: arquivos CSV públicos usados para histórico ATP, ranking aproximado disponível nos jogos, Elo, superfície, forma, H2H e estatísticas de saque.
-- **GitHub Actions**: instala Chromium, executa o scraper, roda o motor e versiona somente os resultados e estados necessários.
+- **TennisExplorer**: fonte primária validada para agenda ATP Singles e odds H/A do dia via HTML público (`requests + BeautifulSoup`).
+- **OddsHarvester 0.10 + Playwright/OddsPortal e espelhos regionais**: fallback para coleta ao vivo quando o ambiente permitir; IPs de datacenter podem receber proteção anti-bot.
+- **Histórico ATP em formato Sackmann**: CSV público via espelho `Kadantte/tennis_atp`, com fallback para a origem Jeff Sackmann; usado para histórico, ranking disponível nos jogos, Elo, superfície, forma, H2H e saque.
+- **GitHub Actions**: executa coletores, testes e motor quantitativo e versiona apenas estados/resultados úteis.
 - **GitHub Pages**: publica o painel.
 
-Os CSVs públicos grandes e os arquivos temporários do navegador ficam em cache/runner e não são versionados no repositório.
+Os CSVs públicos grandes e os arquivos temporários ficam no cache/runner e não são versionados no repositório.
 
-## Fluxo
+## Fluxo validado em produção
 
-1. O OddsHarvester abre um Chromium headless e coleta os confrontos e odds do dia.
-2. O provider filtra ATP Singles e converte as odds de cada bookmaker para o formato do Market Engine.
-3. Nomes abreviados do OddsPortal (ex.: `Djokovic N.`) são associados aos IDs históricos do dataset ATP.
+1. O runner busca a agenda ATP Singles e as odds H/A no TennisExplorer.
+2. Se a fonte primária falhar, tenta OddsPortal e espelhos por OddsHarvester/Playwright.
+3. O provider associa nomes abreviados da fonte ao ID histórico do jogador.
 4. Antes da primeira previsão, o Elo é reconstruído com até 365 dias de histórico público.
 5. Todos os jogos com mercado são triados; somente confrontos com pelo menos um lado entre 1.50 e 2.00 entram na análise profunda.
 6. O Selection Engine aplica probabilidade, edge, confiança, qualidade de dados e discordância e libera de 0 a 10 seleções.
 7. APPROVED e SHADOW recebem snapshots imutáveis.
+8. Rejeições também ficam registradas; `near_misses` é apenas diagnóstico e nunca vira aposta automaticamente.
+
+### Primeira execução real validada — 11/08/2026
+
+- 28 partidas ATP coletadas da fonte ao vivo;
+- 24 partidas ainda pré-jogo;
+- 24 partidas com odds;
+- 11 confrontos dentro do escopo para análise profunda;
+- 22 lados avaliados;
+- bootstrap Elo construído com 2.249 partidas históricas entre 11/08/2025 e 10/08/2026;
+- 1 nome não resolvido automaticamente (`Wolf J.`);
+- 0 seleções aprovadas nessa rodada porque nenhuma ultrapassou todos os cortes do Champion.
+
+Zero aprovados é um resultado válido. Os filtros não são relaxados para fabricar uma lista de apostas.
 
 ## Sinais do Champion
 
-- consenso de várias casas e probabilidade *no-vig*;
+- mercado H/A e probabilidade *no-vig*;
 - Elo global;
-- Elo por superfície;
+- Elo por superfície quando a superfície está resolvida;
 - ranking/pontos disponíveis no histórico ATP;
 - forma recente com shrinkage para amostras pequenas;
 - dominância em sets;
 - desempenho de temporada e superfície;
 - fadiga aproximada por densidade de partidas;
-- estatísticas históricas de saque quando disponíveis;
+- estatísticas históricas de primeiro/segundo saque quando disponíveis;
 - H2H com peso baixo;
 - Model Disagreement Index;
 - Data Quality;
@@ -51,14 +66,14 @@ O Champion atual mantém:
 - odd mínima: 1.50;
 - odd máxima: 2.00;
 - máximo de aprovados: 10;
-- Shadow: próximos 10 elegíveis;
+- Shadow: próximos 10 que já passaram todos os gates, após os aprovados;
 - probabilidade mínima: 65%;
 - edge mínimo: 3,5 pontos percentuais;
 - confiança mínima: 72;
 - qualidade de dados mínima: 62%;
 - discordância máxima: 12,5 pontos percentuais.
 
-Esses cortes são parâmetros experimentais e serão alterados apenas depois de backtests/walk-forward.
+Esses cortes são experimentais e só serão alterados depois de backtest/walk-forward; não serão reduzidos apenas para gerar picks.
 
 ## Painel e botão Iniciar análises
 
@@ -68,6 +83,8 @@ Nenhuma chave de API de tênis é necessária.
 
 Também é possível iniciar manualmente em **Actions → Tennis Quant - Analyze → Run workflow** sem configurar token no painel.
 
+O workflow mantém `dashboard/run_status.json` com `RUNNING`, `SUCCESS` ou `FAILED`, além do `run_id` e do link do log.
+
 ## Execução local
 
 ```bash
@@ -75,7 +92,7 @@ python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 python -m playwright install chromium
-export PYTHONPATH=src
+export PYTHONPATH=src:.
 python -m tennis_quant.cli
 ```
 
@@ -86,7 +103,8 @@ python -m tennis_quant.cli
 - prediction snapshots são imutáveis;
 - o Elo é idempotente;
 - mudança da fonte/identidade dos jogadores invalida e reconstrói automaticamente o bootstrap antigo;
-- nenhuma derrota altera diretamente o Champion.
+- nenhuma derrota altera diretamente o Champion;
+- coleta com zero eventos não pode ser registrada como falso sucesso.
 
 ## Pós-jogo e aprendizado
 
@@ -102,7 +120,9 @@ O projeto mantém a estrutura para:
 
 ## Testes e observabilidade
 
-O CI compila todo o código e executa testes unitários em cada Pull Request. O dashboard mostra fixtures encontrados, ATP pré-jogo, jogos com odds, análise profunda, bootstrap, fontes, jogadores não resolvidos e causas de rejeição.
+O CI compila o código e os coletores e executa testes unitários em cada Pull Request. O dashboard mostra fixtures encontrados, ATP pré-jogo, jogos com odds, análise profunda, bootstrap, fontes, jogadores não resolvidos e causas de rejeição.
+
+O motor também grava `rejection_summary` e os até 10 `near_misses` mais próximos dos gates, sem alterar a decisão original.
 
 ## Regras científicas
 
@@ -114,10 +134,11 @@ O CI compila todo o código e executa testes unitários em cada Pull Request. O 
 
 ## Licenças e uso
 
-O OddsHarvester é open source sob licença MIT. O dataset `JeffSackmann/tennis_atp` é disponibilizado sob CC BY-NC-SA e deve ser tratado como fonte de pesquisa/não comercial. Para eventual produto comercial, a camada histórica deve ser substituída ou licenciada adequadamente. Scraping também deve respeitar os termos aplicáveis ao site de origem.
+O OddsHarvester é open source sob licença MIT. O histórico em formato Sackmann deve ser tratado conforme a licença da fonte original/espelho e, nesta fase, é usado para pesquisa individual. Para eventual produto comercial, a camada histórica deve ser substituída ou licenciada adequadamente. O scraping deve respeitar os termos aplicáveis a cada site de origem.
 
 ## Próximas evoluções
 
+- enriquecer TennisExplorer com odds por várias casas na página de detalhe;
 - integrar Tennis-Data como dataset de odds históricas para backtests;
 - snapshots opening/T-6h/T-3h/T-1h/T-15min e Market Movement;
 - Return Rating;
