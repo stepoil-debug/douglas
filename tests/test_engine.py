@@ -2,6 +2,7 @@ from pathlib import Path
 
 from tennis_quant.market import consensus_market, no_vig_probability
 from tennis_quant.prediction import confidence_score, disagreement_pp, weighted_probability
+from tennis_quant.ratings import RatingStore
 from tennis_quant.storage import write_snapshot
 
 
@@ -36,3 +37,12 @@ def test_snapshot_key_includes_selected_player(tmp_path: Path):
     b = write_snapshot(tmp_path, "2026-08-11", other)
     assert a != b
     assert a.exists() and b.exists()
+
+
+def test_elo_result_is_idempotent(tmp_path: Path):
+    store = RatingStore(tmp_path / "ratings.json")
+    assert store.record_match("m1", "a", "b", "Hard") is True
+    first = store.get("a", "Hard")[0]
+    assert first > 1500
+    assert store.record_match("m1", "a", "b", "Hard") is False
+    assert store.get("a", "Hard")[0] == first
