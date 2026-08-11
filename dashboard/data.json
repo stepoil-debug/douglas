@@ -1,1 +1,23 @@
-{"date":"aguardando-primeira-execucao","model_version":"champion-v0.1.0","fixtures_analyzed":0,"candidate_sides":0,"approved":[],"shadow":[],"rejected":[]}
+{
+  "date": "aguardando-primeira-execucao-real",
+  "model_version": "champion-v0.2.0",
+  "status": "WAITING_API_RUN",
+  "fixtures_analyzed": 0,
+  "prematch_atp_singles": 0,
+  "matches_with_odds": 0,
+  "deep_analyzed_matches": 0,
+  "candidate_sides": 0,
+  "api_requests": 0,
+  "bootstrap": {"status": "WAITING"},
+  "approved": [],
+  "shadow": [],
+  "rejected": [],
+  "metrics": {
+    "total_approved_resolved": 0,
+    "last_10": {"n": 0, "wins": 0, "accuracy": null},
+    "last_50": {"n": 0, "wins": 0, "accuracy": null},
+    "last_100": {"n": 0, "wins": 0, "accuracy": null},
+    "last_500": {"n": 0, "wins": 0, "accuracy": null},
+    "quality_labels": {}
+  }
+}
