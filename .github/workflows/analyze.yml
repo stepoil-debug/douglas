@@ -17,6 +17,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: tennis-quant-analysis
@@ -92,7 +94,6 @@ jobs:
           target_date = option_value('-d', '--date')
           output_path = option_value('-o', '--output')
 
-          # Primary source: public TennisExplorer HTML. This path needs no browser.
           if target_date and output_path:
               print('[TQE] Live source attempt: TennisExplorer', file=sys.stderr, flush=True)
               completed = subprocess.run([
@@ -106,8 +107,6 @@ jobs:
                   raise SystemExit(0)
               print('[TQE] TennisExplorer unavailable; preparing browser fallback.', file=sys.stderr, flush=True)
 
-          # Chromium is installed only if the lightweight source failed. This keeps the
-          # normal 30-minute schedule fast and avoids downloading a browser every run.
           browser = subprocess.run([
               sys.executable, '-m', 'playwright', 'install', '--with-deps', 'chromium'
           ])
@@ -216,3 +215,59 @@ jobs:
           git add dashboard/run_status.json
           git commit -m "status: tennis analysis failed" || true
           git push || true
+
+  deploy-pages:
+    needs: analyze
+    if: ${{ needs.analyze.result == 'success' }}
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pages
+      cancel-in-progress: true
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout latest analysis data
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Stage dated history for dashboard
+        run: |
+          mkdir -p dashboard/history
+          if compgen -G "data/history/*.json" > /dev/null; then
+            cp data/history/*.json dashboard/history/
+          fi
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          dates = []
+          for path in sorted(Path('data/history').glob('????-??-??.json'), reverse=True):
+              try:
+                  row = json.loads(path.read_text(encoding='utf-8'))
+              except Exception:
+                  continue
+              dates.append({
+                  'date': row.get('date', path.stem),
+                  'updated_at': row.get('updated_at'),
+                  'summary': row.get('summary', {}),
+              })
+          Path('dashboard/history/index.json').write_text(
+              json.dumps({'updated_at': datetime.now(timezone.utc).isoformat(), 'dates': dates}, ensure_ascii=False, indent=2),
+              encoding='utf-8'
+          )
+          PY
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dashboard
+      - name: Deploy latest dashboard
+        id: deployment
+        uses: actions/deploy-pages@v4
