@@ -12,7 +12,9 @@ def write_json(path: Path, payload: Any) -> None:
 
 
 def write_snapshot(base: Path, target_date: str, payload: dict[str, Any]) -> Path:
-    path = base / "predictions" / target_date / f"{payload['match']['match_id']}.json"
+    match_id = payload["match"]["match_id"]
+    player_key = payload["selected_player"]["key"]
+    path = base / "predictions" / target_date / f"{match_id}-{player_key}.json"
     if path.exists():
         # Frozen prediction: never overwrite the first pre-match snapshot.
         return path
