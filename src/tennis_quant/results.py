@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from tennis_quant.failure import classify_postmortem
-from tennis_quant.ratings import RatingStore
+from tennis_quant.ratings import RatingStore, margin_k
 from tennis_quant.storage import write_json
 
 
@@ -47,10 +47,11 @@ def reconcile_results(provider, root: Path, target_day: date) -> list[dict[str, 
         if str(fixture.status).lower() != "finished":
             continue
         winner = str(fixture.winner or "").strip().lower()
+        k = margin_k(fixture.raw.get("event_final_result"))
         if winner == "first player":
-            ratings_changed |= ratings.record_match(fixture.match_id, fixture.player_a.key, fixture.player_b.key, fixture.surface)
+            ratings_changed |= ratings.record_match(fixture.match_id, fixture.player_a.key, fixture.player_b.key, fixture.surface, k=k)
         elif winner == "second player":
-            ratings_changed |= ratings.record_match(fixture.match_id, fixture.player_b.key, fixture.player_a.key, fixture.surface)
+            ratings_changed |= ratings.record_match(fixture.match_id, fixture.player_b.key, fixture.player_a.key, fixture.surface, k=k)
     if ratings_changed:
         ratings.save()
 
