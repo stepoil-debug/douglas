@@ -1,7 +1,7 @@
 {
-  "status": "RUNNING",
+  "status": "FAILED",
   "run_id": 31507030665,
   "run_url": "https://github.com/stepoil-debug/douglas/actions/runs/31507030665",
-  "updated_at": "2026-08-11T15:26:42.425609+00:00",
-  "message": "Coletando jogos e processando o motor sem API esportiva"
+  "updated_at": "2026-08-11T15:27:14.052680+00:00",
+  "message": "A coleta/análise falhou. Use run_id/run_url para consultar o log."
 }
