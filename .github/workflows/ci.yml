@@ -5,6 +5,13 @@ on:
     branches: [main]
   push:
     branches: [main]
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'config/**'
+      - 'requirements.txt'
+      - '.github/workflows/ci.yml'
+      - '.github/workflows/analyze.yml'
 
 permissions:
   contents: read
