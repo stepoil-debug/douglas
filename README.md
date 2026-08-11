@@ -1,78 +1,128 @@
 # Tennis Quant Engine
 
-Motor quantitativo seletivo para rastrear todos os fixtures ATP Singles do dia, aprofundar apenas os confrontos relevantes para a faixa de odd **1.50–2.00** e aprovar **no máximo 10** seleções. O sistema nunca força quantidade.
+Motor quantitativo seletivo para rastrear os ATP Singles do dia, aprofundar os confrontos relevantes para odds **1.50–2.00** e aprovar **no máximo 10** seleções. O sistema nunca força quantidade.
 
-## Champion v0.2.0 — análise real
+## Champion v0.3.0 — sem API esportiva
 
-A versão atual consulta dados reais da API-Tennis e executa duas etapas:
+A análise não depende de Supabase, API-Tennis, RapidAPI ou qualquer chave de dados esportivos.
 
-1. **Screening de todos os ATP Singles do dia**: fixture, estado pré-jogo e mercado/odds.
-2. **Deep Analysis** dos jogos em que pelo menos um lado está entre 1.50 e 2.00.
+### Fontes atuais
 
-O Deep Analysis combina:
+- **OddsHarvester + Playwright/OddsPortal**: coleta os jogos ATP e as odds Match Winner por bookmaker diretamente das páginas públicas.
+- **Jeff Sackmann / tennis_atp**: arquivos CSV públicos usados para histórico ATP, ranking aproximado disponível nos jogos, Elo, superfície, forma, H2H e estatísticas de saque.
+- **GitHub Actions**: instala Chromium, executa o scraper, roda o motor e versiona somente os resultados e estados necessários.
+- **GitHub Pages**: publica o painel.
 
-- consenso de várias casas com remoção da margem (*no-vig*);
-- Elo global construído com até 365 dias de partidas históricas;
-- Elo de superfície quando a fonte fornece superfície;
-- ATP ranking/points;
-- forma recente com decaimento temporal e shrinkage para amostras pequenas;
+Os CSVs públicos grandes e os arquivos temporários do navegador ficam em cache/runner e não são versionados no repositório.
+
+## Fluxo
+
+1. O OddsHarvester abre um Chromium headless e coleta os confrontos e odds do dia.
+2. O provider filtra ATP Singles e converte as odds de cada bookmaker para o formato do Market Engine.
+3. Nomes abreviados do OddsPortal (ex.: `Djokovic N.`) são associados aos IDs históricos do dataset ATP.
+4. Antes da primeira previsão, o Elo é reconstruído com até 365 dias de histórico público.
+5. Todos os jogos com mercado são triados; somente confrontos com pelo menos um lado entre 1.50 e 2.00 entram na análise profunda.
+6. O Selection Engine aplica probabilidade, edge, confiança, qualidade de dados e discordância e libera de 0 a 10 seleções.
+7. APPROVED e SHADOW recebem snapshots imutáveis.
+
+## Sinais do Champion
+
+- consenso de várias casas e probabilidade *no-vig*;
+- Elo global;
+- Elo por superfície;
+- ranking/pontos disponíveis no histórico ATP;
+- forma recente com shrinkage para amostras pequenas;
 - dominância em sets;
-- desempenho da temporada e por superfície quando disponível;
-- fadiga por densidade de partidas em 1/3/7 dias;
-- estatísticas de saque dos fixtures históricos quando a API as fornece;
-- H2H com peso deliberadamente baixo;
-- `Model Disagreement Index`;
-- `Data Quality`;
-- edge contra a probabilidade *fair* do mercado;
-- `Confidence Score`.
+- desempenho de temporada e superfície;
+- fadiga aproximada por densidade de partidas;
+- estatísticas históricas de saque quando disponíveis;
+- H2H com peso baixo;
+- Model Disagreement Index;
+- Data Quality;
+- edge contra o mercado;
+- Confidence Score.
 
-O ranking final gera `APPROVED` (0–10), `SHADOW` (próximos 10 elegíveis) e `REJECTED`, guardando os motivos de rejeição.
+Se um jogador atual não puder ser associado de forma confiável ao histórico, os sinais dependentes de identidade são removidos e a qualidade dos dados é penalizada. O motor prefere rejeitar uma seleção a inventar histórico.
+
+## Seleção
+
+O Champion atual mantém:
+
+- odd mínima: 1.50;
+- odd máxima: 2.00;
+- máximo de aprovados: 10;
+- Shadow: próximos 10 elegíveis;
+- probabilidade mínima: 65%;
+- edge mínimo: 3,5 pontos percentuais;
+- confiança mínima: 72;
+- qualidade de dados mínima: 62%;
+- discordância máxima: 12,5 pontos percentuais.
+
+Esses cortes são parâmetros experimentais e serão alterados apenas depois de backtests/walk-forward.
+
+## Painel e botão Iniciar análises
+
+O painel continua sem backend. Para o botão **Iniciar análises** disparar o GitHub Action diretamente, configure uma única vez um GitHub token restrito ao repositório com permissão `Actions: Read and write`. O token fica somente no navegador.
+
+Nenhuma chave de API de tênis é necessária.
+
+Também é possível iniciar manualmente em **Actions → Tennis Quant - Analyze → Run workflow** sem configurar token no painel.
+
+## Execução local
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python -m playwright install chromium
+export PYTHONPATH=src
+python -m tennis_quant.cli
+```
 
 ## Segurança contra viés
 
-- Apenas partidas **pré-jogo** podem virar seleção.
-- Fixtures ao vivo, finalizados, cancelados, retired/walkover e similares ficam fora da seleção.
-- Qualificatórios são rastreados, mas não aprovados no Champion atual.
-- Prediction snapshots são imutáveis por partida + jogador selecionado.
-- O Elo é idempotente: uma partida encerrada nunca é contabilizada duas vezes.
-- O bootstrap histórico acontece antes da primeira previsão sempre que a fonte permite o intervalo solicitado.
+- somente pré-jogo pode virar seleção;
+- iniciados/finalizados/cancelados/retired/walkover ficam fora do Top 10;
+- prediction snapshots são imutáveis;
+- o Elo é idempotente;
+- mudança da fonte/identidade dos jogadores invalida e reconstrói automaticamente o bootstrap antigo;
+- nenhuma derrota altera diretamente o Champion.
 
 ## Pós-jogo e aprendizado
 
-- Reconciliação automática de resultados.
-- Weighted Elo atualizado por margem de sets.
-- `GOOD_WIN`, `LUCKY_WIN`, `GOOD_LOSS`, `BAD_LOSS`.
-- Failure Intelligence V1 com taxonomia `ERR-*`.
-- Métricas móveis de 10/50/100/500 seleções aprovadas.
-- Shadow predictions são preservadas para avaliar se o ranking realmente separa qualidade.
+O projeto mantém a estrutura para:
 
-## Configuração obrigatória
+- reconciliação de resultados quando a fonte pública conseguir observar o encerramento;
+- Weighted Elo;
+- GOOD_WIN, LUCKY_WIN, GOOD_LOSS e BAD_LOSS;
+- Failure Intelligence (`ERR-*`);
+- métricas móveis 10/50/100/500;
+- Shadow predictions;
+- futuro Champion × Challenger.
 
-1. Crie/obtenha uma chave da **API-Tennis**.
-2. No repositório, abra **Settings → Secrets and variables → Actions**.
-3. Crie o Repository Secret `API_TENNIS_KEY` com a chave.
-4. Em **Settings → Pages**, mantenha `Source = GitHub Actions`.
-5. Execute **Actions → Tennis Quant - Analyze → Run workflow**.
+## Testes e observabilidade
 
-Se `API_TENNIS_KEY` estiver ausente, o workflow agora **falha explicitamente**; ele não simula sucesso nem publica uma análise vazia.
-
-## Automação
-
-O workflow roda uma vez por hora e também pode ser iniciado manualmente. Na primeira execução real ele pode demorar mais porque constrói o bootstrap histórico e o cache de enriquecimento. Execuções seguintes reutilizam o estado persistido no GitHub.
+O CI compila todo o código e executa testes unitários em cada Pull Request. O dashboard mostra fixtures encontrados, ATP pré-jogo, jogos com odds, análise profunda, bootstrap, fontes, jogadores não resolvidos e causas de rejeição.
 
 ## Regras científicas
 
 1. A meta é **máximo 10**, não exatamente 10.
 2. A faixa permanece 1.50–2.00; não reduziremos artificialmente a odd para elevar a taxa de acerto.
-3. Ajustes derivados de derrotas devem virar Challengers e ser validados antes de promover o Champion.
-4. Acurácia, ROI, Brier Score, calibração, closing line e desempenho por rank/faixa devem ser acompanhados separadamente.
-5. A meta de 90% é uma meta experimental e só poderá ser declarada com amostra fora da amostra suficientemente grande.
+3. Ajustes derivados de derrotas viram Challengers e precisam vencer validação temporal antes de promoção.
+4. Acurácia, ROI, Brier Score, calibração, closing line e desempenho por rank/faixa serão medidos separadamente.
+5. A meta de 90% é experimental e só poderá ser declarada com amostra fora da amostra grande o suficiente.
+
+## Licenças e uso
+
+O OddsHarvester é open source sob licença MIT. O dataset `JeffSackmann/tennis_atp` é disponibilizado sob CC BY-NC-SA e deve ser tratado como fonte de pesquisa/não comercial. Para eventual produto comercial, a camada histórica deve ser substituída ou licenciada adequadamente. Scraping também deve respeitar os termos aplicáveis ao site de origem.
 
 ## Próximas evoluções
 
-- snapshots de opening/closing line e `Market Movement`;
-- Return Rating e matchup serve × return mais completo;
-- classificação automática de causa raiz usando estatísticas pós-jogo;
-- Champion × Challenger com walk-forward;
+- integrar Tennis-Data como dataset de odds históricas para backtests;
+- snapshots opening/T-6h/T-3h/T-1h/T-15min e Market Movement;
+- Return Rating;
+- matchup serve × return;
+- Failure Intelligence com dados pós-jogo mais completos;
+- Champion × Challenger + walk-forward;
 - ML tabular calibrado;
-- relatório de performance Top 1–3, 4–5, 6–10 e Shadow 11–20.
+- performance Top 1–3, 4–5, 6–10 e Shadow 11–20.

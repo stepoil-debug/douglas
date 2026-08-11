@@ -2,13 +2,15 @@ name: Tennis Quant - Analyze
 
 on:
   workflow_dispatch:
-    inputs:
-      api_tennis_key:
-        description: 'API-Tennis key (deixe vazio se API_TENNIS_KEY já estiver nos Secrets)'
-        required: false
-        type: string
   schedule:
-    - cron: '17 * * * *'
+    - cron: '17 9-23/3 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'config/**'
+      - 'requirements.txt'
+      - '.github/workflows/analyze.yml'
 
 permissions:
   contents: write
@@ -20,51 +22,70 @@ concurrency:
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    env:
-      API_TENNIS_KEY: ${{ inputs.api_tennis_key || secrets.API_TENNIS_KEY }}
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
           cache: 'pip'
-      - name: Install dependencies
+
+      - name: Restore public tennis history cache
+        uses: actions/cache@v4
+        with:
+          path: data/cache/sackmann
+          key: sackmann-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            sackmann-${{ runner.os }}-
+
+      - name: Install Python dependencies
         run: pip install -r requirements.txt
+
+      - name: Install Chromium for OddsHarvester
+        run: python -m playwright install --with-deps chromium
+
+      - name: OddsHarvester compatibility shim
+        run: |
+          mkdir -p "$RUNNER_TEMP/tqe-bin"
+          cat > "$RUNNER_TEMP/tqe-bin/oddsharvester" <<'EOF'
+          #!/usr/bin/env python3
+          import subprocess, sys
+          args = [a for a in sys.argv[1:] if a != '--include-started']
+          raise SystemExit(subprocess.call([sys.executable, '-m', 'oddsharvester', *args]))
+          EOF
+          chmod +x "$RUNNER_TEMP/tqe-bin/oddsharvester"
+          echo "$RUNNER_TEMP/tqe-bin" >> "$GITHUB_PATH"
+
       - name: Test engine
         env:
           PYTHONPATH: src
         run: pytest -q
-      - name: Validate API key for manual analysis
-        if: github.event_name == 'workflow_dispatch' && env.API_TENNIS_KEY == ''
-        run: |
-          echo "::error::API_TENNIS_KEY ausente. Informe a chave no painel ou cadastre o Secret API_TENNIS_KEY."
-          exit 1
-      - name: Scheduled run without API key
-        if: github.event_name != 'workflow_dispatch' && env.API_TENNIS_KEY == ''
-        run: echo "API_TENNIS_KEY ausente; execução automática ignorada sem erro."
-      - name: Analyze today's ATP Singles
-        if: env.API_TENNIS_KEY != ''
+
+      - name: Analyze today's ATP Singles without sports API
         env:
           PYTHONPATH: src
           H2H_BUDGET: '40'
         run: python -m tennis_quant.cli | tee /tmp/tennis-analysis.log
+
       - name: Write execution summary
-        if: success() && env.API_TENNIS_KEY != ''
+        if: success()
         run: |
-          echo "## Tennis Quant Engine" >> "$GITHUB_STEP_SUMMARY"
+          echo "## Tennis Quant Engine — NO API" >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
           cat /tmp/tennis-analysis.log >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
+          echo "Fontes: OddsHarvester/OddsPortal + Jeff Sackmann" >> "$GITHUB_STEP_SUMMARY"
           echo "Painel: https://stepoil-debug.github.io/douglas/" >> "$GITHUB_STEP_SUMMARY"
+
       - name: Commit analysis state and dashboard data
-        if: success() && env.API_TENNIS_KEY != ''
+        if: success()
         run: |
           git config user.name "tennis-quant-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data dashboard/data.json
           git diff --cached --quiet && exit 0
-          git commit -m "data: update real tennis analysis"
+          git commit -m "data: update no-api tennis analysis"
           git push
