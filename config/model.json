@@ -1,5 +1,5 @@
 {
-  "model_version": "champion-v0.3.1-data-quality",
+  "model_version": "champion-v0.3.2-full-board",
   "bootstrap_days": 365,
   "data_mode": "NO_API",
   "surface_lookback_years": 3,
