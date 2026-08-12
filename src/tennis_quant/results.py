@@ -10,6 +10,7 @@ from tennis_quant.history import update_history_results
 from tennis_quant.learning import backfill_learning_from_history, reconcile_learning_results
 from tennis_quant.public_results import finished_fixtures
 from tennis_quant.ratings import RatingStore, margin_k
+from tennis_quant.sequence import update_sequence_results
 from tennis_quant.storage import write_json
 
 
@@ -50,6 +51,7 @@ def _quality_label(snapshot: dict[str, Any], won: bool) -> str:
 def reconcile_results(provider, root: Path, target_day: date) -> list[dict[str, Any]]:
     fixtures = {m.match_id: m for m in finished_fixtures(provider, root, target_day)}
     update_history_results(root, target_day.isoformat(), fixtures.values())
+    update_sequence_results(root, target_day.isoformat(), fixtures.values())
 
     # Older boards can predate the dedicated learning ledger. Recover the model's
     # directional opinion strictly from the saved pre-match history before applying
