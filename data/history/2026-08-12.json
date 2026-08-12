@@ -39,7 +39,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-12T11:12:55.261380+00:00",
+        "updated_at": "2026-08-12T11:17:28.830992+00:00",
         "winner": {
           "key": "200647",
           "name": "Sho Shimabukuro"
@@ -4264,6 +4264,7 @@
   ],
   "summary": {
     "accuracy": null,
+    "analyzed_games": 4,
     "approved": 0,
     "bookmaker_count": 13,
     "bookmakers": [
@@ -4283,8 +4284,12 @@
     ],
     "games": 9,
     "losses": 0,
+    "model_accuracy": null,
+    "model_hits": 0,
+    "model_misses": 0,
     "resolved_approved": 0,
+    "resolved_model_picks": 0,
     "wins": 0
   },
-  "updated_at": "2026-08-12T11:12:55.261400+00:00"
+  "updated_at": "2026-08-12T11:17:28.831058+00:00"
 }
