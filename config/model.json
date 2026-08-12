@@ -1,5 +1,5 @@
 {
-  "model_version": "champion-v0.3.2-full-board",
+  "model_version": "champion-v0.3.3-sequential",
   "bootstrap_days": 365,
   "data_mode": "NO_API",
   "surface_lookback_years": 3,
@@ -9,6 +9,8 @@
     "max_odd": 2.0,
     "max_approved": 10,
     "shadow_size": 10,
+    "min_entry_gap_minutes": 210,
+    "require_known_start_time": true,
     "min_final_probability": 0.65,
     "min_edge_pp": 3.5,
     "min_confidence": 72.0,
