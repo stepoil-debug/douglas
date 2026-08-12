@@ -17,11 +17,11 @@
   ],
   "date": "2026-08-12",
   "deep_analyzed_matches": 3,
-  "fixtures_analyzed": 7,
+  "fixtures_analyzed": 8,
   "generated_at_timezone": "America/Sao_Paulo",
-  "matches_with_odds": 7,
+  "matches_with_odds": 8,
   "model_version": "champion-v0.3.0-no-api",
-  "prematch_atp_singles": 7,
+  "prematch_atp_singles": 8,
   "rejected": [
     {
       "confidence": 47.86515059042322,

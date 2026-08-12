@@ -20,7 +20,7 @@
   ],
   "date": "2026-08-12",
   "deep_analyzed_matches": 3,
-  "fixtures_analyzed": 7,
+  "fixtures_analyzed": 8,
   "generated_at_timezone": "America/Sao_Paulo",
   "history_summary": {
     "accuracy": null,
@@ -40,7 +40,7 @@
       "Unibet",
       "William Hill"
     ],
-    "games": 7,
+    "games": 8,
     "losses": 0,
     "resolved_approved": 0,
     "wins": 0
@@ -68,14 +68,14 @@
       "misses": 0,
       "n": 0
     },
-    "updated_at": "2026-08-11T23:19:49.733140+00:00"
+    "updated_at": "2026-08-12T00:08:46.375248+00:00"
   },
-  "last_run_at": "2026-08-11T20:19:57.072335-03:00",
+  "last_run_at": "2026-08-11T21:08:53.863215-03:00",
   "learning_summary": {
     "matches": 3,
     "status": "PROVISIONAL_D1"
   },
-  "matches_with_odds": 7,
+  "matches_with_odds": 8,
   "metrics": {
     "last_10": {
       "accuracy": null,
@@ -332,7 +332,7 @@
     }
   ],
   "operational_date": "2026-08-11",
-  "prematch_atp_singles": 7,
+  "prematch_atp_singles": 8,
   "refresh_error": null,
   "refresh_status": "SUCCESS",
   "rejected": [
