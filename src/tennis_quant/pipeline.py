@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -152,6 +152,57 @@ def _market_in_scope(market: dict[str, Any], cfg: dict) -> bool:
     return False
 
 
+def _recover_surface(provider, match: Any, target_date: date, lookback_years: int = 3) -> str | None:
+    """Recover a missing live surface from the same tournament in recent seasons.
+
+    Current-season static files may not contain a tournament until it has completed.
+    Looking back a few editions is safer than silently dropping surface Elo/profile data.
+    """
+    current = str(getattr(match, "surface", "") or "").strip()
+    if current:
+        return current
+    store = getattr(provider, "sackmann", None)
+    resolver = getattr(store, "surface_for_tournament", None)
+    if not callable(resolver):
+        return None
+    for offset in range(max(1, int(lookback_years))):
+        year = target_date.year - offset
+        try:
+            inferred = str(resolver(match.tournament, year) or "").strip()
+        except Exception:
+            inferred = ""
+        if inferred:
+            match.surface = inferred
+            return inferred
+    return None
+
+
+def _fresh_ranking(
+    provider: Any,
+    standings: dict[str, dict[str, Any]],
+    player_key: str,
+    target_date: date,
+    max_age_days: int = 8,
+) -> dict[str, Any] | None:
+    """Use match-file ranking only while it is recent enough to represent the player now."""
+    row = standings.get(player_key)
+    if not row:
+        return None
+    store = getattr(provider, "sackmann", None)
+    raw = (getattr(store, "latest_rank", {}) or {}).get(player_key) if store is not None else None
+    raw_date = str((raw or {}).get("date") or "").strip()
+    if not raw_date:
+        return row
+    try:
+        ranked_on = datetime.strptime(raw_date, "%Y%m%d").date()
+    except ValueError:
+        return None
+    age = (target_date - ranked_on).days
+    if age < 0 or age > max(0, int(max_age_days)):
+        return None
+    return row
+
+
 def _quality_score(
     bookmakers: int,
     recent_seen: int,
@@ -193,6 +244,8 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
     odds_matches = 0
     deep_matches = 0
     unresolved_players: set[str] = set()
+    recovered_surfaces = 0
+    stale_rankings_ignored = 0
 
     for match in prematch:
         raw_odds = odds_by_match.get(match.match_id, {})
@@ -205,6 +258,9 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
             continue
         deep_matches += 1
 
+        if not match.surface and _recover_surface(provider, match, target_date, int(cfg.get("surface_lookback_years", 3))):
+            recovered_surfaces += 1
+
         resolved_a = not str(match.player_a.key).startswith("name-")
         resolved_b = not str(match.player_b.key).startswith("name-")
         if not resolved_a:
@@ -213,8 +269,14 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
             unresolved_players.add(match.player_b.name)
 
         elo_a, surf_a = ratings.probability(match.player_a.key, match.player_b.key, match.surface)
-        rank_a = standings.get(match.player_a.key)
-        rank_b = standings.get(match.player_b.key)
+        raw_rank_a = standings.get(match.player_a.key)
+        raw_rank_b = standings.get(match.player_b.key)
+        rank_a = _fresh_ranking(provider, standings, match.player_a.key, target_date, int(cfg.get("ranking_max_age_days", 8)))
+        rank_b = _fresh_ranking(provider, standings, match.player_b.key, target_date, int(cfg.get("ranking_max_age_days", 8)))
+        if raw_rank_a and not rank_a:
+            stale_rankings_ignored += 1
+        if raw_rank_b and not rank_b:
+            stale_rankings_ignored += 1
         rank_prob_a = ranking_probability(rank_a, rank_b)
 
         context: dict[str, Any] = {}
@@ -330,6 +392,10 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
         "candidate_sides": len(ranked),
         "source_requests": getattr(provider, "source_requests", None),
         "unresolved_players": sorted(unresolved_players),
+        "data_quality_diagnostics": {
+            "surfaces_recovered": recovered_surfaces,
+            "stale_rankings_ignored": stale_rankings_ignored,
+        },
         "bootstrap": bootstrap,
         "approved": [c.to_dict() for c in ranked if c.status == "APPROVED"],
         "shadow": [c.to_dict() for c in ranked if c.status == "SHADOW"],

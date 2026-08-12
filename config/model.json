@@ -1,7 +1,9 @@
 {
-  "model_version": "champion-v0.3.0-no-api",
+  "model_version": "champion-v0.3.1-data-quality",
   "bootstrap_days": 365,
   "data_mode": "NO_API",
+  "surface_lookback_years": 3,
+  "ranking_max_age_days": 8,
   "selection": {
     "min_odd": 1.5,
     "max_odd": 2.0,
