@@ -113,3 +113,11 @@
 
   analyzeBtn.onclick = startAnalysis;
 })();
+
+(() => {
+  if (document.querySelector('script[data-investbet-history-enhancements]')) return;
+  const script = document.createElement('script');
+  script.src = `./history-enhancements.js?v=${Date.now()}`;
+  script.dataset.investbetHistoryEnhancements = '1';
+  document.head.appendChild(script);
+})();

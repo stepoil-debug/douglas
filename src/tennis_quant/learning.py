@@ -26,6 +26,40 @@ def _winner_key(fixture: Any) -> str | None:
     return None
 
 
+def _learning_row(
+    match_id: str,
+    target_date: str,
+    tournament: str | None,
+    time: str | None,
+    surface: str | None,
+    pick: dict[str, Any],
+) -> dict[str, Any]:
+    selected = pick.get("selected_player") or {}
+    opponent = pick.get("opponent") or {}
+    market = pick.get("selected_market") or {}
+    return {
+        "match_id": match_id,
+        "date": target_date,
+        "tournament": tournament,
+        "time": time,
+        "surface": surface,
+        "predicted_player": selected,
+        "opponent": opponent,
+        "decision": pick.get("status"),
+        "rank": pick.get("rank"),
+        "odd": market.get("best_odd") if market else pick.get("odd"),
+        "bookmakers": market.get("bookmakers") if market else pick.get("bookmakers"),
+        "final_probability": pick.get("final_probability"),
+        "confidence": pick.get("confidence"),
+        "edge_pp": pick.get("edge_pp"),
+        "data_quality": pick.get("data_quality"),
+        "disagreement_pp": pick.get("disagreement_pp"),
+        "signals": pick.get("signals") or {},
+        "reject_reasons": pick.get("reject_reasons") or [],
+        "result": {"status": "PENDING", "hit": None, "winner": None, "score": None},
+    }
+
+
 def record_learning_board(
     root: Path,
     target_date: str,
@@ -46,30 +80,14 @@ def record_learning_board(
         # highest predicted win probability, regardless of whether it was approved.
         pick = max(rows, key=lambda r: float(r.get("final_probability") or 0.0))
         match = pick.get("match") or {}
-        selected = pick.get("selected_player") or {}
-        opponent = pick.get("opponent") or {}
-        market = pick.get("selected_market") or {}
-        picks.append({
-            "match_id": match_id,
-            "date": target_date,
-            "tournament": match.get("tournament"),
-            "time": match.get("time"),
-            "surface": match.get("surface"),
-            "predicted_player": selected,
-            "opponent": opponent,
-            "decision": pick.get("status"),
-            "rank": pick.get("rank"),
-            "odd": market.get("best_odd"),
-            "bookmakers": market.get("bookmakers"),
-            "final_probability": pick.get("final_probability"),
-            "confidence": pick.get("confidence"),
-            "edge_pp": pick.get("edge_pp"),
-            "data_quality": pick.get("data_quality"),
-            "disagreement_pp": pick.get("disagreement_pp"),
-            "signals": pick.get("signals") or {},
-            "reject_reasons": pick.get("reject_reasons") or [],
-            "result": {"status": "PENDING", "hit": None, "winner": None, "score": None},
-        })
+        picks.append(_learning_row(
+            match_id,
+            target_date,
+            match.get("tournament"),
+            match.get("time"),
+            match.get("surface"),
+            pick,
+        ))
 
     picks.sort(key=lambda r: (
         0 if r.get("decision") == "APPROVED" else 1 if r.get("decision") == "SHADOW" else 2,
@@ -85,6 +103,58 @@ def record_learning_board(
         "matches": picks,
     }
     write_json(root / "data" / "learning" / f"{target_date}.json", payload)
+    return payload
+
+
+def backfill_learning_from_history(root: Path, target_date: str) -> dict[str, Any] | None:
+    """Recover a missing learning board from immutable pre-match history.
+
+    This never recomputes a prediction after the result. It only chooses the
+    highest-probability side from analyses that were already persisted before the
+    match, allowing older boards to receive HIT/MISS labels and remain auditable.
+    """
+    learning_path = root / "data" / "learning" / f"{target_date}.json"
+    if learning_path.exists():
+        return _load(learning_path, {})
+
+    history_path = root / "data" / "history" / f"{target_date}.json"
+    if not history_path.exists():
+        return None
+    ledger = _load(history_path, {})
+    if not ledger:
+        return None
+
+    picks: list[dict[str, Any]] = []
+    for game in ledger.get("games", []) or []:
+        analyses = game.get("analyses", []) or []
+        if not analyses:
+            continue
+        pick = max(analyses, key=lambda r: float(r.get("final_probability") or 0.0))
+        picks.append(_learning_row(
+            str(game.get("match_id") or ""),
+            str(game.get("date") or target_date),
+            game.get("tournament"),
+            game.get("time"),
+            game.get("surface"),
+            pick,
+        ))
+
+    if not picks:
+        return None
+    picks.sort(key=lambda r: (
+        0 if r.get("decision") == "APPROVED" else 1 if r.get("decision") == "SHADOW" else 2,
+        r.get("rank") or 999999,
+        -(float(r.get("final_probability") or 0)),
+    ))
+    payload = {
+        "date": target_date,
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "model_version": (ledger.get("model_versions") or [None])[-1],
+        "source": "BACKFILLED_FROM_PREMATCH_HISTORY",
+        "status": "BACKFILLED_FROM_PREMATCH_HISTORY",
+        "matches": picks,
+    }
+    write_json(learning_path, payload)
     return payload
 
 
@@ -114,8 +184,9 @@ def reconcile_learning_results(root: Path, target_date: str, fixtures: Iterable[
         }
         if not hit:
             result["postmortem"] = classify_postmortem(row)
-        row["result"] = result
-        changed = True
+        if result != (row.get("result") or {}):
+            row["result"] = result
+            changed = True
     if changed:
         payload["status"] = "RESULTS_UPDATING"
         payload["updated_at"] = datetime.now(timezone.utc).isoformat()

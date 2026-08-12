@@ -145,6 +145,7 @@ def record_analysis_history(root: Path, day: str, fixtures: Iterable[Any], odds_
             existing[match_id] = game
         else:
             game["last_seen_at"] = _now()
+            game["date"] = fixture.date or game.get("date") or day
             game["time"] = fixture.time or game.get("time")
             game["surface"] = fixture.surface or game.get("surface")
             if market.get("bookmaker_count"):
@@ -184,10 +185,14 @@ def update_history_results(root: Path, day: str, fixtures: Iterable[Any]) -> Non
         if result.get("resolved") and result != (game.get("result") or {}):
             game["result"] = result
             changed = True
+
+    ledger["games"] = sorted(games.values(), key=lambda g: (g.get("time") or "99:99", g.get("tournament") or "", g.get("match_id") or ""))
+    summary = summarize_day(ledger)
+    if summary != (ledger.get("summary") or {}):
+        ledger["summary"] = summary
+        changed = True
     if changed:
         ledger["updated_at"] = _now()
-        ledger["games"] = list(games.values())
-        ledger["summary"] = summarize_day(ledger)
         write_json(data_path, ledger)
         write_json(dashboard_path, ledger)
         rebuild_history_index(root)
@@ -196,12 +201,24 @@ def update_history_results(root: Path, day: str, fixtures: Iterable[Any]) -> Non
 def summarize_day(ledger: dict[str, Any]) -> dict[str, Any]:
     games = ledger.get("games", []) or []
     approved = resolved_approved = wins = losses = 0
+    analyzed_games = resolved_model_picks = model_hits = model_misses = 0
     bookmaker_names: set[str] = set()
     for game in games:
         bookmaker_names.update((game.get("market") or {}).get("bookmakers", []) or [])
         result = game.get("result") or {}
         winner_key = ((result.get("winner") or {}).get("key"))
-        for analysis in game.get("analyses", []) or []:
+        analyses = game.get("analyses", []) or []
+        if analyses:
+            analyzed_games += 1
+            primary = max(analyses, key=lambda r: float(r.get("final_probability") or 0.0))
+            if result.get("resolved"):
+                resolved_model_picks += 1
+                selected_key = ((primary.get("selected_player") or {}).get("key"))
+                if selected_key and winner_key and selected_key == winner_key:
+                    model_hits += 1
+                else:
+                    model_misses += 1
+        for analysis in analyses:
             if analysis.get("status") != "APPROVED":
                 continue
             approved += 1
@@ -213,9 +230,19 @@ def summarize_day(ledger: dict[str, Any]) -> dict[str, Any]:
                 else:
                     losses += 1
     return {
-        "games": len(games), "approved": approved, "resolved_approved": resolved_approved,
-        "wins": wins, "losses": losses, "accuracy": (wins / resolved_approved) if resolved_approved else None,
-        "bookmakers": sorted(bookmaker_names, key=str.lower), "bookmaker_count": len(bookmaker_names),
+        "games": len(games),
+        "analyzed_games": analyzed_games,
+        "resolved_model_picks": resolved_model_picks,
+        "model_hits": model_hits,
+        "model_misses": model_misses,
+        "model_accuracy": (model_hits / resolved_model_picks) if resolved_model_picks else None,
+        "approved": approved,
+        "resolved_approved": resolved_approved,
+        "wins": wins,
+        "losses": losses,
+        "accuracy": (wins / resolved_approved) if resolved_approved else None,
+        "bookmakers": sorted(bookmaker_names, key=str.lower),
+        "bookmaker_count": len(bookmaker_names),
     }
 
 
