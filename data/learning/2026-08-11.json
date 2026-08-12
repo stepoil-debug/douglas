@@ -116,14 +116,16 @@
         "hit": false,
         "postmortem": {
           "evidence": [
-            "Thin model edge versus market consensus"
+            "Prediction was low-confidence or too close to a 50/50 match",
+            "Surface context or surface Elo was unavailable in the frozen prediction"
           ],
           "status": "HYPOTHESIS_ONLY",
           "tags": [
-            "ERR-MKT"
+            "ERR-SUR",
+            "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-12T16:02:52.137584+00:00",
+        "resolved_at": "2026-08-12T16:14:49.293136+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -256,14 +258,16 @@
         "hit": false,
         "postmortem": {
           "evidence": [
-            "Thin model edge versus market consensus"
+            "Prediction was low-confidence or too close to a 50/50 match",
+            "Surface context or surface Elo was unavailable in the frozen prediction"
           ],
           "status": "HYPOTHESIS_ONLY",
           "tags": [
-            "ERR-MKT"
+            "ERR-SUR",
+            "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-12T16:02:52.137606+00:00",
+        "resolved_at": "2026-08-12T16:14:49.293161+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -312,14 +316,16 @@
         "hit": false,
         "postmortem": {
           "evidence": [
-            "Thin model edge versus market consensus"
+            "Prediction was low-confidence or too close to a 50/50 match",
+            "Surface context or surface Elo was unavailable in the frozen prediction"
           ],
           "status": "HYPOTHESIS_ONLY",
           "tags": [
-            "ERR-MKT"
+            "ERR-SUR",
+            "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-12T16:02:52.137616+00:00",
+        "resolved_at": "2026-08-12T16:14:49.293173+00:00",
         "score": "2 - 0",
         "status": "MISS",
         "winner": {
@@ -368,7 +374,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-12T16:02:52.137622+00:00",
+        "resolved_at": "2026-08-12T16:14:49.293181+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -415,7 +421,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-12T16:02:52.137626+00:00",
+        "resolved_at": "2026-08-12T16:14:49.293185+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -570,5 +576,5 @@
   "model_version": "champion-v0.3.0-no-api",
   "source": "BACKFILLED_FROM_PREMATCH_HISTORY",
   "status": "RESULTS_UPDATING",
-  "updated_at": "2026-08-12T16:02:52.137630+00:00"
+  "updated_at": "2026-08-12T16:14:49.293188+00:00"
 }
