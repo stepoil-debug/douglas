@@ -24,12 +24,12 @@
   "prematch_atp_singles": 20,
   "rejected": [
     {
-      "confidence": 62.393472884860834,
-      "data_quality": 0.948,
-      "disagreement_pp": 10.618837959298736,
-      "edge_pp": 10.767544331869694,
-      "final_probability": 0.6182673104679411,
-      "market_probability": 0.5105918671492442,
+      "confidence": 62.737973872558186,
+      "data_quality": 0.974,
+      "disagreement_pp": 10.51075341871216,
+      "edge_pp": 10.440651451951389,
+      "final_probability": 0.6205355467775784,
+      "market_probability": 0.5161290322580645,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -55,11 +55,11 @@
         "name": "Jan Choinski"
       },
       "opponent_market": {
-        "best_odd": 1.75,
+        "best_odd": 1.8,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.4894081328507558,
-        "median_odd": 1.5950000000000002,
+        "bookmakers": 7,
+        "fair_probability": 0.48387096774193555,
+        "median_odd": 1.6,
         "player_key": "123828"
       },
       "rank": null,
@@ -71,8 +71,8 @@
       "selected_market": {
         "best_odd": 2.5,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.5105918671492442,
+        "bookmakers": 7,
+        "fair_probability": 0.5161290322580645,
         "median_odd": 1.5,
         "player_key": "202058"
       },
@@ -83,7 +83,7 @@
       "signals": {
         "elo": 0.6896844318814849,
         "fatigue": 0.5,
-        "market": 0.5105918671492442,
+        "market": 0.5161290322580645,
         "ranking": 0.6242083040112597,
         "recent_form": 0.8,
         "season_profile": 0.6953125
@@ -91,12 +91,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 56.96575175760537,
-      "data_quality": 0.9279999999999999,
-      "disagreement_pp": 11.378248242394635,
-      "edge_pp": 16.773388892826247,
-      "final_probability": 0.4821308806016441,
-      "market_probability": 0.31439699167338164,
+      "confidence": 57.69201590185779,
+      "data_quality": 0.954,
+      "disagreement_pp": 11.249984098142212,
+      "edge_pp": 16.48687249047035,
+      "final_probability": 0.48393487276462566,
+      "market_probability": 0.31906614785992216,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -122,11 +122,11 @@
         "name": "Grigor Dimitrov"
       },
       "opponent_market": {
-        "best_odd": 1.9,
+        "best_odd": 1.95,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.6856030083266182,
-        "median_odd": 1.605,
+        "bookmakers": 7,
+        "fair_probability": 0.6809338521400778,
+        "median_odd": 1.64,
         "player_key": "105777"
       },
       "rank": null,
@@ -138,8 +138,8 @@
       "selected_market": {
         "best_odd": 4.5,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.31439699167338164,
+        "bookmakers": 7,
+        "fair_probability": 0.31906614785992216,
         "median_odd": 3.5,
         "player_key": "202104"
       },
@@ -150,7 +150,7 @@
       "signals": {
         "elo": 0.5678201673544986,
         "fatigue": 0.5,
-        "market": 0.31439699167338164,
+        "market": 0.31906614785992216,
         "ranking": 0.6539923954372624,
         "recent_form": 0.5710158419299611,
         "season_profile": 0.6710304054054055,
@@ -159,12 +159,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 48.784901465946376,
-      "data_quality": 0.9279999999999999,
-      "disagreement_pp": 7.025932135821697,
-      "edge_pp": 4.507872618113529,
-      "final_probability": 0.5635266288916372,
-      "market_probability": 0.5184479027105019,
+      "confidence": 49.530286421428016,
+      "data_quality": 0.954,
+      "disagreement_pp": 7.045084240106024,
+      "edge_pp": 4.65016694133128,
+      "final_probability": 0.5626307016713773,
+      "market_probability": 0.5161290322580645,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -192,9 +192,9 @@
       "opponent_market": {
         "best_odd": 1.8,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.48155209728949816,
-        "median_odd": 1.64,
+        "bookmakers": 7,
+        "fair_probability": 0.48387096774193555,
+        "median_odd": 1.65,
         "player_key": "105173"
       },
       "rank": null,
@@ -206,8 +206,8 @@
       "selected_market": {
         "best_odd": 2.5,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.5184479027105019,
+        "bookmakers": 7,
+        "fair_probability": 0.5161290322580645,
         "median_odd": 1.5,
         "player_key": "133430"
       },
@@ -218,7 +218,7 @@
       "signals": {
         "elo": 0.6191912995858441,
         "fatigue": 0.5,
-        "market": 0.5184479027105019,
+        "market": 0.5161290322580645,
         "ranking": 0.5301314000906208,
         "recent_form": 0.688405357331741,
         "season_profile": 0.5800000000000001,
@@ -227,12 +227,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 43.04394549773031,
-      "data_quality": 0.938,
-      "disagreement_pp": 6.089856578709256,
-      "edge_pp": 2.4071892661757244,
-      "final_probability": 0.5322686139732327,
-      "market_probability": 0.5081967213114754,
+      "confidence": 42.65799931421642,
+      "data_quality": 0.964,
+      "disagreement_pp": 6.061434113851576,
+      "edge_pp": 1.5421907375038124,
+      "final_probability": 0.5377149010056114,
+      "market_probability": 0.5222929936305732,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -258,11 +258,11 @@
         "name": "Mattia Bellucci"
       },
       "opponent_market": {
-        "best_odd": 1.8,
+        "best_odd": 1.83,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.4918032786885246,
-        "median_odd": 1.6,
+        "bookmakers": 7,
+        "fair_probability": 0.47770700636942676,
+        "median_odd": 1.65,
         "player_key": "208233"
       },
       "rank": null,
@@ -275,8 +275,8 @@
       "selected_market": {
         "best_odd": 2.5,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.5081967213114754,
+        "bookmakers": 7,
+        "fair_probability": 0.5222929936305732,
         "median_odd": 1.5,
         "player_key": "208260"
       },
@@ -287,7 +287,7 @@
       "signals": {
         "elo": 0.5934314001421419,
         "fatigue": 0.5,
-        "market": 0.5081967213114754,
+        "market": 0.5222929936305732,
         "ranking": 0.4725050916496945,
         "recent_form": 0.6085353795401395,
         "season_profile": 0.5517857142857143,
@@ -296,12 +296,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 38.86846590674263,
-      "data_quality": 0.8959999999999999,
-      "disagreement_pp": 8.95812965820351,
-      "edge_pp": 3.900663659477499,
-      "final_probability": 0.5019740097788664,
-      "market_probability": 0.4629673731840914,
+      "confidence": 39.55316351047088,
+      "data_quality": 0.9219999999999999,
+      "disagreement_pp": 8.968598046378107,
+      "edge_pp": 3.9863983582152986,
+      "final_probability": 0.5014024451206145,
+      "market_probability": 0.4615384615384615,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -329,8 +329,8 @@
       "opponent_market": {
         "best_odd": 1.5,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.5370326268159085,
+        "bookmakers": 7,
+        "fair_probability": 0.5384615384615384,
         "median_odd": 1.5,
         "player_key": "209992"
       },
@@ -340,11 +340,11 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 1.83,
+        "best_odd": 1.94,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.4629673731840914,
-        "median_odd": 1.74,
+        "bookmakers": 7,
+        "fair_probability": 0.4615384615384615,
+        "median_odd": 1.75,
         "player_key": "132283"
       },
       "selected_player": {
@@ -355,7 +355,7 @@
         "elo": 0.4871967526344192,
         "fatigue": 0.5,
         "h2h": 0.4984042553191489,
-        "market": 0.46296737318409154,
+        "market": 0.46153846153846156,
         "ranking": 0.72,
         "recent_form": 0.4270138480070347,
         "season_profile": 0.46266968325791846
@@ -363,12 +363,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 35.484143421290746,
-      "data_quality": 0.938,
-      "disagreement_pp": 6.089856578709257,
-      "edge_pp": -2.4071892661757244,
-      "final_probability": 0.46773138602676734,
-      "market_probability": 0.4918032786885246,
+      "confidence": 36.11056588614842,
+      "data_quality": 0.964,
+      "disagreement_pp": 6.061434113851577,
+      "edge_pp": -1.5421907375038069,
+      "final_probability": 0.4622850989943887,
+      "market_probability": 0.47770700636942676,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -396,8 +396,8 @@
       "opponent_market": {
         "best_odd": 2.5,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.5081967213114754,
+        "bookmakers": 7,
+        "fair_probability": 0.5222929936305732,
         "median_odd": 1.5,
         "player_key": "208260"
       },
@@ -408,11 +408,11 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 1.8,
+        "best_odd": 1.83,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.4918032786885246,
-        "median_odd": 1.6,
+        "bookmakers": 7,
+        "fair_probability": 0.47770700636942676,
+        "median_odd": 1.65,
         "player_key": "208233"
       },
       "selected_player": {
@@ -422,7 +422,7 @@
       "signals": {
         "elo": 0.4065685998578581,
         "fatigue": 0.5,
-        "market": 0.4918032786885246,
+        "market": 0.47770700636942676,
         "ranking": 0.5274949083503055,
         "recent_form": 0.3914646204598605,
         "season_profile": 0.4482142857142857,
@@ -431,12 +431,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 34.3180678641783,
-      "data_quality": 0.9279999999999999,
-      "disagreement_pp": 7.025932135821697,
-      "edge_pp": -4.507872618113529,
-      "final_probability": 0.4364733711083629,
-      "market_probability": 0.48155209728949816,
+      "confidence": 34.89691575989398,
+      "data_quality": 0.954,
+      "disagreement_pp": 7.045084240106024,
+      "edge_pp": -4.65016694133128,
+      "final_probability": 0.43736929832862276,
+      "market_probability": 0.48387096774193555,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -464,8 +464,8 @@
       "opponent_market": {
         "best_odd": 2.5,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.5184479027105019,
+        "bookmakers": 7,
+        "fair_probability": 0.5161290322580645,
         "median_odd": 1.5,
         "player_key": "133430"
       },
@@ -478,9 +478,9 @@
       "selected_market": {
         "best_odd": 1.8,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.48155209728949816,
-        "median_odd": 1.64,
+        "bookmakers": 7,
+        "fair_probability": 0.48387096774193555,
+        "median_odd": 1.65,
         "player_key": "105173"
       },
       "selected_player": {
@@ -490,7 +490,7 @@
       "signals": {
         "elo": 0.38080870041415593,
         "fatigue": 0.5,
-        "market": 0.4815520972894981,
+        "market": 0.4838709677419355,
         "ranking": 0.46986859990937924,
         "recent_form": 0.311594642668259,
         "season_profile": 0.41999999999999993,
@@ -499,12 +499,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 33.88573337369956,
-      "data_quality": 0.978,
-      "disagreement_pp": 12.123578437331803,
-      "edge_pp": 1.9529510061285338,
-      "final_probability": 0.4949665203084222,
-      "market_probability": 0.47543701024713686,
+      "confidence": 33.493322877225104,
+      "data_quality": 1.0,
+      "disagreement_pp": 12.090419992335306,
+      "edge_pp": 1.4354127053113397,
+      "final_probability": 0.49822509479504895,
+      "market_probability": 0.48387096774193555,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -530,10 +530,10 @@
         "name": "Cameron Norrie"
       },
       "opponent_market": {
-        "best_odd": 1.5,
+        "best_odd": 2.5,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.5245629897528632,
+        "bookmakers": 7,
+        "fair_probability": 0.5161290322580645,
         "median_odd": 1.5,
         "player_key": "111815"
       },
@@ -546,9 +546,9 @@
       "selected_market": {
         "best_odd": 1.8,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.47543701024713686,
-        "median_odd": 1.6549999999999998,
+        "bookmakers": 7,
+        "fair_probability": 0.48387096774193555,
+        "median_odd": 1.62,
         "player_key": "209976"
       },
       "selected_player": {
@@ -558,7 +558,7 @@
       "signals": {
         "elo": 0.49355068828000614,
         "fatigue": 0.5,
-        "market": 0.4754370102471368,
+        "market": 0.4838709677419355,
         "ranking": 0.30544747081712065,
         "recent_form": 0.752273487413988,
         "season_profile": 0.5336363636363637,
@@ -567,12 +567,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 32.855945589764914,
-      "data_quality": 0.9079999999999999,
-      "disagreement_pp": 10.398471430460065,
-      "edge_pp": 1.3168983445694338,
-      "final_probability": 0.4833930400494679,
-      "market_probability": 0.4702240566037736,
+      "confidence": 32.5223714042652,
+      "data_quality": 0.9339999999999999,
+      "disagreement_pp": 10.372685598398425,
+      "edge_pp": 0.7850316681464575,
+      "final_probability": 0.48708354351852534,
+      "market_probability": 0.47923322683706077,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -600,8 +600,8 @@
       "opponent_market": {
         "best_odd": 1.5,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.5297759433962264,
+        "bookmakers": 7,
+        "fair_probability": 0.5207667731629393,
         "median_odd": 1.5,
         "player_key": "132686"
       },
@@ -614,9 +614,9 @@
       "selected_market": {
         "best_odd": 1.8,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.4702240566037736,
-        "median_odd": 1.69,
+        "bookmakers": 7,
+        "fair_probability": 0.47923322683706077,
+        "median_odd": 1.63,
         "player_key": "106423"
       },
       "selected_player": {
@@ -626,7 +626,7 @@
       "signals": {
         "elo": 0.5454959533572064,
         "fatigue": 0.5,
-        "market": 0.47022405660377364,
+        "market": 0.4792332268370607,
         "ranking": 0.28,
         "recent_form": 0.6082835332433412,
         "season_profile": 0.546875
@@ -634,12 +634,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 32.146224564593126,
-      "data_quality": 0.9079999999999999,
-      "disagreement_pp": 10.398471430460067,
-      "edge_pp": -1.3168983445694393,
-      "final_probability": 0.516606959950532,
-      "market_probability": 0.5297759433962264,
+      "confidence": 32.40096004974904,
+      "data_quality": 0.9339999999999999,
+      "disagreement_pp": 10.372685598398427,
+      "edge_pp": -0.7850316681464631,
+      "final_probability": 0.5129164564814747,
+      "market_probability": 0.5207667731629393,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -667,9 +667,9 @@
       "opponent_market": {
         "best_odd": 1.8,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.4702240566037736,
-        "median_odd": 1.69,
+        "bookmakers": 7,
+        "fair_probability": 0.47923322683706077,
+        "median_odd": 1.63,
         "player_key": "106423"
       },
       "rank": null,
@@ -681,8 +681,8 @@
       "selected_market": {
         "best_odd": 1.5,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.5297759433962264,
+        "bookmakers": 7,
+        "fair_probability": 0.5207667731629393,
         "median_odd": 1.5,
         "player_key": "132686"
       },
@@ -693,7 +693,7 @@
       "signals": {
         "elo": 0.4545040466427936,
         "fatigue": 0.5,
-        "market": 0.5297759433962264,
+        "market": 0.5207667731629393,
         "ranking": 0.72,
         "recent_form": 0.3917164667566588,
         "season_profile": 0.453125
@@ -701,12 +701,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 31.75266369744095,
-      "data_quality": 0.9279999999999999,
-      "disagreement_pp": 11.378248242394635,
-      "edge_pp": -16.773388892826237,
-      "final_probability": 0.5178691193983559,
-      "market_probability": 0.6856030083266182,
+      "confidence": 32.298528625395235,
+      "data_quality": 0.954,
+      "disagreement_pp": 11.249984098142212,
+      "edge_pp": -16.48687249047034,
+      "final_probability": 0.5160651272353745,
+      "market_probability": 0.6809338521400778,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -734,8 +734,8 @@
       "opponent_market": {
         "best_odd": 4.5,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.31439699167338164,
+        "bookmakers": 7,
+        "fair_probability": 0.31906614785992216,
         "median_odd": 3.5,
         "player_key": "202104"
       },
@@ -746,11 +746,11 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 1.9,
+        "best_odd": 1.95,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.6856030083266182,
-        "median_odd": 1.605,
+        "bookmakers": 7,
+        "fair_probability": 0.6809338521400778,
+        "median_odd": 1.64,
         "player_key": "105777"
       },
       "selected_player": {
@@ -760,7 +760,7 @@
       "signals": {
         "elo": 0.4321798326455014,
         "fatigue": 0.5,
-        "market": 0.6856030083266184,
+        "market": 0.6809338521400778,
         "ranking": 0.3460076045627376,
         "recent_form": 0.42898415807003887,
         "season_profile": 0.3289695945945945,
@@ -769,12 +769,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 31.649870341796486,
-      "data_quality": 0.8959999999999999,
-      "disagreement_pp": 8.95812965820351,
-      "edge_pp": -3.9006636594774937,
-      "final_probability": 0.49802599022113353,
-      "market_probability": 0.5370326268159085,
+      "confidence": 32.23740195362189,
+      "data_quality": 0.9219999999999999,
+      "disagreement_pp": 8.968598046378107,
+      "edge_pp": -3.986398358215293,
+      "final_probability": 0.4985975548793855,
+      "market_probability": 0.5384615384615384,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -800,11 +800,11 @@
         "name": "Lorenzo Sonego"
       },
       "opponent_market": {
-        "best_odd": 1.83,
+        "best_odd": 1.94,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.4629673731840914,
-        "median_odd": 1.74,
+        "bookmakers": 7,
+        "fair_probability": 0.4615384615384615,
+        "median_odd": 1.75,
         "player_key": "132283"
       },
       "rank": null,
@@ -816,8 +816,8 @@
       "selected_market": {
         "best_odd": 1.5,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.5370326268159085,
+        "bookmakers": 7,
+        "fair_probability": 0.5384615384615384,
         "median_odd": 1.5,
         "player_key": "209992"
       },
@@ -829,7 +829,7 @@
         "elo": 0.5128032473655808,
         "fatigue": 0.5,
         "h2h": 0.5015957446808511,
-        "market": 0.5370326268159085,
+        "market": 0.5384615384615384,
         "ranking": 0.28,
         "recent_form": 0.5729861519929653,
         "season_profile": 0.5373303167420815
@@ -837,12 +837,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 31.185162040701265,
-      "data_quality": 0.948,
-      "disagreement_pp": 10.618837959298736,
-      "edge_pp": -10.767544331869699,
-      "final_probability": 0.3817326895320588,
-      "market_probability": 0.4894081328507558,
+      "confidence": 31.89124658128784,
+      "data_quality": 0.974,
+      "disagreement_pp": 10.51075341871216,
+      "edge_pp": -10.4406514519514,
+      "final_probability": 0.37946445322242156,
+      "market_probability": 0.48387096774193555,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -870,8 +870,8 @@
       "opponent_market": {
         "best_odd": 2.5,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.5105918671492442,
+        "bookmakers": 7,
+        "fair_probability": 0.5161290322580645,
         "median_odd": 1.5,
         "player_key": "202058"
       },
@@ -882,11 +882,11 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 1.75,
+        "best_odd": 1.8,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.4894081328507558,
-        "median_odd": 1.5950000000000002,
+        "bookmakers": 7,
+        "fair_probability": 0.48387096774193555,
+        "median_odd": 1.6,
         "player_key": "123828"
       },
       "selected_player": {
@@ -896,7 +896,7 @@
       "signals": {
         "elo": 0.31031556811851513,
         "fatigue": 0.5,
-        "market": 0.4894081328507558,
+        "market": 0.4838709677419355,
         "ranking": 0.3757916959887403,
         "recent_form": 0.19999999999999996,
         "season_profile": 0.3046875
@@ -904,12 +904,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 30.873769531825985,
-      "data_quality": 0.978,
-      "disagreement_pp": 12.123578437331801,
-      "edge_pp": -1.9529510061285338,
-      "final_probability": 0.5050334796915779,
-      "market_probability": 0.5245629897528632,
+      "confidence": 31.0870705281598,
+      "data_quality": 1.0,
+      "disagreement_pp": 12.090419992335304,
+      "edge_pp": -1.4354127053113452,
+      "final_probability": 0.501774905204951,
+      "market_probability": 0.5161290322580645,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -937,22 +937,23 @@
       "opponent_market": {
         "best_odd": 1.8,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.47543701024713686,
-        "median_odd": 1.6549999999999998,
+        "bookmakers": 7,
+        "fair_probability": 0.48387096774193555,
+        "median_odd": 1.62,
         "player_key": "209976"
       },
       "rank": null,
       "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
         "PROBABILITY_TOO_LOW",
         "EDGE_TOO_LOW",
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 1.5,
+        "best_odd": 2.5,
         "bookmaker_odds": {},
-        "bookmakers": 6,
-        "fair_probability": 0.5245629897528632,
+        "bookmakers": 7,
+        "fair_probability": 0.5161290322580645,
         "median_odd": 1.5,
         "player_key": "111815"
       },
@@ -963,7 +964,7 @@
       "signals": {
         "elo": 0.5064493117199939,
         "fatigue": 0.5,
-        "market": 0.5245629897528632,
+        "market": 0.5161290322580645,
         "ranking": 0.6945525291828794,
         "recent_form": 0.24772651258601203,
         "season_profile": 0.4663636363636363,

@@ -2,14 +2,14 @@
   "date": "2026-08-13",
   "matches": [
     {
-      "bookmakers": 6,
-      "confidence": 62.393472884860834,
-      "data_quality": 0.948,
+      "bookmakers": 7,
+      "confidence": 62.737973872558186,
+      "data_quality": 0.974,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 10.618837959298736,
-      "edge_pp": 10.767544331869694,
-      "final_probability": 0.6182673104679411,
+      "disagreement_pp": 10.51075341871216,
+      "edge_pp": 10.440651451951389,
+      "final_probability": 0.6205355467775784,
       "match_id": "pub-bc4bf0b6233104082e0d",
       "odd": 2.5,
       "opponent": {
@@ -35,7 +35,7 @@
       "signals": {
         "elo": 0.6896844318814849,
         "fatigue": 0.5,
-        "market": 0.5105918671492442,
+        "market": 0.5161290322580645,
         "ranking": 0.6242083040112597,
         "recent_form": 0.8,
         "season_profile": 0.6953125
@@ -45,14 +45,14 @@
       "tournament": "ATP Cincinnati"
     },
     {
-      "bookmakers": 6,
-      "confidence": 48.784901465946376,
-      "data_quality": 0.9279999999999999,
+      "bookmakers": 7,
+      "confidence": 49.530286421428016,
+      "data_quality": 0.954,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 7.025932135821697,
-      "edge_pp": 4.507872618113529,
-      "final_probability": 0.5635266288916372,
+      "disagreement_pp": 7.045084240106024,
+      "edge_pp": 4.65016694133128,
+      "final_probability": 0.5626307016713773,
       "match_id": "pub-4e2d799dd85c92347ec8",
       "odd": 2.5,
       "opponent": {
@@ -78,7 +78,7 @@
       "signals": {
         "elo": 0.6191912995858441,
         "fatigue": 0.5,
-        "market": 0.5184479027105019,
+        "market": 0.5161290322580645,
         "ranking": 0.5301314000906208,
         "recent_form": 0.688405357331741,
         "season_profile": 0.5800000000000001,
@@ -89,14 +89,14 @@
       "tournament": "ATP Cincinnati"
     },
     {
-      "bookmakers": 6,
-      "confidence": 43.04394549773031,
-      "data_quality": 0.938,
+      "bookmakers": 7,
+      "confidence": 42.65799931421642,
+      "data_quality": 0.964,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 6.089856578709256,
-      "edge_pp": 2.4071892661757244,
-      "final_probability": 0.5322686139732327,
+      "disagreement_pp": 6.061434113851576,
+      "edge_pp": 1.5421907375038124,
+      "final_probability": 0.5377149010056114,
       "match_id": "pub-f65844b4bef7cf13e8cb",
       "odd": 2.5,
       "opponent": {
@@ -123,7 +123,7 @@
       "signals": {
         "elo": 0.5934314001421419,
         "fatigue": 0.5,
-        "market": 0.5081967213114754,
+        "market": 0.5222929936305732,
         "ranking": 0.4725050916496945,
         "recent_form": 0.6085353795401395,
         "season_profile": 0.5517857142857143,
@@ -134,16 +134,16 @@
       "tournament": "ATP Cincinnati"
     },
     {
-      "bookmakers": 6,
-      "confidence": 38.86846590674263,
-      "data_quality": 0.8959999999999999,
+      "bookmakers": 7,
+      "confidence": 39.55316351047088,
+      "data_quality": 0.9219999999999999,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 8.95812965820351,
-      "edge_pp": 3.900663659477499,
-      "final_probability": 0.5019740097788664,
+      "disagreement_pp": 8.968598046378107,
+      "edge_pp": 3.9863983582152986,
+      "final_probability": 0.5014024451206145,
       "match_id": "pub-c2d7a987b7eb9cd7c048",
-      "odd": 1.83,
+      "odd": 1.94,
       "opponent": {
         "key": "209992",
         "name": "Juncheng Shang"
@@ -167,7 +167,7 @@
         "elo": 0.4871967526344192,
         "fatigue": 0.5,
         "h2h": 0.4984042553191489,
-        "market": 0.46296737318409154,
+        "market": 0.46153846153846156,
         "ranking": 0.72,
         "recent_form": 0.4270138480070347,
         "season_profile": 0.46266968325791846
@@ -177,14 +177,14 @@
       "tournament": "ATP Cincinnati"
     },
     {
-      "bookmakers": 6,
-      "confidence": 32.146224564593126,
-      "data_quality": 0.9079999999999999,
+      "bookmakers": 7,
+      "confidence": 32.40096004974904,
+      "data_quality": 0.9339999999999999,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 10.398471430460067,
-      "edge_pp": -1.3168983445694393,
-      "final_probability": 0.516606959950532,
+      "disagreement_pp": 10.372685598398427,
+      "edge_pp": -0.7850316681464631,
+      "final_probability": 0.5129164564814747,
       "match_id": "pub-536899ad90562f9bd39b",
       "odd": 1.5,
       "opponent": {
@@ -210,7 +210,7 @@
       "signals": {
         "elo": 0.4545040466427936,
         "fatigue": 0.5,
-        "market": 0.5297759433962264,
+        "market": 0.5207667731629393,
         "ranking": 0.72,
         "recent_form": 0.3917164667566588,
         "season_profile": 0.453125
@@ -220,16 +220,16 @@
       "tournament": "ATP Cincinnati"
     },
     {
-      "bookmakers": 6,
-      "confidence": 31.75266369744095,
-      "data_quality": 0.9279999999999999,
+      "bookmakers": 7,
+      "confidence": 32.298528625395235,
+      "data_quality": 0.954,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 11.378248242394635,
-      "edge_pp": -16.773388892826237,
-      "final_probability": 0.5178691193983559,
+      "disagreement_pp": 11.249984098142212,
+      "edge_pp": -16.48687249047034,
+      "final_probability": 0.5160651272353745,
       "match_id": "pub-b669dfe493bd9c978dcf",
-      "odd": 1.9,
+      "odd": 1.95,
       "opponent": {
         "key": "202104",
         "name": "Sebastian Baez"
@@ -253,7 +253,7 @@
       "signals": {
         "elo": 0.4321798326455014,
         "fatigue": 0.5,
-        "market": 0.6856030083266184,
+        "market": 0.6809338521400778,
         "ranking": 0.3460076045627376,
         "recent_form": 0.42898415807003887,
         "season_profile": 0.3289695945945945,
@@ -264,16 +264,16 @@
       "tournament": "ATP Cincinnati"
     },
     {
-      "bookmakers": 6,
-      "confidence": 30.873769531825985,
-      "data_quality": 0.978,
+      "bookmakers": 7,
+      "confidence": 31.0870705281598,
+      "data_quality": 1.0,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 12.123578437331801,
-      "edge_pp": -1.9529510061285338,
-      "final_probability": 0.5050334796915779,
+      "disagreement_pp": 12.090419992335304,
+      "edge_pp": -1.4354127053113452,
+      "final_probability": 0.501774905204951,
       "match_id": "pub-d2729923e8f3bdc70788",
-      "odd": 1.5,
+      "odd": 2.5,
       "opponent": {
         "key": "209976",
         "name": "Dino Prizmic"
@@ -284,6 +284,7 @@
       },
       "rank": null,
       "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
         "PROBABILITY_TOO_LOW",
         "EDGE_TOO_LOW",
         "CONFIDENCE_TOO_LOW"
@@ -297,7 +298,7 @@
       "signals": {
         "elo": 0.5064493117199939,
         "fatigue": 0.5,
-        "market": 0.5245629897528632,
+        "market": 0.5161290322580645,
         "ranking": 0.6945525291828794,
         "recent_form": 0.24772651258601203,
         "season_profile": 0.4663636363636363,
@@ -311,5 +312,5 @@
   "model_version": "champion-v0.3.0-no-api",
   "source": "TennisExplorer detail",
   "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-12T11:17:50.786600+00:00"
+  "updated_at": "2026-08-12T13:23:45.293179+00:00"
 }
