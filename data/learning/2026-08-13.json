@@ -134,13 +134,13 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 53.750751770003724,
+      "confidence": 53.60491892992362,
       "data_quality": 0.9820000000000002,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 7.640530582251418,
-      "edge_pp": 8.105214727751447,
-      "final_probability": 0.5421589584230253,
+      "disagreement_pp": 7.59638994211938,
+      "edge_pp": 7.939466053740841,
+      "final_probability": 0.5432426997530947,
       "match_id": "pub-4e2d799dd85c92347ec8",
       "odd": 2.5,
       "opponent": {
@@ -166,7 +166,7 @@
       "signals": {
         "elo": 0.6191912995858441,
         "fatigue": 0.5,
-        "market": 0.46110681114551083,
+        "market": 0.4638480392156863,
         "recent_form": 0.688405357331741,
         "season_profile": 0.5375,
         "serve": 0.47073165683705287,
@@ -394,6 +394,50 @@
       "tournament": "ATP Cincinnati"
     },
     {
+      "bookmakers": 8,
+      "confidence": 47.932291080478144,
+      "data_quality": 0.8,
+      "date": "2026-08-13",
+      "decision": "REJECTED",
+      "disagreement_pp": 13.245762017001036,
+      "edge_pp": -19.10947375892369,
+      "final_probability": 0.7277805309747918,
+      "match_id": "pub-e79518c4b1e13f6213ad",
+      "odd": 2.8,
+      "opponent": {
+        "key": "208852",
+        "name": "Stefanos Sakellaridis"
+      },
+      "predicted_player": {
+        "key": "208169",
+        "name": "Titouan Droguet"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "MODEL_DISAGREEMENT"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.5684690921966962,
+        "fatigue": 0.5,
+        "market": 0.9188752685640286,
+        "recent_form": 0.6065260526074134,
+        "season_profile": 0.6285714285714286,
+        "surface_elo": 0.6002392936344529
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    },
+    {
       "bookmakers": 10,
       "confidence": 47.89427097585632,
       "data_quality": 1.0,
@@ -518,49 +562,6 @@
         "recent_form": 0.5453684910635344,
         "season_profile": 0.5625,
         "surface_elo": 0.5549428480749672
-      },
-      "surface": "Hard",
-      "time": "",
-      "tournament": "ATP Cincinnati"
-    },
-    {
-      "bookmakers": 9,
-      "confidence": 45.97683252658867,
-      "data_quality": 0.8260000000000001,
-      "date": "2026-08-13",
-      "decision": "REJECTED",
-      "disagreement_pp": 5.159486019421026,
-      "edge_pp": -4.401605408362929,
-      "final_probability": 0.621383185460097,
-      "match_id": "pub-e79518c4b1e13f6213ad",
-      "odd": 1.86,
-      "opponent": {
-        "key": "208852",
-        "name": "Stefanos Sakellaridis"
-      },
-      "predicted_player": {
-        "key": "208169",
-        "name": "Titouan Droguet"
-      },
-      "rank": null,
-      "reject_reasons": [
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
-      },
-      "signals": {
-        "elo": 0.5684690921966962,
-        "fatigue": 0.5,
-        "market": 0.6653992395437263,
-        "recent_form": 0.6065260526074134,
-        "season_profile": 0.6285714285714286,
-        "surface_elo": 0.6002392936344529
       },
       "surface": "Hard",
       "time": "",
@@ -828,15 +829,15 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 42.03963779436168,
+      "confidence": 41.97080374765194,
       "data_quality": 0.996,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 5.6571771175209555,
-      "edge_pp": -0.14087508492145462,
-      "final_probability": 0.5478881491188263,
+      "disagreement_pp": 5.659677466712338,
+      "edge_pp": -0.039423547540484716,
+      "final_probability": 0.5472248121436428,
       "match_id": "pub-067e6c588a42c62bdffe",
-      "odd": 1.91,
+      "odd": 1.95,
       "opponent": {
         "key": "208363",
         "name": "Mariano Navone"
@@ -860,7 +861,7 @@
       "signals": {
         "elo": 0.48668550060269167,
         "fatigue": 0.5,
-        "market": 0.549296899968041,
+        "market": 0.5476190476190477,
         "recent_form": 0.5229633907310953,
         "season_profile": 0.625,
         "serve": 0.5490453376714068,
@@ -1089,13 +1090,13 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 38.94946774549986,
+      "confidence": 38.712297529453686,
       "data_quality": 0.9080000000000001,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 3.8723002406301354,
-      "edge_pp": -1.9791739676217723,
-      "final_probability": 0.5193776798612999,
+      "disagreement_pp": 3.7850604997177477,
+      "edge_pp": -1.51164197082857,
+      "final_probability": 0.5161335802917143,
       "match_id": "pub-c2d7a987b7eb9cd7c048",
       "odd": 2.5,
       "opponent": {
@@ -1123,7 +1124,7 @@
         "elo": 0.5128032473655808,
         "fatigue": 0.5,
         "h2h": 0.5015957446808511,
-        "market": 0.5391694195375176,
+        "market": 0.53125,
         "recent_form": 0.5729861519929653,
         "season_profile": 0.47115384615384615,
         "surface_elo": 0.446054613068624
@@ -1487,5 +1488,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-12T21:23:34.650389+00:00"
+  "updated_at": "2026-08-12T22:14:36.116199+00:00"
 }
