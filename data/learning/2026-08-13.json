@@ -41,7 +41,7 @@
         "surface_elo": 0.5503760623404794
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -85,7 +85,7 @@
         "surface_elo": 0.6768065357547037
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -129,7 +129,7 @@
         "surface_elo": 0.6879153600642735
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -173,7 +173,7 @@
         "surface_elo": 0.5601500996213253
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -217,7 +217,7 @@
         "surface_elo": 0.48055191456057983
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -259,7 +259,7 @@
         "surface_elo": 0.5507225401981928
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -303,7 +303,7 @@
         "surface_elo": 0.5820120402619533
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -347,7 +347,7 @@
         "surface_elo": 0.5560325719149031
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -391,7 +391,7 @@
         "surface_elo": 0.5462424259587758
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -436,18 +436,18 @@
         "surface_elo": 0.5513263208709677
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
       "bookmakers": 10,
-      "confidence": 44.05911748279397,
+      "confidence": 44.12713965118385,
       "data_quality": 0.992,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 8.380841850949295,
-      "edge_pp": -7.813670603886669,
-      "final_probability": 0.5962395933374327,
+      "disagreement_pp": 8.4419945266812,
+      "edge_pp": -8.011232130190571,
+      "final_probability": 0.5975313417786505,
       "match_id": "pub-5b18867644c80565a6d2",
       "odd": 1.83,
       "opponent": {
@@ -473,27 +473,27 @@
       "signals": {
         "elo": 0.5377187413877358,
         "fatigue": 0.5,
-        "market": 0.6743762993762994,
+        "market": 0.6776436630805563,
         "recent_form": 0.6280874491523915,
         "season_profile": 0.5119047619047619,
         "serve": 0.6656582951761616,
         "surface_elo": 0.44128414816370265
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
       "bookmakers": 10,
-      "confidence": 43.59077746183837,
+      "confidence": 43.56702885585466,
       "data_quality": 1.0,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 7.0333760502660905,
-      "edge_pp": -9.685779140979411,
-      "final_probability": 0.5762415351210446,
+      "disagreement_pp": 6.979919575333696,
+      "edge_pp": -9.567700781931233,
+      "final_probability": 0.5754694843118835,
       "match_id": "pub-214a246b5097c314790b",
-      "odd": 1.81,
+      "odd": 1.76,
       "opponent": {
         "key": "105916",
         "name": "Marton Fucsovics"
@@ -517,14 +517,14 @@
       "signals": {
         "elo": 0.5162524081063125,
         "fatigue": 0.5,
-        "market": 0.6730993265308387,
+        "market": 0.6711464921311958,
         "recent_form": 0.5571839577180102,
         "season_profile": 0.5,
         "serve": 0.5840755219699645,
         "surface_elo": 0.43541295692051474
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -568,7 +568,7 @@
         "surface_elo": 0.648371561758385
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -612,7 +612,7 @@
         "surface_elo": 0.5977777104329145
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -655,7 +655,7 @@
         "surface_elo": 0.5356045431320506
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -700,7 +700,7 @@
         "surface_elo": 0.446054613068624
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -744,7 +744,7 @@
         "surface_elo": 0.38264633371874146
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -788,7 +788,7 @@
         "surface_elo": 0.5590724250255148
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -834,7 +834,7 @@
         "surface_elo": 0.3741803734872249
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     },
     {
@@ -878,12 +878,12 @@
         "surface_elo": 0.39625193193005936
       },
       "surface": "Hard",
-      "time": "12:00",
+      "time": "",
       "tournament": "ATP Cincinnati"
     }
   ],
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-12T16:51:58.507317+00:00"
+  "updated_at": "2026-08-12T17:28:43.153443+00:00"
 }
