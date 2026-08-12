@@ -10,6 +10,7 @@ on:
       - 'dashboard/**'
       - 'data/history/**'
       - 'data/learning/**'
+      - 'data/sequences/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -35,15 +36,16 @@ jobs:
           ref: main
       - name: Stage InvestBet dashboard data
         run: |
-          mkdir -p dashboard/history dashboard/learning
+          mkdir -p dashboard/history dashboard/learning dashboard/sequences
           if compgen -G "data/history/*.json" > /dev/null; then
             cp data/history/*.json dashboard/history/
           fi
           if compgen -G "data/learning/????-??-??.json" > /dev/null; then
             cp data/learning/????-??-??.json dashboard/learning/
           fi
-          # v2 is the canonical production dashboard. Keeping the source file separate
-          # lets the previous panel remain recoverable while Pages serves the new UI.
+          if compgen -G "data/sequences/????-??-??.json" > /dev/null; then
+            cp data/sequences/????-??-??.json dashboard/sequences/
+          fi
           cp dashboard/v2.html dashboard/index.html
           python - <<'PY'
           import json
@@ -70,6 +72,23 @@ jobs:
               })
           index = {'updated_at': datetime.now(timezone.utc).isoformat(), 'dates': out}
           Path('dashboard/history/index.json').write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding='utf-8')
+
+          sequences = []
+          for path in sorted(Path('data/sequences').glob('????-??-??.json'), reverse=True):
+              try:
+                  row = json.loads(path.read_text(encoding='utf-8'))
+              except Exception:
+                  continue
+              sequences.append({
+                  'date': row.get('date', path.stem),
+                  'created_at': row.get('created_at'),
+                  'updated_at': row.get('updated_at'),
+                  'summary': row.get('summary', {}),
+              })
+          Path('dashboard/sequences/index.json').write_text(
+              json.dumps({'updated_at': datetime.now(timezone.utc).isoformat(), 'dates': sequences}, ensure_ascii=False, indent=2),
+              encoding='utf-8'
+          )
           PY
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
