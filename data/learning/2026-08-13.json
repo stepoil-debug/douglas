@@ -90,13 +90,13 @@
     },
     {
       "bookmakers": 7,
-      "confidence": 42.65799931421642,
+      "confidence": 42.549758314292454,
       "data_quality": 0.964,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 6.061434113851576,
-      "edge_pp": 1.5421907375038124,
-      "final_probability": 0.5377149010056114,
+      "disagreement_pp": 6.060760673650922,
+      "edge_pp": 1.44913093106821,
+      "final_probability": 0.5383008331202059,
       "match_id": "pub-f65844b4bef7cf13e8cb",
       "odd": 2.5,
       "opponent": {
@@ -123,7 +123,7 @@
       "signals": {
         "elo": 0.5934314001421419,
         "fatigue": 0.5,
-        "market": 0.5222929936305732,
+        "market": 0.5238095238095238,
         "ranking": 0.4725050916496945,
         "recent_form": 0.6085353795401395,
         "season_profile": 0.5517857142857143,
@@ -143,7 +143,7 @@
       "edge_pp": 3.9863983582152986,
       "final_probability": 0.5014024451206145,
       "match_id": "pub-c2d7a987b7eb9cd7c048",
-      "odd": 1.94,
+      "odd": 1.83,
       "opponent": {
         "key": "209992",
         "name": "Juncheng Shang"
@@ -178,13 +178,13 @@
     },
     {
       "bookmakers": 7,
-      "confidence": 32.40096004974904,
+      "confidence": 32.51810126694461,
       "data_quality": 0.9339999999999999,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 10.372685598398427,
-      "edge_pp": -0.7850316681464631,
-      "final_probability": 0.5129164564814747,
+      "disagreement_pp": 10.380187178773784,
+      "edge_pp": -0.9646639352339892,
+      "final_probability": 0.5141628844571839,
       "match_id": "pub-536899ad90562f9bd39b",
       "odd": 1.5,
       "opponent": {
@@ -210,7 +210,7 @@
       "signals": {
         "elo": 0.4545040466427936,
         "fatigue": 0.5,
-        "market": 0.5207667731629393,
+        "market": 0.5238095238095238,
         "ranking": 0.72,
         "recent_form": 0.3917164667566588,
         "season_profile": 0.453125
@@ -262,55 +262,10 @@
       "surface": null,
       "time": "12:00",
       "tournament": "ATP Cincinnati"
-    },
-    {
-      "bookmakers": 7,
-      "confidence": 31.0870705281598,
-      "data_quality": 1.0,
-      "date": "2026-08-13",
-      "decision": "REJECTED",
-      "disagreement_pp": 12.090419992335304,
-      "edge_pp": -1.4354127053113452,
-      "final_probability": 0.501774905204951,
-      "match_id": "pub-d2729923e8f3bdc70788",
-      "odd": 2.5,
-      "opponent": {
-        "key": "209976",
-        "name": "Dino Prizmic"
-      },
-      "predicted_player": {
-        "key": "111815",
-        "name": "Cameron Norrie"
-      },
-      "rank": null,
-      "reject_reasons": [
-        "ODD_OUT_OF_RANGE",
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
-      },
-      "signals": {
-        "elo": 0.5064493117199939,
-        "fatigue": 0.5,
-        "market": 0.5161290322580645,
-        "ranking": 0.6945525291828794,
-        "recent_form": 0.24772651258601203,
-        "season_profile": 0.4663636363636363,
-        "serve": 0.47374820652502625
-      },
-      "surface": null,
-      "time": "12:00",
-      "tournament": "ATP Cincinnati"
     }
   ],
   "model_version": "champion-v0.3.0-no-api",
-  "source": "TennisExplorer detail",
+  "source": "TennisExplorer schedule",
   "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-12T13:23:45.293179+00:00"
+  "updated_at": "2026-08-12T14:38:21.059460+00:00"
 }

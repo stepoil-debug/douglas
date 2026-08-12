@@ -106,7 +106,7 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434678+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264238+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032290+00:00",
       "market": {
         "away": [
           {
@@ -183,7 +183,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264242+00:00",
+        "updated_at": "2026-08-12T14:38:21.032293+00:00",
         "winner": null
       },
       "snapshots": [
@@ -677,7 +677,7 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434761+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264349+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032409+00:00",
       "market": {
         "away": [
           {
@@ -709,7 +709,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264352+00:00",
+        "updated_at": "2026-08-12T14:38:21.032412+00:00",
         "winner": null
       },
       "snapshots": [
@@ -789,12 +789,12 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434691+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264254+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032308+00:00",
       "market": {
         "away": [
           {
             "bookmaker": "TennisExplorer avg",
-            "odd": 1.31
+            "odd": 1.3
           }
         ],
         "bookmaker_count": 1,
@@ -804,7 +804,7 @@
         "home": [
           {
             "bookmaker": "TennisExplorer avg",
-            "odd": 3.37
+            "odd": 3.36
           }
         ]
       },
@@ -821,7 +821,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264257+00:00",
+        "updated_at": "2026-08-12T14:38:21.032311+00:00",
         "winner": null
       },
       "snapshots": [
@@ -887,6 +887,28 @@
               {
                 "bookmaker": "TennisExplorer avg",
                 "odd": 3.37
+              }
+            ]
+          }
+        },
+        {
+          "analyses": [],
+          "captured_at": "2026-08-12T14:38:21.032313+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 1.3
+              }
+            ],
+            "bookmaker_count": 1,
+            "bookmakers": [
+              "TennisExplorer avg"
+            ],
+            "home": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 3.36
               }
             ]
           }
@@ -1001,12 +1023,12 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434605+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264140+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032181+00:00",
       "market": {
         "away": [
           {
             "bookmaker": "TennisExplorer avg",
-            "odd": 1.41
+            "odd": 1.4
           }
         ],
         "bookmaker_count": 1,
@@ -1016,7 +1038,7 @@
         "home": [
           {
             "bookmaker": "TennisExplorer avg",
-            "odd": 2.81
+            "odd": 2.91
           }
         ]
       },
@@ -1033,7 +1055,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264145+00:00",
+        "updated_at": "2026-08-12T14:38:21.032186+00:00",
         "winner": null
       },
       "snapshots": [
@@ -1438,6 +1460,128 @@
               }
             ]
           }
+        },
+        {
+          "analyses": [
+            {
+              "bookmaker_names": [
+                "bet365",
+                "Betfair",
+                "Betsson",
+                "BetVictor",
+                "Interwetten"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 2.2,
+                "Betfair": 2.08,
+                "Betsson": 2.22,
+                "Interwetten": 2.2,
+                "bet365": 2.2
+              },
+              "bookmakers": 5,
+              "confidence": 42.71491608687541,
+              "data_quality": 0.9319999999999999,
+              "disagreement_pp": 2.852355424651796,
+              "edge_pp": 2.2951508397373366,
+              "final_probability": 0.45152293696880197,
+              "market_probability": 0.4285714285714286,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 2.22,
+              "opponent": {
+                "key": "209279",
+                "name": "Terence Atmane"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "ODD_OUT_OF_RANGE",
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "105916",
+                "name": "Marton Fucsovics"
+              },
+              "signals": {
+                "elo": 0.4837475918936876,
+                "fatigue": 0.5,
+                "market": 0.4285714285714286,
+                "ranking": 0.4780189204229271,
+                "recent_form": 0.4428160422819898,
+                "season_profile": 0.4572713643178411,
+                "serve": 0.41592447803003546
+              },
+              "status": "REJECTED"
+            },
+            {
+              "bookmaker_names": [
+                "bet365",
+                "Betfair",
+                "Betsson",
+                "BetVictor",
+                "Interwetten"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.62,
+                "Betfair": 1.03,
+                "Betsson": 1.67,
+                "Interwetten": 1.65,
+                "bet365": 1.67
+              },
+              "bookmakers": 5,
+              "confidence": 43.43135087846801,
+              "data_quality": 0.9319999999999999,
+              "disagreement_pp": 2.852355424651794,
+              "edge_pp": -2.2951508397373477,
+              "final_probability": 0.548477063031198,
+              "market_probability": 0.5714285714285715,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 1.67,
+              "opponent": {
+                "key": "105916",
+                "name": "Marton Fucsovics"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "209279",
+                "name": "Terence Atmane"
+              },
+              "signals": {
+                "elo": 0.5162524081063125,
+                "fatigue": 0.5,
+                "market": 0.5714285714285714,
+                "ranking": 0.521981079577073,
+                "recent_form": 0.5571839577180102,
+                "season_profile": 0.5427286356821589,
+                "serve": 0.5840755219699645
+              },
+              "status": "REJECTED"
+            }
+          ],
+          "captured_at": "2026-08-12T14:38:21.032189+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 1.4
+              }
+            ],
+            "bookmaker_count": 1,
+            "bookmakers": [
+              "TennisExplorer avg"
+            ],
+            "home": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 2.91
+              }
+            ]
+          }
         }
       ],
       "surface": null,
@@ -1549,12 +1693,12 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434778+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264366+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032425+00:00",
       "market": {
         "away": [
           {
             "bookmaker": "bet-at-home",
-            "odd": 2.45
+            "odd": 2.5
           },
           {
             "bookmaker": "bet365",
@@ -1626,7 +1770,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264369+00:00",
+        "updated_at": "2026-08-12T14:38:21.032428+00:00",
         "winner": null
       },
       "snapshots": [
@@ -2112,6 +2256,173 @@
               }
             ]
           }
+        },
+        {
+          "analyses": [
+            {
+              "bookmaker_names": [
+                "bet365",
+                "Betfair",
+                "Betsson",
+                "BetVictor",
+                "Interwetten"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.95,
+                "Betfair": 1.04,
+                "Betsson": 2.01,
+                "Interwetten": 2.0,
+                "bet365": 2.0
+              },
+              "bookmakers": 5,
+              "confidence": 35.963893301950925,
+              "data_quality": 0.9219999999999999,
+              "disagreement_pp": 7.266210695304788,
+              "edge_pp": 1.1245022206976207,
+              "final_probability": 0.48492923273329197,
+              "market_probability": 0.47368421052631576,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 2.01,
+              "opponent": {
+                "key": "105227",
+                "name": "Marin Cilic"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "ODD_OUT_OF_RANGE",
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "210017",
+                "name": "Daniel Merida Aguilar"
+              },
+              "signals": {
+                "elo": 0.5390043472769542,
+                "fatigue": 0.5,
+                "market": 0.47368421052631576,
+                "ranking": 0.4079718640093787,
+                "recent_form": 0.5571125745007511,
+                "season_profile": 0.5220588235294118,
+                "serve": 0.3378562645598687
+              },
+              "status": "REJECTED"
+            },
+            {
+              "bookmaker_names": [
+                "bet365",
+                "Betfair",
+                "Betsson",
+                "BetVictor",
+                "Interwetten"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.75,
+                "Betfair": 1.04,
+                "Betsson": 1.81,
+                "Interwetten": 1.8,
+                "bet365": 1.8
+              },
+              "bookmakers": 5,
+              "confidence": 35.44686603136602,
+              "data_quality": 0.9219999999999999,
+              "disagreement_pp": 7.266210695304788,
+              "edge_pp": -1.1245022206976096,
+              "final_probability": 0.5150707672667081,
+              "market_probability": 0.5263157894736842,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 1.81,
+              "opponent": {
+                "key": "210017",
+                "name": "Daniel Merida Aguilar"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "105227",
+                "name": "Marin Cilic"
+              },
+              "signals": {
+                "elo": 0.46099565272304577,
+                "fatigue": 0.5,
+                "market": 0.5263157894736843,
+                "ranking": 0.5920281359906213,
+                "recent_form": 0.44288742549924887,
+                "season_profile": 0.4779411764705882,
+                "serve": 0.6621437354401313
+              },
+              "status": "REJECTED"
+            }
+          ],
+          "captured_at": "2026-08-12T14:38:21.032431+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 2.5
+              },
+              {
+                "bookmaker": "bet365",
+                "odd": 1.83
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 2.19
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 1.91
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 2.1
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 1.96
+              }
+            ],
+            "bookmaker_count": 6,
+            "bookmakers": [
+              "bet-at-home",
+              "bet365",
+              "Betsson",
+              "BetVictor",
+              "Betway",
+              "Unibet"
+            ],
+            "home": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 27.5
+              },
+              {
+                "bookmaker": "bet365",
+                "odd": 23.5
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 2.5
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 23.5
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 25.5
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 24.5
+              }
+            ]
+          }
         }
       ],
       "surface": null,
@@ -2222,7 +2533,7 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434661+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264217+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032268+00:00",
       "market": {
         "away": [
           {
@@ -2299,7 +2610,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264221+00:00",
+        "updated_at": "2026-08-12T14:38:21.032272+00:00",
         "winner": null
       },
       "snapshots": [
@@ -2900,7 +3211,7 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434643+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264193+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032238+00:00",
       "market": {
         "away": [
           {
@@ -2986,7 +3297,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264199+00:00",
+        "updated_at": "2026-08-12T14:38:21.032246+00:00",
         "winner": null
       },
       "snapshots": [
@@ -3514,12 +3825,12 @@
             "bet365": 1.5
           },
           "bookmakers": 7,
-          "confidence": 32.40096004974904,
+          "confidence": 32.51810126694461,
           "data_quality": 0.9339999999999999,
-          "disagreement_pp": 10.372685598398427,
-          "edge_pp": -0.7850316681464631,
-          "final_probability": 0.5129164564814747,
-          "market_probability": 0.5207667731629393,
+          "disagreement_pp": 10.380187178773784,
+          "edge_pp": -0.9646639352339892,
+          "final_probability": 0.5141628844571839,
+          "market_probability": 0.5238095238095238,
           "model_version": "champion-v0.3.0-no-api",
           "odd": 1.5,
           "opponent": {
@@ -3539,7 +3850,7 @@
           "signals": {
             "elo": 0.4545040466427936,
             "fatigue": 0.5,
-            "market": 0.5207667731629393,
+            "market": 0.5238095238095238,
             "ranking": 0.72,
             "recent_form": 0.3917164667566588,
             "season_profile": 0.453125
@@ -3558,20 +3869,20 @@
           ],
           "bookmaker_odds": {
             "BetVictor": 1.8,
-            "Betsson": 1.63,
-            "Betway": 1.6,
+            "Betsson": 1.65,
+            "Betway": 1.65,
             "Interwetten": 1.65,
             "Unibet": 1.62,
-            "bet-at-home": 1.6,
+            "bet-at-home": 1.65,
             "bet365": 1.8
           },
           "bookmakers": 7,
-          "confidence": 32.5223714042652,
+          "confidence": 32.838207904647376,
           "data_quality": 0.9339999999999999,
-          "disagreement_pp": 10.372685598398425,
-          "edge_pp": 0.7850316681464575,
-          "final_probability": 0.48708354351852534,
-          "market_probability": 0.47923322683706077,
+          "disagreement_pp": 10.380187178773784,
+          "edge_pp": 0.9646639352339781,
+          "final_probability": 0.485837115542816,
+          "market_probability": 0.4761904761904762,
           "model_version": "champion-v0.3.0-no-api",
           "odd": 1.8,
           "opponent": {
@@ -3591,7 +3902,7 @@
           "signals": {
             "elo": 0.5454959533572064,
             "fatigue": 0.5,
-            "market": 0.4792332268370607,
+            "market": 0.47619047619047616,
             "ranking": 0.28,
             "recent_form": 0.6082835332433412,
             "season_profile": 0.546875
@@ -3602,12 +3913,12 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434827+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264428+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032487+00:00",
       "market": {
         "away": [
           {
             "bookmaker": "bet-at-home",
-            "odd": 1.6
+            "odd": 1.65
           },
           {
             "bookmaker": "bet365",
@@ -3615,7 +3926,7 @@
           },
           {
             "bookmaker": "Betsson",
-            "odd": 1.63
+            "odd": 1.65
           },
           {
             "bookmaker": "BetVictor",
@@ -3623,7 +3934,7 @@
           },
           {
             "bookmaker": "Betway",
-            "odd": 1.6
+            "odd": 1.65
           },
           {
             "bookmaker": "Interwetten",
@@ -3688,7 +3999,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264433+00:00",
+        "updated_at": "2026-08-12T14:38:21.032492+00:00",
         "winner": null
       },
       "snapshots": [
@@ -4182,6 +4493,187 @@
               }
             ]
           }
+        },
+        {
+          "analyses": [
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "bet365",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "Interwetten",
+                "Unibet"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.5,
+                "Betsson": 1.5,
+                "Betway": 1.5,
+                "Interwetten": 1.5,
+                "Unibet": 1.5,
+                "bet-at-home": 1.5,
+                "bet365": 1.5
+              },
+              "bookmakers": 7,
+              "confidence": 32.51810126694461,
+              "data_quality": 0.9339999999999999,
+              "disagreement_pp": 10.380187178773784,
+              "edge_pp": -0.9646639352339892,
+              "final_probability": 0.5141628844571839,
+              "market_probability": 0.5238095238095238,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 1.5,
+              "opponent": {
+                "key": "106423",
+                "name": "Thanasi Kokkinakis"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "132686",
+                "name": "Nuno Borges"
+              },
+              "signals": {
+                "elo": 0.4545040466427936,
+                "fatigue": 0.5,
+                "market": 0.5238095238095238,
+                "ranking": 0.72,
+                "recent_form": 0.3917164667566588,
+                "season_profile": 0.453125
+              },
+              "status": "REJECTED"
+            },
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "bet365",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "Interwetten",
+                "Unibet"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.8,
+                "Betsson": 1.65,
+                "Betway": 1.65,
+                "Interwetten": 1.65,
+                "Unibet": 1.62,
+                "bet-at-home": 1.65,
+                "bet365": 1.8
+              },
+              "bookmakers": 7,
+              "confidence": 32.838207904647376,
+              "data_quality": 0.9339999999999999,
+              "disagreement_pp": 10.380187178773784,
+              "edge_pp": 0.9646639352339781,
+              "final_probability": 0.485837115542816,
+              "market_probability": 0.4761904761904762,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 1.8,
+              "opponent": {
+                "key": "132686",
+                "name": "Nuno Borges"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "106423",
+                "name": "Thanasi Kokkinakis"
+              },
+              "signals": {
+                "elo": 0.5454959533572064,
+                "fatigue": 0.5,
+                "market": 0.47619047619047616,
+                "ranking": 0.28,
+                "recent_form": 0.6082835332433412,
+                "season_profile": 0.546875
+              },
+              "status": "REJECTED"
+            }
+          ],
+          "captured_at": "2026-08-12T14:38:21.032494+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 1.65
+              },
+              {
+                "bookmaker": "bet365",
+                "odd": 1.8
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 1.65
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 1.8
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 1.65
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 1.65
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 1.62
+              }
+            ],
+            "bookmaker_count": 7,
+            "bookmakers": [
+              "bet-at-home",
+              "bet365",
+              "Betsson",
+              "BetVictor",
+              "Betway",
+              "Interwetten",
+              "Unibet"
+            ],
+            "home": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "bet365",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 1.5
+              }
+            ]
+          }
         }
       ],
       "surface": null,
@@ -4193,7 +4685,7 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434623+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264163+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032203+00:00",
       "market": {
         "away": [
           {
@@ -4208,7 +4700,7 @@
         "home": [
           {
             "bookmaker": "TennisExplorer avg",
-            "odd": 3.04
+            "odd": 3.07
           }
         ]
       },
@@ -4225,7 +4717,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264167+00:00",
+        "updated_at": "2026-08-12T14:38:21.032207+00:00",
         "winner": null
       },
       "snapshots": [
@@ -4291,6 +4783,28 @@
               {
                 "bookmaker": "TennisExplorer avg",
                 "odd": 3.04
+              }
+            ]
+          }
+        },
+        {
+          "analyses": [],
+          "captured_at": "2026-08-12T14:38:21.032210+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 1.37
+              }
+            ],
+            "bookmaker_count": 1,
+            "bookmakers": [
+              "TennisExplorer avg"
+            ],
+            "home": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 3.07
               }
             ]
           }
@@ -4405,7 +4919,7 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434811+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264404+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032464+00:00",
       "market": {
         "away": [
           {
@@ -4482,7 +4996,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264408+00:00",
+        "updated_at": "2026-08-12T14:38:21.032467+00:00",
         "winner": null
       },
       "snapshots": [
@@ -5077,7 +5591,7 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434794+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264386+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032444+00:00",
       "market": {
         "away": [
           {
@@ -5154,7 +5668,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264389+00:00",
+        "updated_at": "2026-08-12T14:38:21.032448+00:00",
         "winner": null
       },
       "snapshots": [
@@ -5801,12 +6315,12 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434838+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264442+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032502+00:00",
       "market": {
         "away": [
           {
             "bookmaker": "TennisExplorer avg",
-            "odd": 1.37
+            "odd": 1.38
           }
         ],
         "bookmaker_count": 1,
@@ -5816,7 +6330,7 @@
         "home": [
           {
             "bookmaker": "TennisExplorer avg",
-            "odd": 2.98
+            "odd": 3.01
           }
         ]
       },
@@ -5833,7 +6347,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264445+00:00",
+        "updated_at": "2026-08-12T14:38:21.032504+00:00",
         "winner": null
       },
       "snapshots": [
@@ -5899,6 +6413,28 @@
               {
                 "bookmaker": "TennisExplorer avg",
                 "odd": 2.98
+              }
+            ]
+          }
+        },
+        {
+          "analyses": [],
+          "captured_at": "2026-08-12T14:38:21.032506+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 1.38
+              }
+            ],
+            "bookmaker_count": 1,
+            "bookmakers": [
+              "TennisExplorer avg"
+            ],
+            "home": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 3.01
               }
             ]
           }
@@ -6012,7 +6548,7 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434731+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264310+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032370+00:00",
       "market": {
         "away": [
           {
@@ -6089,7 +6625,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264313+00:00",
+        "updated_at": "2026-08-12T14:38:21.032373+00:00",
         "winner": null
       },
       "snapshots": [
@@ -6596,7 +7132,7 @@
             "Betway": 1.33,
             "Interwetten": 1.65,
             "Unibet": 1.64,
-            "bet-at-home": 1.33,
+            "bet-at-home": 1.2,
             "bet365": 1.83
           },
           "bookmakers": 7,
@@ -6649,7 +7185,7 @@
             "Betway": 4.5,
             "Interwetten": 3.5,
             "Unibet": 3.5,
-            "bet-at-home": 4.5,
+            "bet-at-home": 5.5,
             "bet365": 2.5
           },
           "bookmakers": 7,
@@ -6660,7 +7196,7 @@
           "final_probability": 0.48393487276462566,
           "market_probability": 0.31906614785992216,
           "model_version": "champion-v0.3.0-no-api",
-          "odd": 4.5,
+          "odd": 5.5,
           "opponent": {
             "key": "105777",
             "name": "Grigor Dimitrov"
@@ -6690,12 +7226,12 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434853+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264462+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032520+00:00",
       "market": {
         "away": [
           {
             "bookmaker": "bet-at-home",
-            "odd": 1.33
+            "odd": 1.2
           },
           {
             "bookmaker": "bet365",
@@ -6735,7 +7271,7 @@
         "home": [
           {
             "bookmaker": "bet-at-home",
-            "odd": 4.5
+            "odd": 5.5
           },
           {
             "bookmaker": "bet365",
@@ -6776,7 +7312,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264467+00:00",
+        "updated_at": "2026-08-12T14:38:21.032525+00:00",
         "winner": null
       },
       "snapshots": [
@@ -7276,6 +7812,189 @@
               }
             ]
           }
+        },
+        {
+          "analyses": [
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "bet365",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "Interwetten",
+                "Unibet"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.95,
+                "Betsson": 1.63,
+                "Betway": 1.33,
+                "Interwetten": 1.65,
+                "Unibet": 1.64,
+                "bet-at-home": 1.2,
+                "bet365": 1.83
+              },
+              "bookmakers": 7,
+              "confidence": 32.298528625395235,
+              "data_quality": 0.954,
+              "disagreement_pp": 11.249984098142212,
+              "edge_pp": -16.48687249047034,
+              "final_probability": 0.5160651272353745,
+              "market_probability": 0.6809338521400778,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 1.95,
+              "opponent": {
+                "key": "202104",
+                "name": "Sebastian Baez"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "105777",
+                "name": "Grigor Dimitrov"
+              },
+              "signals": {
+                "elo": 0.4321798326455014,
+                "fatigue": 0.5,
+                "market": 0.6809338521400778,
+                "ranking": 0.3460076045627376,
+                "recent_form": 0.42898415807003887,
+                "season_profile": 0.3289695945945945,
+                "serve": 0.5405266336038921
+              },
+              "status": "REJECTED"
+            },
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "bet365",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "Interwetten",
+                "Unibet"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 2.5,
+                "Betsson": 3.5,
+                "Betway": 4.5,
+                "Interwetten": 3.5,
+                "Unibet": 3.5,
+                "bet-at-home": 5.5,
+                "bet365": 2.5
+              },
+              "bookmakers": 7,
+              "confidence": 57.69201590185779,
+              "data_quality": 0.954,
+              "disagreement_pp": 11.249984098142212,
+              "edge_pp": 16.48687249047035,
+              "final_probability": 0.48393487276462566,
+              "market_probability": 0.31906614785992216,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 5.5,
+              "opponent": {
+                "key": "105777",
+                "name": "Grigor Dimitrov"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "ODD_OUT_OF_RANGE",
+                "PROBABILITY_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "202104",
+                "name": "Sebastian Baez"
+              },
+              "signals": {
+                "elo": 0.5678201673544986,
+                "fatigue": 0.5,
+                "market": 0.31906614785992216,
+                "ranking": 0.6539923954372624,
+                "recent_form": 0.5710158419299611,
+                "season_profile": 0.6710304054054055,
+                "serve": 0.459473366396108
+              },
+              "status": "REJECTED"
+            }
+          ],
+          "captured_at": "2026-08-12T14:38:21.032527+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 1.2
+              },
+              {
+                "bookmaker": "bet365",
+                "odd": 1.83
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 1.63
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 1.95
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 1.33
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 1.65
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 1.64
+              }
+            ],
+            "bookmaker_count": 7,
+            "bookmakers": [
+              "bet-at-home",
+              "bet365",
+              "Betsson",
+              "BetVictor",
+              "Betway",
+              "Interwetten",
+              "Unibet"
+            ],
+            "home": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 5.5
+              },
+              {
+                "bookmaker": "bet365",
+                "odd": 2.5
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 3.5
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 2.5
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 4.5
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 3.5
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 3.5
+              }
+            ]
+          }
         }
       ],
       "surface": null,
@@ -7392,7 +8111,7 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434703+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264277+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032331+00:00",
       "market": {
         "away": [
           {
@@ -7478,7 +8197,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264282+00:00",
+        "updated_at": "2026-08-12T14:38:21.032337+00:00",
         "winner": null
       },
       "snapshots": [
@@ -7928,7 +8647,7 @@
             "Betsson": 1.75,
             "Betway": 1.73,
             "Interwetten": 1.75,
-            "Unibet": 1.94,
+            "Unibet": 1.77,
             "bet-at-home": 1.45,
             "bet365": 1.83
           },
@@ -7940,7 +8659,7 @@
           "final_probability": 0.5014024451206145,
           "market_probability": 0.4615384615384615,
           "model_version": "champion-v0.3.0-no-api",
-          "odd": 1.94,
+          "odd": 1.83,
           "opponent": {
             "key": "209992",
             "name": "Juncheng Shang"
@@ -7969,7 +8688,7 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434868+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264483+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032540+00:00",
       "market": {
         "away": [
           {
@@ -7998,7 +8717,7 @@
           },
           {
             "bookmaker": "Unibet",
-            "odd": 1.94
+            "odd": 1.77
           }
         ],
         "bookmaker_count": 7,
@@ -8055,7 +8774,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264488+00:00",
+        "updated_at": "2026-08-12T14:38:21.032545+00:00",
         "winner": null
       },
       "snapshots": [
@@ -8552,6 +9271,188 @@
               }
             ]
           }
+        },
+        {
+          "analyses": [
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "bet365",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "Interwetten",
+                "Unibet"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.5,
+                "Betsson": 1.5,
+                "Betway": 1.5,
+                "Interwetten": 1.5,
+                "Unibet": 1.5,
+                "bet-at-home": 1.5,
+                "bet365": 1.5
+              },
+              "bookmakers": 7,
+              "confidence": 32.23740195362189,
+              "data_quality": 0.9219999999999999,
+              "disagreement_pp": 8.968598046378107,
+              "edge_pp": -3.986398358215293,
+              "final_probability": 0.4985975548793855,
+              "market_probability": 0.5384615384615384,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 1.5,
+              "opponent": {
+                "key": "132283",
+                "name": "Lorenzo Sonego"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "209992",
+                "name": "Juncheng Shang"
+              },
+              "signals": {
+                "elo": 0.5128032473655808,
+                "fatigue": 0.5,
+                "h2h": 0.5015957446808511,
+                "market": 0.5384615384615384,
+                "ranking": 0.28,
+                "recent_form": 0.5729861519929653,
+                "season_profile": 0.5373303167420815
+              },
+              "status": "REJECTED"
+            },
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "bet365",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "Interwetten",
+                "Unibet"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.8,
+                "Betsson": 1.75,
+                "Betway": 1.73,
+                "Interwetten": 1.75,
+                "Unibet": 1.77,
+                "bet-at-home": 1.45,
+                "bet365": 1.83
+              },
+              "bookmakers": 7,
+              "confidence": 39.55316351047088,
+              "data_quality": 0.9219999999999999,
+              "disagreement_pp": 8.968598046378107,
+              "edge_pp": 3.9863983582152986,
+              "final_probability": 0.5014024451206145,
+              "market_probability": 0.4615384615384615,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 1.83,
+              "opponent": {
+                "key": "209992",
+                "name": "Juncheng Shang"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "PROBABILITY_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "132283",
+                "name": "Lorenzo Sonego"
+              },
+              "signals": {
+                "elo": 0.4871967526344192,
+                "fatigue": 0.5,
+                "h2h": 0.4984042553191489,
+                "market": 0.46153846153846156,
+                "ranking": 0.72,
+                "recent_form": 0.4270138480070347,
+                "season_profile": 0.46266968325791846
+              },
+              "status": "REJECTED"
+            }
+          ],
+          "captured_at": "2026-08-12T14:38:21.032547+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 1.45
+              },
+              {
+                "bookmaker": "bet365",
+                "odd": 1.83
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 1.75
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 1.8
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 1.73
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 1.75
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 1.77
+              }
+            ],
+            "bookmaker_count": 7,
+            "bookmakers": [
+              "bet-at-home",
+              "bet365",
+              "Betsson",
+              "BetVictor",
+              "Betway",
+              "Interwetten",
+              "Unibet"
+            ],
+            "home": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "bet365",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 1.5
+              }
+            ]
+          }
         }
       ],
       "surface": null,
@@ -8563,7 +9464,7 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434879+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264497+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032556+00:00",
       "market": {
         "away": [
           {
@@ -8595,7 +9496,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264501+00:00",
+        "updated_at": "2026-08-12T14:38:21.032559+00:00",
         "winner": null
       },
       "snapshots": [
@@ -8783,76 +9684,22 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434573+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264105+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032136+00:00",
       "market": {
         "away": [
           {
-            "bookmaker": "bet-at-home",
-            "odd": 1.45
-          },
-          {
-            "bookmaker": "bet365",
-            "odd": 1.8
-          },
-          {
-            "bookmaker": "Betsson",
-            "odd": 1.62
-          },
-          {
-            "bookmaker": "BetVictor",
-            "odd": 1.8
-          },
-          {
-            "bookmaker": "Betway",
-            "odd": 1.6
-          },
-          {
-            "bookmaker": "Interwetten",
-            "odd": 1.6
-          },
-          {
-            "bookmaker": "Unibet",
-            "odd": 1.72
+            "bookmaker": "TennisExplorer avg",
+            "odd": 2.59
           }
         ],
-        "bookmaker_count": 7,
+        "bookmaker_count": 1,
         "bookmakers": [
-          "bet-at-home",
-          "bet365",
-          "Betsson",
-          "BetVictor",
-          "Betway",
-          "Interwetten",
-          "Unibet"
+          "TennisExplorer avg"
         ],
         "home": [
           {
-            "bookmaker": "bet-at-home",
-            "odd": 1.5
-          },
-          {
-            "bookmaker": "bet365",
-            "odd": 1.5
-          },
-          {
-            "bookmaker": "Betsson",
-            "odd": 1.5
-          },
-          {
-            "bookmaker": "BetVictor",
-            "odd": 1.5
-          },
-          {
-            "bookmaker": "Betway",
-            "odd": 1.5
-          },
-          {
-            "bookmaker": "Interwetten",
-            "odd": 1.5
-          },
-          {
-            "bookmaker": "Unibet",
-            "odd": 2.5
+            "bookmaker": "TennisExplorer avg",
+            "odd": 1.44
           }
         ]
       },
@@ -8869,7 +9716,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264118+00:00",
+        "updated_at": "2026-08-12T14:38:21.032154+00:00",
         "winner": null
       },
       "snapshots": [
@@ -9383,6 +10230,136 @@
               }
             ]
           }
+        },
+        {
+          "analyses": [
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "bet365",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "Interwetten",
+                "Unibet"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.5,
+                "Betsson": 1.5,
+                "Betway": 1.5,
+                "Interwetten": 1.5,
+                "Unibet": 2.5,
+                "bet-at-home": 1.5,
+                "bet365": 1.5
+              },
+              "bookmakers": 7,
+              "confidence": 31.0870705281598,
+              "data_quality": 1.0,
+              "disagreement_pp": 12.090419992335304,
+              "edge_pp": -1.4354127053113452,
+              "final_probability": 0.501774905204951,
+              "market_probability": 0.5161290322580645,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 2.5,
+              "opponent": {
+                "key": "209976",
+                "name": "Dino Prizmic"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "ODD_OUT_OF_RANGE",
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "111815",
+                "name": "Cameron Norrie"
+              },
+              "signals": {
+                "elo": 0.5064493117199939,
+                "fatigue": 0.5,
+                "market": 0.5161290322580645,
+                "ranking": 0.6945525291828794,
+                "recent_form": 0.24772651258601203,
+                "season_profile": 0.4663636363636363,
+                "serve": 0.47374820652502625
+              },
+              "status": "REJECTED"
+            },
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "bet365",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "Interwetten",
+                "Unibet"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.8,
+                "Betsson": 1.62,
+                "Betway": 1.6,
+                "Interwetten": 1.6,
+                "Unibet": 1.72,
+                "bet-at-home": 1.45,
+                "bet365": 1.8
+              },
+              "bookmakers": 7,
+              "confidence": 33.493322877225104,
+              "data_quality": 1.0,
+              "disagreement_pp": 12.090419992335306,
+              "edge_pp": 1.4354127053113397,
+              "final_probability": 0.49822509479504895,
+              "market_probability": 0.48387096774193555,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 1.8,
+              "opponent": {
+                "key": "111815",
+                "name": "Cameron Norrie"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "209976",
+                "name": "Dino Prizmic"
+              },
+              "signals": {
+                "elo": 0.49355068828000614,
+                "fatigue": 0.5,
+                "market": 0.4838709677419355,
+                "ranking": 0.30544747081712065,
+                "recent_form": 0.752273487413988,
+                "season_profile": 0.5336363636363637,
+                "serve": 0.5262517934749738
+              },
+              "status": "REJECTED"
+            }
+          ],
+          "captured_at": "2026-08-12T14:38:21.032158+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 2.59
+              }
+            ],
+            "bookmaker_count": 1,
+            "bookmakers": [
+              "TennisExplorer avg"
+            ],
+            "home": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 1.44
+              }
+            ]
+          }
         }
       ],
       "surface": null,
@@ -9394,7 +10371,7 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434714+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264292+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032352+00:00",
       "market": {
         "away": [
           {
@@ -9409,7 +10386,7 @@
         "home": [
           {
             "bookmaker": "TennisExplorer avg",
-            "odd": 3.29
+            "odd": 3.28
           }
         ]
       },
@@ -9426,7 +10403,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264294+00:00",
+        "updated_at": "2026-08-12T14:38:21.032355+00:00",
         "winner": null
       },
       "snapshots": [
@@ -9495,6 +10472,28 @@
               }
             ]
           }
+        },
+        {
+          "analyses": [],
+          "captured_at": "2026-08-12T14:38:21.032357+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 1.33
+              }
+            ],
+            "bookmaker_count": 1,
+            "bookmakers": [
+              "TennisExplorer avg"
+            ],
+            "home": [
+              {
+                "bookmaker": "TennisExplorer avg",
+                "odd": 3.28
+              }
+            ]
+          }
         }
       ],
       "surface": null,
@@ -9514,23 +10513,23 @@
             "Unibet"
           ],
           "bookmaker_odds": {
-            "BetVictor": 1.83,
-            "Betsson": 1.64,
+            "BetVictor": 1.87,
+            "Betsson": 1.66,
             "Betway": 1.55,
             "Interwetten": 1.65,
             "Unibet": 1.71,
-            "bet-at-home": 1.65,
+            "bet-at-home": 1.68,
             "bet365": 1.8
           },
           "bookmakers": 7,
-          "confidence": 36.11056588614842,
+          "confidence": 36.11123932634908,
           "data_quality": 0.964,
-          "disagreement_pp": 6.061434113851577,
-          "edge_pp": -1.5421907375038069,
-          "final_probability": 0.4622850989943887,
-          "market_probability": 0.47770700636942676,
+          "disagreement_pp": 6.060760673650923,
+          "edge_pp": -1.4491309310682154,
+          "final_probability": 0.46169916687979407,
+          "market_probability": 0.4761904761904762,
           "model_version": "champion-v0.3.0-no-api",
-          "odd": 1.83,
+          "odd": 1.87,
           "opponent": {
             "key": "208260",
             "name": "Zachary Svajda"
@@ -9548,7 +10547,7 @@
           "signals": {
             "elo": 0.4065685998578581,
             "fatigue": 0.5,
-            "market": 0.47770700636942676,
+            "market": 0.47619047619047616,
             "ranking": 0.5274949083503055,
             "recent_form": 0.3914646204598605,
             "season_profile": 0.4482142857142857,
@@ -9576,12 +10575,12 @@
             "bet365": 2.5
           },
           "bookmakers": 7,
-          "confidence": 42.65799931421642,
+          "confidence": 42.549758314292454,
           "data_quality": 0.964,
-          "disagreement_pp": 6.061434113851576,
-          "edge_pp": 1.5421907375038124,
-          "final_probability": 0.5377149010056114,
-          "market_probability": 0.5222929936305732,
+          "disagreement_pp": 6.060760673650922,
+          "edge_pp": 1.44913093106821,
+          "final_probability": 0.5383008331202059,
+          "market_probability": 0.5238095238095238,
           "model_version": "champion-v0.3.0-no-api",
           "odd": 2.5,
           "opponent": {
@@ -9602,7 +10601,7 @@
           "signals": {
             "elo": 0.5934314001421419,
             "fatigue": 0.5,
-            "market": 0.5222929936305732,
+            "market": 0.5238095238095238,
             "ranking": 0.4725050916496945,
             "recent_form": 0.6085353795401395,
             "season_profile": 0.5517857142857143,
@@ -9614,12 +10613,12 @@
       "date": "2026-08-13",
       "event_type": "ATP Singles",
       "first_seen_at": "2026-08-12T03:35:17.434748+00:00",
-      "last_seen_at": "2026-08-12T13:23:45.264334+00:00",
+      "last_seen_at": "2026-08-12T14:38:21.032394+00:00",
       "market": {
         "away": [
           {
             "bookmaker": "bet-at-home",
-            "odd": 1.65
+            "odd": 1.68
           },
           {
             "bookmaker": "bet365",
@@ -9627,11 +10626,11 @@
           },
           {
             "bookmaker": "Betsson",
-            "odd": 1.64
+            "odd": 1.66
           },
           {
             "bookmaker": "BetVictor",
-            "odd": 1.83
+            "odd": 1.87
           },
           {
             "bookmaker": "Betway",
@@ -9700,7 +10699,7 @@
         "resolved": false,
         "score": null,
         "status": "PENDING",
-        "updated_at": "2026-08-12T13:23:45.264339+00:00",
+        "updated_at": "2026-08-12T14:38:21.032400+00:00",
         "winner": null
       },
       "snapshots": [
@@ -10215,6 +11214,190 @@
               }
             ]
           }
+        },
+        {
+          "analyses": [
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "bet365",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "Interwetten",
+                "Unibet"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 1.87,
+                "Betsson": 1.66,
+                "Betway": 1.55,
+                "Interwetten": 1.65,
+                "Unibet": 1.71,
+                "bet-at-home": 1.68,
+                "bet365": 1.8
+              },
+              "bookmakers": 7,
+              "confidence": 36.11123932634908,
+              "data_quality": 0.964,
+              "disagreement_pp": 6.060760673650923,
+              "edge_pp": -1.4491309310682154,
+              "final_probability": 0.46169916687979407,
+              "market_probability": 0.4761904761904762,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 1.87,
+              "opponent": {
+                "key": "208260",
+                "name": "Zachary Svajda"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "208233",
+                "name": "Mattia Bellucci"
+              },
+              "signals": {
+                "elo": 0.4065685998578581,
+                "fatigue": 0.5,
+                "market": 0.47619047619047616,
+                "ranking": 0.5274949083503055,
+                "recent_form": 0.3914646204598605,
+                "season_profile": 0.4482142857142857,
+                "serve": 0.5747615357401082
+              },
+              "status": "REJECTED"
+            },
+            {
+              "bookmaker_names": [
+                "bet-at-home",
+                "bet365",
+                "Betsson",
+                "BetVictor",
+                "Betway",
+                "Interwetten",
+                "Unibet"
+              ],
+              "bookmaker_odds": {
+                "BetVictor": 2.5,
+                "Betsson": 1.5,
+                "Betway": 1.5,
+                "Interwetten": 1.5,
+                "Unibet": 1.5,
+                "bet-at-home": 1.5,
+                "bet365": 2.5
+              },
+              "bookmakers": 7,
+              "confidence": 42.549758314292454,
+              "data_quality": 0.964,
+              "disagreement_pp": 6.060760673650922,
+              "edge_pp": 1.44913093106821,
+              "final_probability": 0.5383008331202059,
+              "market_probability": 0.5238095238095238,
+              "model_version": "champion-v0.3.0-no-api",
+              "odd": 2.5,
+              "opponent": {
+                "key": "208233",
+                "name": "Mattia Bellucci"
+              },
+              "rank": null,
+              "reject_reasons": [
+                "ODD_OUT_OF_RANGE",
+                "PROBABILITY_TOO_LOW",
+                "EDGE_TOO_LOW",
+                "CONFIDENCE_TOO_LOW"
+              ],
+              "selected_player": {
+                "key": "208260",
+                "name": "Zachary Svajda"
+              },
+              "signals": {
+                "elo": 0.5934314001421419,
+                "fatigue": 0.5,
+                "market": 0.5238095238095238,
+                "ranking": 0.4725050916496945,
+                "recent_form": 0.6085353795401395,
+                "season_profile": 0.5517857142857143,
+                "serve": 0.42523846425989176
+              },
+              "status": "REJECTED"
+            }
+          ],
+          "captured_at": "2026-08-12T14:38:21.032401+00:00",
+          "market": {
+            "away": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 1.68
+              },
+              {
+                "bookmaker": "bet365",
+                "odd": 1.8
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 1.66
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 1.87
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 1.55
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 1.65
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 1.71
+              }
+            ],
+            "bookmaker_count": 7,
+            "bookmakers": [
+              "bet-at-home",
+              "bet365",
+              "Betsson",
+              "BetVictor",
+              "Betway",
+              "Interwetten",
+              "Unibet"
+            ],
+            "home": [
+              {
+                "bookmaker": "bet-at-home",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "bet365",
+                "odd": 2.5
+              },
+              {
+                "bookmaker": "Betsson",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "BetVictor",
+                "odd": 2.5
+              },
+              {
+                "bookmaker": "Betway",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Interwetten",
+                "odd": 1.5
+              },
+              {
+                "bookmaker": "Unibet",
+                "odd": 1.5
+              }
+            ]
+          }
         }
       ],
       "surface": null,
@@ -10223,7 +11406,8 @@
     }
   ],
   "live_sources": [
-    "TennisExplorer detail"
+    "TennisExplorer detail",
+    "TennisExplorer schedule"
   ],
   "model_versions": [
     "champion-v0.3.0-no-api"
@@ -10252,5 +11436,5 @@
     "resolved_model_picks": 0,
     "wins": 0
   },
-  "updated_at": "2026-08-12T13:23:45.264506+00:00"
+  "updated_at": "2026-08-12T14:38:21.032564+00:00"
 }
