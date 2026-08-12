@@ -236,14 +236,22 @@ def parse_detail_bookmakers(html: str) -> list[dict[str, Any]]:
 
 
 def _needs_detail(record: dict[str, Any]) -> bool:
+    """Every valid pre-match market deserves the same bookmaker enrichment.
+
+    The former implementation only opened detail pages when one side was already
+    near the target execution odd range. That made the analysis depth depend on a
+    pre-filter. Full-board analysis requires collecting detailed books first and
+    deciding eligibility only after the model has evaluated the match.
+    """
     rows = record.get("match_winner_market", []) or []
-    if not rows:
+    if not rows or not isinstance(rows[0], dict):
         return False
     try:
-        a = float(rows[0].get("player_1")); b = float(rows[0].get("player_2"))
+        a = float(rows[0].get("player_1"))
+        b = float(rows[0].get("player_2"))
     except (TypeError, ValueError, AttributeError):
         return False
-    return (1.45 <= a <= 2.05) or (1.45 <= b <= 2.05)
+    return a > 1.0 and b > 1.0
 
 
 def enrich_bookmakers(records: list[dict[str, Any]], headers: dict[str, str]) -> int:
