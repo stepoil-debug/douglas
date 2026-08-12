@@ -3,6 +3,49 @@
   "matches": [
     {
       "bookmakers": 10,
+      "confidence": 59.7075170601044,
+      "data_quality": 0.9300000000000002,
+      "date": "2026-08-13",
+      "decision": "REJECTED",
+      "disagreement_pp": 11.655568970788767,
+      "edge_pp": 12.307116943646834,
+      "final_probability": 0.5782027553232886,
+      "match_id": "pub-bc4bf0b6233104082e0d",
+      "odd": 2.5,
+      "opponent": {
+        "key": "123828",
+        "name": "Jan Choinski"
+      },
+      "predicted_player": {
+        "key": "202058",
+        "name": "Thiago Agustin Tirante"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.6896844318814849,
+        "fatigue": 0.5,
+        "market": 0.45513158588682023,
+        "recent_form": 0.8,
+        "season_profile": 0.59375,
+        "surface_elo": 0.5503760623404794
+      },
+      "surface": "Hard",
+      "time": "12:00",
+      "tournament": "ATP Cincinnati"
+    },
+    {
+      "bookmakers": 10,
       "confidence": 59.06217666397372,
       "data_quality": 1.0,
       "date": "2026-08-13",
@@ -46,14 +89,14 @@
       "tournament": "ATP Cincinnati"
     },
     {
-      "bookmakers": 7,
-      "confidence": 56.459042531835124,
-      "data_quality": 0.954,
+      "bookmakers": 10,
+      "confidence": 56.210660494159114,
+      "data_quality": 1.0,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 9.780905739302613,
-      "edge_pp": -5.7602758918899095,
-      "final_probability": 0.7429794827113774,
+      "disagreement_pp": 8.75701817791735,
+      "edge_pp": 1.2529423015615992,
+      "final_probability": 0.6971238252926558,
       "match_id": "pub-c6a5a3a0b04d01c1db2c",
       "odd": 2.1,
       "opponent": {
@@ -79,54 +122,11 @@
       "signals": {
         "elo": 0.680923707492355,
         "fatigue": 0.5,
-        "market": 0.8005822416302766,
+        "market": 0.6845944022770398,
         "recent_form": 0.8,
         "season_profile": 0.75,
         "serve": 0.6357623094518428,
         "surface_elo": 0.6879153600642735
-      },
-      "surface": "Hard",
-      "time": "12:00",
-      "tournament": "ATP Cincinnati"
-    },
-    {
-      "bookmakers": 7,
-      "confidence": 55.17849162489169,
-      "data_quality": 0.8520000000000001,
-      "date": "2026-08-13",
-      "decision": "REJECTED",
-      "disagreement_pp": 10.580136645032407,
-      "edge_pp": 8.767758944327731,
-      "final_probability": 0.6038066217013418,
-      "match_id": "pub-bc4bf0b6233104082e0d",
-      "odd": 2.5,
-      "opponent": {
-        "key": "123828",
-        "name": "Jan Choinski"
-      },
-      "predicted_player": {
-        "key": "202058",
-        "name": "Thiago Agustin Tirante"
-      },
-      "rank": null,
-      "reject_reasons": [
-        "ODD_OUT_OF_RANGE",
-        "PROBABILITY_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
-      },
-      "signals": {
-        "elo": 0.6896844318814849,
-        "fatigue": 0.5,
-        "market": 0.5161290322580645,
-        "recent_form": 0.8,
-        "season_profile": 0.59375,
-        "surface_elo": 0.5503760623404794
       },
       "surface": "Hard",
       "time": "12:00",
@@ -264,13 +264,13 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 47.8980595669794,
+      "confidence": 48.29328822074601,
       "data_quality": 1.0,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 7.282041956532775,
-      "edge_pp": 6.132656314505902,
-      "final_probability": 0.5114132015740155,
+      "disagreement_pp": 7.381335391972646,
+      "edge_pp": 6.564118539988062,
+      "final_probability": 0.5085921024074014,
       "match_id": "pub-44ed23ddc4ca975bbcea",
       "odd": 4.5,
       "opponent": {
@@ -296,7 +296,7 @@
       "signals": {
         "elo": 0.5760501747983535,
         "fatigue": 0.5,
-        "market": 0.45008663842895646,
+        "market": 0.44295091700752076,
         "recent_form": 0.5251145737667922,
         "season_profile": 0.6071428571428571,
         "serve": 0.3886925699338297,
@@ -484,16 +484,16 @@
       "tournament": "ATP Cincinnati"
     },
     {
-      "bookmakers": 7,
-      "confidence": 42.90555083943386,
-      "data_quality": 0.9339999999999999,
+      "bookmakers": 10,
+      "confidence": 43.59077746183837,
+      "data_quality": 1.0,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 9.490031291551064,
-      "edge_pp": -14.716669969855412,
-      "final_probability": 0.6091358213098492,
+      "disagreement_pp": 7.0333760502660905,
+      "edge_pp": -9.685779140979411,
+      "final_probability": 0.5762415351210446,
       "match_id": "pub-214a246b5097c314790b",
-      "odd": 1.75,
+      "odd": 1.81,
       "opponent": {
         "key": "105916",
         "name": "Marton Fucsovics"
@@ -517,7 +517,7 @@
       "signals": {
         "elo": 0.5162524081063125,
         "fatigue": 0.5,
-        "market": 0.7563025210084033,
+        "market": 0.6730993265308387,
         "recent_form": 0.5571839577180102,
         "season_profile": 0.5,
         "serve": 0.5840755219699645,
@@ -792,16 +792,16 @@
       "tournament": "ATP Cincinnati"
     },
     {
-      "bookmakers": 6,
-      "confidence": 33.549705257162934,
-      "data_quality": 0.8879999999999999,
+      "bookmakers": 9,
+      "confidence": 35.35385782096444,
+      "data_quality": 0.966,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 18.116919129682326,
-      "edge_pp": -31.065062675273957,
-      "final_probability": 0.6124262438684527,
+      "disagreement_pp": 18.174266307072063,
+      "edge_pp": -31.168297573566463,
+      "final_probability": 0.613101241280365,
       "match_id": "pub-5dc84ff7afee14120577",
-      "odd": 2.65,
+      "odd": 2.85,
       "opponent": {
         "key": "207830",
         "name": "Tomas Machac"
@@ -827,7 +827,7 @@
       "signals": {
         "elo": 0.3925509725556864,
         "fatigue": 0.5,
-        "market": 0.9230768706211923,
+        "market": 0.9247842170160295,
         "recent_form": 0.4770083930954986,
         "season_profile": 0.35425101214574894,
         "serve": 0.4591260363501871,
@@ -839,15 +839,15 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 32.452437889435,
+      "confidence": 32.57030777074063,
       "data_quality": 0.9820000000000002,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 10.333389504380097,
-      "edge_pp": -12.715225490325055,
-      "final_probability": 0.5019982739381509,
+      "disagreement_pp": 10.513016777919866,
+      "edge_pp": -13.17022113891213,
+      "final_probability": 0.5049732454866048,
       "match_id": "pub-b669dfe493bd9c978dcf",
-      "odd": 1.87,
+      "odd": 1.83,
       "opponent": {
         "key": "202104",
         "name": "Sebastian Baez"
@@ -871,7 +871,7 @@
       "signals": {
         "elo": 0.4321798326455014,
         "fatigue": 0.5,
-        "market": 0.6291505288414014,
+        "market": 0.6366754568757261,
         "recent_form": 0.42898415807003887,
         "season_profile": 0.28035714285714286,
         "serve": 0.5405266336038921,
@@ -882,8 +882,8 @@
       "tournament": "ATP Cincinnati"
     }
   ],
-  "model_version": "champion-v0.3.2-full-board",
+  "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-12T16:34:10.450510+00:00"
+  "updated_at": "2026-08-12T16:51:58.507317+00:00"
 }
