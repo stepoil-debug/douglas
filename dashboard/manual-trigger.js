@@ -179,3 +179,26 @@
   decorateSequentialPlan();
   setInterval(decorateSequentialPlan, 60000);
 })();
+
+// Discoverability for the separate two-match ticket builder.
+(() => {
+  const href = './bilhetes.html';
+  const nav = document.querySelector('.nav');
+  if (nav && !nav.querySelector('[data-investbet-tickets-link]')) {
+    const link = document.createElement('a');
+    link.href = href;
+    link.dataset.investbetTicketsLink = '1';
+    link.innerHTML = '▣ <span>Bilhetes 2 jogos</span>';
+    nav.insertBefore(link, nav.children[2] || null);
+  }
+
+  const actions = document.querySelector('.actions');
+  if (actions && !actions.querySelector('[data-investbet-tickets-button]')) {
+    const link = document.createElement('a');
+    link.href = href;
+    link.className = 'btn secondary';
+    link.dataset.investbetTicketsButton = '1';
+    link.textContent = '▣ Bilhetes 2 jogos';
+    actions.insertBefore(link, actions.firstChild);
+  }
+})();
