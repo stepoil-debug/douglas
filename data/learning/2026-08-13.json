@@ -46,13 +46,13 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 58.920553135483054,
+      "confidence": 58.825143528190296,
       "data_quality": 1.0,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 12.192889467927728,
-      "edge_pp": 19.479337483217275,
-      "final_probability": 0.5111344260341077,
+      "disagreement_pp": 12.234254865240112,
+      "edge_pp": 19.561993333775497,
+      "final_probability": 0.510593983934304,
       "match_id": "pub-069e3365e0699bf04faa",
       "odd": 4.5,
       "opponent": {
@@ -78,7 +78,7 @@
       "signals": {
         "elo": 0.6448832324039365,
         "fatigue": 0.5,
-        "market": 0.316341051201935,
+        "market": 0.31497405059654904,
         "recent_form": 0.5840380370687062,
         "season_profile": 0.7,
         "serve": 0.59917090435093,
@@ -90,15 +90,15 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 55.47411513076129,
+      "confidence": 55.531147205384876,
       "data_quality": 1.0,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 8.937341123580623,
-      "edge_pp": -1.345641042672785,
-      "final_probability": 0.7141145625434191,
+      "disagreement_pp": 8.950069195638768,
+      "edge_pp": -1.4523330317154248,
+      "final_probability": 0.7148121640102364,
       "match_id": "pub-c6a5a3a0b04d01c1db2c",
-      "odd": 2.1,
+      "odd": 2.0,
       "opponent": {
         "key": "208316",
         "name": "Valentin Royer"
@@ -109,7 +109,6 @@
       },
       "rank": null,
       "reject_reasons": [
-        "ODD_OUT_OF_RANGE",
         "EDGE_TOO_LOW",
         "CONFIDENCE_TOO_LOW"
       ],
@@ -122,7 +121,7 @@
       "signals": {
         "elo": 0.680923707492355,
         "fatigue": 0.5,
-        "market": 0.727570972970147,
+        "market": 0.7293354943273906,
         "recent_form": 0.8,
         "season_profile": 0.75,
         "serve": 0.6357623094518428,
@@ -395,13 +394,13 @@
     },
     {
       "bookmakers": 8,
-      "confidence": 47.932291080478144,
+      "confidence": 47.931058956601994,
       "data_quality": 0.8,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 13.245762017001036,
-      "edge_pp": -19.10947375892369,
-      "final_probability": 0.7277805309747918,
+      "disagreement_pp": 13.239065681326508,
+      "edge_pp": -19.098513829544807,
+      "final_probability": 0.727701246379285,
       "match_id": "pub-e79518c4b1e13f6213ad",
       "odd": 2.8,
       "opponent": {
@@ -428,7 +427,7 @@
       "signals": {
         "elo": 0.5684690921966962,
         "fatigue": 0.5,
-        "market": 0.9188752685640286,
+        "market": 0.9186863846747331,
         "recent_form": 0.6065260526074134,
         "season_profile": 0.6285714285714286,
         "surface_elo": 0.6002392936344529
@@ -535,7 +534,7 @@
       "edge_pp": 5.032345211124106,
       "final_probability": 0.5265139283017173,
       "match_id": "pub-f9ab157ea74250427484",
-      "odd": 1.77,
+      "odd": 1.75,
       "opponent": {
         "key": "126846",
         "name": "Aleksandar Vukic"
@@ -793,7 +792,7 @@
       "edge_pp": -23.646833733933548,
       "final_probability": 0.6846047850504147,
       "match_id": "pub-3eef56c0d1d506f564d8",
-      "odd": 2.6,
+      "odd": 2.55,
       "opponent": {
         "key": "210262",
         "name": "Jaime Faria"
@@ -1179,13 +1178,13 @@
     },
     {
       "bookmakers": 8,
-      "confidence": 38.28877761735344,
+      "confidence": 38.296948464446004,
       "data_quality": 0.9040000000000001,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 17.551881098386957,
-      "edge_pp": -27.08688042879759,
-      "final_probability": 0.6504865871574039,
+      "disagreement_pp": 17.6093190376792,
+      "edge_pp": -27.17757492762365,
+      "final_probability": 0.6511426750212519,
       "match_id": "pub-c85473950c26a469e109",
       "odd": 2.7,
       "opponent": {
@@ -1212,7 +1211,7 @@
       "signals": {
         "elo": 0.46680403868530496,
         "fatigue": 0.5,
-        "market": 0.9213553914453798,
+        "market": 0.9229184242974885,
         "recent_form": 0.47737421160631544,
         "season_profile": 0.41346153846153844,
         "surface_elo": 0.42727381300683165
@@ -1397,15 +1396,15 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 32.57030777074063,
+      "confidence": 32.59201082955821,
       "data_quality": 0.9820000000000002,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 10.513016777919866,
-      "edge_pp": -13.17022113891213,
-      "final_probability": 0.5049732454866048,
+      "disagreement_pp": 10.547078337304898,
+      "edge_pp": -13.25550820204554,
+      "final_probability": 0.5055308916686311,
       "match_id": "pub-b669dfe493bd9c978dcf",
-      "odd": 1.83,
+      "odd": 1.8,
       "opponent": {
         "key": "202104",
         "name": "Sebastian Baez"
@@ -1429,7 +1428,7 @@
       "signals": {
         "elo": 0.4321798326455014,
         "fatigue": 0.5,
-        "market": 0.6366754568757261,
+        "market": 0.6380859736890865,
         "recent_form": 0.42898415807003887,
         "season_profile": 0.28035714285714286,
         "serve": 0.5405266336038921,
@@ -1441,13 +1440,13 @@
     },
     {
       "bookmakers": 9,
-      "confidence": 28.56601142100298,
+      "confidence": 28.64066347377022,
       "data_quality": 0.8440000000000001,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 13.402681717950637,
-      "edge_pp": -20.61403856836346,
-      "final_probability": 0.5255669313895361,
+      "disagreement_pp": 13.73282229081422,
+      "edge_pp": -21.17360484497075,
+      "final_probability": 0.5296148576458444,
       "match_id": "pub-b2637bfa98c5e6f75c53",
       "odd": 2.2,
       "opponent": {
@@ -1475,7 +1474,7 @@
       "signals": {
         "elo": 0.34627388559831174,
         "fatigue": 0.5,
-        "market": 0.7317073170731707,
+        "market": 0.7413509060955519,
         "recent_form": 0.38779388759119593,
         "season_profile": 0.34375,
         "surface_elo": 0.43269560741864344
@@ -1488,5 +1487,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-12T22:14:36.116199+00:00"
+  "updated_at": "2026-08-12T23:13:16.333764+00:00"
 }
