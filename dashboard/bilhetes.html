@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#06140e">
+<title>InvestBet • Bilhetes de 2 Jogos</title>
+<style>
+:root{--bg:#06100c;--panel:#0b1c14;--panel2:#08160f;--line:#1d3a29;--gold:#d8a82f;--gold2:#f0cb67;--lime:#75e5a6;--text:#f5f2e8;--muted:#8ca696;--red:#ff7780;--shadow:0 25px 80px rgba(0,0,0,.32);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}body{margin:0;color:var(--text);background:radial-gradient(circle at 78% 0,rgba(216,168,47,.09),transparent 29%),linear-gradient(180deg,#050e0a,#07140e 48%,#050e0a);min-height:100vh}a{color:inherit;text-decoration:none}button{font:inherit}.shell{max-width:1480px;margin:auto;padding:0 28px 60px}.top{min-height:86px;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:18px;border-bottom:1px solid rgba(216,168,47,.12);background:rgba(6,16,12,.88);backdrop-filter:blur(18px)}.brand{display:flex;align-items:center;gap:12px}.brand img{width:62px;height:62px;object-fit:contain;border-radius:15px}.brand b{display:block;color:var(--gold2);font-size:20px;letter-spacing:.04em}.brand small{display:block;color:#718b79;font-size:10px;margin-top:2px}.actions{display:flex;gap:8px;align-items:center}.btn{padding:10px 13px;border-radius:10px;border:1px solid #2a4937;background:#0a1b12;color:#dce7df;font-weight:900;font-size:12px;cursor:pointer}.btn.primary{background:linear-gradient(135deg,#f0cb67,#c7941e);color:#1b1606;border-color:rgba(216,168,47,.4)}.hero{margin:28px 0 16px;padding:28px;border:1px solid rgba(216,168,47,.19);background:linear-gradient(120deg,rgba(16,42,27,.98),rgba(8,27,18,.98) 62%,rgba(75,55,12,.38));box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center}.eyebrow{font-size:10px;color:var(--gold);font-weight:950;letter-spacing:.13em;text-transform:uppercase}.hero h1{margin:6px 0 9px;font-size:31px;letter-spacing:-.04em}.hero p{margin:0;max-width:880px;color:#90a99a;font-size:13px;line-height:1.65}.datebox{padding:15px 20px;border-left:2px solid var(--gold);background:rgba(2,12,7,.28);min-width:185px}.datebox small{display:block;color:#78907f;font-size:9px;text-transform:uppercase;letter-spacing:.11em}.datebox b{display:block;color:var(--gold2);font-size:22px;margin-top:4px}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:16px 0 30px}.kpi{padding:17px;border:1px solid rgba(117,157,130,.15);background:linear-gradient(150deg,#0b1d14,#08160f)}.kpi small{display:block;color:#718979;font-size:9px;text-transform:uppercase;letter-spacing:.09em;font-weight:850}.kpi b{display:block;font-size:27px;margin-top:7px}.kpi span{font-size:10px;color:#687e70}.good{color:var(--lime)!important}.gold{color:var(--gold2)!important}.notice{display:none;margin:0 0 18px;padding:12px 14px;border:1px solid rgba(216,168,47,.22);background:rgba(216,168,47,.07);color:#d8c68d;font-size:11px;line-height:1.5}.notice.show{display:block}.head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:29px 0 13px}.head h2{margin:5px 0 0;font-size:21px}.sub{font-size:11px;color:#718b79}.tickets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.ticket{border:1px solid rgba(117,157,130,.16);background:linear-gradient(150deg,#0d2017,#081810);box-shadow:0 16px 42px rgba(0,0,0,.16);overflow:hidden}.ticket-top{padding:14px 17px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid rgba(216,168,47,.11);background:linear-gradient(90deg,rgba(216,168,47,.08),transparent)}.ticket-id{font-size:10px;color:var(--gold2);font-weight:950;letter-spacing:.1em;text-transform:uppercase}.book{font-size:10px;padding:6px 8px;border-radius:8px;border:1px solid rgba(216,168,47,.28);color:#ead38a;background:rgba(216,168,47,.07)}.legs{display:grid;grid-template-columns:1fr 42px 1fr;align-items:stretch}.leg{padding:17px}.plus{display:grid;place-items:center;color:#8b7540;font-weight:950;font-size:21px}.leg-label{font-size:8px;color:#6f8978;text-transform:uppercase;letter-spacing:.09em;font-weight:900}.pick{font-size:18px;font-weight:950;margin-top:5px}.vs{font-size:10px;color:#789080;margin-top:3px}.meta{font-size:10px;color:#708777;margin-top:8px;line-height:1.5}.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:11px}.metric{padding:8px 9px;border:1px solid rgba(117,157,130,.11);background:#08170f}.metric small{display:block;color:#617869;font-size:7px;text-transform:uppercase;letter-spacing:.08em}.metric b{display:block;margin-top:3px;font-size:13px}.ticket-foot{padding:13px 17px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-top:1px solid rgba(117,157,130,.12);background:#07140d}.sum{padding:9px;border:1px solid rgba(117,157,130,.1)}.sum small{display:block;color:#637a6a;font-size:7px;text-transform:uppercase;letter-spacing:.08em}.sum b{display:block;margin-top:4px;font-size:15px}.empty{grid-column:1/-1;padding:34px;text-align:center;color:#748c7b;border:1px dashed #284432;background:rgba(9,25,16,.65)}.rules{margin-top:25px;padding:16px 18px;border:1px solid rgba(117,157,130,.13);background:#091a11;color:#829889;font-size:11px;line-height:1.7}.rules b{color:#d6e4da}.footer{text-align:center;color:#526b5a;font-size:10px;padding:34px 0 4px}
+@media(max-width:980px){.tickets{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.shell{padding:0 13px 40px}.top{position:relative;padding:12px 0;align-items:flex-start}.brand img{width:52px;height:52px}.actions{flex-wrap:wrap;justify-content:flex-end}.hero{grid-template-columns:1fr;padding:20px}.datebox{min-width:0}.kpis{grid-template-columns:1fr 1fr}.legs{grid-template-columns:1fr}.plus{height:30px}.ticket-foot{grid-template-columns:1fr 1fr}.ticket-foot .sum:last-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top">
+  <div class="brand"><img src="assets/investbet.webp" alt="InvestBet"><div><b>INVESTBET</b><small>Tennis Intelligence • Bilhetes</small></div></div>
+  <div class="actions"><a class="btn" href="./">← Painel principal</a><button class="btn primary" id="refreshBtn" type="button">↻ Atualizar bilhetes</button></div>
+</header>
+<section class="hero">
+  <div><div class="eyebrow">Duplas automáticas D+1</div><h1>Bilhetes montados com 2 jogos</h1><p>Cada bilhete usa duas partidas diferentes. O gerador escolhe a previsão mais provável de cada confronto e aceita o jogo quando a probabilidade individual do modelo é de pelo menos 50%. Os pares mais fortes ficam no topo.</p></div>
+  <div class="datebox"><small>Data dos jogos</small><b id="boardDate">—</b></div>
+</section>
+<div class="kpis">
+  <div class="kpi"><small>Jogos elegíveis</small><b id="eligibleCount">0</b><span>probabilidade ≥ 50%</span></div>
+  <div class="kpi"><small>Bilhetes montados</small><b class="good" id="ticketCount">0</b><span>2 jogos por bilhete</span></div>
+  <div class="kpi"><small>Maior odd dupla</small><b class="gold" id="maxOdd">—</b><span>mesma casa quando possível</span></div>
+  <div class="kpi"><small>Melhor prob. conjunta</small><b id="maxProb">—</b><span>estimativa simples</span></div>
+</div>
+<div class="notice" id="timeNotice"></div>
+<div class="head"><div><div class="eyebrow">Lista operacional</div><h2>Bilhetes de amanhã</h2></div><div class="sub" id="updatedAt">Carregando...</div></div>
+<div class="tickets" id="tickets"></div>
+<div class="rules"><b>Regra desta página:</b> 50% é o piso de cada jogo individual, não do bilhete inteiro. A probabilidade conjunta exibida é a multiplicação simples das duas probabilidades do modelo e pode ficar abaixo de 50%. Quando os dois jogos possuem cotação em uma mesma casa, a odd do bilhete é calculada nessa mesma casa; casas prioritárias para o Brasil são consideradas primeiro. Horários suspeitos/repetidos vindos da fonte são mostrados como “a confirmar” para não tratar horário provisório como oficial.</div>
+<div class="footer">InvestBet Tennis Intelligence • Board automático D+1</div>
+</div>
+<script>
+const PRIORITY_BOOKS=['bet365','betano','betfair','superbet','sportingbet','kto','novibet','pixbet','estrelabet','rivalo'];
+const $=id=>document.getElementById(id);
+const pct=v=>Number.isFinite(Number(v))?`${(Number(v)*100).toFixed(1)}%`:'—';
+const num=v=>Number.isFinite(Number(v))?Number(v):null;
+const fmtDate=s=>{if(!s)return'—';const [y,m,d]=String(s).split('-');return y&&m&&d?`${d}/${m}/${y}`:s};
+const norm=s=>String(s||'').trim().toLowerCase().replace(/[^a-z0-9]+/g,'');
+
+function allCandidates(data){return [...(data.approved||[]),...(data.shadow||[]),...(data.rejected||[])];}
+function bestPerMatch(data){
+  const map=new Map();
+  for(const row of allCandidates(data)){
+    const id=row?.match?.match_id; if(!id)continue;
+    const p=num(row.final_probability); const odd=num(row.odd ?? row?.selected_market?.best_odd);
+    if(p===null||p<0.50||odd===null||odd<=1)continue;
+    const prev=map.get(id);
+    if(!prev||p>num(prev.final_probability)||(p===num(prev.final_probability)&&num(row.confidence)>num(prev.confidence))) map.set(id,row);
+  }
+  return [...map.values()].sort((a,b)=>(num(b.final_probability)-num(a.final_probability))||(num(b.confidence)-num(a.confidence))||(num(b.data_quality)-num(a.data_quality)));
+}
+function commonBook(a,b){
+  const ao=a?.selected_market?.bookmaker_odds||{}; const bo=b?.selected_market?.bookmaker_odds||{};
+  const bLookup=new Map(Object.entries(bo).map(([k,v])=>[norm(k),{name:k,odd:num(v)}]));
+  const common=[];
+  for(const [name,rawOdd] of Object.entries(ao)){
+    const x=num(rawOdd), y=bLookup.get(norm(name));
+    if(x&&x>1&&y?.odd&&y.odd>1) common.push({name,odd1:x,odd2:y.odd,combined:x*y,priority:PRIORITY_BOOKS.indexOf(norm(name))});
+  }
+  if(!common.length)return null;
+  const preferred=common.filter(x=>x.priority>=0);
+  const pool=preferred.length?preferred:common;
+  pool.sort((a,b)=>b.combined-a.combined || (a.priority<0?999:a.priority)-(b.priority<0?999:b.priority));
+  return pool[0];
+}
+function timeQuality(rows){
+  const counts={};
+  for(const r of rows){const t=String(r?.match?.time||'').trim();if(t)counts[t]=(counts[t]||0)+1;}
+  const suspect=new Set(Object.entries(counts).filter(([,n])=>n>=4).map(([t])=>t));
+  return {suspect,counts};
+}
+function displayTime(row,suspect){const t=String(row?.match?.time||'').trim();return !t||suspect.has(t)?'Horário a confirmar':t;}
+function pairRows(rows){const out=[];for(let i=0;i+1<rows.length;i+=2)out.push([rows[i],rows[i+1]]);return out;}
+function bestOddFallback(row){return num(row.odd ?? row?.selected_market?.best_odd) || 1;}
+function opponentName(row){return row?.opponent?.name || (row?.match?.player_a?.name===row?.selected_player?.name?row?.match?.player_b?.name:row?.match?.player_a?.name) || 'adversário';}
+function legHtml(row,index,suspect,book){
+  const player=row?.selected_player?.name||'—'; const opp=opponentName(row); const p=num(row.final_probability)||0;
+  const odd=book?(index===0?book.odd1:book.odd2):bestOddFallback(row);
+  const time=displayTime(row,suspect); const tour=String(row?.match?.tournament||'ATP').replace(/^ATP\s+/i,'');
+  return `<div class="leg"><div class="leg-label">Jogo ${index+1} • vencedor da partida</div><div class="pick">${player} para vencer</div><div class="vs">vs ${opp}</div><div class="meta">${fmtDate(row?.match?.date)} • ${time} • ${tour}</div><div class="metrics"><div class="metric"><small>Probabilidade</small><b>${pct(p)}</b></div><div class="metric"><small>Odd no bilhete</small><b>${odd.toFixed(2)}</b></div><div class="metric"><small>Confiança</small><b>${(num(row.confidence)||0).toFixed(1)}</b></div><div class="metric"><small>Edge</small><b>${(num(row.edge_pp)||0).toFixed(1)} pp</b></div></div></div>`;
+}
+function ticketHtml(pair,index,suspect){
+  const [a,b]=pair; const book=commonBook(a,b); const oa=book?book.odd1:bestOddFallback(a), ob=book?book.odd2:bestOddFallback(b);
+  const combinedOdd=oa*ob; const combinedProb=(num(a.final_probability)||0)*(num(b.final_probability)||0); const avgProb=((num(a.final_probability)||0)+(num(b.final_probability)||0))/2;
+  const bookLabel=book?`${book.name} • mesma casa`:'Odds individuais • confirmar casa comum';
+  return `<article class="ticket"><div class="ticket-top"><div class="ticket-id">Bilhete #${index+1}</div><div class="book">${bookLabel}</div></div><div class="legs">${legHtml(a,0,suspect,book)}<div class="plus">+</div>${legHtml(b,1,suspect,book)}</div><div class="ticket-foot"><div class="sum"><small>Odd dupla</small><b class="gold">${combinedOdd.toFixed(2)}</b></div><div class="sum"><small>Prob. conjunta est.</small><b>${pct(combinedProb)}</b></div><div class="sum"><small>Prob. média das pernas</small><b>${pct(avgProb)}</b></div></div></article>`;
+}
+async function render(){
+  const btn=$('refreshBtn'); btn.disabled=true; btn.textContent='⏳ Atualizando';
+  try{
+    const res=await fetch(`./data.json?t=${Date.now()}`,{cache:'no-store'}); if(!res.ok)throw new Error(`DATA_${res.status}`); const data=await res.json();
+    $('boardDate').textContent=fmtDate(data.board_date||data.date);
+    const rows=bestPerMatch(data); const pairs=pairRows(rows); const tq=timeQuality(rows);
+    $('eligibleCount').textContent=rows.length; $('ticketCount').textContent=pairs.length;
+    const odds=pairs.map(p=>{const b=commonBook(...p);return b?b.combined:bestOddFallback(p[0])*bestOddFallback(p[1])});
+    const probs=pairs.map(p=>(num(p[0].final_probability)||0)*(num(p[1].final_probability)||0));
+    $('maxOdd').textContent=odds.length?Math.max(...odds).toFixed(2):'—'; $('maxProb').textContent=probs.length?pct(Math.max(...probs)):'—';
+    $('updatedAt').textContent=data.last_run_at?`Última análise: ${new Date(data.last_run_at).toLocaleString('pt-BR')}`:'Board D+1';
+    const notice=$('timeNotice');
+    if(tq.suspect.size){notice.classList.add('show');notice.textContent=`Horários provisórios detectados (${[...tq.suspect].join(', ')} repetido em vários jogos). Esta página vai mostrar “Horário a confirmar” até a fonte publicar a grade real.`}else{notice.classList.remove('show');notice.textContent=''}
+    $('tickets').innerHTML=pairs.length?pairs.map((p,i)=>ticketHtml(p,i,tq.suspect)).join(''):`<div class="empty">Ainda não há pelo menos 2 partidas com previsão individual de 50% ou mais no board atual.</div>`;
+  }catch(e){console.error(e);$('tickets').innerHTML='<div class="empty">Não foi possível carregar o board agora. Tente atualizar novamente em instantes.</div>'}
+  finally{btn.disabled=false;btn.textContent='↻ Atualizar bilhetes';}
+}
+$('refreshBtn').onclick=render;render();setInterval(render,60000);
+</script>
+</body>
+</html>
