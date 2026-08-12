@@ -45,10 +45,13 @@ def test_daily_history_keeps_bookmakers_and_final_result(tmp_path):
 
     ledger = record_analysis_history(tmp_path, "2026-08-11", [match], odds, [candidate], "test-v1", "TestSource")
     game = ledger["games"][0]
+    assert game["date"] == "2026-08-11"
     assert game["market"]["bookmakers"] == ["Betano", "Pinnacle"]
     assert game["analyses"][0]["bookmaker_odds"] == {"Betano": 1.75, "Pinnacle": 1.78}
     assert game["result"]["resolved"] is False
     assert len(game["snapshots"]) == 1
+    assert ledger["summary"]["analyzed_games"] == 1
+    assert ledger["summary"]["resolved_model_picks"] == 0
 
     # Same data should not create a duplicate market snapshot.
     ledger = record_analysis_history(tmp_path, "2026-08-11", [match], odds, [candidate], "test-v1", "TestSource")
@@ -64,3 +67,7 @@ def test_daily_history_keeps_bookmakers_and_final_result(tmp_path):
     assert saved["games"][0]["result"]["score"] == "2 - 0"
     assert saved["summary"]["wins"] == 1
     assert saved["summary"]["accuracy"] == 1.0
+    assert saved["summary"]["resolved_model_picks"] == 1
+    assert saved["summary"]["model_hits"] == 1
+    assert saved["summary"]["model_misses"] == 0
+    assert saved["summary"]["model_accuracy"] == 1.0
