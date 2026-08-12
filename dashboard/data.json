@@ -110,9 +110,9 @@
       "misses": 3,
       "n": 5
     },
-    "updated_at": "2026-08-12T19:10:06.457121+00:00"
+    "updated_at": "2026-08-12T19:37:57.067169+00:00"
   },
-  "last_run_at": "2026-08-12T16:10:44.877740-03:00",
+  "last_run_at": "2026-08-12T16:38:32.136809-03:00",
   "learning_summary": {
     "matches": 20,
     "status": "PROVISIONAL_D1"
@@ -695,12 +695,12 @@
       }
     },
     {
-      "confidence": 38.9848039807034,
+      "confidence": 38.84779740623783,
       "data_quality": 1.0,
-      "disagreement_pp": 10.474071793301857,
-      "edge_pp": 3.3676920439269176,
+      "disagreement_pp": 10.460217074657752,
+      "edge_pp": 3.2360680969184874,
       "failed_gates": 3,
-      "final_probability": 0.503970300949368,
+      "final_probability": 0.504830919064423,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -734,10 +734,10 @@
         "best_odd": 1.9,
         "bookmaker_odds": {
           "BetVictor": 1.8,
-          "Betsson": 1.73,
-          "Betway": 1.73,
+          "Betsson": 1.72,
+          "Betway": 1.8,
           "Coral": 1.25,
-          "Interwetten": 1.75,
+          "Interwetten": 1.7,
           "Ladbrokes": 1.25,
           "Unibet": 1.65,
           "bet-at-home": 1.35,
@@ -745,8 +745,8 @@
           "bwin": 1.9
         },
         "bookmakers": 10,
-        "fair_probability": 0.47029338051009884,
-        "median_odd": 1.73,
+        "fair_probability": 0.47247023809523814,
+        "median_odd": 1.71,
         "player_key": "209976"
       },
       "selected_player": {
@@ -756,7 +756,7 @@
       "signals": {
         "elo": 0.49355068828000614,
         "fatigue": 0.5,
-        "market": 0.47029338051009884,
+        "market": 0.47247023809523814,
         "recent_form": 0.752273487413988,
         "season_profile": 0.5,
         "serve": 0.5262517934749738,
@@ -2900,96 +2900,6 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 38.9848039807034,
-      "data_quality": 1.0,
-      "disagreement_pp": 10.474071793301857,
-      "edge_pp": 3.3676920439269176,
-      "final_probability": 0.503970300949368,
-      "market_probability": 0.47029338051009884,
-      "match": {
-        "date": "2026-08-13",
-        "event_type": "ATP Singles",
-        "match_id": "pub-d2729923e8f3bdc70788",
-        "player_a": {
-          "key": "111815",
-          "name": "Cameron Norrie"
-        },
-        "player_b": {
-          "key": "209976",
-          "name": "Dino Prizmic"
-        },
-        "raw": {},
-        "status": "",
-        "surface": "Hard",
-        "time": "",
-        "tournament": "ATP Cincinnati",
-        "winner": null
-      },
-      "model_version": "champion-v0.3.3-sequential",
-      "opponent": {
-        "key": "111815",
-        "name": "Cameron Norrie"
-      },
-      "opponent_market": {
-        "best_odd": 2.5,
-        "bookmaker_odds": {
-          "BetVictor": 1.5,
-          "Betsson": 1.5,
-          "Betway": 1.5,
-          "Coral": 1.5,
-          "Interwetten": 1.5,
-          "Ladbrokes": 1.5,
-          "Unibet": 1.5,
-          "bet-at-home": 2.5,
-          "bet365": 1.5,
-          "bwin": 2.5
-        },
-        "bookmakers": 10,
-        "fair_probability": 0.5297066194899012,
-        "median_odd": 1.5,
-        "player_key": "111815"
-      },
-      "rank": null,
-      "reject_reasons": [
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_market": {
-        "best_odd": 1.9,
-        "bookmaker_odds": {
-          "BetVictor": 1.8,
-          "Betsson": 1.73,
-          "Betway": 1.73,
-          "Coral": 1.25,
-          "Interwetten": 1.75,
-          "Ladbrokes": 1.25,
-          "Unibet": 1.65,
-          "bet-at-home": 1.35,
-          "bet365": 1.8,
-          "bwin": 1.9
-        },
-        "bookmakers": 10,
-        "fair_probability": 0.47029338051009884,
-        "median_odd": 1.73,
-        "player_key": "209976"
-      },
-      "selected_player": {
-        "key": "209976",
-        "name": "Dino Prizmic"
-      },
-      "signals": {
-        "elo": 0.49355068828000614,
-        "fatigue": 0.5,
-        "market": 0.47029338051009884,
-        "recent_form": 0.752273487413988,
-        "season_profile": 0.5,
-        "serve": 0.5262517934749738,
-        "surface_elo": 0.38264633371874146
-      },
-      "status": "REJECTED"
-    },
-    {
       "confidence": 38.94946774549986,
       "data_quality": 0.9080000000000001,
       "disagreement_pp": 3.8723002406301354,
@@ -3077,6 +2987,96 @@
         "recent_form": 0.5729861519929653,
         "season_profile": 0.47115384615384615,
         "surface_elo": 0.446054613068624
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 38.84779740623783,
+      "data_quality": 1.0,
+      "disagreement_pp": 10.460217074657752,
+      "edge_pp": 3.2360680969184874,
+      "final_probability": 0.504830919064423,
+      "market_probability": 0.47247023809523814,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-d2729923e8f3bdc70788",
+        "player_a": {
+          "key": "111815",
+          "name": "Cameron Norrie"
+        },
+        "player_b": {
+          "key": "209976",
+          "name": "Dino Prizmic"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "111815",
+        "name": "Cameron Norrie"
+      },
+      "opponent_market": {
+        "best_odd": 2.5,
+        "bookmaker_odds": {
+          "BetVictor": 1.5,
+          "Betsson": 1.5,
+          "Betway": 1.5,
+          "Coral": 1.5,
+          "Interwetten": 1.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 1.5,
+          "bet-at-home": 2.5,
+          "bet365": 1.5,
+          "bwin": 2.5
+        },
+        "bookmakers": 10,
+        "fair_probability": 0.5275297619047619,
+        "median_odd": 1.5,
+        "player_key": "111815"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.9,
+        "bookmaker_odds": {
+          "BetVictor": 1.8,
+          "Betsson": 1.72,
+          "Betway": 1.8,
+          "Coral": 1.25,
+          "Interwetten": 1.7,
+          "Ladbrokes": 1.25,
+          "Unibet": 1.65,
+          "bet-at-home": 1.35,
+          "bet365": 1.8,
+          "bwin": 1.9
+        },
+        "bookmakers": 10,
+        "fair_probability": 0.47247023809523814,
+        "median_odd": 1.71,
+        "player_key": "209976"
+      },
+      "selected_player": {
+        "key": "209976",
+        "name": "Dino Prizmic"
+      },
+      "signals": {
+        "elo": 0.49355068828000614,
+        "fatigue": 0.5,
+        "market": 0.47247023809523814,
+        "recent_form": 0.752273487413988,
+        "season_profile": 0.5,
+        "serve": 0.5262517934749738,
+        "surface_elo": 0.38264633371874146
       },
       "status": "REJECTED"
     },
@@ -4152,12 +4152,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 32.52592820669815,
+      "confidence": 32.53978292534225,
       "data_quality": 1.0,
-      "disagreement_pp": 10.474071793301855,
-      "edge_pp": -3.3676920439269233,
-      "final_probability": 0.49602969905063193,
-      "market_probability": 0.5297066194899012,
+      "disagreement_pp": 10.460217074657749,
+      "edge_pp": -3.236068096918493,
+      "final_probability": 0.49516908093557693,
+      "market_probability": 0.5275297619047619,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -4186,10 +4186,10 @@
         "best_odd": 1.9,
         "bookmaker_odds": {
           "BetVictor": 1.8,
-          "Betsson": 1.73,
-          "Betway": 1.73,
+          "Betsson": 1.72,
+          "Betway": 1.8,
           "Coral": 1.25,
-          "Interwetten": 1.75,
+          "Interwetten": 1.7,
           "Ladbrokes": 1.25,
           "Unibet": 1.65,
           "bet-at-home": 1.35,
@@ -4197,8 +4197,8 @@
           "bwin": 1.9
         },
         "bookmakers": 10,
-        "fair_probability": 0.47029338051009884,
-        "median_odd": 1.73,
+        "fair_probability": 0.47247023809523814,
+        "median_odd": 1.71,
         "player_key": "209976"
       },
       "rank": null,
@@ -4223,7 +4223,7 @@
           "bwin": 2.5
         },
         "bookmakers": 10,
-        "fair_probability": 0.5297066194899012,
+        "fair_probability": 0.5275297619047619,
         "median_odd": 1.5,
         "player_key": "111815"
       },
@@ -4234,7 +4234,7 @@
       "signals": {
         "elo": 0.5064493117199939,
         "fatigue": 0.5,
-        "market": 0.5297066194899012,
+        "market": 0.5275297619047619,
         "recent_form": 0.24772651258601203,
         "season_profile": 0.5,
         "serve": 0.47374820652502625,
@@ -4432,6 +4432,11 @@
   "result_reconciliation": {
     "resolved": 0,
     "status": "OK"
+  },
+  "sequence_summary": {
+    "created_at": "2026-08-12T19:37:49.274877+00:00",
+    "games": 6,
+    "status": "FROZEN"
   },
   "shadow": [],
   "source_requests": 1,

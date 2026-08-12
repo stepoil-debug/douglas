@@ -660,50 +660,6 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 38.9848039807034,
-      "data_quality": 1.0,
-      "date": "2026-08-13",
-      "decision": "REJECTED",
-      "disagreement_pp": 10.474071793301857,
-      "edge_pp": 3.3676920439269176,
-      "final_probability": 0.503970300949368,
-      "match_id": "pub-d2729923e8f3bdc70788",
-      "odd": 1.9,
-      "opponent": {
-        "key": "111815",
-        "name": "Cameron Norrie"
-      },
-      "predicted_player": {
-        "key": "209976",
-        "name": "Dino Prizmic"
-      },
-      "rank": null,
-      "reject_reasons": [
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
-      },
-      "signals": {
-        "elo": 0.49355068828000614,
-        "fatigue": 0.5,
-        "market": 0.47029338051009884,
-        "recent_form": 0.752273487413988,
-        "season_profile": 0.5,
-        "serve": 0.5262517934749738,
-        "surface_elo": 0.38264633371874146
-      },
-      "surface": "Hard",
-      "time": "",
-      "tournament": "ATP Cincinnati"
-    },
-    {
-      "bookmakers": 10,
       "confidence": 38.94946774549986,
       "data_quality": 0.9080000000000001,
       "date": "2026-08-13",
@@ -742,6 +698,50 @@
         "recent_form": 0.5729861519929653,
         "season_profile": 0.47115384615384615,
         "surface_elo": 0.446054613068624
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    },
+    {
+      "bookmakers": 10,
+      "confidence": 38.84779740623783,
+      "data_quality": 1.0,
+      "date": "2026-08-13",
+      "decision": "REJECTED",
+      "disagreement_pp": 10.460217074657752,
+      "edge_pp": 3.2360680969184874,
+      "final_probability": 0.504830919064423,
+      "match_id": "pub-d2729923e8f3bdc70788",
+      "odd": 1.9,
+      "opponent": {
+        "key": "111815",
+        "name": "Cameron Norrie"
+      },
+      "predicted_player": {
+        "key": "209976",
+        "name": "Dino Prizmic"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.49355068828000614,
+        "fatigue": 0.5,
+        "market": 0.47247023809523814,
+        "recent_form": 0.752273487413988,
+        "season_profile": 0.5,
+        "serve": 0.5262517934749738,
+        "surface_elo": 0.38264633371874146
       },
       "surface": "Hard",
       "time": "",
@@ -885,5 +885,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-12T19:10:44.876684+00:00"
+  "updated_at": "2026-08-12T19:38:32.135518+00:00"
 }
