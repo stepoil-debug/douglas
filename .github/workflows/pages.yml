@@ -52,9 +52,16 @@ jobs:
 
           index_path = Path('dashboard/index.html')
           html = index_path.read_text(encoding='utf-8')
-          trigger = '<script src="manual-trigger.js"></script>'
-          if trigger not in html:
-              html = html.replace('</body>', f'{trigger}</body>')
+          scripts = [
+              '<script src="manual-trigger.js"></script>',
+              '<script src="history-audit.js"></script>',
+          ]
+          changed = False
+          for trigger in scripts:
+              if trigger not in html:
+                  html = html.replace('</body>', f'{trigger}</body>')
+                  changed = True
+          if changed:
               index_path.write_text(html, encoding='utf-8')
 
           out = []
