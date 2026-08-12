@@ -36,11 +36,14 @@
         "name": "Hugo Dellien"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-12T01:20:42.572791+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-12T11:12:55.261380+00:00",
+        "winner": {
+          "key": "200647",
+          "name": "Sho Shimabukuro"
+        }
       },
       "snapshots": [
         {
@@ -4283,5 +4286,5 @@
     "resolved_approved": 0,
     "wins": 0
   },
-  "updated_at": "2026-08-12T01:20:42.572979+00:00"
+  "updated_at": "2026-08-12T11:12:55.261400+00:00"
 }
