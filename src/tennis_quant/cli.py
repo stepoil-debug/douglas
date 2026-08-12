@@ -14,6 +14,7 @@ from tennis_quant.learning import aggregate_knowledge, record_learning_board
 from tennis_quant.pipeline import analyze_day
 from tennis_quant.providers.public_tennis import PublicTennisProvider
 from tennis_quant.results import aggregate_metrics, reconcile_recent
+from tennis_quant.sequence import freeze_sequence
 from tennis_quant.storage import write_json
 
 TIMEZONE = ZoneInfo("America/Sao_Paulo")
@@ -146,6 +147,13 @@ def main() -> None:
     provider = PublicTennisProvider(ROOT)
     board_path = ROOT / "data" / "boards" / f"{board_date.isoformat()}.json"
 
+    # Freeze the already-published six-game list before any new market refresh can
+    # change the ranking. If the list for this board date was already created, this
+    # call is a no-op and the selections remain immutable.
+    published_board = _read_json(ROOT / "dashboard" / "data.json")
+    if str(published_board.get("board_date") or "") == board_date.isoformat():
+        freeze_sequence(ROOT, published_board)
+
     # Lane 1: current/past dates are result-only. Their pre-match thesis is never
     # recomputed after the day rolls over.
     try:
@@ -189,12 +197,18 @@ def main() -> None:
             cfg["model_version"],
             provider.live_source,
         )
+        sequence = freeze_sequence(ROOT, payload)
         payload["board_status"] = "PROVISIONAL_UNTIL_DAY_ROLLOVER"
         payload["refresh_status"] = "SUCCESS"
         payload["history_summary"] = ledger.get("summary", {})
         payload["learning_summary"] = {
             "matches": len(learning.get("matches", [])),
             "status": learning.get("status"),
+        }
+        payload["sequence_summary"] = {
+            "status": sequence.get("status"),
+            "games": len(sequence.get("games", []) or []),
+            "created_at": sequence.get("created_at"),
         }
         payload["result_reconciliation"] = reconciliation
         payload["metrics"] = metrics
@@ -234,6 +248,7 @@ def main() -> None:
         "approved": len(payload.get("approved", []) or []),
         "shadow": len(payload.get("shadow", []) or []),
         "near_misses": len(payload.get("near_misses", []) or []),
+        "sequence": payload.get("sequence_summary"),
         "learning_matches": (payload.get("learning_summary") or {}).get("matches", 0),
         "knowledge_resolved": (knowledge.get("overall") or {}).get("n", 0),
         "results_reconciled": len(resolved),
