@@ -2,7 +2,7 @@
   "date": "2026-08-12",
   "matches": [
     {
-      "bookmakers": 10,
+      "bookmakers": 11,
       "confidence": 47.86515059042322,
       "data_quality": 1.0,
       "date": "2026-08-12",
@@ -135,5 +135,5 @@
   "model_version": "champion-v0.3.0-no-api",
   "source": "TennisExplorer schedule",
   "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-12T00:08:53.862901+00:00"
+  "updated_at": "2026-08-12T01:20:42.583929+00:00"
 }

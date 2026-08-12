@@ -20,14 +20,15 @@
   ],
   "date": "2026-08-12",
   "deep_analyzed_matches": 3,
-  "fixtures_analyzed": 8,
+  "fixtures_analyzed": 9,
   "generated_at_timezone": "America/Sao_Paulo",
   "history_summary": {
     "accuracy": null,
     "approved": 0,
-    "bookmaker_count": 12,
+    "bookmaker_count": 13,
     "bookmakers": [
       "bet-at-home",
+      "bet365",
       "Betfair",
       "Betsson",
       "BetVictor",
@@ -40,7 +41,7 @@
       "Unibet",
       "William Hill"
     ],
-    "games": 8,
+    "games": 9,
     "losses": 0,
     "resolved_approved": 0,
     "wins": 0
@@ -68,14 +69,14 @@
       "misses": 0,
       "n": 0
     },
-    "updated_at": "2026-08-12T00:08:46.375248+00:00"
+    "updated_at": "2026-08-12T01:20:33.917223+00:00"
   },
-  "last_run_at": "2026-08-11T21:08:53.863215-03:00",
+  "last_run_at": "2026-08-11T22:20:42.584197-03:00",
   "learning_summary": {
     "matches": 3,
     "status": "PROVISIONAL_D1"
   },
-  "matches_with_odds": 8,
+  "matches_with_odds": 9,
   "metrics": {
     "last_10": {
       "accuracy": null,
@@ -141,7 +142,7 @@
       "selected_market": {
         "best_odd": 1.95,
         "bookmaker_odds": {},
-        "bookmakers": 10,
+        "bookmakers": 11,
         "fair_probability": 0.4932614555256065,
         "median_odd": 1.88,
         "player_key": "207686"
@@ -198,7 +199,7 @@
       "selected_market": {
         "best_odd": 1.85,
         "bookmaker_odds": {},
-        "bookmakers": 10,
+        "bookmakers": 11,
         "fair_probability": 0.5067385444743935,
         "median_odd": 1.83,
         "player_key": "106331"
@@ -332,7 +333,7 @@
     }
   ],
   "operational_date": "2026-08-11",
-  "prematch_atp_singles": 8,
+  "prematch_atp_singles": 9,
   "refresh_error": null,
   "refresh_status": "SUCCESS",
   "rejected": [
@@ -370,7 +371,7 @@
       "opponent_market": {
         "best_odd": 1.85,
         "bookmaker_odds": {},
-        "bookmakers": 10,
+        "bookmakers": 11,
         "fair_probability": 0.5067385444743935,
         "median_odd": 1.83,
         "player_key": "106331"
@@ -384,7 +385,7 @@
       "selected_market": {
         "best_odd": 1.95,
         "bookmaker_odds": {},
-        "bookmakers": 10,
+        "bookmakers": 11,
         "fair_probability": 0.4932614555256065,
         "median_odd": 1.88,
         "player_key": "207686"
@@ -437,7 +438,7 @@
       "opponent_market": {
         "best_odd": 1.95,
         "bookmaker_odds": {},
-        "bookmakers": 10,
+        "bookmakers": 11,
         "fair_probability": 0.4932614555256065,
         "median_odd": 1.88,
         "player_key": "207686"
@@ -451,7 +452,7 @@
       "selected_market": {
         "best_odd": 1.85,
         "bookmaker_odds": {},
-        "bookmakers": 10,
+        "bookmakers": 11,
         "fair_probability": 0.5067385444743935,
         "median_odd": 1.83,
         "player_key": "106331"
