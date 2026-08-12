@@ -1,8 +1,7 @@
 {
-  "status": "SUCCESS",
-  "run_id": 31622725194,
-  "run_url": "https://github.com/stepoil-debug/douglas/actions/runs/31622725194",
-  "updated_at": "2026-08-12T17:28:44.676504+00:00",
-  "message": "Board D+1, resultados e aprendizado atualizados.",
-  "board_status": "PROVISIONAL_UNTIL_DAY_ROLLOVER"
+  "status": "RUNNING",
+  "run_id": 31622975104,
+  "run_url": "https://github.com/stepoil-debug/douglas/actions/runs/31622975104",
+  "updated_at": "2026-08-12T17:30:41.042654+00:00",
+  "message": "Atualizando resultados de hoje e procurando o board D+1"
 }
