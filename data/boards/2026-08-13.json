@@ -13,27 +13,27 @@
     "start": "2025-08-11",
     "status": "READY"
   },
-  "candidate_sides": 40,
+  "candidate_sides": 68,
   "data_mode": "NO_API",
   "data_quality_diagnostics": {
     "full_analysis_before_odd_filter": true,
-    "stale_rankings_ignored": 40,
-    "surfaces_recovered": 20
+    "stale_rankings_ignored": 66,
+    "surfaces_recovered": 34
   },
   "data_sources": [
     "Live: TennisExplorer detail",
     "Histórico: Sackmann-format ATP (espelho público + fallback original)"
   ],
   "date": "2026-08-13",
-  "deep_analyzed_matches": 20,
-  "fixtures_analyzed": 20,
-  "fully_analyzed_matches": 20,
+  "deep_analyzed_matches": 34,
+  "fixtures_analyzed": 34,
+  "fully_analyzed_matches": 34,
   "generated_at_timezone": "America/Sao_Paulo",
   "h2h_budget_effective": 40,
-  "h2h_calls": 20,
+  "h2h_calls": 32,
   "history_summary": {
     "accuracy": null,
-    "analyzed_games": 20,
+    "analyzed_games": 34,
     "approved": 0,
     "bookmaker_count": 10,
     "bookmakers": [
@@ -48,7 +48,7 @@
       "Ladbrokes",
       "Unibet"
     ],
-    "games": 20,
+    "games": 34,
     "losses": 0,
     "model_accuracy": null,
     "model_hits": 0,
@@ -110,14 +110,14 @@
       "misses": 3,
       "n": 5
     },
-    "updated_at": "2026-08-12T20:10:23.834206+00:00"
+    "updated_at": "2026-08-12T21:22:39.656511+00:00"
   },
-  "last_run_at": "2026-08-12T17:10:56.904575-03:00",
+  "last_run_at": "2026-08-12T18:23:34.652143-03:00",
   "learning_summary": {
-    "matches": 20,
+    "matches": 34,
     "status": "PROVISIONAL_D1"
   },
-  "matches_with_odds": 20,
+  "matches_with_odds": 34,
   "matches_without_market": 0,
   "metrics": {
     "last_10": {
@@ -213,6 +213,72 @@
       }
     },
     {
+      "confidence": 47.7307806493205,
+      "data_quality": 0.8540000000000001,
+      "disagreement_pp": 3.6208335608746243,
+      "edge_pp": 5.032345211124106,
+      "failed_gates": 2,
+      "final_probability": 0.5265139283017173,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-f9ab157ea74250427484",
+        "player_a": {
+          "key": "126846",
+          "name": "Aleksandar Vukic"
+        },
+        "player_b": {
+          "key": "210464",
+          "name": "Darwin Blanch"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.77,
+      "opponent": {
+        "key": "126846",
+        "name": "Aleksandar Vukic"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.77,
+        "bookmaker_odds": {
+          "BetVictor": 1.75,
+          "Betsson": 1.77,
+          "Betway": 1.65,
+          "Coral": 1.22,
+          "Interwetten": 1.65,
+          "Ladbrokes": 1.22,
+          "Unibet": 1.7,
+          "bet-at-home": 1.35,
+          "bwin": 1.65
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4761904761904762,
+        "median_odd": 1.65,
+        "player_key": "210464"
+      },
+      "selected_player": {
+        "key": "210464",
+        "name": "Darwin Blanch"
+      },
+      "signals": {
+        "elo": 0.5789519305288946,
+        "fatigue": 0.5,
+        "market": 0.47619047619047616,
+        "recent_form": 0.5453684910635344,
+        "season_profile": 0.5625,
+        "surface_elo": 0.5549428480749672
+      }
+    },
+    {
       "confidence": 47.89427097585632,
       "data_quality": 1.0,
       "disagreement_pp": 6.348652172881727,
@@ -282,12 +348,79 @@
       }
     },
     {
-      "confidence": 44.16805097236149,
-      "data_quality": 0.992,
-      "disagreement_pp": 8.479799126140268,
-      "edge_pp": -8.131621185282023,
+      "confidence": 45.97683252658867,
+      "data_quality": 0.8260000000000001,
+      "disagreement_pp": 5.159486019421026,
+      "edge_pp": -4.401605408362929,
       "failed_gates": 3,
-      "final_probability": 0.5983185009850176,
+      "final_probability": 0.621383185460097,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-e79518c4b1e13f6213ad",
+        "player_a": {
+          "key": "208852",
+          "name": "Stefanos Sakellaridis"
+        },
+        "player_b": {
+          "key": "208169",
+          "name": "Titouan Droguet"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.86,
+      "opponent": {
+        "key": "208852",
+        "name": "Stefanos Sakellaridis"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.86,
+        "bookmaker_odds": {
+          "BetVictor": 1.8,
+          "Betsson": 1.76,
+          "Betway": 1.25,
+          "Coral": 1.8,
+          "Interwetten": 1.43,
+          "Ladbrokes": 1.8,
+          "Unibet": 1.86,
+          "bet-at-home": 1.23,
+          "bwin": 1.72
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.6653992395437263,
+        "median_odd": 1.76,
+        "player_key": "208169"
+      },
+      "selected_player": {
+        "key": "208169",
+        "name": "Titouan Droguet"
+      },
+      "signals": {
+        "elo": 0.5684690921966962,
+        "fatigue": 0.5,
+        "market": 0.6653992395437263,
+        "recent_form": 0.6065260526074134,
+        "season_profile": 0.6285714285714286,
+        "surface_elo": 0.6002392936344529
+      }
+    },
+    {
+      "confidence": 44.01840291277192,
+      "data_quality": 0.992,
+      "disagreement_pp": 8.345237058000729,
+      "edge_pp": -7.69694687228456,
+      "failed_gates": 3,
+      "final_probability": 0.5954763997077265,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -329,10 +462,10 @@
           "Unibet": 1.68,
           "bet-at-home": 1.13,
           "bet365": 1.83,
-          "bwin": 1.62
+          "bwin": 1.83
         },
         "bookmakers": 10,
-        "fair_probability": 0.6796347128378378,
+        "fair_probability": 0.6724458684305721,
         "median_odd": 1.61,
         "player_key": "128034"
       },
@@ -343,11 +476,78 @@
       "signals": {
         "elo": 0.5377187413877358,
         "fatigue": 0.5,
-        "market": 0.6796347128378378,
+        "market": 0.6724458684305721,
         "recent_form": 0.6280874491523915,
         "season_profile": 0.5119047619047619,
         "serve": 0.6656582951761616,
         "surface_elo": 0.44128414816370265
+      }
+    },
+    {
+      "confidence": 43.953755842204316,
+      "data_quality": 0.9120000000000001,
+      "disagreement_pp": 9.971824980200623,
+      "edge_pp": 2.266359727678313,
+      "failed_gates": 3,
+      "final_probability": 0.5887013331258397,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-279c14245172e0bd06d7",
+        "player_a": {
+          "key": "106218",
+          "name": "Marcos Giron"
+        },
+        "player_b": {
+          "key": "210012",
+          "name": "Henrique Rocha"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.85,
+      "opponent": {
+        "key": "106218",
+        "name": "Marcos Giron"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.85,
+        "bookmaker_odds": {
+          "BetVictor": 1.8,
+          "Betsson": 1.72,
+          "Betway": 1.5,
+          "Coral": 1.15,
+          "Interwetten": 1.55,
+          "Ladbrokes": 1.15,
+          "Unibet": 1.65,
+          "bet-at-home": 1.3,
+          "bwin": 1.85
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5660377358490566,
+        "median_odd": 1.55,
+        "player_key": "210012"
+      },
+      "selected_player": {
+        "key": "210012",
+        "name": "Henrique Rocha"
+      },
+      "signals": {
+        "elo": 0.5723772149444941,
+        "fatigue": 0.5,
+        "market": 0.5660377358490567,
+        "recent_form": 0.8,
+        "season_profile": 0.5357142857142857,
+        "surface_elo": 0.5277694951149497
       }
     },
     {
@@ -489,6 +689,73 @@
       }
     },
     {
+      "confidence": 41.65899724706189,
+      "data_quality": 0.8280000000000001,
+      "disagreement_pp": 5.426721318187891,
+      "edge_pp": -0.09781631847115557,
+      "failed_gates": 3,
+      "final_probability": 0.5804171856524978,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-d49c851b1176fb5eeeb2",
+        "player_a": {
+          "key": "105477",
+          "name": "Marco Trungelliti"
+        },
+        "player_b": {
+          "key": "105453",
+          "name": "Kei Nishikori"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "odd": 1.82,
+      "opponent": {
+        "key": "105477",
+        "name": "Marco Trungelliti"
+      },
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.82,
+        "bookmaker_odds": {
+          "BetVictor": 1.8,
+          "Betsson": 1.82,
+          "Betway": 1.33,
+          "Coral": 1.44,
+          "Interwetten": 1.65,
+          "Ladbrokes": 1.44,
+          "Unibet": 1.77,
+          "bet-at-home": 1.33,
+          "bwin": 1.75
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5813953488372093,
+        "median_odd": 1.65,
+        "player_key": "105453"
+      },
+      "selected_player": {
+        "key": "105453",
+        "name": "Kei Nishikori"
+      },
+      "signals": {
+        "elo": 0.541290218374654,
+        "fatigue": 0.5,
+        "market": 0.5813953488372092,
+        "recent_form": 0.6763633609310651,
+        "season_profile": 0.59375,
+        "surface_elo": 0.5594412200583481
+      }
+    },
+    {
       "confidence": 40.735085210191215,
       "data_quality": 1.0,
       "disagreement_pp": 10.425146671394284,
@@ -556,285 +823,10 @@
         "serve": 0.5153554068715985,
         "surface_elo": 0.5977777104329145
       }
-    },
-    {
-      "confidence": 40.57421290108909,
-      "data_quality": 0.9080000000000001,
-      "disagreement_pp": 3.872300240630134,
-      "edge_pp": 1.979173967621789,
-      "failed_gates": 3,
-      "final_probability": 0.48062232013870015,
-      "match": {
-        "date": "2026-08-13",
-        "event_type": "ATP Singles",
-        "match_id": "pub-c2d7a987b7eb9cd7c048",
-        "player_a": {
-          "key": "209992",
-          "name": "Juncheng Shang"
-        },
-        "player_b": {
-          "key": "132283",
-          "name": "Lorenzo Sonego"
-        },
-        "raw": {},
-        "status": "",
-        "surface": "Hard",
-        "time": "",
-        "tournament": "ATP Cincinnati",
-        "winner": null
-      },
-      "odd": 1.83,
-      "opponent": {
-        "key": "209992",
-        "name": "Juncheng Shang"
-      },
-      "reject_reasons": [
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_market": {
-        "best_odd": 1.83,
-        "bookmaker_odds": {
-          "BetVictor": 1.8,
-          "Betsson": 1.76,
-          "Betway": 1.8,
-          "Coral": 1.25,
-          "Interwetten": 1.75,
-          "Ladbrokes": 1.25,
-          "Unibet": 1.77,
-          "bet-at-home": 1.33,
-          "bet365": 1.83,
-          "bwin": 1.72
-        },
-        "bookmakers": 10,
-        "fair_probability": 0.46083058046248226,
-        "median_odd": 1.755,
-        "player_key": "132283"
-      },
-      "selected_player": {
-        "key": "132283",
-        "name": "Lorenzo Sonego"
-      },
-      "signals": {
-        "elo": 0.4871967526344192,
-        "fatigue": 0.5,
-        "h2h": 0.4984042553191489,
-        "market": 0.4608305804624824,
-        "recent_form": 0.4270138480070347,
-        "season_profile": 0.5288461538461539,
-        "surface_elo": 0.553945386931376
-      }
-    },
-    {
-      "confidence": 39.949532146232826,
-      "data_quality": 0.9400000000000002,
-      "disagreement_pp": 6.899164529256975,
-      "edge_pp": -9.466312566654377,
-      "failed_gates": 3,
-      "final_probability": 0.552286966754898,
-      "match": {
-        "date": "2026-08-13",
-        "event_type": "ATP Singles",
-        "match_id": "pub-f436e7d5051e24b9da64",
-        "player_a": {
-          "key": "212021",
-          "name": "Martin Landaluce"
-        },
-        "player_b": {
-          "key": "207733",
-          "name": "Jack Draper"
-        },
-        "raw": {},
-        "status": "",
-        "surface": "Hard",
-        "time": "",
-        "tournament": "ATP Cincinnati",
-        "winner": null
-      },
-      "odd": 1.95,
-      "opponent": {
-        "key": "212021",
-        "name": "Martin Landaluce"
-      },
-      "reject_reasons": [
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_market": {
-        "best_odd": 1.95,
-        "bookmaker_odds": {
-          "BetVictor": 1.95,
-          "Betsson": 1.54,
-          "Betway": 1.33,
-          "Coral": 1.85,
-          "Interwetten": 1.55,
-          "Ladbrokes": 1.85,
-          "Unibet": 1.92,
-          "bet-at-home": 1.13,
-          "bet365": 1.91,
-          "bwin": 1.91
-        },
-        "bookmakers": 10,
-        "fair_probability": 0.6469500924214417,
-        "median_odd": 1.85,
-        "player_key": "207733"
-      },
-      "selected_player": {
-        "key": "207733",
-        "name": "Jack Draper"
-      },
-      "signals": {
-        "elo": 0.4897910241139207,
-        "fatigue": 0.5,
-        "market": 0.6469500924214417,
-        "recent_form": 0.4379283043426586,
-        "season_profile": 0.4512987012987013,
-        "surface_elo": 0.5356045431320506
-      }
-    },
-    {
-      "confidence": 38.84779740623783,
-      "data_quality": 1.0,
-      "disagreement_pp": 10.460217074657752,
-      "edge_pp": 3.2360680969184874,
-      "failed_gates": 3,
-      "final_probability": 0.504830919064423,
-      "match": {
-        "date": "2026-08-13",
-        "event_type": "ATP Singles",
-        "match_id": "pub-d2729923e8f3bdc70788",
-        "player_a": {
-          "key": "111815",
-          "name": "Cameron Norrie"
-        },
-        "player_b": {
-          "key": "209976",
-          "name": "Dino Prizmic"
-        },
-        "raw": {},
-        "status": "",
-        "surface": "Hard",
-        "time": "",
-        "tournament": "ATP Cincinnati",
-        "winner": null
-      },
-      "odd": 1.9,
-      "opponent": {
-        "key": "111815",
-        "name": "Cameron Norrie"
-      },
-      "reject_reasons": [
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_market": {
-        "best_odd": 1.9,
-        "bookmaker_odds": {
-          "BetVictor": 1.8,
-          "Betsson": 1.72,
-          "Betway": 1.8,
-          "Coral": 1.25,
-          "Interwetten": 1.7,
-          "Ladbrokes": 1.25,
-          "Unibet": 1.65,
-          "bet-at-home": 1.35,
-          "bet365": 1.8,
-          "bwin": 1.9
-        },
-        "bookmakers": 10,
-        "fair_probability": 0.47247023809523814,
-        "median_odd": 1.71,
-        "player_key": "209976"
-      },
-      "selected_player": {
-        "key": "209976",
-        "name": "Dino Prizmic"
-      },
-      "signals": {
-        "elo": 0.49355068828000614,
-        "fatigue": 0.5,
-        "market": 0.47247023809523814,
-        "recent_form": 0.752273487413988,
-        "season_profile": 0.5,
-        "serve": 0.5262517934749738,
-        "surface_elo": 0.38264633371874146
-      }
-    },
-    {
-      "confidence": 38.69860303570671,
-      "data_quality": 0.9400000000000002,
-      "disagreement_pp": 2.9213969642933,
-      "edge_pp": -2.9299138706527836,
-      "failed_gates": 3,
-      "final_probability": 0.48090494292612523,
-      "match": {
-        "date": "2026-08-13",
-        "event_type": "ATP Singles",
-        "match_id": "pub-9d4a91620bcb4581ac45",
-        "player_a": {
-          "key": "208014",
-          "name": "Rinky Hijikata"
-        },
-        "player_b": {
-          "key": "104792",
-          "name": "Gael Monfils"
-        },
-        "raw": {},
-        "status": "",
-        "surface": "Hard",
-        "time": "",
-        "tournament": "ATP Cincinnati",
-        "winner": null
-      },
-      "odd": 1.94,
-      "opponent": {
-        "key": "208014",
-        "name": "Rinky Hijikata"
-      },
-      "reject_reasons": [
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_market": {
-        "best_odd": 1.94,
-        "bookmaker_odds": {
-          "BetVictor": 1.9,
-          "Betsson": 1.68,
-          "Betway": 1.45,
-          "Coral": 1.44,
-          "Interwetten": 1.7,
-          "Ladbrokes": 1.44,
-          "Unibet": 1.94,
-          "bet-at-home": 1.3,
-          "bet365": 1.83,
-          "bwin": 1.85
-        },
-        "bookmakers": 10,
-        "fair_probability": 0.5102040816326531,
-        "median_odd": 1.69,
-        "player_key": "104792"
-      },
-      "selected_player": {
-        "key": "104792",
-        "name": "Gael Monfils"
-      },
-      "signals": {
-        "elo": 0.45666013937872973,
-        "fatigue": 0.5,
-        "market": 0.5102040816326532,
-        "recent_form": 0.46873984590740225,
-        "season_profile": 0.4375,
-        "serve": 0.515709655639525,
-        "surface_elo": 0.44867367912903233
-      }
     }
   ],
   "operational_date": "2026-08-12",
-  "prematch_atp_singles": 20,
+  "prematch_atp_singles": 34,
   "refresh_error": null,
   "refresh_status": "SUCCESS",
   "rejected": [
@@ -873,7 +865,7 @@
         "best_odd": 1.83,
         "bookmaker_odds": {
           "BetVictor": 1.75,
-          "Betsson": 1.61,
+          "Betsson": 1.59,
           "Betway": 1.55,
           "Coral": 1.18,
           "Interwetten": 1.6,
@@ -885,7 +877,7 @@
         },
         "bookmakers": 10,
         "fair_probability": 0.5597014925373135,
-        "median_odd": 1.605,
+        "median_odd": 1.5950000000000002,
         "player_key": "123828"
       },
       "rank": null,
@@ -1288,12 +1280,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 54.40802081032702,
+      "confidence": 53.750751770003724,
       "data_quality": 0.9820000000000002,
-      "disagreement_pp": 7.854904568783932,
-      "edge_pp": 8.865708643800124,
-      "final_probability": 0.5371864982027071,
-      "market_probability": 0.4485294117647059,
+      "disagreement_pp": 7.640530582251418,
+      "edge_pp": 8.105214727751447,
+      "final_probability": 0.5421589584230253,
+      "market_probability": 0.46110681114551083,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -1327,13 +1319,13 @@
           "Coral": 1.22,
           "Interwetten": 1.6,
           "Ladbrokes": 1.22,
-          "Unibet": 1.74,
+          "Unibet": 1.62,
           "bet-at-home": 1.35,
           "bet365": 1.8,
           "bwin": 1.78
         },
         "bookmakers": 10,
-        "fair_probability": 0.5514705882352942,
+        "fair_probability": 0.5388931888544892,
         "median_odd": 1.61,
         "player_key": "105173"
       },
@@ -1352,13 +1344,13 @@
           "Coral": 1.5,
           "Interwetten": 1.5,
           "Ladbrokes": 1.5,
-          "Unibet": 2.5,
+          "Unibet": 1.5,
           "bet-at-home": 1.5,
           "bet365": 2.5,
           "bwin": 2.5
         },
         "bookmakers": 10,
-        "fair_probability": 0.4485294117647059,
+        "fair_probability": 0.46110681114551083,
         "median_odd": 1.5,
         "player_key": "133430"
       },
@@ -1369,7 +1361,7 @@
       "signals": {
         "elo": 0.6191912995858441,
         "fatigue": 0.5,
-        "market": 0.4485294117647059,
+        "market": 0.46110681114551083,
         "recent_form": 0.688405357331741,
         "season_profile": 0.5375,
         "serve": 0.47073165683705287,
@@ -1464,6 +1456,94 @@
         "season_profile": 0.5,
         "serve": 0.41592447803003546,
         "surface_elo": 0.5645870430794853
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 53.009318282049364,
+      "data_quality": 0.8440000000000001,
+      "disagreement_pp": 13.40268171795064,
+      "edge_pp": 20.61403856836345,
+      "final_probability": 0.47443306861046375,
+      "market_probability": 0.26829268292682923,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-b2637bfa98c5e6f75c53",
+        "player_a": {
+          "key": "200711",
+          "name": "Nicolas Mejia"
+        },
+        "player_b": {
+          "key": "207985",
+          "name": "Jacob Fearnley"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "207985",
+        "name": "Jacob Fearnley"
+      },
+      "opponent_market": {
+        "best_odd": 2.2,
+        "bookmaker_odds": {
+          "BetVictor": 1.67,
+          "Betsson": 1.65,
+          "Betway": 1.2,
+          "Coral": 1.83,
+          "Interwetten": 1.35,
+          "Ladbrokes": 1.83,
+          "Unibet": 2.2,
+          "bet-at-home": 1.18,
+          "bwin": 1.57
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.7317073170731707,
+        "median_odd": 1.65,
+        "player_key": "207985"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "MODEL_DISAGREEMENT"
+      ],
+      "selected_market": {
+        "best_odd": 6.5,
+        "bookmaker_odds": {
+          "BetVictor": 4.5,
+          "Betsson": 4.5,
+          "Betway": 6.5,
+          "Coral": 1.5,
+          "Interwetten": 5.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 3.5,
+          "bet-at-home": 6.5,
+          "bwin": 4.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.26829268292682923,
+        "median_odd": 4.5,
+        "player_key": "200711"
+      },
+      "selected_player": {
+        "key": "200711",
+        "name": "Nicolas Mejia"
+      },
+      "signals": {
+        "elo": 0.6537261144016883,
+        "fatigue": 0.5,
+        "market": 0.26829268292682923,
+        "recent_form": 0.6122061124088041,
+        "season_profile": 0.65625,
+        "surface_elo": 0.5673043925813566
       },
       "status": "REJECTED"
     },
@@ -1588,7 +1668,7 @@
         "name": "Pablo Carreno Busta"
       },
       "opponent_market": {
-        "best_odd": 2.85,
+        "best_odd": 2.95,
         "bookmaker_odds": {
           "BetVictor": 1.8,
           "Betsson": 2.22,
@@ -1596,7 +1676,7 @@
           "Coral": 1.83,
           "Ladbrokes": 1.83,
           "Unibet": 1.96,
-          "bet-at-home": 2.85,
+          "bet-at-home": 2.95,
           "bet365": 1.8,
           "bwin": 1.8
         },
@@ -1613,7 +1693,7 @@
         "MODEL_DISAGREEMENT"
       ],
       "selected_market": {
-        "best_odd": 27.5,
+        "best_odd": 28.5,
         "bookmaker_odds": {
           "BetVictor": 22.5,
           "Betsson": 2.5,
@@ -1621,7 +1701,7 @@
           "Coral": 22.5,
           "Ladbrokes": 22.5,
           "Unibet": 24.5,
-          "bet-at-home": 27.5,
+          "bet-at-home": 28.5,
           "bet365": 22.5,
           "bwin": 22.5
         },
@@ -1642,6 +1722,265 @@
         "season_profile": 0.645748987854251,
         "serve": 0.5408739636498129,
         "surface_elo": 0.6258196265127751
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 50.88815246461571,
+      "data_quality": 0.8360000000000001,
+      "disagreement_pp": 15.339847535384296,
+      "edge_pp": 23.64683373393354,
+      "final_probability": 0.3153952149495853,
+      "market_probability": 0.07892687761024987,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-3eef56c0d1d506f564d8",
+        "player_a": {
+          "key": "210262",
+          "name": "Jaime Faria"
+        },
+        "player_b": {
+          "key": "200059",
+          "name": "Yibing Wu"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "200059",
+        "name": "Yibing Wu"
+      },
+      "opponent_market": {
+        "best_odd": 2.6,
+        "bookmaker_odds": {
+          "BetVictor": 2.0,
+          "Betsson": 2.22,
+          "Betway": 2.2,
+          "Coral": 1.8,
+          "Ladbrokes": 1.8,
+          "Unibet": 2.2,
+          "bet-at-home": 2.6,
+          "bwin": 1.75
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.9210731223897501,
+        "median_odd": 2.1,
+        "player_key": "200059"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "MODEL_DISAGREEMENT"
+      ],
+      "selected_market": {
+        "best_odd": 27.5,
+        "bookmaker_odds": {
+          "BetVictor": 23.5,
+          "Betsson": 2.5,
+          "Betway": 25.5,
+          "Coral": 22.5,
+          "Ladbrokes": 22.5,
+          "Unibet": 25.5,
+          "bet-at-home": 27.5,
+          "bwin": 22.5
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.07892687761024987,
+        "median_odd": 23.0,
+        "player_key": "210262"
+      },
+      "selected_player": {
+        "key": "210262",
+        "name": "Jaime Faria"
+      },
+      "signals": {
+        "elo": 0.493656100070931,
+        "fatigue": 0.5,
+        "market": 0.07892687761024987,
+        "recent_form": 0.5161105405675056,
+        "season_profile": 0.475,
+        "surface_elo": 0.44792711650742345
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 50.31857051969673,
+      "data_quality": 0.8780000000000001,
+      "disagreement_pp": 12.232606847464702,
+      "edge_pp": 11.487782074054575,
+      "final_probability": 0.5167916963386319,
+      "market_probability": 0.4019138755980861,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-cd096f01ade8fb367733",
+        "player_a": {
+          "key": "209414",
+          "name": "Luca Van Assche"
+        },
+        "player_b": {
+          "key": "105583",
+          "name": "Dusan Lajovic"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "105583",
+        "name": "Dusan Lajovic"
+      },
+      "opponent_market": {
+        "best_odd": 1.75,
+        "bookmaker_odds": {
+          "BetVictor": 1.75,
+          "Betsson": 1.71,
+          "Betway": 1.4,
+          "Coral": 1.14,
+          "Interwetten": 1.5,
+          "Ladbrokes": 1.14,
+          "Unibet": 1.68,
+          "bet-at-home": 1.4,
+          "bwin": 1.7
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5980861244019139,
+        "median_odd": 1.5,
+        "player_key": "105583"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 3.5,
+        "bookmaker_odds": {
+          "BetVictor": 3.5,
+          "Betsson": 3.5,
+          "Betway": 1.5,
+          "Coral": 1.5,
+          "Interwetten": 2.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 2.5,
+          "bet-at-home": 1.5,
+          "bwin": 3.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4019138755980861,
+        "median_odd": 2.5,
+        "player_key": "209414"
+      },
+      "selected_player": {
+        "key": "209414",
+        "name": "Luca Van Assche"
+      },
+      "signals": {
+        "elo": 0.5498061406269458,
+        "fatigue": 0.5,
+        "market": 0.4019138755980861,
+        "recent_form": 0.7931033514741529,
+        "season_profile": 0.6206293706293706,
+        "surface_elo": 0.5044123082037586
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 50.24011890161305,
+      "data_quality": 0.9040000000000001,
+      "disagreement_pp": 17.551881098386957,
+      "edge_pp": 27.08688042879759,
+      "final_probability": 0.34951341284259607,
+      "market_probability": 0.0786446085546202,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-c85473950c26a469e109",
+        "player_a": {
+          "key": "207686",
+          "name": "Alexander Shevchenko"
+        },
+        "player_b": {
+          "key": "106331",
+          "name": "Christopher Oconnell"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "106331",
+        "name": "Christopher Oconnell"
+      },
+      "opponent_market": {
+        "best_odd": 2.7,
+        "bookmaker_odds": {
+          "BetVictor": 1.8,
+          "Betsson": 2.22,
+          "Betway": 2.2,
+          "Coral": 1.83,
+          "Ladbrokes": 1.83,
+          "Unibet": 2.28,
+          "bet-at-home": 2.7,
+          "bwin": 1.8
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.9213553914453798,
+        "median_odd": 2.015,
+        "player_key": "106331"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "MODEL_DISAGREEMENT"
+      ],
+      "selected_market": {
+        "best_odd": 27.5,
+        "bookmaker_odds": {
+          "BetVictor": 22.5,
+          "Betsson": 2.5,
+          "Betway": 24.5,
+          "Coral": 22.5,
+          "Ladbrokes": 22.5,
+          "Unibet": 25.5,
+          "bet-at-home": 27.5,
+          "bwin": 22.5
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.0786446085546202,
+        "median_odd": 22.5,
+        "player_key": "207686"
+      },
+      "selected_player": {
+        "key": "207686",
+        "name": "Alexander Shevchenko"
+      },
+      "signals": {
+        "elo": 0.533195961314695,
+        "fatigue": 0.5,
+        "market": 0.0786446085546202,
+        "recent_form": 0.5226257883936846,
+        "season_profile": 0.5865384615384616,
+        "surface_elo": 0.5727261869931684
       },
       "status": "REJECTED"
     },
@@ -1728,96 +2067,6 @@
         "season_profile": 0.5,
         "serve": 0.5693800668080997,
         "surface_elo": 0.48055191456057983
-      },
-      "status": "REJECTED"
-    },
-    {
-      "confidence": 48.97311900736735,
-      "data_quality": 0.992,
-      "disagreement_pp": 8.479799126140266,
-      "edge_pp": 8.131621185282006,
-      "final_probability": 0.40168149901498224,
-      "market_probability": 0.32036528716216217,
-      "match": {
-        "date": "2026-08-13",
-        "event_type": "ATP Singles",
-        "match_id": "pub-5b18867644c80565a6d2",
-        "player_a": {
-          "key": "144895",
-          "name": "Corentin Moutet"
-        },
-        "player_b": {
-          "key": "128034",
-          "name": "Hubert Hurkacz"
-        },
-        "raw": {},
-        "status": "",
-        "surface": "Hard",
-        "time": "",
-        "tournament": "ATP Cincinnati",
-        "winner": null
-      },
-      "model_version": "champion-v0.3.3-sequential",
-      "opponent": {
-        "key": "128034",
-        "name": "Hubert Hurkacz"
-      },
-      "opponent_market": {
-        "best_odd": 1.83,
-        "bookmaker_odds": {
-          "BetVictor": 1.73,
-          "Betsson": 1.53,
-          "Betway": 1.18,
-          "Coral": 1.61,
-          "Interwetten": 1.55,
-          "Ladbrokes": 1.61,
-          "Unibet": 1.68,
-          "bet-at-home": 1.13,
-          "bet365": 1.83,
-          "bwin": 1.62
-        },
-        "bookmakers": 10,
-        "fair_probability": 0.6796347128378378,
-        "median_odd": 1.61,
-        "player_key": "128034"
-      },
-      "rank": null,
-      "reject_reasons": [
-        "ODD_OUT_OF_RANGE",
-        "PROBABILITY_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_market": {
-        "best_odd": 6.5,
-        "bookmaker_odds": {
-          "BetVictor": 3.5,
-          "Betsson": 4.5,
-          "Betway": 5.5,
-          "Coral": 1.5,
-          "Interwetten": 4.5,
-          "Ladbrokes": 1.5,
-          "Unibet": 3.5,
-          "bet-at-home": 6.5,
-          "bet365": 3.5,
-          "bwin": 3.5
-        },
-        "bookmakers": 10,
-        "fair_probability": 0.32036528716216217,
-        "median_odd": 3.5,
-        "player_key": "144895"
-      },
-      "selected_player": {
-        "key": "144895",
-        "name": "Corentin Moutet"
-      },
-      "signals": {
-        "elo": 0.4622812586122642,
-        "fatigue": 0.5,
-        "market": 0.32036528716216217,
-        "recent_form": 0.37191255084760855,
-        "season_profile": 0.4880952380952381,
-        "serve": 0.33434170482383846,
-        "surface_elo": 0.5587158518362974
       },
       "status": "REJECTED"
     },
@@ -2000,6 +2249,96 @@
       "status": "REJECTED"
     },
     {
+      "confidence": 48.32526731211145,
+      "data_quality": 0.992,
+      "disagreement_pp": 8.345237058000727,
+      "edge_pp": 7.696946872284544,
+      "final_probability": 0.40452360029227336,
+      "market_probability": 0.3275541315694279,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-5b18867644c80565a6d2",
+        "player_a": {
+          "key": "144895",
+          "name": "Corentin Moutet"
+        },
+        "player_b": {
+          "key": "128034",
+          "name": "Hubert Hurkacz"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "128034",
+        "name": "Hubert Hurkacz"
+      },
+      "opponent_market": {
+        "best_odd": 1.83,
+        "bookmaker_odds": {
+          "BetVictor": 1.73,
+          "Betsson": 1.53,
+          "Betway": 1.18,
+          "Coral": 1.61,
+          "Interwetten": 1.55,
+          "Ladbrokes": 1.61,
+          "Unibet": 1.68,
+          "bet-at-home": 1.13,
+          "bet365": 1.83,
+          "bwin": 1.83
+        },
+        "bookmakers": 10,
+        "fair_probability": 0.6724458684305721,
+        "median_odd": 1.61,
+        "player_key": "128034"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 6.5,
+        "bookmaker_odds": {
+          "BetVictor": 3.5,
+          "Betsson": 4.5,
+          "Betway": 5.5,
+          "Coral": 1.5,
+          "Interwetten": 4.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 3.5,
+          "bet-at-home": 6.5,
+          "bet365": 3.5,
+          "bwin": 3.5
+        },
+        "bookmakers": 10,
+        "fair_probability": 0.3275541315694279,
+        "median_odd": 3.5,
+        "player_key": "144895"
+      },
+      "selected_player": {
+        "key": "144895",
+        "name": "Corentin Moutet"
+      },
+      "signals": {
+        "elo": 0.4622812586122642,
+        "fatigue": 0.5,
+        "market": 0.3275541315694279,
+        "recent_form": 0.37191255084760855,
+        "season_profile": 0.4880952380952381,
+        "serve": 0.33434170482383846,
+        "surface_elo": 0.5587158518362974
+      },
+      "status": "REJECTED"
+    },
+    {
       "confidence": 48.29328822074601,
       "data_quality": 1.0,
       "disagreement_pp": 7.381335391972646,
@@ -2086,6 +2425,93 @@
         "season_profile": 0.6071428571428571,
         "serve": 0.3886925699338297,
         "surface_elo": 0.5820120402619533
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 48.24954400339602,
+      "data_quality": 0.708,
+      "disagreement_pp": 6.466099877118343,
+      "edge_pp": 10.23980215584131,
+      "final_probability": 0.45664156399383743,
+      "market_probability": 0.35424354243542433,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-635292562ea528350fe8",
+        "player_a": {
+          "key": "212216",
+          "name": "Trevor Svajda"
+        },
+        "player_b": {
+          "key": "210116",
+          "name": "Michael Zheng"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "210116",
+        "name": "Michael Zheng"
+      },
+      "opponent_market": {
+        "best_odd": 1.95,
+        "bookmaker_odds": {
+          "BetVictor": 1.95,
+          "Betsson": 1.92,
+          "Betway": 1.36,
+          "Coral": 1.73,
+          "Interwetten": 1.55,
+          "Ladbrokes": 1.73,
+          "Unibet": 1.9,
+          "bet-at-home": 1.3,
+          "bwin": 1.95
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.6457564575645757,
+        "median_odd": 1.73,
+        "player_key": "210116"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 5.5,
+        "bookmaker_odds": {
+          "BetVictor": 3.5,
+          "Betsson": 3.5,
+          "Betway": 5.5,
+          "Coral": 1.5,
+          "Interwetten": 4.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 3.5,
+          "bet-at-home": 5.5,
+          "bwin": 3.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.35424354243542433,
+        "median_odd": 3.5,
+        "player_key": "212216"
+      },
+      "selected_player": {
+        "key": "212216",
+        "name": "Trevor Svajda"
+      },
+      "signals": {
+        "elo": 0.5339428840086801,
+        "fatigue": 0.5,
+        "market": 0.35424354243542433,
+        "recent_form": 0.5445652714672377,
+        "season_profile": 0.5214285714285714,
+        "surface_elo": 0.5190604417278998
       },
       "status": "REJECTED"
     },
@@ -2180,6 +2606,182 @@
       "status": "REJECTED"
     },
     {
+      "confidence": 47.74903829097342,
+      "data_quality": 0.9400000000000002,
+      "disagreement_pp": 3.758184630162129,
+      "edge_pp": 5.288997038803767,
+      "final_probability": 0.5036702825128876,
+      "market_probability": 0.4507803121248499,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-9d4a91620bcb4581ac45",
+        "player_a": {
+          "key": "208014",
+          "name": "Rinky Hijikata"
+        },
+        "player_b": {
+          "key": "104792",
+          "name": "Gael Monfils"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "104792",
+        "name": "Gael Monfils"
+      },
+      "opponent_market": {
+        "best_odd": 1.9,
+        "bookmaker_odds": {
+          "BetVictor": 1.9,
+          "Betsson": 1.68,
+          "Betway": 1.45,
+          "Coral": 1.44,
+          "Interwetten": 1.7,
+          "Ladbrokes": 1.44,
+          "Unibet": 1.75,
+          "bet-at-home": 1.3,
+          "bet365": 1.83,
+          "bwin": 1.85
+        },
+        "bookmakers": 10,
+        "fair_probability": 0.5492196878751501,
+        "median_odd": 1.69,
+        "player_key": "104792"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 4.5,
+        "bookmaker_odds": {
+          "BetVictor": 1.5,
+          "Betsson": 2.5,
+          "Betway": 3.5,
+          "Coral": 1.5,
+          "Interwetten": 2.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 2.5,
+          "bet-at-home": 4.5,
+          "bet365": 1.5,
+          "bwin": 1.5
+        },
+        "bookmakers": 10,
+        "fair_probability": 0.4507803121248499,
+        "median_odd": 2.0,
+        "player_key": "208014"
+      },
+      "selected_player": {
+        "key": "208014",
+        "name": "Rinky Hijikata"
+      },
+      "signals": {
+        "elo": 0.5433398606212703,
+        "fatigue": 0.5,
+        "market": 0.4507803121248499,
+        "recent_form": 0.5312601540925977,
+        "season_profile": 0.5625,
+        "serve": 0.484290344360475,
+        "surface_elo": 0.5513263208709677
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 47.7307806493205,
+      "data_quality": 0.8540000000000001,
+      "disagreement_pp": 3.6208335608746243,
+      "edge_pp": 5.032345211124106,
+      "final_probability": 0.5265139283017173,
+      "market_probability": 0.4761904761904762,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-f9ab157ea74250427484",
+        "player_a": {
+          "key": "126846",
+          "name": "Aleksandar Vukic"
+        },
+        "player_b": {
+          "key": "210464",
+          "name": "Darwin Blanch"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "126846",
+        "name": "Aleksandar Vukic"
+      },
+      "opponent_market": {
+        "best_odd": 2.5,
+        "bookmaker_odds": {
+          "BetVictor": 1.5,
+          "Betsson": 1.5,
+          "Betway": 1.5,
+          "Coral": 1.5,
+          "Interwetten": 1.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 1.5,
+          "bet-at-home": 2.5,
+          "bwin": 1.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5238095238095238,
+        "median_odd": 1.5,
+        "player_key": "126846"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.77,
+        "bookmaker_odds": {
+          "BetVictor": 1.75,
+          "Betsson": 1.77,
+          "Betway": 1.65,
+          "Coral": 1.22,
+          "Interwetten": 1.65,
+          "Ladbrokes": 1.22,
+          "Unibet": 1.7,
+          "bet-at-home": 1.35,
+          "bwin": 1.65
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4761904761904762,
+        "median_odd": 1.65,
+        "player_key": "210464"
+      },
+      "selected_player": {
+        "key": "210464",
+        "name": "Darwin Blanch"
+      },
+      "signals": {
+        "elo": 0.5789519305288946,
+        "fatigue": 0.5,
+        "market": 0.47619047619047616,
+        "recent_form": 0.5453684910635344,
+        "season_profile": 0.5625,
+        "surface_elo": 0.5549428480749672
+      },
+      "status": "REJECTED"
+    },
+    {
       "confidence": 47.57196493494074,
       "data_quality": 1.0,
       "disagreement_pp": 6.3486521728817245,
@@ -2270,23 +2872,23 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 45.881953710269194,
-      "data_quality": 0.9400000000000002,
-      "disagreement_pp": 2.9213969642932986,
-      "edge_pp": 2.9299138706527836,
-      "final_probability": 0.5190950570738747,
-      "market_probability": 0.48979591836734687,
+      "confidence": 45.97683252658867,
+      "data_quality": 0.8260000000000001,
+      "disagreement_pp": 5.159486019421026,
+      "edge_pp": -4.401605408362929,
+      "final_probability": 0.621383185460097,
+      "market_probability": 0.6653992395437263,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
-        "match_id": "pub-9d4a91620bcb4581ac45",
+        "match_id": "pub-e79518c4b1e13f6213ad",
         "player_a": {
-          "key": "208014",
-          "name": "Rinky Hijikata"
+          "key": "208852",
+          "name": "Stefanos Sakellaridis"
         },
         "player_b": {
-          "key": "104792",
-          "name": "Gael Monfils"
+          "key": "208169",
+          "name": "Titouan Droguet"
         },
         "raw": {},
         "status": "",
@@ -2297,76 +2899,72 @@
       },
       "model_version": "champion-v0.3.3-sequential",
       "opponent": {
-        "key": "104792",
-        "name": "Gael Monfils"
+        "key": "208852",
+        "name": "Stefanos Sakellaridis"
       },
       "opponent_market": {
-        "best_odd": 1.94,
+        "best_odd": 5.5,
         "bookmaker_odds": {
-          "BetVictor": 1.9,
-          "Betsson": 1.68,
-          "Betway": 1.45,
-          "Coral": 1.44,
-          "Interwetten": 1.7,
-          "Ladbrokes": 1.44,
-          "Unibet": 1.94,
-          "bet-at-home": 1.3,
-          "bet365": 1.83,
-          "bwin": 1.85
+          "BetVictor": 3.5,
+          "Betsson": 3.5,
+          "Betway": 5.5,
+          "Coral": 1.5,
+          "Interwetten": 4.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 3.5,
+          "bet-at-home": 5.5,
+          "bwin": 3.5
         },
-        "bookmakers": 10,
-        "fair_probability": 0.5102040816326531,
-        "median_odd": 1.69,
-        "player_key": "104792"
+        "bookmakers": 9,
+        "fair_probability": 0.33460076045627374,
+        "median_odd": 3.5,
+        "player_key": "208852"
       },
       "rank": null,
       "reject_reasons": [
-        "ODD_OUT_OF_RANGE",
         "PROBABILITY_TOO_LOW",
         "EDGE_TOO_LOW",
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 4.5,
+        "best_odd": 1.86,
         "bookmaker_odds": {
-          "BetVictor": 1.5,
-          "Betsson": 2.5,
-          "Betway": 3.5,
-          "Coral": 1.5,
-          "Interwetten": 2.5,
-          "Ladbrokes": 1.5,
-          "Unibet": 1.5,
-          "bet-at-home": 4.5,
-          "bet365": 1.5,
-          "bwin": 1.5
+          "BetVictor": 1.8,
+          "Betsson": 1.76,
+          "Betway": 1.25,
+          "Coral": 1.8,
+          "Interwetten": 1.43,
+          "Ladbrokes": 1.8,
+          "Unibet": 1.86,
+          "bet-at-home": 1.23,
+          "bwin": 1.72
         },
-        "bookmakers": 10,
-        "fair_probability": 0.48979591836734687,
-        "median_odd": 1.5,
-        "player_key": "208014"
+        "bookmakers": 9,
+        "fair_probability": 0.6653992395437263,
+        "median_odd": 1.76,
+        "player_key": "208169"
       },
       "selected_player": {
-        "key": "208014",
-        "name": "Rinky Hijikata"
+        "key": "208169",
+        "name": "Titouan Droguet"
       },
       "signals": {
-        "elo": 0.5433398606212703,
+        "elo": 0.5684690921966962,
         "fatigue": 0.5,
-        "market": 0.48979591836734687,
-        "recent_form": 0.5312601540925977,
-        "season_profile": 0.5625,
-        "serve": 0.484290344360475,
-        "surface_elo": 0.5513263208709677
+        "market": 0.6653992395437263,
+        "recent_form": 0.6065260526074134,
+        "season_profile": 0.6285714285714286,
+        "surface_elo": 0.6002392936344529
       },
       "status": "REJECTED"
     },
     {
-      "confidence": 44.16805097236149,
+      "confidence": 44.01840291277192,
       "data_quality": 0.992,
-      "disagreement_pp": 8.479799126140268,
-      "edge_pp": -8.131621185282023,
-      "final_probability": 0.5983185009850176,
-      "market_probability": 0.6796347128378378,
+      "disagreement_pp": 8.345237058000729,
+      "edge_pp": -7.69694687228456,
+      "final_probability": 0.5954763997077265,
+      "market_probability": 0.6724458684305721,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -2406,7 +3004,7 @@
           "bwin": 3.5
         },
         "bookmakers": 10,
-        "fair_probability": 0.32036528716216217,
+        "fair_probability": 0.3275541315694279,
         "median_odd": 3.5,
         "player_key": "144895"
       },
@@ -2428,10 +3026,10 @@
           "Unibet": 1.68,
           "bet-at-home": 1.13,
           "bet365": 1.83,
-          "bwin": 1.62
+          "bwin": 1.83
         },
         "bookmakers": 10,
-        "fair_probability": 0.6796347128378378,
+        "fair_probability": 0.6724458684305721,
         "median_odd": 1.61,
         "player_key": "128034"
       },
@@ -2442,11 +3040,186 @@
       "signals": {
         "elo": 0.5377187413877358,
         "fatigue": 0.5,
-        "market": 0.6796347128378378,
+        "market": 0.6724458684305721,
         "recent_form": 0.6280874491523915,
         "season_profile": 0.5119047619047619,
         "serve": 0.6656582951761616,
         "surface_elo": 0.44128414816370265
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 43.953755842204316,
+      "data_quality": 0.9120000000000001,
+      "disagreement_pp": 9.971824980200623,
+      "edge_pp": 2.266359727678313,
+      "final_probability": 0.5887013331258397,
+      "market_probability": 0.5660377358490566,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-279c14245172e0bd06d7",
+        "player_a": {
+          "key": "106218",
+          "name": "Marcos Giron"
+        },
+        "player_b": {
+          "key": "210012",
+          "name": "Henrique Rocha"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "106218",
+        "name": "Marcos Giron"
+      },
+      "opponent_market": {
+        "best_odd": 3.5,
+        "bookmaker_odds": {
+          "BetVictor": 2.5,
+          "Betsson": 2.5,
+          "Betway": 1.5,
+          "Coral": 1.5,
+          "Interwetten": 1.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 1.5,
+          "bet-at-home": 1.5,
+          "bwin": 3.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4339622641509433,
+        "median_odd": 1.5,
+        "player_key": "106218"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.85,
+        "bookmaker_odds": {
+          "BetVictor": 1.8,
+          "Betsson": 1.72,
+          "Betway": 1.5,
+          "Coral": 1.15,
+          "Interwetten": 1.55,
+          "Ladbrokes": 1.15,
+          "Unibet": 1.65,
+          "bet-at-home": 1.3,
+          "bwin": 1.85
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5660377358490566,
+        "median_odd": 1.55,
+        "player_key": "210012"
+      },
+      "selected_player": {
+        "key": "210012",
+        "name": "Henrique Rocha"
+      },
+      "signals": {
+        "elo": 0.5723772149444941,
+        "fatigue": 0.5,
+        "market": 0.5660377358490567,
+        "recent_form": 0.8,
+        "season_profile": 0.5357142857142857,
+        "surface_elo": 0.5277694951149497
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 43.63572640128471,
+      "data_quality": 0.8940000000000001,
+      "disagreement_pp": 5.1199463200207855,
+      "edge_pp": 1.5526853125541584,
+      "final_probability": 0.55398839158708,
+      "market_probability": 0.5384615384615384,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-a0e717d042da39ce79d3",
+        "player_a": {
+          "key": "111460",
+          "name": "Quentin Halys"
+        },
+        "player_b": {
+          "key": "207352",
+          "name": "Bu Yunchaokete"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "207352",
+        "name": "Bu Yunchaokete"
+      },
+      "opponent_market": {
+        "best_odd": 1.81,
+        "bookmaker_odds": {
+          "BetVictor": 1.8,
+          "Betsson": 1.81,
+          "Betway": 1.8,
+          "Coral": 1.25,
+          "Interwetten": 1.8,
+          "Ladbrokes": 1.25,
+          "Unibet": 1.67,
+          "bet-at-home": 1.3,
+          "bwin": 1.75
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4615384615384615,
+        "median_odd": 1.75,
+        "player_key": "207352"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 2.5,
+        "bookmaker_odds": {
+          "BetVictor": 1.5,
+          "Betsson": 1.5,
+          "Betway": 1.5,
+          "Coral": 1.5,
+          "Interwetten": 1.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 1.5,
+          "bet-at-home": 2.5,
+          "bwin": 1.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5384615384615384,
+        "median_odd": 1.5,
+        "player_key": "111460"
+      },
+      "selected_player": {
+        "key": "111460",
+        "name": "Quentin Halys"
+      },
+      "signals": {
+        "elo": 0.5436629093539741,
+        "fatigue": 0.5,
+        "market": 0.5384615384615384,
+        "recent_form": 0.6500744781866743,
+        "season_profile": 0.59375,
+        "surface_elo": 0.5128864441914949
       },
       "status": "REJECTED"
     },
@@ -2541,6 +3314,175 @@
       "status": "REJECTED"
     },
     {
+      "confidence": 43.012374590700716,
+      "data_quality": 0.526,
+      "disagreement_pp": 19.08562540929928,
+      "edge_pp": -5.725687622789765,
+      "final_probability": 0.8661222986247546,
+      "market_probability": 0.9233791748526523,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-cfdeba5b50ffe4a0e433",
+        "player_a": {
+          "key": "name-770d10159883c0",
+          "name": "Wong C."
+        },
+        "player_b": {
+          "key": "202261",
+          "name": "Otto Virtanen"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "name-770d10159883c0",
+        "name": "Wong C."
+      },
+      "opponent_market": {
+        "best_odd": 28.5,
+        "bookmaker_odds": {
+          "BetVictor": 24.5,
+          "Betsson": 2.5,
+          "Betway": 25.5,
+          "Coral": 23.5,
+          "Ladbrokes": 23.5,
+          "Unibet": 26.5,
+          "bet-at-home": 28.5,
+          "bwin": 23.5
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.07662082514734773,
+        "median_odd": 24.0,
+        "player_key": "name-770d10159883c0"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "MODEL_DISAGREEMENT",
+        "DATA_QUALITY_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 2.7,
+        "bookmaker_odds": {
+          "BetVictor": 1.95,
+          "Betsson": 2.15,
+          "Betway": 2.1,
+          "Coral": 1.95,
+          "Ladbrokes": 1.95,
+          "Unibet": 2.3,
+          "bet-at-home": 2.7,
+          "bwin": 1.92
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.9233791748526523,
+        "median_odd": 2.025,
+        "player_key": "202261"
+      },
+      "selected_player": {
+        "key": "202261",
+        "name": "Otto Virtanen"
+      },
+      "signals": {
+        "market": 0.9233791748526523,
+        "season_profile": 0.5416666666666667
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 42.34863096965717,
+      "data_quality": 0.8360000000000001,
+      "disagreement_pp": 15.339847535384296,
+      "edge_pp": -23.646833733933548,
+      "final_probability": 0.6846047850504147,
+      "market_probability": 0.9210731223897501,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-3eef56c0d1d506f564d8",
+        "player_a": {
+          "key": "210262",
+          "name": "Jaime Faria"
+        },
+        "player_b": {
+          "key": "200059",
+          "name": "Yibing Wu"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "210262",
+        "name": "Jaime Faria"
+      },
+      "opponent_market": {
+        "best_odd": 27.5,
+        "bookmaker_odds": {
+          "BetVictor": 23.5,
+          "Betsson": 2.5,
+          "Betway": 25.5,
+          "Coral": 22.5,
+          "Ladbrokes": 22.5,
+          "Unibet": 25.5,
+          "bet-at-home": 27.5,
+          "bwin": 22.5
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.07892687761024987,
+        "median_odd": 23.0,
+        "player_key": "210262"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "MODEL_DISAGREEMENT"
+      ],
+      "selected_market": {
+        "best_odd": 2.6,
+        "bookmaker_odds": {
+          "BetVictor": 2.0,
+          "Betsson": 2.22,
+          "Betway": 2.2,
+          "Coral": 1.8,
+          "Ladbrokes": 1.8,
+          "Unibet": 2.2,
+          "bet-at-home": 2.6,
+          "bwin": 1.75
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.9210731223897501,
+        "median_odd": 2.1,
+        "player_key": "200059"
+      },
+      "selected_player": {
+        "key": "200059",
+        "name": "Yibing Wu"
+      },
+      "signals": {
+        "elo": 0.506343899929069,
+        "fatigue": 0.5,
+        "market": 0.9210731223897501,
+        "recent_form": 0.4838894594324944,
+        "season_profile": 0.525,
+        "surface_elo": 0.5520728834925765
+      },
+      "status": "REJECTED"
+    },
+    {
       "confidence": 42.03963779436168,
       "data_quality": 0.996,
       "disagreement_pp": 5.6571771175209555,
@@ -2627,6 +3569,180 @@
         "season_profile": 0.625,
         "serve": 0.5490453376714068,
         "surface_elo": 0.648371561758385
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 41.76140371563225,
+      "data_quality": 0.8260000000000001,
+      "disagreement_pp": 5.159486019421025,
+      "edge_pp": 4.401605408362929,
+      "final_probability": 0.37861681453990303,
+      "market_probability": 0.33460076045627374,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-e79518c4b1e13f6213ad",
+        "player_a": {
+          "key": "208852",
+          "name": "Stefanos Sakellaridis"
+        },
+        "player_b": {
+          "key": "208169",
+          "name": "Titouan Droguet"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "208169",
+        "name": "Titouan Droguet"
+      },
+      "opponent_market": {
+        "best_odd": 1.86,
+        "bookmaker_odds": {
+          "BetVictor": 1.8,
+          "Betsson": 1.76,
+          "Betway": 1.25,
+          "Coral": 1.8,
+          "Interwetten": 1.43,
+          "Ladbrokes": 1.8,
+          "Unibet": 1.86,
+          "bet-at-home": 1.23,
+          "bwin": 1.72
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.6653992395437263,
+        "median_odd": 1.76,
+        "player_key": "208169"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 5.5,
+        "bookmaker_odds": {
+          "BetVictor": 3.5,
+          "Betsson": 3.5,
+          "Betway": 5.5,
+          "Coral": 1.5,
+          "Interwetten": 4.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 3.5,
+          "bet-at-home": 5.5,
+          "bwin": 3.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.33460076045627374,
+        "median_odd": 3.5,
+        "player_key": "208852"
+      },
+      "selected_player": {
+        "key": "208852",
+        "name": "Stefanos Sakellaridis"
+      },
+      "signals": {
+        "elo": 0.4315309078033038,
+        "fatigue": 0.5,
+        "market": 0.33460076045627374,
+        "recent_form": 0.3934739473925865,
+        "season_profile": 0.37142857142857144,
+        "surface_elo": 0.3997607063655471
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 41.65899724706189,
+      "data_quality": 0.8280000000000001,
+      "disagreement_pp": 5.426721318187891,
+      "edge_pp": -0.09781631847115557,
+      "final_probability": 0.5804171856524978,
+      "market_probability": 0.5813953488372093,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-d49c851b1176fb5eeeb2",
+        "player_a": {
+          "key": "105477",
+          "name": "Marco Trungelliti"
+        },
+        "player_b": {
+          "key": "105453",
+          "name": "Kei Nishikori"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "105477",
+        "name": "Marco Trungelliti"
+      },
+      "opponent_market": {
+        "best_odd": 4.5,
+        "bookmaker_odds": {
+          "BetVictor": 2.5,
+          "Betsson": 1.5,
+          "Betway": 4.5,
+          "Coral": 1.5,
+          "Interwetten": 2.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 1.5,
+          "bet-at-home": 4.5,
+          "bwin": 2.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4186046511627907,
+        "median_odd": 2.5,
+        "player_key": "105477"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.82,
+        "bookmaker_odds": {
+          "BetVictor": 1.8,
+          "Betsson": 1.82,
+          "Betway": 1.33,
+          "Coral": 1.44,
+          "Interwetten": 1.65,
+          "Ladbrokes": 1.44,
+          "Unibet": 1.77,
+          "bet-at-home": 1.33,
+          "bwin": 1.75
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5813953488372093,
+        "median_odd": 1.65,
+        "player_key": "105453"
+      },
+      "selected_player": {
+        "key": "105453",
+        "name": "Kei Nishikori"
+      },
+      "signals": {
+        "elo": 0.541290218374654,
+        "fatigue": 0.5,
+        "market": 0.5813953488372092,
+        "recent_form": 0.6763633609310651,
+        "season_profile": 0.59375,
+        "surface_elo": 0.5594412200583481
       },
       "status": "REJECTED"
     },
@@ -2811,6 +3927,94 @@
       "status": "REJECTED"
     },
     {
+      "confidence": 40.06105839562552,
+      "data_quality": 0.8380000000000001,
+      "disagreement_pp": 4.181085500848422,
+      "edge_pp": 2.648462980009425,
+      "final_probability": 0.5020091053245698,
+      "market_probability": 0.4755244755244755,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-4403f5a46913ba6ff207",
+        "player_a": {
+          "key": "210136",
+          "name": "Mark Lajal"
+        },
+        "player_b": {
+          "key": "207494",
+          "name": "Dalibor Svrcina"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "207494",
+        "name": "Dalibor Svrcina"
+      },
+      "opponent_market": {
+        "best_odd": 1.83,
+        "bookmaker_odds": {
+          "BetVictor": 1.83,
+          "Betsson": 1.8,
+          "Betway": 1.5,
+          "Coral": 1.36,
+          "Interwetten": 1.65,
+          "Ladbrokes": 1.36,
+          "Unibet": 1.77,
+          "bet-at-home": 1.28,
+          "bwin": 1.75
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5244755244755245,
+        "median_odd": 1.65,
+        "player_key": "207494"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 4.5,
+        "bookmaker_odds": {
+          "BetVictor": 1.5,
+          "Betsson": 1.5,
+          "Betway": 3.5,
+          "Coral": 1.5,
+          "Interwetten": 2.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 1.5,
+          "bet-at-home": 4.5,
+          "bwin": 1.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4755244755244755,
+        "median_odd": 1.5,
+        "player_key": "210136"
+      },
+      "selected_player": {
+        "key": "210136",
+        "name": "Mark Lajal"
+      },
+      "signals": {
+        "elo": 0.5024727710402893,
+        "fatigue": 0.5,
+        "market": 0.4755244755244755,
+        "recent_form": 0.5883786892960136,
+        "season_profile": 0.5535714285714286,
+        "surface_elo": 0.4740234478263492
+      },
+      "status": "REJECTED"
+    },
+    {
       "confidence": 39.949532146232826,
       "data_quality": 0.9400000000000002,
       "disagreement_pp": 6.899164529256975,
@@ -2896,6 +4100,93 @@
         "recent_form": 0.4379283043426586,
         "season_profile": 0.4512987012987013,
         "surface_elo": 0.5356045431320506
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 39.283397860113446,
+      "data_quality": 0.8460000000000001,
+      "disagreement_pp": 4.66880208537391,
+      "edge_pp": -1.3093714830840764,
+      "final_probability": 0.5449419994548735,
+      "market_probability": 0.5580357142857143,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-acde99693260c71b1c03",
+        "player_a": {
+          "key": "149282",
+          "name": "Nicolai Budkov Kjaer"
+        },
+        "player_b": {
+          "key": "208021",
+          "name": "Kyrian Jacquet"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "149282",
+        "name": "Nicolai Budkov Kjaer"
+      },
+      "opponent_market": {
+        "best_odd": 5.5,
+        "bookmaker_odds": {
+          "BetVictor": 2.5,
+          "Betsson": 2.5,
+          "Betway": 5.5,
+          "Coral": 1.5,
+          "Interwetten": 3.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 2.5,
+          "bet-at-home": 5.5,
+          "bwin": 2.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4419642857142857,
+        "median_odd": 2.5,
+        "player_key": "149282"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 2.0,
+        "bookmaker_odds": {
+          "BetVictor": 2.0,
+          "Betsson": 1.98,
+          "Betway": 1.25,
+          "Coral": 1.65,
+          "Interwetten": 1.7,
+          "Ladbrokes": 1.65,
+          "Unibet": 1.95,
+          "bet-at-home": 1.25,
+          "bwin": 2.0
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5580357142857143,
+        "median_odd": 1.7,
+        "player_key": "208021"
+      },
+      "selected_player": {
+        "key": "208021",
+        "name": "Kyrian Jacquet"
+      },
+      "signals": {
+        "elo": 0.5266062963578719,
+        "fatigue": 0.5,
+        "market": 0.5580357142857143,
+        "recent_form": 0.46660333390158737,
+        "season_profile": 0.5964285714285714,
+        "surface_elo": 0.5890356975385733
       },
       "status": "REJECTED"
     },
@@ -2991,12 +4282,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 38.84779740623783,
+      "confidence": 38.6124095477732,
       "data_quality": 1.0,
-      "disagreement_pp": 10.460217074657752,
-      "edge_pp": 3.2360680969184874,
-      "final_probability": 0.504830919064423,
-      "market_probability": 0.47247023809523814,
+      "disagreement_pp": 10.437783781405882,
+      "edge_pp": 3.011123467904092,
+      "final_probability": 0.5063017108695171,
+      "market_probability": 0.4761904761904762,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -3036,7 +4327,7 @@
           "bwin": 2.5
         },
         "bookmakers": 10,
-        "fair_probability": 0.5275297619047619,
+        "fair_probability": 0.5238095238095238,
         "median_odd": 1.5,
         "player_key": "111815"
       },
@@ -3047,22 +4338,22 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 1.9,
+        "best_odd": 1.87,
         "bookmaker_odds": {
           "BetVictor": 1.8,
-          "Betsson": 1.72,
-          "Betway": 1.8,
+          "Betsson": 1.7,
+          "Betway": 1.73,
           "Coral": 1.25,
-          "Interwetten": 1.7,
+          "Interwetten": 1.65,
           "Ladbrokes": 1.25,
           "Unibet": 1.65,
-          "bet-at-home": 1.35,
+          "bet-at-home": 1.33,
           "bet365": 1.8,
-          "bwin": 1.9
+          "bwin": 1.87
         },
         "bookmakers": 10,
-        "fair_probability": 0.47247023809523814,
-        "median_odd": 1.71,
+        "fair_probability": 0.4761904761904762,
+        "median_odd": 1.6749999999999998,
         "player_key": "209976"
       },
       "selected_player": {
@@ -3072,7 +4363,7 @@
       "signals": {
         "elo": 0.49355068828000614,
         "fatigue": 0.5,
-        "market": 0.47247023809523814,
+        "market": 0.47619047619047616,
         "recent_form": 0.752273487413988,
         "season_profile": 0.5,
         "serve": 0.5262517934749738,
@@ -3081,12 +4372,98 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 38.69860303570671,
+      "confidence": 38.28877761735344,
+      "data_quality": 0.9040000000000001,
+      "disagreement_pp": 17.551881098386957,
+      "edge_pp": -27.08688042879759,
+      "final_probability": 0.6504865871574039,
+      "market_probability": 0.9213553914453798,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-c85473950c26a469e109",
+        "player_a": {
+          "key": "207686",
+          "name": "Alexander Shevchenko"
+        },
+        "player_b": {
+          "key": "106331",
+          "name": "Christopher Oconnell"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "207686",
+        "name": "Alexander Shevchenko"
+      },
+      "opponent_market": {
+        "best_odd": 27.5,
+        "bookmaker_odds": {
+          "BetVictor": 22.5,
+          "Betsson": 2.5,
+          "Betway": 24.5,
+          "Coral": 22.5,
+          "Ladbrokes": 22.5,
+          "Unibet": 25.5,
+          "bet-at-home": 27.5,
+          "bwin": 22.5
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.0786446085546202,
+        "median_odd": 22.5,
+        "player_key": "207686"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "MODEL_DISAGREEMENT"
+      ],
+      "selected_market": {
+        "best_odd": 2.7,
+        "bookmaker_odds": {
+          "BetVictor": 1.8,
+          "Betsson": 2.22,
+          "Betway": 2.2,
+          "Coral": 1.83,
+          "Ladbrokes": 1.83,
+          "Unibet": 2.28,
+          "bet-at-home": 2.7,
+          "bwin": 1.8
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.9213553914453798,
+        "median_odd": 2.015,
+        "player_key": "106331"
+      },
+      "selected_player": {
+        "key": "106331",
+        "name": "Christopher Oconnell"
+      },
+      "signals": {
+        "elo": 0.46680403868530496,
+        "fatigue": 0.5,
+        "market": 0.9213553914453798,
+        "recent_form": 0.47737421160631544,
+        "season_profile": 0.41346153846153844,
+        "surface_elo": 0.42727381300683165
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 37.861815369837885,
       "data_quality": 0.9400000000000002,
-      "disagreement_pp": 2.9213969642933,
-      "edge_pp": -2.9299138706527836,
-      "final_probability": 0.48090494292612523,
-      "market_probability": 0.5102040816326531,
+      "disagreement_pp": 3.758184630162129,
+      "edge_pp": -5.288997038803772,
+      "final_probability": 0.49632971748711235,
+      "market_probability": 0.5492196878751501,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -3120,14 +4497,14 @@
           "Coral": 1.5,
           "Interwetten": 2.5,
           "Ladbrokes": 1.5,
-          "Unibet": 1.5,
+          "Unibet": 2.5,
           "bet-at-home": 4.5,
           "bet365": 1.5,
           "bwin": 1.5
         },
         "bookmakers": 10,
-        "fair_probability": 0.48979591836734687,
-        "median_odd": 1.5,
+        "fair_probability": 0.4507803121248499,
+        "median_odd": 2.0,
         "player_key": "208014"
       },
       "rank": null,
@@ -3137,7 +4514,7 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 1.94,
+        "best_odd": 1.9,
         "bookmaker_odds": {
           "BetVictor": 1.9,
           "Betsson": 1.68,
@@ -3145,13 +4522,13 @@
           "Coral": 1.44,
           "Interwetten": 1.7,
           "Ladbrokes": 1.44,
-          "Unibet": 1.94,
+          "Unibet": 1.75,
           "bet-at-home": 1.3,
           "bet365": 1.83,
           "bwin": 1.85
         },
         "bookmakers": 10,
-        "fair_probability": 0.5102040816326531,
+        "fair_probability": 0.5492196878751501,
         "median_odd": 1.69,
         "player_key": "104792"
       },
@@ -3162,7 +4539,7 @@
       "signals": {
         "elo": 0.45666013937872973,
         "fatigue": 0.5,
-        "market": 0.5102040816326532,
+        "market": 0.5492196878751501,
         "recent_form": 0.46873984590740225,
         "season_profile": 0.4375,
         "serve": 0.515709655639525,
@@ -3352,6 +4729,94 @@
       "status": "REJECTED"
     },
     {
+      "confidence": 37.146066584177426,
+      "data_quality": 0.8460000000000001,
+      "disagreement_pp": 4.66880208537391,
+      "edge_pp": 1.3093714830840708,
+      "final_probability": 0.4550580005451264,
+      "market_probability": 0.4419642857142857,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-acde99693260c71b1c03",
+        "player_a": {
+          "key": "149282",
+          "name": "Nicolai Budkov Kjaer"
+        },
+        "player_b": {
+          "key": "208021",
+          "name": "Kyrian Jacquet"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "208021",
+        "name": "Kyrian Jacquet"
+      },
+      "opponent_market": {
+        "best_odd": 2.0,
+        "bookmaker_odds": {
+          "BetVictor": 2.0,
+          "Betsson": 1.98,
+          "Betway": 1.25,
+          "Coral": 1.65,
+          "Interwetten": 1.7,
+          "Ladbrokes": 1.65,
+          "Unibet": 1.95,
+          "bet-at-home": 1.25,
+          "bwin": 2.0
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5580357142857143,
+        "median_odd": 1.7,
+        "player_key": "208021"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 5.5,
+        "bookmaker_odds": {
+          "BetVictor": 2.5,
+          "Betsson": 2.5,
+          "Betway": 5.5,
+          "Coral": 1.5,
+          "Interwetten": 3.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 2.5,
+          "bet-at-home": 5.5,
+          "bwin": 2.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4419642857142857,
+        "median_odd": 2.5,
+        "player_key": "149282"
+      },
+      "selected_player": {
+        "key": "149282",
+        "name": "Nicolai Budkov Kjaer"
+      },
+      "signals": {
+        "elo": 0.473393703642128,
+        "fatigue": 0.5,
+        "market": 0.4419642857142857,
+        "recent_form": 0.5333966660984126,
+        "season_profile": 0.4035714285714286,
+        "surface_elo": 0.4109643024614267
+      },
+      "status": "REJECTED"
+    },
+    {
       "confidence": 36.484812753230386,
       "data_quality": 1.0,
       "disagreement_pp": 8.937341123580623,
@@ -3526,6 +4991,94 @@
         "season_profile": 0.40892857142857136,
         "serve": 0.3378562645598687,
         "surface_elo": 0.4409275749744852
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 36.02116643912539,
+      "data_quality": 0.8540000000000001,
+      "disagreement_pp": 3.6208335608746243,
+      "edge_pp": -5.032345211124111,
+      "final_probability": 0.4734860716982827,
+      "market_probability": 0.5238095238095238,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-f9ab157ea74250427484",
+        "player_a": {
+          "key": "126846",
+          "name": "Aleksandar Vukic"
+        },
+        "player_b": {
+          "key": "210464",
+          "name": "Darwin Blanch"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "210464",
+        "name": "Darwin Blanch"
+      },
+      "opponent_market": {
+        "best_odd": 1.77,
+        "bookmaker_odds": {
+          "BetVictor": 1.75,
+          "Betsson": 1.77,
+          "Betway": 1.65,
+          "Coral": 1.22,
+          "Interwetten": 1.65,
+          "Ladbrokes": 1.22,
+          "Unibet": 1.7,
+          "bet-at-home": 1.35,
+          "bwin": 1.65
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4761904761904762,
+        "median_odd": 1.65,
+        "player_key": "210464"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 2.5,
+        "bookmaker_odds": {
+          "BetVictor": 1.5,
+          "Betsson": 1.5,
+          "Betway": 1.5,
+          "Coral": 1.5,
+          "Interwetten": 1.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 1.5,
+          "bet-at-home": 2.5,
+          "bwin": 1.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5238095238095238,
+        "median_odd": 1.5,
+        "player_key": "126846"
+      },
+      "selected_player": {
+        "key": "126846",
+        "name": "Aleksandar Vukic"
+      },
+      "signals": {
+        "elo": 0.4210480694711054,
+        "fatigue": 0.5,
+        "market": 0.5238095238095238,
+        "recent_form": 0.4546315089364657,
+        "season_profile": 0.4375,
+        "surface_elo": 0.44505715192503276
       },
       "status": "REJECTED"
     },
@@ -3796,6 +5349,93 @@
       "status": "REJECTED"
     },
     {
+      "confidence": 35.44205367997922,
+      "data_quality": 0.8940000000000001,
+      "disagreement_pp": 5.1199463200207855,
+      "edge_pp": -1.5526853125541473,
+      "final_probability": 0.44601160841292004,
+      "market_probability": 0.4615384615384615,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-a0e717d042da39ce79d3",
+        "player_a": {
+          "key": "111460",
+          "name": "Quentin Halys"
+        },
+        "player_b": {
+          "key": "207352",
+          "name": "Bu Yunchaokete"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "111460",
+        "name": "Quentin Halys"
+      },
+      "opponent_market": {
+        "best_odd": 2.5,
+        "bookmaker_odds": {
+          "BetVictor": 1.5,
+          "Betsson": 1.5,
+          "Betway": 1.5,
+          "Coral": 1.5,
+          "Interwetten": 1.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 1.5,
+          "bet-at-home": 2.5,
+          "bwin": 1.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5384615384615384,
+        "median_odd": 1.5,
+        "player_key": "111460"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.81,
+        "bookmaker_odds": {
+          "BetVictor": 1.8,
+          "Betsson": 1.81,
+          "Betway": 1.8,
+          "Coral": 1.25,
+          "Interwetten": 1.8,
+          "Ladbrokes": 1.25,
+          "Unibet": 1.67,
+          "bet-at-home": 1.3,
+          "bwin": 1.75
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4615384615384615,
+        "median_odd": 1.75,
+        "player_key": "207352"
+      },
+      "selected_player": {
+        "key": "207352",
+        "name": "Bu Yunchaokete"
+      },
+      "signals": {
+        "elo": 0.4563370906460259,
+        "fatigue": 0.5,
+        "market": 0.46153846153846156,
+        "recent_form": 0.3499255218133257,
+        "season_profile": 0.40625,
+        "surface_elo": 0.4871135558085051
+      },
+      "status": "REJECTED"
+    },
+    {
       "confidence": 35.35385782096444,
       "data_quality": 0.966,
       "disagreement_pp": 18.174266307072063,
@@ -3827,7 +5467,7 @@
         "name": "Tomas Machac"
       },
       "opponent_market": {
-        "best_odd": 27.5,
+        "best_odd": 28.5,
         "bookmaker_odds": {
           "BetVictor": 22.5,
           "Betsson": 2.5,
@@ -3835,7 +5475,7 @@
           "Coral": 22.5,
           "Ladbrokes": 22.5,
           "Unibet": 24.5,
-          "bet-at-home": 27.5,
+          "bet-at-home": 28.5,
           "bet365": 22.5,
           "bwin": 22.5
         },
@@ -3853,7 +5493,7 @@
         "MODEL_DISAGREEMENT"
       ],
       "selected_market": {
-        "best_odd": 2.85,
+        "best_odd": 2.95,
         "bookmaker_odds": {
           "BetVictor": 1.8,
           "Betsson": 2.22,
@@ -3861,7 +5501,7 @@
           "Coral": 1.83,
           "Ladbrokes": 1.83,
           "Unibet": 1.96,
-          "bet-at-home": 2.85,
+          "bet-at-home": 2.95,
           "bet365": 1.8,
           "bwin": 1.8
         },
@@ -3886,12 +5526,99 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 34.731095431216076,
+      "confidence": 35.09291449915158,
+      "data_quality": 0.8380000000000001,
+      "disagreement_pp": 4.181085500848422,
+      "edge_pp": -2.648462980009425,
+      "final_probability": 0.49799089467543023,
+      "market_probability": 0.5244755244755245,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-4403f5a46913ba6ff207",
+        "player_a": {
+          "key": "210136",
+          "name": "Mark Lajal"
+        },
+        "player_b": {
+          "key": "207494",
+          "name": "Dalibor Svrcina"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "210136",
+        "name": "Mark Lajal"
+      },
+      "opponent_market": {
+        "best_odd": 4.5,
+        "bookmaker_odds": {
+          "BetVictor": 1.5,
+          "Betsson": 1.5,
+          "Betway": 3.5,
+          "Coral": 1.5,
+          "Interwetten": 2.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 1.5,
+          "bet-at-home": 4.5,
+          "bwin": 1.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4755244755244755,
+        "median_odd": 1.5,
+        "player_key": "210136"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.83,
+        "bookmaker_odds": {
+          "BetVictor": 1.83,
+          "Betsson": 1.8,
+          "Betway": 1.5,
+          "Coral": 1.36,
+          "Interwetten": 1.65,
+          "Ladbrokes": 1.36,
+          "Unibet": 1.77,
+          "bet-at-home": 1.28,
+          "bwin": 1.75
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5244755244755245,
+        "median_odd": 1.65,
+        "player_key": "207494"
+      },
+      "selected_player": {
+        "key": "207494",
+        "name": "Dalibor Svrcina"
+      },
+      "signals": {
+        "elo": 0.4975272289597107,
+        "fatigue": 0.5,
+        "market": 0.5244755244755245,
+        "recent_form": 0.41162131070398644,
+        "season_profile": 0.4464285714285714,
+        "surface_elo": 0.5259765521736508
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 34.94546941774858,
       "data_quality": 0.9820000000000002,
-      "disagreement_pp": 7.854904568783932,
-      "edge_pp": -8.865708643800124,
-      "final_probability": 0.4628135017972929,
-      "market_probability": 0.5514705882352942,
+      "disagreement_pp": 7.640530582251419,
+      "edge_pp": -8.105214727751452,
+      "final_probability": 0.4578410415769747,
+      "market_probability": 0.5388931888544892,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -3925,13 +5652,13 @@
           "Coral": 1.5,
           "Interwetten": 1.5,
           "Ladbrokes": 1.5,
-          "Unibet": 2.5,
+          "Unibet": 1.5,
           "bet-at-home": 1.5,
           "bet365": 2.5,
           "bwin": 2.5
         },
         "bookmakers": 10,
-        "fair_probability": 0.4485294117647059,
+        "fair_probability": 0.46110681114551083,
         "median_odd": 1.5,
         "player_key": "133430"
       },
@@ -3950,13 +5677,13 @@
           "Coral": 1.22,
           "Interwetten": 1.6,
           "Ladbrokes": 1.22,
-          "Unibet": 1.74,
+          "Unibet": 1.62,
           "bet-at-home": 1.35,
           "bet365": 1.8,
           "bwin": 1.78
         },
         "bookmakers": 10,
-        "fair_probability": 0.5514705882352942,
+        "fair_probability": 0.5388931888544892,
         "median_odd": 1.61,
         "player_key": "105173"
       },
@@ -3967,11 +5694,98 @@
       "signals": {
         "elo": 0.38080870041415593,
         "fatigue": 0.5,
-        "market": 0.5514705882352942,
+        "market": 0.5388931888544892,
         "recent_form": 0.311594642668259,
         "season_profile": 0.4625,
         "serve": 0.5292683431629471,
         "surface_elo": 0.43984990037867466
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 34.15374372349792,
+      "data_quality": 0.708,
+      "disagreement_pp": 6.466099877118343,
+      "edge_pp": -10.239802155841303,
+      "final_probability": 0.5433584360061626,
+      "market_probability": 0.6457564575645757,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-635292562ea528350fe8",
+        "player_a": {
+          "key": "212216",
+          "name": "Trevor Svajda"
+        },
+        "player_b": {
+          "key": "210116",
+          "name": "Michael Zheng"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "212216",
+        "name": "Trevor Svajda"
+      },
+      "opponent_market": {
+        "best_odd": 5.5,
+        "bookmaker_odds": {
+          "BetVictor": 3.5,
+          "Betsson": 3.5,
+          "Betway": 5.5,
+          "Coral": 1.5,
+          "Interwetten": 4.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 3.5,
+          "bet-at-home": 5.5,
+          "bwin": 3.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.35424354243542433,
+        "median_odd": 3.5,
+        "player_key": "212216"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.95,
+        "bookmaker_odds": {
+          "BetVictor": 1.95,
+          "Betsson": 1.92,
+          "Betway": 1.36,
+          "Coral": 1.73,
+          "Interwetten": 1.55,
+          "Ladbrokes": 1.73,
+          "Unibet": 1.9,
+          "bet-at-home": 1.3,
+          "bwin": 1.95
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.6457564575645757,
+        "median_odd": 1.73,
+        "player_key": "210116"
+      },
+      "selected_player": {
+        "key": "210116",
+        "name": "Michael Zheng"
+      },
+      "signals": {
+        "elo": 0.46605711599131994,
+        "fatigue": 0.5,
+        "market": 0.6457564575645757,
+        "recent_form": 0.45543472853276235,
+        "season_profile": 0.47857142857142865,
+        "surface_elo": 0.4809395582721002
       },
       "status": "REJECTED"
     },
@@ -4058,6 +5872,179 @@
         "season_profile": 0.5,
         "serve": 0.4306199331919003,
         "surface_elo": 0.5194480854394201
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 33.793348055060164,
+      "data_quality": 0.8280000000000001,
+      "disagreement_pp": 5.426721318187891,
+      "edge_pp": 0.09781631847113892,
+      "final_probability": 0.4195828143475021,
+      "market_probability": 0.4186046511627907,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-d49c851b1176fb5eeeb2",
+        "player_a": {
+          "key": "105477",
+          "name": "Marco Trungelliti"
+        },
+        "player_b": {
+          "key": "105453",
+          "name": "Kei Nishikori"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "105453",
+        "name": "Kei Nishikori"
+      },
+      "opponent_market": {
+        "best_odd": 1.82,
+        "bookmaker_odds": {
+          "BetVictor": 1.8,
+          "Betsson": 1.82,
+          "Betway": 1.33,
+          "Coral": 1.44,
+          "Interwetten": 1.65,
+          "Ladbrokes": 1.44,
+          "Unibet": 1.77,
+          "bet-at-home": 1.33,
+          "bwin": 1.75
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5813953488372093,
+        "median_odd": 1.65,
+        "player_key": "105453"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 4.5,
+        "bookmaker_odds": {
+          "BetVictor": 2.5,
+          "Betsson": 1.5,
+          "Betway": 4.5,
+          "Coral": 1.5,
+          "Interwetten": 2.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 1.5,
+          "bet-at-home": 4.5,
+          "bwin": 2.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4186046511627907,
+        "median_odd": 2.5,
+        "player_key": "105477"
+      },
+      "selected_player": {
+        "key": "105477",
+        "name": "Marco Trungelliti"
+      },
+      "signals": {
+        "elo": 0.45870978162534604,
+        "fatigue": 0.5,
+        "market": 0.4186046511627907,
+        "recent_form": 0.3236366390689349,
+        "season_profile": 0.40625,
+        "surface_elo": 0.440558779941652
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 33.255858998144745,
+      "data_quality": 0.5640000000000001,
+      "disagreement_pp": 4.6034322820037055,
+      "edge_pp": 1.3810296846011205,
+      "final_probability": 0.5240143784786643,
+      "market_probability": 0.5102040816326531,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-688d61b590c615f3ce58",
+        "player_a": {
+          "key": "200647",
+          "name": "Sho Shimabukuro"
+        },
+        "player_b": {
+          "key": "name-18bd3839d817ee",
+          "name": "Wolf J."
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "200647",
+        "name": "Sho Shimabukuro"
+      },
+      "opponent_market": {
+        "best_odd": 3.5,
+        "bookmaker_odds": {
+          "BetVictor": 1.5,
+          "Betsson": 1.5,
+          "Betway": 3.5,
+          "Coral": 1.5,
+          "Interwetten": 2.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 1.5,
+          "bet-at-home": 3.5,
+          "bwin": 1.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.48979591836734687,
+        "median_odd": 1.5,
+        "player_key": "200647"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "DATA_QUALITY_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 2.17,
+        "bookmaker_odds": {
+          "BetVictor": 1.83,
+          "Betsson": 1.81,
+          "Betway": 1.45,
+          "Coral": 1.44,
+          "Interwetten": 1.65,
+          "Ladbrokes": 1.44,
+          "Unibet": 2.17,
+          "bet-at-home": 1.45,
+          "bwin": 1.83
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5102040816326531,
+        "median_odd": 1.65,
+        "player_key": "name-18bd3839d817ee"
+      },
+      "selected_player": {
+        "key": "name-18bd3839d817ee",
+        "name": "Wolf J."
+      },
+      "signals": {
+        "market": 0.5102040816326532,
+        "season_profile": 0.6022727272727273
       },
       "status": "REJECTED"
     },
@@ -4152,12 +6139,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 32.53978292534225,
+      "confidence": 32.562216218594116,
       "data_quality": 1.0,
-      "disagreement_pp": 10.460217074657749,
-      "edge_pp": -3.236068096918493,
-      "final_probability": 0.49516908093557693,
-      "market_probability": 0.5275297619047619,
+      "disagreement_pp": 10.43778378140588,
+      "edge_pp": -3.0111234679041035,
+      "final_probability": 0.4936982891304828,
+      "market_probability": 0.5238095238095238,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -4183,22 +6170,22 @@
         "name": "Dino Prizmic"
       },
       "opponent_market": {
-        "best_odd": 1.9,
+        "best_odd": 1.87,
         "bookmaker_odds": {
           "BetVictor": 1.8,
-          "Betsson": 1.72,
-          "Betway": 1.8,
+          "Betsson": 1.7,
+          "Betway": 1.73,
           "Coral": 1.25,
-          "Interwetten": 1.7,
+          "Interwetten": 1.65,
           "Ladbrokes": 1.25,
           "Unibet": 1.65,
-          "bet-at-home": 1.35,
+          "bet-at-home": 1.33,
           "bet365": 1.8,
-          "bwin": 1.9
+          "bwin": 1.87
         },
         "bookmakers": 10,
-        "fair_probability": 0.47247023809523814,
-        "median_odd": 1.71,
+        "fair_probability": 0.4761904761904762,
+        "median_odd": 1.6749999999999998,
         "player_key": "209976"
       },
       "rank": null,
@@ -4223,7 +6210,7 @@
           "bwin": 2.5
         },
         "bookmakers": 10,
-        "fair_probability": 0.5275297619047619,
+        "fair_probability": 0.5238095238095238,
         "median_odd": 1.5,
         "player_key": "111815"
       },
@@ -4234,11 +6221,99 @@
       "signals": {
         "elo": 0.5064493117199939,
         "fatigue": 0.5,
-        "market": 0.5275297619047619,
+        "market": 0.5238095238095238,
         "recent_form": 0.24772651258601203,
         "season_profile": 0.5,
         "serve": 0.47374820652502625,
         "surface_elo": 0.6173536662812585
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 31.004175019799384,
+      "data_quality": 0.9120000000000001,
+      "disagreement_pp": 9.971824980200621,
+      "edge_pp": -2.266359727678302,
+      "final_probability": 0.4112986668741603,
+      "market_probability": 0.4339622641509433,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-279c14245172e0bd06d7",
+        "player_a": {
+          "key": "106218",
+          "name": "Marcos Giron"
+        },
+        "player_b": {
+          "key": "210012",
+          "name": "Henrique Rocha"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "210012",
+        "name": "Henrique Rocha"
+      },
+      "opponent_market": {
+        "best_odd": 1.85,
+        "bookmaker_odds": {
+          "BetVictor": 1.8,
+          "Betsson": 1.72,
+          "Betway": 1.5,
+          "Coral": 1.15,
+          "Interwetten": 1.55,
+          "Ladbrokes": 1.15,
+          "Unibet": 1.65,
+          "bet-at-home": 1.3,
+          "bwin": 1.85
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5660377358490566,
+        "median_odd": 1.55,
+        "player_key": "210012"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 3.5,
+        "bookmaker_odds": {
+          "BetVictor": 2.5,
+          "Betsson": 2.5,
+          "Betway": 1.5,
+          "Coral": 1.5,
+          "Interwetten": 1.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 1.5,
+          "bet-at-home": 1.5,
+          "bwin": 3.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4339622641509433,
+        "median_odd": 1.5,
+        "player_key": "106218"
+      },
+      "selected_player": {
+        "key": "106218",
+        "name": "Marcos Giron"
+      },
+      "signals": {
+        "elo": 0.4276227850555059,
+        "fatigue": 0.5,
+        "market": 0.4339622641509433,
+        "recent_form": 0.2,
+        "season_profile": 0.4642857142857143,
+        "surface_elo": 0.47223050488505025
       },
       "status": "REJECTED"
     },
@@ -4392,7 +6467,7 @@
         "best_odd": 1.83,
         "bookmaker_odds": {
           "BetVictor": 1.75,
-          "Betsson": 1.61,
+          "Betsson": 1.59,
           "Betway": 1.55,
           "Coral": 1.18,
           "Interwetten": 1.6,
@@ -4404,7 +6479,7 @@
         },
         "bookmakers": 10,
         "fair_probability": 0.5597014925373135,
-        "median_odd": 1.605,
+        "median_odd": 1.5950000000000002,
         "player_key": "123828"
       },
       "selected_player": {
@@ -4420,14 +6495,359 @@
         "surface_elo": 0.4496239376595206
       },
       "status": "REJECTED"
+    },
+    {
+      "confidence": 28.56601142100298,
+      "data_quality": 0.8440000000000001,
+      "disagreement_pp": 13.402681717950637,
+      "edge_pp": -20.61403856836346,
+      "final_probability": 0.5255669313895361,
+      "market_probability": 0.7317073170731707,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-b2637bfa98c5e6f75c53",
+        "player_a": {
+          "key": "200711",
+          "name": "Nicolas Mejia"
+        },
+        "player_b": {
+          "key": "207985",
+          "name": "Jacob Fearnley"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "200711",
+        "name": "Nicolas Mejia"
+      },
+      "opponent_market": {
+        "best_odd": 6.5,
+        "bookmaker_odds": {
+          "BetVictor": 4.5,
+          "Betsson": 4.5,
+          "Betway": 6.5,
+          "Coral": 1.5,
+          "Interwetten": 5.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 3.5,
+          "bet-at-home": 6.5,
+          "bwin": 4.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.26829268292682923,
+        "median_odd": 4.5,
+        "player_key": "200711"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "MODEL_DISAGREEMENT"
+      ],
+      "selected_market": {
+        "best_odd": 2.2,
+        "bookmaker_odds": {
+          "BetVictor": 1.67,
+          "Betsson": 1.65,
+          "Betway": 1.2,
+          "Coral": 1.83,
+          "Interwetten": 1.35,
+          "Ladbrokes": 1.83,
+          "Unibet": 2.2,
+          "bet-at-home": 1.18,
+          "bwin": 1.57
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.7317073170731707,
+        "median_odd": 1.65,
+        "player_key": "207985"
+      },
+      "selected_player": {
+        "key": "207985",
+        "name": "Jacob Fearnley"
+      },
+      "signals": {
+        "elo": 0.34627388559831174,
+        "fatigue": 0.5,
+        "market": 0.7317073170731707,
+        "recent_form": 0.38779388759119593,
+        "season_profile": 0.34375,
+        "surface_elo": 0.43269560741864344
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 28.368567717996296,
+      "data_quality": 0.5640000000000001,
+      "disagreement_pp": 4.603432282003708,
+      "edge_pp": -1.3810296846011094,
+      "final_probability": 0.4759856215213358,
+      "market_probability": 0.48979591836734687,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-688d61b590c615f3ce58",
+        "player_a": {
+          "key": "200647",
+          "name": "Sho Shimabukuro"
+        },
+        "player_b": {
+          "key": "name-18bd3839d817ee",
+          "name": "Wolf J."
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "name-18bd3839d817ee",
+        "name": "Wolf J."
+      },
+      "opponent_market": {
+        "best_odd": 2.17,
+        "bookmaker_odds": {
+          "BetVictor": 1.83,
+          "Betsson": 1.81,
+          "Betway": 1.45,
+          "Coral": 1.44,
+          "Interwetten": 1.65,
+          "Ladbrokes": 1.44,
+          "Unibet": 2.17,
+          "bet-at-home": 1.45,
+          "bwin": 1.83
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5102040816326531,
+        "median_odd": 1.65,
+        "player_key": "name-18bd3839d817ee"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "DATA_QUALITY_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 3.5,
+        "bookmaker_odds": {
+          "BetVictor": 1.5,
+          "Betsson": 1.5,
+          "Betway": 3.5,
+          "Coral": 1.5,
+          "Interwetten": 2.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 1.5,
+          "bet-at-home": 3.5,
+          "bwin": 1.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.48979591836734687,
+        "median_odd": 1.5,
+        "player_key": "200647"
+      },
+      "selected_player": {
+        "key": "200647",
+        "name": "Sho Shimabukuro"
+      },
+      "signals": {
+        "market": 0.48979591836734687,
+        "season_profile": 0.3977272727272727
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 27.9613931525353,
+      "data_quality": 0.8780000000000001,
+      "disagreement_pp": 12.232606847464702,
+      "edge_pp": -11.48778207405458,
+      "final_probability": 0.4832083036613681,
+      "market_probability": 0.5980861244019139,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-cd096f01ade8fb367733",
+        "player_a": {
+          "key": "209414",
+          "name": "Luca Van Assche"
+        },
+        "player_b": {
+          "key": "105583",
+          "name": "Dusan Lajovic"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "209414",
+        "name": "Luca Van Assche"
+      },
+      "opponent_market": {
+        "best_odd": 3.5,
+        "bookmaker_odds": {
+          "BetVictor": 3.5,
+          "Betsson": 3.5,
+          "Betway": 1.5,
+          "Coral": 1.5,
+          "Interwetten": 2.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 2.5,
+          "bet-at-home": 1.5,
+          "bwin": 3.5
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.4019138755980861,
+        "median_odd": 2.5,
+        "player_key": "209414"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 1.75,
+        "bookmaker_odds": {
+          "BetVictor": 1.75,
+          "Betsson": 1.71,
+          "Betway": 1.4,
+          "Coral": 1.14,
+          "Interwetten": 1.5,
+          "Ladbrokes": 1.14,
+          "Unibet": 1.68,
+          "bet-at-home": 1.4,
+          "bwin": 1.7
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.5980861244019139,
+        "median_odd": 1.5,
+        "player_key": "105583"
+      },
+      "selected_player": {
+        "key": "105583",
+        "name": "Dusan Lajovic"
+      },
+      "signals": {
+        "elo": 0.45019385937305423,
+        "fatigue": 0.5,
+        "market": 0.5980861244019139,
+        "recent_form": 0.2068966485258471,
+        "season_profile": 0.3793706293706294,
+        "surface_elo": 0.4955876917962414
+      },
+      "status": "REJECTED"
+    },
+    {
+      "confidence": 23.318612311722333,
+      "data_quality": 0.526,
+      "disagreement_pp": 19.08562540929928,
+      "edge_pp": 5.725687622789784,
+      "final_probability": 0.13387770137524557,
+      "market_probability": 0.07662082514734773,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-cfdeba5b50ffe4a0e433",
+        "player_a": {
+          "key": "name-770d10159883c0",
+          "name": "Wong C."
+        },
+        "player_b": {
+          "key": "202261",
+          "name": "Otto Virtanen"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "202261",
+        "name": "Otto Virtanen"
+      },
+      "opponent_market": {
+        "best_odd": 2.7,
+        "bookmaker_odds": {
+          "BetVictor": 1.95,
+          "Betsson": 2.15,
+          "Betway": 2.1,
+          "Coral": 1.95,
+          "Ladbrokes": 1.95,
+          "Unibet": 2.3,
+          "bet-at-home": 2.7,
+          "bwin": 1.92
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.9233791748526523,
+        "median_odd": 2.025,
+        "player_key": "202261"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "MODEL_DISAGREEMENT",
+        "DATA_QUALITY_TOO_LOW"
+      ],
+      "selected_market": {
+        "best_odd": 28.5,
+        "bookmaker_odds": {
+          "BetVictor": 24.5,
+          "Betsson": 2.5,
+          "Betway": 25.5,
+          "Coral": 23.5,
+          "Ladbrokes": 23.5,
+          "Unibet": 26.5,
+          "bet-at-home": 28.5,
+          "bwin": 23.5
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.07662082514734773,
+        "median_odd": 24.0,
+        "player_key": "name-770d10159883c0"
+      },
+      "selected_player": {
+        "key": "name-770d10159883c0",
+        "name": "Wong C."
+      },
+      "signals": {
+        "market": 0.07662082514734773,
+        "season_profile": 0.4583333333333333
+      },
+      "status": "REJECTED"
     }
   ],
   "rejection_summary": {
-    "CONFIDENCE_TOO_LOW": 40,
-    "EDGE_TOO_LOW": 26,
-    "MODEL_DISAGREEMENT": 2,
-    "ODD_OUT_OF_RANGE": 22,
-    "PROBABILITY_TOO_LOW": 39
+    "CONFIDENCE_TOO_LOW": 68,
+    "DATA_QUALITY_TOO_LOW": 4,
+    "EDGE_TOO_LOW": 45,
+    "MODEL_DISAGREEMENT": 10,
+    "ODD_OUT_OF_RANGE": 41,
+    "PROBABILITY_TOO_LOW": 64
   },
   "result_reconciliation": {
     "resolved": 0,
@@ -4440,6 +6860,9 @@
   },
   "shadow": [],
   "source_requests": 1,
-  "target_odd_pool_matches": 18,
-  "unresolved_players": []
+  "target_odd_pool_matches": 27,
+  "unresolved_players": [
+    "Wolf J.",
+    "Wong C."
+  ]
 }
