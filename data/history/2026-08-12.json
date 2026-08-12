@@ -39,7 +39,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-12T17:30:59.441119+00:00",
+        "updated_at": "2026-08-12T19:10:01.044728+00:00",
         "winner": {
           "key": "200647",
           "name": "Sho Shimabukuro"
@@ -4291,5 +4291,5 @@
     "resolved_model_picks": 0,
     "wins": 0
   },
-  "updated_at": "2026-08-12T17:30:59.441165+00:00"
+  "updated_at": "2026-08-12T19:10:01.044794+00:00"
 }

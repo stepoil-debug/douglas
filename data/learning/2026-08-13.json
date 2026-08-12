@@ -3,13 +3,13 @@
   "matches": [
     {
       "bookmakers": 10,
-      "confidence": 59.7075170601044,
+      "confidence": 59.82649059935816,
       "data_quality": 0.9300000000000002,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 11.655568970788767,
-      "edge_pp": 12.307116943646834,
-      "final_probability": 0.5782027553232886,
+      "disagreement_pp": 11.713974981706064,
+      "edge_pp": 12.471876604872921,
+      "final_probability": 0.5770108769229296,
       "match_id": "pub-bc4bf0b6233104082e0d",
       "odd": 2.5,
       "opponent": {
@@ -35,7 +35,7 @@
       "signals": {
         "elo": 0.6896844318814849,
         "fatigue": 0.5,
-        "market": 0.45513158588682023,
+        "market": 0.4522921108742004,
         "recent_form": 0.8,
         "season_profile": 0.59375,
         "surface_elo": 0.5503760623404794
@@ -46,13 +46,13 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 59.06217666397372,
+      "confidence": 58.920553135483054,
       "data_quality": 1.0,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 12.131537486613793,
-      "edge_pp": 19.356569234594033,
-      "final_probability": 0.5119371415058751,
+      "disagreement_pp": 12.192889467927728,
+      "edge_pp": 19.479337483217275,
+      "final_probability": 0.5111344260341077,
       "match_id": "pub-069e3365e0699bf04faa",
       "odd": 4.5,
       "opponent": {
@@ -78,7 +78,7 @@
       "signals": {
         "elo": 0.6448832324039365,
         "fatigue": 0.5,
-        "market": 0.31837144915993476,
+        "market": 0.316341051201935,
         "recent_form": 0.5840380370687062,
         "season_profile": 0.7,
         "serve": 0.59917090435093,
@@ -90,13 +90,13 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 56.210660494159114,
+      "confidence": 55.47411513076129,
       "data_quality": 1.0,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 8.75701817791735,
-      "edge_pp": 1.2529423015615992,
-      "final_probability": 0.6971238252926558,
+      "disagreement_pp": 8.937341123580623,
+      "edge_pp": -1.345641042672785,
+      "final_probability": 0.7141145625434191,
       "match_id": "pub-c6a5a3a0b04d01c1db2c",
       "odd": 2.1,
       "opponent": {
@@ -122,7 +122,7 @@
       "signals": {
         "elo": 0.680923707492355,
         "fatigue": 0.5,
-        "market": 0.6845944022770398,
+        "market": 0.727570972970147,
         "recent_form": 0.8,
         "season_profile": 0.75,
         "serve": 0.6357623094518428,
@@ -222,15 +222,59 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 48.62218570656714,
+      "confidence": 48.697860384121306,
+      "data_quality": 0.962,
+      "date": "2026-08-13",
+      "decision": "REJECTED",
+      "disagreement_pp": 6.117727918880954,
+      "edge_pp": 5.758995242958642,
+      "final_probability": 0.523233968656767,
+      "match_id": "pub-f65844b4bef7cf13e8cb",
+      "odd": 3.5,
+      "opponent": {
+        "key": "208233",
+        "name": "Mattia Bellucci"
+      },
+      "predicted_player": {
+        "key": "208260",
+        "name": "Zachary Svajda"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.5934314001421419,
+        "fatigue": 0.5,
+        "market": 0.46564401622718055,
+        "recent_form": 0.6085353795401395,
+        "season_profile": 0.5206043956043956,
+        "serve": 0.42523846425989176,
+        "surface_elo": 0.5462424259587758
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    },
+    {
+      "bookmakers": 10,
+      "confidence": 48.50356012610942,
       "data_quality": 0.9440000000000002,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 4.139807682023567,
-      "edge_pp": 4.687921975592079,
-      "final_probability": 0.5261173383252495,
+      "disagreement_pp": 4.0659045924510755,
+      "edge_pp": 4.509090997500776,
+      "final_probability": 0.5274110092305909,
       "match_id": "pub-536899ad90562f9bd39b",
-      "odd": 1.83,
+      "odd": 1.8,
       "opponent": {
         "key": "132686",
         "name": "Nuno Borges"
@@ -253,7 +297,7 @@
       "signals": {
         "elo": 0.5454959533572064,
         "fatigue": 0.5,
-        "market": 0.47923811856932874,
+        "market": 0.48232009925558317,
         "recent_form": 0.6082835332433412,
         "season_profile": 0.5535714285714286,
         "surface_elo": 0.5507225401981928
@@ -352,50 +396,6 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 47.739628541397984,
-      "data_quality": 0.962,
-      "date": "2026-08-13",
-      "decision": "REJECTED",
-      "disagreement_pp": 5.919636197954741,
-      "edge_pp": 4.750122335076501,
-      "final_probability": 0.5298304453621502,
-      "match_id": "pub-f65844b4bef7cf13e8cb",
-      "odd": 3.5,
-      "opponent": {
-        "key": "208233",
-        "name": "Mattia Bellucci"
-      },
-      "predicted_player": {
-        "key": "208260",
-        "name": "Zachary Svajda"
-      },
-      "rank": null,
-      "reject_reasons": [
-        "ODD_OUT_OF_RANGE",
-        "PROBABILITY_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
-      },
-      "signals": {
-        "elo": 0.5934314001421419,
-        "fatigue": 0.5,
-        "market": 0.4823292220113852,
-        "recent_form": 0.6085353795401395,
-        "season_profile": 0.5206043956043956,
-        "serve": 0.42523846425989176,
-        "surface_elo": 0.5462424259587758
-      },
-      "surface": "Hard",
-      "time": "",
-      "tournament": "ATP Cincinnati"
-    },
-    {
-      "bookmakers": 10,
       "confidence": 45.511285272490525,
       "data_quality": 0.9400000000000002,
       "date": "2026-08-13",
@@ -441,13 +441,13 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 44.12713965118385,
+      "confidence": 44.16805097236149,
       "data_quality": 0.992,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 8.4419945266812,
-      "edge_pp": -8.011232130190571,
-      "final_probability": 0.5975313417786505,
+      "disagreement_pp": 8.479799126140268,
+      "edge_pp": -8.131621185282023,
+      "final_probability": 0.5983185009850176,
       "match_id": "pub-5b18867644c80565a6d2",
       "odd": 1.83,
       "opponent": {
@@ -473,7 +473,7 @@
       "signals": {
         "elo": 0.5377187413877358,
         "fatigue": 0.5,
-        "market": 0.6776436630805563,
+        "market": 0.6796347128378378,
         "recent_form": 0.6280874491523915,
         "season_profile": 0.5119047619047619,
         "serve": 0.6656582951761616,
@@ -660,13 +660,57 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 38.96967533877147,
+      "confidence": 38.9848039807034,
+      "data_quality": 1.0,
+      "date": "2026-08-13",
+      "decision": "REJECTED",
+      "disagreement_pp": 10.474071793301857,
+      "edge_pp": 3.3676920439269176,
+      "final_probability": 0.503970300949368,
+      "match_id": "pub-d2729923e8f3bdc70788",
+      "odd": 1.9,
+      "opponent": {
+        "key": "111815",
+        "name": "Cameron Norrie"
+      },
+      "predicted_player": {
+        "key": "209976",
+        "name": "Dino Prizmic"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.49355068828000614,
+        "fatigue": 0.5,
+        "market": 0.47029338051009884,
+        "recent_form": 0.752273487413988,
+        "season_profile": 0.5,
+        "serve": 0.5262517934749738,
+        "surface_elo": 0.38264633371874146
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    },
+    {
+      "bookmakers": 10,
+      "confidence": 38.94946774549986,
       "data_quality": 0.9080000000000001,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 3.8809128304378917,
-      "edge_pp": -2.02070893735381,
-      "final_probability": 0.5196658816920935,
+      "disagreement_pp": 3.8723002406301354,
+      "edge_pp": -1.9791739676217723,
+      "final_probability": 0.5193776798612999,
       "match_id": "pub-c2d7a987b7eb9cd7c048",
       "odd": 2.5,
       "opponent": {
@@ -694,54 +738,10 @@
         "elo": 0.5128032473655808,
         "fatigue": 0.5,
         "h2h": 0.5015957446808511,
-        "market": 0.5398729710656316,
+        "market": 0.5391694195375176,
         "recent_form": 0.5729861519929653,
         "season_profile": 0.47115384615384615,
         "surface_elo": 0.446054613068624
-      },
-      "surface": "Hard",
-      "time": "",
-      "tournament": "ATP Cincinnati"
-    },
-    {
-      "bookmakers": 10,
-      "confidence": 38.84779740623783,
-      "data_quality": 1.0,
-      "date": "2026-08-13",
-      "decision": "REJECTED",
-      "disagreement_pp": 10.460217074657752,
-      "edge_pp": 3.2360680969184874,
-      "final_probability": 0.504830919064423,
-      "match_id": "pub-d2729923e8f3bdc70788",
-      "odd": 1.9,
-      "opponent": {
-        "key": "111815",
-        "name": "Cameron Norrie"
-      },
-      "predicted_player": {
-        "key": "209976",
-        "name": "Dino Prizmic"
-      },
-      "rank": null,
-      "reject_reasons": [
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
-      },
-      "signals": {
-        "elo": 0.49355068828000614,
-        "fatigue": 0.5,
-        "market": 0.47247023809523814,
-        "recent_form": 0.752273487413988,
-        "season_profile": 0.5,
-        "serve": 0.5262517934749738,
-        "surface_elo": 0.38264633371874146
       },
       "surface": "Hard",
       "time": "",
@@ -885,5 +885,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-12T17:31:34.804356+00:00"
+  "updated_at": "2026-08-12T19:10:44.876684+00:00"
 }
