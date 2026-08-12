@@ -68,10 +68,10 @@
         "best_odd": 1.83,
         "bookmaker_odds": {
           "BetVictor": 1.8,
-          "Betsson": 1.63,
+          "Betsson": 1.61,
           "Betway": 1.55,
           "Coral": 1.18,
-          "Interwetten": 1.65,
+          "Interwetten": 1.6,
           "Ladbrokes": 1.18,
           "Unibet": 1.63,
           "bet-at-home": 1.33,
@@ -80,7 +80,7 @@
         },
         "bookmakers": 10,
         "fair_probability": 0.5448684141131797,
-        "median_odd": 1.63,
+        "median_odd": 1.605,
         "player_key": "123828"
       },
       "rank": null,
@@ -3587,10 +3587,10 @@
         "best_odd": 1.83,
         "bookmaker_odds": {
           "BetVictor": 1.8,
-          "Betsson": 1.63,
+          "Betsson": 1.61,
           "Betway": 1.55,
           "Coral": 1.18,
-          "Interwetten": 1.65,
+          "Interwetten": 1.6,
           "Ladbrokes": 1.18,
           "Unibet": 1.63,
           "bet-at-home": 1.33,
@@ -3599,7 +3599,7 @@
         },
         "bookmakers": 10,
         "fair_probability": 0.5448684141131797,
-        "median_odd": 1.63,
+        "median_odd": 1.605,
         "player_key": "123828"
       },
       "selected_player": {
