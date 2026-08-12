@@ -145,6 +145,11 @@ def _get_history(provider, cache: dict[str, Any], player_key: str, target_date: 
 
 
 def _market_in_scope(market: dict[str, Any], cfg: dict) -> bool:
+    """Return whether at least one side is in the execution odd range.
+
+    This is a diagnostic/selection-pool flag only. It must never gate the full
+    pre-match analysis, because the model needs to study the whole ATP board first.
+    """
     s = cfg["selection"]
     for odd in (market.get("home_best"), market.get("away_best")):
         if odd is not None and s["min_odd"] <= float(odd) <= s["max_odd"]:
@@ -225,6 +230,18 @@ def _quality_score(
     return min(1.0, score)
 
 
+def _bookmaker_odds(rows: dict[str, Any]) -> dict[str, float]:
+    clean: dict[str, float] = {}
+    for bookmaker, odd in (rows or {}).items():
+        try:
+            value = float(odd)
+        except (TypeError, ValueError):
+            continue
+        if value > 1:
+            clean[str(bookmaker)] = value
+    return clean
+
+
 def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: int = 40) -> dict[str, Any]:
     day = target_date.isoformat()
     fixtures = provider.fixtures(target_date)
@@ -241,8 +258,13 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
     cache_path, enrichment_cache = _load_enrichment_cache(root, day)
     candidates: list[Candidate] = []
     h2h_calls = 0
+    # Public-history H2H is local/static after download. A fixed cap must not make
+    # later matches on a large ATP card receive a shallower analysis.
+    effective_h2h_budget = max(int(h2h_budget or 0), len(prematch))
     odds_matches = 0
     deep_matches = 0
+    target_odd_matches = 0
+    no_market_matches = 0
     unresolved_players: set[str] = set()
     recovered_surfaces = 0
     stale_rankings_ignored = 0
@@ -252,11 +274,13 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
         home, away = _extract_home_away(raw_odds)
         market = consensus_market(home, away)
         if not market["bookmakers"]:
+            no_market_matches += 1
             continue
+
         odds_matches += 1
-        if not _market_in_scope(market, cfg):
-            continue
         deep_matches += 1
+        if _market_in_scope(market, cfg):
+            target_odd_matches += 1
 
         if not match.surface and _recover_surface(provider, match, target_date, int(cfg.get("surface_lookback_years", 3))):
             recovered_surfaces += 1
@@ -280,7 +304,7 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
         rank_prob_a = ranking_probability(rank_a, rank_b)
 
         context: dict[str, Any] = {}
-        if resolved_a and resolved_b and h2h_calls < h2h_budget:
+        if resolved_a and resolved_b and h2h_calls < effective_h2h_budget:
             try:
                 context = provider.h2h(match.player_a.key, match.player_b.key)
                 h2h_calls += 1
@@ -342,11 +366,21 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
         )
 
         sides = [
-            (match.player_a, match.player_b, market["home_best"], market["home_median"], market["home_fair"], market["away_best"], market["away_median"], market["away_fair"], signals_a),
-            (match.player_b, match.player_a, market["away_best"], market["away_median"], market["away_fair"], market["home_best"], market["home_median"], market["home_fair"], signals_b),
+            (
+                match.player_a, match.player_b,
+                market["home_best"], market["home_median"], market["home_fair"],
+                market["away_best"], market["away_median"], market["away_fair"],
+                signals_a, home, away,
+            ),
+            (
+                match.player_b, match.player_a,
+                market["away_best"], market["away_median"], market["away_fair"],
+                market["home_best"], market["home_median"], market["home_fair"],
+                signals_b, away, home,
+            ),
         ]
 
-        for selected, opponent, best, med, fair, obest, omed, ofair, signals in sides:
+        for selected, opponent, best, med, fair, obest, omed, ofair, signals, selected_books, opponent_books in sides:
             if best is None or fair is None:
                 continue
             clean_signals = {k: float(v) for k, v in signals.items() if v is not None}
@@ -358,8 +392,14 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
                 match=match,
                 selected_player=selected,
                 opponent=opponent,
-                selected_market=MarketSide(selected.key, best, med, fair, int(market["bookmakers"])),
-                opponent_market=MarketSide(opponent.key, obest, omed, ofair, int(market["bookmakers"])),
+                selected_market=MarketSide(
+                    selected.key, best, med, fair, int(market["bookmakers"]),
+                    bookmaker_odds=_bookmaker_odds(selected_books),
+                ),
+                opponent_market=MarketSide(
+                    opponent.key, obest, omed, ofair, int(market["bookmakers"]),
+                    bookmaker_odds=_bookmaker_odds(opponent_books),
+                ),
                 signals=clean_signals,
                 final_probability=final,
                 market_probability=float(fair),
@@ -378,6 +418,8 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
             candidates.append(candidate)
 
     write_json(cache_path, enrichment_cache)
+    # Only now do execution filters run. The odd range is a selection criterion,
+    # never a pre-analysis criterion.
     ranked = rank_candidates(candidates, cfg)
     payload = {
         "date": day,
@@ -385,16 +427,23 @@ def analyze_day(provider, target_date: date, cfg: dict, root: Path, h2h_budget: 
         "generated_at_timezone": "America/Sao_Paulo",
         "data_mode": "NO_API",
         "data_sources": ["OddsHarvester/OddsPortal", "JeffSackmann/tennis_atp"],
+        "analysis_policy": "ALL_PREMATCH_WITH_MARKET_BEFORE_SELECTION",
         "fixtures_analyzed": len(fixtures),
         "prematch_atp_singles": len(prematch),
         "matches_with_odds": odds_matches,
         "deep_analyzed_matches": deep_matches,
+        "fully_analyzed_matches": deep_matches,
+        "target_odd_pool_matches": target_odd_matches,
+        "matches_without_market": no_market_matches,
         "candidate_sides": len(ranked),
+        "h2h_calls": h2h_calls,
+        "h2h_budget_effective": effective_h2h_budget,
         "source_requests": getattr(provider, "source_requests", None),
         "unresolved_players": sorted(unresolved_players),
         "data_quality_diagnostics": {
             "surfaces_recovered": recovered_surfaces,
             "stale_rankings_ignored": stale_rankings_ignored,
+            "full_analysis_before_odd_filter": True,
         },
         "bootstrap": bootstrap,
         "approved": [c.to_dict() for c in ranked if c.status == "APPROVED"],
