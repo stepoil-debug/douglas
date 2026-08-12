@@ -3,13 +3,13 @@
   "matches": [
     {
       "bookmakers": 10,
-      "confidence": 59.82649059935816,
+      "confidence": 60.32184021865318,
       "data_quality": 0.9300000000000002,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 11.713974981706064,
-      "edge_pp": 12.471876604872921,
-      "final_probability": 0.5770108769229296,
+      "disagreement_pp": 11.967855402685892,
+      "edge_pp": 13.167801741096575,
+      "final_probability": 0.5719765248736522,
       "match_id": "pub-bc4bf0b6233104082e0d",
       "odd": 2.5,
       "opponent": {
@@ -35,7 +35,7 @@
       "signals": {
         "elo": 0.6896844318814849,
         "fatigue": 0.5,
-        "market": 0.4522921108742004,
+        "market": 0.4402985074626865,
         "recent_form": 0.8,
         "season_profile": 0.59375,
         "surface_elo": 0.5503760623404794
@@ -396,13 +396,13 @@
     },
     {
       "bookmakers": 10,
-      "confidence": 45.511285272490525,
+      "confidence": 45.881953710269194,
       "data_quality": 0.9400000000000002,
       "date": "2026-08-13",
       "decision": "REJECTED",
-      "disagreement_pp": 2.8174569540415764,
-      "edge_pp": 2.515825962975271,
-      "final_probability": 0.5218025549317661,
+      "disagreement_pp": 2.9213969642932986,
+      "edge_pp": 2.9299138706527836,
+      "final_probability": 0.5190950570738747,
       "match_id": "pub-9d4a91620bcb4581ac45",
       "odd": 4.5,
       "opponent": {
@@ -429,7 +429,7 @@
       "signals": {
         "elo": 0.5433398606212703,
         "fatigue": 0.5,
-        "market": 0.49664429530201337,
+        "market": 0.48979591836734687,
         "recent_form": 0.5312601540925977,
         "season_profile": 0.5625,
         "serve": 0.484290344360475,
@@ -885,5 +885,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-12T19:38:32.135518+00:00"
+  "updated_at": "2026-08-12T20:10:56.903288+00:00"
 }

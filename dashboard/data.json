@@ -110,9 +110,9 @@
       "misses": 3,
       "n": 5
     },
-    "updated_at": "2026-08-12T19:37:57.067169+00:00"
+    "updated_at": "2026-08-12T20:10:23.834206+00:00"
   },
-  "last_run_at": "2026-08-12T16:38:32.136809-03:00",
+  "last_run_at": "2026-08-12T17:10:56.904575-03:00",
   "learning_summary": {
     "matches": 20,
     "status": "PROVISIONAL_D1"
@@ -764,12 +764,12 @@
       }
     },
     {
-      "confidence": 38.80254304595843,
+      "confidence": 38.69860303570671,
       "data_quality": 0.9400000000000002,
-      "disagreement_pp": 2.8174569540415764,
-      "edge_pp": -2.515825962975271,
+      "disagreement_pp": 2.9213969642933,
+      "edge_pp": -2.9299138706527836,
       "failed_gates": 3,
-      "final_probability": 0.4781974450682338,
+      "final_probability": 0.48090494292612523,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -802,19 +802,19 @@
       "selected_market": {
         "best_odd": 1.94,
         "bookmaker_odds": {
-          "BetVictor": 1.91,
+          "BetVictor": 1.9,
           "Betsson": 1.68,
           "Betway": 1.45,
-          "Coral": 1.48,
+          "Coral": 1.44,
           "Interwetten": 1.7,
-          "Ladbrokes": 1.48,
+          "Ladbrokes": 1.44,
           "Unibet": 1.94,
           "bet-at-home": 1.3,
           "bet365": 1.83,
-          "bwin": 1.9
+          "bwin": 1.85
         },
         "bookmakers": 10,
-        "fair_probability": 0.5033557046979865,
+        "fair_probability": 0.5102040816326531,
         "median_odd": 1.69,
         "player_key": "104792"
       },
@@ -825,7 +825,7 @@
       "signals": {
         "elo": 0.45666013937872973,
         "fatigue": 0.5,
-        "market": 0.5033557046979866,
+        "market": 0.5102040816326532,
         "recent_form": 0.46873984590740225,
         "season_profile": 0.4375,
         "serve": 0.515709655639525,
@@ -839,12 +839,12 @@
   "refresh_status": "SUCCESS",
   "rejected": [
     {
-      "confidence": 59.82649059935816,
+      "confidence": 60.32184021865318,
       "data_quality": 0.9300000000000002,
-      "disagreement_pp": 11.713974981706064,
-      "edge_pp": 12.471876604872921,
-      "final_probability": 0.5770108769229296,
-      "market_probability": 0.4522921108742004,
+      "disagreement_pp": 11.967855402685892,
+      "edge_pp": 13.167801741096575,
+      "final_probability": 0.5719765248736522,
+      "market_probability": 0.4402985074626865,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -872,7 +872,7 @@
       "opponent_market": {
         "best_odd": 1.83,
         "bookmaker_odds": {
-          "BetVictor": 1.8,
+          "BetVictor": 1.75,
           "Betsson": 1.61,
           "Betway": 1.55,
           "Coral": 1.18,
@@ -884,7 +884,7 @@
           "bwin": 1.7
         },
         "bookmakers": 10,
-        "fair_probability": 0.5477078891257996,
+        "fair_probability": 0.5597014925373135,
         "median_odd": 1.605,
         "player_key": "123828"
       },
@@ -904,12 +904,12 @@
           "Interwetten": 1.5,
           "Ladbrokes": 1.5,
           "Unibet": 1.5,
-          "bet-at-home": 1.5,
+          "bet-at-home": 2.5,
           "bet365": 2.5,
           "bwin": 2.5
         },
         "bookmakers": 10,
-        "fair_probability": 0.4522921108742004,
+        "fair_probability": 0.4402985074626865,
         "median_odd": 1.5,
         "player_key": "202058"
       },
@@ -920,7 +920,7 @@
       "signals": {
         "elo": 0.6896844318814849,
         "fatigue": 0.5,
-        "market": 0.4522921108742004,
+        "market": 0.4402985074626865,
         "recent_form": 0.8,
         "season_profile": 0.59375,
         "surface_elo": 0.5503760623404794
@@ -2270,12 +2270,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 45.511285272490525,
+      "confidence": 45.881953710269194,
       "data_quality": 0.9400000000000002,
-      "disagreement_pp": 2.8174569540415764,
-      "edge_pp": 2.515825962975271,
-      "final_probability": 0.5218025549317661,
-      "market_probability": 0.49664429530201337,
+      "disagreement_pp": 2.9213969642932986,
+      "edge_pp": 2.9299138706527836,
+      "final_probability": 0.5190950570738747,
+      "market_probability": 0.48979591836734687,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -2303,19 +2303,19 @@
       "opponent_market": {
         "best_odd": 1.94,
         "bookmaker_odds": {
-          "BetVictor": 1.91,
+          "BetVictor": 1.9,
           "Betsson": 1.68,
           "Betway": 1.45,
-          "Coral": 1.48,
+          "Coral": 1.44,
           "Interwetten": 1.7,
-          "Ladbrokes": 1.48,
+          "Ladbrokes": 1.44,
           "Unibet": 1.94,
           "bet-at-home": 1.3,
           "bet365": 1.83,
-          "bwin": 1.9
+          "bwin": 1.85
         },
         "bookmakers": 10,
-        "fair_probability": 0.5033557046979865,
+        "fair_probability": 0.5102040816326531,
         "median_odd": 1.69,
         "player_key": "104792"
       },
@@ -2341,7 +2341,7 @@
           "bwin": 1.5
         },
         "bookmakers": 10,
-        "fair_probability": 0.49664429530201337,
+        "fair_probability": 0.48979591836734687,
         "median_odd": 1.5,
         "player_key": "208014"
       },
@@ -2352,7 +2352,7 @@
       "signals": {
         "elo": 0.5433398606212703,
         "fatigue": 0.5,
-        "market": 0.49664429530201337,
+        "market": 0.48979591836734687,
         "recent_form": 0.5312601540925977,
         "season_profile": 0.5625,
         "serve": 0.484290344360475,
@@ -3081,12 +3081,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 38.80254304595843,
+      "confidence": 38.69860303570671,
       "data_quality": 0.9400000000000002,
-      "disagreement_pp": 2.8174569540415764,
-      "edge_pp": -2.515825962975271,
-      "final_probability": 0.4781974450682338,
-      "market_probability": 0.5033557046979865,
+      "disagreement_pp": 2.9213969642933,
+      "edge_pp": -2.9299138706527836,
+      "final_probability": 0.48090494292612523,
+      "market_probability": 0.5102040816326531,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -3126,7 +3126,7 @@
           "bwin": 1.5
         },
         "bookmakers": 10,
-        "fair_probability": 0.49664429530201337,
+        "fair_probability": 0.48979591836734687,
         "median_odd": 1.5,
         "player_key": "208014"
       },
@@ -3139,19 +3139,19 @@
       "selected_market": {
         "best_odd": 1.94,
         "bookmaker_odds": {
-          "BetVictor": 1.91,
+          "BetVictor": 1.9,
           "Betsson": 1.68,
           "Betway": 1.45,
-          "Coral": 1.48,
+          "Coral": 1.44,
           "Interwetten": 1.7,
-          "Ladbrokes": 1.48,
+          "Ladbrokes": 1.44,
           "Unibet": 1.94,
           "bet-at-home": 1.3,
           "bet365": 1.83,
-          "bwin": 1.9
+          "bwin": 1.85
         },
         "bookmakers": 10,
-        "fair_probability": 0.5033557046979865,
+        "fair_probability": 0.5102040816326531,
         "median_odd": 1.69,
         "player_key": "104792"
       },
@@ -3162,7 +3162,7 @@
       "signals": {
         "elo": 0.45666013937872973,
         "fatigue": 0.5,
-        "market": 0.5033557046979866,
+        "market": 0.5102040816326532,
         "recent_form": 0.46873984590740225,
         "season_profile": 0.4375,
         "serve": 0.515709655639525,
@@ -4333,12 +4333,12 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 29.676025018293938,
+      "confidence": 29.422144597314116,
       "data_quality": 0.9300000000000002,
-      "disagreement_pp": 11.713974981706064,
-      "edge_pp": -12.471876604872929,
-      "final_probability": 0.4229891230770703,
-      "market_probability": 0.5477078891257996,
+      "disagreement_pp": 11.967855402685892,
+      "edge_pp": -13.16780174109658,
+      "final_probability": 0.4280234751263477,
+      "market_probability": 0.5597014925373135,
       "match": {
         "date": "2026-08-13",
         "event_type": "ATP Singles",
@@ -4373,12 +4373,12 @@
           "Interwetten": 1.5,
           "Ladbrokes": 1.5,
           "Unibet": 1.5,
-          "bet-at-home": 1.5,
+          "bet-at-home": 2.5,
           "bet365": 2.5,
           "bwin": 2.5
         },
         "bookmakers": 10,
-        "fair_probability": 0.4522921108742004,
+        "fair_probability": 0.4402985074626865,
         "median_odd": 1.5,
         "player_key": "202058"
       },
@@ -4391,7 +4391,7 @@
       "selected_market": {
         "best_odd": 1.83,
         "bookmaker_odds": {
-          "BetVictor": 1.8,
+          "BetVictor": 1.75,
           "Betsson": 1.61,
           "Betway": 1.55,
           "Coral": 1.18,
@@ -4403,7 +4403,7 @@
           "bwin": 1.7
         },
         "bookmakers": 10,
-        "fair_probability": 0.5477078891257996,
+        "fair_probability": 0.5597014925373135,
         "median_odd": 1.605,
         "player_key": "123828"
       },
@@ -4414,7 +4414,7 @@
       "signals": {
         "elo": 0.31031556811851513,
         "fatigue": 0.5,
-        "market": 0.5477078891257996,
+        "market": 0.5597014925373135,
         "recent_form": 0.19999999999999996,
         "season_profile": 0.40625,
         "surface_elo": 0.4496239376595206
