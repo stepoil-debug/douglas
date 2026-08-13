@@ -50,7 +50,7 @@
       "schedule_match_method": "MATCH_ID",
       "schedule_source": "TennisExplorer detail",
       "schedule_time_status": "PENDING",
-      "schedule_verified_at": "2026-08-13T17:35:59.557335+00:00",
+      "schedule_verified_at": "2026-08-13T19:15:07.756862+00:00",
       "scheduled_date_current": "2026-08-14",
       "scheduled_time_at_freeze": null,
       "scheduled_time_current": null,
@@ -136,10 +136,10 @@
       "schedule_match_method": "MATCH_ID",
       "schedule_source": "TennisExplorer detail",
       "schedule_time_status": "CONFIRMED",
-      "schedule_verified_at": "2026-08-13T17:35:59.557335+00:00",
+      "schedule_verified_at": "2026-08-13T19:15:07.756862+00:00",
       "scheduled_date_current": "2026-08-13",
       "scheduled_time_at_freeze": null,
-      "scheduled_time_current": "17:05",
+      "scheduled_time_current": "17:20",
       "selected_market": {
         "best_odd": 2.5,
         "bookmaker_odds": {
@@ -221,7 +221,7 @@
       "schedule_match_method": "MATCH_ID",
       "schedule_source": "TennisExplorer detail",
       "schedule_time_status": "PENDING",
-      "schedule_verified_at": "2026-08-13T17:35:59.557335+00:00",
+      "schedule_verified_at": "2026-08-13T19:15:07.756862+00:00",
       "scheduled_date_current": "2026-08-14",
       "scheduled_time_at_freeze": null,
       "scheduled_time_current": null,
@@ -307,7 +307,7 @@
       "schedule_match_method": "MATCH_ID",
       "schedule_source": "TennisExplorer detail",
       "schedule_time_status": "PENDING",
-      "schedule_verified_at": "2026-08-13T17:35:59.557335+00:00",
+      "schedule_verified_at": "2026-08-13T19:15:07.756862+00:00",
       "scheduled_date_current": "2026-08-14",
       "scheduled_time_at_freeze": null,
       "scheduled_time_current": null,
@@ -393,7 +393,7 @@
       "schedule_match_method": "MATCH_ID",
       "schedule_source": "TennisExplorer detail",
       "schedule_time_status": "PENDING",
-      "schedule_verified_at": "2026-08-13T17:35:59.557335+00:00",
+      "schedule_verified_at": "2026-08-13T19:15:07.756862+00:00",
       "scheduled_date_current": "2026-08-14",
       "scheduled_time_at_freeze": null,
       "scheduled_time_current": null,
@@ -479,10 +479,10 @@
       "schedule_match_method": "MATCH_ID",
       "schedule_source": "TennisExplorer detail",
       "schedule_time_status": "CONFIRMED",
-      "schedule_verified_at": "2026-08-13T17:35:59.557335+00:00",
+      "schedule_verified_at": "2026-08-13T19:15:07.756862+00:00",
       "scheduled_date_current": "2026-08-13",
       "scheduled_time_at_freeze": null,
-      "scheduled_time_current": "17:10",
+      "scheduled_time_current": "17:30",
       "selected_market": {
         "best_odd": 2.5,
         "bookmaker_odds": {
@@ -533,5 +533,5 @@
     "schedule_dated": 6
   },
   "target_games": 6,
-  "updated_at": "2026-08-13T17:35:59.557335+00:00"
+  "updated_at": "2026-08-13T19:15:07.756862+00:00"
 }
