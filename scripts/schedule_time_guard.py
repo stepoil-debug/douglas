@@ -10,7 +10,7 @@ from zoneinfo import ZoneInfo
 
 try:
     from scripts.tennisexplorer_date_guard import verify_records
-except ModuleNotFoundError:  # direct execution: python scripts/schedule_time_guard.py
+except ModuleNotFoundError:  # direct execution
     from tennisexplorer_date_guard import verify_records
 
 SAO_PAULO = ZoneInfo("America/Sao_Paulo")
@@ -35,9 +35,7 @@ def _local_date(record: dict[str, Any]) -> date | None:
 
 def _local_clock(record: dict[str, Any]) -> str | None:
     dt = _parse_utc(record.get("match_date"))
-    if not dt:
-        return None
-    return dt.astimezone(SAO_PAULO).strftime("%H:%M")
+    return dt.astimezone(SAO_PAULO).strftime("%H:%M") if dt else None
 
 
 def _expected_date(records: list[dict[str, Any]]) -> date | None:
@@ -50,17 +48,10 @@ def _expected_date(records: list[dict[str, Any]]) -> date | None:
 
 
 def mark_unconfirmed_placeholder_times(records: list[dict[str, Any]]) -> dict[str, Any]:
-    """Remove highly suspicious repeated schedule times before model selection.
+    """Blank only suspicious *unverified* placeholder clocks.
 
-    Public tennis pages sometimes publish the next day's pairings and prices before
-    publishing the actual court schedule. In that state many or all matches can
-    receive the same placeholder clock (the observed case is 12:00 BRT). Treating
-    that value as official breaks sequential-entry planning, so suspicious clocks
-    are preserved only as diagnostics and the operational match_date is blanked.
-
-    The rule is deliberately conservative: it works per tournament and requires a
-    large repeated block. A normal group of a few simultaneous court starts is not
-    touched.
+    A clock positively read from the match-detail page is authoritative for this
+    layer and must never be blanked merely because several courts start together.
     """
     groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for record in records:
@@ -70,14 +61,14 @@ def mark_unconfirmed_placeholder_times(records: list[dict[str, Any]]) -> dict[st
     flagged = 0
     details: list[dict[str, Any]] = []
     for league, rows in groups.items():
-        clocks = [_local_clock(row) for row in rows]
+        candidates = [row for row in rows if row.get("schedule_date_verified") is not True]
+        clocks = [_local_clock(row) for row in candidates]
         usable = [clock for clock in clocks if clock]
         if not usable:
             continue
         counts = Counter(usable)
         dominant, count = counts.most_common(1)[0]
         share = count / max(1, len(usable))
-
         suspicious = (
             (count >= 10 and share >= 0.70)
             or (dominant in {"12:00", "00:00"} and count >= 6 and share >= 0.80)
@@ -86,7 +77,7 @@ def mark_unconfirmed_placeholder_times(records: list[dict[str, Any]]) -> dict[st
             continue
 
         league_flagged = 0
-        for row in rows:
+        for row in candidates:
             if _local_clock(row) != dominant:
                 row.setdefault("time_confirmed", True)
                 continue
@@ -97,16 +88,14 @@ def mark_unconfirmed_placeholder_times(records: list[dict[str, Any]]) -> dict[st
             row["match_date"] = ""
             league_flagged += 1
             flagged += 1
-        details.append({
-            "league": league,
-            "clock": dominant,
-            "count": league_flagged,
-            "share": round(share, 4),
-        })
+        details.append({"league": league, "clock": dominant, "count": league_flagged, "share": round(share, 4)})
 
     for record in records:
         if isinstance(record, dict):
-            record.setdefault("time_confirmed", bool(record.get("match_date")))
+            if record.get("schedule_date_verified") is True:
+                record["time_confirmed"] = True
+            else:
+                record.setdefault("time_confirmed", bool(record.get("match_date")))
 
     return {"flagged": flagged, "groups": details, "records": len(records)}
 
@@ -124,28 +113,24 @@ def guard_file(path: Path) -> dict[str, Any]:
 
     expected = _expected_date(rows)
     date_summary: dict[str, Any] = {"status": "SKIPPED", "reason": "NO_EXPECTED_DATE"}
-    if expected and any("match-detail" in str(row.get("match_link") or "") for row in rows):
-        # TennisExplorer can place more than one calendar day on the same table. The
-        # upstream parser historically stamped every row with the requested date.
-        # Verify each detail page before accepting it into the board.
-        date_summary = verify_records(rows, expected)
+    if expected and rows and any("match-detail" in str(row.get("match_link") or "") for row in rows):
+        # Skip a second network pass when the collector already verified the rows.
+        if all(row.get("schedule_date_verified") is True for row in rows):
+            date_summary = {"status": "ALREADY_VERIFIED", "records": len(rows), "target_date": expected.isoformat()}
+        else:
+            date_summary = verify_records(rows, expected)
 
     time_summary = mark_unconfirmed_placeholder_times(rows)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    return {
-        **time_summary,
-        "expected_date": expected.isoformat() if expected else None,
-        "date_guard": date_summary,
-    }
+    return {**time_summary, "expected_date": expected.isoformat() if expected else None, "date_guard": date_summary}
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Guard public tennis schedules against wrong dates and placeholder times")
+    parser = argparse.ArgumentParser(description="Guard tennis schedules against wrong dates and placeholder times")
     parser.add_argument("--input", required=True)
     args = parser.parse_args()
-    path = Path(args.input)
     try:
-        summary = guard_file(path)
+        summary = guard_file(Path(args.input))
     except Exception as exc:
         print(json.dumps({"status": "ERROR", "error": str(exc)}, ensure_ascii=False))
         return 2
