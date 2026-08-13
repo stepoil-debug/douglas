@@ -102,6 +102,7 @@ def _summary(payload: dict[str, Any]) -> dict[str, Any]:
     games = payload.get("games", []) or []
     resolved = [g for g in games if (g.get("result") or {}).get("status") in {"HIT", "MISS"}]
     hits = sum((g.get("result") or {}).get("status") == "HIT" for g in resolved)
+    dated = sum(bool(g.get("scheduled_date_current")) for g in games)
     confirmed = sum(bool(g.get("scheduled_date_current") and g.get("scheduled_time_current")) for g in games)
     return {
         "games": len(games),
@@ -109,6 +110,7 @@ def _summary(payload: dict[str, Any]) -> dict[str, Any]:
         "hits": hits,
         "misses": len(resolved) - hits,
         "accuracy": (hits / len(resolved)) if resolved else None,
+        "schedule_dated": dated,
         "schedule_confirmed": confirmed,
     }
 
@@ -125,10 +127,17 @@ def _indexes(fixtures: Iterable[Any]) -> tuple[dict[str, Any], dict[tuple[str, s
 
 
 def update_all_sequence_schedules(root: Path, fixtures: Iterable[Any]) -> dict[str, Any]:
-    """Append verified current date/time without changing any frozen prediction."""
+    """Append verified current date and, when trustworthy, its start time.
+
+    Frozen predictions remain immutable. A moved date is useful even if the order of
+    play has not assigned a reliable clock yet, so date-only metadata is persisted
+    and any earlier placeholder time is explicitly cleared.
+    """
     by_match, by_pair = _indexes(fixtures)
     changed_files = 0
     matched_games = 0
+    dated_games = 0
+    timed_games = 0
     id_matches = 0
     pair_matches = 0
     now = datetime.now(timezone.utc).isoformat()
@@ -143,15 +152,19 @@ def update_all_sequence_schedules(root: Path, fixtures: Iterable[Any]) -> dict[s
                 continue
             current_date = str(getattr(fixture, "date", "") or "").strip() or None
             current_time = str(getattr(fixture, "time", "") or "").strip() or None
-            if not current_date or not current_time:
+            if not current_date:
                 continue
             matched_games += 1
+            dated_games += 1
+            timed_games += bool(current_time)
             id_matches += match_method == "MATCH_ID"
             pair_matches += match_method == "PLAYER_PAIR"
-            source = str((getattr(fixture, "raw", {}) or {}).get("source") or "public schedule")
+            raw = getattr(fixture, "raw", {}) or {}
+            source = str(raw.get("source") or "public schedule")
             next_values = {
                 "scheduled_date_current": current_date,
                 "scheduled_time_current": current_time,
+                "schedule_time_status": "CONFIRMED" if current_time else "PENDING",
                 "schedule_verified_at": now,
                 "schedule_source": source,
                 "schedule_match_method": match_method,
@@ -162,8 +175,8 @@ def update_all_sequence_schedules(root: Path, fixtures: Iterable[Any]) -> dict[s
                 frozen_time = str(game.get("scheduled_time_at_freeze") or "")
                 game["schedule_changed_from_freeze"] = (
                     bool(frozen_date and current_date != frozen_date)
-                    or bool(frozen_time and current_time != frozen_time)
-                    or not bool(frozen_time)
+                    or bool(frozen_time and current_time and current_time != frozen_time)
+                    or (not bool(frozen_time) and bool(current_time))
                 )
                 changed = True
         if changed:
@@ -175,6 +188,8 @@ def update_all_sequence_schedules(root: Path, fixtures: Iterable[Any]) -> dict[s
     return {
         "status": "OK",
         "matched_games": matched_games,
+        "dated_games": dated_games,
+        "timed_games": timed_games,
         "match_id_matches": id_matches,
         "player_pair_matches": pair_matches,
         "changed_files": changed_files,
