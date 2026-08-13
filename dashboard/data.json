@@ -61,31 +61,31 @@
     "by_confidence": {
       "50-60": {
         "accuracy": 1.0,
-        "hits": 2,
+        "hits": 3,
         "misses": 0,
-        "n": 2
+        "n": 3
       },
       "<50": {
-        "accuracy": 0.4444444444444444,
-        "hits": 8,
-        "misses": 10,
-        "n": 18
+        "accuracy": 0.45,
+        "hits": 9,
+        "misses": 11,
+        "n": 20
       }
     },
     "by_decision": {
       "REJECTED": {
-        "accuracy": 0.5,
-        "hits": 10,
-        "misses": 10,
-        "n": 20
+        "accuracy": 0.5217391304347826,
+        "hits": 12,
+        "misses": 11,
+        "n": 23
       }
     },
     "by_probability": {
       "55-60%": {
-        "accuracy": 0.3333333333333333,
-        "hits": 1,
+        "accuracy": 0.5,
+        "hits": 2,
         "misses": 2,
-        "n": 3
+        "n": 4
       },
       "60-65%": {
         "accuracy": 0.5,
@@ -107,37 +107,38 @@
       },
       "<55%": {
         "accuracy": 0.5,
-        "hits": 6,
-        "misses": 6,
-        "n": 12
+        "hits": 7,
+        "misses": 7,
+        "n": 14
       }
     },
     "failure_tags": {
+      "ERR-MKT": 1,
       "ERR-SUR": 6,
-      "ERR-UNC": 10
+      "ERR-UNC": 11
     },
     "last_100": {
-      "accuracy": 0.5,
-      "hits": 10,
-      "misses": 10,
-      "n": 20
+      "accuracy": 0.5217391304347826,
+      "hits": 12,
+      "misses": 11,
+      "n": 23
     },
     "last_500": {
-      "accuracy": 0.5,
-      "hits": 10,
-      "misses": 10,
-      "n": 20
+      "accuracy": 0.5217391304347826,
+      "hits": 12,
+      "misses": 11,
+      "n": 23
     },
     "overall": {
-      "accuracy": 0.5,
-      "hits": 10,
-      "misses": 10,
-      "n": 20
+      "accuracy": 0.5217391304347826,
+      "hits": 12,
+      "misses": 11,
+      "n": 23
     },
-    "updated_at": "2026-08-13T21:24:17.046545+00:00"
+    "updated_at": "2026-08-13T22:19:52.010796+00:00"
   },
-  "last_refresh_attempt_at": "2026-08-13T18:24:44.722331-03:00",
-  "last_run_at": "2026-08-13T18:24:44.722349-03:00",
+  "last_refresh_attempt_at": "2026-08-13T19:20:38.373981-03:00",
+  "last_run_at": "2026-08-13T19:20:38.374000-03:00",
   "learning_summary": {
     "matches": 10,
     "status": "PROVISIONAL_D1"
@@ -787,7 +788,7 @@
   ],
   "operational_date": "2026-08-13",
   "prematch_atp_singles": 10,
-  "refresh_error": "Live collector failed: [TQE] D+1 source attempt: TennisExplorer dated pages\n[TQE] TennisExplorer source https://www.tennisexplorer.com/matches: 1 ATP matches after date guard; 9 enriched; 8 cross-date rows removed\n[TQE] Schedule time guard failed; refusing unverified start times.\n",
+  "refresh_error": "Live collector failed: [TQE] D+1 source attempt: TennisExplorer dated pages\n[TQE] TennisExplorer source https://www.tennisexplorer.com/matches: 1 ATP matches after date guard; 22 enriched; 21 cross-date rows removed\n[TQE] Schedule time guard failed; refusing unverified start times.\n",
   "refresh_status": "DEGRADED",
   "rejected": [
     {

@@ -70,10 +70,14 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": true,
+        "resolved_at": "2026-08-13T22:19:44.089223+00:00",
+        "score": "2 - 0",
+        "status": "HIT",
+        "winner": {
+          "key": "133430",
+          "name": "Denis Shapovalov"
+        }
       },
       "signals": {
         "elo": 0.6191912995858441,
@@ -158,10 +162,25 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": false,
+        "postmortem": {
+          "evidence": [
+            "Prediction was low-confidence or too close to a 50/50 match",
+            "Model materially opposed the market direction and lost"
+          ],
+          "status": "HYPOTHESIS_ONLY",
+          "tags": [
+            "ERR-MKT",
+            "ERR-UNC"
+          ]
+        },
+        "resolved_at": "2026-08-13T22:19:44.089235+00:00",
+        "score": "2 - 1",
+        "status": "MISS",
+        "winner": {
+          "key": "105526",
+          "name": "Jan Lennard Struff"
+        }
       },
       "signals": {
         "elo": 0.5760501747983535,
@@ -204,7 +223,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-13T21:24:09.858173+00:00",
+        "resolved_at": "2026-08-13T22:19:44.089255+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -296,7 +315,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-13T21:24:09.858185+00:00",
+        "resolved_at": "2026-08-13T22:19:44.089260+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -498,7 +517,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-13T21:24:09.858191+00:00",
+        "resolved_at": "2026-08-13T22:19:44.089265+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -544,10 +563,14 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": true,
+        "resolved_at": "2026-08-13T22:19:44.089274+00:00",
+        "score": "2 - 0",
+        "status": "HIT",
+        "winner": {
+          "key": "200175",
+          "name": "Miomir Kecmanovic"
+        }
       },
       "signals": {
         "elo": 0.4713622195013841,
@@ -598,7 +621,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-13T21:24:09.858209+00:00",
+        "resolved_at": "2026-08-13T22:19:44.089277+00:00",
         "score": "2 - 0",
         "status": "MISS",
         "winner": {
@@ -645,7 +668,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-13T21:24:09.858218+00:00",
+        "resolved_at": "2026-08-13T22:19:44.089284+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -702,7 +725,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-13T21:24:09.858221+00:00",
+        "resolved_at": "2026-08-13T22:19:44.089287+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -752,7 +775,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-13T21:24:09.858230+00:00",
+        "resolved_at": "2026-08-13T22:19:44.089294+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -772,5 +795,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "RESULTS_UPDATING",
-  "updated_at": "2026-08-13T21:24:09.858233+00:00"
+  "updated_at": "2026-08-13T22:19:44.089297+00:00"
 }

@@ -470,10 +470,16 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "resolved_at": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "actual_date": "2026-08-13",
+        "actual_time": "18:05",
+        "match_method": "MATCH_ID",
+        "resolved_at": "2026-08-13T22:19:44.087425+00:00",
+        "score": "2 - 0",
+        "status": "HIT",
+        "winner": {
+          "key": "133430",
+          "name": "Denis Shapovalov"
+        }
       },
       "schedule_changed_from_freeze": true,
       "schedule_match_method": "MATCH_ID",
@@ -524,14 +530,14 @@
   "source_board_last_run_at": "2026-08-12T16:10:44.877740-03:00",
   "status": "FROZEN",
   "summary": {
-    "accuracy": null,
+    "accuracy": 1.0,
     "games": 6,
-    "hits": 0,
+    "hits": 1,
     "misses": 0,
-    "resolved": 0,
+    "resolved": 1,
     "schedule_confirmed": 2,
     "schedule_dated": 6
   },
   "target_games": 6,
-  "updated_at": "2026-08-13T21:26:04.875497+00:00"
+  "updated_at": "2026-08-13T22:19:44.087425+00:00"
 }
