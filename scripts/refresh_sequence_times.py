@@ -4,7 +4,7 @@ import argparse
 import json
 import subprocess
 import sys
-from datetime import date, datetime, timedelta
+from datetime import date, timedelta
 from pathlib import Path
 from types import SimpleNamespace
 from typing import Any
@@ -15,7 +15,7 @@ from tennis_quant.sequence_sync import update_all_sequence_schedules
 
 
 def _run(command: list[str]) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(command, capture_output=True, text=True, timeout=240)
+    return subprocess.run(command, capture_output=True, text=True, timeout=300)
 
 
 def _load_rows(path: Path) -> list[dict[str, Any]]:
@@ -32,7 +32,7 @@ def _load_rows(path: Path) -> list[dict[str, Any]]:
     return []
 
 
-def _fixture(record: dict[str, Any], fallback_date: date) -> Any | None:
+def _fixture(record: dict[str, Any]) -> Any | None:
     kickoff = _parse_utc(record.get("match_date"))
     if kickoff is None:
         return None
@@ -41,6 +41,8 @@ def _fixture(record: dict[str, Any], fallback_date: date) -> Any | None:
         match_id=_stable_match_id(record),
         date=local.date().isoformat(),
         time=local.strftime("%H:%M"),
+        player_a=SimpleNamespace(key="", name=str(record.get("home_team") or "").strip()),
+        player_b=SimpleNamespace(key="", name=str(record.get("away_team") or "").strip()),
         raw={
             "source": _record_live_source(record),
             "source_url": record.get("match_link"),
@@ -50,65 +52,65 @@ def _fixture(record: dict[str, Any], fallback_date: date) -> Any | None:
     )
 
 
-def collect_verified_day(target: date, operational_day: date) -> tuple[list[Any], dict[str, Any]]:
+def _guard(output: Path) -> tuple[bool, str]:
+    completed = _run([sys.executable, "scripts/schedule_time_guard.py", "--input", str(output)])
+    return completed.returncode == 0, (completed.stdout or completed.stderr or "").strip()
+
+
+def _collect_with(command: list[str], output: Path) -> tuple[list[Any], str, str]:
+    if output.exists():
+        output.unlink()
+    completed = _run(command)
+    if completed.returncode != 0 or not output.exists():
+        return [], "FAILED", (completed.stderr or completed.stdout or "collector failed")[-700:]
+    ok, guard_log = _guard(output)
+    if not ok:
+        return [], "GUARD_FAILED", guard_log[-700:]
+    rows = _load_rows(output)
+    fixtures = [fixture for row in rows if (fixture := _fixture(row)) is not None]
+    return fixtures, "OK", guard_log[-700:]
+
+
+def collect_verified_day(target: date) -> tuple[list[Any], dict[str, Any]]:
     runtime = ROOT / "data" / "runtime"
     runtime.mkdir(parents=True, exist_ok=True)
     output = runtime / f"sequence_schedule_{target.isoformat()}.json"
-    if output.exists():
-        output.unlink()
 
-    collector = _run([
+    # Primary source: tournament pages carry an explicit dd.mm. date on each match,
+    # so they are safer for attaching schedule metadata to immutable selections.
+    fixtures, status, detail = _collect_with([
         sys.executable,
-        "scripts/tennisexplorer_collector.py",
+        "scripts/tennisexplorer_tournament_fallback.py",
         "--date", target.isoformat(),
         "--output", str(output),
-    ])
-    if collector.returncode != 0 or not output.exists():
-        return [], {
-            "date": target.isoformat(),
-            "status": "COLLECTOR_FAILED",
-            "error": (collector.stderr or collector.stdout or "collector failed")[-700:],
-        }
+    ], output)
+    source = "TOURNAMENT_PAGE"
 
-    date_guard = _run([
-        sys.executable,
-        "scripts/tennisexplorer_date_guard.py",
-        "--input", str(output),
-        "--date", target.isoformat(),
-        "--reference-date", operational_day.isoformat(),
-    ])
-    if date_guard.returncode not in {0, 3}:
-        return [], {
-            "date": target.isoformat(),
-            "status": "DATE_GUARD_FAILED",
-            "error": (date_guard.stderr or date_guard.stdout or "date guard failed")[-700:],
-        }
+    # Fallback: the general collector now independently validates every match-detail
+    # date before returning rows, so it is safe when tournament discovery is sparse.
+    if not fixtures:
+        fixtures, status, detail = _collect_with([
+            sys.executable,
+            "scripts/tennisexplorer_collector.py",
+            "--date", target.isoformat(),
+            "--output", str(output),
+        ], output)
+        source = "GENERAL_VERIFIED"
 
-    time_guard = _run([
-        sys.executable,
-        "scripts/schedule_time_guard.py",
-        "--input", str(output),
-    ])
-    if time_guard.returncode != 0:
-        return [], {
-            "date": target.isoformat(),
-            "status": "TIME_GUARD_FAILED",
-            "error": (time_guard.stderr or time_guard.stdout or "time guard failed")[-700:],
-        }
-
-    rows = _load_rows(output)
-    fixtures = [fixture for record in rows if (fixture := _fixture(record, target)) is not None]
-    detail = {}
-    try:
-        detail = json.loads((date_guard.stdout or "{}").strip().splitlines()[-1])
-    except (json.JSONDecodeError, IndexError):
-        pass
+    pairs = [{
+        "a": getattr(f.player_a, "name", ""),
+        "b": getattr(f.player_b, "name", ""),
+        "date": f.date,
+        "time": f.time,
+        "match_id": f.match_id,
+    } for f in fixtures[:40]]
     return fixtures, {
         "date": target.isoformat(),
-        "status": "OK",
+        "status": status if fixtures else "NO_VERIFIED_FIXTURES",
+        "source": source,
         "fixtures": len(fixtures),
-        "verified": detail.get("verified"),
-        "dropped_other_date": detail.get("dropped_other_date"),
+        "pairs": pairs,
+        "detail": detail,
     }
 
 
@@ -123,7 +125,7 @@ def main() -> int:
     days: list[dict[str, Any]] = []
     for offset in range(max(1, args.days)):
         target = operational_day + timedelta(days=offset)
-        found, summary = collect_verified_day(target, operational_day)
+        found, summary = collect_verified_day(target)
         fixtures.extend(found)
         days.append(summary)
 
