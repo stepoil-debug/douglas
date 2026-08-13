@@ -27,10 +27,25 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": false,
+        "postmortem": {
+          "evidence": [
+            "Prediction was low-confidence or too close to a 50/50 match",
+            "Surface context or surface Elo was unavailable in the frozen prediction"
+          ],
+          "status": "HYPOTHESIS_ONLY",
+          "tags": [
+            "ERR-SUR",
+            "ERR-UNC"
+          ]
+        },
+        "resolved_at": "2026-08-13T11:45:10.942301+00:00",
+        "score": "2 - 0",
+        "status": "MISS",
+        "winner": {
+          "key": "106331",
+          "name": "Christopher Oconnell"
+        }
       },
       "signals": {
         "elo": 0.533195961314695,
@@ -70,10 +85,25 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": false,
+        "postmortem": {
+          "evidence": [
+            "Prediction was low-confidence or too close to a 50/50 match",
+            "Surface context or surface Elo was unavailable in the frozen prediction"
+          ],
+          "status": "HYPOTHESIS_ONLY",
+          "tags": [
+            "ERR-SUR",
+            "ERR-UNC"
+          ]
+        },
+        "resolved_at": "2026-08-13T11:45:10.942321+00:00",
+        "score": "2 - 1",
+        "status": "MISS",
+        "winner": {
+          "key": "210136",
+          "name": "Mark Lajal"
+        }
       },
       "signals": {
         "elo": 0.4975272289597107,
@@ -114,10 +144,14 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": true,
+        "resolved_at": "2026-08-13T11:45:10.942330+00:00",
+        "score": "2 - 0",
+        "status": "HIT",
+        "winner": {
+          "key": "126846",
+          "name": "Aleksandar Vukic"
+        }
       },
       "signals": {
         "elo": 0.4210480694711054,
@@ -134,6 +168,6 @@
   ],
   "model_version": "champion-v0.3.0-no-api",
   "source": "TennisExplorer schedule",
-  "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-12T01:20:42.583929+00:00"
+  "status": "RESULTS_UPDATING",
+  "updated_at": "2026-08-13T11:45:10.942333+00:00"
 }

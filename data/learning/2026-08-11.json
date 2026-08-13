@@ -26,10 +26,14 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": true,
+        "resolved_at": "2026-08-13T11:45:13.067320+00:00",
+        "score": "2 - 0",
+        "status": "HIT",
+        "winner": {
+          "key": "210530",
+          "name": "Learner Tien"
+        }
       },
       "signals": {
         "elo": 0.7119252124137732,
@@ -70,10 +74,14 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": true,
+        "resolved_at": "2026-08-13T11:45:13.067329+00:00",
+        "score": "2 - 1",
+        "status": "HIT",
+        "winner": {
+          "key": "200059",
+          "name": "Yibing Wu"
+        }
       },
       "signals": {
         "elo": 0.6042507299137685,
@@ -125,7 +133,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-13T10:59:18.470815+00:00",
+        "resolved_at": "2026-08-13T11:45:13.067333+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -212,10 +220,14 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": true,
+        "resolved_at": "2026-08-13T11:45:13.067347+00:00",
+        "score": "2 - 1",
+        "status": "HIT",
+        "winner": {
+          "key": "105453",
+          "name": "Kei Nishikori"
+        }
       },
       "signals": {
         "elo": 0.6089630517171503,
@@ -267,7 +279,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-13T10:59:18.470834+00:00",
+        "resolved_at": "2026-08-13T11:45:13.067350+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -325,7 +337,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-13T10:59:18.470843+00:00",
+        "resolved_at": "2026-08-13T11:45:13.067358+00:00",
         "score": "2 - 0",
         "status": "MISS",
         "winner": {
@@ -374,7 +386,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-13T10:59:18.470850+00:00",
+        "resolved_at": "2026-08-13T11:45:13.067364+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -421,7 +433,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-13T10:59:18.470854+00:00",
+        "resolved_at": "2026-08-13T11:45:13.067367+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -554,10 +566,25 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": false,
+        "postmortem": {
+          "evidence": [
+            "Prediction was low-confidence or too close to a 50/50 match",
+            "Surface context or surface Elo was unavailable in the frozen prediction"
+          ],
+          "status": "HYPOTHESIS_ONLY",
+          "tags": [
+            "ERR-SUR",
+            "ERR-UNC"
+          ]
+        },
+        "resolved_at": "2026-08-13T11:45:13.067371+00:00",
+        "score": "2 - 1",
+        "status": "MISS",
+        "winner": {
+          "key": "149282",
+          "name": "Nicolai Budkov Kjaer"
+        }
       },
       "signals": {
         "elo": 0.45898248417787635,
@@ -576,5 +603,5 @@
   "model_version": "champion-v0.3.0-no-api",
   "source": "BACKFILLED_FROM_PREMATCH_HISTORY",
   "status": "RESULTS_UPDATING",
-  "updated_at": "2026-08-13T10:59:18.470858+00:00"
+  "updated_at": "2026-08-13T11:45:13.067376+00:00"
 }

@@ -1,18 +1,24 @@
 {
   "by_confidence": {
+    "50-60": {
+      "accuracy": 1.0,
+      "hits": 2,
+      "misses": 0,
+      "n": 2
+    },
     "<50": {
-      "accuracy": 0.5454545454545454,
-      "hits": 6,
-      "misses": 5,
-      "n": 11
+      "accuracy": 0.5,
+      "hits": 8,
+      "misses": 8,
+      "n": 16
     }
   },
   "by_decision": {
     "REJECTED": {
-      "accuracy": 0.5454545454545454,
-      "hits": 6,
-      "misses": 5,
-      "n": 11
+      "accuracy": 0.5555555555555556,
+      "hits": 10,
+      "misses": 8,
+      "n": 18
     }
   },
   "by_probability": {
@@ -23,10 +29,10 @@
       "n": 2
     },
     "60-65%": {
-      "accuracy": 0.0,
-      "hits": 0,
+      "accuracy": 0.5,
+      "hits": 1,
       "misses": 1,
-      "n": 1
+      "n": 2
     },
     "65-70%": {
       "accuracy": 0.0,
@@ -36,38 +42,38 @@
     },
     "70-75%": {
       "accuracy": 1.0,
-      "hits": 1,
+      "hits": 2,
       "misses": 0,
-      "n": 1
+      "n": 2
     },
     "<55%": {
-      "accuracy": 0.6666666666666666,
-      "hits": 4,
-      "misses": 2,
-      "n": 6
+      "accuracy": 0.5454545454545454,
+      "hits": 6,
+      "misses": 5,
+      "n": 11
     }
   },
   "failure_tags": {
-    "ERR-SUR": 3,
-    "ERR-UNC": 5
+    "ERR-SUR": 6,
+    "ERR-UNC": 8
   },
   "last_100": {
-    "accuracy": 0.5454545454545454,
-    "hits": 6,
-    "misses": 5,
-    "n": 11
+    "accuracy": 0.5555555555555556,
+    "hits": 10,
+    "misses": 8,
+    "n": 18
   },
   "last_500": {
-    "accuracy": 0.5454545454545454,
-    "hits": 6,
-    "misses": 5,
-    "n": 11
+    "accuracy": 0.5555555555555556,
+    "hits": 10,
+    "misses": 8,
+    "n": 18
   },
   "overall": {
-    "accuracy": 0.5454545454545454,
-    "hits": 6,
-    "misses": 5,
-    "n": 11
+    "accuracy": 0.5555555555555556,
+    "hits": 10,
+    "misses": 8,
+    "n": 18
   },
-  "updated_at": "2026-08-13T11:33:28.813521+00:00"
+  "updated_at": "2026-08-13T11:45:16.125871+00:00"
 }

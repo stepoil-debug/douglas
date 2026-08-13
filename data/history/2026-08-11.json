@@ -39,7 +39,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T10:59:18.436217+00:00",
+        "updated_at": "2026-08-13T11:45:13.029424+00:00",
         "winner": {
           "key": "name-770d10159883c0",
           "name": "Wong C."
@@ -173,7 +173,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T10:59:18.436213+00:00",
+        "updated_at": "2026-08-13T11:45:13.029421+00:00",
         "winner": {
           "key": "207686",
           "name": "Alexander Shevchenko"
@@ -493,7 +493,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T10:59:18.436220+00:00",
+        "updated_at": "2026-08-13T11:45:13.029433+00:00",
         "winner": {
           "key": "106331",
           "name": "Christopher Oconnell"
@@ -750,7 +750,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T10:59:18.436210+00:00",
+        "updated_at": "2026-08-13T11:45:13.029418+00:00",
         "winner": {
           "key": "202261",
           "name": "Otto Virtanen"
@@ -843,7 +843,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T10:59:18.436191+00:00",
+        "updated_at": "2026-08-13T11:45:13.029350+00:00",
         "winner": {
           "key": "206909",
           "name": "Brandon Nakashima"
@@ -1122,7 +1122,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T10:59:18.436207+00:00",
+        "updated_at": "2026-08-13T11:45:13.029415+00:00",
         "winner": {
           "key": "212216",
           "name": "Trevor Svajda"
@@ -1587,7 +1587,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T10:59:18.436200+00:00",
+        "updated_at": "2026-08-13T11:45:13.029409+00:00",
         "winner": {
           "key": "209414",
           "name": "Luca Van Assche"
@@ -1867,7 +1867,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T10:59:18.436204+00:00",
+        "updated_at": "2026-08-13T11:45:13.029412+00:00",
         "winner": {
           "key": "105583",
           "name": "Dusan Lajovic"
@@ -2499,7 +2499,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T10:59:18.436197+00:00",
+        "updated_at": "2026-08-13T11:45:13.029405+00:00",
         "winner": {
           "key": "111460",
           "name": "Quentin Halys"
@@ -3165,7 +3165,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T10:59:18.436177+00:00",
+        "updated_at": "2026-08-13T11:45:13.029345+00:00",
         "winner": {
           "key": "212588",
           "name": "Rafael Jodar"
@@ -3619,11 +3619,14 @@
         "name": "Francisco Comesana"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-11T17:30:53.432854+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 1",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:13.029402+00:00",
+        "winner": {
+          "key": "105453",
+          "name": "Kei Nishikori"
+        }
       },
       "snapshots": [
         {
@@ -3872,11 +3875,14 @@
         "name": "Nikoloz Basilashvili"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-11T17:30:53.432775+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:13.029397+00:00",
+        "winner": {
+          "key": "210262",
+          "name": "Jaime Faria"
+        }
       },
       "snapshots": [
         {
@@ -3940,11 +3946,14 @@
         "name": "Bu Yunchaokete"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-11T17:30:53.432762+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:13.029384+00:00",
+        "winner": {
+          "key": "207352",
+          "name": "Bu Yunchaokete"
+        }
       },
       "snapshots": [
         {
@@ -4193,11 +4202,14 @@
         "name": "Yibing Wu"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-11T17:30:53.432802+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 1",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:13.029391+00:00",
+        "winner": {
+          "key": "200059",
+          "name": "Yibing Wu"
+        }
       },
       "snapshots": [
         {
@@ -4932,11 +4944,14 @@
         "name": "Sebastian Ofner"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-11T17:30:53.432826+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 1",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:13.029372+00:00",
+        "winner": {
+          "key": "105477",
+          "name": "Marco Trungelliti"
+        }
       },
       "snapshots": [
         {
@@ -5072,11 +5087,14 @@
         "name": "Michael Zheng"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-11T17:30:53.432872+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 1",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:13.029378+00:00",
+        "winner": {
+          "key": "210116",
+          "name": "Michael Zheng"
+        }
       },
       "snapshots": [
         {
@@ -5386,11 +5404,14 @@
         "name": "Kyrian Jacquet"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-11T17:30:53.432930+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:13.029354+00:00",
+        "winner": {
+          "key": "208021",
+          "name": "Kyrian Jacquet"
+        }
       },
       "snapshots": [
         {
@@ -5641,11 +5662,14 @@
         "name": "Nicolai Budkov Kjaer"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-11T17:30:53.432913+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 1",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:13.029366+00:00",
+        "winner": {
+          "key": "149282",
+          "name": "Nicolai Budkov Kjaer"
+        }
       },
       "snapshots": [
         {
@@ -5959,11 +5983,14 @@
         "name": "Titouan Droguet"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-11T17:30:53.432963+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:13.029357+00:00",
+        "winner": {
+          "key": "208169",
+          "name": "Titouan Droguet"
+        }
       },
       "snapshots": [
         {
@@ -7854,11 +7881,14 @@
         "name": "Ben Shelton"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-11T17:30:53.432534+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:13.029341+00:00",
+        "winner": {
+          "key": "210097",
+          "name": "Ben Shelton"
+        }
       },
       "snapshots": [
         {
@@ -8287,11 +8317,14 @@
         "name": "Learner Tien"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-11T17:30:53.432568+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:13.029329+00:00",
+        "winner": {
+          "key": "210530",
+          "name": "Learner Tien"
+        }
       },
       "snapshots": [
         {
@@ -8769,12 +8802,12 @@
     ],
     "games": 28,
     "losses": 0,
-    "model_accuracy": 0.4,
-    "model_hits": 2,
-    "model_misses": 3,
+    "model_accuracy": 0.5555555555555556,
+    "model_hits": 5,
+    "model_misses": 4,
     "resolved_approved": 0,
-    "resolved_model_picks": 5,
+    "resolved_model_picks": 9,
     "wins": 0
   },
-  "updated_at": "2026-08-13T10:59:18.436284+00:00"
+  "updated_at": "2026-08-13T11:45:13.029509+00:00"
 }

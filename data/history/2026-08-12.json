@@ -39,7 +39,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T10:59:17.151022+00:00",
+        "updated_at": "2026-08-13T11:45:10.915791+00:00",
         "winner": {
           "key": "200647",
           "name": "Sho Shimabukuro"
@@ -129,11 +129,14 @@
         "name": "Henrique Rocha"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-12T01:20:42.572808+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:10.915788+00:00",
+        "winner": {
+          "key": "210012",
+          "name": "Henrique Rocha"
+        }
       },
       "snapshots": [
         {
@@ -405,11 +408,14 @@
         "name": "Dalibor Svrcina"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-12T01:20:42.572890+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 1",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:10.915779+00:00",
+        "winner": {
+          "key": "210136",
+          "name": "Mark Lajal"
+        }
       },
       "snapshots": [
         {
@@ -659,11 +665,14 @@
         "name": "Jacob Fearnley"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-12T01:20:42.572822+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 1",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:10.915782+00:00",
+        "winner": {
+          "key": "200711",
+          "name": "Nicolas Mejia"
+        }
       },
       "snapshots": [
         {
@@ -960,11 +969,14 @@
         "name": "Christopher Oconnell"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-12T01:20:42.572958+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:10.915776+00:00",
+        "winner": {
+          "key": "106331",
+          "name": "Christopher Oconnell"
+        }
       },
       "snapshots": [
         {
@@ -2080,11 +2092,14 @@
         "name": "Dusan Lajovic"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-12T01:20:42.572973+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 1",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:10.915773+00:00",
+        "winner": {
+          "key": "209414",
+          "name": "Luca Van Assche"
+        }
       },
       "snapshots": [
         {
@@ -2291,11 +2306,14 @@
         "name": "Otto Virtanen"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-12T01:20:42.572926+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:10.915768+00:00",
+        "winner": {
+          "key": "name-770d10159883c0",
+          "name": "Wong C."
+        }
       },
       "snapshots": [
         {
@@ -3922,11 +3940,14 @@
         "name": "Darwin Blanch"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-12T01:20:42.572857+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:10.915785+00:00",
+        "winner": {
+          "key": "126846",
+          "name": "Aleksandar Vukic"
+        }
       },
       "snapshots": [
         {
@@ -4176,11 +4197,14 @@
         "name": "Brandon Nakashima"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-12T01:20:42.572767+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T11:45:10.915756+00:00",
+        "winner": {
+          "key": "206909",
+          "name": "Brandon Nakashima"
+        }
       },
       "snapshots": [
         {
@@ -4284,12 +4308,12 @@
     ],
     "games": 9,
     "losses": 0,
-    "model_accuracy": null,
-    "model_hits": 0,
-    "model_misses": 0,
+    "model_accuracy": 0.25,
+    "model_hits": 1,
+    "model_misses": 3,
     "resolved_approved": 0,
-    "resolved_model_picks": 0,
+    "resolved_model_picks": 4,
     "wins": 0
   },
-  "updated_at": "2026-08-13T10:59:17.151072+00:00"
+  "updated_at": "2026-08-13T11:45:10.915830+00:00"
 }
