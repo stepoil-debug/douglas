@@ -840,7 +840,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T11:53:23.400874+00:00",
+        "updated_at": "2026-08-13T13:25:26.579035+00:00",
         "winner": {
           "key": "105477",
           "name": "Marco Trungelliti"
@@ -1283,7 +1283,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T11:53:23.400894+00:00",
+        "updated_at": "2026-08-13T13:25:26.579060+00:00",
         "winner": {
           "key": "111460",
           "name": "Quentin Halys"
@@ -2339,7 +2339,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T11:53:23.400908+00:00",
+        "updated_at": "2026-08-13T13:25:26.579073+00:00",
         "winner": {
           "key": "208021",
           "name": "Kyrian Jacquet"
@@ -2770,7 +2770,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T11:53:23.400901+00:00",
+        "updated_at": "2026-08-13T13:25:26.579066+00:00",
         "winner": {
           "key": "208169",
           "name": "Titouan Droguet"
@@ -3599,7 +3599,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T11:53:23.400905+00:00",
+        "updated_at": "2026-08-13T13:25:26.579070+00:00",
         "winner": {
           "key": "name-18bd3839d817ee",
           "name": "Wolf J."
@@ -52565,5 +52565,5 @@
     "resolved_model_picks": 14,
     "wins": 0
   },
-  "updated_at": "2026-08-13T11:53:23.401036+00:00"
+  "updated_at": "2026-08-13T13:25:26.579182+00:00"
 }
