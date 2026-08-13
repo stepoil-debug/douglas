@@ -3,10 +3,15 @@ from __future__ import annotations
 import argparse
 import json
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
+
+try:
+    from scripts.tennisexplorer_date_guard import verify_records
+except ModuleNotFoundError:  # direct execution: python scripts/schedule_time_guard.py
+    from tennisexplorer_date_guard import verify_records
 
 SAO_PAULO = ZoneInfo("America/Sao_Paulo")
 
@@ -23,11 +28,25 @@ def _parse_utc(value: Any) -> datetime | None:
     return None
 
 
+def _local_date(record: dict[str, Any]) -> date | None:
+    dt = _parse_utc(record.get("match_date"))
+    return dt.astimezone(SAO_PAULO).date() if dt else None
+
+
 def _local_clock(record: dict[str, Any]) -> str | None:
     dt = _parse_utc(record.get("match_date"))
     if not dt:
         return None
     return dt.astimezone(SAO_PAULO).strftime("%H:%M")
+
+
+def _expected_date(records: list[dict[str, Any]]) -> date | None:
+    counts: Counter[date] = Counter()
+    for row in records:
+        d = _local_date(row)
+        if d:
+            counts[d] += 1
+    return counts.most_common(1)[0][0] if counts else None
 
 
 def mark_unconfirmed_placeholder_times(records: list[dict[str, Any]]) -> dict[str, Any]:
@@ -59,8 +78,6 @@ def mark_unconfirmed_placeholder_times(records: list[dict[str, Any]]) -> dict[st
         dominant, count = counts.most_common(1)[0]
         share = count / max(1, len(usable))
 
-        # Strong generic rule for a large board, plus a slightly smaller threshold
-        # for common placeholder clocks seen on public schedule pages.
         suspicious = (
             (count >= 10 and share >= 0.70)
             or (dominant in {"12:00", "00:00"} and count >= 6 and share >= 0.80)
@@ -105,13 +122,25 @@ def guard_file(path: Path) -> dict[str, Any]:
     else:
         raise ValueError("unsupported schedule payload")
 
-    summary = mark_unconfirmed_placeholder_times(rows)
+    expected = _expected_date(rows)
+    date_summary: dict[str, Any] = {"status": "SKIPPED", "reason": "NO_EXPECTED_DATE"}
+    if expected and any("match-detail" in str(row.get("match_link") or "") for row in rows):
+        # TennisExplorer can place more than one calendar day on the same table. The
+        # upstream parser historically stamped every row with the requested date.
+        # Verify each detail page before accepting it into the board.
+        date_summary = verify_records(rows, expected)
+
+    time_summary = mark_unconfirmed_placeholder_times(rows)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    return summary
+    return {
+        **time_summary,
+        "expected_date": expected.isoformat() if expected else None,
+        "date_guard": date_summary,
+    }
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Guard public tennis schedules against placeholder start times")
+    parser = argparse.ArgumentParser(description="Guard public tennis schedules against wrong dates and placeholder times")
     parser.add_argument("--input", required=True)
     args = parser.parse_args()
     path = Path(args.input)
@@ -121,7 +150,7 @@ def main() -> int:
         print(json.dumps({"status": "ERROR", "error": str(exc)}, ensure_ascii=False))
         return 2
     print(json.dumps({"status": "OK", **summary}, ensure_ascii=False))
-    return 0
+    return 0 if summary.get("records", 0) > 0 else 3
 
 
 if __name__ == "__main__":
