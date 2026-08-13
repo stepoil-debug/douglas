@@ -39,7 +39,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T00:09:20.858504+00:00",
+        "updated_at": "2026-08-13T01:22:08.656234+00:00",
         "winner": {
           "key": "name-770d10159883c0",
           "name": "Wong C."
@@ -173,7 +173,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T00:09:20.858501+00:00",
+        "updated_at": "2026-08-13T01:22:08.656233+00:00",
         "winner": {
           "key": "207686",
           "name": "Alexander Shevchenko"
@@ -493,7 +493,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T00:09:20.858507+00:00",
+        "updated_at": "2026-08-13T01:22:08.656236+00:00",
         "winner": {
           "key": "106331",
           "name": "Christopher Oconnell"
@@ -750,7 +750,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T00:09:20.858498+00:00",
+        "updated_at": "2026-08-13T01:22:08.656230+00:00",
         "winner": {
           "key": "202261",
           "name": "Otto Virtanen"
@@ -843,7 +843,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T00:09:20.858479+00:00",
+        "updated_at": "2026-08-13T01:22:08.656218+00:00",
         "winner": {
           "key": "206909",
           "name": "Brandon Nakashima"
@@ -1122,7 +1122,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T00:09:20.858495+00:00",
+        "updated_at": "2026-08-13T01:22:08.656229+00:00",
         "winner": {
           "key": "212216",
           "name": "Trevor Svajda"
@@ -1587,7 +1587,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T00:09:20.858488+00:00",
+        "updated_at": "2026-08-13T01:22:08.656225+00:00",
         "winner": {
           "key": "209414",
           "name": "Luca Van Assche"
@@ -1867,7 +1867,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T00:09:20.858492+00:00",
+        "updated_at": "2026-08-13T01:22:08.656227+00:00",
         "winner": {
           "key": "105583",
           "name": "Dusan Lajovic"
@@ -2499,7 +2499,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T00:09:20.858485+00:00",
+        "updated_at": "2026-08-13T01:22:08.656222+00:00",
         "winner": {
           "key": "111460",
           "name": "Quentin Halys"
@@ -3165,7 +3165,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T00:09:20.858463+00:00",
+        "updated_at": "2026-08-13T01:22:08.656205+00:00",
         "winner": {
           "key": "212588",
           "name": "Rafael Jodar"
@@ -8776,5 +8776,5 @@
     "resolved_model_picks": 5,
     "wins": 0
   },
-  "updated_at": "2026-08-13T00:09:20.858575+00:00"
+  "updated_at": "2026-08-13T01:22:08.656281+00:00"
 }
