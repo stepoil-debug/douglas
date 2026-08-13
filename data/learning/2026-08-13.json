@@ -204,7 +204,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-13T19:10:45.450041+00:00",
+        "resolved_at": "2026-08-13T20:05:41.823158+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -296,7 +296,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-13T19:10:45.450053+00:00",
+        "resolved_at": "2026-08-13T20:05:41.823169+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -498,7 +498,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-13T19:10:45.450059+00:00",
+        "resolved_at": "2026-08-13T20:05:41.823176+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -598,7 +598,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-13T19:10:45.450078+00:00",
+        "resolved_at": "2026-08-13T20:05:41.823191+00:00",
         "score": "2 - 0",
         "status": "MISS",
         "winner": {
@@ -645,7 +645,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-13T19:10:45.450088+00:00",
+        "resolved_at": "2026-08-13T20:05:41.823201+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -691,10 +691,24 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": false,
+        "postmortem": {
+          "evidence": [
+            "Prediction was low-confidence or too close to a 50/50 match",
+            "High model disagreement before the match"
+          ],
+          "status": "HYPOTHESIS_ONLY",
+          "tags": [
+            "ERR-UNC"
+          ]
+        },
+        "resolved_at": "2026-08-13T20:05:41.823204+00:00",
+        "score": "2 - 1",
+        "status": "MISS",
+        "winner": {
+          "key": "111815",
+          "name": "Cameron Norrie"
+        }
       },
       "signals": {
         "elo": 0.49355068828000614,
@@ -738,7 +752,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-13T19:10:45.450092+00:00",
+        "resolved_at": "2026-08-13T20:05:41.823213+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -758,5 +772,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "RESULTS_UPDATING",
-  "updated_at": "2026-08-13T19:10:45.450095+00:00"
+  "updated_at": "2026-08-13T20:05:41.823216+00:00"
 }
