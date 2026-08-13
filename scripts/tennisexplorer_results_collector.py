@@ -13,6 +13,7 @@ import requests
 from bs4 import BeautifulSoup, Tag
 
 from scripts.tennisexplorer_date_guard import verify_records
+from scripts.tennisexplorer_sections import table_section_date
 
 BASE_URLS = ("https://www.tennisexplorer.com", "https://noproxy.tennisexplorer.com")
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
@@ -89,12 +90,23 @@ def _utc(target: date, hhmm: str) -> str:
 
 
 def parse_results(html: str, target: date, base: str) -> list[dict[str, Any]]:
+    """Parse only completed ATP rows belonging to target's visible date block."""
     soup = BeautifulSoup(html, "html.parser")
     tables = [t for t in soup.find_all("table") if isinstance(t, Tag)]
     tables = [t for t in tables if "result" in {str(x).lower() for x in (t.get("class") or [])}] or tables
     output: list[dict[str, Any]] = []
     seen: set[str] = set()
+    has_explicit_sections = any(table_section_date(table) is not None for table in tables)
+
     for table in tables:
+        section = table_section_date(table)
+        if has_explicit_sections:
+            if section != target:
+                continue
+            parse_day = section
+        else:
+            parse_day = target
+
         rows = [r for r in (table.find("tbody") or table).find_all("tr") if isinstance(r, Tag)]
         tournament = ""
         i = 0
@@ -136,8 +148,6 @@ def parse_results(html: str, target: date, base: str) -> list[dict[str, Any]]:
                 continue
             detail = _detail(row, opponent, base)
             if not detail:
-                # Results must be auditable by the match-detail page. A synthetic
-                # fallback URL would make it impossible to verify the actual date.
                 i = j + 1
                 continue
             if detail in seen:
@@ -155,8 +165,8 @@ def parse_results(html: str, target: date, base: str) -> list[dict[str, Any]]:
                     "submarket_name": "Home/Away",
                     "source": "TennisExplorer results",
                 })
-            output.append({
-                "match_date": _utc(target, hhmm),
+            record = {
+                "match_date": _utc(parse_day, hhmm),
                 "home_team": a,
                 "away_team": b,
                 "league_name": f"ATP {tournament}",
@@ -164,7 +174,12 @@ def parse_results(html: str, target: date, base: str) -> list[dict[str, Any]]:
                 "home_score": str(sa),
                 "away_score": str(sb),
                 "match_winner_market": market,
-            })
+            }
+            if section is not None:
+                record["schedule_section_date"] = section.isoformat()
+                record["schedule_date_verified"] = True
+                record["schedule_verification_method"] = "VISIBLE_DATE_SECTION"
+            output.append(record)
             i = j + 1
     return output
 
@@ -187,27 +202,26 @@ def collect(target: date) -> tuple[list[dict[str, Any]], str]:
                 continue
             rows = parse_results(response.text, target, base)
             if not rows:
-                errors.append(f"{base}: zero parsed finished ATP rows")
+                errors.append(f"{base}: zero parsed finished ATP rows for explicit date {target}")
                 continue
 
-            # Results are high-integrity data: do not trust the requested URL date.
-            # Verify the actual date/time on every detail page, then retain only rows
-            # positively verified for target. This prevents a multi-day result table
-            # from being stamped wholesale as today's matches.
-            summary = verify_records(rows, target)
-            rows = [row for row in rows if row.get("schedule_date_verified") is True]
+            # Visible date headings are the fast primary proof. Only a legacy page
+            # without those headings falls back to per-match detail requests.
+            uncertain = [row for row in rows if row.get("schedule_date_verified") is not True]
+            verified = [row for row in rows if row.get("schedule_date_verified") is True]
+            if uncertain:
+                verify_records(uncertain, target)
+                verified.extend(row for row in uncertain if row.get("schedule_date_verified") is True)
+            rows = verified
             if rows:
                 print(
-                    f"[TQE] TennisExplorer results {target}: {len(rows)} verified ATP finished matches "
-                    f"({summary.get('dropped_other_date', 0)} cross-date rows removed)",
+                    f"[TQE] TennisExplorer results {target}: {len(rows)} date-verified ATP finished matches; "
+                    f"detail_fallback={len(uncertain)}",
                     file=sys.stderr,
                     flush=True,
                 )
-                return rows, base
-            errors.append(
-                f"{base}: zero date-verified finished rows "
-                f"(verified={summary.get('verified')}, other={summary.get('dropped_other_date')})"
-            )
+                return rows, f"{base}/results#visible-date-section"
+            errors.append(f"{base}: zero date-verified finished rows")
         except requests.RequestException as exc:
             errors.append(f"{base}: {exc}")
     raise RuntimeError("; ".join(errors[-4:]) or "results collection failed")
