@@ -840,7 +840,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T16:02:49.853651+00:00",
+        "updated_at": "2026-08-13T17:31:16.712882+00:00",
         "winner": {
           "key": "105477",
           "name": "Marco Trungelliti"
@@ -1283,7 +1283,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T16:02:49.853676+00:00",
+        "updated_at": "2026-08-13T17:31:16.712887+00:00",
         "winner": {
           "key": "111460",
           "name": "Quentin Halys"
@@ -2339,7 +2339,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T16:02:49.853690+00:00",
+        "updated_at": "2026-08-13T17:31:16.712898+00:00",
         "winner": {
           "key": "208021",
           "name": "Kyrian Jacquet"
@@ -2770,7 +2770,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T16:02:49.853683+00:00",
+        "updated_at": "2026-08-13T17:31:16.712891+00:00",
         "winner": {
           "key": "208169",
           "name": "Titouan Droguet"
@@ -3599,7 +3599,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T16:02:49.853687+00:00",
+        "updated_at": "2026-08-13T17:31:16.712894+00:00",
         "winner": {
           "key": "name-18bd3839d817ee",
           "name": "Wolf J."
@@ -22977,11 +22977,14 @@
         "name": "Jack Draper"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-13T01:22:35.151406+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T17:31:16.712857+00:00",
+        "winner": {
+          "key": "212021",
+          "name": "Martin Landaluce"
+        }
       },
       "snapshots": [
         {
@@ -52558,12 +52561,12 @@
     ],
     "games": 34,
     "losses": 0,
-    "model_accuracy": 0.6428571428571429,
+    "model_accuracy": 0.6,
     "model_hits": 9,
-    "model_misses": 5,
+    "model_misses": 6,
     "resolved_approved": 0,
-    "resolved_model_picks": 14,
+    "resolved_model_picks": 15,
     "wins": 0
   },
-  "updated_at": "2026-08-13T16:02:49.853802+00:00"
+  "updated_at": "2026-08-13T17:31:16.713003+00:00"
 }
