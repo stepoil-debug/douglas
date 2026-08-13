@@ -840,7 +840,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T17:31:16.712882+00:00",
+        "updated_at": "2026-08-13T19:10:45.301807+00:00",
         "winner": {
           "key": "105477",
           "name": "Marco Trungelliti"
@@ -1283,7 +1283,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T17:31:16.712887+00:00",
+        "updated_at": "2026-08-13T19:10:45.301814+00:00",
         "winner": {
           "key": "111460",
           "name": "Quentin Halys"
@@ -2339,7 +2339,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T17:31:16.712898+00:00",
+        "updated_at": "2026-08-13T19:10:45.301826+00:00",
         "winner": {
           "key": "208021",
           "name": "Kyrian Jacquet"
@@ -2770,7 +2770,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T17:31:16.712891+00:00",
+        "updated_at": "2026-08-13T19:10:45.301818+00:00",
         "winner": {
           "key": "208169",
           "name": "Titouan Droguet"
@@ -3599,7 +3599,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T17:31:16.712894+00:00",
+        "updated_at": "2026-08-13T19:10:45.301822+00:00",
         "winner": {
           "key": "name-18bd3839d817ee",
           "name": "Wolf J."
@@ -22980,7 +22980,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T17:31:16.712857+00:00",
+        "updated_at": "2026-08-13T19:10:45.301783+00:00",
         "winner": {
           "key": "212021",
           "name": "Martin Landaluce"
@@ -52568,5 +52568,5 @@
     "resolved_model_picks": 15,
     "wins": 0
   },
-  "updated_at": "2026-08-13T17:31:16.713003+00:00"
+  "updated_at": "2026-08-13T19:10:45.301936+00:00"
 }
