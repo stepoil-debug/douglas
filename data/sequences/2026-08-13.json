@@ -50,7 +50,7 @@
       "schedule_match_method": "MATCH_ID",
       "schedule_source": "TennisExplorer detail",
       "schedule_time_status": "PENDING",
-      "schedule_verified_at": "2026-08-13T20:10:36.986295+00:00",
+      "schedule_verified_at": "2026-08-13T21:26:04.875497+00:00",
       "scheduled_date_current": "2026-08-14",
       "scheduled_time_at_freeze": null,
       "scheduled_time_current": null,
@@ -136,7 +136,7 @@
       "schedule_match_method": "MATCH_ID",
       "schedule_source": "TennisExplorer detail",
       "schedule_time_status": "CONFIRMED",
-      "schedule_verified_at": "2026-08-13T20:10:36.986295+00:00",
+      "schedule_verified_at": "2026-08-13T21:26:04.875497+00:00",
       "scheduled_date_current": "2026-08-13",
       "scheduled_time_at_freeze": null,
       "scheduled_time_current": "17:35",
@@ -221,7 +221,7 @@
       "schedule_match_method": "MATCH_ID",
       "schedule_source": "TennisExplorer detail",
       "schedule_time_status": "PENDING",
-      "schedule_verified_at": "2026-08-13T20:10:36.986295+00:00",
+      "schedule_verified_at": "2026-08-13T21:26:04.875497+00:00",
       "scheduled_date_current": "2026-08-14",
       "scheduled_time_at_freeze": null,
       "scheduled_time_current": null,
@@ -393,7 +393,7 @@
       "schedule_match_method": "MATCH_ID",
       "schedule_source": "TennisExplorer detail",
       "schedule_time_status": "PENDING",
-      "schedule_verified_at": "2026-08-13T20:10:36.986295+00:00",
+      "schedule_verified_at": "2026-08-13T21:26:04.875497+00:00",
       "scheduled_date_current": "2026-08-14",
       "scheduled_time_at_freeze": null,
       "scheduled_time_current": null,
@@ -479,10 +479,10 @@
       "schedule_match_method": "MATCH_ID",
       "schedule_source": "TennisExplorer detail",
       "schedule_time_status": "CONFIRMED",
-      "schedule_verified_at": "2026-08-13T20:10:36.986295+00:00",
+      "schedule_verified_at": "2026-08-13T21:26:04.875497+00:00",
       "scheduled_date_current": "2026-08-13",
       "scheduled_time_at_freeze": null,
-      "scheduled_time_current": "18:00",
+      "scheduled_time_current": "18:05",
       "selected_market": {
         "best_odd": 2.5,
         "bookmaker_odds": {
@@ -533,5 +533,5 @@
     "schedule_dated": 6
   },
   "target_games": 6,
-  "updated_at": "2026-08-13T20:10:36.986295+00:00"
+  "updated_at": "2026-08-13T21:26:04.875497+00:00"
 }
