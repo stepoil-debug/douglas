@@ -21,7 +21,9 @@ permissions:
   id-token: write
 
 concurrency:
-  group: tennis-quant-analysis
+  # This workflow and sequence-sync both write generated data to main. A shared
+  # writer lock avoids non-fast-forward push failures during manual refreshes.
+  group: investbet-tennis-data-writer
   cancel-in-progress: false
 
 jobs:
