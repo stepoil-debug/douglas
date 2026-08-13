@@ -128,10 +128,10 @@
       "misses": 5,
       "n": 11
     },
-    "updated_at": "2026-08-13T11:14:27.436052+00:00"
+    "updated_at": "2026-08-13T11:33:28.813521+00:00"
   },
-  "last_refresh_attempt_at": "2026-08-13T08:17:54.057674-03:00",
-  "last_run_at": "2026-08-13T08:17:54.057697-03:00",
+  "last_refresh_attempt_at": "2026-08-13T08:36:29.673033-03:00",
+  "last_run_at": "2026-08-13T08:36:29.673053-03:00",
   "learning_summary": {
     "matches": 10,
     "status": "PROVISIONAL_D1"
