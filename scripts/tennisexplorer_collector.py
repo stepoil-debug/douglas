@@ -13,6 +13,8 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup, Tag
 
+from scripts.tennisexplorer_date_guard import verify_records
+
 BASE_URLS = (
     "https://www.tennisexplorer.com",
     "https://noproxy.tennisexplorer.com",
@@ -195,8 +197,6 @@ def parse_matches(html: str, target: date, base_url: str) -> list[dict[str, Any]
 
 
 def _first_odd(cell: Tag) -> float | None:
-    # Detail pages can contain arrows/movement text next to the current price. The
-    # first decimal number is the displayed current price in the H/A table.
     return _float(cell.get_text(" ", strip=True))
 
 
@@ -236,13 +236,6 @@ def parse_detail_bookmakers(html: str) -> list[dict[str, Any]]:
 
 
 def _needs_detail(record: dict[str, Any]) -> bool:
-    """Every valid pre-match market deserves the same bookmaker enrichment.
-
-    The former implementation only opened detail pages when one side was already
-    near the target execution odd range. That made the analysis depth depend on a
-    pre-filter. Full-board analysis requires collecting detailed books first and
-    deciding eligibility only after the model has evaluated the match.
-    """
     rows = record.get("match_winner_market", []) or []
     if not rows or not isinstance(rows[0], dict):
         return False
@@ -293,9 +286,6 @@ def collect(target: date) -> tuple[list[dict[str, Any]], str]:
     }
     errors: list[str] = []
 
-    # /matches/ is best for the current day. For D+1 TennisExplorer sometimes
-    # exposes the schedule first through /results/?day=... before /matches/ starts
-    # honoring that date. Both endpoints use the same result-table structure.
     for endpoint in ("matches", "results"):
         for base in BASE_URLS:
             url = f"{base}/{endpoint}/"
@@ -312,10 +302,24 @@ def collect(target: date) -> tuple[list[dict[str, Any]], str]:
                         print(f"[TQE] TennisExplorer {endpoint} zero rows: {diag}", file=sys.stderr, flush=True)
                         continue
                     enriched = enrich_bookmakers(rows, headers)
+
+                    # The public page can contain a neighboring calendar day even
+                    # when query parameters request D+1. Verify every detail-page
+                    # date before returning this source. If all rows belong to a
+                    # different day, continue so the caller can use tournament-page
+                    # fallback instead of freezing a mixed-date board.
+                    date_summary = verify_records(rows, target)
+                    if not rows:
+                        errors.append(
+                            f"{base}/{endpoint}: all rows rejected by date guard "
+                            f"(verified={date_summary.get('verified')}, other={date_summary.get('dropped_other_date')})"
+                        )
+                        continue
+
                     source = f"{base}/{endpoint}"
                     print(
-                        f"[TQE] TennisExplorer source {source}: {len(rows)} ATP matches; "
-                        f"{enriched} enriched with bookmaker tables",
+                        f"[TQE] TennisExplorer source {source}: {len(rows)} ATP matches after date guard; "
+                        f"{enriched} enriched; {date_summary.get('dropped_other_date', 0)} cross-date rows removed",
                         file=sys.stderr,
                         flush=True,
                     )
