@@ -10,8 +10,11 @@ permissions:
   contents: write
 
 concurrency:
-  group: investbet-sequence-schedule-sync
-  cancel-in-progress: true
+  # Analysis and schedule sync both update data/sequences on main. Sharing the same
+  # group prevents non-fast-forward push failures when a new analysis starts while
+  # the previous run is still appending verified schedule metadata.
+  group: investbet-tennis-data-writer
+  cancel-in-progress: false
 
 jobs:
   sync:
