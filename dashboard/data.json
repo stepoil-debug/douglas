@@ -134,10 +134,10 @@
       "misses": 8,
       "n": 18
     },
-    "updated_at": "2026-08-13T11:45:16.125871+00:00"
+    "updated_at": "2026-08-13T11:53:29.929481+00:00"
   },
-  "last_refresh_attempt_at": "2026-08-13T08:48:26.517807-03:00",
-  "last_run_at": "2026-08-13T08:48:26.517823-03:00",
+  "last_refresh_attempt_at": "2026-08-13T08:56:12.110326-03:00",
+  "last_run_at": "2026-08-13T08:56:12.110344-03:00",
   "learning_summary": {
     "matches": 10,
     "status": "PROVISIONAL_D1"
