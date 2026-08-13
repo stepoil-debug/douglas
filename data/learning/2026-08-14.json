@@ -1,0 +1,449 @@
+{
+  "date": "2026-08-14",
+  "matches": [
+    {
+      "bookmakers": 10,
+      "confidence": 58.825143528190296,
+      "data_quality": 1.0,
+      "date": "2026-08-14",
+      "decision": "REJECTED",
+      "disagreement_pp": 12.234254865240112,
+      "edge_pp": 19.561993333775497,
+      "final_probability": 0.510593983934304,
+      "match_id": "pub-069e3365e0699bf04faa",
+      "odd": 4.5,
+      "opponent": {
+        "key": "207411",
+        "name": "Jesper De Jong"
+      },
+      "predicted_player": {
+        "key": "210506",
+        "name": "Alex Michelsen"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.6448832324039365,
+        "fatigue": 0.5,
+        "market": 0.31497405059654904,
+        "recent_form": 0.5840380370687062,
+        "season_profile": 0.7,
+        "serve": 0.59917090435093,
+        "surface_elo": 0.6768065357547037
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    },
+    {
+      "bookmakers": 10,
+      "confidence": 55.531147205384876,
+      "data_quality": 1.0,
+      "date": "2026-08-14",
+      "decision": "REJECTED",
+      "disagreement_pp": 8.950069195638768,
+      "edge_pp": -1.4523330317154248,
+      "final_probability": 0.7148121640102364,
+      "match_id": "pub-c6a5a3a0b04d01c1db2c",
+      "odd": 2.0,
+      "opponent": {
+        "key": "208316",
+        "name": "Valentin Royer"
+      },
+      "predicted_player": {
+        "key": "126774",
+        "name": "Stefanos Tsitsipas"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.680923707492355,
+        "fatigue": 0.5,
+        "market": 0.7293354943273906,
+        "recent_form": 0.8,
+        "season_profile": 0.75,
+        "serve": 0.6357623094518428,
+        "surface_elo": 0.6879153600642735
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    },
+    {
+      "bookmakers": 8,
+      "confidence": 49.969265894665654,
+      "data_quality": 0.94,
+      "date": "2026-08-14",
+      "decision": "REJECTED",
+      "disagreement_pp": 7.534147715477163,
+      "edge_pp": 6.948157921989778,
+      "final_probability": 0.5337672935056121,
+      "match_id": "pub-68a644dcb1fd7664c865",
+      "odd": 3.5,
+      "opponent": {
+        "key": "134868",
+        "name": "Tallon Griekspoor"
+      },
+      "predicted_player": {
+        "key": "122298",
+        "name": "Botic Van De Zandschulp"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.6032784871147812,
+        "fatigue": 0.5,
+        "market": 0.46428571428571436,
+        "recent_form": 0.6900283733826436,
+        "season_profile": 0.5,
+        "serve": 0.5693800668080997,
+        "surface_elo": 0.48055191456057983
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    },
+    {
+      "bookmakers": 10,
+      "confidence": 48.50356012610942,
+      "data_quality": 0.9440000000000002,
+      "date": "2026-08-14",
+      "decision": "REJECTED",
+      "disagreement_pp": 4.0659045924510755,
+      "edge_pp": 4.509090997500776,
+      "final_probability": 0.5274110092305909,
+      "match_id": "pub-536899ad90562f9bd39b",
+      "odd": 1.8,
+      "opponent": {
+        "key": "132686",
+        "name": "Nuno Borges"
+      },
+      "predicted_player": {
+        "key": "106423",
+        "name": "Thanasi Kokkinakis"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.5454959533572064,
+        "fatigue": 0.5,
+        "market": 0.48232009925558317,
+        "recent_form": 0.6082835332433412,
+        "season_profile": 0.5535714285714286,
+        "surface_elo": 0.5507225401981928
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    },
+    {
+      "bookmakers": 10,
+      "confidence": 47.89427097585632,
+      "data_quality": 1.0,
+      "date": "2026-08-14",
+      "decision": "REJECTED",
+      "disagreement_pp": 6.348652172881727,
+      "edge_pp": -6.067009504345822,
+      "final_probability": 0.6124292314873805,
+      "match_id": "pub-950e2f855d86b9163763",
+      "odd": 1.83,
+      "opponent": {
+        "key": "206499",
+        "name": "Aleksandar Kovacevic"
+      },
+      "predicted_player": {
+        "key": "111575",
+        "name": "Karen Khachanov"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.5817289858598228,
+        "fatigue": 0.5,
+        "market": 0.6730993265308387,
+        "recent_form": 0.6450828631557002,
+        "season_profile": 0.5163043478260869,
+        "serve": 0.5079953302014404,
+        "surface_elo": 0.5560325719149031
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    },
+    {
+      "bookmakers": 10,
+      "confidence": 44.01840291277192,
+      "data_quality": 0.992,
+      "date": "2026-08-14",
+      "decision": "REJECTED",
+      "disagreement_pp": 8.345237058000729,
+      "edge_pp": -7.69694687228456,
+      "final_probability": 0.5954763997077265,
+      "match_id": "pub-5b18867644c80565a6d2",
+      "odd": 1.83,
+      "opponent": {
+        "key": "144895",
+        "name": "Corentin Moutet"
+      },
+      "predicted_player": {
+        "key": "128034",
+        "name": "Hubert Hurkacz"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.5377187413877358,
+        "fatigue": 0.5,
+        "market": 0.6724458684305721,
+        "recent_form": 0.6280874491523915,
+        "season_profile": 0.5119047619047619,
+        "serve": 0.6656582951761616,
+        "surface_elo": 0.44128414816370265
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    },
+    {
+      "bookmakers": 10,
+      "confidence": 38.712297529453686,
+      "data_quality": 0.9080000000000001,
+      "date": "2026-08-14",
+      "decision": "REJECTED",
+      "disagreement_pp": 3.7850604997177477,
+      "edge_pp": -1.51164197082857,
+      "final_probability": 0.5161335802917143,
+      "match_id": "pub-c2d7a987b7eb9cd7c048",
+      "odd": 2.5,
+      "opponent": {
+        "key": "132283",
+        "name": "Lorenzo Sonego"
+      },
+      "predicted_player": {
+        "key": "209992",
+        "name": "Juncheng Shang"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.5128032473655808,
+        "fatigue": 0.5,
+        "h2h": 0.5015957446808511,
+        "market": 0.53125,
+        "recent_form": 0.5729861519929653,
+        "season_profile": 0.47115384615384615,
+        "surface_elo": 0.446054613068624
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    },
+    {
+      "bookmakers": 8,
+      "confidence": 35.96008822314578,
+      "data_quality": 0.9199999999999999,
+      "date": "2026-08-14",
+      "decision": "REJECTED",
+      "disagreement_pp": 7.081144592860427,
+      "edge_pp": -1.1223007528983864,
+      "final_probability": 0.5188123281600621,
+      "match_id": "pub-3610b556791ff7f0ec20",
+      "odd": 1.72,
+      "opponent": {
+        "key": "210017",
+        "name": "Daniel Merida Aguilar"
+      },
+      "predicted_player": {
+        "key": "105227",
+        "name": "Marin Cilic"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.46099565272304577,
+        "fatigue": 0.5,
+        "market": 0.5300353356890459,
+        "recent_form": 0.44288742549924887,
+        "season_profile": 0.5910714285714287,
+        "serve": 0.6621437354401313,
+        "surface_elo": 0.5590724250255148
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    },
+    {
+      "bookmakers": 9,
+      "confidence": 35.35385782096444,
+      "data_quality": 0.966,
+      "date": "2026-08-14",
+      "decision": "REJECTED",
+      "disagreement_pp": 18.174266307072063,
+      "edge_pp": -31.168297573566463,
+      "final_probability": 0.613101241280365,
+      "match_id": "pub-5dc84ff7afee14120577",
+      "odd": 2.95,
+      "opponent": {
+        "key": "207830",
+        "name": "Tomas Machac"
+      },
+      "predicted_player": {
+        "key": "105807",
+        "name": "Pablo Carreno Busta"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "MODEL_DISAGREEMENT"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.3925509725556864,
+        "fatigue": 0.5,
+        "market": 0.9247842170160295,
+        "recent_form": 0.4770083930954986,
+        "season_profile": 0.35425101214574894,
+        "serve": 0.4591260363501871,
+        "surface_elo": 0.3741803734872249
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    },
+    {
+      "bookmakers": 10,
+      "confidence": 32.59201082955821,
+      "data_quality": 0.9820000000000002,
+      "date": "2026-08-14",
+      "decision": "REJECTED",
+      "disagreement_pp": 10.547078337304898,
+      "edge_pp": -13.25550820204554,
+      "final_probability": 0.5055308916686311,
+      "match_id": "pub-b669dfe493bd9c978dcf",
+      "odd": 1.8,
+      "opponent": {
+        "key": "202104",
+        "name": "Sebastian Baez"
+      },
+      "predicted_player": {
+        "key": "105777",
+        "name": "Grigor Dimitrov"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.4321798326455014,
+        "fatigue": 0.5,
+        "market": 0.6380859736890865,
+        "recent_form": 0.42898415807003887,
+        "season_profile": 0.28035714285714286,
+        "serve": 0.5405266336038921,
+        "surface_elo": 0.39625193193005936
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    }
+  ],
+  "model_version": "champion-v0.3.3-sequential",
+  "source": "TennisExplorer detail",
+  "status": "PROVISIONAL_D1",
+  "updated_at": "2026-08-13T03:39:14.847442+00:00"
+}

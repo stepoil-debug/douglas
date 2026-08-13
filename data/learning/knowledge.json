@@ -1,22 +1,28 @@
 {
   "by_confidence": {
     "<50": {
-      "accuracy": 0.4,
+      "accuracy": 0.3333333333333333,
       "hits": 2,
-      "misses": 3,
-      "n": 5
+      "misses": 4,
+      "n": 6
     }
   },
   "by_decision": {
     "REJECTED": {
-      "accuracy": 0.4,
+      "accuracy": 0.3333333333333333,
       "hits": 2,
-      "misses": 3,
-      "n": 5
+      "misses": 4,
+      "n": 6
     }
   },
   "by_probability": {
     "60-65%": {
+      "accuracy": 0.0,
+      "hits": 0,
+      "misses": 1,
+      "n": 1
+    },
+    "65-70%": {
       "accuracy": 0.0,
       "hits": 0,
       "misses": 1,
@@ -31,25 +37,25 @@
   },
   "failure_tags": {
     "ERR-SUR": 3,
-    "ERR-UNC": 3
+    "ERR-UNC": 4
   },
   "last_100": {
-    "accuracy": 0.4,
+    "accuracy": 0.3333333333333333,
     "hits": 2,
-    "misses": 3,
-    "n": 5
+    "misses": 4,
+    "n": 6
   },
   "last_500": {
-    "accuracy": 0.4,
+    "accuracy": 0.3333333333333333,
     "hits": 2,
-    "misses": 3,
-    "n": 5
+    "misses": 4,
+    "n": 6
   },
   "overall": {
-    "accuracy": 0.4,
+    "accuracy": 0.3333333333333333,
     "hits": 2,
-    "misses": 3,
-    "n": 5
+    "misses": 4,
+    "n": 6
   },
-  "updated_at": "2026-08-13T01:22:11.589502+00:00"
+  "updated_at": "2026-08-13T03:38:54.691151+00:00"
 }

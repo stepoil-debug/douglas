@@ -1,0 +1,492 @@
+{
+  "created_at": "2026-08-13T03:39:14.848206+00:00",
+  "date": "2026-08-14",
+  "games": [
+    {
+      "analysis_status": "REJECTED",
+      "confidence": 55.531147205384876,
+      "data_quality": 1.0,
+      "disagreement_pp": 8.950069195638768,
+      "edge_pp": -1.4523330317154248,
+      "final_probability": 0.7148121640102364,
+      "match": {
+        "date": "2026-08-14",
+        "event_type": "ATP Singles",
+        "match_id": "pub-c6a5a3a0b04d01c1db2c",
+        "player_a": {
+          "key": "208316",
+          "name": "Valentin Royer"
+        },
+        "player_b": {
+          "key": "126774",
+          "name": "Stefanos Tsitsipas"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "match_id": "pub-c6a5a3a0b04d01c1db2c",
+      "odd": 2.0,
+      "opponent": {
+        "key": "208316",
+        "name": "Valentin Royer"
+      },
+      "position": 1,
+      "reject_reasons": [
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "resolved_at": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "scheduled_time_at_freeze": null,
+      "selected_market": {
+        "best_odd": 2.0,
+        "bookmaker_odds": {
+          "BetVictor": 1.7,
+          "Betsson": 1.37,
+          "Betway": 1.18,
+          "Coral": 2.0,
+          "Interwetten": 1.37,
+          "Ladbrokes": 2.0,
+          "Unibet": 1.67,
+          "bet-at-home": 1.15,
+          "bet365": 1.67,
+          "bwin": 2.0
+        },
+        "bookmakers": 10,
+        "fair_probability": 0.7293354943273906,
+        "median_odd": 1.67,
+        "player_key": "126774"
+      },
+      "selected_player": {
+        "key": "126774",
+        "name": "Stefanos Tsitsipas"
+      },
+      "signals": {
+        "elo": 0.680923707492355,
+        "fatigue": 0.5,
+        "market": 0.7293354943273906,
+        "recent_form": 0.8,
+        "season_profile": 0.75,
+        "serve": 0.6357623094518428,
+        "surface_elo": 0.6879153600642735
+      },
+      "time_confirmed_at_freeze": false
+    },
+    {
+      "analysis_status": "REJECTED",
+      "confidence": 47.89427097585632,
+      "data_quality": 1.0,
+      "disagreement_pp": 6.348652172881727,
+      "edge_pp": -6.067009504345822,
+      "final_probability": 0.6124292314873805,
+      "match": {
+        "date": "2026-08-14",
+        "event_type": "ATP Singles",
+        "match_id": "pub-950e2f855d86b9163763",
+        "player_a": {
+          "key": "206499",
+          "name": "Aleksandar Kovacevic"
+        },
+        "player_b": {
+          "key": "111575",
+          "name": "Karen Khachanov"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "match_id": "pub-950e2f855d86b9163763",
+      "odd": 1.83,
+      "opponent": {
+        "key": "206499",
+        "name": "Aleksandar Kovacevic"
+      },
+      "position": 2,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "resolved_at": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "scheduled_time_at_freeze": null,
+      "selected_market": {
+        "best_odd": 1.83,
+        "bookmaker_odds": {
+          "BetVictor": 1.73,
+          "Betsson": 1.31,
+          "Betway": 1.18,
+          "Coral": 1.8,
+          "Interwetten": 1.33,
+          "Ladbrokes": 1.8,
+          "Unibet": 1.77,
+          "bet-at-home": 1.04,
+          "bet365": 1.83,
+          "bwin": 1.67
+        },
+        "bookmakers": 10,
+        "fair_probability": 0.6730993265308387,
+        "median_odd": 1.7,
+        "player_key": "111575"
+      },
+      "selected_player": {
+        "key": "111575",
+        "name": "Karen Khachanov"
+      },
+      "signals": {
+        "elo": 0.5817289858598228,
+        "fatigue": 0.5,
+        "market": 0.6730993265308387,
+        "recent_form": 0.6450828631557002,
+        "season_profile": 0.5163043478260869,
+        "serve": 0.5079953302014404,
+        "surface_elo": 0.5560325719149031
+      },
+      "time_confirmed_at_freeze": false
+    },
+    {
+      "analysis_status": "REJECTED",
+      "confidence": 44.01840291277192,
+      "data_quality": 0.992,
+      "disagreement_pp": 8.345237058000729,
+      "edge_pp": -7.69694687228456,
+      "final_probability": 0.5954763997077265,
+      "match": {
+        "date": "2026-08-14",
+        "event_type": "ATP Singles",
+        "match_id": "pub-5b18867644c80565a6d2",
+        "player_a": {
+          "key": "144895",
+          "name": "Corentin Moutet"
+        },
+        "player_b": {
+          "key": "128034",
+          "name": "Hubert Hurkacz"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "match_id": "pub-5b18867644c80565a6d2",
+      "odd": 1.83,
+      "opponent": {
+        "key": "144895",
+        "name": "Corentin Moutet"
+      },
+      "position": 3,
+      "reject_reasons": [
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "resolved_at": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "scheduled_time_at_freeze": null,
+      "selected_market": {
+        "best_odd": 1.83,
+        "bookmaker_odds": {
+          "BetVictor": 1.73,
+          "Betsson": 1.53,
+          "Betway": 1.18,
+          "Coral": 1.61,
+          "Interwetten": 1.55,
+          "Ladbrokes": 1.61,
+          "Unibet": 1.68,
+          "bet-at-home": 1.13,
+          "bet365": 1.83,
+          "bwin": 1.83
+        },
+        "bookmakers": 10,
+        "fair_probability": 0.6724458684305721,
+        "median_odd": 1.61,
+        "player_key": "128034"
+      },
+      "selected_player": {
+        "key": "128034",
+        "name": "Hubert Hurkacz"
+      },
+      "signals": {
+        "elo": 0.5377187413877358,
+        "fatigue": 0.5,
+        "market": 0.6724458684305721,
+        "recent_form": 0.6280874491523915,
+        "season_profile": 0.5119047619047619,
+        "serve": 0.6656582951761616,
+        "surface_elo": 0.44128414816370265
+      },
+      "time_confirmed_at_freeze": false
+    },
+    {
+      "analysis_status": "REJECTED",
+      "confidence": 58.825143528190296,
+      "data_quality": 1.0,
+      "disagreement_pp": 12.234254865240112,
+      "edge_pp": 19.561993333775497,
+      "final_probability": 0.510593983934304,
+      "match": {
+        "date": "2026-08-14",
+        "event_type": "ATP Singles",
+        "match_id": "pub-069e3365e0699bf04faa",
+        "player_a": {
+          "key": "210506",
+          "name": "Alex Michelsen"
+        },
+        "player_b": {
+          "key": "207411",
+          "name": "Jesper De Jong"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "match_id": "pub-069e3365e0699bf04faa",
+      "odd": 4.5,
+      "opponent": {
+        "key": "207411",
+        "name": "Jesper De Jong"
+      },
+      "position": 4,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "resolved_at": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "scheduled_time_at_freeze": null,
+      "selected_market": {
+        "best_odd": 4.5,
+        "bookmaker_odds": {
+          "BetVictor": 4.5,
+          "Betsson": 3.5,
+          "Betway": 2.5,
+          "Coral": 1.5,
+          "Interwetten": 3.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 4.5,
+          "bet-at-home": 1.5,
+          "bet365": 3.5,
+          "bwin": 4.5
+        },
+        "bookmakers": 10,
+        "fair_probability": 0.31497405059654904,
+        "median_odd": 3.5,
+        "player_key": "210506"
+      },
+      "selected_player": {
+        "key": "210506",
+        "name": "Alex Michelsen"
+      },
+      "signals": {
+        "elo": 0.6448832324039365,
+        "fatigue": 0.5,
+        "market": 0.31497405059654904,
+        "recent_form": 0.5840380370687062,
+        "season_profile": 0.7,
+        "serve": 0.59917090435093,
+        "surface_elo": 0.6768065357547037
+      },
+      "time_confirmed_at_freeze": false
+    },
+    {
+      "analysis_status": "REJECTED",
+      "confidence": 35.35385782096444,
+      "data_quality": 0.966,
+      "disagreement_pp": 18.174266307072063,
+      "edge_pp": -31.168297573566463,
+      "final_probability": 0.613101241280365,
+      "match": {
+        "date": "2026-08-14",
+        "event_type": "ATP Singles",
+        "match_id": "pub-5dc84ff7afee14120577",
+        "player_a": {
+          "key": "207830",
+          "name": "Tomas Machac"
+        },
+        "player_b": {
+          "key": "105807",
+          "name": "Pablo Carreno Busta"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "match_id": "pub-5dc84ff7afee14120577",
+      "odd": 2.95,
+      "opponent": {
+        "key": "207830",
+        "name": "Tomas Machac"
+      },
+      "position": 5,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "MODEL_DISAGREEMENT"
+      ],
+      "result": {
+        "resolved_at": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "scheduled_time_at_freeze": null,
+      "selected_market": {
+        "best_odd": 2.95,
+        "bookmaker_odds": {
+          "BetVictor": 1.8,
+          "Betsson": 2.22,
+          "Betway": 2.2,
+          "Coral": 1.83,
+          "Ladbrokes": 1.83,
+          "Unibet": 1.96,
+          "bet-at-home": 2.95,
+          "bet365": 1.8,
+          "bwin": 1.8
+        },
+        "bookmakers": 9,
+        "fair_probability": 0.9247842170160296,
+        "median_odd": 1.83,
+        "player_key": "105807"
+      },
+      "selected_player": {
+        "key": "105807",
+        "name": "Pablo Carreno Busta"
+      },
+      "signals": {
+        "elo": 0.3925509725556864,
+        "fatigue": 0.5,
+        "market": 0.9247842170160295,
+        "recent_form": 0.4770083930954986,
+        "season_profile": 0.35425101214574894,
+        "serve": 0.4591260363501871,
+        "surface_elo": 0.3741803734872249
+      },
+      "time_confirmed_at_freeze": false
+    },
+    {
+      "analysis_status": "REJECTED",
+      "confidence": 49.969265894665654,
+      "data_quality": 0.94,
+      "disagreement_pp": 7.534147715477163,
+      "edge_pp": 6.948157921989778,
+      "final_probability": 0.5337672935056121,
+      "match": {
+        "date": "2026-08-14",
+        "event_type": "ATP Singles",
+        "match_id": "pub-68a644dcb1fd7664c865",
+        "player_a": {
+          "key": "122298",
+          "name": "Botic Van De Zandschulp"
+        },
+        "player_b": {
+          "key": "134868",
+          "name": "Tallon Griekspoor"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "match_id": "pub-68a644dcb1fd7664c865",
+      "odd": 3.5,
+      "opponent": {
+        "key": "134868",
+        "name": "Tallon Griekspoor"
+      },
+      "position": 6,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW"
+      ],
+      "result": {
+        "resolved_at": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "scheduled_time_at_freeze": null,
+      "selected_market": {
+        "best_odd": 3.5,
+        "bookmaker_odds": {
+          "Betsson": 1.5,
+          "Betway": 2.5,
+          "Coral": 1.5,
+          "Interwetten": 1.5,
+          "Ladbrokes": 1.5,
+          "Unibet": 1.5,
+          "bet-at-home": 3.5,
+          "bwin": 1.5
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.46428571428571436,
+        "median_odd": 1.5,
+        "player_key": "122298"
+      },
+      "selected_player": {
+        "key": "122298",
+        "name": "Botic Van De Zandschulp"
+      },
+      "signals": {
+        "elo": 0.6032784871147812,
+        "fatigue": 0.5,
+        "market": 0.46428571428571436,
+        "recent_form": 0.6900283733826436,
+        "season_profile": 0.5,
+        "serve": 0.5693800668080997,
+        "surface_elo": 0.48055191456057983
+      },
+      "time_confirmed_at_freeze": false
+    }
+  ],
+  "min_gap_minutes": 210,
+  "min_probability": 0.5,
+  "model_version": "champion-v0.3.3-sequential",
+  "source_board_last_run_at": null,
+  "status": "FROZEN",
+  "summary": {
+    "accuracy": null,
+    "games": 6,
+    "hits": 0,
+    "misses": 0,
+    "resolved": 0
+  },
+  "target_games": 6,
+  "updated_at": "2026-08-13T03:39:14.848206+00:00"
+}

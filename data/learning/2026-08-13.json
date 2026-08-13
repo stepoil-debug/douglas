@@ -379,10 +379,24 @@
         "MODEL_DISAGREEMENT"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": false,
+        "postmortem": {
+          "evidence": [
+            "Prediction was low-confidence or too close to a 50/50 match",
+            "High model disagreement before the match"
+          ],
+          "status": "HYPOTHESIS_ONLY",
+          "tags": [
+            "ERR-UNC"
+          ]
+        },
+        "resolved_at": "2026-08-13T03:38:49.339395+00:00",
+        "score": "2 - 0",
+        "status": "MISS",
+        "winner": {
+          "key": "210262",
+          "name": "Jaime Faria"
+        }
       },
       "signals": {
         "elo": 0.506343899929069,
@@ -701,6 +715,6 @@
   ],
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
-  "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-13T01:22:35.375851+00:00"
+  "status": "RESULTS_UPDATING",
+  "updated_at": "2026-08-13T03:38:49.339415+00:00"
 }
