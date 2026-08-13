@@ -14,6 +14,8 @@ def _row(idx: int) -> dict:
             "time": "",
             "tournament": "ATP Test",
             "surface": "Hard",
+            "player_a": {"key": f"p{idx}", "name": f"Player {idx}"},
+            "player_b": {"key": f"o{idx}", "name": f"Opponent {idx}"},
         },
         "selected_player": {"key": f"p{idx}", "name": f"Player {idx}"},
         "opponent": {"key": f"o{idx}", "name": f"Opponent {idx}"},
@@ -48,6 +50,8 @@ def test_schedule_sync_appends_moved_date_without_changing_pick(tmp_path):
         match_id=game["match_id"],
         date="2026-08-14",
         time="16:00",
+        player_a=SimpleNamespace(name=game["match"]["player_a"]["name"]),
+        player_b=SimpleNamespace(name=game["match"]["player_b"]["name"]),
         raw={"source": "TennisExplorer schedule"},
     )
 
@@ -60,6 +64,30 @@ def test_schedule_sync_appends_moved_date_without_changing_pick(tmp_path):
     assert synced["scheduled_date_current"] == "2026-08-14"
     assert synced["scheduled_time_current"] == "16:00"
     assert synced["schedule_changed_from_freeze"] is True
+
+
+def test_schedule_sync_falls_back_to_player_pair_when_match_id_changes(tmp_path):
+    frozen = freeze_sequence(tmp_path, _board())
+    game = frozen["games"][0]
+    fixture = SimpleNamespace(
+        match_id="new-source-id",
+        date="2026-08-14",
+        time="20:00",
+        player_a=SimpleNamespace(name=game["match"]["player_b"]["name"]),
+        player_b=SimpleNamespace(name=game["match"]["player_a"]["name"]),
+        raw={"source": "TennisExplorer tournament page"},
+    )
+
+    result = update_all_sequence_schedules(tmp_path, [fixture])
+    assert result["matched_games"] == 1
+    assert result["player_pair_matches"] == 1
+
+    saved = json.loads((tmp_path / "data" / "sequences" / "2026-08-13.json").read_text())
+    synced = next(row for row in saved["games"] if row["match_id"] == game["match_id"])
+    assert synced["selected_player"] == game["selected_player"]
+    assert synced["scheduled_date_current"] == "2026-08-14"
+    assert synced["scheduled_time_current"] == "20:00"
+    assert synced["schedule_match_method"] == "PLAYER_PAIR"
 
 
 def test_result_sync_finds_original_sequence_after_match_moves_day(tmp_path):
@@ -87,3 +115,29 @@ def test_result_sync_finds_original_sequence_after_match_moves_day(tmp_path):
     assert synced["result"]["actual_date"] == "2026-08-14"
     assert synced["result"]["actual_time"] == "18:30"
     assert synced["result"]["score"] == "2 - 1"
+
+
+def test_result_sync_falls_back_to_pair_and_preserves_frozen_pick(tmp_path):
+    frozen = freeze_sequence(tmp_path, _board())
+    game = frozen["games"][0]
+    selected = game["selected_player"]
+    opponent = game["opponent"]
+    fixture = SimpleNamespace(
+        match_id="different-result-source-id",
+        date="2026-08-14",
+        time="21:30",
+        winner="Second Player",
+        player_a=SimpleNamespace(key="other", name=opponent["name"]),
+        player_b=SimpleNamespace(key="renumbered", name=selected["name"]),
+        raw={"event_final_result": "1 - 2"},
+    )
+
+    result = update_all_sequence_results(tmp_path, [fixture])
+    assert result["resolved_games"] == 1
+    assert result["player_pair_matches"] == 1
+
+    saved = json.loads((tmp_path / "data" / "sequences" / "2026-08-13.json").read_text())
+    synced = next(row for row in saved["games"] if row["match_id"] == game["match_id"])
+    assert synced["selected_player"] == selected
+    assert synced["result"]["status"] == "HIT"
+    assert synced["result"]["match_method"] == "PLAYER_PAIR"
