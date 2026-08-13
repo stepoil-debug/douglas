@@ -1,7 +1,8 @@
 {
-  "status": "RUNNING",
+  "status": "SUCCESS",
   "run_id": 31753420862,
   "run_url": "https://github.com/stepoil-debug/douglas/actions/runs/31753420862",
-  "updated_at": "2026-08-13T23:20:05.307129+00:00",
-  "message": "Atualizando resultados de hoje e procurando o board D+1"
+  "updated_at": "2026-08-13T23:21:19.377760+00:00",
+  "message": "Board D+1, sequência congelada, resultados e aprendizado atualizados.",
+  "board_status": "STALE_LAST_GOOD_BOARD"
 }
