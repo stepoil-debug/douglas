@@ -45,7 +45,13 @@
         "status": "PENDING",
         "winner": null
       },
+      "schedule_changed_from_freeze": true,
+      "schedule_match_method": "MATCH_ID",
+      "schedule_source": "TennisExplorer detail",
+      "schedule_verified_at": "2026-08-13T11:38:06.565818+00:00",
+      "scheduled_date_current": "2026-08-14",
       "scheduled_time_at_freeze": null,
+      "scheduled_time_current": "12:00",
       "selected_market": {
         "best_odd": 2.0,
         "bookmaker_odds": {
@@ -124,7 +130,13 @@
         "status": "PENDING",
         "winner": null
       },
+      "schedule_changed_from_freeze": true,
+      "schedule_match_method": "MATCH_ID",
+      "schedule_source": "TennisExplorer detail",
+      "schedule_verified_at": "2026-08-13T11:38:06.565818+00:00",
+      "scheduled_date_current": "2026-08-14",
       "scheduled_time_at_freeze": null,
+      "scheduled_time_current": "12:00",
       "selected_market": {
         "best_odd": 1.83,
         "bookmaker_odds": {
@@ -203,7 +215,13 @@
         "status": "PENDING",
         "winner": null
       },
+      "schedule_changed_from_freeze": true,
+      "schedule_match_method": "MATCH_ID",
+      "schedule_source": "TennisExplorer detail",
+      "schedule_verified_at": "2026-08-13T11:38:06.565818+00:00",
+      "scheduled_date_current": "2026-08-14",
       "scheduled_time_at_freeze": null,
+      "scheduled_time_current": "12:00",
       "selected_market": {
         "best_odd": 1.83,
         "bookmaker_odds": {
@@ -282,7 +300,13 @@
         "status": "PENDING",
         "winner": null
       },
+      "schedule_changed_from_freeze": true,
+      "schedule_match_method": "MATCH_ID",
+      "schedule_source": "TennisExplorer detail",
+      "schedule_verified_at": "2026-08-13T11:38:06.565818+00:00",
+      "scheduled_date_current": "2026-08-14",
       "scheduled_time_at_freeze": null,
+      "scheduled_time_current": "12:00",
       "selected_market": {
         "best_odd": 4.5,
         "bookmaker_odds": {
@@ -363,7 +387,13 @@
         "status": "PENDING",
         "winner": null
       },
+      "schedule_changed_from_freeze": true,
+      "schedule_match_method": "MATCH_ID",
+      "schedule_source": "TennisExplorer detail",
+      "schedule_verified_at": "2026-08-13T11:38:06.565818+00:00",
+      "scheduled_date_current": "2026-08-14",
       "scheduled_time_at_freeze": null,
+      "scheduled_time_current": "12:00",
       "selected_market": {
         "best_odd": 2.95,
         "bookmaker_odds": {
@@ -441,7 +471,13 @@
         "status": "PENDING",
         "winner": null
       },
+      "schedule_changed_from_freeze": true,
+      "schedule_match_method": "MATCH_ID",
+      "schedule_source": "TennisExplorer detail",
+      "schedule_verified_at": "2026-08-13T11:38:06.565818+00:00",
+      "scheduled_date_current": "2026-08-14",
       "scheduled_time_at_freeze": null,
+      "scheduled_time_current": "12:00",
       "selected_market": {
         "best_odd": 3.5,
         "bookmaker_odds": {
@@ -485,8 +521,9 @@
     "games": 6,
     "hits": 0,
     "misses": 0,
-    "resolved": 0
+    "resolved": 0,
+    "schedule_confirmed": 6
   },
   "target_games": 6,
-  "updated_at": "2026-08-13T03:39:14.848206+00:00"
+  "updated_at": "2026-08-13T11:38:06.565818+00:00"
 }
