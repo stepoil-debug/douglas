@@ -46,8 +46,8 @@ def _fixture(record: dict[str, Any]) -> Any | None:
         raw={
             "source": _record_live_source(record),
             "source_url": record.get("match_link"),
-            "schedule_verified_local_date": record.get("schedule_verified_local_date"),
-            "schedule_verified_local_time": record.get("schedule_verified_local_time"),
+            "schedule_section_date": record.get("schedule_section_date"),
+            "schedule_verification_method": record.get("schedule_verification_method"),
         },
     )
 
@@ -62,13 +62,13 @@ def _collect_with(command: list[str], output: Path) -> tuple[list[Any], str, str
         output.unlink()
     completed = _run(command)
     if completed.returncode != 0 or not output.exists():
-        return [], "FAILED", (completed.stderr or completed.stdout or "collector failed")[-700:]
+        return [], "FAILED", (completed.stderr or completed.stdout or "collector failed")[-900:]
     ok, guard_log = _guard(output)
     if not ok:
-        return [], "GUARD_FAILED", guard_log[-700:]
+        return [], "GUARD_FAILED", guard_log[-900:]
     rows = _load_rows(output)
     fixtures = [fixture for row in rows if (fixture := _fixture(row)) is not None]
-    return fixtures, "OK", guard_log[-700:]
+    return fixtures, "OK", guard_log[-900:]
 
 
 def collect_verified_day(target: date) -> tuple[list[Any], dict[str, Any]]:
@@ -76,26 +76,26 @@ def collect_verified_day(target: date) -> tuple[list[Any], dict[str, Any]]:
     runtime.mkdir(parents=True, exist_ok=True)
     output = runtime / f"sequence_schedule_{target.isoformat()}.json"
 
-    # Primary source: tournament pages carry an explicit dd.mm. date on each match,
-    # so they are safer for attaching schedule metadata to immutable selections.
+    # Primary: the general TennisExplorer page visibly groups matches by calendar
+    # date. V2 follows that heading instead of trusting the URL query date, which is
+    # exactly what we need after a frozen game is moved to another day.
     fixtures, status, detail = _collect_with([
         sys.executable,
-        "scripts/tennisexplorer_tournament_fallback.py",
+        "scripts/tennisexplorer_schedule_collector_v2.py",
         "--date", target.isoformat(),
         "--output", str(output),
     ], output)
-    source = "TOURNAMENT_PAGE"
+    source = "VISIBLE_DATE_SECTION"
 
-    # Fallback: the general collector now independently validates every match-detail
-    # date before returning rows, so it is safe when tournament discovery is sparse.
+    # Fallback for a layout/source outage: tournament pages have explicit dated rows.
     if not fixtures:
         fixtures, status, detail = _collect_with([
             sys.executable,
-            "scripts/tennisexplorer_collector.py",
+            "scripts/tennisexplorer_tournament_fallback.py",
             "--date", target.isoformat(),
             "--output", str(output),
         ], output)
-        source = "GENERAL_VERIFIED"
+        source = "TOURNAMENT_PAGE"
 
     pairs = [{
         "a": getattr(f.player_a, "name", ""),
@@ -103,7 +103,7 @@ def collect_verified_day(target: date) -> tuple[list[Any], dict[str, Any]]:
         "date": f.date,
         "time": f.time,
         "match_id": f.match_id,
-    } for f in fixtures[:40]]
+    } for f in fixtures[:60]]
     return fixtures, {
         "date": target.isoformat(),
         "status": status if fixtures else "NO_VERIFIED_FIXTURES",
