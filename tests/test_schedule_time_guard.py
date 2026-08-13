@@ -3,7 +3,6 @@ from datetime import datetime, timedelta, timezone
 
 from scripts.refresh_sequence_times import _fixture
 from scripts.schedule_time_guard import mark_unconfirmed_placeholder_times
-from tennis_quant.sequence import freeze_sequence
 from tennis_quant.sequence_sync import update_all_sequence_schedules
 
 
@@ -74,14 +73,16 @@ def test_normal_varied_schedule_remains_confirmed():
 
 
 def test_date_only_schedule_clears_old_placeholder_without_changing_pick(tmp_path):
-    board = {
-        "board_date": "2026-08-13",
-        "model_version": "test",
-        "last_run_at": "2026-08-12T12:00:00-03:00",
-        "approved": [],
-        "shadow": [],
-        "rejected": [{
-            "status": "REJECTED",
+    sequence_dir = tmp_path / "data" / "sequences"
+    sequence_dir.mkdir(parents=True)
+    path = sequence_dir / "2026-08-13.json"
+    original_player = {"key": "b", "name": "Tsitsipas S."}
+    payload = {
+        "date": "2026-08-13",
+        "created_at": "2026-08-12T12:00:00Z",
+        "games": [{
+            "position": 1,
+            "match_id": "old-id",
             "match": {
                 "match_id": "old-id",
                 "date": "2026-08-13",
@@ -91,25 +92,14 @@ def test_date_only_schedule_clears_old_placeholder_without_changing_pick(tmp_pat
                 "player_a": {"key": "a", "name": "Royer V."},
                 "player_b": {"key": "b", "name": "Tsitsipas S."},
             },
-            "selected_player": {"key": "b", "name": "Tsitsipas S."},
+            "selected_player": original_player,
             "opponent": {"key": "a", "name": "Royer V."},
-            "odd": 2.10,
-            "selected_market": {"best_odd": 2.10, "bookmakers": 5},
-            "final_probability": 0.71,
-            "confidence": 55,
-            "edge_pp": -1,
-            "data_quality": 1.0,
-            "disagreement_pp": 8,
-            "signals": {},
-            "reject_reasons": [],
+            "scheduled_date_current": "2026-08-14",
+            "scheduled_time_current": "12:00",
+            "result": {"status": "PENDING", "winner": None, "score": None, "resolved_at": None},
         }],
+        "summary": {"games": 1, "resolved": 0, "hits": 0, "misses": 0, "accuracy": None},
     }
-    frozen = freeze_sequence(tmp_path, board)
-    original = frozen["games"][0]["selected_player"]
-    path = tmp_path / "data" / "sequences" / "2026-08-13.json"
-    payload = json.loads(path.read_text())
-    payload["games"][0]["scheduled_date_current"] = "2026-08-14"
-    payload["games"][0]["scheduled_time_current"] = "12:00"
     path.write_text(json.dumps(payload))
 
     fixture = _fixture({
@@ -130,7 +120,7 @@ def test_date_only_schedule_clears_old_placeholder_without_changing_pick(tmp_pat
     assert result["matched_games"] == 1
     saved = json.loads(path.read_text())
     game = saved["games"][0]
-    assert game["selected_player"] == original
+    assert game["selected_player"] == original_player
     assert game["scheduled_date_current"] == "2026-08-14"
     assert game["scheduled_time_current"] is None
     assert game["schedule_time_status"] == "PENDING"
