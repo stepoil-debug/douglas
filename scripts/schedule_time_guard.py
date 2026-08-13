@@ -47,11 +47,20 @@ def _expected_date(records: list[dict[str, Any]]) -> date | None:
     return counts.most_common(1)[0][0] if counts else None
 
 
-def mark_unconfirmed_placeholder_times(records: list[dict[str, Any]]) -> dict[str, Any]:
-    """Blank only suspicious *unverified* placeholder clocks.
+def _explicit_time_verified(record: dict[str, Any]) -> bool:
+    # A time read from an individual match-detail page is authoritative here. A
+    # visible dd.mm.yyyy section verifies the DATE only; the table clock can still
+    # be a mass placeholder such as 12:00 before the order of play is published.
+    return bool(record.get("schedule_verified_local_time"))
 
-    A clock positively read from the match-detail page is authoritative for this
-    layer and must never be blanked merely because several courts start together.
+
+def mark_unconfirmed_placeholder_times(records: list[dict[str, Any]]) -> dict[str, Any]:
+    """Reject suspicious repeated clocks while preserving the verified date.
+
+    Public tennis pages can publish pairings for the next day before assigning court
+    times. In that state an entire tournament block may receive the same clock. We
+    keep the explicit calendar date, mark only the time as pending and blank the
+    synthetic timestamp so downstream code cannot mistake it for a confirmed start.
     """
     groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for record in records:
@@ -61,7 +70,7 @@ def mark_unconfirmed_placeholder_times(records: list[dict[str, Any]]) -> dict[st
     flagged = 0
     details: list[dict[str, Any]] = []
     for league, rows in groups.items():
-        candidates = [row for row in rows if row.get("schedule_date_verified") is not True]
+        candidates = [row for row in rows if not _explicit_time_verified(row)]
         clocks = [_local_clock(row) for row in candidates]
         usable = [clock for clock in clocks if clock]
         if not usable:
@@ -82,20 +91,27 @@ def mark_unconfirmed_placeholder_times(records: list[dict[str, Any]]) -> dict[st
                 row.setdefault("time_confirmed", True)
                 continue
             original = str(row.get("match_date") or "")
+            local_day = _local_date(row)
             row["reported_match_date"] = original
             row["reported_local_time"] = dominant
             row["time_confirmed"] = False
+            # Preserve the calendar day separately before removing the untrusted
+            # combined timestamp. Visible-date collectors normally already provide
+            # schedule_section_date; this also covers legacy sources.
+            if local_day and not row.get("schedule_section_date"):
+                row["schedule_section_date"] = local_day.isoformat()
             row["match_date"] = ""
             league_flagged += 1
             flagged += 1
         details.append({"league": league, "clock": dominant, "count": league_flagged, "share": round(share, 4)})
 
     for record in records:
-        if isinstance(record, dict):
-            if record.get("schedule_date_verified") is True:
-                record["time_confirmed"] = True
-            else:
-                record.setdefault("time_confirmed", bool(record.get("match_date")))
+        if not isinstance(record, dict):
+            continue
+        if _explicit_time_verified(record):
+            record["time_confirmed"] = True
+        else:
+            record.setdefault("time_confirmed", bool(record.get("match_date")))
 
     return {"flagged": flagged, "groups": details, "records": len(records)}
 
@@ -114,7 +130,7 @@ def guard_file(path: Path) -> dict[str, Any]:
     expected = _expected_date(rows)
     date_summary: dict[str, Any] = {"status": "SKIPPED", "reason": "NO_EXPECTED_DATE"}
     if expected and rows and any("match-detail" in str(row.get("match_link") or "") for row in rows):
-        # Skip a second network pass when the collector already verified the rows.
+        # Skip a second network pass when the collector already verified the DATE.
         if all(row.get("schedule_date_verified") is True for row in rows):
             date_summary = {"status": "ALREADY_VERIFIED", "records": len(rows), "target_date": expected.isoformat()}
         else:
