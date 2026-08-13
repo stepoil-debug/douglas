@@ -34,13 +34,27 @@ def _load_rows(path: Path) -> list[dict[str, Any]]:
 
 def _fixture(record: dict[str, Any]) -> Any | None:
     kickoff = _parse_utc(record.get("match_date"))
-    if kickoff is None:
+    local_date: str | None = None
+    local_time: str | None = None
+    if kickoff is not None:
+        local = kickoff.astimezone(SAO_PAULO)
+        local_date = local.date().isoformat()
+        if record.get("time_confirmed") is not False:
+            local_time = local.strftime("%H:%M")
+    else:
+        local_date = str(
+            record.get("schedule_section_date")
+            or record.get("schedule_verified_local_date")
+            or ""
+        ).strip() or None
+
+    if not local_date:
         return None
-    local = kickoff.astimezone(SAO_PAULO)
+
     return SimpleNamespace(
         match_id=_stable_match_id(record),
-        date=local.date().isoformat(),
-        time=local.strftime("%H:%M"),
+        date=local_date,
+        time=local_time or "",
         player_a=SimpleNamespace(key="", name=str(record.get("home_team") or "").strip()),
         player_b=SimpleNamespace(key="", name=str(record.get("away_team") or "").strip()),
         raw={
@@ -48,6 +62,8 @@ def _fixture(record: dict[str, Any]) -> Any | None:
             "source_url": record.get("match_link"),
             "schedule_section_date": record.get("schedule_section_date"),
             "schedule_verification_method": record.get("schedule_verification_method"),
+            "time_confirmed": record.get("time_confirmed"),
+            "reported_local_time": record.get("reported_local_time"),
         },
     )
 
@@ -76,9 +92,6 @@ def collect_verified_day(target: date) -> tuple[list[Any], dict[str, Any]]:
     runtime.mkdir(parents=True, exist_ok=True)
     output = runtime / f"sequence_schedule_{target.isoformat()}.json"
 
-    # Primary: the general TennisExplorer page visibly groups matches by calendar
-    # date. V2 follows that heading instead of trusting the URL query date, which is
-    # exactly what we need after a frozen game is moved to another day.
     fixtures, status, detail = _collect_with([
         sys.executable,
         "scripts/tennisexplorer_schedule_collector_v2.py",
@@ -87,7 +100,6 @@ def collect_verified_day(target: date) -> tuple[list[Any], dict[str, Any]]:
     ], output)
     source = "VISIBLE_DATE_SECTION"
 
-    # Fallback for a layout/source outage: tournament pages have explicit dated rows.
     if not fixtures:
         fixtures, status, detail = _collect_with([
             sys.executable,
@@ -101,7 +113,7 @@ def collect_verified_day(target: date) -> tuple[list[Any], dict[str, Any]]:
         "a": getattr(f.player_a, "name", ""),
         "b": getattr(f.player_b, "name", ""),
         "date": f.date,
-        "time": f.time,
+        "time": f.time or None,
         "match_id": f.match_id,
     } for f in fixtures[:60]]
     return fixtures, {
