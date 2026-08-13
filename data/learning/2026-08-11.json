@@ -125,7 +125,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-13T03:38:52.979189+00:00",
+        "resolved_at": "2026-08-13T10:59:18.470815+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -267,7 +267,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-13T03:38:52.979210+00:00",
+        "resolved_at": "2026-08-13T10:59:18.470834+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -325,7 +325,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-13T03:38:52.979219+00:00",
+        "resolved_at": "2026-08-13T10:59:18.470843+00:00",
         "score": "2 - 0",
         "status": "MISS",
         "winner": {
@@ -374,7 +374,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-13T03:38:52.979226+00:00",
+        "resolved_at": "2026-08-13T10:59:18.470850+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -421,7 +421,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-13T03:38:52.979229+00:00",
+        "resolved_at": "2026-08-13T10:59:18.470854+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -576,5 +576,5 @@
   "model_version": "champion-v0.3.0-no-api",
   "source": "BACKFILLED_FROM_PREMATCH_HISTORY",
   "status": "RESULTS_UPDATING",
-  "updated_at": "2026-08-13T03:38:52.979233+00:00"
+  "updated_at": "2026-08-13T10:59:18.470858+00:00"
 }

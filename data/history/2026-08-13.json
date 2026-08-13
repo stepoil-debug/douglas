@@ -213,7 +213,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T03:38:49.200074+00:00",
+        "updated_at": "2026-08-13T10:59:15.503295+00:00",
         "winner": {
           "key": "210262",
           "name": "Jaime Faria"
@@ -837,11 +837,14 @@
         "name": "Kei Nishikori"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-13T01:22:35.151663+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 1",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T10:59:15.503298+00:00",
+        "winner": {
+          "key": "105477",
+          "name": "Marco Trungelliti"
+        }
       },
       "snapshots": [
         {
@@ -1277,11 +1280,14 @@
         "name": "Bu Yunchaokete"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-13T01:22:35.151685+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T10:59:15.503302+00:00",
+        "winner": {
+          "key": "111460",
+          "name": "Quentin Halys"
+        }
       },
       "snapshots": [
         {
@@ -2330,11 +2336,14 @@
         "name": "Kyrian Jacquet"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-13T01:22:35.151702+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T10:59:15.503311+00:00",
+        "winner": {
+          "key": "208021",
+          "name": "Kyrian Jacquet"
+        }
       },
       "snapshots": [
         {
@@ -2758,11 +2767,14 @@
         "name": "Titouan Droguet"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-13T01:22:35.151722+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T10:59:15.503305+00:00",
+        "winner": {
+          "key": "208169",
+          "name": "Titouan Droguet"
+        }
       },
       "snapshots": [
         {
@@ -3584,11 +3596,14 @@
         "name": "Wolf J."
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-13T01:22:35.151742+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 1",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T10:59:15.503308+00:00",
+        "winner": {
+          "key": "name-18bd3839d817ee",
+          "name": "Wolf J."
+        }
       },
       "snapshots": [
         {
@@ -46376,7 +46391,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T03:38:49.200058+00:00",
+        "updated_at": "2026-08-13T10:59:15.503273+00:00",
         "winner": {
           "key": "210012",
           "name": "Henrique Rocha"
@@ -47443,7 +47458,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T03:38:49.200062+00:00",
+        "updated_at": "2026-08-13T10:59:15.503278+00:00",
         "winner": {
           "key": "210136",
           "name": "Mark Lajal"
@@ -48298,11 +48313,14 @@
         "name": "Michael Zheng"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-13T00:10:28.155332+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 1",
+        "status": "FINISHED",
+        "updated_at": "2026-08-13T10:59:15.503292+00:00",
+        "winner": {
+          "key": "210116",
+          "name": "Michael Zheng"
+        }
       },
       "snapshots": [
         {
@@ -49363,7 +49381,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T03:38:49.200035+00:00",
+        "updated_at": "2026-08-13T10:59:15.503246+00:00",
         "winner": {
           "key": "200711",
           "name": "Nicolas Mejia"
@@ -50006,7 +50024,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T03:38:49.200065+00:00",
+        "updated_at": "2026-08-13T10:59:15.503281+00:00",
         "winner": {
           "key": "106331",
           "name": "Christopher Oconnell"
@@ -50632,7 +50650,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T03:38:49.200068+00:00",
+        "updated_at": "2026-08-13T10:59:15.503285+00:00",
         "winner": {
           "key": "209414",
           "name": "Luca Van Assche"
@@ -51470,7 +51488,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T03:38:49.200071+00:00",
+        "updated_at": "2026-08-13T10:59:15.503289+00:00",
         "winner": {
           "key": "name-770d10159883c0",
           "name": "Wong C."
@@ -52084,7 +52102,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-13T03:38:49.200052+00:00",
+        "updated_at": "2026-08-13T10:59:15.503266+00:00",
         "winner": {
           "key": "126846",
           "name": "Aleksandar Vukic"
@@ -52540,12 +52558,12 @@
     ],
     "games": 34,
     "losses": 0,
-    "model_accuracy": 0.5,
-    "model_hits": 4,
-    "model_misses": 4,
+    "model_accuracy": 0.6428571428571429,
+    "model_hits": 9,
+    "model_misses": 5,
     "resolved_approved": 0,
-    "resolved_model_picks": 8,
+    "resolved_model_picks": 14,
     "wins": 0
   },
-  "updated_at": "2026-08-13T03:38:49.200172+00:00"
+  "updated_at": "2026-08-13T10:59:15.503419+00:00"
 }

@@ -203,10 +203,14 @@
         "MODEL_DISAGREEMENT"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": true,
+        "resolved_at": "2026-08-13T10:59:15.648519+00:00",
+        "score": "2 - 0",
+        "status": "HIT",
+        "winner": {
+          "key": "208169",
+          "name": "Titouan Droguet"
+        }
       },
       "signals": {
         "elo": 0.5684690921966962,
@@ -291,10 +295,14 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": true,
+        "resolved_at": "2026-08-13T10:59:15.648530+00:00",
+        "score": "2 - 0",
+        "status": "HIT",
+        "winner": {
+          "key": "111460",
+          "name": "Quentin Halys"
+        }
       },
       "signals": {
         "elo": 0.5436629093539741,
@@ -390,7 +398,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-13T03:38:49.339395+00:00",
+        "resolved_at": "2026-08-13T10:59:15.648536+00:00",
         "score": "2 - 0",
         "status": "MISS",
         "winner": {
@@ -480,10 +488,23 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": false,
+        "postmortem": {
+          "evidence": [
+            "Prediction was low-confidence or too close to a 50/50 match"
+          ],
+          "status": "HYPOTHESIS_ONLY",
+          "tags": [
+            "ERR-UNC"
+          ]
+        },
+        "resolved_at": "2026-08-13T10:59:15.648561+00:00",
+        "score": "2 - 1",
+        "status": "MISS",
+        "winner": {
+          "key": "105477",
+          "name": "Marco Trungelliti"
+        }
       },
       "signals": {
         "elo": 0.541290218374654,
@@ -610,10 +631,14 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": true,
+        "resolved_at": "2026-08-13T10:59:15.648570+00:00",
+        "score": "2 - 0",
+        "status": "HIT",
+        "winner": {
+          "key": "208021",
+          "name": "Kyrian Jacquet"
+        }
       },
       "signals": {
         "elo": 0.5266062963578719,
@@ -699,10 +724,14 @@
         "DATA_QUALITY_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": true,
+        "resolved_at": "2026-08-13T10:59:15.648574+00:00",
+        "score": "2 - 1",
+        "status": "HIT",
+        "winner": {
+          "key": "name-18bd3839d817ee",
+          "name": "Wolf J."
+        }
       },
       "signals": {
         "market": 0.5102040816326532,
@@ -716,5 +745,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "RESULTS_UPDATING",
-  "updated_at": "2026-08-13T03:38:49.339415+00:00"
+  "updated_at": "2026-08-13T10:59:15.648576+00:00"
 }
