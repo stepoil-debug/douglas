@@ -127,10 +127,16 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "resolved_at": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "actual_date": "2026-08-13",
+        "actual_time": "17:35",
+        "match_method": "MATCH_ID",
+        "resolved_at": "2026-08-13T23:20:23.580470+00:00",
+        "score": "2 - 1",
+        "status": "HIT",
+        "winner": {
+          "key": "202058",
+          "name": "Thiago Agustin Tirante"
+        }
       },
       "schedule_changed_from_freeze": true,
       "schedule_match_method": "MATCH_ID",
@@ -532,12 +538,12 @@
   "summary": {
     "accuracy": 1.0,
     "games": 6,
-    "hits": 1,
+    "hits": 2,
     "misses": 0,
-    "resolved": 1,
+    "resolved": 2,
     "schedule_confirmed": 5,
     "schedule_dated": 6
   },
   "target_games": 6,
-  "updated_at": "2026-08-13T22:22:17.089930+00:00"
+  "updated_at": "2026-08-13T23:20:23.580470+00:00"
 }
