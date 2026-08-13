@@ -654,50 +654,6 @@
       "tournament": "ATP Cincinnati"
     },
     {
-      "bookmakers": 9,
-      "confidence": 43.63572640128471,
-      "data_quality": 0.8940000000000001,
-      "date": "2026-08-13",
-      "decision": "REJECTED",
-      "disagreement_pp": 5.1199463200207855,
-      "edge_pp": 1.5526853125541584,
-      "final_probability": 0.55398839158708,
-      "match_id": "pub-a0e717d042da39ce79d3",
-      "odd": 2.5,
-      "opponent": {
-        "key": "207352",
-        "name": "Bu Yunchaokete"
-      },
-      "predicted_player": {
-        "key": "111460",
-        "name": "Quentin Halys"
-      },
-      "rank": null,
-      "reject_reasons": [
-        "ODD_OUT_OF_RANGE",
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
-      },
-      "signals": {
-        "elo": 0.5436629093539741,
-        "fatigue": 0.5,
-        "market": 0.5384615384615384,
-        "recent_form": 0.6500744781866743,
-        "season_profile": 0.59375,
-        "surface_elo": 0.5128864441914949
-      },
-      "surface": "Hard",
-      "time": "",
-      "tournament": "ATP Cincinnati"
-    },
-    {
       "bookmakers": 10,
       "confidence": 43.56702885585466,
       "data_quality": 1.0,
@@ -751,7 +707,7 @@
       "edge_pp": -5.725687622789765,
       "final_probability": 0.8661222986247546,
       "match_id": "pub-cfdeba5b50ffe4a0e433",
-      "odd": 2.7,
+      "odd": 2.65,
       "opponent": {
         "key": "name-770d10159883c0",
         "name": "Wong C."
@@ -967,7 +923,7 @@
       "edge_pp": 2.648462980009425,
       "final_probability": 0.5020091053245698,
       "match_id": "pub-4403f5a46913ba6ff207",
-      "odd": 4.5,
+      "odd": 6.5,
       "opponent": {
         "key": "207494",
         "name": "Dalibor Svrcina"
@@ -1311,6 +1267,51 @@
       "tournament": "ATP Cincinnati"
     },
     {
+      "bookmakers": 8,
+      "confidence": 35.21572838481465,
+      "data_quality": 0.8680000000000001,
+      "date": "2026-08-13",
+      "decision": "REJECTED",
+      "disagreement_pp": 18.58363981853859,
+      "edge_pp": -28.141148430697637,
+      "final_probability": 0.6383536820335324,
+      "match_id": "pub-a0e717d042da39ce79d3",
+      "odd": 2.75,
+      "opponent": {
+        "key": "111460",
+        "name": "Quentin Halys"
+      },
+      "predicted_player": {
+        "key": "207352",
+        "name": "Bu Yunchaokete"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "MODEL_DISAGREEMENT"
+      ],
+      "result": {
+        "hit": null,
+        "score": null,
+        "status": "PENDING",
+        "winner": null
+      },
+      "signals": {
+        "elo": 0.4563370906460259,
+        "fatigue": 0.5,
+        "market": 0.9197651663405089,
+        "recent_form": 0.3499255218133257,
+        "season_profile": 0.40625,
+        "surface_elo": 0.4871135558085051
+      },
+      "surface": "Hard",
+      "time": "",
+      "tournament": "ATP Cincinnati"
+    },
+    {
       "bookmakers": 9,
       "confidence": 34.15374372349792,
       "data_quality": 0.708,
@@ -1487,5 +1488,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-12T23:13:16.333764+00:00"
+  "updated_at": "2026-08-13T00:10:28.290829+00:00"
 }

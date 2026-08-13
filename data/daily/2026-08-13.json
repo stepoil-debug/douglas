@@ -69,18 +69,18 @@
         "bookmaker_odds": {
           "BetVictor": 1.75,
           "Betsson": 1.56,
-          "Betway": 1.6,
+          "Betway": 1.55,
           "Coral": 1.18,
           "Interwetten": 1.55,
           "Ladbrokes": 1.18,
           "Unibet": 1.63,
-          "bet-at-home": 1.28,
+          "bet-at-home": 1.25,
           "bet365": 1.83,
           "bwin": 1.7
         },
         "bookmakers": 10,
         "fair_probability": 0.5597014925373135,
-        "median_odd": 1.58,
+        "median_odd": 1.5550000000000002,
         "player_key": "123828"
       },
       "rank": null,
@@ -876,7 +876,7 @@
           "Interwetten": 1.55,
           "Ladbrokes": 1.85,
           "Unibet": 1.92,
-          "bet-at-home": 1.13,
+          "bet-at-home": 1.15,
           "bet365": 1.91,
           "bwin": 1.91
         },
@@ -1140,7 +1140,7 @@
           "Interwetten": 1.5,
           "Ladbrokes": 1.14,
           "Unibet": 1.68,
-          "bet-at-home": 1.4,
+          "bet-at-home": 1.43,
           "bwin": 1.7
         },
         "bookmakers": 9,
@@ -1537,6 +1537,92 @@
       "status": "REJECTED"
     },
     {
+      "confidence": 48.38036018146142,
+      "data_quality": 0.8680000000000001,
+      "disagreement_pp": 18.583639818538586,
+      "edge_pp": 28.141148430697637,
+      "final_probability": 0.36164631796646757,
+      "market_probability": 0.08023483365949119,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-a0e717d042da39ce79d3",
+        "player_a": {
+          "key": "111460",
+          "name": "Quentin Halys"
+        },
+        "player_b": {
+          "key": "207352",
+          "name": "Bu Yunchaokete"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "207352",
+        "name": "Bu Yunchaokete"
+      },
+      "opponent_market": {
+        "best_odd": 2.75,
+        "bookmaker_odds": {
+          "BetVictor": 1.95,
+          "Betsson": 2.36,
+          "Betway": 2.2,
+          "Coral": 2.05,
+          "Ladbrokes": 2.05,
+          "Unibet": 2.4,
+          "bet-at-home": 2.75,
+          "bwin": 2.0
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.9197651663405088,
+        "median_odd": 2.125,
+        "player_key": "207352"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "MODEL_DISAGREEMENT"
+      ],
+      "selected_market": {
+        "best_odd": 28.5,
+        "bookmaker_odds": {
+          "BetVictor": 23.5,
+          "Betsson": 2.5,
+          "Betway": 25.5,
+          "Coral": 23.5,
+          "Ladbrokes": 23.5,
+          "Unibet": 26.5,
+          "bet-at-home": 28.5,
+          "bwin": 23.5
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.08023483365949119,
+        "median_odd": 23.5,
+        "player_key": "111460"
+      },
+      "selected_player": {
+        "key": "111460",
+        "name": "Quentin Halys"
+      },
+      "signals": {
+        "elo": 0.5436629093539741,
+        "fatigue": 0.5,
+        "market": 0.08023483365949119,
+        "recent_form": 0.6500744781866743,
+        "season_profile": 0.59375,
+        "surface_elo": 0.5128864441914949
+      },
+      "status": "REJECTED"
+    },
+    {
       "confidence": 48.32526731211145,
       "data_quality": 0.992,
       "disagreement_pp": 8.345237058000727,
@@ -1757,7 +1843,7 @@
           "Interwetten": 1.55,
           "Ladbrokes": 1.73,
           "Unibet": 1.9,
-          "bet-at-home": 1.3,
+          "bet-at-home": 1.33,
           "bwin": 1.95
         },
         "bookmakers": 9,
@@ -1955,7 +2041,7 @@
           "Interwetten": 1.33,
           "Ladbrokes": 1.8,
           "Unibet": 1.77,
-          "bet-at-home": 1.16,
+          "bet-at-home": 1.18,
           "bet365": 1.83,
           "bwin": 1.67
         },
@@ -2020,7 +2106,7 @@
           "Interwetten": 1.7,
           "Ladbrokes": 1.44,
           "Unibet": 1.75,
-          "bet-at-home": 1.3,
+          "bet-at-home": 1.28,
           "bet365": 1.83,
           "bwin": 1.85
         },
@@ -2196,7 +2282,7 @@
           "Interwetten": 1.33,
           "Ladbrokes": 1.8,
           "Unibet": 1.77,
-          "bet-at-home": 1.16,
+          "bet-at-home": 1.18,
           "bet365": 1.83,
           "bwin": 1.67
         },
@@ -2367,11 +2453,11 @@
         "name": "Marcos Giron"
       },
       "opponent_market": {
-        "best_odd": 3.5,
+        "best_odd": 5.5,
         "bookmaker_odds": {
           "BetVictor": 2.5,
           "Betsson": 2.5,
-          "Betway": 1.5,
+          "Betway": 5.5,
           "Coral": 1.5,
           "Interwetten": 1.5,
           "Ladbrokes": 1.5,
@@ -2395,7 +2481,7 @@
         "bookmaker_odds": {
           "BetVictor": 1.8,
           "Betsson": 1.6,
-          "Betway": 1.65,
+          "Betway": 1.03,
           "Coral": 1.15,
           "Interwetten": 1.55,
           "Ladbrokes": 1.15,
@@ -2405,7 +2491,7 @@
         },
         "bookmakers": 9,
         "fair_probability": 0.5660377358490566,
-        "median_odd": 1.6,
+        "median_odd": 1.55,
         "player_key": "210012"
       },
       "selected_player": {
@@ -2419,94 +2505,6 @@
         "recent_form": 0.8,
         "season_profile": 0.5357142857142857,
         "surface_elo": 0.5277694951149497
-      },
-      "status": "REJECTED"
-    },
-    {
-      "confidence": 43.63572640128471,
-      "data_quality": 0.8940000000000001,
-      "disagreement_pp": 5.1199463200207855,
-      "edge_pp": 1.5526853125541584,
-      "final_probability": 0.55398839158708,
-      "market_probability": 0.5384615384615384,
-      "match": {
-        "date": "2026-08-13",
-        "event_type": "ATP Singles",
-        "match_id": "pub-a0e717d042da39ce79d3",
-        "player_a": {
-          "key": "111460",
-          "name": "Quentin Halys"
-        },
-        "player_b": {
-          "key": "207352",
-          "name": "Bu Yunchaokete"
-        },
-        "raw": {},
-        "status": "",
-        "surface": "Hard",
-        "time": "",
-        "tournament": "ATP Cincinnati",
-        "winner": null
-      },
-      "model_version": "champion-v0.3.3-sequential",
-      "opponent": {
-        "key": "207352",
-        "name": "Bu Yunchaokete"
-      },
-      "opponent_market": {
-        "best_odd": 1.81,
-        "bookmaker_odds": {
-          "BetVictor": 1.75,
-          "Betsson": 1.81,
-          "Betway": 1.8,
-          "Coral": 1.25,
-          "Interwetten": 1.8,
-          "Ladbrokes": 1.25,
-          "Unibet": 1.67,
-          "bet-at-home": 1.3,
-          "bwin": 1.75
-        },
-        "bookmakers": 9,
-        "fair_probability": 0.4615384615384615,
-        "median_odd": 1.75,
-        "player_key": "207352"
-      },
-      "rank": null,
-      "reject_reasons": [
-        "ODD_OUT_OF_RANGE",
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_market": {
-        "best_odd": 2.5,
-        "bookmaker_odds": {
-          "BetVictor": 1.5,
-          "Betsson": 1.5,
-          "Betway": 1.5,
-          "Coral": 1.5,
-          "Interwetten": 1.5,
-          "Ladbrokes": 1.5,
-          "Unibet": 1.5,
-          "bet-at-home": 2.5,
-          "bwin": 1.5
-        },
-        "bookmakers": 9,
-        "fair_probability": 0.5384615384615384,
-        "median_odd": 1.5,
-        "player_key": "111460"
-      },
-      "selected_player": {
-        "key": "111460",
-        "name": "Quentin Halys"
-      },
-      "signals": {
-        "elo": 0.5436629093539741,
-        "fatigue": 0.5,
-        "market": 0.5384615384615384,
-        "recent_form": 0.6500744781866743,
-        "season_profile": 0.59375,
-        "surface_elo": 0.5128864441914949
       },
       "status": "REJECTED"
     },
@@ -2657,7 +2655,7 @@
         "DATA_QUALITY_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 2.7,
+        "best_odd": 2.65,
         "bookmaker_odds": {
           "BetVictor": 1.95,
           "Betsson": 2.15,
@@ -2665,7 +2663,7 @@
           "Coral": 1.95,
           "Ladbrokes": 1.95,
           "Unibet": 2.3,
-          "bet-at-home": 2.7,
+          "bet-at-home": 2.65,
           "bwin": 1.92
         },
         "bookmakers": 8,
@@ -2835,7 +2833,7 @@
           "Interwetten": 1.7,
           "Ladbrokes": 1.5,
           "Unibet": 1.68,
-          "bet-at-home": 1.3,
+          "bet-at-home": 1.33,
           "bet365": 1.91,
           "bwin": 1.95
         },
@@ -3072,7 +3070,7 @@
         "bookmaker_odds": {
           "BetVictor": 1.83,
           "Betsson": 1.4,
-          "Betway": 1.36,
+          "Betway": 1.12,
           "Coral": 1.36,
           "Interwetten": 1.65,
           "Ladbrokes": 1.36,
@@ -3093,11 +3091,11 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 4.5,
+        "best_odd": 6.5,
         "bookmaker_odds": {
           "BetVictor": 1.5,
           "Betsson": 3.5,
-          "Betway": 4.5,
+          "Betway": 6.5,
           "Coral": 1.5,
           "Interwetten": 2.5,
           "Ladbrokes": 1.5,
@@ -3190,7 +3188,7 @@
           "Interwetten": 1.55,
           "Ladbrokes": 1.85,
           "Unibet": 1.92,
-          "bet-at-home": 1.13,
+          "bet-at-home": 1.15,
           "bet365": 1.91,
           "bwin": 1.91
         },
@@ -3723,7 +3721,7 @@
           "Interwetten": 1.7,
           "Ladbrokes": 1.44,
           "Unibet": 1.75,
-          "bet-at-home": 1.3,
+          "bet-at-home": 1.28,
           "bet365": 1.83,
           "bwin": 1.85
         },
@@ -3878,7 +3876,7 @@
           "Interwetten": 1.7,
           "Ladbrokes": 1.5,
           "Unibet": 1.68,
-          "bet-at-home": 1.3,
+          "bet-at-home": 1.33,
           "bet365": 1.91,
           "bwin": 1.95
         },
@@ -4549,93 +4547,6 @@
       "status": "REJECTED"
     },
     {
-      "confidence": 35.44205367997922,
-      "data_quality": 0.8940000000000001,
-      "disagreement_pp": 5.1199463200207855,
-      "edge_pp": -1.5526853125541473,
-      "final_probability": 0.44601160841292004,
-      "market_probability": 0.4615384615384615,
-      "match": {
-        "date": "2026-08-13",
-        "event_type": "ATP Singles",
-        "match_id": "pub-a0e717d042da39ce79d3",
-        "player_a": {
-          "key": "111460",
-          "name": "Quentin Halys"
-        },
-        "player_b": {
-          "key": "207352",
-          "name": "Bu Yunchaokete"
-        },
-        "raw": {},
-        "status": "",
-        "surface": "Hard",
-        "time": "",
-        "tournament": "ATP Cincinnati",
-        "winner": null
-      },
-      "model_version": "champion-v0.3.3-sequential",
-      "opponent": {
-        "key": "111460",
-        "name": "Quentin Halys"
-      },
-      "opponent_market": {
-        "best_odd": 2.5,
-        "bookmaker_odds": {
-          "BetVictor": 1.5,
-          "Betsson": 1.5,
-          "Betway": 1.5,
-          "Coral": 1.5,
-          "Interwetten": 1.5,
-          "Ladbrokes": 1.5,
-          "Unibet": 1.5,
-          "bet-at-home": 2.5,
-          "bwin": 1.5
-        },
-        "bookmakers": 9,
-        "fair_probability": 0.5384615384615384,
-        "median_odd": 1.5,
-        "player_key": "111460"
-      },
-      "rank": null,
-      "reject_reasons": [
-        "PROBABILITY_TOO_LOW",
-        "EDGE_TOO_LOW",
-        "CONFIDENCE_TOO_LOW"
-      ],
-      "selected_market": {
-        "best_odd": 1.81,
-        "bookmaker_odds": {
-          "BetVictor": 1.75,
-          "Betsson": 1.81,
-          "Betway": 1.8,
-          "Coral": 1.25,
-          "Interwetten": 1.8,
-          "Ladbrokes": 1.25,
-          "Unibet": 1.67,
-          "bet-at-home": 1.3,
-          "bwin": 1.75
-        },
-        "bookmakers": 9,
-        "fair_probability": 0.4615384615384615,
-        "median_odd": 1.75,
-        "player_key": "207352"
-      },
-      "selected_player": {
-        "key": "207352",
-        "name": "Bu Yunchaokete"
-      },
-      "signals": {
-        "elo": 0.4563370906460259,
-        "fatigue": 0.5,
-        "market": 0.46153846153846156,
-        "recent_form": 0.3499255218133257,
-        "season_profile": 0.40625,
-        "surface_elo": 0.4871135558085051
-      },
-      "status": "REJECTED"
-    },
-    {
       "confidence": 35.35385782096444,
       "data_quality": 0.966,
       "disagreement_pp": 18.174266307072063,
@@ -4726,6 +4637,93 @@
       "status": "REJECTED"
     },
     {
+      "confidence": 35.21572838481465,
+      "data_quality": 0.8680000000000001,
+      "disagreement_pp": 18.58363981853859,
+      "edge_pp": -28.141148430697637,
+      "final_probability": 0.6383536820335324,
+      "market_probability": 0.9197651663405088,
+      "match": {
+        "date": "2026-08-13",
+        "event_type": "ATP Singles",
+        "match_id": "pub-a0e717d042da39ce79d3",
+        "player_a": {
+          "key": "111460",
+          "name": "Quentin Halys"
+        },
+        "player_b": {
+          "key": "207352",
+          "name": "Bu Yunchaokete"
+        },
+        "raw": {},
+        "status": "",
+        "surface": "Hard",
+        "time": "",
+        "tournament": "ATP Cincinnati",
+        "winner": null
+      },
+      "model_version": "champion-v0.3.3-sequential",
+      "opponent": {
+        "key": "111460",
+        "name": "Quentin Halys"
+      },
+      "opponent_market": {
+        "best_odd": 28.5,
+        "bookmaker_odds": {
+          "BetVictor": 23.5,
+          "Betsson": 2.5,
+          "Betway": 25.5,
+          "Coral": 23.5,
+          "Ladbrokes": 23.5,
+          "Unibet": 26.5,
+          "bet-at-home": 28.5,
+          "bwin": 23.5
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.08023483365949119,
+        "median_odd": 23.5,
+        "player_key": "111460"
+      },
+      "rank": null,
+      "reject_reasons": [
+        "ODD_OUT_OF_RANGE",
+        "PROBABILITY_TOO_LOW",
+        "EDGE_TOO_LOW",
+        "CONFIDENCE_TOO_LOW",
+        "MODEL_DISAGREEMENT"
+      ],
+      "selected_market": {
+        "best_odd": 2.75,
+        "bookmaker_odds": {
+          "BetVictor": 1.95,
+          "Betsson": 2.36,
+          "Betway": 2.2,
+          "Coral": 2.05,
+          "Ladbrokes": 2.05,
+          "Unibet": 2.4,
+          "bet-at-home": 2.75,
+          "bwin": 2.0
+        },
+        "bookmakers": 8,
+        "fair_probability": 0.9197651663405088,
+        "median_odd": 2.125,
+        "player_key": "207352"
+      },
+      "selected_player": {
+        "key": "207352",
+        "name": "Bu Yunchaokete"
+      },
+      "signals": {
+        "elo": 0.4563370906460259,
+        "fatigue": 0.5,
+        "market": 0.9197651663405089,
+        "recent_form": 0.3499255218133257,
+        "season_profile": 0.40625,
+        "surface_elo": 0.4871135558085051
+      },
+      "status": "REJECTED"
+    },
+    {
       "confidence": 35.09291449915158,
       "data_quality": 0.8380000000000001,
       "disagreement_pp": 4.181085500848422,
@@ -4757,11 +4755,11 @@
         "name": "Mark Lajal"
       },
       "opponent_market": {
-        "best_odd": 4.5,
+        "best_odd": 6.5,
         "bookmaker_odds": {
           "BetVictor": 1.5,
           "Betsson": 3.5,
-          "Betway": 4.5,
+          "Betway": 6.5,
           "Coral": 1.5,
           "Interwetten": 2.5,
           "Ladbrokes": 1.5,
@@ -4785,7 +4783,7 @@
         "bookmaker_odds": {
           "BetVictor": 1.83,
           "Betsson": 1.4,
-          "Betway": 1.36,
+          "Betway": 1.12,
           "Coral": 1.36,
           "Interwetten": 1.65,
           "Ladbrokes": 1.36,
@@ -4967,7 +4965,7 @@
           "Interwetten": 1.55,
           "Ladbrokes": 1.73,
           "Unibet": 1.9,
-          "bet-at-home": 1.3,
+          "bet-at-home": 1.33,
           "bwin": 1.95
         },
         "bookmakers": 9,
@@ -5223,14 +5221,14 @@
       "selected_market": {
         "best_odd": 2.17,
         "bookmaker_odds": {
-          "BetVictor": 1.8,
+          "BetVictor": 1.83,
           "Betsson": 1.81,
           "Betway": 1.45,
           "Coral": 1.44,
           "Interwetten": 1.65,
           "Ladbrokes": 1.44,
           "Unibet": 2.17,
-          "bet-at-home": 1.45,
+          "bet-at-home": 1.48,
           "bwin": 1.83
         },
         "bookmakers": 9,
@@ -5465,7 +5463,7 @@
         "bookmaker_odds": {
           "BetVictor": 1.8,
           "Betsson": 1.6,
-          "Betway": 1.65,
+          "Betway": 1.03,
           "Coral": 1.15,
           "Interwetten": 1.55,
           "Ladbrokes": 1.15,
@@ -5475,7 +5473,7 @@
         },
         "bookmakers": 9,
         "fair_probability": 0.5660377358490566,
-        "median_odd": 1.6,
+        "median_odd": 1.55,
         "player_key": "210012"
       },
       "rank": null,
@@ -5486,11 +5484,11 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "selected_market": {
-        "best_odd": 3.5,
+        "best_odd": 5.5,
         "bookmaker_odds": {
           "BetVictor": 2.5,
           "Betsson": 2.5,
-          "Betway": 1.5,
+          "Betway": 5.5,
           "Coral": 1.5,
           "Interwetten": 1.5,
           "Ladbrokes": 1.5,
@@ -5668,18 +5666,18 @@
         "bookmaker_odds": {
           "BetVictor": 1.75,
           "Betsson": 1.56,
-          "Betway": 1.6,
+          "Betway": 1.55,
           "Coral": 1.18,
           "Interwetten": 1.55,
           "Ladbrokes": 1.18,
           "Unibet": 1.63,
-          "bet-at-home": 1.28,
+          "bet-at-home": 1.25,
           "bet365": 1.83,
           "bwin": 1.7
         },
         "bookmakers": 10,
         "fair_probability": 0.5597014925373135,
-        "median_odd": 1.58,
+        "median_odd": 1.5550000000000002,
         "player_key": "123828"
       },
       "selected_player": {
@@ -5819,14 +5817,14 @@
       "opponent_market": {
         "best_odd": 2.17,
         "bookmaker_odds": {
-          "BetVictor": 1.8,
+          "BetVictor": 1.83,
           "Betsson": 1.81,
           "Betway": 1.45,
           "Coral": 1.44,
           "Interwetten": 1.65,
           "Ladbrokes": 1.44,
           "Unibet": 2.17,
-          "bet-at-home": 1.45,
+          "bet-at-home": 1.48,
           "bwin": 1.83
         },
         "bookmakers": 9,
@@ -5935,7 +5933,7 @@
           "Interwetten": 1.5,
           "Ladbrokes": 1.14,
           "Unibet": 1.68,
-          "bet-at-home": 1.4,
+          "bet-at-home": 1.43,
           "bwin": 1.7
         },
         "bookmakers": 9,
@@ -5989,7 +5987,7 @@
         "name": "Otto Virtanen"
       },
       "opponent_market": {
-        "best_odd": 2.7,
+        "best_odd": 2.65,
         "bookmaker_odds": {
           "BetVictor": 1.95,
           "Betsson": 2.15,
@@ -5997,7 +5995,7 @@
           "Coral": 1.95,
           "Ladbrokes": 1.95,
           "Unibet": 2.3,
-          "bet-at-home": 2.7,
+          "bet-at-home": 2.65,
           "bwin": 1.92
         },
         "bookmakers": 8,
@@ -6043,7 +6041,7 @@
   ],
   "shadow": [],
   "source_requests": 1,
-  "target_odd_pool_matches": 27,
+  "target_odd_pool_matches": 26,
   "unresolved_players": [
     "Wolf J.",
     "Wong C."
