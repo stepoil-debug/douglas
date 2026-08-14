@@ -72,26 +72,26 @@
         "n": 1
       },
       "<50": {
-        "accuracy": 0.42857142857142855,
-        "hits": 9,
+        "accuracy": 0.45454545454545453,
+        "hits": 10,
         "misses": 12,
-        "n": 21
+        "n": 22
       }
     },
     "by_decision": {
       "REJECTED": {
-        "accuracy": 0.52,
-        "hits": 13,
+        "accuracy": 0.5384615384615384,
+        "hits": 14,
         "misses": 12,
-        "n": 25
+        "n": 26
       }
     },
     "by_probability": {
       "55-60%": {
-        "accuracy": 0.6,
-        "hits": 3,
+        "accuracy": 0.6666666666666666,
+        "hits": 4,
         "misses": 2,
-        "n": 5
+        "n": 6
       },
       "60-65%": {
         "accuracy": 0.5,
@@ -124,27 +124,27 @@
       "ERR-UNC": 12
     },
     "last_100": {
-      "accuracy": 0.52,
-      "hits": 13,
+      "accuracy": 0.5384615384615384,
+      "hits": 14,
       "misses": 12,
-      "n": 25
+      "n": 26
     },
     "last_500": {
-      "accuracy": 0.52,
-      "hits": 13,
+      "accuracy": 0.5384615384615384,
+      "hits": 14,
       "misses": 12,
-      "n": 25
+      "n": 26
     },
     "overall": {
-      "accuracy": 0.52,
-      "hits": 13,
+      "accuracy": 0.5384615384615384,
+      "hits": 14,
       "misses": 12,
-      "n": 25
+      "n": 26
     },
-    "updated_at": "2026-08-13T23:20:31.145435+00:00"
+    "updated_at": "2026-08-14T00:09:48.724781+00:00"
   },
-  "last_refresh_attempt_at": "2026-08-13T20:21:17.829339-03:00",
-  "last_run_at": "2026-08-13T20:21:17.829356-03:00",
+  "last_refresh_attempt_at": "2026-08-13T21:14:32.885654-03:00",
+  "last_run_at": "2026-08-13T21:14:32.885671-03:00",
   "learning_summary": {
     "matches": 10,
     "status": "PROVISIONAL_D1"
@@ -794,7 +794,7 @@
   ],
   "operational_date": "2026-08-13",
   "prematch_atp_singles": 10,
-  "refresh_error": "Live collector failed: [TQE] D+1 source attempt: TennisExplorer dated pages\n[TQE] TennisExplorer source https://www.tennisexplorer.com/matches: 2 ATP matches after date guard; 22 enriched; 20 cross-date rows removed\n[TQE] Schedule time guard failed; refusing unverified start times.\n",
+  "refresh_error": "sults: all rows rejected by date guard (verified=22, other=22); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=22, other=22); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=22, other=22)\n[TQE] D+1 dated page unavailable; discovering active ATP tournaments.\n[TQE] Tournament-page D+1 fallback: 1 ATP matches from 2 active tournaments; 1 bookmaker-enriched\n[TQE] Schedule time guard failed; refusing unverified start times.\n",
   "refresh_status": "DEGRADED",
   "rejected": [
     {
