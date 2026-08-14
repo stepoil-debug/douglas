@@ -1,8 +1,7 @@
 {
-  "status": "SUCCESS",
-  "run_id": 31846797480,
-  "run_url": "https://github.com/stepoil-debug/douglas/actions/runs/31846797480",
-  "updated_at": "2026-08-14T22:33:36.366223+00:00",
-  "message": "Agenda D+1 ainda não publicada; resultados/aprendizado atualizados e nova tentativa ocorrerá no próximo ciclo.",
-  "board_status": "WAITING_FOR_D1_SCHEDULE"
+  "status": "RUNNING",
+  "run_id": 31848391250,
+  "run_url": "https://github.com/stepoil-debug/douglas/actions/runs/31848391250",
+  "updated_at": "2026-08-14T22:54:12.220184+00:00",
+  "message": "Atualizando resultados de hoje e procurando o board D+1"
 }
