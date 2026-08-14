@@ -28,7 +28,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T01:21:34.624406+00:00",
+        "resolved_at": "2026-08-14T03:36:23.510737+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -75,7 +75,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T01:21:34.624415+00:00",
+        "resolved_at": "2026-08-14T03:36:23.510749+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -178,7 +178,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-14T01:21:34.624419+00:00",
+        "resolved_at": "2026-08-14T03:36:23.510756+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -227,7 +227,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T01:21:34.624436+00:00",
+        "resolved_at": "2026-08-14T03:36:23.510775+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -273,10 +273,14 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": true,
+        "resolved_at": "2026-08-14T03:36:23.510780+00:00",
+        "score": "2 - 1",
+        "status": "HIT",
+        "winner": {
+          "key": "208014",
+          "name": "Rinky Hijikata"
+        }
       },
       "signals": {
         "elo": 0.5433398606212703,
@@ -319,7 +323,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T01:21:34.624439+00:00",
+        "resolved_at": "2026-08-14T03:36:23.510783+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -366,7 +370,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T01:21:34.624441+00:00",
+        "resolved_at": "2026-08-14T03:36:23.510786+00:00",
         "score": "1 - 0",
         "status": "HIT",
         "winner": {
@@ -481,7 +485,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-14T01:21:34.624443+00:00",
+        "resolved_at": "2026-08-14T03:36:23.510789+00:00",
         "score": "2 - 0",
         "status": "MISS",
         "winner": {
@@ -538,7 +542,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-14T01:21:34.624449+00:00",
+        "resolved_at": "2026-08-14T03:36:23.510798+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -585,7 +589,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T01:21:34.624453+00:00",
+        "resolved_at": "2026-08-14T03:36:23.510805+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -642,7 +646,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-14T01:21:34.624455+00:00",
+        "resolved_at": "2026-08-14T03:36:23.510808+00:00",
         "score": "2 - 0",
         "status": "MISS",
         "winner": {
@@ -689,7 +693,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T01:21:34.624458+00:00",
+        "resolved_at": "2026-08-14T03:36:23.510814+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -746,7 +750,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-14T01:21:34.624460+00:00",
+        "resolved_at": "2026-08-14T03:36:23.510817+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -796,7 +800,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T01:21:34.624464+00:00",
+        "resolved_at": "2026-08-14T03:36:23.510824+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -816,5 +820,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "RESULTS_UPDATING",
-  "updated_at": "2026-08-14T01:21:34.624466+00:00"
+  "updated_at": "2026-08-14T03:36:23.510827+00:00"
 }
