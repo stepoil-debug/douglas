@@ -70,10 +70,14 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": true,
+        "resolved_at": "2026-08-14T18:26:38.817349+00:00",
+        "score": "2 - 0",
+        "status": "HIT",
+        "winner": {
+          "key": "126774",
+          "name": "Stefanos Tsitsipas"
+        }
       },
       "signals": {
         "elo": 0.680923707492355,
@@ -444,6 +448,6 @@
   ],
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
-  "status": "PROVISIONAL_D1",
-  "updated_at": "2026-08-13T03:39:14.847442+00:00"
+  "status": "RESULTS_UPDATING",
+  "updated_at": "2026-08-14T18:26:38.817366+00:00"
 }

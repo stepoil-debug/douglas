@@ -4324,11 +4324,14 @@
         "name": "Stefanos Tsitsipas"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-13T03:39:14.820392+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-14T18:26:38.533490+00:00",
+        "winner": {
+          "key": "126774",
+          "name": "Stefanos Tsitsipas"
+        }
       },
       "snapshots": [
         {
@@ -4584,12 +4587,12 @@
     ],
     "games": 10,
     "losses": 0,
-    "model_accuracy": null,
-    "model_hits": 0,
+    "model_accuracy": 1.0,
+    "model_hits": 1,
     "model_misses": 0,
     "resolved_approved": 0,
-    "resolved_model_picks": 0,
+    "resolved_model_picks": 1,
     "wins": 0
   },
-  "updated_at": "2026-08-13T03:39:14.820402+00:00"
+  "updated_at": "2026-08-14T18:26:38.533546+00:00"
 }

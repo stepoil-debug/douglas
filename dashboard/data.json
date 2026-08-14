@@ -16,9 +16,9 @@
     "by_confidence": {
       "50-60": {
         "accuracy": 1.0,
-        "hits": 3,
+        "hits": 4,
         "misses": 0,
-        "n": 3
+        "n": 4
       },
       "60-70": {
         "accuracy": 1.0,
@@ -35,10 +35,10 @@
     },
     "by_decision": {
       "REJECTED": {
-        "accuracy": 0.5555555555555556,
-        "hits": 15,
+        "accuracy": 0.5714285714285714,
+        "hits": 16,
         "misses": 12,
-        "n": 27
+        "n": 28
       }
     },
     "by_probability": {
@@ -62,9 +62,9 @@
       },
       "70-75%": {
         "accuracy": 1.0,
-        "hits": 2,
+        "hits": 3,
         "misses": 0,
-        "n": 2
+        "n": 3
       },
       "<55%": {
         "accuracy": 0.5,
@@ -79,27 +79,27 @@
       "ERR-UNC": 12
     },
     "last_100": {
-      "accuracy": 0.5555555555555556,
-      "hits": 15,
+      "accuracy": 0.5714285714285714,
+      "hits": 16,
       "misses": 12,
-      "n": 27
+      "n": 28
     },
     "last_500": {
-      "accuracy": 0.5555555555555556,
-      "hits": 15,
+      "accuracy": 0.5714285714285714,
+      "hits": 16,
       "misses": 12,
-      "n": 27
+      "n": 28
     },
     "overall": {
-      "accuracy": 0.5555555555555556,
-      "hits": 15,
+      "accuracy": 0.5714285714285714,
+      "hits": 16,
       "misses": 12,
-      "n": 27
+      "n": 28
     },
-    "updated_at": "2026-08-14T17:02:03.055806+00:00"
+    "updated_at": "2026-08-14T18:26:45.473322+00:00"
   },
-  "last_refresh_attempt_at": "2026-08-14T14:05:05.084591-03:00",
-  "last_run_at": "2026-08-14T14:05:05.084609-03:00",
+  "last_refresh_attempt_at": "2026-08-14T15:30:50.570682-03:00",
+  "last_run_at": "2026-08-14T15:30:50.570698-03:00",
   "learning_summary": {
     "matches": 0,
     "status": "WAITING_FOR_D1_SCHEDULE"
@@ -133,7 +133,7 @@
   "near_misses": [],
   "operational_date": "2026-08-14",
   "prematch_atp_singles": 0,
-  "refresh_error": "plorer.com/results: all rows rejected by date guard (verified=12, other=12); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=12, other=12); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=12, other=12)\n[TQE] D+1 dated page unavailable; discovering active ATP tournaments.\n[TQE] Tournament fallback unavailable: no D+1 matches published on active tournament pages\n[TQE] D+1 schedule not published on lightweight sources yet.\n",
+  "refresh_error": "plorer.com/results: all rows rejected by date guard (verified=15, other=15); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=15, other=15); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=15, other=15)\n[TQE] D+1 dated page unavailable; discovering active ATP tournaments.\n[TQE] Tournament fallback unavailable: no D+1 matches published on active tournament pages\n[TQE] D+1 schedule not published on lightweight sources yet.\n",
   "refresh_status": "WAITING",
   "rejected": [],
   "result_reconciliation": {
