@@ -141,10 +141,10 @@
       "misses": 12,
       "n": 26
     },
-    "updated_at": "2026-08-14T00:09:48.724781+00:00"
+    "updated_at": "2026-08-14T01:21:40.955214+00:00"
   },
-  "last_refresh_attempt_at": "2026-08-13T21:14:32.885654-03:00",
-  "last_run_at": "2026-08-13T21:14:32.885671-03:00",
+  "last_refresh_attempt_at": "2026-08-13T22:26:20.132241-03:00",
+  "last_run_at": "2026-08-13T22:26:20.132264-03:00",
   "learning_summary": {
     "matches": 10,
     "status": "PROVISIONAL_D1"
@@ -794,7 +794,7 @@
   ],
   "operational_date": "2026-08-13",
   "prematch_atp_singles": 10,
-  "refresh_error": "sults: all rows rejected by date guard (verified=22, other=22); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=22, other=22); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=22, other=22)\n[TQE] D+1 dated page unavailable; discovering active ATP tournaments.\n[TQE] Tournament-page D+1 fallback: 1 ATP matches from 2 active tournaments; 1 bookmaker-enriched\n[TQE] Schedule time guard failed; refusing unverified start times.\n",
+  "refresh_error": "sults: all rows rejected by date guard (verified=23, other=23); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=23, other=23); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=23, other=23)\n[TQE] D+1 dated page unavailable; discovering active ATP tournaments.\n[TQE] Tournament-page D+1 fallback: 1 ATP matches from 2 active tournaments; 1 bookmaker-enriched\n[TQE] Schedule time guard failed; refusing unverified start times.\n",
   "refresh_status": "DEGRADED",
   "rejected": [
     {

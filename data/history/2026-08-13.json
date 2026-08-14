@@ -840,7 +840,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T00:09:40.770626+00:00",
+        "updated_at": "2026-08-14T01:21:34.535638+00:00",
         "winner": {
           "key": "105477",
           "name": "Marco Trungelliti"
@@ -1283,7 +1283,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T00:09:40.770629+00:00",
+        "updated_at": "2026-08-14T01:21:34.535641+00:00",
         "winner": {
           "key": "111460",
           "name": "Quentin Halys"
@@ -2339,7 +2339,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T00:09:40.770639+00:00",
+        "updated_at": "2026-08-14T01:21:34.535647+00:00",
         "winner": {
           "key": "208021",
           "name": "Kyrian Jacquet"
@@ -2770,7 +2770,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T00:09:40.770633+00:00",
+        "updated_at": "2026-08-14T01:21:34.535643+00:00",
         "winner": {
           "key": "208169",
           "name": "Titouan Droguet"
@@ -3599,7 +3599,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T00:09:40.770636+00:00",
+        "updated_at": "2026-08-14T01:21:34.535645+00:00",
         "winner": {
           "key": "name-18bd3839d817ee",
           "name": "Wolf J."
@@ -22980,7 +22980,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T00:09:40.770578+00:00",
+        "updated_at": "2026-08-14T01:21:34.535600+00:00",
         "winner": {
           "key": "212021",
           "name": "Martin Landaluce"
@@ -24544,7 +24544,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T00:09:40.770598+00:00",
+        "updated_at": "2026-08-14T01:21:34.535619+00:00",
         "winner": {
           "key": "111815",
           "name": "Cameron Norrie"
@@ -27584,7 +27584,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T00:09:40.770616+00:00",
+        "updated_at": "2026-08-14T01:21:34.535632+00:00",
         "winner": {
           "key": "200175",
           "name": "Miomir Kecmanovic"
@@ -28715,7 +28715,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T00:09:40.770604+00:00",
+        "updated_at": "2026-08-14T01:21:34.535624+00:00",
         "winner": {
           "key": "105526",
           "name": "Jan Lennard Struff"
@@ -30332,7 +30332,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T00:09:40.770612+00:00",
+        "updated_at": "2026-08-14T01:21:34.535630+00:00",
         "winner": {
           "key": "133430",
           "name": "Denis Shapovalov"
@@ -32852,7 +32852,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T00:09:40.770608+00:00",
+        "updated_at": "2026-08-14T01:21:34.535627+00:00",
         "winner": {
           "key": "202058",
           "name": "Thiago Agustin Tirante"
@@ -35995,7 +35995,7 @@
         "resolved": true,
         "score": "1 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T00:09:40.770622+00:00",
+        "updated_at": "2026-08-14T01:21:34.535636+00:00",
         "winner": {
           "key": "209279",
           "name": "Terence Atmane"
@@ -38152,7 +38152,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T00:09:40.770619+00:00",
+        "updated_at": "2026-08-14T01:21:34.535634+00:00",
         "winner": {
           "key": "208363",
           "name": "Mariano Navone"
@@ -52589,5 +52589,5 @@
     "resolved_model_picks": 22,
     "wins": 0
   },
-  "updated_at": "2026-08-14T00:09:40.770749+00:00"
+  "updated_at": "2026-08-14T01:21:34.535743+00:00"
 }

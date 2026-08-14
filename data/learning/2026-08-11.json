@@ -27,7 +27,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T00:09:45.268443+00:00",
+        "resolved_at": "2026-08-14T01:21:38.532229+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -75,7 +75,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T00:09:45.268452+00:00",
+        "resolved_at": "2026-08-14T01:21:38.532235+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -133,7 +133,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-14T00:09:45.268457+00:00",
+        "resolved_at": "2026-08-14T01:21:38.532238+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -221,7 +221,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T00:09:45.268471+00:00",
+        "resolved_at": "2026-08-14T01:21:38.532248+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -279,7 +279,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-14T00:09:45.268474+00:00",
+        "resolved_at": "2026-08-14T01:21:38.532251+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -337,7 +337,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-14T00:09:45.268481+00:00",
+        "resolved_at": "2026-08-14T01:21:38.532255+00:00",
         "score": "2 - 0",
         "status": "MISS",
         "winner": {
@@ -386,7 +386,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T00:09:45.268487+00:00",
+        "resolved_at": "2026-08-14T01:21:38.532258+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -433,7 +433,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T00:09:45.268491+00:00",
+        "resolved_at": "2026-08-14T01:21:38.532261+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -578,7 +578,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-14T00:09:45.268494+00:00",
+        "resolved_at": "2026-08-14T01:21:38.532263+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -603,5 +603,5 @@
   "model_version": "champion-v0.3.0-no-api",
   "source": "BACKFILLED_FROM_PREMATCH_HISTORY",
   "status": "RESULTS_UPDATING",
-  "updated_at": "2026-08-14T00:09:45.268499+00:00"
+  "updated_at": "2026-08-14T01:21:38.532266+00:00"
 }
