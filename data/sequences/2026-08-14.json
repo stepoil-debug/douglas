@@ -392,10 +392,16 @@
         "MODEL_DISAGREEMENT"
       ],
       "result": {
-        "resolved_at": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "actual_date": "2026-08-14",
+        "actual_time": "15:20",
+        "match_method": "MATCH_ID",
+        "resolved_at": "2026-08-14T19:31:34.720360+00:00",
+        "score": "2 - 0",
+        "status": "HIT",
+        "winner": {
+          "key": "105807",
+          "name": "Pablo Carreno Busta"
+        }
       },
       "schedule_changed_from_freeze": true,
       "schedule_match_method": "MATCH_ID",
@@ -531,12 +537,12 @@
   "summary": {
     "accuracy": 1.0,
     "games": 6,
-    "hits": 1,
+    "hits": 2,
     "misses": 0,
-    "resolved": 1,
+    "resolved": 2,
     "schedule_confirmed": 5,
     "schedule_dated": 6
   },
   "target_games": 6,
-  "updated_at": "2026-08-14T18:32:27.343236+00:00"
+  "updated_at": "2026-08-14T19:31:34.720360+00:00"
 }

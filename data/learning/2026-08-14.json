@@ -71,7 +71,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T18:26:38.817349+00:00",
+        "resolved_at": "2026-08-14T19:31:34.722014+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -383,10 +383,14 @@
         "MODEL_DISAGREEMENT"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": true,
+        "resolved_at": "2026-08-14T19:31:34.722027+00:00",
+        "score": "2 - 0",
+        "status": "HIT",
+        "winner": {
+          "key": "105807",
+          "name": "Pablo Carreno Busta"
+        }
       },
       "signals": {
         "elo": 0.3925509725556864,
@@ -427,10 +431,24 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": false,
+        "postmortem": {
+          "evidence": [
+            "Prediction was low-confidence or too close to a 50/50 match",
+            "High model disagreement before the match"
+          ],
+          "status": "HYPOTHESIS_ONLY",
+          "tags": [
+            "ERR-UNC"
+          ]
+        },
+        "resolved_at": "2026-08-14T19:31:34.722032+00:00",
+        "score": "2 - 1",
+        "status": "MISS",
+        "winner": {
+          "key": "202104",
+          "name": "Sebastian Baez"
+        }
       },
       "signals": {
         "elo": 0.4321798326455014,
@@ -449,5 +467,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "RESULTS_UPDATING",
-  "updated_at": "2026-08-14T18:26:38.817366+00:00"
+  "updated_at": "2026-08-14T19:31:34.722046+00:00"
 }

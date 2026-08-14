@@ -2044,11 +2044,14 @@
         "name": "Pablo Carreno Busta"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-13T03:39:14.820107+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-14T19:31:34.693777+00:00",
+        "winner": {
+          "key": "105807",
+          "name": "Pablo Carreno Busta"
+        }
       },
       "snapshots": [
         {
@@ -3386,11 +3389,14 @@
         "name": "Grigor Dimitrov"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-13T03:39:14.820277+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 1",
+        "status": "FINISHED",
+        "updated_at": "2026-08-14T19:31:34.693771+00:00",
+        "winner": {
+          "key": "202104",
+          "name": "Sebastian Baez"
+        }
       },
       "snapshots": [
         {
@@ -4327,7 +4333,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T18:26:38.533490+00:00",
+        "updated_at": "2026-08-14T19:31:34.693755+00:00",
         "winner": {
           "key": "126774",
           "name": "Stefanos Tsitsipas"
@@ -4587,12 +4593,12 @@
     ],
     "games": 10,
     "losses": 0,
-    "model_accuracy": 1.0,
-    "model_hits": 1,
-    "model_misses": 0,
+    "model_accuracy": 0.6666666666666666,
+    "model_hits": 2,
+    "model_misses": 1,
     "resolved_approved": 0,
-    "resolved_model_picks": 1,
+    "resolved_model_picks": 3,
     "wins": 0
   },
-  "updated_at": "2026-08-14T18:26:38.533546+00:00"
+  "updated_at": "2026-08-14T19:31:34.693825+00:00"
 }
