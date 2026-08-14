@@ -239,7 +239,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T21:30:44.618378+00:00",
+        "updated_at": "2026-08-14T22:29:34.030522+00:00",
         "winner": {
           "key": "210506",
           "name": "Alex Michelsen"
@@ -1123,11 +1123,14 @@
         "name": "Thanasi Kokkinakis"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-13T03:39:14.820166+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 1",
+        "status": "FINISHED",
+        "updated_at": "2026-08-14T22:29:34.030526+00:00",
+        "winner": {
+          "key": "132686",
+          "name": "Nuno Borges"
+        }
       },
       "snapshots": [
         {
@@ -2050,7 +2053,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T21:30:44.618374+00:00",
+        "updated_at": "2026-08-14T22:29:34.030518+00:00",
         "winner": {
           "key": "105807",
           "name": "Pablo Carreno Busta"
@@ -3395,7 +3398,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T21:30:44.618366+00:00",
+        "updated_at": "2026-08-14T22:29:34.030511+00:00",
         "winner": {
           "key": "202104",
           "name": "Sebastian Baez"
@@ -3864,11 +3867,14 @@
         "name": "Lorenzo Sonego"
       },
       "result": {
-        "resolved": false,
-        "score": null,
-        "status": "PENDING",
-        "updated_at": "2026-08-13T03:39:14.820335+00:00",
-        "winner": null
+        "resolved": true,
+        "score": "2 - 0",
+        "status": "FINISHED",
+        "updated_at": "2026-08-14T22:29:34.030529+00:00",
+        "winner": {
+          "key": "132283",
+          "name": "Lorenzo Sonego"
+        }
       },
       "snapshots": [
         {
@@ -4336,7 +4342,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-14T21:30:44.618349+00:00",
+        "updated_at": "2026-08-14T22:29:34.030494+00:00",
         "winner": {
           "key": "126774",
           "name": "Stefanos Tsitsipas"
@@ -4596,12 +4602,12 @@
     ],
     "games": 10,
     "losses": 0,
-    "model_accuracy": 0.75,
+    "model_accuracy": 0.5,
     "model_hits": 3,
-    "model_misses": 1,
+    "model_misses": 3,
     "resolved_approved": 0,
-    "resolved_model_picks": 4,
+    "resolved_model_picks": 6,
     "wins": 0
   },
-  "updated_at": "2026-08-14T21:30:44.618428+00:00"
+  "updated_at": "2026-08-14T22:29:34.030578+00:00"
 }
