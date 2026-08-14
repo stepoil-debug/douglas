@@ -27,10 +27,14 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": true,
+        "resolved_at": "2026-08-14T20:36:23.833673+00:00",
+        "score": "2 - 0",
+        "status": "HIT",
+        "winner": {
+          "key": "210506",
+          "name": "Alex Michelsen"
+        }
       },
       "signals": {
         "elo": 0.6448832324039365,
@@ -71,7 +75,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T19:31:34.722014+00:00",
+        "resolved_at": "2026-08-14T20:36:23.833683+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -384,7 +388,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T19:31:34.722027+00:00",
+        "resolved_at": "2026-08-14T20:36:23.833690+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -442,7 +446,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-14T19:31:34.722032+00:00",
+        "resolved_at": "2026-08-14T20:36:23.833694+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -467,5 +471,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "RESULTS_UPDATING",
-  "updated_at": "2026-08-14T19:31:34.722046+00:00"
+  "updated_at": "2026-08-14T20:36:23.833710+00:00"
 }

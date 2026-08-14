@@ -304,10 +304,16 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "resolved_at": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "actual_date": "2026-08-14",
+        "actual_time": "16:45",
+        "match_method": "MATCH_ID",
+        "resolved_at": "2026-08-14T20:36:23.831371+00:00",
+        "score": "2 - 0",
+        "status": "HIT",
+        "winner": {
+          "key": "210506",
+          "name": "Alex Michelsen"
+        }
       },
       "schedule_changed_from_freeze": true,
       "schedule_match_method": "MATCH_ID",
@@ -537,12 +543,12 @@
   "summary": {
     "accuracy": 1.0,
     "games": 6,
-    "hits": 2,
+    "hits": 3,
     "misses": 0,
-    "resolved": 2,
+    "resolved": 3,
     "schedule_confirmed": 5,
     "schedule_dated": 6
   },
   "target_games": 6,
-  "updated_at": "2026-08-14T19:37:36.174912+00:00"
+  "updated_at": "2026-08-14T20:36:23.831371+00:00"
 }

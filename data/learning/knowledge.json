@@ -2,9 +2,9 @@
   "by_confidence": {
     "50-60": {
       "accuracy": 1.0,
-      "hits": 4,
+      "hits": 5,
       "misses": 0,
-      "n": 4
+      "n": 5
     },
     "60-70": {
       "accuracy": 1.0,
@@ -21,10 +21,10 @@
   },
   "by_decision": {
     "REJECTED": {
-      "accuracy": 0.5666666666666667,
-      "hits": 17,
+      "accuracy": 0.5806451612903226,
+      "hits": 18,
       "misses": 13,
-      "n": 30
+      "n": 31
     }
   },
   "by_probability": {
@@ -53,10 +53,10 @@
       "n": 3
     },
     "<55%": {
-      "accuracy": 0.47058823529411764,
-      "hits": 8,
+      "accuracy": 0.5,
+      "hits": 9,
       "misses": 9,
-      "n": 17
+      "n": 18
     }
   },
   "failure_tags": {
@@ -65,22 +65,22 @@
     "ERR-UNC": 13
   },
   "last_100": {
-    "accuracy": 0.5666666666666667,
-    "hits": 17,
+    "accuracy": 0.5806451612903226,
+    "hits": 18,
     "misses": 13,
-    "n": 30
+    "n": 31
   },
   "last_500": {
-    "accuracy": 0.5666666666666667,
-    "hits": 17,
+    "accuracy": 0.5806451612903226,
+    "hits": 18,
     "misses": 13,
-    "n": 30
+    "n": 31
   },
   "overall": {
-    "accuracy": 0.5666666666666667,
-    "hits": 17,
+    "accuracy": 0.5806451612903226,
+    "hits": 18,
     "misses": 13,
-    "n": 30
+    "n": 31
   },
-  "updated_at": "2026-08-14T19:31:40.267823+00:00"
+  "updated_at": "2026-08-14T20:36:29.584695+00:00"
 }
