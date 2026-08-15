@@ -96,10 +96,10 @@
       "misses": 17,
       "n": 35
     },
-    "updated_at": "2026-08-15T12:49:03.800568+00:00"
+    "updated_at": "2026-08-15T13:35:24.723078+00:00"
   },
-  "last_refresh_attempt_at": "2026-08-15T09:52:52.200635-03:00",
-  "last_run_at": "2026-08-15T09:52:52.200652-03:00",
+  "last_refresh_attempt_at": "2026-08-15T10:39:07.559732-03:00",
+  "last_run_at": "2026-08-15T10:39:07.559749-03:00",
   "learning_summary": {
     "matches": 0,
     "status": "WAITING_FOR_D1_SCHEDULE"
