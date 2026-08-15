@@ -28,7 +28,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T23:53:01.001150+00:00",
+        "resolved_at": "2026-08-15T00:52:25.144117+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -75,7 +75,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T23:53:01.001162+00:00",
+        "resolved_at": "2026-08-15T00:52:25.144129+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -177,7 +177,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-14T23:53:01.001168+00:00",
+        "resolved_at": "2026-08-15T00:52:25.144135+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -322,7 +322,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-14T23:53:01.001188+00:00",
+        "resolved_at": "2026-08-15T00:52:25.144155+00:00",
         "score": "2 - 0",
         "status": "MISS",
         "winner": {
@@ -369,10 +369,23 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": false,
+        "postmortem": {
+          "evidence": [
+            "Prediction was low-confidence or too close to a 50/50 match"
+          ],
+          "status": "HYPOTHESIS_ONLY",
+          "tags": [
+            "ERR-UNC"
+          ]
+        },
+        "resolved_at": "2026-08-15T00:52:25.144164+00:00",
+        "score": "2 - 1",
+        "status": "MISS",
+        "winner": {
+          "key": "210017",
+          "name": "Daniel Merida Aguilar"
+        }
       },
       "signals": {
         "elo": 0.46099565272304577,
@@ -416,7 +429,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-14T23:53:01.001197+00:00",
+        "resolved_at": "2026-08-15T00:52:25.144171+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -474,7 +487,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-14T23:53:01.001201+00:00",
+        "resolved_at": "2026-08-15T00:52:25.144174+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -499,5 +512,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "RESULTS_UPDATING",
-  "updated_at": "2026-08-14T23:53:01.001208+00:00"
+  "updated_at": "2026-08-15T00:52:25.144180+00:00"
 }
