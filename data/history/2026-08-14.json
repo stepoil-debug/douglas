@@ -239,7 +239,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-15T20:53:51.170989+00:00",
+        "updated_at": "2026-08-15T21:26:48.049508+00:00",
         "winner": {
           "key": "210506",
           "name": "Alex Michelsen"
@@ -685,7 +685,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-15T20:53:51.170976+00:00",
+        "updated_at": "2026-08-15T21:26:48.049494+00:00",
         "winner": {
           "key": "210017",
           "name": "Daniel Merida Aguilar"
@@ -1129,7 +1129,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-15T20:53:51.170986+00:00",
+        "updated_at": "2026-08-15T21:26:48.049505+00:00",
         "winner": {
           "key": "132686",
           "name": "Nuno Borges"
@@ -2056,7 +2056,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-15T20:53:51.170992+00:00",
+        "updated_at": "2026-08-15T21:26:48.049512+00:00",
         "winner": {
           "key": "105807",
           "name": "Pablo Carreno Busta"
@@ -2933,7 +2933,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-15T20:53:51.170960+00:00",
+        "updated_at": "2026-08-15T21:26:48.049478+00:00",
         "winner": {
           "key": "206499",
           "name": "Aleksandar Kovacevic"
@@ -3404,7 +3404,7 @@
         "resolved": true,
         "score": "2 - 1",
         "status": "FINISHED",
-        "updated_at": "2026-08-15T20:53:51.170995+00:00",
+        "updated_at": "2026-08-15T21:26:48.049516+00:00",
         "winner": {
           "key": "202104",
           "name": "Sebastian Baez"
@@ -3876,7 +3876,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-15T20:53:51.170982+00:00",
+        "updated_at": "2026-08-15T21:26:48.049501+00:00",
         "winner": {
           "key": "132283",
           "name": "Lorenzo Sonego"
@@ -4348,7 +4348,7 @@
         "resolved": true,
         "score": "2 - 0",
         "status": "FINISHED",
-        "updated_at": "2026-08-15T20:53:51.170998+00:00",
+        "updated_at": "2026-08-15T21:26:48.049519+00:00",
         "winner": {
           "key": "126774",
           "name": "Stefanos Tsitsipas"
@@ -4615,5 +4615,5 @@
     "resolved_model_picks": 8,
     "wins": 0
   },
-  "updated_at": "2026-08-15T20:53:51.171048+00:00"
+  "updated_at": "2026-08-15T21:26:48.049570+00:00"
 }
