@@ -132,10 +132,16 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "resolved_at": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "actual_date": "2026-08-14",
+        "actual_time": "23:25",
+        "match_method": "MATCH_ID",
+        "resolved_at": "2026-08-15T12:49:00.287067+00:00",
+        "score": "2 - 1",
+        "status": "MISS",
+        "winner": {
+          "key": "206499",
+          "name": "Aleksandar Kovacevic"
+        }
       },
       "schedule_changed_from_freeze": true,
       "schedule_match_method": "MATCH_ID",
@@ -541,14 +547,14 @@
   "source_board_last_run_at": null,
   "status": "FROZEN",
   "summary": {
-    "accuracy": 1.0,
+    "accuracy": 0.75,
     "games": 6,
     "hits": 3,
-    "misses": 0,
-    "resolved": 3,
+    "misses": 1,
+    "resolved": 4,
     "schedule_confirmed": 5,
     "schedule_dated": 6
   },
   "target_games": 6,
-  "updated_at": "2026-08-15T02:13:41.390671+00:00"
+  "updated_at": "2026-08-15T12:49:00.287067+00:00"
 }

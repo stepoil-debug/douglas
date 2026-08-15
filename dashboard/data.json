@@ -27,18 +27,18 @@
         "n": 1
       },
       "<50": {
-        "accuracy": 0.42857142857142855,
+        "accuracy": 0.41379310344827586,
         "hits": 12,
-        "misses": 16,
-        "n": 28
+        "misses": 17,
+        "n": 29
       }
     },
     "by_decision": {
       "REJECTED": {
-        "accuracy": 0.5294117647058824,
+        "accuracy": 0.5142857142857142,
         "hits": 18,
-        "misses": 16,
-        "n": 34
+        "misses": 17,
+        "n": 35
       }
     },
     "by_probability": {
@@ -49,10 +49,10 @@
         "n": 6
       },
       "60-65%": {
-        "accuracy": 0.6666666666666666,
+        "accuracy": 0.5,
         "hits": 2,
-        "misses": 1,
-        "n": 3
+        "misses": 2,
+        "n": 4
       },
       "65-70%": {
         "accuracy": 0.0,
@@ -76,30 +76,30 @@
     "failure_tags": {
       "ERR-MKT": 2,
       "ERR-SUR": 6,
-      "ERR-UNC": 16
+      "ERR-UNC": 17
     },
     "last_100": {
-      "accuracy": 0.5294117647058824,
+      "accuracy": 0.5142857142857142,
       "hits": 18,
-      "misses": 16,
-      "n": 34
+      "misses": 17,
+      "n": 35
     },
     "last_500": {
-      "accuracy": 0.5294117647058824,
+      "accuracy": 0.5142857142857142,
       "hits": 18,
-      "misses": 16,
-      "n": 34
+      "misses": 17,
+      "n": 35
     },
     "overall": {
-      "accuracy": 0.5294117647058824,
+      "accuracy": 0.5142857142857142,
       "hits": 18,
-      "misses": 16,
-      "n": 34
+      "misses": 17,
+      "n": 35
     },
-    "updated_at": "2026-08-15T03:11:01.639441+00:00"
+    "updated_at": "2026-08-15T12:49:03.800568+00:00"
   },
-  "last_refresh_attempt_at": "2026-08-15T00:13:54.693746-03:00",
-  "last_run_at": "2026-08-15T00:13:54.693765-03:00",
+  "last_refresh_attempt_at": "2026-08-15T09:52:52.200635-03:00",
+  "last_run_at": "2026-08-15T09:52:52.200652-03:00",
   "learning_summary": {
     "matches": 0,
     "status": "WAITING_FOR_D1_SCHEDULE"
@@ -133,7 +133,7 @@
   "near_misses": [],
   "operational_date": "2026-08-15",
   "prematch_atp_singles": 0,
-  "refresh_error": "plorer.com/results: all rows rejected by date guard (verified=15, other=15); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=15, other=15); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=15, other=15)\n[TQE] D+1 dated page unavailable; discovering active ATP tournaments.\n[TQE] Tournament fallback unavailable: no D+1 matches published on active tournament pages\n[TQE] D+1 schedule not published on lightweight sources yet.\n",
+  "refresh_error": "plorer.com/results: all rows rejected by date guard (verified=16, other=16); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=16, other=16); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=16, other=16)\n[TQE] D+1 dated page unavailable; discovering active ATP tournaments.\n[TQE] Tournament fallback unavailable: no D+1 matches published on active tournament pages\n[TQE] D+1 schedule not published on lightweight sources yet.\n",
   "refresh_status": "WAITING",
   "rejected": [],
   "result_reconciliation": {

@@ -28,7 +28,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T03:10:57.765826+00:00",
+        "resolved_at": "2026-08-15T12:49:00.289510+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -75,7 +75,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T03:10:57.765837+00:00",
+        "resolved_at": "2026-08-15T12:49:00.289522+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -177,7 +177,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-15T03:10:57.765843+00:00",
+        "resolved_at": "2026-08-15T12:49:00.289528+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -223,10 +223,23 @@
         "CONFIDENCE_TOO_LOW"
       ],
       "result": {
-        "hit": null,
-        "score": null,
-        "status": "PENDING",
-        "winner": null
+        "hit": false,
+        "postmortem": {
+          "evidence": [
+            "Prediction was low-confidence or too close to a 50/50 match"
+          ],
+          "status": "HYPOTHESIS_ONLY",
+          "tags": [
+            "ERR-UNC"
+          ]
+        },
+        "resolved_at": "2026-08-15T12:49:00.289549+00:00",
+        "score": "2 - 1",
+        "status": "MISS",
+        "winner": {
+          "key": "206499",
+          "name": "Aleksandar Kovacevic"
+        }
       },
       "signals": {
         "elo": 0.5817289858598228,
@@ -322,7 +335,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-15T03:10:57.765864+00:00",
+        "resolved_at": "2026-08-15T12:49:00.289558+00:00",
         "score": "2 - 0",
         "status": "MISS",
         "winner": {
@@ -379,7 +392,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-15T03:10:57.765874+00:00",
+        "resolved_at": "2026-08-15T12:49:00.289566+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -429,7 +442,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T03:10:57.765881+00:00",
+        "resolved_at": "2026-08-15T12:49:00.289571+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -487,7 +500,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-15T03:10:57.765885+00:00",
+        "resolved_at": "2026-08-15T12:49:00.289574+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -512,5 +525,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "RESULTS_UPDATING",
-  "updated_at": "2026-08-15T03:10:57.765890+00:00"
+  "updated_at": "2026-08-15T12:49:00.289580+00:00"
 }
