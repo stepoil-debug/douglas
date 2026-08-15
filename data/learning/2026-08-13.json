@@ -28,7 +28,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T17:25:56.692248+00:00",
+        "resolved_at": "2026-08-15T17:49:32.099952+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -75,7 +75,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T17:25:56.692258+00:00",
+        "resolved_at": "2026-08-15T17:49:32.099961+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -178,7 +178,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-15T17:25:56.692263+00:00",
+        "resolved_at": "2026-08-15T17:49:32.099966+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -227,7 +227,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T17:25:56.692277+00:00",
+        "resolved_at": "2026-08-15T17:49:32.099981+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -274,7 +274,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T17:25:56.692281+00:00",
+        "resolved_at": "2026-08-15T17:49:32.099985+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -323,7 +323,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T17:25:56.692285+00:00",
+        "resolved_at": "2026-08-15T17:49:32.099988+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -370,7 +370,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T17:25:56.692288+00:00",
+        "resolved_at": "2026-08-15T17:49:32.099991+00:00",
         "score": "1 - 0",
         "status": "HIT",
         "winner": {
@@ -485,7 +485,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-15T17:25:56.692291+00:00",
+        "resolved_at": "2026-08-15T17:49:32.099994+00:00",
         "score": "2 - 0",
         "status": "MISS",
         "winner": {
@@ -542,7 +542,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-15T17:25:56.692297+00:00",
+        "resolved_at": "2026-08-15T17:49:32.100001+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -589,7 +589,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T17:25:56.692302+00:00",
+        "resolved_at": "2026-08-15T17:49:32.100006+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -646,7 +646,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-15T17:25:56.692305+00:00",
+        "resolved_at": "2026-08-15T17:49:32.100009+00:00",
         "score": "2 - 0",
         "status": "MISS",
         "winner": {
@@ -693,7 +693,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T17:25:56.692310+00:00",
+        "resolved_at": "2026-08-15T17:49:32.100014+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -750,7 +750,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-15T17:25:56.692313+00:00",
+        "resolved_at": "2026-08-15T17:49:32.100017+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -800,7 +800,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T17:25:56.692318+00:00",
+        "resolved_at": "2026-08-15T17:49:32.100022+00:00",
         "score": "2 - 1",
         "status": "HIT",
         "winner": {
@@ -820,5 +820,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "RESULTS_UPDATING",
-  "updated_at": "2026-08-15T17:25:56.692321+00:00"
+  "updated_at": "2026-08-15T17:49:32.100025+00:00"
 }
