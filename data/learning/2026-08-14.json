@@ -28,7 +28,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T00:52:25.144117+00:00",
+        "resolved_at": "2026-08-15T02:10:38.892023+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -75,7 +75,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T00:52:25.144129+00:00",
+        "resolved_at": "2026-08-15T02:10:38.892035+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -177,7 +177,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-15T00:52:25.144135+00:00",
+        "resolved_at": "2026-08-15T02:10:38.892041+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -322,7 +322,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-15T00:52:25.144155+00:00",
+        "resolved_at": "2026-08-15T02:10:38.892061+00:00",
         "score": "2 - 0",
         "status": "MISS",
         "winner": {
@@ -379,7 +379,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-15T00:52:25.144164+00:00",
+        "resolved_at": "2026-08-15T02:10:38.892070+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -429,7 +429,7 @@
       ],
       "result": {
         "hit": true,
-        "resolved_at": "2026-08-15T00:52:25.144171+00:00",
+        "resolved_at": "2026-08-15T02:10:38.892077+00:00",
         "score": "2 - 0",
         "status": "HIT",
         "winner": {
@@ -487,7 +487,7 @@
             "ERR-UNC"
           ]
         },
-        "resolved_at": "2026-08-15T00:52:25.144174+00:00",
+        "resolved_at": "2026-08-15T02:10:38.892080+00:00",
         "score": "2 - 1",
         "status": "MISS",
         "winner": {
@@ -512,5 +512,5 @@
   "model_version": "champion-v0.3.3-sequential",
   "source": "TennisExplorer detail",
   "status": "RESULTS_UPDATING",
-  "updated_at": "2026-08-15T00:52:25.144180+00:00"
+  "updated_at": "2026-08-15T02:10:38.892085+00:00"
 }

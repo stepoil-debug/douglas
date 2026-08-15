@@ -96,10 +96,10 @@
       "misses": 16,
       "n": 34
     },
-    "updated_at": "2026-08-15T00:52:31.313047+00:00"
+    "updated_at": "2026-08-15T02:10:44.718802+00:00"
   },
-  "last_refresh_attempt_at": "2026-08-14T21:56:36.637741-03:00",
-  "last_run_at": "2026-08-14T21:56:36.637759-03:00",
+  "last_refresh_attempt_at": "2026-08-14T23:11:57.628250-03:00",
+  "last_run_at": "2026-08-14T23:11:57.628271-03:00",
   "learning_summary": {
     "matches": 0,
     "status": "WAITING_FOR_D1_SCHEDULE"
@@ -133,7 +133,7 @@
   "near_misses": [],
   "operational_date": "2026-08-14",
   "prematch_atp_singles": 0,
-  "refresh_error": "sults: all rows rejected by date guard (verified=16, other=16); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=16, other=16); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=16, other=16)\n[TQE] D+1 dated page unavailable; discovering active ATP tournaments.\n[TQE] Tournament-page D+1 fallback: 2 ATP matches from 2 active tournaments; 2 bookmaker-enriched\n[TQE] Schedule time guard failed; refusing unverified start times.\n",
+  "refresh_error": "Live collector failed: [TQE] D+1 source attempt: TennisExplorer dated pages\n[TQE] TennisExplorer source https://www.tennisexplorer.com/matches: 1 ATP matches after date guard; 17 enriched; 16 cross-date rows removed\n[TQE] Schedule time guard failed; refusing unverified start times.\n",
   "refresh_status": "WAITING",
   "rejected": [],
   "result_reconciliation": {
