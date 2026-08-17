@@ -1,0 +1,61 @@
+name: InvestBet Football - Analyze
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Data do board (YYYY-MM-DD). Vazio = amanhã em America/Sao_Paulo'
+        required: false
+        type: string
+  schedule:
+    - cron: '7,37 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: investbet-football-analysis
+  cancel-in-progress: false
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Analyze football fixtures
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          FOOTBALL_MAX_CANDIDATES: '18'
+          INPUT_DATE: ${{ github.event.inputs.date || '' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "$INPUT_DATE" ]; then
+            python -m src.football_quant.cli --date "$INPUT_DATE"
+          else
+            python -m src.football_quant.cli
+          fi
+
+      - name: Persist dashboard data
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'investbet-football-bot'
+          git config user.email 'investbet-football-bot@users.noreply.github.com'
+          git add dashboard/data.json dashboard/run_status.json data/football/history || true
+          if git diff --cached --quiet; then
+            echo 'No data changes to commit.'
+            exit 0
+          fi
+          git commit -m 'data: update InvestBet football analysis'
+          git pull --rebase origin main
+          git push origin HEAD:main
