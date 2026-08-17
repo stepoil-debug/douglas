@@ -96,10 +96,10 @@
       "misses": 17,
       "n": 35
     },
-    "updated_at": "2026-08-17T16:35:17.055988+00:00"
+    "updated_at": "2026-08-17T17:32:47.825155+00:00"
   },
-  "last_refresh_attempt_at": "2026-08-17T13:36:02.491493-03:00",
-  "last_run_at": "2026-08-17T13:36:02.491509-03:00",
+  "last_refresh_attempt_at": "2026-08-17T14:35:23.232038-03:00",
+  "last_run_at": "2026-08-17T14:35:23.232056-03:00",
   "learning_summary": {
     "matches": 0,
     "status": "WAITING_FOR_D1_SCHEDULE"
@@ -133,7 +133,7 @@
   "near_misses": [],
   "operational_date": "2026-08-17",
   "prematch_atp_singles": 0,
-  "refresh_error": "Live collector failed: [TQE] D+1 source attempt: TennisExplorer dated pages\n[TQE] TennisExplorer source https://www.tennisexplorer.com/matches: 1 ATP matches after date guard; 8 enriched; 7 cross-date rows removed\n[TQE] Schedule time guard failed; refusing unverified start times.\n",
+  "refresh_error": "nnisexplorer.com/results: all rows rejected by date guard (verified=8, other=8); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=8, other=8); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=8, other=8)\n[TQE] D+1 dated page unavailable; discovering active ATP tournaments.\n[TQE] Tournament fallback unavailable: no D+1 matches published on active tournament pages\n[TQE] D+1 schedule not published on lightweight sources yet.\n",
   "refresh_status": "WAITING",
   "rejected": [],
   "result_reconciliation": {
