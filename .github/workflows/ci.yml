@@ -1,4 +1,4 @@
-name: Tennis Quant - CI
+name: InvestBet Football - CI
 
 on:
   pull_request:
@@ -6,13 +6,11 @@ on:
   push:
     branches: [main]
     paths:
-      - 'src/**'
-      - 'scripts/**'
-      - 'tests/**'
-      - 'config/**'
-      - 'requirements.txt'
+      - 'src/football_quant/**'
+      - 'dashboard/**'
       - '.github/workflows/ci.yml'
-      - '.github/workflows/analyze.yml'
+      - '.github/workflows/analyze-football.yml'
+      - '.github/workflows/pages.yml'
 
 permissions:
   contents: read
@@ -25,12 +23,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          cache: 'pip'
-      - name: Install test dependencies
-        run: pip install requests beautifulsoup4 pytest
-      - name: Compile source and collectors
-        run: python -m compileall -q src scripts
-      - name: Unit tests
+      - name: Compile football engine
+        run: python -m compileall -q src/football_quant
+      - name: Football engine smoke test
         env:
-          PYTHONPATH: src:.
-        run: pytest -q
+          PYTHONPATH: .
+        run: |
+          python - <<'PY'
+          from src.football_quant.analyzer import pct, rank_analyses
+          assert pct('60%') == 0.6
+          approved, rejected = rank_analyses([
+              {'decision':'APPROVED','score':82,'edge':0.08,'odd':1.70},
+              {'decision':'REJECTED','score':55,'probability':0.52}
+          ])
+          assert len(approved) == 1 and approved[0]['rank'] == 1
+          assert len(rejected) == 1
+          print('Football engine OK')
+          PY
