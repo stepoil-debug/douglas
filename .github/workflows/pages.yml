@@ -1,16 +1,14 @@
-name: Deploy dashboard
+name: Deploy InvestBet Football dashboard
 
 on:
   workflow_run:
-    workflows: ["Tennis Quant - Analyze"]
+    workflows: ["InvestBet Football - Analyze"]
     types: [completed]
   push:
     branches: [main]
     paths:
       - 'dashboard/**'
-      - 'data/history/**'
-      - 'data/learning/**'
-      - 'data/sequences/**'
+      - 'data/football/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -34,62 +32,39 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - name: Stage InvestBet dashboard data
+
+      - name: Stage football dashboard
+        shell: bash
         run: |
-          mkdir -p dashboard/history dashboard/learning dashboard/sequences
-          if compgen -G "data/history/*.json" > /dev/null; then
-            cp data/history/*.json dashboard/history/
-          fi
-          if compgen -G "data/learning/????-??-??.json" > /dev/null; then
-            cp data/learning/????-??-??.json dashboard/learning/
-          fi
-          if compgen -G "data/sequences/????-??-??.json" > /dev/null; then
-            cp data/sequences/????-??-??.json dashboard/sequences/
-          fi
+          set -euo pipefail
           cp dashboard/v2.html dashboard/index.html
+          mkdir -p dashboard/history
+          if compgen -G "data/football/history/*.json" > /dev/null; then
+            cp data/football/history/*.json dashboard/history/
+          fi
           python - <<'PY'
           import json
           from datetime import datetime, timezone
           from pathlib import Path
 
-          index_path = Path('dashboard/index.html')
-          html = index_path.read_text(encoding='utf-8')
-          trigger = '<script src="manual-trigger.js"></script>'
-          if trigger not in html:
-              html = html.replace('</body>', f'{trigger}</body>')
-              index_path.write_text(html, encoding='utf-8')
-
-          out = []
-          for path in sorted(Path('data/history').glob('????-??-??.json'), reverse=True):
+          rows = []
+          for path in sorted(Path('data/football/history').glob('????-??-??.json'), reverse=True):
               try:
-                  row = json.loads(path.read_text(encoding='utf-8'))
+                  data = json.loads(path.read_text(encoding='utf-8'))
               except Exception:
                   continue
-              out.append({
-                  'date': row.get('date', path.stem),
-                  'updated_at': row.get('updated_at'),
-                  'summary': row.get('summary', {}),
+              rows.append({
+                  'date': data.get('board_date', path.stem),
+                  'last_run_at': data.get('last_run_at'),
+                  'approved': len(data.get('approved') or []),
+                  'history_summary': data.get('history_summary') or {},
               })
-          index = {'updated_at': datetime.now(timezone.utc).isoformat(), 'dates': out}
-          Path('dashboard/history/index.json').write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding='utf-8')
-
-          sequences = []
-          for path in sorted(Path('data/sequences').glob('????-??-??.json'), reverse=True):
-              try:
-                  row = json.loads(path.read_text(encoding='utf-8'))
-              except Exception:
-                  continue
-              sequences.append({
-                  'date': row.get('date', path.stem),
-                  'created_at': row.get('created_at'),
-                  'updated_at': row.get('updated_at'),
-                  'summary': row.get('summary', {}),
-              })
-          Path('dashboard/sequences/index.json').write_text(
-              json.dumps({'updated_at': datetime.now(timezone.utc).isoformat(), 'dates': sequences}, ensure_ascii=False, indent=2),
+          Path('dashboard/history/index.json').write_text(
+              json.dumps({'sport': 'football', 'updated_at': datetime.now(timezone.utc).isoformat(), 'dates': rows}, ensure_ascii=False, indent=2),
               encoding='utf-8'
           )
           PY
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
