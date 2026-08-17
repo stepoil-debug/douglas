@@ -1,146 +1,36 @@
 {
-  "approved": [],
+  "sport": "football",
+  "model_version": "football-selective-v1.0",
+  "data_mode": "API_FOOTBALL",
+  "data_sources": [
+    "API-Football fixtures",
+    "API-Football predictions",
+    "API-Football pre-match odds"
+  ],
+  "operational_date": "2026-08-17",
   "board_date": "2026-08-18",
   "board_mode": "D+1",
-  "board_status": "WAITING_FOR_D1_SCHEDULE",
-  "data_mode": "NO_API",
-  "data_sources": [
-    "Live D+1: aguardando publicação da agenda pública",
-    "Histórico: Sackmann-format ATP"
-  ],
-  "date": "2026-08-18",
-  "deep_analyzed_matches": 0,
+  "board_status": "WAITING_FOR_ANALYSIS",
+  "last_run_at": null,
+  "fixtures_found": 0,
   "fixtures_analyzed": 0,
-  "history_summary": {},
-  "knowledge": {
-    "by_confidence": {
-      "50-60": {
-        "accuracy": 1.0,
-        "hits": 5,
-        "misses": 0,
-        "n": 5
-      },
-      "60-70": {
-        "accuracy": 1.0,
-        "hits": 1,
-        "misses": 0,
-        "n": 1
-      },
-      "<50": {
-        "accuracy": 0.41379310344827586,
-        "hits": 12,
-        "misses": 17,
-        "n": 29
-      }
-    },
-    "by_decision": {
-      "REJECTED": {
-        "accuracy": 0.5142857142857142,
-        "hits": 18,
-        "misses": 17,
-        "n": 35
-      }
-    },
-    "by_probability": {
-      "55-60%": {
-        "accuracy": 0.6666666666666666,
-        "hits": 4,
-        "misses": 2,
-        "n": 6
-      },
-      "60-65%": {
-        "accuracy": 0.5,
-        "hits": 2,
-        "misses": 2,
-        "n": 4
-      },
-      "65-70%": {
-        "accuracy": 0.0,
-        "hits": 0,
-        "misses": 1,
-        "n": 1
-      },
-      "70-75%": {
-        "accuracy": 1.0,
-        "hits": 3,
-        "misses": 0,
-        "n": 3
-      },
-      "<55%": {
-        "accuracy": 0.42857142857142855,
-        "hits": 9,
-        "misses": 12,
-        "n": 21
-      }
-    },
-    "failure_tags": {
-      "ERR-MKT": 2,
-      "ERR-SUR": 6,
-      "ERR-UNC": 17
-    },
-    "last_100": {
-      "accuracy": 0.5142857142857142,
-      "hits": 18,
-      "misses": 17,
-      "n": 35
-    },
-    "last_500": {
-      "accuracy": 0.5142857142857142,
-      "hits": 18,
-      "misses": 17,
-      "n": 35
-    },
-    "overall": {
-      "accuracy": 0.5142857142857142,
-      "hits": 18,
-      "misses": 17,
-      "n": 35
-    },
-    "updated_at": "2026-08-17T18:51:16.603654+00:00"
-  },
-  "last_refresh_attempt_at": "2026-08-17T15:53:35.213095-03:00",
-  "last_run_at": "2026-08-17T15:53:35.213116-03:00",
-  "learning_summary": {
-    "matches": 0,
-    "status": "WAITING_FOR_D1_SCHEDULE"
-  },
   "matches_with_odds": 0,
-  "metrics": {
-    "last_10": {
-      "accuracy": null,
-      "n": 0,
-      "wins": 0
-    },
-    "last_100": {
-      "accuracy": null,
-      "n": 0,
-      "wins": 0
-    },
-    "last_50": {
-      "accuracy": null,
-      "n": 0,
-      "wins": 0
-    },
-    "last_500": {
-      "accuracy": null,
-      "n": 0,
-      "wins": 0
-    },
-    "quality_labels": {},
-    "total_approved_resolved": 0
-  },
-  "model_version": "champion-v0.3.3-sequential",
-  "near_misses": [],
-  "operational_date": "2026-08-17",
-  "prematch_atp_singles": 0,
-  "refresh_error": "nnisexplorer.com/results: all rows rejected by date guard (verified=8, other=8); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=8, other=8); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=8, other=8)\n[TQE] D+1 dated page unavailable; discovering active ATP tournaments.\n[TQE] Tournament fallback unavailable: no D+1 matches published on active tournament pages\n[TQE] D+1 schedule not published on lightweight sources yet.\n",
-  "refresh_status": "WAITING",
+  "deep_analyzed_matches": 0,
+  "approved": [],
   "rejected": [],
-  "result_reconciliation": {
+  "all_matches": [],
+  "top_limit": 6,
+  "history_summary": {
     "resolved": 0,
-    "status": "OK"
+    "hits": 0,
+    "misses": 0,
+    "accuracy": null
   },
-  "shadow": [],
-  "source_requests": 1,
-  "unresolved_players": []
+  "criteria": {
+    "market": "Vencedor da partida (1X2)",
+    "odd_range": "1.50-2.00",
+    "min_probability": 0.58,
+    "min_edge": 0.03,
+    "min_score": 70
+  }
 }
