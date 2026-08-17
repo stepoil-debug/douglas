@@ -5,71 +5,79 @@
   const $ = id => document.getElementById(id);
   const analyzeBtn = $('analyzeBtn');
   const runState = $('runState');
-  const oldTip = $('manualTip');
   if (!analyzeBtn) return;
-  if (oldTip) oldTip.remove();
 
-  analyzeBtn.textContent = ANALYZE_LABEL;
-  analyzeBtn.title = 'Buscar jogos, atualizar odds e executar o motor quantitativo';
-
-  // Never keep provider/GitHub credentials in the browser.
-  for (const key of ['tqe_github_token', 'tqe_tennis_key']) {
+  // Remove credentials from any legacy browser storage. API keys must stay server-side.
+  for (const key of ['tqe_github_token', 'tqe_tennis_key', 'investbet_api_key', 'api_football_key']) {
     localStorage.removeItem(key);
     sessionStorage.removeItem(key);
   }
 
-  function setRunState(text) { if (runState) runState.textContent = text; }
+  analyzeBtn.textContent = ANALYZE_LABEL;
+  analyzeBtn.title = 'Buscar agenda de futebol, odds e previsões e executar o motor seletivo';
+
+  function setRunState(text) {
+    if (runState) runState.textContent = text;
+  }
+
   function setBusy(busy) {
     analyzeBtn.disabled = busy;
-    analyzeBtn.textContent = busy ? '⏳ Analisando jogos...' : ANALYZE_LABEL;
+    analyzeBtn.textContent = busy ? '⏳ Analisando futebol...' : ANALYZE_LABEL;
   }
+
   async function readRunStatus() {
     const response = await fetch(`./run_status.json?t=${Date.now()}`, { cache: 'no-store' });
     if (!response.ok) return null;
     return response.json();
   }
+
   async function readTriggerState() {
     const response = await fetch(`${TRIGGER_URL}?t=${Date.now()}`, { cache: 'no-store' });
     if (!response.ok) return null;
     return response.json();
   }
+
   async function waitForAnalysis(requestedAt, alreadyRunning = false) {
     const started = Date.parse(requestedAt || new Date().toISOString());
     let sawRunning = alreadyRunning;
+
     for (let i = 0; i < 180; i++) {
       await sleep(5000);
       try {
         const status = await readRunStatus();
         if (status?.status === 'RUNNING') {
           sawRunning = true;
-          setRunState('Analisando jogos • coletando agenda, odds e sinais...');
+          setRunState('Analisando futebol • agenda, odds e previsões...');
           continue;
         }
-        if (sawRunning && status?.status === 'SUCCESS') {
+        if ((sawRunning || status?.status === 'SUCCESS') && status?.status === 'SUCCESS') {
           const updated = Date.parse(status.updated_at || '');
           if (!Number.isFinite(updated) || updated >= started) {
-            setRunState(status.board_status === 'WAITING_FOR_D1_SCHEDULE'
-              ? 'Análise concluída • aguardando publicação da agenda D+1'
-              : 'Análise concluída • painel atualizado');
+            setRunState('Análise concluída • painel atualizado');
             await sleep(900);
             location.reload();
             return;
           }
         }
+        if (status?.status === 'WAITING_FOR_API_KEY') {
+          setRunState('API-Football aguardando configuração segura');
+          return;
+        }
         if (sawRunning && status?.status === 'FAILED') {
-          setRunState('Análise falhou • a automação tentará novamente');
+          setRunState('Falha na análise • consulte a execução do GitHub Actions');
           return;
         }
 
         const queue = await readTriggerState();
         const state = queue?.state;
         if (state?.status === 'PENDING') setRunState('Solicitação recebida • aguardando execução...');
-        else if (state?.status === 'CLAIMED') setRunState('Preparando motor de análise...');
+        else if (state?.status === 'CLAIMED') setRunState('Preparando motor de futebol...');
         else if (state?.status === 'DISPATCHED' && !sawRunning) setRunState('Motor iniciado • buscando jogos...');
-      } catch {}
+      } catch (_) {}
     }
-    setRunState('Análise solicitada • acompanhamento automático continua ativo');
+    setRunState('Análise solicitada • acompanhamento continua ativo');
   }
+
   async function startAnalysis() {
     setBusy(true);
     try {
@@ -80,105 +88,34 @@
         return;
       }
 
-      setRunState('Solicitando análise completa dos jogos...');
+      setRunState('Solicitando análise completa do futebol...');
       const response = await fetch(TRIGGER_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          source: 'investbet-dashboard',
-          action: 'analyze-games',
-          scope: 'all-eligible-games',
+          source: 'investbet-football-dashboard',
+          action: 'analyze-football',
+          scope: 'all-eligible-football-games',
           board_mode: 'D+1'
         })
       });
+
       let data = null;
-      try { data = await response.json(); } catch {}
+      try { data = await response.json(); } catch (_) {}
       if (!response.ok || !data?.ok || !data?.accepted) {
         throw new Error(data?.error || `BACKEND_${response.status}`);
       }
       const state = data.state || {};
-      setRunState(data.mode === 'direct'
-        ? 'Motor iniciado • buscando jogos...'
-        : 'Solicitação recebida • execução automática preparada');
+      setRunState('Solicitação recebida • iniciando motor de futebol...');
       await waitForAnalysis(state.requested_at);
     } catch (error) {
-      console.error('[InvestBet] manual analysis trigger failed', error);
+      console.error('[InvestBet Football] manual analysis trigger failed', error);
       setRunState('Não foi possível solicitar a análise');
-      alert('Não foi possível iniciar a análise agora. A automação de 30 minutos continua ativa e tentará normalmente.');
+      alert('Não foi possível iniciar a análise agora. O agendamento automático do GitHub Actions continuará tentando normalmente.');
     } finally {
       setBusy(false);
     }
   }
 
   analyzeBtn.onclick = startAnalysis;
-})();
-
-(() => {
-  if (document.querySelector('script[data-investbet-history-enhancements]')) return;
-  const script = document.createElement('script');
-  script.src = `./history-enhancements.js?v=${Date.now()}`;
-  script.dataset.investbetHistoryEnhancements = '1';
-  document.head.appendChild(script);
-})();
-
-(() => {
-  const MIN_GAP_LABEL = '3h30';
-  let decorating = false;
-  async function decorateSequentialPlan() {
-    if (decorating) return;
-    decorating = true;
-    try {
-      const response = await fetch(`./data.json?t=${Date.now()}`, { cache: 'no-store' });
-      if (!response.ok) return;
-      const data = await response.json();
-      const approved = data.approved || [];
-      const list = document.getElementById('approvedList');
-      if (!list || !approved.length) return;
-      const cards = [...list.querySelectorAll('.pick')];
-      cards.forEach((card, index) => {
-        const row = approved[index] || {};
-        const order = Number(row.rank || index + 1);
-        const label = card.querySelector('.label');
-        const status = card.querySelector('.status.approved');
-        const meta = card.querySelector('.meta');
-        if (label) label.textContent = `Entrada #${order} • sequência operacional`;
-        if (status) status.textContent = order === 1 ? '1ª OPORTUNIDADE' : `OPORTUNIDADE #${order}`;
-        if (meta && !meta.dataset.sequenceDecorated) {
-          const note = document.createElement('div');
-          note.className = 'mini'; note.style.marginTop = '6px';
-          note.textContent = order === 1 ? `Primeira janela aprovada • próximos jogos respeitam no mínimo ${MIN_GAP_LABEL}` : `Próxima oportunidade planejada • intervalo mínimo ${MIN_GAP_LABEL}`;
-          meta.insertAdjacentElement('afterend', note); meta.dataset.sequenceDecorated = '1';
-        }
-      });
-      const approvedHeading = [...document.querySelectorAll('.section .head')].find(head => head.querySelector('h2')?.textContent.includes('Entradas aprovadas para amanhã'));
-      const sub = approvedHeading?.querySelector('.sub');
-      if (sub) sub.textContent = `Vencedor da partida • odd 1.50–2.00 • intervalo mínimo ${MIN_GAP_LABEL}`;
-    } catch (error) { console.debug('[InvestBet] sequential plan decoration skipped', error); }
-    finally { decorating = false; }
-  }
-  const list = document.getElementById('approvedList');
-  if (list) { const observer = new MutationObserver(() => decorateSequentialPlan()); observer.observe(list, { childList: true }); }
-  decorateSequentialPlan(); setInterval(decorateSequentialPlan, 60000);
-})();
-
-// Separate six-game opportunity sequence.
-(() => {
-  const href = './bilhetes.html';
-  const nav = document.querySelector('.nav');
-  if (nav && !nav.querySelector('[data-investbet-tickets-link]')) {
-    const link = document.createElement('a');
-    link.href = href;
-    link.dataset.investbetTicketsLink = '1';
-    link.innerHTML = '▣ <span>Sequência 6 jogos</span>';
-    nav.insertBefore(link, nav.children[2] || null);
-  }
-  const actions = document.querySelector('.actions');
-  if (actions && !actions.querySelector('[data-investbet-tickets-button]')) {
-    const link = document.createElement('a');
-    link.href = href;
-    link.className = 'btn secondary';
-    link.dataset.investbetTicketsButton = '1';
-    link.textContent = '▣ Sequência 6 jogos';
-    actions.insertBefore(link, actions.firstChild);
-  }
 })();
