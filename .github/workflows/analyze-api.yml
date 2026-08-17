@@ -2,6 +2,10 @@ name: Tennis Quant - Analyze API First
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/analyze-api.yml'
 
 permissions:
   contents: write
@@ -70,14 +74,16 @@ jobs:
           fi
 
       - name: Test engine
+        id: tests
         if: steps.api_secret.outputs.available == 'true'
+        continue-on-error: true
         env:
           PYTHONPATH: src:.
         run: pytest -q
 
       - name: Analyze all eligible D+1 games with API first
         id: api_analysis
-        if: steps.api_secret.outputs.available == 'true'
+        if: steps.api_secret.outputs.available == 'true' && steps.tests.outcome == 'success'
         continue-on-error: true
         env:
           PYTHONPATH: src:.
@@ -126,7 +132,7 @@ jobs:
 
       - name: Dispatch public fallback
         id: fallback
-        if: steps.api_secret.outputs.available != 'true' || steps.api_analysis.outcome != 'success'
+        if: steps.api_secret.outputs.available != 'true' || steps.tests.outcome == 'failure' || steps.api_analysis.outcome != 'success'
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
