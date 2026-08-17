@@ -1,0 +1,171 @@
+name: Tennis Quant - Analyze API First
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: investbet-tennis-data-writer
+  cancel-in-progress: false
+
+jobs:
+  analyze-api-first:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Configure Git author
+        run: |
+          git config user.name "tennis-quant-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+      - name: Mark manual analysis running
+        env:
+          RUN_ID: ${{ github.run_id }}
+          RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+          payload = {
+              "status": "RUNNING",
+              "run_id": int(os.environ["RUN_ID"]),
+              "run_url": os.environ["RUN_URL"],
+              "updated_at": datetime.now(timezone.utc).isoformat(),
+              "message": "Análise manual: tentando API-Tennis e mantendo fallback público"
+          }
+          with open("dashboard/run_status.json", "w", encoding="utf-8") as f:
+              json.dump(payload, f, ensure_ascii=False, indent=2)
+          PY
+          git add dashboard/run_status.json
+          git commit -m "status: manual tennis analysis running"
+          git push
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Detect API-Tennis secret
+        id: api_secret
+        env:
+          API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
+        shell: bash
+        run: |
+          if [ -n "${API_TENNIS_KEY:-}" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+            echo "API-Tennis secret available; API-first mode enabled."
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "API_TENNIS_KEY is not configured; public workflow will be used."
+          fi
+
+      - name: Test engine
+        if: steps.api_secret.outputs.available == 'true'
+        env:
+          PYTHONPATH: src:.
+        run: pytest -q
+
+      - name: Analyze all eligible D+1 games with API first
+        id: api_analysis
+        if: steps.api_secret.outputs.available == 'true'
+        continue-on-error: true
+        env:
+          PYTHONPATH: src:.
+          API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
+          H2H_BUDGET: '40'
+        run: python scripts/run_api_first.py
+
+      - name: Commit API-first analysis
+        if: steps.api_analysis.outcome == 'success'
+        run: |
+          git add data dashboard/data.json dashboard/learning.json
+          git diff --cached --quiet || git commit -m "data: update D+1 board with API-first analysis"
+          git push
+
+      - name: Mark API-first analysis success
+        if: steps.api_analysis.outcome == 'success'
+        env:
+          RUN_ID: ${{ github.run_id }}
+          RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+          try:
+              data = json.load(open('dashboard/data.json', encoding='utf-8'))
+              board_status = data.get('board_status', 'UNKNOWN')
+              fixtures = int(data.get('fixtures_analyzed') or 0)
+              approved = len(data.get('approved') or [])
+          except Exception:
+              board_status, fixtures, approved = 'UNKNOWN', 0, 0
+          payload = {
+              "status": "SUCCESS",
+              "run_id": int(os.environ["RUN_ID"]),
+              "run_url": os.environ["RUN_URL"],
+              "updated_at": datetime.now(timezone.utc).isoformat(),
+              "message": f"API-Tennis concluída: {fixtures} jogos analisados, {approved} aprovados.",
+              "board_status": board_status,
+              "data_mode": "API_FIRST"
+          }
+          with open("dashboard/run_status.json", "w", encoding="utf-8") as f:
+              json.dump(payload, f, ensure_ascii=False, indent=2)
+          PY
+          git add dashboard/run_status.json
+          git commit -m "status: API-first tennis analysis success"
+          git push
+
+      - name: Dispatch public fallback
+        id: fallback
+        if: steps.api_secret.outputs.available != 'true' || steps.api_analysis.outcome != 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          HTTP_CODE="$(curl --silent --show-error --output /tmp/dispatch-response.txt --write-out '%{http_code}' \
+            --request POST \
+            --header 'Accept: application/vnd.github+json' \
+            --header "Authorization: Bearer $GH_TOKEN" \
+            --header 'X-GitHub-Api-Version: 2022-11-28' \
+            --header 'Content-Type: application/json' \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/analyze.yml/dispatches" \
+            --data '{"ref":"main"}')"
+          if [ "$HTTP_CODE" != '200' ] && [ "$HTTP_CODE" != '204' ]; then
+            cat /tmp/dispatch-response.txt || true
+            echo "Public fallback dispatch failed with HTTP $HTTP_CODE" >&2
+            exit 1
+          fi
+          echo 'API-first unavailable/incomplete; public Tennis Quant analysis dispatched.'
+
+      - name: Mark fallback handoff
+        if: steps.fallback.outcome == 'success'
+        env:
+          RUN_ID: ${{ github.run_id }}
+          RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+          payload = {
+              "status": "RUNNING",
+              "run_id": int(os.environ["RUN_ID"]),
+              "run_url": os.environ["RUN_URL"],
+              "updated_at": datetime.now(timezone.utc).isoformat(),
+              "message": "API-Tennis indisponível ou sem agenda; análise pública de fallback iniciada"
+          }
+          with open("dashboard/run_status.json", "w", encoding="utf-8") as f:
+              json.dump(payload, f, ensure_ascii=False, indent=2)
+          PY
+          git add dashboard/run_status.json
+          git commit -m "status: hand off to public tennis fallback"
+          git push
