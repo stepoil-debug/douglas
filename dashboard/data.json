@@ -96,10 +96,10 @@
       "misses": 17,
       "n": 35
     },
-    "updated_at": "2026-08-17T03:26:36.246233+00:00"
+    "updated_at": "2026-08-17T12:55:31.801916+00:00"
   },
-  "last_refresh_attempt_at": "2026-08-17T00:28:31.132453-03:00",
-  "last_run_at": "2026-08-17T00:28:31.132470-03:00",
+  "last_refresh_attempt_at": "2026-08-17T09:57:47.470689-03:00",
+  "last_run_at": "2026-08-17T09:57:47.470703-03:00",
   "learning_summary": {
     "matches": 0,
     "status": "WAITING_FOR_D1_SCHEDULE"
@@ -133,7 +133,7 @@
   "near_misses": [],
   "operational_date": "2026-08-17",
   "prematch_atp_singles": 0,
-  "refresh_error": "nnisexplorer.com/results: all rows rejected by date guard (verified=7, other=7); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=7, other=7); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=7, other=7)\n[TQE] D+1 dated page unavailable; discovering active ATP tournaments.\n[TQE] Tournament fallback unavailable: no D+1 matches published on active tournament pages\n[TQE] D+1 schedule not published on lightweight sources yet.\n",
+  "refresh_error": "nnisexplorer.com/results: all rows rejected by date guard (verified=8, other=8); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=8, other=8); https://noproxy.tennisexplorer.com/results: all rows rejected by date guard (verified=8, other=8)\n[TQE] D+1 dated page unavailable; discovering active ATP tournaments.\n[TQE] Tournament fallback unavailable: no D+1 matches published on active tournament pages\n[TQE] D+1 schedule not published on lightweight sources yet.\n",
   "refresh_status": "WAITING",
   "rejected": [],
   "result_reconciliation": {
