@@ -1,7 +1,10 @@
 {
   "sport": "football",
   "status": "WAITING_FOR_API_KEY",
-  "updated_at": "2026-08-17T16:10:00-03:00",
+  "updated_at": "2026-08-18T10:12:00-03:00",
   "board_date": "2026-08-18",
-  "message": "Painel de futebol ativo; a automacao aguarda API_FOOTBALL_KEY protegida nos Secrets do GitHub Actions"
+  "board_mode": "TODAY",
+  "tickets_ready": 0,
+  "target_tickets": 3,
+  "message": "Motor pronto no GitHub. Falta somente a credencial API-Football protegida nos Secrets do proprio repositorio para buscar jogos e odds reais."
 }
