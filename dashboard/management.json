@@ -13,13 +13,13 @@
         {
           "odd": 1.54,
           "probability": 0.8169,
-          "status": "PENDING",
+          "status": "RED",
           "ticket_id": "B2"
         },
         {
           "odd": 1.73,
           "probability": 0.7901,
-          "status": "PENDING",
+          "status": "RED",
           "ticket_id": "B3"
         }
       ]
@@ -34,9 +34,9 @@
   ],
   "strategies": {
     "all_three": {
-      "accuracy": null,
+      "accuracy": 0.0,
       "available_bankroll": 70.0,
-      "bankroll": 100.0,
+      "bankroll": 80.0,
       "bets": 3,
       "description": "R$10 em cada um dos 3 bilhetes oficiais do dia. Exposição diária máxima: R$30.",
       "fixed_stake": 10.0,
@@ -57,9 +57,9 @@
           "estimated_probability": 0.8169,
           "label": "Todos os 3",
           "odd": 1.54,
-          "profit": null,
+          "profit": -10.0,
           "stake": 10.0,
-          "status": "PENDING",
+          "status": "RED",
           "ticket_id": "B2"
         },
         {
@@ -67,20 +67,20 @@
           "estimated_probability": 0.7901,
           "label": "Todos os 3",
           "odd": 1.73,
-          "profit": null,
+          "profit": -10.0,
           "stake": 10.0,
-          "status": "PENDING",
+          "status": "RED",
           "ticket_id": "B3"
         }
       ],
       "initial_bankroll": 100.0,
       "name": "Mão fixa • 3 bilhetes",
-      "open_exposure": 30.0,
-      "pending": 3,
-      "profit": 0.0,
-      "reds": 0,
-      "resolved": 0,
-      "roi": 0.0
+      "open_exposure": 10.0,
+      "pending": 1,
+      "profit": -20.0,
+      "reds": 2,
+      "resolved": 2,
+      "roi": -100.0
     },
     "safest_only": {
       "accuracy": null,
@@ -112,5 +112,5 @@
       "roi": 0.0
     }
   },
-  "updated_at": "2026-08-18T13:53:29.874979-03:00"
+  "updated_at": "2026-08-18T15:52:59.241329-03:00"
 }
