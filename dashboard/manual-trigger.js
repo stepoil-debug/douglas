@@ -13,14 +13,20 @@
 
   function configureMainButton(state) {
     if (!analyzeBtn) return;
+    analyzeBtn.disabled = state === 'RUNNING';
     if (state === 'WAITING_FOR_API_KEY') {
       analyzeBtn.textContent = '🔐 Configurar API';
-      analyzeBtn.title = 'Abrir a criação do Secret API_FOOTBALL_KEY no próprio repositório GitHub';
+      analyzeBtn.title = 'Abrir a criação do Secret da API-Football no próprio repositório GitHub';
       analyzeBtn.onclick = () => window.open(SECRETS_URL, '_blank', 'noopener,noreferrer');
       return;
     }
-    analyzeBtn.textContent = state === 'RUNNING' ? '⏳ Analisando...' : '▶ Rodar agora';
-    analyzeBtn.disabled = state === 'RUNNING';
+    if (state === 'SUCCESS') {
+      analyzeBtn.textContent = '▶ Rodar novamente';
+    } else if (state === 'RUNNING') {
+      analyzeBtn.textContent = '⏳ Analisando...';
+    } else {
+      analyzeBtn.textContent = '▶ Rodar agora';
+    }
     analyzeBtn.title = 'Abrir o workflow InvestBet Football no GitHub Actions';
     analyzeBtn.onclick = () => window.open(ACTIONS_URL, '_blank', 'noopener,noreferrer');
   }
@@ -40,9 +46,9 @@
       if (currentStatus === 'RUNNING') setRunState('Analisando jogos de hoje...');
       else if (currentStatus === 'SUCCESS') {
         const count = Number(state.tickets_ready || 0);
-        setRunState(`${count}/3 bilhetes prontos • GitHub Actions`);
+        setRunState(`API ativa • ${count}/3 bilhetes prontos`);
       } else if (currentStatus === 'WAITING_FOR_API_KEY') {
-        setRunState('Falta configurar API_FOOTBALL_KEY no GitHub');
+        setRunState('Falta configurar a API-Football no GitHub');
       } else if (currentStatus === 'FAILED') setRunState('Última análise falhou • ver Actions');
       else setRunState('Motor GitHub ativo');
     } catch (_) {
