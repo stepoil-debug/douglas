@@ -1,5 +1,6 @@
 name: Verify InvestBet Public Dashboard
 
+# Recheck public Pages after restoring the manually selected board.
 on:
   push:
     branches: [main]
