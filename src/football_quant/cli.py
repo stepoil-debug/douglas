@@ -28,6 +28,10 @@ def dump(path: Path, payload: dict[str, Any]) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def load(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def status(state: str, **extra: Any) -> None:
     dump(
         DASHBOARD / "run_status.json",
@@ -44,7 +48,7 @@ def historical_summary() -> dict[str, Any]:
         }
     for path in HISTORY.glob("*.json"):
         try:
-            row = json.loads(path.read_text(encoding="utf-8"))
+            row = load(path)
         except Exception:
             continue
         for ticket in row.get("tickets") or []:
@@ -83,7 +87,42 @@ def _resolve_api_key() -> str:
     return ""
 
 
+def _restore_locked_board(target_date: str) -> bool:
+    path = HISTORY / f"{target_date}.json"
+    if not path.exists():
+        return False
+    try:
+        payload = load(path)
+    except Exception:
+        return False
+    lock = payload.get("ticket_lock") or {}
+    tickets = payload.get("tickets") or []
+    if not lock.get("locked") or len(tickets) < TARGET_TICKETS:
+        return False
+    payload["history_summary"] = historical_summary()
+    dump(DASHBOARD / "data.json", payload)
+    status(
+        "SUCCESS",
+        board_date=target_date,
+        board_mode="TODAY",
+        board_status=payload.get("board_status") or "READY",
+        fixtures_found=payload.get("fixtures_found") or 0,
+        fixtures_analyzed=payload.get("fixtures_analyzed") or 0,
+        tickets_ready=len(tickets),
+        target_tickets=TARGET_TICKETS,
+        execution_bookmaker=payload.get("execution_bookmaker") or "Betano",
+        execution_ready=bool(payload.get("execution_ready")),
+        ticket_lock=True,
+        message="Os 3 bilhetes oficiais do dia já foram publicados e estão travados para preservar GREEN/RED e a simulação de banca.",
+    )
+    print(f"Locked board restored for {target_date}; analysis skipped.")
+    return True
+
+
 def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
+    if _restore_locked_board(target_date):
+        return 0
+
     started = now()
     status(
         "RUNNING",
