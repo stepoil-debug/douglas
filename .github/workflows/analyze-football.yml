@@ -8,8 +8,6 @@ on:
         required: false
         type: string
   schedule:
-    # 07:05, 11:05, 15:05 e 19:05 no horario de Brasilia (UTC-3).
-    # Quatro varreduras por dia mantem o board atualizado sem estourar o plano gratuito.
     - cron: '5 10,14,18,22 * * *'
   push:
     branches: [main]
@@ -76,6 +74,12 @@ jobs:
             python -m src.football_quant.cli
           fi
 
+      - name: Build execution-ready Betano tickets
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m src.football_quant.betano_execution
+
       - name: Persist dashboard data
         shell: bash
         run: |
@@ -87,6 +91,6 @@ jobs:
             echo 'No data changes to commit.'
             exit 0
           fi
-          git commit -m 'data: update same-day football tickets'
+          git commit -m 'data: update same-day Betano tickets'
           git pull --rebase origin main
           git push origin HEAD:main
