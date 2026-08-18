@@ -14,6 +14,18 @@
     if (runState) runState.textContent = text;
   }
 
+  function ensureManagementNav() {
+    const nav = document.querySelector('.nav');
+    if (!nav || nav.querySelector('[data-management-nav]')) return;
+    const link = document.createElement('a');
+    link.href = 'gestao.html';
+    link.dataset.managementNav = '1';
+    link.innerHTML = '📈 <span>Gestão simulada</span>';
+    const second = nav.children[1];
+    if (second) nav.insertBefore(link, second);
+    else nav.appendChild(link);
+  }
+
   function configureMainButton(state) {
     if (!analyzeBtn) return;
     if (state === 'WAITING_FOR_API_KEY') {
@@ -68,8 +80,8 @@
     const priced = [];
     let total = 1;
     for (const leg of legs) {
-      const odd = betanoPriceForLeg(leg);
-      if (!odd) return null;
+      const odd = Number(leg.odd || betanoPriceForLeg(leg));
+      if (!odd || !Number.isFinite(odd)) return null;
       total *= odd;
       priced.push({ ...leg, execution_odd: odd });
     }
@@ -121,18 +133,40 @@
       .execution-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}
       .execution-title{font-size:10px;font-weight:950;text-transform:uppercase;letter-spacing:.08em;color:#f2cc62}
       .execution-house{font-size:10px;color:#9aefbb;font-weight:900}
-      .execution-summary{font-size:10px;color:#829989;line-height:1.5;margin-bottom:10px}
-      .execution-summary b{color:#f4f0e4}
+      .execution-summary{font-size:10px;color:#829989;line-height:1.5;margin-bottom:10px}.execution-summary b{color:#f4f0e4}
       .execution-actions{display:grid;grid-template-columns:1fr auto;gap:8px}
       .execution-open,.execution-copy{border-radius:9px;padding:10px 12px;font-size:11px;font-weight:950;cursor:pointer;border:1px solid}
-      .execution-open{background:linear-gradient(135deg,#f0ca60,#c8921b);color:#1c1605;border-color:#d1a12c}
-      .execution-copy{background:#091911;color:#d9e4dc;border-color:#294735}
-      .execution-open:hover{filter:brightness(1.06)}
-      .execution-copy:hover{border-color:#4f795f}
-      .execution-unavailable{margin:0 16px 16px;padding:10px 12px;border:1px dashed #304d3a;color:#758b7c;font-size:10px}
+      .execution-open{background:linear-gradient(135deg,#f0ca60,#c8921b);color:#1c1605;border-color:#d1a12c}.execution-copy{background:#091911;color:#d9e4dc;border-color:#294735}
+      .execution-open:disabled,.execution-copy:disabled{opacity:.45;cursor:not-allowed}.execution-unavailable{margin:0 16px 16px;padding:10px 12px;border:1px dashed #304d3a;color:#758b7c;font-size:10px}
+      .settlement-badge{display:inline-flex;align-items:center;justify-content:center;margin:0 16px 12px;padding:8px 10px;border-radius:8px;font-size:10px;font-weight:950;letter-spacing:.05em;text-transform:uppercase}
+      .settlement-green{color:#9aefbb;background:rgba(113,227,161,.09);border:1px solid rgba(113,227,161,.25)}
+      .settlement-red{color:#ffadb3;background:rgba(255,123,132,.08);border:1px solid rgba(255,123,132,.24)}
+      .settlement-pending{color:#ead38a;background:rgba(216,168,47,.08);border:1px solid rgba(216,168,47,.2)}
+      .settlement-manual{color:#b8c7bd;background:rgba(129,154,137,.08);border:1px solid rgba(129,154,137,.2)}
       @media(max-width:720px){.execution-actions{grid-template-columns:1fr}.execution-copy{width:100%}}
     `;
     document.head.appendChild(style);
+  }
+
+  function updateResultBadge(card, ticket) {
+    const raw = String(ticket.status || 'PENDING').toUpperCase();
+    const label = raw === 'GREEN' ? '✓ GREEN' : raw === 'RED' ? '✕ RED' : raw === 'VOID' ? 'VOID' : raw === 'MANUAL' ? 'Conferência manual' : '⏳ Aguardando resultado';
+    const kind = raw === 'GREEN' ? 'green' : raw === 'RED' ? 'red' : raw === 'MANUAL' || raw === 'VOID' ? 'manual' : 'pending';
+    let badge = card.querySelector('.settlement-badge');
+    if (!badge) {
+      badge = document.createElement('div');
+      badge.className = 'settlement-badge';
+      const metrics = card.querySelector('.ticket-metrics');
+      if (metrics && metrics.nextSibling) card.insertBefore(badge, metrics.nextSibling);
+      else card.appendChild(badge);
+    }
+    badge.className = `settlement-badge settlement-${kind}`;
+    badge.textContent = label;
+    const settled = ['GREEN','RED','VOID'].includes(raw);
+    card.querySelectorAll('.execution-open,.execution-copy').forEach(btn => {
+      btn.disabled = settled;
+      if (settled && btn.classList.contains('execution-open')) btn.textContent = `Bilhete encerrado • ${raw}`;
+    });
   }
 
   function enhanceTickets() {
@@ -140,10 +174,11 @@
     addExecutorStyles();
     const cards = Array.from(ticketList.querySelectorAll('.ticket'));
     cards.forEach(card => {
-      if (card.dataset.executionReady === '1') return;
       const id = (card.querySelector('.ticket-id')?.textContent || '').trim();
       const ticket = ticketData.find(t => String(t.ticket_id || '').trim() === id);
       if (!ticket) return;
+      updateResultBadge(card, ticket);
+      if (card.dataset.executionReady === '1') return;
       card.dataset.executionReady = '1';
       const execution = betanoExecution(ticket);
       if (!execution) {
@@ -160,31 +195,26 @@
       box.innerHTML = `
         <div class="execution-head"><span class="execution-title">Executar bilhete</span><span class="execution-house">BETANO</span></div>
         <div class="execution-summary"><b>Odd Betano ${moneyOdd(execution.total)}</b><br>${selections}</div>
-        <div class="execution-actions">
-          <button type="button" class="execution-open">🎯 Abrir bilhete na Betano</button>
-          <button type="button" class="execution-copy">Copiar</button>
-        </div>`;
+        <div class="execution-actions"><button type="button" class="execution-open">🎯 Abrir bilhete na Betano</button><button type="button" class="execution-copy">Copiar</button></div>`;
 
       const text = ticketText(ticket, execution);
       const openBtn = box.querySelector('.execution-open');
       const copyBtn = box.querySelector('.execution-copy');
-
       openBtn.addEventListener('click', async () => {
         await copyText(text);
         const original = openBtn.textContent;
         openBtn.textContent = '✓ Bilhete copiado • abrindo Betano';
-        window.open(BETANO_URL, '_blank', 'noopener,noreferrer');
+        window.open(ticket.execution?.url || BETANO_URL, '_blank', 'noopener,noreferrer');
         setTimeout(() => { openBtn.textContent = original; }, 2400);
       });
-
       copyBtn.addEventListener('click', async () => {
         const ok = await copyText(text);
         const original = copyBtn.textContent;
         copyBtn.textContent = ok ? '✓ Copiado' : 'Copiar manualmente';
         setTimeout(() => { copyBtn.textContent = original; }, 1800);
       });
-
       card.appendChild(box);
+      updateResultBadge(card, ticket);
     });
   }
 
@@ -204,10 +234,9 @@
       if (currentStatus === 'RUNNING') setRunState('Analisando jogos de hoje...');
       else if (currentStatus === 'SUCCESS') {
         const count = Number(state.tickets_ready || 0);
-        setRunState(`API ativa • ${count}/3 bilhetes prontos`);
-      } else if (currentStatus === 'WAITING_FOR_API_KEY') {
-        setRunState('Falta configurar a API no GitHub');
-      } else if (currentStatus === 'FAILED') setRunState('Última análise falhou • ver Actions');
+        setRunState(`API ativa • ${count}/3 bilhetes oficiais`);
+      } else if (currentStatus === 'WAITING_FOR_API_KEY') setRunState('Falta configurar a API no GitHub');
+      else if (currentStatus === 'FAILED') setRunState('Última análise falhou • ver Actions');
       else setRunState('Motor GitHub ativo');
     } catch (_) {
       setRunState('Motor GitHub ativo');
@@ -215,14 +244,13 @@
     }
   }
 
+  ensureManagementNav();
   if (ticketList) {
     const observer = new MutationObserver(() => enhanceTickets());
     observer.observe(ticketList, { childList: true, subtree: true });
   }
-
   if (analyzeBtn) configureMainButton(null);
   if (refreshBtn) refreshBtn.onclick = () => location.reload();
-
   syncState();
   refreshTicketData();
   setInterval(syncState, 30000);
