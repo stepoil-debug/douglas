@@ -2238,7 +2238,7 @@
   "predictions_available": 10,
   "rejected": [],
   "settlement": {
-    "checked_at": "2026-08-18T20:20:15.603557-03:00",
+    "checked_at": "2026-08-18T20:25:02.643689-03:00",
     "complete": false,
     "green": 0,
     "pending": 3,
