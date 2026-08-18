@@ -16,6 +16,7 @@ TZ = ZoneInfo("America/Sao_Paulo")
 ROOT = Path(__file__).resolve().parents[2]
 DASHBOARD = ROOT / "dashboard"
 HISTORY = ROOT / "data" / "football" / "history"
+# Any change in this module triggers the GitHub-only analysis workflow.
 
 
 def now() -> datetime:
@@ -134,8 +135,6 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
             matches.append(summarize_match(fixture, prediction, legs))
             tickets = build_tickets(all_legs, target=TARGET_TICKETS)
 
-            # Mesmo tendo 3 combinações cedo, avalia pelo menos 10 jogos fortes para evitar
-            # selecionar os primeiros disponíveis em vez dos melhores do slate.
             if len(tickets) >= TARGET_TICKETS and index >= 9:
                 break
 
