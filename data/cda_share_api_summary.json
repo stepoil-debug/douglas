@@ -1,0 +1,84 @@
+{
+  "ok": true,
+  "endpoint": "https://casadeapostas.bet.br/api/bets/sharebets",
+  "cookieNames": [
+    "sid",
+    "__cf_bm",
+    "CLID",
+    "pending_tracking",
+    "_clck",
+    "MUID",
+    "MR",
+    "SRM_B",
+    "SM",
+    "MUID",
+    "MR",
+    "ANONCHK",
+    "__smartico_ls_id",
+    "__smartico_ls_create_t",
+    "__smartico_ls_use_t",
+    "_clsk",
+    "AWSALBCORS",
+    "_93249",
+    "_ttp",
+    "_tt_enable_cookie",
+    "_ttp",
+    "_ga_LH0CMRQR0G",
+    "_ga",
+    "_gcl_au",
+    "_fbp",
+    "test_cookie",
+    "AdoptConsent",
+    "AdoptVisitorId",
+    "ttcsid",
+    "ttcsid_D2AFQLRC77U4ENLN7BAG",
+    "ttcsid_D2AGCOJC77U9B02LP1CG",
+    "ttcsid_D2AH25RC77U7U0ICT4R0",
+    "ttcsid_D2AH3F3C77U4ENLN7CJ0",
+    "ttcsid_D2AH683C77U9TM7VUAUG",
+    "ttcsid_D7BQMO3C77UA7GO30P60",
+    "ttcsid_D7BQNUBC77UFKKV3AA0G"
+  ],
+  "tests": [
+    {
+      "method": "GET",
+      "error": "r.allHeaders is not a function",
+      "text": ""
+    },
+    {
+      "method": "POST",
+      "error": "r.allHeaders is not a function",
+      "text": ""
+    },
+    {
+      "method": "POST",
+      "error": "r.allHeaders is not a function",
+      "text": ""
+    },
+    {
+      "method": "POST",
+      "error": "r.allHeaders is not a function",
+      "text": ""
+    },
+    {
+      "method": "POST",
+      "error": "r.allHeaders is not a function",
+      "text": ""
+    },
+    {
+      "method": "POST",
+      "error": "r.allHeaders is not a function",
+      "text": ""
+    },
+    {
+      "method": "POST",
+      "error": "r.allHeaders is not a function",
+      "text": ""
+    },
+    {
+      "method": "POST",
+      "error": "r.allHeaders is not a function",
+      "text": ""
+    }
+  ]
+}

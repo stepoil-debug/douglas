@@ -1,0 +1,34 @@
+[
+  {
+    "method": "GET",
+    "error": "r.allHeaders is not a function"
+  },
+  {
+    "method": "POST",
+    "error": "r.allHeaders is not a function"
+  },
+  {
+    "method": "POST",
+    "error": "r.allHeaders is not a function"
+  },
+  {
+    "method": "POST",
+    "error": "r.allHeaders is not a function"
+  },
+  {
+    "method": "POST",
+    "error": "r.allHeaders is not a function"
+  },
+  {
+    "method": "POST",
+    "error": "r.allHeaders is not a function"
+  },
+  {
+    "method": "POST",
+    "error": "r.allHeaders is not a function"
+  },
+  {
+    "method": "POST",
+    "error": "r.allHeaders is not a function"
+  }
+]
