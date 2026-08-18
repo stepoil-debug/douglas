@@ -25,18 +25,23 @@ jobs:
           python-version: '3.12'
       - name: Compile football engine
         run: python -m compileall -q src/football_quant
-      - name: Football engine smoke test
+      - name: Same-day ticket builder smoke test
         env:
           PYTHONPATH: .
         run: |
           python - <<'PY'
-          from src.football_quant.analyzer import pct, rank_analyses
+          from src.football_quant.ticket_builder import build_tickets, pct
           assert pct('60%') == 0.6
-          approved, rejected = rank_analyses([
-              {'decision':'APPROVED','score':82,'edge':0.08,'odd':1.70},
-              {'decision':'REJECTED','score':55,'probability':0.52}
-          ])
-          assert len(approved) == 1 and approved[0]['rank'] == 1
-          assert len(rejected) == 1
-          print('Football engine OK')
+          legs = [
+              {'fixture_id':1,'market':'Dupla chance','selection':'A ou empate','odd':1.28,'model_probability':0.82,'score':82},
+              {'fixture_id':2,'market':'Mais de gols','selection':'Mais de 1.5','odd':1.30,'model_probability':0.81,'score':81},
+              {'fixture_id':3,'market':'Dupla chance','selection':'C ou empate','odd':1.31,'model_probability':0.80,'score':80},
+              {'fixture_id':4,'market':'Menos de gols','selection':'Menos de 4.5','odd':1.27,'model_probability':0.84,'score':84},
+              {'fixture_id':5,'market':'Vencedor','selection':'E','odd':1.72,'model_probability':0.64,'score':74},
+          ]
+          tickets = build_tickets(legs, target=3)
+          assert len(tickets) == 3
+          assert all(1.50 <= t['total_odd'] <= 2.00 for t in tickets)
+          assert all(1 <= len(t['legs']) <= 2 for t in tickets)
+          print('3-ticket engine OK')
           PY
