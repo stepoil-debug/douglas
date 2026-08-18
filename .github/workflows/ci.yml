@@ -32,16 +32,32 @@ jobs:
           python - <<'PY'
           from src.football_quant.ticket_builder import build_tickets, pct
           assert pct('60%') == 0.6
+          def leg(fid, market, selection, price, probability, score):
+              return {
+                  'fixture_id': fid,
+                  'market': market,
+                  'selection': selection,
+                  'odd': price,
+                  'model_probability': probability,
+                  'score': score,
+                  'signal_source': 'MODEL+MARKET',
+                  'bookmaker_quotes': {
+                      'Book A': price,
+                      'Book B': round(price - 0.01, 2),
+                  },
+              }
           legs = [
-              {'fixture_id':1,'market':'Dupla chance','selection':'A ou empate','odd':1.28,'model_probability':0.82,'score':82},
-              {'fixture_id':2,'market':'Mais de gols','selection':'Mais de 1.5','odd':1.30,'model_probability':0.81,'score':81},
-              {'fixture_id':3,'market':'Dupla chance','selection':'C ou empate','odd':1.31,'model_probability':0.80,'score':80},
-              {'fixture_id':4,'market':'Menos de gols','selection':'Menos de 4.5','odd':1.27,'model_probability':0.84,'score':84},
-              {'fixture_id':5,'market':'Vencedor','selection':'E','odd':1.72,'model_probability':0.64,'score':74},
+              leg(1,'Dupla chance','A ou empate',1.28,0.82,82),
+              leg(2,'Total de gols','Mais de 1.5',1.30,0.81,81),
+              leg(3,'Dupla chance','C ou empate',1.31,0.80,80),
+              leg(4,'Total de gols','Menos de 4.5',1.27,0.84,84),
+              leg(5,'Vencedor','E',1.72,0.64,74),
           ]
           tickets = build_tickets(legs, target=3)
-          assert len(tickets) == 3
+          assert len(tickets) == 3, tickets
           assert all(1.50 <= t['total_odd'] <= 2.00 for t in tickets)
           assert all(1 <= len(t['legs']) <= 2 for t in tickets)
-          print('3-ticket engine OK')
+          assert all(t['bookmaker'] in {'Book A','Book B'} for t in tickets)
+          assert all(len({leg['bookmaker'] for leg in t['legs']}) == 1 for t in tickets)
+          print('3 executable tickets OK')
           PY
