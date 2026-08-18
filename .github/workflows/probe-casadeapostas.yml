@@ -7,6 +7,7 @@ on:
       - 'scripts/probe_casadeapostas.mjs'
       - 'scripts/probe_cda_slip_controls.mjs'
       - 'scripts/probe_cda_share_bundles.mjs'
+      - 'scripts/probe_cda_share_endpoint.mjs'
       - '.github/workflows/probe-casadeapostas.yml'
   workflow_dispatch:
 
@@ -16,7 +17,7 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 18
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
@@ -36,6 +37,8 @@ jobs:
         run: node scripts/probe_cda_slip_controls.mjs
       - name: Inspect public JS share implementation
         run: node scripts/probe_cda_share_bundles.mjs
+      - name: Extract sharebets endpoint contract
+        run: node scripts/probe_cda_share_endpoint.mjs
       - name: Persist probe summary
         if: always()
         shell: bash
@@ -49,7 +52,8 @@ jobs:
           [ -f artifacts/cda-probe/controls_summary.json ] && cp artifacts/cda-probe/controls_summary.json data/cda_controls_summary.json || true
           [ -f artifacts/cda-probe/slip_controls_full.json ] && cp artifacts/cda-probe/slip_controls_full.json data/cda_slip_controls.json || true
           [ -f artifacts/cda-share-bundles/summary.json ] && cp artifacts/cda-share-bundles/summary.json data/cda_share_bundle_summary.json || true
-          [ -f artifacts/cda-share-bundles/hits.json ] && cp artifacts/cda-share-bundles/hits.json data/cda_share_bundle_hits.json || true
+          [ -f artifacts/cda-share-endpoint/summary.json ] && cp artifacts/cda-share-endpoint/summary.json data/cda_share_endpoint_summary.json || true
+          [ -f artifacts/cda-share-endpoint/endpoint_matches.json ] && cp artifacts/cda-share-endpoint/endpoint_matches.json data/cda_share_endpoint_matches.json || true
           git config user.name 'investbet-probe-bot'
           git config user.email 'investbet-probe-bot@users.noreply.github.com'
           git add data/cda_*.json || true
@@ -66,5 +70,6 @@ jobs:
           path: |
             artifacts/cda-probe
             artifacts/cda-share-bundles
+            artifacts/cda-share-endpoint
           if-no-files-found: warn
           retention-days: 3
