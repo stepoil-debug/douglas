@@ -4,11 +4,17 @@ on:
   workflow_dispatch:
     inputs:
       date:
-        description: 'Data do board (YYYY-MM-DD). Vazio = amanhã em America/Sao_Paulo'
+        description: 'Data do board (YYYY-MM-DD). Vazio = hoje em America/Sao_Paulo'
         required: false
         type: string
   schedule:
-    - cron: '7,37 * * * *'
+    # API-Football pre-match odds update roughly every 3h; keep the board fresh without wasting quota.
+    - cron: '17 */3 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'src/football_quant/**'
+      - '.github/workflows/analyze-football.yml'
 
 permissions:
   contents: write
@@ -20,7 +26,16 @@ concurrency:
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
+    env:
+      KEY_PRIMARY: ${{ secrets.API_FOOTBALL_KEY }}
+      KEY_ALIAS_1: ${{ secrets.API_SPORTS_KEY }}
+      KEY_ALIAS_2: ${{ secrets.FOOTBALL_API_KEY }}
+      KEY_ALIAS_3: ${{ secrets.APISPORTS_KEY }}
+      FOOTBALL_MAX_CANDIDATES: '18'
+      FOOTBALL_MAX_ODDS_PAGES: '10'
+      INPUT_DATE: ${{ github.event.inputs.date || '' }}
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,11 +46,23 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Analyze football fixtures
-        env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
-          FOOTBALL_MAX_CANDIDATES: '18'
-          INPUT_DATE: ${{ github.event.inputs.date || '' }}
+      - name: Resolve API-Football secret without exposing it
+        shell: bash
+        run: |
+          set -euo pipefail
+          key="${KEY_PRIMARY:-}"
+          [ -n "$key" ] || key="${KEY_ALIAS_1:-}"
+          [ -n "$key" ] || key="${KEY_ALIAS_2:-}"
+          [ -n "$key" ] || key="${KEY_ALIAS_3:-}"
+          if [ -n "$key" ]; then
+            echo '::add-mask::'$key
+            echo "API_FOOTBALL_KEY=$key" >> "$GITHUB_ENV"
+            echo 'API-Football credential resolved.'
+          else
+            echo 'No compatible API-Football secret was found.'
+          fi
+
+      - name: Analyze today's football slate
         shell: bash
         run: |
           set -euo pipefail
@@ -56,6 +83,6 @@ jobs:
             echo 'No data changes to commit.'
             exit 0
           fi
-          git commit -m 'data: update InvestBet football analysis'
+          git commit -m 'data: update same-day football tickets'
           git pull --rebase origin main
           git push origin HEAD:main
