@@ -12,28 +12,27 @@ const page = await context.newPage();
 
 try {
   await page.goto(`${BASE}/br/sports`, { waitUntil: 'domcontentloaded', timeout: 60000 });
-  await page.waitForTimeout(9000);
+  await page.waitForTimeout(6500);
   const resources = await page.evaluate(() => performance.getEntriesByType('resource').map(r => r.name));
   const scripts = await page.evaluate(() => [...document.scripts].map(s => s.src).filter(Boolean));
-  const jsUrls = [...new Set([...scripts, ...resources.filter(u => /\.js(?:\?|$)/i.test(u))])].slice(0, 100);
+  const jsUrls = [...new Set([...scripts, ...resources.filter(u => /\.js(?:\?|$)/i.test(u))])].slice(0, 30);
 
   const terms = [
-    'sharebet', 'share bet', 'sharebetslip', 'share betslip', 'shareSlip', 'shareBetslip',
-    'bookingcode', 'booking code', 'bookcode', 'betSlipShare', 'betslip/share',
+    'sharebet', 'share bet', 'sharebetslip', 'share betslip', 'shareslip', 'sharebetslip',
+    'bookingcode', 'booking code', 'bookcode', 'betslipshare', 'betslip/share',
     'copy link', 'copiar link', 'compartilhar', 'share', 'betslip'
   ];
   const hits = [];
   let scanned = 0;
 
   const chunks = [];
-  for (let i = 0; i < jsUrls.length; i += 8) chunks.push(jsUrls.slice(i, i + 8));
+  for (let i = 0; i < jsUrls.length; i += 6) chunks.push(jsUrls.slice(i, i + 6));
   for (const chunk of chunks) {
     const results = await Promise.all(chunk.map(async url => {
       try {
-        const res = await context.request.get(url, { timeout: 12000 });
+        const res = await context.request.get(url, { timeout: 7000 });
         if (!res.ok()) return null;
-        const text = await res.text();
-        return { url, text };
+        return { url, text: await res.text() };
       } catch { return null; }
     }));
     for (const item of results.filter(Boolean)) {
@@ -42,14 +41,10 @@ try {
       for (const raw of terms) {
         const term = raw.toLowerCase();
         let pos = 0, count = 0;
-        while (count < 10) {
+        while (count < 8) {
           const idx = lower.indexOf(term, pos);
           if (idx < 0) break;
-          hits.push({
-            script: item.url,
-            term: raw,
-            snippet: item.text.slice(Math.max(0, idx - 1400), Math.min(item.text.length, idx + 3000)),
-          });
+          hits.push({ script: item.url, term: raw, snippet: item.text.slice(Math.max(0, idx - 1600), Math.min(item.text.length, idx + 3400)) });
           pos = idx + term.length;
           count++;
         }
@@ -60,8 +55,7 @@ try {
   const endpointRegex = /https?:\\?\/\\?\/[A-Za-z0-9._~:/?#\[\]@!$&'()*+,;=%-]+|\/[A-Za-z0-9._~/-]*(?:share|bet.?slip|booking|coupon|cupom)[A-Za-z0-9._~/?=&%-]*/ig;
   const endpoints = [];
   for (const hit of hits) {
-    const found = hit.snippet.match(endpointRegex) || [];
-    for (const value of found) endpoints.push(value.replace(/\\\//g, '/'));
+    for (const value of (hit.snippet.match(endpointRegex) || [])) endpoints.push(value.replace(/\\\//g, '/'));
   }
 
   const summary = {
