@@ -1,0 +1,101 @@
+name: Apply football diversification patch
+
+on:
+  push:
+    branches:
+      - fix/football-ticket-diversification
+    paths:
+      - '.github/workflows/apply-football-diversification-patch.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/football-ticket-diversification
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply targeted engine patch
+        run: python scripts/apply_football_diversification_patch.py
+
+      - name: Compile football engine
+        run: python -m compileall -q src/football_quant
+
+      - name: Validate exclusive fixtures
+        env:
+          PYTHONPATH: .
+        run: |
+          python - <<'PY'
+          from src.football_quant.ticket_builder import build_tickets
+          def leg(fid, market, selection, price, probability, score):
+              return {
+                  'fixture_id': fid,
+                  'market': market,
+                  'selection': selection,
+                  'odd': price,
+                  'model_probability': probability,
+                  'score': score,
+                  'signal_source': 'MODEL+MARKET',
+                  'bookmaker_quotes': {'Book A': price, 'Book B': round(price - 0.01, 2)},
+              }
+          legs = [
+              leg(1,'Dupla chance','A ou empate',1.28,0.82,82),
+              leg(2,'Total de gols','Mais de 1.5',1.30,0.81,81),
+              leg(3,'Dupla chance','C ou empate',1.31,0.80,80),
+              leg(4,'Total de gols','Menos de 4.5',1.27,0.84,84),
+              leg(5,'Vencedor','E',1.72,0.64,74),
+          ]
+          tickets = build_tickets(legs, target=3)
+          assert len(tickets) == 3, tickets
+          fixture_ids = [leg['fixture_id'] for ticket in tickets for leg in ticket['legs']]
+          assert len(fixture_ids) == len(set(fixture_ids)), tickets
+          print('exclusive fixtures:', fixture_ids)
+          PY
+
+      - name: Validate coarse cup probability guard
+        env:
+          PYTHONPATH: .
+        run: |
+          python - <<'PY'
+          from src.football_quant.ticket_builder import build_legs
+          fixture = {
+              'fixture': {'id': 99, 'status': {'short': 'NS'}, 'date': '2026-08-18T13:30:00-03:00'},
+              'league': {'name': 'Svenska Cupen', 'country': 'Sweden', 'type': 'Cup'},
+              'teams': {'home': {'name': 'Karlberg'}, 'away': {'name': 'IK brage'}},
+          }
+          prediction = {
+              'predictions': {
+                  'percent': {'home': '0%', 'draw': '50%', 'away': '50%'},
+                  'advice': 'draw or IK brage',
+                  'under_over': '-2.5',
+              },
+              'comparison': {},
+          }
+          odds = {'bookmakers': []}
+          for i, odd in enumerate([1.36,1.32,1.28,1.20,1.32,1.36,1.32,1.32,1.27,1.35]):
+              odds['bookmakers'].append({
+                  'name': f'B{i}',
+                  'bets': [{'name': 'Double Chance', 'values': [{'value': 'Draw/Away', 'odd': odd}]}],
+              })
+          legs = build_legs(fixture, prediction, odds)
+          assert not any(leg['market'] == 'Dupla chance' for leg in legs), legs
+          print('coarse cup X2 correctly rejected')
+          PY
+
+      - name: Commit final engine changes
+        run: |
+          rm -f scripts/apply_football_diversification_patch.py
+          rm -f .github/workflows/apply-football-diversification-patch.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/football_quant/ticket_builder.py .github/workflows/ci.yml scripts/apply_football_diversification_patch.py .github/workflows/apply-football-diversification-patch.yml
+          git commit -m 'fix: diversify football tickets and tighten risk filters'
+          git push origin HEAD:fix/football-ticket-diversification
