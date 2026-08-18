@@ -1685,9 +1685,9 @@
     }
   ],
   "api_minute_limit": 300,
-  "api_minute_remaining": 295,
+  "api_minute_remaining": 291,
   "api_requests": 17,
-  "api_requests_remaining": 6847,
+  "api_requests_remaining": 6828,
   "approved": [
     {
       "bookmaker": "William Hill",
@@ -1974,7 +1974,7 @@
     "tickets_miss": 0,
     "tickets_resolved": 0
   },
-  "last_run_at": "2026-08-18T11:08:30.491318-03:00",
+  "last_run_at": "2026-08-18T11:27:55.410792-03:00",
   "matches_with_odds": 60,
   "model_version": "football-3tickets-v2.2",
   "operational_date": "2026-08-18",
