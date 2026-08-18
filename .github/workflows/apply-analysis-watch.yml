@@ -1,5 +1,6 @@
 name: Apply InvestBet Analysis Watcher
 
+# Atualização desta rotina força a aplicação do watcher no dashboard.
 on:
   push:
     branches: [main]
