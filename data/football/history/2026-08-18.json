@@ -1741,7 +1741,7 @@
           "result_score": "1-4",
           "score": 79.1,
           "selection": "Orebro SK ou empate",
-          "settled_at": "2026-08-18T15:52:59.230635-03:00",
+          "settled_at": "2026-08-18T16:03:21.354124-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "GREEN"
         },
@@ -1840,7 +1840,7 @@
           "result_score": "1-4",
           "score": 79.1,
           "selection": "Orebro SK ou empate",
-          "settled_at": "2026-08-18T15:52:59.230773-03:00",
+          "settled_at": "2026-08-18T16:03:21.354290-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "GREEN"
         },
@@ -1880,7 +1880,7 @@
           "result_score": "2-0",
           "score": 78.4,
           "selection": "IK brage ou empate",
-          "settled_at": "2026-08-18T15:52:59.230793-03:00",
+          "settled_at": "2026-08-18T16:03:21.354326-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "RED"
         }
@@ -1889,7 +1889,7 @@
       "quality_tier": "STRICT",
       "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.8,
-      "settled_at": "2026-08-18T15:52:59.230809-03:00",
+      "settled_at": "2026-08-18T16:03:21.354353-03:00",
       "status": "RED",
       "ticket_id": "B2",
       "total_odd": 1.54
@@ -1980,7 +1980,7 @@
           "result_score": "2-0",
           "score": 78.4,
           "selection": "IK brage ou empate",
-          "settled_at": "2026-08-18T15:52:59.230816-03:00",
+          "settled_at": "2026-08-18T16:03:21.354365-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "RED"
         }
@@ -1989,7 +1989,7 @@
       "quality_tier": "STRICT",
       "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.5,
-      "settled_at": "2026-08-18T15:52:59.230831-03:00",
+      "settled_at": "2026-08-18T16:03:21.354390-03:00",
       "status": "RED",
       "ticket_id": "B3",
       "total_odd": 1.73
@@ -2049,7 +2049,7 @@
   "predictions_available": 10,
   "rejected": [],
   "settlement": {
-    "checked_at": "2026-08-18T15:52:59.230842-03:00",
+    "checked_at": "2026-08-18T16:03:21.354407-03:00",
     "complete": false,
     "green": 0,
     "pending": 1,
@@ -2111,7 +2111,7 @@
           "result_score": "1-4",
           "score": 79.1,
           "selection": "Orebro SK ou empate",
-          "settled_at": "2026-08-18T15:52:59.230635-03:00",
+          "settled_at": "2026-08-18T16:03:21.354124-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "GREEN"
         },
@@ -2210,7 +2210,7 @@
           "result_score": "1-4",
           "score": 79.1,
           "selection": "Orebro SK ou empate",
-          "settled_at": "2026-08-18T15:52:59.230773-03:00",
+          "settled_at": "2026-08-18T16:03:21.354290-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "GREEN"
         },
@@ -2250,7 +2250,7 @@
           "result_score": "2-0",
           "score": 78.4,
           "selection": "IK brage ou empate",
-          "settled_at": "2026-08-18T15:52:59.230793-03:00",
+          "settled_at": "2026-08-18T16:03:21.354326-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "RED"
         }
@@ -2259,7 +2259,7 @@
       "quality_tier": "STRICT",
       "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.8,
-      "settled_at": "2026-08-18T15:52:59.230809-03:00",
+      "settled_at": "2026-08-18T16:03:21.354353-03:00",
       "status": "RED",
       "ticket_id": "B2",
       "total_odd": 1.54
@@ -2350,7 +2350,7 @@
           "result_score": "2-0",
           "score": 78.4,
           "selection": "IK brage ou empate",
-          "settled_at": "2026-08-18T15:52:59.230816-03:00",
+          "settled_at": "2026-08-18T16:03:21.354365-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "RED"
         }
@@ -2359,7 +2359,7 @@
       "quality_tier": "STRICT",
       "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.5,
-      "settled_at": "2026-08-18T15:52:59.230831-03:00",
+      "settled_at": "2026-08-18T16:03:21.354390-03:00",
       "status": "RED",
       "ticket_id": "B3",
       "total_odd": 1.73
