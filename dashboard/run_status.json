@@ -1,16 +1,16 @@
 {
-  "board_date": "2026-08-18",
+  "board_date": "2026-08-19",
   "board_mode": "TODAY",
   "board_status": "READY",
   "execution_bookmaker": "Betano",
   "execution_ready": true,
   "fixtures_analyzed": 10,
-  "fixtures_found": 197,
+  "fixtures_found": 365,
   "message": "3 bilhetes Betano oficiais do dia estão publicados e travados para conferência de resultado.",
   "sport": "football",
   "status": "SUCCESS",
   "target_tickets": 3,
   "ticket_lock": true,
   "tickets_ready": 3,
-  "updated_at": "2026-08-18T20:25:02.284490-03:00"
+  "updated_at": "2026-08-18T20:39:58.069215-03:00"
 }
