@@ -4,13 +4,13 @@ import argparse
 import json
 import os
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
-from .analyzer import TOP_LIMIT, analyze_fixture, eligible_fixtures, rank_analyses
-from .api_football import ApiFootballClient, ApiFootballError
+from .api_football import ApiFootballClient, ApiFootballError, fixture_id_from_odds
+from .ticket_builder import TARGET_TICKETS, build_legs, build_tickets, rank_fixture_candidates, summarize_match
 
 TZ = ZoneInfo("America/Sao_Paulo")
 ROOT = Path(__file__).resolve().parents[2]
@@ -38,136 +38,209 @@ def status(state: str, **extra: Any) -> None:
 
 
 def historical_summary() -> dict[str, Any]:
-    resolved = hits = misses = 0
+    resolved = hits = misses = tickets_resolved = tickets_hit = tickets_miss = 0
     if not HISTORY.exists():
-        return {"resolved": 0, "hits": 0, "misses": 0, "accuracy": None}
+        return {
+            "resolved": 0, "hits": 0, "misses": 0, "accuracy": None,
+            "tickets_resolved": 0, "tickets_hit": 0, "tickets_miss": 0, "ticket_accuracy": None,
+        }
     for path in HISTORY.glob("*.json"):
         try:
             row = json.loads(path.read_text(encoding="utf-8"))
         except Exception:
             continue
-        for match in row.get("approved") or []:
-            match_status = str(match.get("status") or "").upper()
-            if match_status in {"HIT", "GREEN"}:
-                resolved += 1
-                hits += 1
-            elif match_status in {"MISS", "RED"}:
-                resolved += 1
-                misses += 1
+        for ticket in row.get("tickets") or []:
+            ticket_status = str(ticket.get("status") or "").upper()
+            if ticket_status in {"HIT", "GREEN"}:
+                tickets_resolved += 1
+                tickets_hit += 1
+            elif ticket_status in {"MISS", "RED"}:
+                tickets_resolved += 1
+                tickets_miss += 1
+            for leg in ticket.get("legs") or []:
+                leg_status = str(leg.get("status") or "").upper()
+                if leg_status in {"HIT", "GREEN"}:
+                    resolved += 1
+                    hits += 1
+                elif leg_status in {"MISS", "RED"}:
+                    resolved += 1
+                    misses += 1
     return {
         "resolved": resolved,
         "hits": hits,
         "misses": misses,
         "accuracy": (hits / resolved) if resolved else None,
+        "tickets_resolved": tickets_resolved,
+        "tickets_hit": tickets_hit,
+        "tickets_miss": tickets_miss,
+        "ticket_accuracy": (tickets_hit / tickets_resolved) if tickets_resolved else None,
     }
 
 
-def run(target_date: str, max_candidates: int) -> int:
-    started = now()
-    status("RUNNING", board_date=target_date, message="Buscando agenda, odds e previsões de futebol")
+def _resolve_api_key() -> str:
+    for name in ("API_FOOTBALL_KEY", "API_SPORTS_KEY", "FOOTBALL_API_KEY", "APISPORTS_KEY"):
+        value = os.getenv(name, "").strip()
+        if value:
+            return value
+    return ""
 
-    api_key = os.getenv("API_FOOTBALL_KEY", "").strip()
+
+def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
+    started = now()
+    status(
+        "RUNNING",
+        board_date=target_date,
+        board_mode="TODAY",
+        message="Analisando jogos de hoje e montando 3 bilhetes entre odd 1.50 e 2.00",
+    )
+
+    api_key = _resolve_api_key()
     if not api_key:
         status(
             "WAITING_FOR_API_KEY",
             board_date=target_date,
-            message="API_FOOTBALL_KEY ainda não está configurada nos Secrets do GitHub Actions",
+            board_mode="TODAY",
+            message="Configure API_FOOTBALL_KEY (ou API_SPORTS_KEY) nos Secrets do repositório para ativar dados reais.",
         )
         return 0
 
     try:
         client = ApiFootballClient(api_key)
         fixtures = client.fixtures_by_date(target_date)
-        candidates = eligible_fixtures(fixtures, max_candidates=max_candidates)
-        analyses: list[dict[str, Any]] = []
+        odds_rows = client.odds_by_date(target_date, max_pages=max_odds_pages)
+        odds_by_fixture: dict[int, dict[str, Any]] = {}
+        for row in odds_rows:
+            fixture_id = fixture_id_from_odds(row)
+            if fixture_id:
+                odds_by_fixture[fixture_id] = row
 
-        for fixture_row in candidates:
-            fixture_id = int((fixture_row.get("fixture") or {}).get("id"))
+        ranked = rank_fixture_candidates(fixtures, odds_by_fixture, max_candidates=max_candidates)
+        matches: list[dict[str, Any]] = []
+        all_legs: list[dict[str, Any]] = []
+        tickets: list[dict[str, Any]] = []
+        prediction_available = 0
+
+        # Analyze the strongest priced fixtures first. Continue until the board has enough depth,
+        # not merely until the first three combinations appear.
+        for index, fixture in enumerate(ranked):
+            info = fixture.get("fixture") or {}
+            fixture_id = int(info.get("id"))
+            prediction = None
             try:
                 prediction = client.prediction_for_fixture(fixture_id)
-                odds = client.odds_for_fixture(fixture_id)
-                analyses.append(analyze_fixture(fixture_row, prediction, odds))
-            except ApiFootballError as exc:
-                fixture = fixture_row.get("fixture") or {}
-                teams = fixture_row.get("teams") or {}
-                analyses.append(
-                    {
-                        "fixture_id": fixture.get("id"),
-                        "kickoff_iso": fixture.get("date"),
-                        "league": (fixture_row.get("league") or {}).get("name") or "",
-                        "country": (fixture_row.get("league") or {}).get("country") or "",
-                        "home_team": (teams.get("home") or {}).get("name") or "Mandante",
-                        "away_team": (teams.get("away") or {}).get("name") or "Visitante",
-                        "decision": "REJECTED",
-                        "status": "REJECTED",
-                        "score": 0,
-                        "reasons": [str(exc)],
-                    }
-                )
+            except ApiFootballError:
+                prediction = None
+            if prediction:
+                prediction_available += 1
+            legs = build_legs(fixture, prediction, odds_by_fixture.get(fixture_id))
+            all_legs.extend(legs)
+            matches.append(summarize_match(fixture, prediction, legs))
+            tickets = build_tickets(all_legs, target=TARGET_TICKETS)
 
-        approved, rejected = rank_analyses(analyses, top_limit=TOP_LIMIT)
-        with_odds = sum(1 for row in analyses if row.get("odd"))
-        deep = sum(1 for row in analyses if row.get("probability") is not None and row.get("odd"))
+            # Minimum depth = 10 fixtures with predictions when available. After that, three valid
+            # tickets are enough to stop spending quota. If the slate is thin, continue to the cap.
+            if len(tickets) >= TARGET_TICKETS and index >= 9:
+                break
+
         history = historical_summary()
         finished = now()
+        matches_with_markets = len(odds_by_fixture)
+        usable_matches = sum(1 for row in matches if row.get("decision") == "USABLE")
+        strict_tickets = sum(1 for row in tickets if row.get("quality_tier") == "STRICT")
 
+        board_status = "READY" if len(tickets) >= TARGET_TICKETS else ("PARTIAL" if tickets else "NO_TICKETS")
         payload = {
             "sport": "football",
-            "model_version": "football-selective-v1.0",
+            "model_version": "football-3tickets-v2.0",
             "data_mode": "API_FOOTBALL",
-            "data_sources": ["API-Football fixtures", "API-Football predictions", "API-Football pre-match odds"],
+            "data_sources": [
+                "API-Football fixtures",
+                "API-Football predictions/comparison/H2H",
+                "API-Football pre-match bookmaker odds",
+            ],
             "operational_date": started.date().isoformat(),
             "board_date": target_date,
-            "board_mode": "D+1",
-            "board_status": "READY" if analyses else "NO_FIXTURES",
+            "board_mode": "TODAY",
+            "board_status": board_status,
             "last_run_at": finished.isoformat(),
             "fixtures_found": len(fixtures),
-            "fixtures_analyzed": len(analyses),
-            "matches_with_odds": with_odds,
-            "deep_analyzed_matches": deep,
-            "approved": approved,
-            "rejected": rejected,
-            "all_matches": analyses,
-            "top_limit": TOP_LIMIT,
+            "fixtures_with_markets": matches_with_markets,
+            "fixtures_ranked": len(ranked),
+            "fixtures_analyzed": len(matches),
+            "predictions_available": prediction_available,
+            "usable_matches": usable_matches,
+            "eligible_legs": len(all_legs),
+            "tickets": tickets,
+            "tickets_ready": len(tickets),
+            "ticket_target": TARGET_TICKETS,
+            "strict_tickets": strict_tickets,
+            "all_matches": matches,
             "history_summary": history,
             "api_requests": client.request_count,
+            "api_requests_remaining": client.remaining_requests,
             "criteria": {
-                "market": "Vencedor da partida (1X2)",
-                "odd_range": "1.50-2.00",
-                "min_probability": 0.58,
-                "min_edge": 0.03,
-                "min_score": 70,
+                "ticket_odd_range": "1.50-2.00",
+                "ticket_target": TARGET_TICKETS,
+                "same_day_only": True,
+                "max_legs": 2,
+                "markets": [
+                    "Vencedor da partida",
+                    "Dupla chance",
+                    "Mais de 1.5 gols",
+                    "Menos de 4.5 gols",
+                    "Equipe favorita marca 1+ gol",
+                ],
+                "method": "previsão + força comparativa + H2H incorporado + odds reais + diversificação",
             },
+            # Compatibility aliases for the previous dashboard version.
+            "approved": tickets,
+            "rejected": [row for row in matches if row.get("decision") != "USABLE"],
+            "matches_with_odds": matches_with_markets,
+            "deep_analyzed_matches": prediction_available,
+            "top_limit": TARGET_TICKETS,
         }
         dump(DASHBOARD / "data.json", payload)
         dump(HISTORY / f"{target_date}.json", payload)
+
+        message = (
+            f"3 bilhetes prontos para hoje ({strict_tickets} em filtro estrito)."
+            if len(tickets) >= TARGET_TICKETS
+            else f"Somente {len(tickets)} bilhete(s) atingiram odd 1.50-2.00 com dados disponíveis; nenhum mercado foi inventado."
+        )
         status(
             "SUCCESS",
             board_date=target_date,
-            board_status=payload["board_status"],
+            board_mode="TODAY",
+            board_status=board_status,
             fixtures_found=len(fixtures),
-            fixtures_analyzed=len(analyses),
-            approved=len(approved),
+            fixtures_analyzed=len(matches),
+            tickets_ready=len(tickets),
+            target_tickets=TARGET_TICKETS,
             api_requests=client.request_count,
-            message="Análise de futebol concluída",
+            message=message,
         )
         return 0
     except ApiFootballError as exc:
-        status("FAILED", board_date=target_date, message=str(exc))
+        status("FAILED", board_date=target_date, board_mode="TODAY", message=str(exc))
         print(str(exc), file=sys.stderr)
         return 1
     except Exception as exc:
-        status("FAILED", board_date=target_date, message=f"Unexpected error: {exc}")
+        status("FAILED", board_date=target_date, board_mode="TODAY", message=f"Unexpected error: {exc}")
         raise
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="InvestBet football D+1 analyzer")
-    parser.add_argument("--date", help="Board date YYYY-MM-DD. Defaults to tomorrow in America/Sao_Paulo")
+    parser = argparse.ArgumentParser(description="InvestBet same-day football ticket analyzer")
+    parser.add_argument("--date", help="Data YYYY-MM-DD. Padrão: hoje em America/Sao_Paulo")
     parser.add_argument("--max-candidates", type=int, default=int(os.getenv("FOOTBALL_MAX_CANDIDATES", "18")))
+    parser.add_argument("--max-odds-pages", type=int, default=int(os.getenv("FOOTBALL_MAX_ODDS_PAGES", "10")))
     args = parser.parse_args()
-    target = args.date or (now().date() + timedelta(days=1)).isoformat()
-    return run(target, max_candidates=max(1, min(args.max_candidates, 30)))
+    target = args.date or now().date().isoformat()
+    return run(
+        target,
+        max_candidates=max(10, min(args.max_candidates, 30)),
+        max_odds_pages=max(1, min(args.max_odds_pages, 20)),
+    )
 
 
 if __name__ == "__main__":
