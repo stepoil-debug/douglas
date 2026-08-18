@@ -1,10 +1,14 @@
 {
-  "sport": "football",
-  "status": "WAITING_FOR_API_KEY",
-  "updated_at": "2026-08-18T10:12:00-03:00",
+  "api_requests": 17,
   "board_date": "2026-08-18",
   "board_mode": "TODAY",
-  "tickets_ready": 0,
+  "board_status": "READY",
+  "fixtures_analyzed": 10,
+  "fixtures_found": 197,
+  "message": "3 bilhetes prontos para hoje; todos precificados em uma única bookmaker por bilhete (3 estritos, 0 consenso).",
+  "sport": "football",
+  "status": "SUCCESS",
   "target_tickets": 3,
-  "message": "Motor pronto no GitHub. Falta somente a credencial API-Football protegida nos Secrets do proprio repositorio para buscar jogos e odds reais."
+  "tickets_ready": 3,
+  "updated_at": "2026-08-18T11:05:34.228597-03:00"
 }
