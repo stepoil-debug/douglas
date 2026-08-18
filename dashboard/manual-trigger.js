@@ -2,6 +2,7 @@
   const ACTIONS_URL = 'https://github.com/stepoil-debug/douglas/actions/workflows/analyze-football.yml';
   const SETTLE_ACTIONS_URL = 'https://github.com/stepoil-debug/douglas/actions/workflows/settle-football.yml';
   const SECRETS_URL = 'https://github.com/stepoil-debug/douglas/settings/secrets/actions/new';
+  const TRIGGER_URL = 'https://intranet-stepoil.netlify.app/api/investbet/analysis-trigger';
   const $ = id => document.getElementById(id);
   const analyzeBtn = $('analyzeBtn');
   const refreshBtn = $('refreshBtn');
@@ -10,6 +11,7 @@
   const notice = $('notice');
   let currentStatus = null;
   let verifyBtn = null;
+  let analysisDateSelect = null;
 
   function setRunState(text) {
     if (runState && runState.textContent !== text) runState.textContent = text;
@@ -19,6 +21,93 @@
     if (!notice) return;
     notice.className = `notice show ${type}`;
     notice.textContent = message;
+  }
+
+  function saoPauloDate(offsetDays = 0) {
+    const parts = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'America/Sao_Paulo',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    }).formatToParts(new Date());
+    const values = Object.fromEntries(parts.filter(part => part.type !== 'literal').map(part => [part.type, part.value]));
+    const date = new Date(Date.UTC(Number(values.year), Number(values.month) - 1, Number(values.day) + offsetDays));
+    return date.toISOString().slice(0, 10);
+  }
+
+  function formatAnalysisDate(iso) {
+    const [year, month, day] = String(iso || '').split('-');
+    return year && month && day ? `${day}/${month}/${year}` : iso;
+  }
+
+  function selectedAnalysisDate() {
+    return saoPauloDate(analysisDateSelect?.value === 'tomorrow' ? 1 : 0);
+  }
+
+  function ensureAnalysisDateSelector() {
+    const actions = document.querySelector('.actions');
+    if (!actions || !analyzeBtn) return null;
+    let select = $('analysisDateSelect');
+    if (!select) {
+      select = document.createElement('select');
+      select.id = 'analysisDateSelect';
+      select.className = 'btn secondary';
+      select.setAttribute('aria-label', 'Data da análise');
+      select.title = 'Selecione se deseja analisar os jogos de hoje ou de amanhã';
+      actions.insertBefore(select, analyzeBtn);
+    }
+    select.innerHTML = `
+      <option value="today">📅 Hoje • ${formatAnalysisDate(saoPauloDate(0))}</option>
+      <option value="tomorrow">📅 Amanhã • ${formatAnalysisDate(saoPauloDate(1))}</option>
+    `;
+    analysisDateSelect = select;
+    return select;
+  }
+
+  async function triggerAnalysis() {
+    if (!analyzeBtn) return;
+    const analysisDate = selectedAnalysisDate();
+    const label = analysisDateSelect?.value === 'tomorrow' ? 'amanhã' : 'hoje';
+    const originalText = analyzeBtn.textContent;
+    analyzeBtn.disabled = true;
+    analyzeBtn.textContent = `⏳ Analisando ${label}...`;
+    setRunState(`Solicitando análise de ${formatAnalysisDate(analysisDate)}...`);
+    showNotice(`Solicitando ao motor a análise dos jogos de ${label} (${formatAnalysisDate(analysisDate)}).`, 'warn');
+
+    try {
+      const response = await fetch(TRIGGER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ analysis_date: analysisDate })
+      });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok || payload?.ok === false) {
+        throw new Error(payload?.error || `HTTP ${response.status}`);
+      }
+
+      if (payload?.mode === 'queue') {
+        showNotice(`A solicitação para ${formatAnalysisDate(analysisDate)} foi recebida e está aguardando o executor seguro.`, 'warn');
+        setRunState(`Análise ${formatAnalysisDate(analysisDate)} na fila`);
+      } else {
+        showNotice(`Análise de ${formatAnalysisDate(analysisDate)} iniciada com sucesso. O painel será atualizado assim que o GitHub concluir o processamento.`, 'good');
+        setRunState(`Analisando jogos de ${formatAnalysisDate(analysisDate)}...`);
+      }
+
+      currentStatus = 'RUNNING';
+      setTimeout(syncState, 3500);
+      setTimeout(syncState, 12000);
+    } catch (error) {
+      console.error('Falha ao disparar análise:', error);
+      showNotice('Não foi possível iniciar a análise pelo painel. O workflow continua disponível no GitHub Actions.', 'bad');
+      setRunState('Falha ao iniciar análise');
+      analyzeBtn.disabled = false;
+      analyzeBtn.textContent = originalText || '🔍 Analisar';
+      return;
+    }
+
+    setTimeout(() => {
+      if (currentStatus !== 'RUNNING') configureMainButton(currentStatus);
+    }, 1500);
   }
 
   function ensureManagementNav() {
@@ -62,11 +151,11 @@
     const nextText = state === 'RUNNING'
       ? '⏳ Analisando...'
       : state === 'SUCCESS'
-        ? '▶ Rodar novamente'
-        : '▶ Rodar agora';
+        ? '🔍 Analisar novamente'
+        : '🔍 Analisar';
     if (analyzeBtn.textContent !== nextText) analyzeBtn.textContent = nextText;
     analyzeBtn.disabled = state === 'RUNNING';
-    analyzeBtn.onclick = () => window.open(ACTIONS_URL, '_blank', 'noopener,noreferrer');
+    analyzeBtn.onclick = triggerAnalysis;
   }
 
   function formatTime(iso) {
@@ -279,7 +368,7 @@
       const state = await response.json();
       currentStatus = state.status || null;
       configureMainButton(currentStatus);
-      if (currentStatus === 'RUNNING') setRunState('Analisando jogos de hoje...');
+      if (currentStatus === 'RUNNING') setRunState('Analisando jogos...');
       else if (currentStatus === 'SUCCESS') setRunState(`API ativa • ${Number(state.tickets_ready || 0)}/3 bilhetes oficiais`);
       else if (currentStatus === 'WAITING_FOR_API_KEY') setRunState('Falta configurar a API no GitHub');
       else if (currentStatus === 'FAILED') setRunState('Última análise falhou • ver Actions');
@@ -291,6 +380,7 @@
   }
 
   ensureManagementNav();
+  ensureAnalysisDateSelector();
   ensureVerifyButton();
   if (verifyBtn) verifyBtn.onclick = verifyTickets;
   if (analyzeBtn) configureMainButton(null);
