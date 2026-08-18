@@ -8,8 +8,9 @@ on:
         required: false
         type: string
   schedule:
-    # API-Football pre-match odds update roughly every 3h; keep the board fresh without wasting quota.
-    - cron: '17 */3 * * *'
+    # 07:05, 11:05, 15:05 e 19:05 no horario de Brasilia (UTC-3).
+    # Quatro varreduras por dia mantem o board atualizado sem estourar o plano gratuito.
+    - cron: '5 10,14,18,22 * * *'
   push:
     branches: [main]
     paths:
@@ -32,8 +33,9 @@ jobs:
       KEY_ALIAS_1: ${{ secrets.API_SPORTS_KEY }}
       KEY_ALIAS_2: ${{ secrets.FOOTBALL_API_KEY }}
       KEY_ALIAS_3: ${{ secrets.APISPORTS_KEY }}
-      FOOTBALL_MAX_CANDIDATES: '18'
-      FOOTBALL_MAX_ODDS_PAGES: '10'
+      FOOTBALL_MAX_CANDIDATES: '14'
+      FOOTBALL_MAX_ODDS_PAGES: '6'
+      API_FOOTBALL_MIN_INTERVAL: '6.2'
       INPUT_DATE: ${{ github.event.inputs.date || '' }}
 
     steps:
