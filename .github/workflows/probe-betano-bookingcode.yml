@@ -1,0 +1,58 @@
+name: Probe Betano Booking Code
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/probe_betano_bookingcode.mjs'
+      - '.github/workflows/probe-betano-bookingcode.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Probe booking-code route and bundles
+        run: node scripts/probe_betano_bookingcode.mjs
+      - name: Persist probe evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          [ -f artifacts/betano-bookingcode-probe/summary.json ] && cp artifacts/betano-bookingcode-probe/summary.json data/betano_booking_probe.json || printf '{"ok":false,"message":"missing summary"}\n' > data/betano_booking_probe.json
+          [ -f artifacts/betano-bookingcode-probe/requests.json ] && cp artifacts/betano-bookingcode-probe/requests.json data/betano_booking_requests.json || true
+          [ -f artifacts/betano-bookingcode-probe/network.json ] && cp artifacts/betano-bookingcode-probe/network.json data/betano_booking_network.json || true
+          [ -f artifacts/betano-bookingcode-probe/bundle_hits.json ] && cp artifacts/betano-bookingcode-probe/bundle_hits.json data/betano_booking_bundle_hits.json || true
+          git config user.name 'investbet-probe-bot'
+          git config user.email 'investbet-probe-bot@users.noreply.github.com'
+          git add data/betano_booking_*.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m 'test: update Betano booking-code probe evidence'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Upload probe artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: betano-bookingcode-probe
+          path: artifacts/betano-bookingcode-probe
+          if-no-files-found: warn
+          retention-days: 3
