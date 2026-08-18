@@ -1,0 +1,58 @@
+name: Probe bet365 Ready Slip
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/probe_bet365_share.mjs'
+      - '.github/workflows/probe-bet365-share.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Probe user-provided bet365 shared slip
+        run: node scripts/probe_bet365_share.mjs
+      - name: Persist probe evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          [ -f artifacts/bet365-share-probe/summary.json ] && cp artifacts/bet365-share-probe/summary.json data/bet365_share_probe.json || printf '{"ok":false,"message":"missing summary"}\n' > data/bet365_share_probe.json
+          [ -f artifacts/bet365-share-probe/requests.json ] && cp artifacts/bet365-share-probe/requests.json data/bet365_share_requests.json || true
+          [ -f artifacts/bet365-share-probe/responses.json ] && cp artifacts/bet365-share-probe/responses.json data/bet365_share_responses.json || true
+          [ -f artifacts/bet365-share-probe/bundle_hits.json ] && cp artifacts/bet365-share-probe/bundle_hits.json data/bet365_share_bundle_hits.json || true
+          git config user.name 'investbet-probe-bot'
+          git config user.email 'investbet-probe-bot@users.noreply.github.com'
+          git add data/bet365_share_*.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m 'test: update bet365 ready-slip probe evidence'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Upload probe artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bet365-share-probe
+          path: artifacts/bet365-share-probe
+          if-no-files-found: warn
+          retention-days: 3
