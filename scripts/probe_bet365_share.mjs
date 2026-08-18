@@ -33,15 +33,15 @@ page.on('response', async res => {
   let body = '';
   const headers = await res.allHeaders().catch(() => ({}));
   const type = String(headers['content-type'] || '');
-  if (/json|text|javascript|html/i.test(type)) {
-    try { body = (await res.text()).slice(0, 16000); } catch {}
+  if (/json|text|html/i.test(type) && !/javascript/i.test(type)) {
+    try { body = (await res.text()).slice(0, 20000); } catch {}
   }
   responses.push({ status: res.status(), url, contentType: type, body });
 });
 
 try {
-  await page.goto(SHARE_URL, { waitUntil: 'domcontentloaded', timeout: 90000 });
-  await page.waitForTimeout(15000);
+  await page.goto(SHARE_URL, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await page.waitForTimeout(10000);
   const finalUrl = page.url();
   const title = await page.title();
   const body = (await page.locator('body').innerText().catch(() => '')).slice(0, 150000);
@@ -50,24 +50,18 @@ try {
 
   const scripts = await page.evaluate(() => [...document.scripts].map(s => s.src).filter(Boolean));
   const resources = await page.evaluate(() => performance.getEntriesByType('resource').map(r => r.name));
-  const jsUrls = [...new Set([...scripts, ...resources.filter(x => /\.js(?:\?|$)/i.test(x))])].slice(0, 150);
+  const jsUrls = [...new Set([...scripts, ...resources.filter(x => /\.js(?:\?|$)/i.test(x))])].slice(0, 25);
   const bundleHits = [];
-  const terms = ['sharebet', 'share bet', 'sharedbet', 'shared bet', '/s/r/', 'betslip', 'bet slip'];
+  const terms = ['sharebet', 'sharedbet', '/s/r/', 'betslip'];
   for (const url of jsUrls) {
     try {
-      const res = await context.request.get(url, { timeout: 20000 });
+      const res = await context.request.get(url, { timeout: 7000 });
       if (!res.ok()) continue;
       const text = await res.text();
       const lower = text.toLowerCase();
       for (const term of terms) {
-        let start = 0, count = 0;
-        while (count < 5) {
-          const idx = lower.indexOf(term, start);
-          if (idx < 0) break;
-          bundleHits.push({ script: url, term, snippet: text.slice(Math.max(0, idx - 900), Math.min(text.length, idx + 1800)) });
-          start = idx + term.length;
-          count++;
-        }
+        const idx = lower.indexOf(term);
+        if (idx >= 0) bundleHits.push({ script: url, term, snippet: text.slice(Math.max(0, idx - 1200), Math.min(text.length, idx + 2600)) });
       }
     } catch {}
   }
@@ -80,7 +74,6 @@ try {
   write('requests.json', requests);
   write('responses.json', responses);
   write('bundle_hits.json', bundleHits);
-  write('scripts.json', jsUrls);
   const summary = {
     ok: true,
     requestedUrl: SHARE_URL,
@@ -88,7 +81,7 @@ try {
     title,
     slipLoaded,
     blocked,
-    bodyPreview: body.slice(0, 3500),
+    bodyPreview: body.slice(0, 5000),
     requestCount: requests.length,
     responseCount: responses.length,
     endpointCandidates,
