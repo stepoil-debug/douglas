@@ -1,0 +1,10 @@
+{
+  "healthy": true,
+  "checked_at": "2026-08-18T23:38:18Z",
+  "expected_date": "2026-08-18",
+  "public_date": "2026-08-18",
+  "public_status": "SUCCESS",
+  "watcher_present": true,
+  "fresh_scripts": true,
+  "page_url": "https://stepoil-debug.github.io/douglas/"
+}
