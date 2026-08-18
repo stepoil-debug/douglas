@@ -3,12 +3,14 @@
   "board_date": "2026-08-18",
   "board_mode": "TODAY",
   "board_status": "READY",
+  "execution_bookmaker": "Betano",
+  "execution_ready": true,
   "fixtures_analyzed": 10,
   "fixtures_found": 197,
-  "message": "3 bilhetes prontos para hoje; todos precificados em uma única bookmaker por bilhete (3 estritos, 0 consenso).",
+  "message": "3 bilhetes Betano prontos para execução no painel.",
   "sport": "football",
   "status": "SUCCESS",
   "target_tickets": 3,
   "tickets_ready": 3,
-  "updated_at": "2026-08-18T11:27:55.416135-03:00"
+  "updated_at": "2026-08-18T11:29:49.298093-03:00"
 }

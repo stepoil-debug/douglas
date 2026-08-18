@@ -1685,17 +1685,24 @@
     }
   ],
   "api_minute_limit": 300,
-  "api_minute_remaining": 291,
+  "api_minute_remaining": 292,
   "api_requests": 17,
-  "api_requests_remaining": 6828,
+  "api_requests_remaining": 6803,
   "approved": [
     {
-      "bookmaker": "William Hill",
+      "bookmaker": "Betano",
       "estimated_probability": 0.8231,
+      "execution": {
+        "bookmaker": "Betano",
+        "mode": "OPEN_AND_COPY",
+        "ready": true,
+        "total_odd": 1.53,
+        "url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/"
+      },
       "legs": [
         {
           "away_team": "Orebro SK",
-          "bookmaker": "William Hill",
+          "bookmaker": "Betano",
           "bookmaker_count": 10,
           "bookmaker_quotes": {
             "10Bet": 1.12,
@@ -1712,6 +1719,8 @@
           "consensus_odd": 1.13,
           "country": "Sweden",
           "edge": 0.0376,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1549142,
           "home_team": "Sollentuna",
           "implied_probability": 0.885,
@@ -1720,7 +1729,7 @@
           "market": "Dupla chance",
           "match": "Sollentuna x Orebro SK",
           "model_probability": 0.9225,
-          "odd": 1.15,
+          "odd": 1.17,
           "rationale": "Vitória/empate do lado mais forte soma 95% no modelo e foi calibrado pelas odds disponíveis.",
           "score": 79.1,
           "selection": "Orebro SK ou empate",
@@ -1728,7 +1737,7 @@
         },
         {
           "away_team": "South Shields",
-          "bookmaker": "William Hill",
+          "bookmaker": "Betano",
           "bookmaker_count": 11,
           "bookmaker_quotes": {
             "10Bet": 1.3,
@@ -1746,6 +1755,8 @@
           "consensus_odd": 1.28,
           "country": "England",
           "edge": 0.1111,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1587737,
           "home_team": "Morecambe",
           "implied_probability": 0.7812,
@@ -1754,7 +1765,7 @@
           "market": "Dupla chance",
           "match": "Morecambe x South Shields",
           "model_probability": 0.8923,
-          "odd": 1.35,
+          "odd": 1.31,
           "rationale": "Vitória/empate do lado mais forte soma 95% no modelo e foi calibrado pelas odds disponíveis.",
           "score": 78.6,
           "selection": "South Shields ou empate",
@@ -1763,19 +1774,26 @@
       ],
       "profile": "CONSERVADOR",
       "quality_tier": "STRICT",
-      "reason": "Bilhete precificado em uma única bookmaker, com mercados reais e filtros de consistência.",
+      "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.8,
       "status": "PENDING",
       "ticket_id": "B1",
-      "total_odd": 1.55
+      "total_odd": 1.53
     },
     {
-      "bookmaker": "William Hill",
+      "bookmaker": "Betano",
       "estimated_probability": 0.8169,
+      "execution": {
+        "bookmaker": "Betano",
+        "mode": "OPEN_AND_COPY",
+        "ready": true,
+        "total_odd": 1.54,
+        "url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/"
+      },
       "legs": [
         {
           "away_team": "Orebro SK",
-          "bookmaker": "William Hill",
+          "bookmaker": "Betano",
           "bookmaker_count": 10,
           "bookmaker_quotes": {
             "10Bet": 1.12,
@@ -1792,6 +1810,8 @@
           "consensus_odd": 1.13,
           "country": "Sweden",
           "edge": 0.0376,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1549142,
           "home_team": "Sollentuna",
           "implied_probability": 0.885,
@@ -1800,7 +1820,7 @@
           "market": "Dupla chance",
           "match": "Sollentuna x Orebro SK",
           "model_probability": 0.9225,
-          "odd": 1.15,
+          "odd": 1.17,
           "rationale": "Vitória/empate do lado mais forte soma 95% no modelo e foi calibrado pelas odds disponíveis.",
           "score": 79.1,
           "selection": "Orebro SK ou empate",
@@ -1808,7 +1828,7 @@
         },
         {
           "away_team": "IK brage",
-          "bookmaker": "William Hill",
+          "bookmaker": "Betano",
           "bookmaker_count": 10,
           "bookmaker_quotes": {
             "10Bet": 1.36,
@@ -1825,6 +1845,8 @@
           "consensus_odd": 1.32,
           "country": "Sweden",
           "edge": 0.1279,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1553089,
           "home_team": "Karlberg",
           "implied_probability": 0.7576,
@@ -1833,7 +1855,7 @@
           "market": "Dupla chance",
           "match": "Karlberg x IK brage",
           "model_probability": 0.8855,
-          "odd": 1.35,
+          "odd": 1.32,
           "rationale": "Vitória/empate do lado mais forte soma 95% no modelo e foi calibrado pelas odds disponíveis.",
           "score": 78.4,
           "selection": "IK brage ou empate",
@@ -1842,15 +1864,22 @@
       ],
       "profile": "EQUILIBRADO",
       "quality_tier": "STRICT",
-      "reason": "Bilhete precificado em uma única bookmaker, com mercados reais e filtros de consistência.",
+      "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.8,
       "status": "PENDING",
       "ticket_id": "B2",
-      "total_odd": 1.55
+      "total_odd": 1.54
     },
     {
       "bookmaker": "Betano",
       "estimated_probability": 0.7901,
+      "execution": {
+        "bookmaker": "Betano",
+        "mode": "OPEN_AND_COPY",
+        "ready": true,
+        "total_odd": 1.73,
+        "url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/"
+      },
       "legs": [
         {
           "away_team": "South Shields",
@@ -1872,6 +1901,8 @@
           "consensus_odd": 1.28,
           "country": "England",
           "edge": 0.1111,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1587737,
           "home_team": "Morecambe",
           "implied_probability": 0.7812,
@@ -1905,6 +1936,8 @@
           "consensus_odd": 1.32,
           "country": "Sweden",
           "edge": 0.1279,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1553089,
           "home_team": "Karlberg",
           "implied_probability": 0.7576,
@@ -1922,7 +1955,7 @@
       ],
       "profile": "SELETIVO",
       "quality_tier": "STRICT",
-      "reason": "Bilhete precificado em uma única bookmaker, com mercados reais e filtros de consistência.",
+      "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.5,
       "status": "PENDING",
       "ticket_id": "B3",
@@ -1933,8 +1966,7 @@
   "board_mode": "TODAY",
   "board_status": "READY",
   "bookmakers_used": [
-    "Betano",
-    "William Hill"
+    "Betano"
   ],
   "consensus_tickets": 0,
   "criteria": {
@@ -1960,6 +1992,9 @@
   ],
   "deep_analyzed_matches": 10,
   "eligible_legs": 39,
+  "execution_bookmaker": "Betano",
+  "execution_ready": true,
+  "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
   "fixtures_analyzed": 10,
   "fixtures_found": 197,
   "fixtures_ranked": 14,
@@ -1974,9 +2009,9 @@
     "tickets_miss": 0,
     "tickets_resolved": 0
   },
-  "last_run_at": "2026-08-18T11:27:55.410792-03:00",
+  "last_run_at": "2026-08-18T11:29:49.292627-03:00",
   "matches_with_odds": 60,
-  "model_version": "football-3tickets-v2.2",
+  "model_version": "football-3tickets-betano-v1",
   "operational_date": "2026-08-18",
   "predictions_available": 10,
   "rejected": [],
@@ -1985,12 +2020,19 @@
   "ticket_target": 3,
   "tickets": [
     {
-      "bookmaker": "William Hill",
+      "bookmaker": "Betano",
       "estimated_probability": 0.8231,
+      "execution": {
+        "bookmaker": "Betano",
+        "mode": "OPEN_AND_COPY",
+        "ready": true,
+        "total_odd": 1.53,
+        "url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/"
+      },
       "legs": [
         {
           "away_team": "Orebro SK",
-          "bookmaker": "William Hill",
+          "bookmaker": "Betano",
           "bookmaker_count": 10,
           "bookmaker_quotes": {
             "10Bet": 1.12,
@@ -2007,6 +2049,8 @@
           "consensus_odd": 1.13,
           "country": "Sweden",
           "edge": 0.0376,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1549142,
           "home_team": "Sollentuna",
           "implied_probability": 0.885,
@@ -2015,7 +2059,7 @@
           "market": "Dupla chance",
           "match": "Sollentuna x Orebro SK",
           "model_probability": 0.9225,
-          "odd": 1.15,
+          "odd": 1.17,
           "rationale": "Vitória/empate do lado mais forte soma 95% no modelo e foi calibrado pelas odds disponíveis.",
           "score": 79.1,
           "selection": "Orebro SK ou empate",
@@ -2023,7 +2067,7 @@
         },
         {
           "away_team": "South Shields",
-          "bookmaker": "William Hill",
+          "bookmaker": "Betano",
           "bookmaker_count": 11,
           "bookmaker_quotes": {
             "10Bet": 1.3,
@@ -2041,6 +2085,8 @@
           "consensus_odd": 1.28,
           "country": "England",
           "edge": 0.1111,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1587737,
           "home_team": "Morecambe",
           "implied_probability": 0.7812,
@@ -2049,7 +2095,7 @@
           "market": "Dupla chance",
           "match": "Morecambe x South Shields",
           "model_probability": 0.8923,
-          "odd": 1.35,
+          "odd": 1.31,
           "rationale": "Vitória/empate do lado mais forte soma 95% no modelo e foi calibrado pelas odds disponíveis.",
           "score": 78.6,
           "selection": "South Shields ou empate",
@@ -2058,19 +2104,26 @@
       ],
       "profile": "CONSERVADOR",
       "quality_tier": "STRICT",
-      "reason": "Bilhete precificado em uma única bookmaker, com mercados reais e filtros de consistência.",
+      "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.8,
       "status": "PENDING",
       "ticket_id": "B1",
-      "total_odd": 1.55
+      "total_odd": 1.53
     },
     {
-      "bookmaker": "William Hill",
+      "bookmaker": "Betano",
       "estimated_probability": 0.8169,
+      "execution": {
+        "bookmaker": "Betano",
+        "mode": "OPEN_AND_COPY",
+        "ready": true,
+        "total_odd": 1.54,
+        "url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/"
+      },
       "legs": [
         {
           "away_team": "Orebro SK",
-          "bookmaker": "William Hill",
+          "bookmaker": "Betano",
           "bookmaker_count": 10,
           "bookmaker_quotes": {
             "10Bet": 1.12,
@@ -2087,6 +2140,8 @@
           "consensus_odd": 1.13,
           "country": "Sweden",
           "edge": 0.0376,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1549142,
           "home_team": "Sollentuna",
           "implied_probability": 0.885,
@@ -2095,7 +2150,7 @@
           "market": "Dupla chance",
           "match": "Sollentuna x Orebro SK",
           "model_probability": 0.9225,
-          "odd": 1.15,
+          "odd": 1.17,
           "rationale": "Vitória/empate do lado mais forte soma 95% no modelo e foi calibrado pelas odds disponíveis.",
           "score": 79.1,
           "selection": "Orebro SK ou empate",
@@ -2103,7 +2158,7 @@
         },
         {
           "away_team": "IK brage",
-          "bookmaker": "William Hill",
+          "bookmaker": "Betano",
           "bookmaker_count": 10,
           "bookmaker_quotes": {
             "10Bet": 1.36,
@@ -2120,6 +2175,8 @@
           "consensus_odd": 1.32,
           "country": "Sweden",
           "edge": 0.1279,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1553089,
           "home_team": "Karlberg",
           "implied_probability": 0.7576,
@@ -2128,7 +2185,7 @@
           "market": "Dupla chance",
           "match": "Karlberg x IK brage",
           "model_probability": 0.8855,
-          "odd": 1.35,
+          "odd": 1.32,
           "rationale": "Vitória/empate do lado mais forte soma 95% no modelo e foi calibrado pelas odds disponíveis.",
           "score": 78.4,
           "selection": "IK brage ou empate",
@@ -2137,15 +2194,22 @@
       ],
       "profile": "EQUILIBRADO",
       "quality_tier": "STRICT",
-      "reason": "Bilhete precificado em uma única bookmaker, com mercados reais e filtros de consistência.",
+      "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.8,
       "status": "PENDING",
       "ticket_id": "B2",
-      "total_odd": 1.55
+      "total_odd": 1.54
     },
     {
       "bookmaker": "Betano",
       "estimated_probability": 0.7901,
+      "execution": {
+        "bookmaker": "Betano",
+        "mode": "OPEN_AND_COPY",
+        "ready": true,
+        "total_odd": 1.73,
+        "url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/"
+      },
       "legs": [
         {
           "away_team": "South Shields",
@@ -2167,6 +2231,8 @@
           "consensus_odd": 1.28,
           "country": "England",
           "edge": 0.1111,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1587737,
           "home_team": "Morecambe",
           "implied_probability": 0.7812,
@@ -2200,6 +2266,8 @@
           "consensus_odd": 1.32,
           "country": "Sweden",
           "edge": 0.1279,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1553089,
           "home_team": "Karlberg",
           "implied_probability": 0.7576,
@@ -2217,7 +2285,7 @@
       ],
       "profile": "SELETIVO",
       "quality_tier": "STRICT",
-      "reason": "Bilhete precificado em uma única bookmaker, com mercados reais e filtros de consistência.",
+      "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.5,
       "status": "PENDING",
       "ticket_id": "B3",
