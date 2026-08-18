@@ -3,6 +3,7 @@ from __future__ import annotations
 import itertools
 import json
 import math
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -45,6 +46,7 @@ def _execution_leg(leg: dict[str, Any]) -> dict[str, Any] | None:
     copy["bookmaker"] = "Betano"
     copy["execution_bookmaker"] = "Betano"
     copy["execution_url"] = BETANO_URL
+    copy.setdefault("status", "PENDING")
     return copy
 
 
@@ -163,7 +165,12 @@ def main() -> int:
     data_path = DASHBOARD / "data.json"
     status_path = DASHBOARD / "run_status.json"
     payload = _load(data_path)
-    tickets = build_betano_tickets(payload)
+    lock = payload.get("ticket_lock") or {}
+    existing = payload.get("tickets") or []
+    if lock.get("locked") and len(existing) >= TARGET:
+        tickets = existing
+    else:
+        tickets = build_betano_tickets(payload)
 
     payload["tickets"] = tickets
     payload["approved"] = tickets
@@ -175,7 +182,13 @@ def main() -> int:
     payload["execution_ready"] = len(tickets) == TARGET
     payload["board_status"] = "READY" if len(tickets) == TARGET else ("PARTIAL" if tickets else "NO_TICKETS")
     payload["strict_tickets"] = sum(1 for ticket in tickets if ticket.get("quality_tier") == "STRICT")
-    payload["model_version"] = "football-3tickets-betano-v1"
+    payload["model_version"] = "football-3tickets-betano-v2"
+    if len(tickets) == TARGET and not lock.get("locked"):
+        payload["ticket_lock"] = {
+            "locked": True,
+            "locked_at": datetime.now(timezone.utc).isoformat(),
+            "reason": "Bilhetes oficiais do dia congelados para auditoria, settlement GREEN/RED e simulação de banca.",
+        }
 
     _dump(data_path, payload)
     board_date = str(payload.get("board_date") or "")
@@ -188,16 +201,17 @@ def main() -> int:
     status["board_status"] = payload["board_status"]
     status["execution_bookmaker"] = "Betano"
     status["execution_ready"] = len(tickets) == TARGET
+    status["ticket_lock"] = bool((payload.get("ticket_lock") or {}).get("locked"))
     if len(tickets) == TARGET:
         status["status"] = "SUCCESS"
-        status["message"] = "3 bilhetes Betano prontos para execução no painel."
+        status["message"] = "3 bilhetes Betano oficiais do dia estão publicados e travados para conferência de resultado."
     elif tickets:
         status["message"] = f"{len(tickets)}/3 bilhetes possuem todas as seleções disponíveis na Betano."
     else:
         status["message"] = "Nenhuma combinação executável na Betano atingiu os filtros e a faixa de odd."
     _dump(status_path, status)
 
-    print(f"Betano execution tickets: {len(tickets)}/{TARGET}")
+    print(f"Betano execution tickets: {len(tickets)}/{TARGET}; locked={status['ticket_lock']}")
     return 0
 
 
