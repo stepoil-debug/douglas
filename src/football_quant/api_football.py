@@ -5,6 +5,7 @@ import os
 import time
 from dataclasses import dataclass
 from typing import Any
+from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
@@ -19,15 +20,25 @@ class ApiFootballError(RuntimeError):
 class ApiFootballClient:
     api_key: str
     timeout: int = 30
-    min_interval_seconds: float = 0.35
+    # Safe default for the current API-Football free plan (10 requests/minute).
+    # Paid plans may override this with API_FOOTBALL_MIN_INTERVAL.
+    min_interval_seconds: float = 6.2
 
     def __post_init__(self) -> None:
         self.api_key = (self.api_key or "").strip()
         if not self.api_key:
             raise ApiFootballError("API_FOOTBALL_KEY is not configured")
+        override = os.getenv("API_FOOTBALL_MIN_INTERVAL", "").strip()
+        if override:
+            try:
+                self.min_interval_seconds = max(0.2, float(override))
+            except ValueError:
+                pass
         self._last_request_at = 0.0
         self.request_count = 0
         self.remaining_requests: int | None = None
+        self.minute_limit: int | None = None
+        self.minute_remaining: int | None = None
 
     @classmethod
     def from_env(cls) -> "ApiFootballClient":
@@ -39,37 +50,71 @@ class ApiFootballClient:
         )
         return cls(key)
 
-    def _get(self, endpoint: str, params: dict[str, Any]) -> dict[str, Any]:
+    def _respect_interval(self) -> None:
         elapsed = time.monotonic() - self._last_request_at
         if elapsed < self.min_interval_seconds:
             time.sleep(self.min_interval_seconds - elapsed)
-        url = f"{API_BASE}{endpoint}?{urlencode(params)}"
-        request = Request(
-            url,
-            headers={
-                "x-apisports-key": self.api_key,
-                "Accept": "application/json",
-                "User-Agent": "InvestBet-Football/2.0",
-            },
-        )
-        try:
-            with urlopen(request, timeout=self.timeout) as response:
-                raw_remaining = response.headers.get("x-ratelimit-requests-remaining")
-                if raw_remaining and raw_remaining.isdigit():
-                    self.remaining_requests = int(raw_remaining)
-                payload = json.loads(response.read().decode("utf-8"))
-        except Exception as exc:
-            raise ApiFootballError(f"API request failed for {endpoint}: {exc}") from exc
-        finally:
-            self._last_request_at = time.monotonic()
-            self.request_count += 1
 
-        errors = payload.get("errors")
-        if isinstance(errors, dict) and errors:
-            raise ApiFootballError(f"API-Football returned errors for {endpoint}: {errors}")
-        if isinstance(errors, list) and errors:
-            raise ApiFootballError(f"API-Football returned errors for {endpoint}: {errors}")
-        return payload
+    def _read_headers(self, response: Any) -> None:
+        daily_remaining = response.headers.get("x-ratelimit-requests-remaining")
+        minute_limit = response.headers.get("X-RateLimit-Limit")
+        minute_remaining = response.headers.get("X-RateLimit-Remaining")
+        if daily_remaining and daily_remaining.isdigit():
+            self.remaining_requests = int(daily_remaining)
+        if minute_limit and minute_limit.isdigit():
+            self.minute_limit = int(minute_limit)
+        if minute_remaining and minute_remaining.isdigit():
+            self.minute_remaining = int(minute_remaining)
+
+    def _get(self, endpoint: str, params: dict[str, Any]) -> dict[str, Any]:
+        url = f"{API_BASE}{endpoint}?{urlencode(params)}"
+        last_error: Exception | None = None
+
+        for attempt in range(3):
+            self._respect_interval()
+            request = Request(
+                url,
+                headers={
+                    "x-apisports-key": self.api_key,
+                    "Accept": "application/json",
+                    "User-Agent": "InvestBet-Football/2.1",
+                },
+            )
+            try:
+                with urlopen(request, timeout=self.timeout) as response:
+                    self._read_headers(response)
+                    payload = json.loads(response.read().decode("utf-8"))
+                self._last_request_at = time.monotonic()
+                self.request_count += 1
+                errors = payload.get("errors")
+                if isinstance(errors, dict) and errors:
+                    if "rateLimit" in errors and attempt < 2:
+                        time.sleep(12 * (attempt + 1))
+                        continue
+                    raise ApiFootballError(f"API-Football returned errors for {endpoint}: {errors}")
+                if isinstance(errors, list) and errors:
+                    raise ApiFootballError(f"API-Football returned errors for {endpoint}: {errors}")
+                return payload
+            except HTTPError as exc:
+                self._last_request_at = time.monotonic()
+                self.request_count += 1
+                last_error = exc
+                if exc.code == 429 and attempt < 2:
+                    time.sleep(15 * (attempt + 1))
+                    continue
+                raise ApiFootballError(f"API request failed for {endpoint}: HTTP {exc.code}") from exc
+            except ApiFootballError:
+                raise
+            except Exception as exc:
+                self._last_request_at = time.monotonic()
+                self.request_count += 1
+                last_error = exc
+                if attempt < 2:
+                    time.sleep(4 * (attempt + 1))
+                    continue
+                break
+
+        raise ApiFootballError(f"API request failed for {endpoint}: {last_error}") from last_error
 
     def fixtures_by_date(self, date: str, timezone: str = "America/Sao_Paulo") -> list[dict[str, Any]]:
         return list(self._get("/fixtures", {"date": date, "timezone": timezone}).get("response") or [])
