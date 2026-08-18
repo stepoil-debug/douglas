@@ -4,6 +4,7 @@ import json
 import os
 import time
 from dataclasses import dataclass
+from statistics import median
 from typing import Any
 from urllib.error import HTTPError
 from urllib.parse import urlencode
@@ -20,8 +21,6 @@ class ApiFootballError(RuntimeError):
 class ApiFootballClient:
     api_key: str
     timeout: int = 30
-    # Safe default for the current API-Football free plan (10 requests/minute).
-    # Paid plans may override this with API_FOOTBALL_MIN_INTERVAL.
     min_interval_seconds: float = 6.2
 
     def __post_init__(self) -> None:
@@ -69,7 +68,6 @@ class ApiFootballClient:
     def _get(self, endpoint: str, params: dict[str, Any]) -> dict[str, Any]:
         url = f"{API_BASE}{endpoint}?{urlencode(params)}"
         last_error: Exception | None = None
-
         for attempt in range(3):
             self._respect_interval()
             request = Request(
@@ -77,7 +75,7 @@ class ApiFootballClient:
                 headers={
                     "x-apisports-key": self.api_key,
                     "Accept": "application/json",
-                    "User-Agent": "InvestBet-Football/2.1",
+                    "User-Agent": "InvestBet-Football/2.2",
                 },
             )
             try:
@@ -113,7 +111,6 @@ class ApiFootballClient:
                     time.sleep(4 * (attempt + 1))
                     continue
                 break
-
         raise ApiFootballError(f"API request failed for {endpoint}: {last_error}") from last_error
 
     def fixtures_by_date(self, date: str, timezone: str = "America/Sao_Paulo") -> list[dict[str, Any]]:
@@ -167,10 +164,15 @@ def fixture_id_from_odds(row: dict[str, Any]) -> int | None:
 
 
 def market_prices(row: dict[str, Any] | None) -> list[dict[str, Any]]:
-    """Flatten all pre-match markets for one fixture, keeping the best quoted price per market/selection."""
+    """Flatten markets and keep every bookmaker quote plus consensus price.
+
+    `odd` is the best available price, while `consensus_odd` is the median quote.
+    `quotes` lets the ticket builder ensure every leg in a multiple exists at the
+    same bookmaker instead of multiplying prices from different books.
+    """
     if not row:
         return []
-    best: dict[tuple[str, str], dict[str, Any]] = {}
+    buckets: dict[tuple[str, str], dict[str, Any]] = {}
     for bookmaker in row.get("bookmakers") or []:
         bookmaker_name = str(bookmaker.get("name") or "Bookmaker").strip()
         for bet in bookmaker.get("bets") or []:
@@ -183,15 +185,33 @@ def market_prices(row: dict[str, Any] | None) -> list[dict[str, Any]]:
                 if not selection or odd is None:
                     continue
                 key = (market.casefold(), selection.casefold())
-                current = best.get(key)
-                if current is None or odd > float(current["odd"]):
-                    best[key] = {
-                        "market": market,
-                        "selection": selection,
-                        "odd": round(odd, 3),
-                        "bookmaker": bookmaker_name,
-                    }
-    return list(best.values())
+                bucket = buckets.setdefault(
+                    key,
+                    {"market": market, "selection": selection, "quotes": {}},
+                )
+                previous = bucket["quotes"].get(bookmaker_name)
+                if previous is None or odd > float(previous):
+                    bucket["quotes"][bookmaker_name] = round(odd, 3)
+
+    result: list[dict[str, Any]] = []
+    for bucket in buckets.values():
+        quotes: dict[str, float] = bucket["quotes"]
+        if not quotes:
+            continue
+        best_book, best_odd = max(quotes.items(), key=lambda item: float(item[1]))
+        values = [float(value) for value in quotes.values()]
+        result.append(
+            {
+                "market": bucket["market"],
+                "selection": bucket["selection"],
+                "odd": round(float(best_odd), 3),
+                "bookmaker": best_book,
+                "consensus_odd": round(float(median(values)), 3),
+                "bookmaker_count": len(values),
+                "quotes": quotes,
+            }
+        )
+    return result
 
 
 def extract_match_winner_odds(rows: list[dict[str, Any]]) -> dict[str, Any] | None:
