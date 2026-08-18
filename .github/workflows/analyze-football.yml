@@ -33,6 +33,7 @@ jobs:
       KEY_ALIAS_1: ${{ secrets.API_SPORTS_KEY }}
       KEY_ALIAS_2: ${{ secrets.FOOTBALL_API_KEY }}
       KEY_ALIAS_3: ${{ secrets.APISPORTS_KEY }}
+      KEY_ALIAS_4: ${{ secrets.EFOOTBAL }}
       FOOTBALL_MAX_CANDIDATES: '14'
       FOOTBALL_MAX_ODDS_PAGES: '6'
       API_FOOTBALL_MIN_INTERVAL: '6.2'
@@ -56,6 +57,7 @@ jobs:
           [ -n "$key" ] || key="${KEY_ALIAS_1:-}"
           [ -n "$key" ] || key="${KEY_ALIAS_2:-}"
           [ -n "$key" ] || key="${KEY_ALIAS_3:-}"
+          [ -n "$key" ] || key="${KEY_ALIAS_4:-}"
           if [ -n "$key" ]; then
             echo '::add-mask::'$key
             echo "API_FOOTBALL_KEY=$key" >> "$GITHUB_ENV"
