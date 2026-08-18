@@ -7,6 +7,10 @@ on:
         description: 'Data do board (YYYY-MM-DD). Vazio = hoje em America/Sao_Paulo'
         required: false
         type: string
+      request_id:
+        description: 'ID interno da solicitação feita pelo painel'
+        required: false
+        type: string
   schedule:
     - cron: '5 10,14,18,22 * * *'
   push:
@@ -36,6 +40,7 @@ jobs:
       FOOTBALL_MAX_ODDS_PAGES: '6'
       API_FOOTBALL_MIN_INTERVAL: '6.2'
       INPUT_DATE: ${{ github.event.inputs.date || '' }}
+      REQUEST_ID: ${{ github.event.inputs.request_id || '' }}
 
     steps:
       - uses: actions/checkout@v4
@@ -64,11 +69,12 @@ jobs:
             echo 'No compatible API-Football secret was found.'
           fi
 
-      - name: Analyze today's football slate
+      - name: Analyze football slate
         shell: bash
         run: |
           set -euo pipefail
           if [ -n "$INPUT_DATE" ]; then
+            echo "Analyzing selected board date: $INPUT_DATE"
             python -m src.football_quant.cli --date "$INPUT_DATE"
           else
             python -m src.football_quant.cli
@@ -100,3 +106,24 @@ jobs:
           git commit -m 'data: update Betano tickets, results and bankroll'
           git pull --rebase origin main
           git push origin HEAD:main
+
+      - name: Report manual request completion
+        if: always() && github.event_name == 'workflow_dispatch' && github.event.inputs.request_id != ''
+        env:
+          REQUEST_ID: ${{ github.event.inputs.request_id }}
+          JOB_STATUS: ${{ job.status }}
+        shell: bash
+        run: |
+          set +e
+          SUCCESS=false
+          ERROR='ANALYSIS_FAILED'
+          if [ "$JOB_STATUS" = 'success' ]; then
+            SUCCESS=true
+            ERROR=''
+          fi
+          PAYLOAD="$(jq -nc --arg request_id "$REQUEST_ID" --argjson success "$SUCCESS" --arg error "$ERROR" '{request_id:$request_id,success:$success,error:$error}')"
+          curl --silent --show-error --retry 3 --retry-delay 2 \
+            --request POST \
+            --header 'Content-Type: application/json' \
+            --data "$PAYLOAD" \
+            'https://intranet-stepone.netlify.app/api/investbet/analysis-trigger?action=complete' >/dev/null || true
