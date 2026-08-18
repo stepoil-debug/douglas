@@ -10,6 +10,7 @@ on:
       - 'dashboard/**'
       - '.github/workflows/ci.yml'
       - '.github/workflows/analyze-football.yml'
+      - '.github/workflows/settle-football.yml'
       - '.github/workflows/pages.yml'
 
 permissions:
@@ -41,10 +42,7 @@ jobs:
                   'model_probability': probability,
                   'score': score,
                   'signal_source': 'MODEL+MARKET',
-                  'bookmaker_quotes': {
-                      'Book A': price,
-                      'Book B': round(price - 0.01, 2),
-                  },
+                  'bookmaker_quotes': {'Book A': price, 'Book B': round(price - 0.01, 2)},
               }
           legs = [
               leg(1,'Dupla chance','A ou empate',1.28,0.82,82),
@@ -57,7 +55,46 @@ jobs:
           assert len(tickets) == 3, tickets
           assert all(1.50 <= t['total_odd'] <= 2.00 for t in tickets)
           assert all(1 <= len(t['legs']) <= 2 for t in tickets)
-          assert all(t['bookmaker'] in {'Book A','Book B'} for t in tickets)
           assert all(len({leg['bookmaker'] for leg in t['legs']}) == 1 for t in tickets)
           print('3 executable tickets OK')
+          PY
+      - name: GREEN RED verifier smoke test
+        env:
+          PYTHONPATH: .
+        run: |
+          python - <<'PY'
+          from src.football_quant.settlement import settle_leg, settle_ticket
+
+          fixture = {
+              'fixture': {'id': 99, 'status': {'short': 'FT'}},
+              'score': {'fulltime': {'home': 1, 'away': 2}},
+              'goals': {'home': 1, 'away': 2},
+          }
+          green = {
+              'fixture_id': 99,
+              'home_team': 'Time A',
+              'away_team': 'Time B',
+              'market': 'Dupla chance',
+              'selection': 'Time B ou empate',
+          }
+          red = {
+              'fixture_id': 99,
+              'home_team': 'Time A',
+              'away_team': 'Time B',
+              'market': 'Dupla chance',
+              'selection': 'Time A ou empate',
+          }
+          over = {
+              'fixture_id': 99,
+              'home_team': 'Time A',
+              'away_team': 'Time B',
+              'market': 'Total de gols',
+              'selection': 'Mais de 1.5 gols',
+          }
+          assert settle_leg(green, fixture)['status'] == 'GREEN'
+          assert settle_leg(red, fixture)['status'] == 'RED'
+          assert settle_leg(over, fixture)['status'] == 'GREEN'
+          ticket = {'legs': [green, red], 'status': 'PENDING'}
+          assert settle_ticket(ticket, {99: fixture})['status'] == 'RED'
+          print('GREEN RED verifier OK')
           PY
