@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   probe:
@@ -17,6 +17,9 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -27,6 +30,28 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Probe sports site
         run: node scripts/probe_casadeapostas.mjs
+      - name: Persist probe summary
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          if [ -f artifacts/cda-probe/summary.json ]; then
+            cp artifacts/cda-probe/summary.json data/cda_probe.json
+          else
+            printf '{"ok":false,"message":"probe did not produce summary.json"}\n' > data/cda_probe.json
+          fi
+          if [ -f artifacts/cda-probe/interesting.json ]; then
+            cp artifacts/cda-probe/interesting.json data/cda_probe_elements.json
+          fi
+          git config user.name 'investbet-probe-bot'
+          git config user.email 'investbet-probe-bot@users.noreply.github.com'
+          git add data/cda_probe.json data/cda_probe_elements.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m 'test: update Casa de Apostas probe evidence'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
       - name: Upload probe evidence
         if: always()
         uses: actions/upload-artifact@v4
