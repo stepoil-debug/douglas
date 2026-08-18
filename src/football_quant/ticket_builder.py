@@ -12,6 +12,13 @@ MAX_TICKET_ODD = 2.00
 TARGET_TICKETS = 3
 TARGET_CENTER = 1.72
 
+# Accuracy / risk controls. These values intentionally make the engine more
+# selective instead of forcing three tickets when the board is weak.
+MAX_MODEL_MARKET_GAP = 0.12
+EXTREME_PROBABILITY_EPSILON = 0.01
+CUP_DOUBLE_CHANCE_MIN_MARKET_PROBABILITY = 0.80
+GENERAL_DOUBLE_CHANCE_MIN_MARKET_PROBABILITY = 0.69
+
 PRIORITY_COUNTRIES = {
     "England", "Spain", "Italy", "Germany", "France", "Portugal", "Netherlands",
     "Belgium", "Brazil", "Argentina", "USA", "Mexico", "Turkey", "Greece",
@@ -21,6 +28,11 @@ PRIORITY_COUNTRIES = {
 LOW_SIGNAL_LEAGUE_TERMS = (
     "friendly", "friendlies", "u17", "u18", "u19", "u20", "u21", "reserve",
     "youth", "women friendly", "amateur",
+)
+
+CUP_TERMS = (
+    " cup", "cup ", "copa", "taça", "taca", "pokal", "coupe", "coppa",
+    "beker", "pokalen", "cupa", "kubok",
 )
 
 
@@ -41,6 +53,13 @@ def _normal(text: Any) -> str:
     return re.sub(r"\s+", " ", str(text or "").strip().casefold())
 
 
+def _is_cup_fixture(fixture: dict[str, Any]) -> bool:
+    league = fixture.get("league") or {}
+    name = f" {_normal(league.get('name'))} "
+    league_type = _normal(league.get("type"))
+    return league_type == "cup" or any(term in name for term in CUP_TERMS)
+
+
 def _league_priority(fixture: dict[str, Any]) -> int:
     league = fixture.get("league") or {}
     name = _normal(league.get("name"))
@@ -57,6 +76,10 @@ def _league_priority(fixture: dict[str, Any]) -> int:
         "bundesliga", "ligue 1", "brasile", "libertadores", "sudamericana",
     )):
         score += 3
+    # Cup matches remain eligible, but receive a mild ranking penalty because
+    # rotation/motivation variance is structurally higher than in league play.
+    if _is_cup_fixture(fixture):
+        score -= 1
     return score
 
 
@@ -76,6 +99,25 @@ def _prediction_parts(prediction: dict[str, Any] | None) -> dict[str, Any]:
         "goals": predictions.get("goals") or {},
         "comparison": prediction.get("comparison") or {},
     }
+
+
+def _prediction_risk_flags(parts: dict[str, Any]) -> list[str]:
+    probabilities = [float(parts.get(key) or 0.0) for key in ("home", "draw", "away")]
+    flags: list[str] = []
+    total = sum(probabilities)
+    if total and not 0.97 <= total <= 1.03:
+        flags.append("PROBABILITY_SUM_ANOMALY")
+    if probabilities and (
+        min(probabilities) <= EXTREME_PROBABILITY_EPSILON
+        or max(probabilities) >= 1.0 - EXTREME_PROBABILITY_EPSILON
+    ):
+        flags.append("EXTREME_PROBABILITY")
+    # API feeds sometimes emit coarse 0/50/50 or 50/50/0 distributions. They
+    # are useful directionally, but must not be treated as a 95-100% signal.
+    rounded = sorted(round(value, 2) for value in probabilities)
+    if rounded in ([0.0, 0.5, 0.5], [0.0, 0.0, 1.0]):
+        flags.append("COARSE_PROBABILITY")
+    return flags
 
 
 def _comparison_strength(prediction: dict[str, Any] | None, side: str) -> float:
@@ -144,6 +186,28 @@ def _calibrated_probability(model_probability: float, price: dict[str, Any], mod
     return max(0.0, min(0.94, model_weight * model_probability + (1.0 - model_weight) * market_probability))
 
 
+def _calibration_weight(
+    raw_model_probability: float,
+    price: dict[str, Any],
+    base_weight: float,
+    prediction_flags: list[str],
+) -> tuple[float, list[str], float]:
+    market_probability, _ = _market_probability(price)
+    risk_flags = list(prediction_flags)
+    weight = base_weight
+    penalty = 0.0
+    if prediction_flags:
+        weight = min(weight, 0.25)
+        penalty += 4.0
+    if market_probability > 0:
+        gap = abs(raw_model_probability - market_probability)
+        if gap > MAX_MODEL_MARKET_GAP:
+            risk_flags.append("MODEL_MARKET_DISAGREEMENT")
+            weight = min(weight, 0.35)
+            penalty += min(7.0, (gap - MAX_MODEL_MARKET_GAP) * 35.0)
+    return weight, sorted(set(risk_flags)), penalty
+
+
 def _base_leg(
     fixture: dict[str, Any],
     market: str,
@@ -153,6 +217,8 @@ def _base_leg(
     rationale: str,
     strength: float,
     signal_source: str = "MODEL+MARKET",
+    risk_flags: list[str] | None = None,
+    risk_penalty: float = 0.0,
 ) -> dict[str, Any]:
     home, away = _team_names(fixture)
     league = fixture.get("league") or {}
@@ -170,6 +236,7 @@ def _base_leg(
         + 0.12 * max(0.0, min(1.0, 0.5 + edge))
         + 0.08 * max(0.0, min(1.0, (_league_priority(fixture) + 2) / 10))
     )
+    score = max(0.0, score - max(0.0, risk_penalty))
     quotes = {
         str(book): float(value)
         for book, value in (price.get("quotes") or {price.get("bookmaker") or "Bookmaker": odd}).items()
@@ -195,12 +262,14 @@ def _base_leg(
         "edge": round(edge, 4),
         "score": round(score, 1),
         "signal_source": signal_source,
+        "risk_flags": sorted(set(risk_flags or [])),
         "rationale": rationale,
     }
 
 
 def _market_only_legs(fixture: dict[str, Any], prices: list[dict[str, Any]]) -> list[dict[str, Any]]:
     legs: list[dict[str, Any]] = []
+    cup_fixture = _is_cup_fixture(fixture)
     for price in prices:
         market = _normal(price.get("market"))
         selection = _normal(price.get("selection"))
@@ -217,12 +286,21 @@ def _market_only_legs(fixture: dict[str, Any], prices: list[dict[str, Any]]) -> 
         canonical_market = ""
         canonical_selection = str(price.get("selection") or "")
         min_probability = 0.68
+        risk_flags: list[str] = []
+        risk_penalty = 0.0
         if "double chance" in market and selection in {
             "home or draw", "home/draw", "1x", "1 or x",
             "away or draw", "draw/away", "x2", "x or 2",
         }:
             canonical_market = "Dupla chance"
-            min_probability = 0.69
+            min_probability = (
+                CUP_DOUBLE_CHANCE_MIN_MARKET_PROBABILITY
+                if cup_fixture
+                else GENERAL_DOUBLE_CHANCE_MIN_MARKET_PROBABILITY
+            )
+            if cup_fixture:
+                risk_flags.append("CUP_VOLATILITY")
+                risk_penalty += 2.0
         elif any(term in market for term in ("goals over/under", "over/under", "total goals")) and selection in {"over 1.5", "over 1,5"}:
             canonical_market = "Total de gols"
             canonical_selection = "Mais de 1.5 gols"
@@ -249,6 +327,8 @@ def _market_only_legs(fixture: dict[str, Any], prices: list[dict[str, Any]]) -> 
                 f"Consenso de {books} bookmaker(s); probabilidade implícita ajustada {market_p:.0%}. Fallback de mercado para cobertura estatística limitada.",
                 reliability,
                 signal_source="MARKET_CONSENSUS",
+                risk_flags=risk_flags,
+                risk_penalty=risk_penalty,
             )
         )
     return legs
@@ -269,6 +349,7 @@ def build_legs(
         return _dedupe_legs(legs)
 
     parts = _prediction_parts(prediction)
+    prediction_flags = _prediction_risk_flags(parts)
     home, away = _team_names(fixture)
     home_p = float(parts.get("home") or 0)
     away_p = float(parts.get("away") or 0)
@@ -282,12 +363,13 @@ def build_legs(
         selection_terms = ("home", "1") if side == "home" else ("away", "2")
         price = _find_price(prices, ("match winner", "1x2", "winner"), selection_terms)
         if price and 1.30 <= float(price["odd"]) <= 2.05:
-            calibrated = _calibrated_probability(side_p, price)
+            weight, risk_flags, penalty = _calibration_weight(side_p, price, 0.74, prediction_flags)
+            calibrated = _calibrated_probability(side_p, price, weight)
             if calibrated >= 0.56:
                 legs.append(_base_leg(
                     fixture, "Vencedor da partida", side_name, price, calibrated,
                     f"Modelo {side_p:.0%} para {side_name}; força comparativa {strength:.0%}; calibrado pelo consenso das casas.",
-                    strength,
+                    strength, risk_flags=risk_flags, risk_penalty=penalty,
                 ))
 
     dc_model = min(0.95, side_p + draw_p)
@@ -300,12 +382,21 @@ def build_legs(
             selection_label = f"{away} ou empate"
         price = _find_price(prices, ("double chance",), selection_terms)
         if price and 1.08 <= float(price["odd"]) <= 1.60:
-            calibrated = _calibrated_probability(dc_model, price, model_weight=0.70)
-            legs.append(_base_leg(
-                fixture, "Dupla chance", selection_label, price, calibrated,
-                f"Vitória/empate do lado mais forte soma {dc_model:.0%} no modelo e foi calibrado pelas odds disponíveis.",
-                max(strength, 0.62),
-            ))
+            market_p, _ = _market_probability(price)
+            # A coarse/extreme model must not override a weak cup market. This
+            # specifically prevents 0/50/50 from becoming an artificial 95%.
+            risky_cup = _is_cup_fixture(fixture) and bool(prediction_flags)
+            if not (risky_cup and market_p < CUP_DOUBLE_CHANCE_MIN_MARKET_PROBABILITY):
+                weight, risk_flags, penalty = _calibration_weight(dc_model, price, 0.70, prediction_flags)
+                if _is_cup_fixture(fixture):
+                    risk_flags = sorted(set(risk_flags + ["CUP_VOLATILITY"]))
+                    penalty += 2.0
+                calibrated = _calibrated_probability(dc_model, price, weight)
+                legs.append(_base_leg(
+                    fixture, "Dupla chance", selection_label, price, calibrated,
+                    f"Vitória/empate do lado mais forte soma {dc_model:.0%} no modelo; confiança calibrada pelo consenso real das casas.",
+                    max(strength, 0.62), risk_flags=risk_flags, risk_penalty=penalty,
+                ))
 
     under_over = _normal(parts.get("under_over"))
     over15_model = 0.0
@@ -318,11 +409,12 @@ def build_legs(
     if over15_model:
         price = _find_price(prices, ("goals over/under", "over/under", "total goals"), ("over 1.5", "over 1,5"))
         if price and 1.07 <= float(price["odd"]) <= 1.58:
-            calibrated = _calibrated_probability(over15_model, price, model_weight=0.68)
+            weight, risk_flags, penalty = _calibration_weight(over15_model, price, 0.68, prediction_flags)
+            calibrated = _calibrated_probability(over15_model, price, weight)
             legs.append(_base_leg(
                 fixture, "Total de gols", "Mais de 1.5 gols", price, calibrated,
                 f"Projeção da API: {parts.get('under_over') or 'viés ofensivo'}; linha 1.5 confirmada pelo mercado.",
-                0.74,
+                0.74, risk_flags=risk_flags, risk_penalty=penalty,
             ))
 
     under45_model = 0.0
@@ -335,11 +427,12 @@ def build_legs(
     if under45_model:
         price = _find_price(prices, ("goals over/under", "over/under", "total goals"), ("under 4.5", "under 4,5"))
         if price and 1.06 <= float(price["odd"]) <= 1.52:
-            calibrated = _calibrated_probability(under45_model, price, model_weight=0.68)
+            weight, risk_flags, penalty = _calibration_weight(under45_model, price, 0.68, prediction_flags)
+            calibrated = _calibrated_probability(under45_model, price, weight)
             legs.append(_base_leg(
                 fixture, "Total de gols", "Menos de 4.5 gols", price, calibrated,
                 "Teto de gols validado pela projeção estatística e pelo consenso de mercado.",
-                0.77,
+                0.77, risk_flags=risk_flags, risk_penalty=penalty,
             ))
 
     if side_p >= 0.59:
@@ -347,11 +440,12 @@ def build_legs(
         price = _find_price(prices, market_terms, ("over 0.5", "over 0,5", "1 or more"))
         if price and 1.06 <= float(price["odd"]) <= 1.48:
             raw_model = min(0.91, 0.75 + max(0.0, side_p - 0.59) * 0.60)
-            calibrated = _calibrated_probability(raw_model, price, model_weight=0.68)
+            weight, risk_flags, penalty = _calibration_weight(raw_model, price, 0.68, prediction_flags)
+            calibrated = _calibrated_probability(raw_model, price, weight)
             legs.append(_base_leg(
                 fixture, "Gol da equipe", f"{side_name} marca 1+ gol", price, calibrated,
                 f"Equipe mais forte tem {side_p:.0%} de vitória; linha reduzida para 1 gol e confirmada no mercado.",
-                strength,
+                strength, risk_flags=risk_flags, risk_penalty=penalty,
             ))
 
     return _dedupe_legs(legs)
@@ -438,7 +532,7 @@ def _ticket_from_legs(ticket_id: int, legs: list[dict[str, Any]], bookmaker: str
         "score": round(score, 1),
         "legs": legs,
         "status": "PENDING",
-        "reason": "Bilhete precificado em uma única bookmaker, com mercados reais e filtros de consistência.",
+        "reason": "Bilhete com partidas exclusivas: nenhum jogo pode aparecer em outro bilhete do mesmo ciclo.",
     }
 
 
@@ -447,13 +541,14 @@ def _candidate_quality(legs: list[dict[str, Any]], total_odd: float) -> tuple[fl
     combined_probability = math.prod(float(leg["model_probability"]) for leg in legs)
     avg_score = sum(float(leg["score"]) for leg in legs) / len(legs)
     sources = {str(leg.get("signal_source") or "") for leg in legs}
-    if all(source == "MODEL+MARKET" for source in sources) and min_probability >= 0.73:
+    risk_count = sum(len(leg.get("risk_flags") or []) for leg in legs)
+    if all(source == "MODEL+MARKET" for source in sources) and min_probability >= 0.73 and risk_count == 0:
         tier, bonus = "STRICT", 5.0
-    elif min_probability >= 0.69:
+    elif min_probability >= 0.69 and risk_count <= 1:
         tier, bonus = "STRONG", 2.5
     else:
         tier, bonus = "CONSENSUS", 0.0
-    rating = avg_score + combined_probability * 22 + bonus - abs(total_odd - TARGET_CENTER) * 2.5
+    rating = avg_score + combined_probability * 22 + bonus - abs(total_odd - TARGET_CENTER) * 2.5 - risk_count * 1.5
     return rating, tier
 
 
@@ -488,33 +583,27 @@ def build_tickets(legs: list[dict[str, Any]], target: int = TARGET_TICKETS) -> l
     candidates.sort(key=lambda item: -item[0])
     selected: list[dict[str, Any]] = []
     seen_sets: set[tuple[tuple[Any, str, str], ...]] = set()
-    fixture_exposure: dict[Any, int] = {}
+    used_fixtures: set[Any] = set()
 
     def signature(candidate_legs: list[dict[str, Any]]) -> tuple[tuple[Any, str, str], ...]:
         return tuple(sorted((leg["fixture_id"], str(leg["market"]), str(leg["selection"])) for leg in candidate_legs))
 
+    # Strict portfolio diversification: once a fixture is used in one ticket,
+    # it cannot appear in any other ticket from the same analysis cycle.
     for _, candidate_legs, tier, bookmaker, total in candidates:
         sig = signature(candidate_legs)
         if sig in seen_sets:
             continue
         fixtures = {leg["fixture_id"] for leg in candidate_legs}
-        if any(fixture_exposure.get(fid, 0) >= 2 for fid in fixtures):
+        if fixtures & used_fixtures:
             continue
         selected.append(_ticket_from_legs(len(selected) + 1, candidate_legs, bookmaker, total, tier))
         seen_sets.add(sig)
-        for fid in fixtures:
-            fixture_exposure[fid] = fixture_exposure.get(fid, 0) + 1
-        if len(selected) >= target:
-            return selected
-
-    for _, candidate_legs, tier, bookmaker, total in candidates:
-        sig = signature(candidate_legs)
-        if sig in seen_sets:
-            continue
-        selected.append(_ticket_from_legs(len(selected) + 1, candidate_legs, bookmaker, total, tier))
-        seen_sets.add(sig)
+        used_fixtures.update(fixtures)
         if len(selected) >= target:
             break
+
+    # Never relax the diversification rule just to fabricate three tickets.
     return selected
 
 
@@ -538,6 +627,7 @@ def summarize_match(fixture: dict[str, Any], prediction: dict[str, Any] | None, 
         "advice": parts.get("advice") or "",
         "under_over": parts.get("under_over") or "",
         "prediction_available": bool(prediction),
+        "prediction_risk_flags": _prediction_risk_flags(parts) if prediction else [],
         "best_market": best_leg,
         "eligible_legs": legs,
         "decision": "USABLE" if legs else "REJECTED",
