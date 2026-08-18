@@ -56,7 +56,9 @@ jobs:
           assert all(1.50 <= t['total_odd'] <= 2.00 for t in tickets)
           assert all(1 <= len(t['legs']) <= 2 for t in tickets)
           assert all(len({leg['bookmaker'] for leg in t['legs']}) == 1 for t in tickets)
-          print('3 executable tickets OK')
+          fixture_ids = [leg['fixture_id'] for ticket in tickets for leg in ticket['legs']]
+          assert len(fixture_ids) == len(set(fixture_ids)), tickets
+          print('3 executable tickets with exclusive fixtures OK')
           PY
       - name: GREEN RED verifier smoke test
         env:
