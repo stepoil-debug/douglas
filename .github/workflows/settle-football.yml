@@ -1,0 +1,68 @@
+name: InvestBet Football - Settle Results
+
+on:
+  workflow_dispatch:
+  schedule:
+    # A cada 2 horas. Mantém GREEN/RED e a gestão simulada atualizados sem consumo excessivo da API.
+    - cron: '25 */2 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: investbet-football-settlement
+  cancel-in-progress: true
+
+jobs:
+  settle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      KEY_PRIMARY: ${{ secrets.API_FOOTBALL_KEY }}
+      KEY_ALIAS_1: ${{ secrets.API_SPORTS_KEY }}
+      KEY_ALIAS_2: ${{ secrets.FOOTBALL_API_KEY }}
+      KEY_ALIAS_3: ${{ secrets.APISPORTS_KEY }}
+      KEY_ALIAS_4: ${{ secrets.EFOOTBAL }}
+      API_FOOTBALL_MIN_INTERVAL: '6.2'
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Resolve API-Football secret
+        shell: bash
+        run: |
+          set -euo pipefail
+          key="${KEY_PRIMARY:-}"
+          [ -n "$key" ] || key="${KEY_ALIAS_1:-}"
+          [ -n "$key" ] || key="${KEY_ALIAS_2:-}"
+          [ -n "$key" ] || key="${KEY_ALIAS_3:-}"
+          [ -n "$key" ] || key="${KEY_ALIAS_4:-}"
+          if [ -n "$key" ]; then
+            echo '::add-mask::'$key
+            echo "API_FOOTBALL_KEY=$key" >> "$GITHUB_ENV"
+          fi
+
+      - name: Verify pending tickets
+        run: python -m src.football_quant.settlement --max-dates 3
+
+      - name: Persist results and bankroll simulation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'investbet-result-bot'
+          git config user.email 'investbet-result-bot@users.noreply.github.com'
+          git add dashboard/data.json dashboard/management.json data/football/history || true
+          if git diff --cached --quiet; then
+            echo 'No settlement changes.'
+            exit 0
+          fi
+          git commit -m 'data: settle football tickets and update bankroll'
+          git pull --rebase origin main
+          git push origin HEAD:main
