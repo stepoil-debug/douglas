@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "requestedUrl": "https://www.bet365.bet.br/s/r/ZMmHq",
+  "finalUrl": "https://www.bet365.bet.br/s/r/ZMmHq",
+  "title": "Attention Required! | Cloudflare",
+  "slipLoaded": false,
+  "blocked": true,
+  "bodyPreview": "Sorry, you have been blocked\nYou are unable to access bet365.bet.br\nWhy have I been blocked?\n\nThis website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.\n\nWhat can I do to resolve this?\n\nYou can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.\n\nCloudflare Ray ID: a2d1db695e2f185d • Your IP: Click to reveal • Performance & security by Cloudflare",
+  "requestCount": 4,
+  "responseCount": 4,
+  "endpointCandidates": [
+    "https://www.bet365.bet.br/s/r/ZMmHq"
+  ],
+  "bundleHitCount": 0,
+  "bundleTerms": []
+}

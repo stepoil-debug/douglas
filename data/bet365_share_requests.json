@@ -1,0 +1,26 @@
+[
+  {
+    "method": "GET",
+    "url": "https://www.bet365.bet.br/s/r/ZMmHq",
+    "resourceType": "document",
+    "postData": ""
+  },
+  {
+    "method": "GET",
+    "url": "https://www.bet365.bet.br/cdn-cgi/styles/cf.errors.css",
+    "resourceType": "stylesheet",
+    "postData": ""
+  },
+  {
+    "method": "GET",
+    "url": "https://www.bet365.bet.br/cdn-cgi/images/browser-bar.png?1376755637",
+    "resourceType": "image",
+    "postData": ""
+  },
+  {
+    "method": "GET",
+    "url": "https://www.bet365.bet.br/cdn-cgi/images/cf-no-screenshot-error.png",
+    "resourceType": "image",
+    "postData": ""
+  }
+]
