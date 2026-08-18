@@ -1,36 +1,58 @@
 {
   "sport": "football",
-  "model_version": "football-selective-v1.0",
+  "model_version": "football-3tickets-v2.1",
   "data_mode": "API_FOOTBALL",
   "data_sources": [
     "API-Football fixtures",
-    "API-Football predictions",
-    "API-Football pre-match odds"
+    "API-Football predictions/comparison/H2H",
+    "API-Football pre-match bookmaker odds"
   ],
-  "operational_date": "2026-08-17",
+  "operational_date": "2026-08-18",
   "board_date": "2026-08-18",
-  "board_mode": "D+1",
+  "board_mode": "TODAY",
   "board_status": "WAITING_FOR_ANALYSIS",
   "last_run_at": null,
   "fixtures_found": 0,
+  "fixtures_with_markets": 0,
+  "fixtures_ranked": 0,
   "fixtures_analyzed": 0,
-  "matches_with_odds": 0,
-  "deep_analyzed_matches": 0,
-  "approved": [],
-  "rejected": [],
+  "predictions_available": 0,
+  "usable_matches": 0,
+  "eligible_legs": 0,
+  "tickets": [],
+  "tickets_ready": 0,
+  "ticket_target": 3,
+  "strict_tickets": 0,
   "all_matches": [],
-  "top_limit": 6,
   "history_summary": {
     "resolved": 0,
     "hits": 0,
     "misses": 0,
-    "accuracy": null
+    "accuracy": null,
+    "tickets_resolved": 0,
+    "tickets_hit": 0,
+    "tickets_miss": 0,
+    "ticket_accuracy": null
   },
+  "api_requests": 0,
+  "api_requests_remaining": null,
   "criteria": {
-    "market": "Vencedor da partida (1X2)",
-    "odd_range": "1.50-2.00",
-    "min_probability": 0.58,
-    "min_edge": 0.03,
-    "min_score": 70
-  }
+    "ticket_odd_range": "1.50-2.00",
+    "ticket_target": 3,
+    "same_day_only": true,
+    "max_legs": 2,
+    "markets": [
+      "Vencedor da partida",
+      "Dupla chance",
+      "Mais de 1.5 gols",
+      "Menos de 4.5 gols",
+      "Equipe favorita marca 1+ gol"
+    ],
+    "method": "previsão + força comparativa + H2H incorporado + odds reais + diversificação"
+  },
+  "approved": [],
+  "rejected": [],
+  "matches_with_odds": 0,
+  "deep_analyzed_matches": 0,
+  "top_limit": 3
 }
