@@ -1,8 +1,7 @@
 {
-  "ok": true,
-  "url": "https://casadeapostas.bet.br/br/sports",
-  "title": "Casa de Apostas | Apostas Esportivas e Cassino Online",
-  "visibleElements": 111,
-  "interestingElements": 60,
-  "shareCandidates": []
+  "ok": false,
+  "stage": "ERROR",
+  "message": "Could not identify/click a safe odds selection on event page",
+  "url": "https://casadeapostas.bet.br/br/sports/event/8011579-Independiente-Rivadavia-vs-Fluminense-RJ",
+  "networkCandidates": []
 }
