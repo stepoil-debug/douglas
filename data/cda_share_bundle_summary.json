@@ -1,18 +1,14 @@
 {
   "ok": true,
-  "scriptCount": 91,
-  "scriptsScanned": 90,
-  "hitCount": 298,
+  "scriptCount": 30,
+  "scriptsScanned": 29,
+  "hitCount": 83,
   "termsFound": [
     "share",
-    "betslip",
-    "sharebet",
-    "sharebetslip",
-    "shareBetslip",
-    "share bet",
-    "share betslip"
+    "betslip"
   ],
   "endpointCandidates": [
+    "https://ads.tiktok.com/marketing_api/docs?rid=5ipocbxyw8v&id=1701890973258754",
     "https://ads.tiktok.com/help/article/standard-events-parameters?redirected=2",
     "https://ads.tiktok.com/marketing_api/docs?id=1739585700402178",
     "https://ads.tiktok.com/help/article/custom-events?lang=en",
@@ -31,14 +27,14 @@
     "http://schema.org",
     "https://www.googletagmanager.com/",
     "https://www.google.com/ccm/geo",
+    "https://(",
     "https://casadeapostas.com",
     "https://schema.org",
-    "https://next-minio-b",
-    "https://feross.org",
-    "/api/bets/sharebets",
-    "http://www.w3.org/2000/svg",
-    "https://api.whatsapp.com/send?text=",
-    "https://telegram.me/share/url?url=",
-    "http://ww"
+    "https://next-minio-b2b.devcore.at",
+    "https://facebook.com",
+    "https://twitter.com",
+    "https://www.instagram.com",
+    "https://youtube.com",
+    "https://feross.org"
   ]
 }
