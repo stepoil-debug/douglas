@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>INVESTBET • Bilhete de Teste</title>
+  <style>
+    :root{--bg:#06110b;--panel:#0c1d13;--line:#244331;--txt:#edf5ef;--muted:#8fa797;--green:#6ee7a3;--gold:#efcc64;--red:#ff8f97}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#10291a 0,#06110b 42%,#030805 100%);color:var(--txt);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;min-height:100vh}
+    .wrap{max-width:760px;margin:0 auto;padding:28px 16px 60px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}.brand{font-weight:950;letter-spacing:.08em}.badge{font-size:11px;font-weight:900;color:#15200f;background:var(--gold);padding:7px 10px;border-radius:999px}.card{background:linear-gradient(180deg,rgba(15,35,23,.96),rgba(7,19,12,.98));border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.28)}
+    .head{padding:18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:flex-start;gap:14px}.title{font-size:22px;font-weight:950}.sub{color:var(--muted);font-size:12px;margin-top:5px}.odd{font-size:28px;font-weight:950;color:var(--gold)}
+    .legs{padding:0 18px}.leg{padding:16px 0;border-bottom:1px solid rgba(57,86,68,.55)}.match{font-weight:900;font-size:14px}.market{font-size:12px;color:var(--muted);margin-top:5px}.pick{margin-top:7px;font-weight:900;color:var(--green)}.legodd{float:right;color:var(--gold);font-weight:950}
+    .stake{padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{background:#07130c;border:1px solid var(--line);border-radius:12px;padding:12px}.field label{display:block;color:var(--muted);font-size:11px;font-weight:800;margin-bottom:7px}.field input{width:100%;background:transparent;border:0;outline:0;color:var(--txt);font-size:22px;font-weight:950}.value{font-size:22px;font-weight:950;color:var(--green)}
+    .actions{padding:0 18px 18px}.simulate{width:100%;border:0;border-radius:12px;background:linear-gradient(135deg,#70e4a5,#32b873);color:#062010;font-size:14px;font-weight:950;padding:14px;cursor:pointer}.note{margin-top:12px;font-size:11px;line-height:1.55;color:var(--muted);text-align:center}.result{display:none;margin:0 18px 18px;padding:12px;border:1px solid rgba(110,231,163,.3);background:rgba(110,231,163,.07);border-radius:12px;color:var(--green);font-size:12px;font-weight:800}.back{display:inline-block;color:var(--muted);text-decoration:none;font-size:12px;margin-top:18px}.error{padding:24px;color:var(--red)}
+    @media(max-width:560px){.stake{grid-template-columns:1fr}.head{align-items:center}.odd{font-size:23px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top"><div class="brand">INVESTBET</div><div class="badge">AMBIENTE DE TESTE</div></div>
+    <div id="app" class="card"><div class="error">Carregando bilhete...</div></div>
+    <a class="back" href="./">← Voltar para o painel</a>
+  </div>
+  <script>
+    const brl=n=>Number(n||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+    const odd=n=>Number(n||0).toFixed(2).replace('.',',');
+    const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    async function run(){
+      const id=new URLSearchParams(location.search).get('ticket')||'B1';
+      const r=await fetch(`./data.json?t=${Date.now()}`,{cache:'no-store'});
+      if(!r.ok) throw new Error('Não foi possível carregar os bilhetes.');
+      const data=await r.json();
+      const ticket=(data.tickets||data.approved||[]).find(t=>String(t.ticket_id)===id);
+      if(!ticket) throw new Error(`Bilhete ${id} não encontrado.`);
+      const legs=Array.isArray(ticket.legs)?ticket.legs:[];
+      const total=Number(ticket.total_odd||legs.reduce((a,l)=>a*Number(l.odd||1),1));
+      document.getElementById('app').innerHTML=`
+        <div class="head"><div><div class="title">${esc(ticket.ticket_id)} • ${esc(ticket.profile||'Bilhete')}</div><div class="sub">Cupom pré-carregado para teste de experiência</div></div><div class="odd">@${odd(total)}</div></div>
+        <div class="legs">${legs.map((l,i)=>`<div class="leg"><span class="legodd">@${odd(l.odd)}</span><div class="match">${i+1}. ${esc(l.match)}</div><div class="market">${esc(l.market)}</div><div class="pick">${esc(l.selection)}</div></div>`).join('')}</div>
+        <div class="stake"><div class="field"><label>VALOR DA ENTRADA — SIMULAÇÃO</label><input id="stake" type="number" inputmode="decimal" min="0" step="1" placeholder="0,00"></div><div class="field"><label>RETORNO SIMULADO</label><div id="return" class="value">${brl(0)}</div></div></div>
+        <div class="actions"><button id="simulate" class="simulate">Simular com este bilhete</button><div class="note">Nenhuma aposta é enviada para uma casa real. Esta página serve apenas para validar o fluxo de “bilhete pronto + informar valor”.</div></div>
+        <div id="result" class="result"></div>`;
+      const stake=document.getElementById('stake'),ret=document.getElementById('return'),result=document.getElementById('result');
+      const refresh=()=>{const v=Math.max(0,Number(stake.value||0));ret.textContent=brl(v*total)};
+      stake.addEventListener('input',refresh);
+      document.getElementById('simulate').addEventListener('click',()=>{const v=Math.max(0,Number(stake.value||0));result.style.display='block';result.textContent=`Simulação registrada localmente: ${brl(v)} no ${ticket.ticket_id} @${odd(total)} • retorno potencial ${brl(v*total)}.`;localStorage.setItem('investbet-test-last',JSON.stringify({ticket:ticket.ticket_id,stake:v,odd:total,at:new Date().toISOString()}));});
+    }
+    run().catch(e=>document.getElementById('app').innerHTML=`<div class="error">${esc(e.message)}</div>`);
+  </script>
+</body>
+</html>
