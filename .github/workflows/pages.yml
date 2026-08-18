@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -32,6 +32,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 0
 
       - name: Stage football dashboard
         shell: bash
@@ -49,8 +50,6 @@ jobs:
           from datetime import datetime, timezone
           from pathlib import Path
 
-          # Every Pages deploy receives unique JS URLs in BOTH entry pages.
-          # This prevents iPhone/Safari from reusing an older dashboard controller.
           build = os.environ.get('GITHUB_SHA', 'build')[:12]
           for page_name in ('index.html', 'v2.html'):
               page = Path('dashboard') / page_name
@@ -93,6 +92,84 @@ jobs:
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dashboard
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Verify public dashboard is current
+        id: verify_public
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="${PAGE_URL%/}"
+          EXPECTED_DATE="$(jq -r '.board_date // empty' dashboard/run_status.json)"
+          EXPECTED_STATUS="$(jq -r '.status // empty' dashboard/run_status.json)"
+          BUILD="${GITHUB_SHA:0:12}"
+          OK=0
+
+          for attempt in $(seq 1 24); do
+            ROOT="$(curl -fsSL --retry 2 --retry-delay 2 "${BASE}/?verify=${GITHUB_SHA}" || true)"
+            V2="$(curl -fsSL --retry 2 --retry-delay 2 "${BASE}/v2.html?verify=${GITHUB_SHA}" || true)"
+            STATUS="$(curl -fsSL --retry 2 --retry-delay 2 "${BASE}/run_status.json?verify=${GITHUB_SHA}" || true)"
+            PUBLIC_DATE="$(printf '%s' "$STATUS" | jq -r '.board_date // empty' 2>/dev/null || true)"
+            PUBLIC_STATUS="$(printf '%s' "$STATUS" | jq -r '.status // empty' 2>/dev/null || true)"
+
+            ROOT_OK=0; V2_OK=0; WATCH_OK=0; MANUAL_OK=0; BUILD_OK=0
+            printf '%s' "$ROOT" | grep -q "analysis-watch.js?v=${BUILD}" && ROOT_OK=1 || true
+            printf '%s' "$V2" | grep -q "analysis-watch.js?v=${BUILD}" && V2_OK=1 || true
+            printf '%s' "$V2" | grep -q "manual-trigger.js?v=${BUILD}" && MANUAL_OK=1 || true
+            printf '%s' "$V2" | grep -q "investbet-build.*${BUILD}" && BUILD_OK=1 || true
+            WATCH_BODY="$(curl -fsSL --retry 2 --retry-delay 2 "${BASE}/analysis-watch.js?v=${BUILD}" || true)"
+            printf '%s' "$WATCH_BODY" | grep -q 'POLL_MS = 5000' && WATCH_OK=1 || true
+
+            if [ "$ROOT_OK" = 1 ] && [ "$V2_OK" = 1 ] && [ "$WATCH_OK" = 1 ] && [ "$MANUAL_OK" = 1 ] && [ "$BUILD_OK" = 1 ] \
+               && [ "$PUBLIC_DATE" = "$EXPECTED_DATE" ] && [ "$PUBLIC_STATUS" = "$EXPECTED_STATUS" ]; then
+              OK=1
+              break
+            fi
+            echo "Attempt ${attempt}: page not fully current yet (public=${PUBLIC_DATE}/${PUBLIC_STATUS}, expected=${EXPECTED_DATE}/${EXPECTED_STATUS})."
+            sleep 10
+          done
+
+          mkdir -p data
+          NOW="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          jq -n \
+            --arg checked_at "$NOW" \
+            --arg page_url "$BASE/" \
+            --arg commit "$GITHUB_SHA" \
+            --arg expected_date "$EXPECTED_DATE" \
+            --arg public_date "${PUBLIC_DATE:-}" \
+            --arg public_status "${PUBLIC_STATUS:-}" \
+            --argjson healthy "$([ "$OK" = 1 ] && echo true || echo false)" \
+            '{healthy:$healthy,checked_at:$checked_at,page_url:$page_url,commit:$commit,expected_date:$expected_date,public_date:$public_date,public_status:$public_status}' \
+            > data/pages-health.json
+
+          echo "healthy=$OK" >> "$GITHUB_OUTPUT"
+          if [ "$OK" != 1 ]; then
+            echo 'Public GitHub Pages validation failed.' >&2
+          fi
+
+      - name: Persist Pages health report
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git checkout -- dashboard/v2.html || true
+          git config user.name 'investbet-pages-bot'
+          git config user.email 'investbet-pages-bot@users.noreply.github.com'
+          git add data/pages-health.json
+          if git diff --cached --quiet; then
+            echo 'Pages health report unchanged.'
+          else
+            git commit -m 'chore: update InvestBet Pages health report'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Fail unhealthy deploy
+        if: steps.verify_public.outputs.healthy != '1'
+        shell: bash
+        run: exit 1
