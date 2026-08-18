@@ -49,18 +49,27 @@ jobs:
           from datetime import datetime, timezone
           from pathlib import Path
 
-          # Force a fresh JS URL on every deploy so browsers cannot reuse the old
-          # MutationObserver version that previously caused the page to freeze.
-          index = Path('dashboard/index.html')
-          html = index.read_text(encoding='utf-8')
+          # Every Pages deploy receives unique JS URLs in BOTH entry pages.
+          # This prevents iPhone/Safari from reusing an older dashboard controller.
           build = os.environ.get('GITHUB_SHA', 'build')[:12]
-          html = re.sub(
-              r'manual-trigger\.js(?:\?v=[^"\']*)?',
-              f'manual-trigger.js?v={build}',
-              html,
-          )
-          html = html.replace('</head>', f'<meta name="investbet-build" content="{build}">\n</head>')
-          index.write_text(html, encoding='utf-8')
+          for page_name in ('index.html', 'v2.html'):
+              page = Path('dashboard') / page_name
+              html = page.read_text(encoding='utf-8')
+              for script_name in ('manual-trigger.js', 'analysis-watch.js'):
+                  html = re.sub(
+                      rf'{re.escape(script_name)}(?:\?v=[^"\']*)?',
+                      f'{script_name}?v={build}',
+                      html,
+                  )
+              if 'name="investbet-build"' in html:
+                  html = re.sub(
+                      r'<meta name="investbet-build" content="[^"]*">',
+                      f'<meta name="investbet-build" content="{build}">',
+                      html,
+                  )
+              else:
+                  html = html.replace('</head>', f'<meta name="investbet-build" content="{build}">\n</head>')
+              page.write_text(html, encoding='utf-8')
 
           rows = []
           for path in sorted(Path('data/football/history').glob('????-??-??.json'), reverse=True):
