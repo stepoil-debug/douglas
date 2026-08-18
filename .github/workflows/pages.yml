@@ -44,8 +44,23 @@ jobs:
           fi
           python - <<'PY'
           import json
+          import os
+          import re
           from datetime import datetime, timezone
           from pathlib import Path
+
+          # Force a fresh JS URL on every deploy so browsers cannot reuse the old
+          # MutationObserver version that previously caused the page to freeze.
+          index = Path('dashboard/index.html')
+          html = index.read_text(encoding='utf-8')
+          build = os.environ.get('GITHUB_SHA', 'build')[:12]
+          html = re.sub(
+              r'manual-trigger\.js(?:\?v=[^"\']*)?',
+              f'manual-trigger.js?v={build}',
+              html,
+          )
+          html = html.replace('</head>', f'<meta name="investbet-build" content="{build}">\n</head>')
+          index.write_text(html, encoding='utf-8')
 
           rows = []
           for path in sorted(Path('data/football/history').glob('????-??-??.json'), reverse=True):
