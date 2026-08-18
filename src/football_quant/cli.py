@@ -28,13 +28,10 @@ def dump(path: Path, payload: dict[str, Any]) -> None:
 
 
 def status(state: str, **extra: Any) -> None:
-    payload = {
-        "sport": "football",
-        "status": state,
-        "updated_at": now().isoformat(),
-        **extra,
-    }
-    dump(DASHBOARD / "run_status.json", payload)
+    dump(
+        DASHBOARD / "run_status.json",
+        {"sport": "football", "status": state, "updated_at": now().isoformat(), **extra},
+    )
 
 
 def historical_summary() -> dict[str, Any]:
@@ -100,7 +97,9 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
             "WAITING_FOR_API_KEY",
             board_date=target_date,
             board_mode="TODAY",
-            message="Configure API_FOOTBALL_KEY (ou API_SPORTS_KEY) nos Secrets do repositório para ativar dados reais.",
+            tickets_ready=0,
+            target_tickets=TARGET_TICKETS,
+            message="Motor GitHub pronto; configure API_FOOTBALL_KEY (ou alias aceito) nos Secrets do repositório para ativar dados reais.",
         )
         return 0
 
@@ -120,8 +119,6 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
         tickets: list[dict[str, Any]] = []
         prediction_available = 0
 
-        # Analyze the strongest priced fixtures first. Continue until the board has enough depth,
-        # not merely until the first three combinations appear.
         for index, fixture in enumerate(ranked):
             info = fixture.get("fixture") or {}
             fixture_id = int(info.get("id"))
@@ -137,8 +134,8 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
             matches.append(summarize_match(fixture, prediction, legs))
             tickets = build_tickets(all_legs, target=TARGET_TICKETS)
 
-            # Minimum depth = 10 fixtures with predictions when available. After that, three valid
-            # tickets are enough to stop spending quota. If the slate is thin, continue to the cap.
+            # Mesmo tendo 3 combinações cedo, avalia pelo menos 10 jogos fortes para evitar
+            # selecionar os primeiros disponíveis em vez dos melhores do slate.
             if len(tickets) >= TARGET_TICKETS and index >= 9:
                 break
 
@@ -147,16 +144,19 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
         matches_with_markets = len(odds_by_fixture)
         usable_matches = sum(1 for row in matches if row.get("decision") == "USABLE")
         strict_tickets = sum(1 for row in tickets if row.get("quality_tier") == "STRICT")
+        consensus_tickets = sum(1 for row in tickets if row.get("quality_tier") == "CONSENSUS")
+        bookmakers_used = sorted({str(row.get("bookmaker") or "") for row in tickets if row.get("bookmaker")})
 
         board_status = "READY" if len(tickets) >= TARGET_TICKETS else ("PARTIAL" if tickets else "NO_TICKETS")
         payload = {
             "sport": "football",
-            "model_version": "football-3tickets-v2.0",
+            "model_version": "football-3tickets-v2.2",
             "data_mode": "API_FOOTBALL",
             "data_sources": [
                 "API-Football fixtures",
                 "API-Football predictions/comparison/H2H",
-                "API-Football pre-match bookmaker odds",
+                "API-Football pre-match odds",
+                "bookmaker consensus + common-bookmaker pricing",
             ],
             "operational_date": started.date().isoformat(),
             "board_date": target_date,
@@ -174,10 +174,14 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
             "tickets_ready": len(tickets),
             "ticket_target": TARGET_TICKETS,
             "strict_tickets": strict_tickets,
+            "consensus_tickets": consensus_tickets,
+            "bookmakers_used": bookmakers_used,
             "all_matches": matches,
             "history_summary": history,
             "api_requests": client.request_count,
             "api_requests_remaining": client.remaining_requests,
+            "api_minute_limit": client.minute_limit,
+            "api_minute_remaining": client.minute_remaining,
             "criteria": {
                 "ticket_odd_range": "1.50-2.00",
                 "ticket_target": TARGET_TICKETS,
@@ -190,9 +194,8 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
                     "Menos de 4.5 gols",
                     "Equipe favorita marca 1+ gol",
                 ],
-                "method": "previsão + força comparativa + H2H incorporado + odds reais + diversificação",
+                "method": "previsão + comparação/H2H + consenso de bookmakers + fallback conservador + mesma casa por bilhete + diversificação",
             },
-            # Compatibility aliases for the previous dashboard version.
             "approved": tickets,
             "rejected": [row for row in matches if row.get("decision") != "USABLE"],
             "matches_with_odds": matches_with_markets,
@@ -203,9 +206,9 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
         dump(HISTORY / f"{target_date}.json", payload)
 
         message = (
-            f"3 bilhetes prontos para hoje ({strict_tickets} em filtro estrito)."
+            f"3 bilhetes prontos para hoje; todos precificados em uma única bookmaker por bilhete ({strict_tickets} estritos, {consensus_tickets} consenso)."
             if len(tickets) >= TARGET_TICKETS
-            else f"Somente {len(tickets)} bilhete(s) atingiram odd 1.50-2.00 com dados disponíveis; nenhum mercado foi inventado."
+            else f"Somente {len(tickets)} bilhete(s) executáveis atingiram odd 1.50-2.00; nenhum mercado ou preço foi fabricado."
         )
         status(
             "SUCCESS",
@@ -232,8 +235,8 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(description="InvestBet same-day football ticket analyzer")
     parser.add_argument("--date", help="Data YYYY-MM-DD. Padrão: hoje em America/Sao_Paulo")
-    parser.add_argument("--max-candidates", type=int, default=int(os.getenv("FOOTBALL_MAX_CANDIDATES", "18")))
-    parser.add_argument("--max-odds-pages", type=int, default=int(os.getenv("FOOTBALL_MAX_ODDS_PAGES", "10")))
+    parser.add_argument("--max-candidates", type=int, default=int(os.getenv("FOOTBALL_MAX_CANDIDATES", "14")))
+    parser.add_argument("--max-odds-pages", type=int, default=int(os.getenv("FOOTBALL_MAX_ODDS_PAGES", "6")))
     args = parser.parse_args()
     target = args.date or now().date().isoformat()
     return run(
