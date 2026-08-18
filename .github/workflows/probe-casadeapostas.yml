@@ -1,0 +1,37 @@
+name: Probe Casa de Apostas Share Link
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/probe_casadeapostas.mjs'
+      - '.github/workflows/probe-casadeapostas.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Probe sports site
+        run: node scripts/probe_casadeapostas.mjs
+      - name: Upload probe evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: casa-de-apostas-probe
+          path: artifacts/cda-probe
+          if-no-files-found: warn
+          retention-days: 3
