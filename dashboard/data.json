@@ -1,11 +1,12 @@
 {
   "sport": "football",
-  "model_version": "football-3tickets-v2.1",
+  "model_version": "football-3tickets-v2.2",
   "data_mode": "API_FOOTBALL",
   "data_sources": [
     "API-Football fixtures",
     "API-Football predictions/comparison/H2H",
-    "API-Football pre-match bookmaker odds"
+    "API-Football pre-match odds",
+    "bookmaker consensus + common-bookmaker pricing"
   ],
   "operational_date": "2026-08-18",
   "board_date": "2026-08-18",
@@ -23,6 +24,8 @@
   "tickets_ready": 0,
   "ticket_target": 3,
   "strict_tickets": 0,
+  "consensus_tickets": 0,
+  "bookmakers_used": [],
   "all_matches": [],
   "history_summary": {
     "resolved": 0,
@@ -36,6 +39,8 @@
   },
   "api_requests": 0,
   "api_requests_remaining": null,
+  "api_minute_limit": null,
+  "api_minute_remaining": null,
   "criteria": {
     "ticket_odd_range": "1.50-2.00",
     "ticket_target": 3,
@@ -48,7 +53,7 @@
       "Menos de 4.5 gols",
       "Equipe favorita marca 1+ gol"
     ],
-    "method": "previsão + força comparativa + H2H incorporado + odds reais + diversificação"
+    "method": "previsão + comparação/H2H + consenso de bookmakers + fallback conservador + mesma casa por bilhete + diversificação"
   },
   "approved": [],
   "rejected": [],
