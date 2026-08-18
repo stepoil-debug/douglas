@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/probe_casadeapostas.mjs'
+      - 'scripts/probe_cda_slip_controls.mjs'
       - '.github/workflows/probe-casadeapostas.yml'
   workflow_dispatch:
 
@@ -14,7 +15,7 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,8 +29,10 @@ jobs:
           npm init -y >/dev/null 2>&1
           npm install playwright@1.55.0
           npx playwright install --with-deps chromium
-      - name: Probe sports site
+      - name: Probe filled slip
         run: node scripts/probe_casadeapostas.mjs
+      - name: Map filled-slip controls
+        run: node scripts/probe_cda_slip_controls.mjs
       - name: Persist probe summary
         if: always()
         shell: bash
@@ -40,9 +43,11 @@ jobs:
           [ -f artifacts/cda-probe/event_odds_candidates.json ] && cp artifacts/cda-probe/event_odds_candidates.json data/cda_probe_odds.json || true
           [ -f artifacts/cda-probe/share_candidates.json ] && cp artifacts/cda-probe/share_candidates.json data/cda_probe_share.json || true
           [ -f artifacts/cda-probe/around_bet_button.json ] && cp artifacts/cda-probe/around_bet_button.json data/cda_probe_betslip_controls.json || true
+          [ -f artifacts/cda-probe/controls_summary.json ] && cp artifacts/cda-probe/controls_summary.json data/cda_controls_summary.json || true
+          [ -f artifacts/cda-probe/slip_controls_full.json ] && cp artifacts/cda-probe/slip_controls_full.json data/cda_slip_controls.json || true
           git config user.name 'investbet-probe-bot'
           git config user.email 'investbet-probe-bot@users.noreply.github.com'
-          git add data/cda_probe*.json || true
+          git add data/cda_*.json || true
           if ! git diff --cached --quiet; then
             git commit -m 'test: update Casa de Apostas probe evidence'
             git pull --rebase origin main
