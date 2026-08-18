@@ -13,11 +13,6 @@ on:
         type: string
   schedule:
     - cron: '5 10,14,18,22 * * *'
-  push:
-    branches: [main]
-    paths:
-      - 'src/football_quant/**'
-      - '.github/workflows/analyze-football.yml'
 
 permissions:
   contents: write
@@ -48,11 +43,28 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      - name: Protect a manually selected future board
+        if: github.event_name == 'schedule'
+        shell: bash
+        run: |
+          set -euo pipefail
+          TODAY="$(TZ=America/Sao_Paulo date +%F)"
+          CURRENT_DATE="$(jq -r '.board_date // empty' dashboard/run_status.json 2>/dev/null || true)"
+          echo "Scheduled refresh: today=${TODAY}, current_board=${CURRENT_DATE:-none}"
+          if [ -n "$CURRENT_DATE" ] && [[ "$CURRENT_DATE" > "$TODAY" ]]; then
+            echo 'A future board was selected manually. Scheduled refresh will not overwrite it.'
+            echo 'SKIP_ANALYSIS=true' >> "$GITHUB_ENV"
+          else
+            echo 'SKIP_ANALYSIS=false' >> "$GITHUB_ENV"
+          fi
+
       - uses: actions/setup-python@v5
+        if: env.SKIP_ANALYSIS != 'true'
         with:
           python-version: '3.12'
 
       - name: Resolve API-Football secret without exposing it
+        if: env.SKIP_ANALYSIS != 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -70,6 +82,7 @@ jobs:
           fi
 
       - name: Analyze football slate
+        if: env.SKIP_ANALYSIS != 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -81,18 +94,21 @@ jobs:
           fi
 
       - name: Build execution-ready Betano tickets
+        if: env.SKIP_ANALYSIS != 'true'
         shell: bash
         run: |
           set -euo pipefail
           python -m src.football_quant.betano_execution
 
       - name: Verify finished matches and rebuild simulated bankroll
+        if: env.SKIP_ANALYSIS != 'true'
         shell: bash
         run: |
           set -euo pipefail
           python -m src.football_quant.settlement --max-dates 1
 
       - name: Persist dashboard data
+        if: env.SKIP_ANALYSIS != 'true'
         shell: bash
         run: |
           set -euo pipefail
