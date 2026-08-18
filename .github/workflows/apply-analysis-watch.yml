@@ -1,0 +1,52 @@
+name: Apply InvestBet Analysis Watcher
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-analysis-watch.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Attach watcher to football dashboard
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('dashboard/v2.html')
+          text = path.read_text(encoding='utf-8')
+          marker = '<script src="manual-trigger.js?v=20260818-1318"></script>'
+          watcher = '<script src="analysis-watch.js?v=20260818-2025"></script>'
+          if watcher not in text:
+              if marker not in text:
+                  raise SystemExit('manual-trigger marker not found in dashboard/v2.html')
+              text = text.replace(marker, marker + '\n' + watcher, 1)
+              path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commit dashboard patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- dashboard/v2.html; then
+            echo 'Dashboard already patched.'
+            exit 0
+          fi
+          git config user.name 'investbet-dashboard-bot'
+          git config user.email 'investbet-dashboard-bot@users.noreply.github.com'
+          git add dashboard/v2.html
+          git commit -m 'fix: auto-monitor selected football analysis date'
+          git pull --rebase origin main
+          git push origin HEAD:main
