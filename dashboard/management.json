@@ -7,7 +7,7 @@
         {
           "odd": 1.53,
           "probability": 0.8231,
-          "status": "PENDING",
+          "status": "GREEN",
           "ticket_id": "B1"
         },
         {
@@ -34,22 +34,22 @@
   ],
   "strategies": {
     "all_three": {
-      "accuracy": 0.0,
-      "available_bankroll": 70.0,
-      "bankroll": 80.0,
+      "accuracy": 33.33,
+      "available_bankroll": 85.3,
+      "bankroll": 85.3,
       "bets": 3,
       "description": "R$10 em cada um dos 3 bilhetes oficiais do dia. Exposição diária máxima: R$30.",
       "fixed_stake": 10.0,
-      "greens": 0,
+      "greens": 1,
       "history": [
         {
           "date": "2026-08-18",
           "estimated_probability": 0.8231,
           "label": "Todos os 3",
           "odd": 1.53,
-          "profit": null,
+          "profit": 5.3,
           "stake": 10.0,
-          "status": "PENDING",
+          "status": "GREEN",
           "ticket_id": "B1"
         },
         {
@@ -75,42 +75,42 @@
       ],
       "initial_bankroll": 100.0,
       "name": "Mão fixa • 3 bilhetes",
-      "open_exposure": 10.0,
-      "pending": 1,
-      "profit": -20.0,
+      "open_exposure": 0.0,
+      "pending": 0,
+      "profit": -14.7,
       "reds": 2,
-      "resolved": 2,
-      "roi": -100.0
+      "resolved": 3,
+      "roi": -49.0
     },
     "safest_only": {
-      "accuracy": null,
-      "available_bankroll": 90.0,
-      "bankroll": 100.0,
+      "accuracy": 100.0,
+      "available_bankroll": 105.3,
+      "bankroll": 105.3,
       "bets": 1,
       "description": "R$10 somente no bilhete com maior probabilidade estimada do dia. Exposição diária máxima: R$10.",
       "fixed_stake": 10.0,
-      "greens": 0,
+      "greens": 1,
       "history": [
         {
           "date": "2026-08-18",
           "estimated_probability": 0.8231,
           "label": "Mais segura",
           "odd": 1.53,
-          "profit": null,
+          "profit": 5.3,
           "stake": 10.0,
-          "status": "PENDING",
+          "status": "GREEN",
           "ticket_id": "B1"
         }
       ],
       "initial_bankroll": 100.0,
       "name": "Entrada mais segura",
-      "open_exposure": 10.0,
-      "pending": 1,
-      "profit": 0.0,
+      "open_exposure": 0.0,
+      "pending": 0,
+      "profit": 5.3,
       "reds": 0,
-      "resolved": 0,
-      "roi": 0.0
+      "resolved": 1,
+      "roi": 53.0
     }
   },
-  "updated_at": "2026-08-18T16:03:21.366591-03:00"
+  "updated_at": "2026-08-18T17:44:19.898250-03:00"
 }

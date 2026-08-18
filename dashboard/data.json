@@ -1741,7 +1741,7 @@
           "result_score": "1-4",
           "score": 79.1,
           "selection": "Orebro SK ou empate",
-          "settled_at": "2026-08-18T16:03:21.354124-03:00",
+          "settled_at": "2026-08-18T17:44:19.891333-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "GREEN"
         },
@@ -1768,7 +1768,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1587737,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "Morecambe",
           "implied_probability": 0.7812,
           "kickoff_iso": "2026-08-18T15:45:00-03:00",
@@ -1778,18 +1778,21 @@
           "model_probability": 0.8923,
           "odd": 1.31,
           "rationale": "Vitória/empate do lado mais forte soma 95% no modelo e foi calibrado pelas odds disponíveis.",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Dupla chance conferida no placar 0-1.",
+          "result_score": "0-1",
           "score": 78.6,
           "selection": "South Shields ou empate",
+          "settled_at": "2026-08-18T17:44:19.891444-03:00",
           "signal_source": "MODEL+MARKET",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "profile": "CONSERVADOR",
       "quality_tier": "STRICT",
       "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.8,
-      "status": "PENDING",
+      "settled_at": "2026-08-18T17:44:19.891462-03:00",
+      "status": "GREEN",
       "ticket_id": "B1",
       "total_odd": 1.53
     },
@@ -1840,7 +1843,7 @@
           "result_score": "1-4",
           "score": 79.1,
           "selection": "Orebro SK ou empate",
-          "settled_at": "2026-08-18T16:03:21.354290-03:00",
+          "settled_at": "2026-08-18T17:44:19.891466-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "GREEN"
         },
@@ -1880,7 +1883,7 @@
           "result_score": "2-0",
           "score": 78.4,
           "selection": "IK brage ou empate",
-          "settled_at": "2026-08-18T16:03:21.354326-03:00",
+          "settled_at": "2026-08-18T17:44:19.891475-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "RED"
         }
@@ -1889,7 +1892,7 @@
       "quality_tier": "STRICT",
       "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.8,
-      "settled_at": "2026-08-18T16:03:21.354353-03:00",
+      "settled_at": "2026-08-18T17:44:19.891484-03:00",
       "status": "RED",
       "ticket_id": "B2",
       "total_odd": 1.54
@@ -1928,7 +1931,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1587737,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "Morecambe",
           "implied_probability": 0.7812,
           "kickoff_iso": "2026-08-18T15:45:00-03:00",
@@ -1938,11 +1941,13 @@
           "model_probability": 0.8923,
           "odd": 1.31,
           "rationale": "Vitória/empate do lado mais forte soma 95% no modelo e foi calibrado pelas odds disponíveis.",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Dupla chance conferida no placar 0-1.",
+          "result_score": "0-1",
           "score": 78.6,
           "selection": "South Shields ou empate",
+          "settled_at": "2026-08-18T17:44:19.891487-03:00",
           "signal_source": "MODEL+MARKET",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "IK brage",
@@ -1980,7 +1985,7 @@
           "result_score": "2-0",
           "score": 78.4,
           "selection": "IK brage ou empate",
-          "settled_at": "2026-08-18T16:03:21.354365-03:00",
+          "settled_at": "2026-08-18T17:44:19.891495-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "RED"
         }
@@ -1989,7 +1994,7 @@
       "quality_tier": "STRICT",
       "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.5,
-      "settled_at": "2026-08-18T16:03:21.354390-03:00",
+      "settled_at": "2026-08-18T17:44:19.891503-03:00",
       "status": "RED",
       "ticket_id": "B3",
       "total_odd": 1.73
@@ -2033,14 +2038,14 @@
   "fixtures_ranked": 14,
   "fixtures_with_markets": 60,
   "history_summary": {
-    "accuracy": 0.5,
-    "hits": 2,
+    "accuracy": 0.6666666666666666,
+    "hits": 4,
     "misses": 2,
-    "resolved": 4,
-    "ticket_accuracy": 0.0,
-    "tickets_hit": 0,
+    "resolved": 6,
+    "ticket_accuracy": 0.3333333333333333,
+    "tickets_hit": 1,
     "tickets_miss": 2,
-    "tickets_resolved": 2
+    "tickets_resolved": 3
   },
   "last_run_at": "2026-08-18T11:40:35.242375-03:00",
   "matches_with_odds": 60,
@@ -2049,10 +2054,10 @@
   "predictions_available": 10,
   "rejected": [],
   "settlement": {
-    "checked_at": "2026-08-18T16:03:21.354407-03:00",
-    "complete": false,
-    "green": 0,
-    "pending": 1,
+    "checked_at": "2026-08-18T17:44:19.891512-03:00",
+    "complete": true,
+    "green": 1,
+    "pending": 0,
     "red": 2
   },
   "sport": "football",
@@ -2111,7 +2116,7 @@
           "result_score": "1-4",
           "score": 79.1,
           "selection": "Orebro SK ou empate",
-          "settled_at": "2026-08-18T16:03:21.354124-03:00",
+          "settled_at": "2026-08-18T17:44:19.891333-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "GREEN"
         },
@@ -2138,7 +2143,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1587737,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "Morecambe",
           "implied_probability": 0.7812,
           "kickoff_iso": "2026-08-18T15:45:00-03:00",
@@ -2148,18 +2153,21 @@
           "model_probability": 0.8923,
           "odd": 1.31,
           "rationale": "Vitória/empate do lado mais forte soma 95% no modelo e foi calibrado pelas odds disponíveis.",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Dupla chance conferida no placar 0-1.",
+          "result_score": "0-1",
           "score": 78.6,
           "selection": "South Shields ou empate",
+          "settled_at": "2026-08-18T17:44:19.891444-03:00",
           "signal_source": "MODEL+MARKET",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "profile": "CONSERVADOR",
       "quality_tier": "STRICT",
       "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.8,
-      "status": "PENDING",
+      "settled_at": "2026-08-18T17:44:19.891462-03:00",
+      "status": "GREEN",
       "ticket_id": "B1",
       "total_odd": 1.53
     },
@@ -2210,7 +2218,7 @@
           "result_score": "1-4",
           "score": 79.1,
           "selection": "Orebro SK ou empate",
-          "settled_at": "2026-08-18T16:03:21.354290-03:00",
+          "settled_at": "2026-08-18T17:44:19.891466-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "GREEN"
         },
@@ -2250,7 +2258,7 @@
           "result_score": "2-0",
           "score": 78.4,
           "selection": "IK brage ou empate",
-          "settled_at": "2026-08-18T16:03:21.354326-03:00",
+          "settled_at": "2026-08-18T17:44:19.891475-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "RED"
         }
@@ -2259,7 +2267,7 @@
       "quality_tier": "STRICT",
       "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.8,
-      "settled_at": "2026-08-18T16:03:21.354353-03:00",
+      "settled_at": "2026-08-18T17:44:19.891484-03:00",
       "status": "RED",
       "ticket_id": "B2",
       "total_odd": 1.54
@@ -2298,7 +2306,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1587737,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "Morecambe",
           "implied_probability": 0.7812,
           "kickoff_iso": "2026-08-18T15:45:00-03:00",
@@ -2308,11 +2316,13 @@
           "model_probability": 0.8923,
           "odd": 1.31,
           "rationale": "Vitória/empate do lado mais forte soma 95% no modelo e foi calibrado pelas odds disponíveis.",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Dupla chance conferida no placar 0-1.",
+          "result_score": "0-1",
           "score": 78.6,
           "selection": "South Shields ou empate",
+          "settled_at": "2026-08-18T17:44:19.891487-03:00",
           "signal_source": "MODEL+MARKET",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "IK brage",
@@ -2350,7 +2360,7 @@
           "result_score": "2-0",
           "score": 78.4,
           "selection": "IK brage ou empate",
-          "settled_at": "2026-08-18T16:03:21.354365-03:00",
+          "settled_at": "2026-08-18T17:44:19.891495-03:00",
           "signal_source": "MODEL+MARKET",
           "status": "RED"
         }
@@ -2359,7 +2369,7 @@
       "quality_tier": "STRICT",
       "reason": "Bilhete selecionado especificamente com cotações reais disponíveis na Betano.",
       "score": 78.5,
-      "settled_at": "2026-08-18T16:03:21.354390-03:00",
+      "settled_at": "2026-08-18T17:44:19.891503-03:00",
       "status": "RED",
       "ticket_id": "B3",
       "total_odd": 1.73
