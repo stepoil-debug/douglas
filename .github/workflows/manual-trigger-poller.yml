@@ -1,5 +1,6 @@
 name: InvestBet Manual Trigger Poller
 
+# A push nesta rotina também serve como wake-up imediato do executor.
 on:
   schedule:
     - cron: '*/5 * * * *'
