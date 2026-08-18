@@ -18,7 +18,7 @@ class ApiFootballError(RuntimeError):
 @dataclass
 class ApiFootballClient:
     api_key: str
-    timeout: int = 25
+    timeout: int = 30
     min_interval_seconds: float = 0.35
 
     def __post_init__(self) -> None:
@@ -27,10 +27,17 @@ class ApiFootballClient:
             raise ApiFootballError("API_FOOTBALL_KEY is not configured")
         self._last_request_at = 0.0
         self.request_count = 0
+        self.remaining_requests: int | None = None
 
     @classmethod
     def from_env(cls) -> "ApiFootballClient":
-        return cls(os.getenv("API_FOOTBALL_KEY", ""))
+        key = (
+            os.getenv("API_FOOTBALL_KEY", "").strip()
+            or os.getenv("API_SPORTS_KEY", "").strip()
+            or os.getenv("FOOTBALL_API_KEY", "").strip()
+            or os.getenv("APISPORTS_KEY", "").strip()
+        )
+        return cls(key)
 
     def _get(self, endpoint: str, params: dict[str, Any]) -> dict[str, Any]:
         elapsed = time.monotonic() - self._last_request_at
@@ -42,11 +49,14 @@ class ApiFootballClient:
             headers={
                 "x-apisports-key": self.api_key,
                 "Accept": "application/json",
-                "User-Agent": "InvestBet-Football/1.0",
+                "User-Agent": "InvestBet-Football/2.0",
             },
         )
         try:
             with urlopen(request, timeout=self.timeout) as response:
+                raw_remaining = response.headers.get("x-ratelimit-requests-remaining")
+                if raw_remaining and raw_remaining.isdigit():
+                    self.remaining_requests = int(raw_remaining)
                 payload = json.loads(response.read().decode("utf-8"))
         except Exception as exc:
             raise ApiFootballError(f"API request failed for {endpoint}: {exc}") from exc
@@ -55,7 +65,9 @@ class ApiFootballClient:
             self.request_count += 1
 
         errors = payload.get("errors")
-        if errors:
+        if isinstance(errors, dict) and errors:
+            raise ApiFootballError(f"API-Football returned errors for {endpoint}: {errors}")
+        if isinstance(errors, list) and errors:
             raise ApiFootballError(f"API-Football returned errors for {endpoint}: {errors}")
         return payload
 
@@ -64,6 +76,19 @@ class ApiFootballClient:
 
     def odds_for_fixture(self, fixture_id: int) -> list[dict[str, Any]]:
         return list(self._get("/odds", {"fixture": fixture_id}).get("response") or [])
+
+    def odds_by_date(self, date: str, max_pages: int = 8) -> list[dict[str, Any]]:
+        rows: list[dict[str, Any]] = []
+        page = 1
+        while page <= max(1, max_pages):
+            payload = self._get("/odds", {"date": date, "page": page})
+            rows.extend(list(payload.get("response") or []))
+            paging = payload.get("paging") or {}
+            total = int(paging.get("total") or 1)
+            if page >= total:
+                break
+            page += 1
+        return rows
 
     def prediction_for_fixture(self, fixture_id: int) -> dict[str, Any] | None:
         rows = list(self._get("/predictions", {"fixture": fixture_id}).get("response") or [])
@@ -79,7 +104,7 @@ class ApiFootballClient:
         )
 
 
-def _float_odd(value: Any) -> float | None:
+def float_odd(value: Any) -> float | None:
     try:
         odd = float(value)
     except (TypeError, ValueError):
@@ -87,11 +112,46 @@ def _float_odd(value: Any) -> float | None:
     return odd if odd > 1.0 else None
 
 
+def fixture_id_from_odds(row: dict[str, Any]) -> int | None:
+    fixture = row.get("fixture") or {}
+    try:
+        value = int(fixture.get("id"))
+    except (TypeError, ValueError):
+        return None
+    return value or None
+
+
+def market_prices(row: dict[str, Any] | None) -> list[dict[str, Any]]:
+    """Flatten all pre-match markets for one fixture, keeping the best quoted price per market/selection."""
+    if not row:
+        return []
+    best: dict[tuple[str, str], dict[str, Any]] = {}
+    for bookmaker in row.get("bookmakers") or []:
+        bookmaker_name = str(bookmaker.get("name") or "Bookmaker").strip()
+        for bet in bookmaker.get("bets") or []:
+            market = str(bet.get("name") or "").strip()
+            if not market:
+                continue
+            for item in bet.get("values") or []:
+                selection = str(item.get("value") or "").strip()
+                odd = float_odd(item.get("odd"))
+                if not selection or odd is None:
+                    continue
+                key = (market.casefold(), selection.casefold())
+                current = best.get(key)
+                if current is None or odd > float(current["odd"]):
+                    best[key] = {
+                        "market": market,
+                        "selection": selection,
+                        "odd": round(odd, 3),
+                        "bookmaker": bookmaker_name,
+                    }
+    return list(best.values())
+
+
 def extract_match_winner_odds(rows: list[dict[str, Any]]) -> dict[str, Any] | None:
-    """Return best available 1X2 prices across the bookmaker response."""
     best = {"home": None, "draw": None, "away": None}
     books: dict[str, dict[str, float]] = {}
-
     for row in rows:
         for bookmaker in row.get("bookmakers") or []:
             book_name = str(bookmaker.get("name") or "Bookmaker")
@@ -102,7 +162,7 @@ def extract_match_winner_odds(rows: list[dict[str, Any]]) -> dict[str, Any] | No
                 current: dict[str, float] = {}
                 for item in bet.get("values") or []:
                     label = str(item.get("value") or "").strip().lower()
-                    odd = _float_odd(item.get("odd"))
+                    odd = float_odd(item.get("odd"))
                     if odd is None:
                         continue
                     key = None
@@ -118,7 +178,6 @@ def extract_match_winner_odds(rows: list[dict[str, Any]]) -> dict[str, Any] | No
                             best[key] = odd
                 if current:
                     books[book_name] = current
-
     if not any(best.values()):
         return None
     return {"best": best, "bookmakers": books}
