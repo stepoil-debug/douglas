@@ -36,17 +36,13 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p data
-          if [ -f artifacts/cda-probe/summary.json ]; then
-            cp artifacts/cda-probe/summary.json data/cda_probe.json
-          else
-            printf '{"ok":false,"message":"probe did not produce summary.json"}\n' > data/cda_probe.json
-          fi
-          if [ -f artifacts/cda-probe/interesting.json ]; then
-            cp artifacts/cda-probe/interesting.json data/cda_probe_elements.json
-          fi
+          [ -f artifacts/cda-probe/summary.json ] && cp artifacts/cda-probe/summary.json data/cda_probe.json || printf '{"ok":false,"message":"probe did not produce summary.json"}\n' > data/cda_probe.json
+          [ -f artifacts/cda-probe/event_odds_candidates.json ] && cp artifacts/cda-probe/event_odds_candidates.json data/cda_probe_odds.json || true
+          [ -f artifacts/cda-probe/share_candidates.json ] && cp artifacts/cda-probe/share_candidates.json data/cda_probe_share.json || true
+          [ -f artifacts/cda-probe/around_bet_button.json ] && cp artifacts/cda-probe/around_bet_button.json data/cda_probe_betslip_controls.json || true
           git config user.name 'investbet-probe-bot'
           git config user.email 'investbet-probe-bot@users.noreply.github.com'
-          git add data/cda_probe.json data/cda_probe_elements.json || true
+          git add data/cda_probe*.json || true
           if ! git diff --cached --quiet; then
             git commit -m 'test: update Casa de Apostas probe evidence'
             git pull --rebase origin main
