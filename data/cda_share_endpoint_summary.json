@@ -1,9 +1,16 @@
 {
   "ok": true,
-  "scripts": 91,
-  "totalMatches": 32,
-  "endpointMatches": 8,
-  "scriptsWithEndpoint": [
-    "https://casadeapostas.bet.br/_next/static/chunks/7405-54b1483e014a89c2.js"
+  "script": "https://casadeapostas.bet.br/_next/static/chunks/7405-54b1483e014a89c2.js",
+  "targetLength": 58571,
+  "matches": 10,
+  "specificMatches": 4,
+  "patterns": [
+    "/api/bets/sharebets",
+    "shareBetSlip:",
+    "shareData:",
+    "tB=",
+    "a5)(",
+    "restoreBetSlip",
+    "retrieveSharedBet"
   ]
 }
