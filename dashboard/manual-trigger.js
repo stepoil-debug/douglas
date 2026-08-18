@@ -2,7 +2,7 @@
   const ACTIONS_URL = 'https://github.com/stepoil-debug/douglas/actions/workflows/analyze-football.yml';
   const SETTLE_ACTIONS_URL = 'https://github.com/stepoil-debug/douglas/actions/workflows/settle-football.yml';
   const SECRETS_URL = 'https://github.com/stepoil-debug/douglas/settings/secrets/actions/new';
-  const TRIGGER_URL = 'https://intranet-stepoil.netlify.app/api/investbet/analysis-trigger';
+  const TRIGGER_URL = 'https://intranet-stepone.netlify.app/api/investbet/analysis-trigger';
   const $ = id => document.getElementById(id);
   const analyzeBtn = $('analyzeBtn');
   const refreshBtn = $('refreshBtn');
