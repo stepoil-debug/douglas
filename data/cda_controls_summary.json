@@ -7,7 +7,7 @@
   "selection": {
     "id": 0,
     "score": 15,
-    "text": "Independiente Rivadavia 2,64",
+    "text": "Independiente Rivadavia 2,63",
     "tag": "DIV",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
     "cursor": "pointer",
@@ -49,7 +49,7 @@
   "shareHints": [],
   "bestRoot": {
     "tag": "DIV",
-    "text": "1x2 18/08/2026, 19:00 Independiente Rivadavia 2,64 Independiente Rivadavia - Fluminense RJ Aposta total Aposta total R$ 10,00 Cotação máx. 2,64 Prêmio potencial R$ 26,40 Faça o login para apostar",
+    "text": "1x2 18/08/2026, 19:00 Independiente Rivadavia 2,63 Independiente Rivadavia - Fluminense RJ Aposta total Aposta total R$ 10,00 Cotação máx. 2,63 Prêmio potencial R$ 26,30 Faça o login para apostar",
     "aria": null,
     "title": null,
     "role": null,

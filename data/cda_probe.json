@@ -6,7 +6,7 @@
     "href": "https://casadeapostas.bet.br/br/sports/event/8011579-Independiente-Rivadavia-vs-Fluminense-RJ"
   },
   "selectionClicked": {
-    "id": 933,
+    "id": 932,
     "tag": "DIV",
     "text": "3,09",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -17,7 +17,7 @@
     "y": 359,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"933\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,09</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"932\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,09</span></div></div>"
   },
   "hasSlipLanguage": true,
   "shareCandidates": [],

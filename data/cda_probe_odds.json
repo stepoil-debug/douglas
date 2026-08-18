@@ -1,6 +1,6 @@
 [
   {
-    "id": 933,
+    "id": 932,
     "tag": "DIV",
     "text": "3,09",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -11,10 +11,10 @@
     "y": 359,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"933\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,09</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"932\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,09</span></div></div>"
   },
   {
-    "id": 934,
+    "id": 933,
     "tag": "DIV",
     "text": "5,50",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -25,10 +25,10 @@
     "y": 359,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"934\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">5,50</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"933\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">5,50</span></div></div>"
   },
   {
-    "id": 935,
+    "id": 934,
     "tag": "DIV",
     "text": "5,50",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -39,10 +39,10 @@
     "y": 359,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"935\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">5,50</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"934\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">5,50</span></div></div>"
   },
   {
-    "id": 937,
+    "id": 936,
     "tag": "DIV",
     "text": "3,97",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -53,10 +53,10 @@
     "y": 405,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"937\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,97</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"936\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,97</span></div></div>"
   },
   {
-    "id": 938,
+    "id": 937,
     "tag": "DIV",
     "text": "7,20",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -67,10 +67,10 @@
     "y": 405,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"938\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,20</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"937\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,20</span></div></div>"
   },
   {
-    "id": 939,
+    "id": 938,
     "tag": "DIV",
     "text": "7,20",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -81,10 +81,10 @@
     "y": 405,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"939\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,20</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"938\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,20</span></div></div>"
   },
   {
-    "id": 941,
+    "id": 940,
     "tag": "DIV",
     "text": "4,07",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -95,10 +95,10 @@
     "y": 451,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"941\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,07</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"940\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,07</span></div></div>"
   },
   {
-    "id": 942,
+    "id": 941,
     "tag": "DIV",
     "text": "7,35",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -109,10 +109,10 @@
     "y": 451,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"942\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,35</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"941\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,35</span></div></div>"
   },
   {
-    "id": 943,
+    "id": 942,
     "tag": "DIV",
     "text": "7,35",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -123,10 +123,10 @@
     "y": 451,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"943\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,35</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"942\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,35</span></div></div>"
   },
   {
-    "id": 945,
+    "id": 944,
     "tag": "DIV",
     "text": "4,09",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -137,10 +137,10 @@
     "y": 497,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"945\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,09</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"944\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,09</span></div></div>"
   },
   {
-    "id": 946,
+    "id": 945,
     "tag": "DIV",
     "text": "7,40",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -151,10 +151,10 @@
     "y": 497,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"946\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,40</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"945\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,40</span></div></div>"
   },
   {
-    "id": 947,
+    "id": 946,
     "tag": "DIV",
     "text": "7,40",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -165,10 +165,10 @@
     "y": 497,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"947\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,40</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"946\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,40</span></div></div>"
   },
   {
-    "id": 949,
+    "id": 948,
     "tag": "DIV",
     "text": "4,24",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -179,10 +179,10 @@
     "y": 543,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"949\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,24</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"948\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,24</span></div></div>"
   },
   {
-    "id": 950,
+    "id": 949,
     "tag": "DIV",
     "text": "7,65",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -193,10 +193,10 @@
     "y": 543,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"950\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,65</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"949\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,65</span></div></div>"
   },
   {
-    "id": 951,
+    "id": 950,
     "tag": "DIV",
     "text": "7,65",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -207,10 +207,10 @@
     "y": 543,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"951\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,65</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"950\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,65</span></div></div>"
   },
   {
-    "id": 953,
+    "id": 952,
     "tag": "DIV",
     "text": "4,46",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -221,10 +221,10 @@
     "y": 589,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"953\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,46</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"952\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,46</span></div></div>"
   },
   {
-    "id": 954,
+    "id": 953,
     "tag": "DIV",
     "text": "8,05",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -235,10 +235,10 @@
     "y": 589,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"954\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">8,05</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"953\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">8,05</span></div></div>"
   },
   {
-    "id": 955,
+    "id": 954,
     "tag": "DIV",
     "text": "8,05",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -249,10 +249,10 @@
     "y": 589,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"955\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">8,05</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"954\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">8,05</span></div></div>"
   },
   {
-    "id": 957,
+    "id": 956,
     "tag": "DIV",
     "text": "4,62",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -263,10 +263,10 @@
     "y": 635,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"957\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,62</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"956\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,62</span></div></div>"
   },
   {
-    "id": 958,
+    "id": 957,
     "tag": "DIV",
     "text": "8,35",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -277,10 +277,10 @@
     "y": 635,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"958\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">8,35</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"957\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">8,35</span></div></div>"
   },
   {
-    "id": 959,
+    "id": 958,
     "tag": "DIV",
     "text": "8,35",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -291,10 +291,10 @@
     "y": 635,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"959\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">8,35</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"958\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">8,35</span></div></div>"
   },
   {
-    "id": 961,
+    "id": 960,
     "tag": "DIV",
     "text": "4,71",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -305,10 +305,10 @@
     "y": 681,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"961\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,71</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"960\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,71</span></div></div>"
   },
   {
-    "id": 962,
+    "id": 961,
     "tag": "DIV",
     "text": "8,50",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -319,10 +319,10 @@
     "y": 681,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"962\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">8,50</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"961\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">8,50</span></div></div>"
   },
   {
-    "id": 963,
+    "id": 962,
     "tag": "DIV",
     "text": "8,50",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -333,10 +333,10 @@
     "y": 681,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"963\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">8,50</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"962\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">8,50</span></div></div>"
   },
   {
-    "id": 965,
+    "id": 964,
     "tag": "DIV",
     "text": "5,52",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -347,10 +347,10 @@
     "y": 727,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"965\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">5,52</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"964\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">5,52</span></div></div>"
   },
   {
-    "id": 966,
+    "id": 965,
     "tag": "DIV",
     "text": "9,90",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -361,10 +361,10 @@
     "y": 727,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"966\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">9,90</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"965\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">9,90</span></div></div>"
   },
   {
-    "id": 967,
+    "id": 966,
     "tag": "DIV",
     "text": "9,90",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -375,10 +375,10 @@
     "y": 727,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"967\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">9,90</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"966\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">9,90</span></div></div>"
   },
   {
-    "id": 969,
+    "id": 968,
     "tag": "DIV",
     "text": "6,25",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -389,10 +389,10 @@
     "y": 773,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"969\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">6,25</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"968\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">6,25</span></div></div>"
   },
   {
-    "id": 971,
+    "id": 970,
     "tag": "DIV",
     "text": "6,30",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -403,10 +403,10 @@
     "y": 819,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"971\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">6,30</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"970\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">6,30</span></div></div>"
   },
   {
-    "id": 973,
+    "id": 972,
     "tag": "DIV",
     "text": "6,50",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -417,10 +417,10 @@
     "y": 865,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"973\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">6,50</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"972\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">6,50</span></div></div>"
   },
   {
-    "id": 975,
+    "id": 974,
     "tag": "DIV",
     "text": "6,55",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -431,10 +431,10 @@
     "y": 911,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"975\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">6,55</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"974\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">6,55</span></div></div>"
   },
   {
-    "id": 977,
+    "id": 976,
     "tag": "DIV",
     "text": "6,75",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -445,10 +445,10 @@
     "y": 957,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"977\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">6,75</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"976\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">6,75</span></div></div>"
   },
   {
-    "id": 979,
+    "id": 978,
     "tag": "DIV",
     "text": "6,80",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -459,10 +459,10 @@
     "y": 1003,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"979\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">6,80</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"978\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">6,80</span></div></div>"
   },
   {
-    "id": 981,
+    "id": 980,
     "tag": "DIV",
     "text": "7,05",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -473,10 +473,10 @@
     "y": 1049,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"981\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,05</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"980\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,05</span></div></div>"
   },
   {
-    "id": 983,
+    "id": 982,
     "tag": "DIV",
     "text": "7,25",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -487,10 +487,10 @@
     "y": 1095,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"983\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,25</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"982\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,25</span></div></div>"
   },
   {
-    "id": 985,
+    "id": 984,
     "tag": "DIV",
     "text": "7,25",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -501,10 +501,10 @@
     "y": 1141,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"985\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,25</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"984\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,25</span></div></div>"
   },
   {
-    "id": 987,
+    "id": 986,
     "tag": "DIV",
     "text": "7,70",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -515,10 +515,10 @@
     "y": 1187,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"987\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,70</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"986\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,70</span></div></div>"
   },
   {
-    "id": 989,
+    "id": 988,
     "tag": "DIV",
     "text": "7,90",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -529,10 +529,10 @@
     "y": 1233,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"989\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,90</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"988\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">7,90</span></div></div>"
   },
   {
-    "id": 991,
+    "id": 990,
     "tag": "DIV",
     "text": "9,05",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -543,10 +543,10 @@
     "y": 1279,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"991\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">9,05</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"990\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">9,05</span></div></div>"
   },
   {
-    "id": 993,
+    "id": 992,
     "tag": "DIV",
     "text": "9,25",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -557,10 +557,10 @@
     "y": 1325,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"993\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">9,25</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"992\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">9,25</span></div></div>"
   },
   {
-    "id": 995,
+    "id": 994,
     "tag": "DIV",
     "text": "9,70",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -571,10 +571,10 @@
     "y": 1371,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"995\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">9,70</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"994\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">9,70</span></div></div>"
   },
   {
-    "id": 997,
+    "id": 996,
     "tag": "DIV",
     "text": "10,85",
     "cls": "event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -585,26 +585,26 @@
     "y": 1417,
     "w": 145,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"997\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">10,85</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-center  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"996\"><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">10,85</span></div></div>"
+  },
+  {
+    "id": 1070,
+    "tag": "SPAN",
+    "text": "Independiente Rivadavia/Fluminense FC RJ e mais de 4.5",
+    "cls": "event-market-odd-name-wrapper flex flex-col overflow-hidden",
+    "role": "",
+    "cursor": "pointer",
+    "score": 11,
+    "x": 6798,
+    "y": 1630,
+    "w": 316,
+    "h": 32,
+    "html": "<span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\" data-probe-odd=\"1070\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia/Fluminense FC RJ e mais de 4.5</span></span>"
   },
   {
     "id": 1071,
     "tag": "SPAN",
     "text": "Independiente Rivadavia/Fluminense FC RJ e mais de 4.5",
-    "cls": "event-market-odd-name-wrapper flex flex-col overflow-hidden",
-    "role": "",
-    "cursor": "pointer",
-    "score": 11,
-    "x": 6798,
-    "y": 1630,
-    "w": 316,
-    "h": 32,
-    "html": "<span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\" data-probe-odd=\"1071\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia/Fluminense FC RJ e mais de 4.5</span></span>"
-  },
-  {
-    "id": 1072,
-    "tag": "SPAN",
-    "text": "Independiente Rivadavia/Fluminense FC RJ e mais de 4.5",
     "cls": "event-market-odd-name text-xs opacity-90 overflow-hidden",
     "role": "",
     "cursor": "pointer",
@@ -613,26 +613,26 @@
     "y": 1630,
     "w": 316,
     "h": 32,
-    "html": "<span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\" data-probe-odd=\"1072\">Independiente Rivadavia/Fluminense FC RJ e mais de 4.5</span>"
+    "html": "<span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\" data-probe-odd=\"1071\">Independiente Rivadavia/Fluminense FC RJ e mais de 4.5</span>"
+  },
+  {
+    "id": 1057,
+    "tag": "SPAN",
+    "text": "Independiente Rivadavia/Fluminense FC RJ e menos de 1.5",
+    "cls": "event-market-odd-name-wrapper flex flex-col overflow-hidden",
+    "role": "",
+    "cursor": "pointer",
+    "score": 11,
+    "x": 7171,
+    "y": 1368,
+    "w": 321,
+    "h": 32,
+    "html": "<span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\" data-probe-odd=\"1057\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia/Fluminense FC RJ e menos de 1.5</span></span>"
   },
   {
     "id": 1058,
     "tag": "SPAN",
     "text": "Independiente Rivadavia/Fluminense FC RJ e menos de 1.5",
-    "cls": "event-market-odd-name-wrapper flex flex-col overflow-hidden",
-    "role": "",
-    "cursor": "pointer",
-    "score": 11,
-    "x": 7171,
-    "y": 1368,
-    "w": 321,
-    "h": 32,
-    "html": "<span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\" data-probe-odd=\"1058\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia/Fluminense FC RJ e menos de 1.5</span></span>"
-  },
-  {
-    "id": 1059,
-    "tag": "SPAN",
-    "text": "Independiente Rivadavia/Fluminense FC RJ e menos de 1.5",
     "cls": "event-market-odd-name text-xs opacity-90 overflow-hidden",
     "role": "",
     "cursor": "pointer",
@@ -641,26 +641,26 @@
     "y": 1368,
     "w": 321,
     "h": 32,
-    "html": "<span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\" data-probe-odd=\"1059\">Independiente Rivadavia/Fluminense FC RJ e menos de 1.5</span>"
+    "html": "<span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\" data-probe-odd=\"1058\">Independiente Rivadavia/Fluminense FC RJ e menos de 1.5</span>"
+  },
+  {
+    "id": 1075,
+    "tag": "SPAN",
+    "text": "Independiente Rivadavia/Fluminense FC RJ e menos de 3.5",
+    "cls": "event-market-odd-name-wrapper flex flex-col overflow-hidden",
+    "role": "",
+    "cursor": "pointer",
+    "score": 11,
+    "x": 7171,
+    "y": 1692,
+    "w": 321,
+    "h": 32,
+    "html": "<span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\" data-probe-odd=\"1075\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia/Fluminense FC RJ e menos de 3.5</span></span>"
   },
   {
     "id": 1076,
     "tag": "SPAN",
     "text": "Independiente Rivadavia/Fluminense FC RJ e menos de 3.5",
-    "cls": "event-market-odd-name-wrapper flex flex-col overflow-hidden",
-    "role": "",
-    "cursor": "pointer",
-    "score": 11,
-    "x": 7171,
-    "y": 1692,
-    "w": 321,
-    "h": 32,
-    "html": "<span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\" data-probe-odd=\"1076\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia/Fluminense FC RJ e menos de 3.5</span></span>"
-  },
-  {
-    "id": 1077,
-    "tag": "SPAN",
-    "text": "Independiente Rivadavia/Fluminense FC RJ e menos de 3.5",
     "cls": "event-market-odd-name text-xs opacity-90 overflow-hidden",
     "role": "",
     "cursor": "pointer",
@@ -669,26 +669,26 @@
     "y": 1692,
     "w": 321,
     "h": 32,
-    "html": "<span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\" data-probe-odd=\"1077\">Independiente Rivadavia/Fluminense FC RJ e menos de 3.5</span>"
+    "html": "<span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\" data-probe-odd=\"1076\">Independiente Rivadavia/Fluminense FC RJ e menos de 3.5</span>"
+  },
+  {
+    "id": 1083,
+    "tag": "SPAN",
+    "text": "Independiente Rivadavia/Fluminense FC RJ e menos de 2.5",
+    "cls": "event-market-odd-name-wrapper flex flex-col overflow-hidden",
+    "role": "",
+    "cursor": "pointer",
+    "score": 11,
+    "x": 7171,
+    "y": 1846,
+    "w": 321,
+    "h": 32,
+    "html": "<span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\" data-probe-odd=\"1083\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia/Fluminense FC RJ e menos de 2.5</span></span>"
   },
   {
     "id": 1084,
     "tag": "SPAN",
     "text": "Independiente Rivadavia/Fluminense FC RJ e menos de 2.5",
-    "cls": "event-market-odd-name-wrapper flex flex-col overflow-hidden",
-    "role": "",
-    "cursor": "pointer",
-    "score": 11,
-    "x": 7171,
-    "y": 1846,
-    "w": 321,
-    "h": 32,
-    "html": "<span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\" data-probe-odd=\"1084\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia/Fluminense FC RJ e menos de 2.5</span></span>"
-  },
-  {
-    "id": 1085,
-    "tag": "SPAN",
-    "text": "Independiente Rivadavia/Fluminense FC RJ e menos de 2.5",
     "cls": "event-market-odd-name text-xs opacity-90 overflow-hidden",
     "role": "",
     "cursor": "pointer",
@@ -697,12 +697,12 @@
     "y": 1846,
     "w": 321,
     "h": 32,
-    "html": "<span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\" data-probe-odd=\"1085\">Independiente Rivadavia/Fluminense FC RJ e menos de 2.5</span>"
+    "html": "<span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\" data-probe-odd=\"1084\">Independiente Rivadavia/Fluminense FC RJ e menos de 2.5</span>"
   },
   {
     "id": 0,
     "tag": "DIV",
-    "text": "Independiente Rivadavia 2,64",
+    "text": "Independiente Rivadavia 2,63",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
     "role": "",
     "cursor": "pointer",
@@ -711,7 +711,7 @@
     "y": 357,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"0\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,64</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"0\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,63</span></div></div>"
   },
   {
     "id": 1,
@@ -856,7 +856,7 @@
   {
     "id": 36,
     "tag": "DIV",
-    "text": "Independiente Rivadavia (1:0) 1,38",
+    "text": "Independiente Rivadavia (1:0) 1,37",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
     "role": "",
     "cursor": "pointer",
@@ -865,7 +865,7 @@
     "y": 1757,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"36\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia (1:0)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">1,38</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"36\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia (1:0)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">1,37</span></div></div>"
   },
   {
     "id": 37,
@@ -1008,7 +1008,7 @@
     "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"51\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Fluminense RJ</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,30</span></div></div>"
   },
   {
-    "id": 759,
+    "id": 758,
     "tag": "DIV",
     "text": "1ª parte 3,30",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1019,10 +1019,10 @@
     "y": 757,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"759\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">1ª parte</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,30</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"758\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">1ª parte</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,30</span></div></div>"
   },
   {
-    "id": 760,
+    "id": 759,
     "tag": "DIV",
     "text": "2ª parte 2,21",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1033,10 +1033,10 @@
     "y": 757,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"760\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">2ª parte</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,21</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"759\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">2ª parte</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,21</span></div></div>"
   },
   {
-    "id": 761,
+    "id": 760,
     "tag": "DIV",
     "text": "igual 2,81",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1047,10 +1047,10 @@
     "y": 757,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"761\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">igual</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,81</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"760\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">igual</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,81</span></div></div>"
   },
   {
-    "id": 762,
+    "id": 761,
     "tag": "DIV",
     "text": "1ª parte 3,79",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1061,10 +1061,10 @@
     "y": 875,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"762\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">1ª parte</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,79</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"761\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">1ª parte</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,79</span></div></div>"
   },
   {
-    "id": 763,
+    "id": 762,
     "tag": "DIV",
     "text": "2ª parte 2,84",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1075,10 +1075,10 @@
     "y": 875,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"763\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">2ª parte</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,84</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"762\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">2ª parte</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,84</span></div></div>"
   },
   {
-    "id": 764,
+    "id": 763,
     "tag": "DIV",
     "text": "igual 2,02",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1089,10 +1089,10 @@
     "y": 875,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"764\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">igual</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,02</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"763\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">igual</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,02</span></div></div>"
   },
   {
-    "id": 765,
+    "id": 764,
     "tag": "DIV",
     "text": "1ª parte 3,99",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1103,10 +1103,10 @@
     "y": 993,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"765\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">1ª parte</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,99</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"764\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">1ª parte</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,99</span></div></div>"
   },
   {
-    "id": 766,
+    "id": 765,
     "tag": "DIV",
     "text": "2ª parte 2,97",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1117,10 +1117,10 @@
     "y": 993,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"766\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">2ª parte</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,97</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"765\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">2ª parte</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,97</span></div></div>"
   },
   {
-    "id": 767,
+    "id": 766,
     "tag": "DIV",
     "text": "igual 1,91",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1131,12 +1131,12 @@
     "y": 993,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"767\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">igual</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">1,91</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"766\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">igual</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">1,91</span></div></div>"
   },
   {
-    "id": 796,
+    "id": 795,
     "tag": "DIV",
-    "text": "Independiente Rivadavia 2,98",
+    "text": "Independiente Rivadavia 2,97",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
     "role": "",
     "cursor": "pointer",
@@ -1145,10 +1145,10 @@
     "y": 357,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"796\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,98</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"795\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,97</span></div></div>"
   },
   {
-    "id": 797,
+    "id": 796,
     "tag": "DIV",
     "text": "nenhum 2,12",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1159,10 +1159,10 @@
     "y": 357,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"797\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">nenhum</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,12</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"796\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">nenhum</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,12</span></div></div>"
   },
   {
-    "id": 798,
+    "id": 797,
     "tag": "DIV",
     "text": "Fluminense RJ 3,31",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1173,10 +1173,10 @@
     "y": 357,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"798\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Fluminense RJ</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,31</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"797\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Fluminense RJ</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,31</span></div></div>"
   },
   {
-    "id": 816,
+    "id": 815,
     "tag": "DIV",
     "text": "empate (0:1) 3,96",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1187,10 +1187,10 @@
     "y": 1219,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"816\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">empate (0:1)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,96</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"815\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">empate (0:1)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,96</span></div></div>"
   },
   {
-    "id": 817,
+    "id": 816,
     "tag": "DIV",
     "text": "Fluminense FC RJ (0) 1,27",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1201,10 +1201,10 @@
     "y": 1219,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"817\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Fluminense FC RJ (0)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">1,27</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"816\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Fluminense FC RJ (0)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">1,27</span></div></div>"
   },
   {
-    "id": 818,
+    "id": 817,
     "tag": "DIV",
     "text": "empate (0:2) 8,95",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1215,10 +1215,10 @@
     "y": 1337,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"818\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">empate (0:2)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">8,95</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"817\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">empate (0:2)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">8,95</span></div></div>"
   },
   {
-    "id": 819,
+    "id": 818,
     "tag": "DIV",
     "text": "Fluminense FC RJ (0) 1,02",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1229,10 +1229,10 @@
     "y": 1337,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"819\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Fluminense FC RJ (0)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">1,02</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"818\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Fluminense FC RJ (0)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">1,02</span></div></div>"
   },
   {
-    "id": 820,
+    "id": 819,
     "tag": "DIV",
     "text": "Independiente Rivadavia (0) 1,22",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1243,10 +1243,10 @@
     "y": 1455,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"820\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia (0)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">1,22</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"819\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia (0)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">1,22</span></div></div>"
   },
   {
-    "id": 821,
+    "id": 820,
     "tag": "DIV",
     "text": "empate (1:0) 4,30",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1257,10 +1257,10 @@
     "y": 1455,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"821\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">empate (1:0)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,30</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"820\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">empate (1:0)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,30</span></div></div>"
   },
   {
-    "id": 822,
+    "id": 821,
     "tag": "DIV",
     "text": "0 2,12",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1271,10 +1271,10 @@
     "y": 1573,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"822\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">0</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,12</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"821\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">0</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,12</span></div></div>"
   },
   {
-    "id": 823,
+    "id": 822,
     "tag": "DIV",
     "text": "1 2,54",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1285,10 +1285,10 @@
     "y": 1573,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"823\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">1</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,54</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"822\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">1</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,54</span></div></div>"
   },
   {
-    "id": 824,
+    "id": 823,
     "tag": "DIV",
     "text": "2+ 4,09",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1299,12 +1299,12 @@
     "y": 1573,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"824\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">2+</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,09</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"823\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">2+</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">4,09</span></div></div>"
   },
   {
-    "id": 856,
+    "id": 855,
     "tag": "DIV",
-    "text": "Independiente Rivadavia 3,02",
+    "text": "Independiente Rivadavia 3,01",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
     "role": "",
     "cursor": "pointer",
@@ -1313,10 +1313,10 @@
     "y": 357,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"856\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,02</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"855\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,01</span></div></div>"
   },
   {
-    "id": 857,
+    "id": 856,
     "tag": "DIV",
     "text": "empate 2,15",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1327,10 +1327,10 @@
     "y": 357,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"857\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">empate</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,15</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"856\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">empate</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,15</span></div></div>"
   },
   {
-    "id": 858,
+    "id": 857,
     "tag": "DIV",
     "text": "Fluminense RJ 3,40",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1341,10 +1341,10 @@
     "y": 357,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"858\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Fluminense RJ</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,40</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"857\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Fluminense RJ</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">3,40</span></div></div>"
   },
   {
-    "id": 859,
+    "id": 858,
     "tag": "DIV",
     "text": "Independiente Rivadavia 2,56",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1355,10 +1355,10 @@
     "y": 475,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"859\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,56</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"858\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,56</span></div></div>"
   },
   {
-    "id": 860,
+    "id": 859,
     "tag": "DIV",
     "text": "nenhum 2,75",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1369,12 +1369,12 @@
     "y": 475,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"860\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">nenhum</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,75</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"859\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">nenhum</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,75</span></div></div>"
   },
   {
-    "id": 861,
+    "id": 860,
     "tag": "DIV",
-    "text": "Fluminense RJ 2,81",
+    "text": "Fluminense RJ 2,82",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
     "role": "",
     "cursor": "pointer",
@@ -1383,10 +1383,10 @@
     "y": 475,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"861\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Fluminense RJ</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,81</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"860\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Fluminense RJ</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">2,82</span></div></div>"
   },
   {
-    "id": 879,
+    "id": 878,
     "tag": "DIV",
     "text": "Independiente Rivadavia (0:1) 10,10",
     "cls": "event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer",
@@ -1397,6 +1397,6 @@
     "y": 1337,
     "w": 245,
     "h": 42,
-    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"879\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia (0:1)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">10,10</span></div></div>"
+    "html": "<div class=\"event-market-odd flex justify-between  items-center space-x-1 px-2 py-3 border-[1px] rounded-[var(--odd-radius)] transition-all duration-300 odds-button-default bg-odd text-oddContrast border-oddBorder hover:bg-oddHover hover:text-oddHoverContrast hover:border-oddHoverBorder cursor-pointer\" data-probe-odd=\"878\"><span class=\"event-market-odd-name-wrapper flex flex-col overflow-hidden\"><span class=\"event-market-odd-name text-xs opacity-90 overflow-hidden\">Independiente Rivadavia (0:1)</span></span><div class=\"flex items-center space-x-1\"><span class=\"event-market-odd-value text-xs font-semibold\">10,10</span></div></div>"
   }
 ]
