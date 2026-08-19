@@ -2256,13 +2256,23 @@
     "tickets_resolved": 3
   },
   "last_run_at": "2026-08-18T20:20:15.201722-03:00",
+  "market_analysis": {
+    "execution_bookmaker": "Betano",
+    "selected_families": {
+      "CARDS": 0,
+      "CORNERS": 0,
+      "GOALS": 1,
+      "RESULT": 5,
+      "SHOTS": 0
+    }
+  },
   "matches_with_odds": 59,
-  "model_version": "football-3tickets-betano-v3-exclusive",
+  "model_version": "football-multimarket-betano-v4-exclusive",
   "operational_date": "2026-08-18",
   "predictions_available": 10,
   "rejected": [],
   "settlement": {
-    "checked_at": "2026-08-19T12:03:44.082932-03:00",
+    "checked_at": "2026-08-19T12:05:39.264751-03:00",
     "complete": false,
     "green": 0,
     "pending": 3,
