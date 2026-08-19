@@ -10,13 +10,13 @@ from typing import Any
 from zoneinfo import ZoneInfo
 
 from .api_football import ApiFootballClient, ApiFootballError, fixture_id_from_odds
+from .multi_market import build_multi_market_legs, family_counts
 from .ticket_builder import TARGET_TICKETS, build_legs, build_tickets, rank_fixture_candidates, summarize_match
 
 TZ = ZoneInfo("America/Sao_Paulo")
 ROOT = Path(__file__).resolve().parents[2]
 DASHBOARD = ROOT / "dashboard"
 HISTORY = ROOT / "data" / "football" / "history"
-# Any change in this module triggers the GitHub-only analysis workflow.
 
 
 def now() -> datetime:
@@ -87,6 +87,24 @@ def _resolve_api_key() -> str:
     return ""
 
 
+def _merge_legs(*groups: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    unique: dict[tuple[Any, str, str], dict[str, Any]] = {}
+    for group in groups:
+        for leg in group:
+            key = (
+                leg.get("fixture_id"),
+                str(leg.get("market") or "").strip().casefold(),
+                str(leg.get("selection") or "").strip().casefold(),
+            )
+            current = unique.get(key)
+            if current is None or float(leg.get("score") or 0) > float(current.get("score") or 0):
+                unique[key] = leg
+    return sorted(
+        unique.values(),
+        key=lambda row: (-float(row.get("score") or 0), -float(row.get("model_probability") or 0)),
+    )
+
+
 def _restore_locked_board(target_date: str) -> bool:
     path = HISTORY / f"{target_date}.json"
     if not path.exists():
@@ -128,7 +146,7 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
         "RUNNING",
         board_date=target_date,
         board_mode="TODAY",
-        message="Analisando jogos de hoje e montando 3 bilhetes entre odd 1.50 e 2.00",
+        message="Analisando gols, escanteios, cartões, chutes e mercados de resultado para montar 3 bilhetes entre odd 1.50 e 2.00",
     )
 
     api_key = _resolve_api_key()
@@ -169,11 +187,17 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
                 prediction = None
             if prediction:
                 prediction_available += 1
-            legs = build_legs(fixture, prediction, odds_by_fixture.get(fixture_id))
+
+            base_legs = build_legs(fixture, prediction, odds_by_fixture.get(fixture_id))
+            multi_legs = build_multi_market_legs(fixture, odds_by_fixture.get(fixture_id))
+            legs = _merge_legs(base_legs, multi_legs)
             all_legs.extend(legs)
-            matches.append(summarize_match(fixture, prediction, legs))
+            match_summary = summarize_match(fixture, prediction, legs)
+            match_summary["market_family_counts"] = family_counts(legs)
+            matches.append(match_summary)
             tickets = build_tickets(all_legs, target=TARGET_TICKETS)
 
+            # Analyze a meaningful sample even when three combinations already exist.
             if len(tickets) >= TARGET_TICKETS and index >= 9:
                 break
 
@@ -184,17 +208,20 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
         strict_tickets = sum(1 for row in tickets if row.get("quality_tier") == "STRICT")
         consensus_tickets = sum(1 for row in tickets if row.get("quality_tier") == "CONSENSUS")
         bookmakers_used = sorted({str(row.get("bookmaker") or "") for row in tickets if row.get("bookmaker")})
+        family_totals = family_counts(all_legs)
+        ticket_family_totals = family_counts([leg for ticket in tickets for leg in (ticket.get("legs") or [])])
 
         board_status = "READY" if len(tickets) >= TARGET_TICKETS else ("PARTIAL" if tickets else "NO_TICKETS")
         payload = {
             "sport": "football",
-            "model_version": "football-3tickets-v2.2",
+            "model_version": "football-multimarket-v4",
             "data_mode": "API_FOOTBALL",
             "data_sources": [
                 "API-Football fixtures",
                 "API-Football predictions/comparison/H2H",
                 "API-Football pre-match odds",
                 "bookmaker consensus + common-bookmaker pricing",
+                "multi-market totals: goals, corners, yellow cards, shots and shots on target",
             ],
             "operational_date": started.date().isoformat(),
             "board_date": target_date,
@@ -216,6 +243,14 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
             "bookmakers_used": bookmakers_used,
             "all_matches": matches,
             "history_summary": history,
+            "market_analysis": {
+                "enabled": True,
+                "families": ["GOALS", "CORNERS", "CARDS", "SHOTS", "RESULT"],
+                "eligible_by_family": family_totals,
+                "selected_by_family": ticket_family_totals,
+                "settlement": "automatic for supported full-time totals",
+                "correlation_guard": "same fixture cannot be repeated across tickets",
+            },
             "api_requests": client.request_count,
             "api_requests_remaining": client.remaining_requests,
             "api_minute_limit": client.minute_limit,
@@ -228,11 +263,17 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
                 "markets": [
                     "Vencedor da partida",
                     "Dupla chance",
-                    "Mais de 1.5 gols",
-                    "Menos de 4.5 gols",
-                    "Equipe favorita marca 1+ gol",
+                    "Total de gols",
+                    "Ambas marcam",
+                    "Gols da equipe",
+                    "Total de escanteios",
+                    "Escanteios da equipe",
+                    "Total de cartões amarelos",
+                    "Cartões amarelos da equipe",
+                    "Total de chutes",
+                    "Total de chutes no alvo",
                 ],
-                "method": "previsão + comparação/H2H + consenso de bookmakers + fallback conservador + mesma casa por bilhete + diversificação",
+                "method": "previsão + comparação/H2H + consenso de bookmakers + múltiplos mercados full-time + mesma casa por bilhete + diversificação",
             },
             "approved": tickets,
             "rejected": [row for row in matches if row.get("decision") != "USABLE"],
@@ -244,9 +285,9 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
         dump(HISTORY / f"{target_date}.json", payload)
 
         message = (
-            f"3 bilhetes prontos para hoje; todos precificados em uma única bookmaker por bilhete ({strict_tickets} estritos, {consensus_tickets} consenso)."
+            f"3 bilhetes multimercado prontos para hoje; famílias analisadas: gols, escanteios, cartões, chutes e resultado."
             if len(tickets) >= TARGET_TICKETS
-            else f"Somente {len(tickets)} bilhete(s) executáveis atingiram odd 1.50-2.00; nenhum mercado ou preço foi fabricado."
+            else f"Somente {len(tickets)} bilhete(s) atingiram os filtros multimercado e a faixa 1.50-2.00; nenhum mercado foi fabricado."
         )
         status(
             "SUCCESS",
@@ -257,6 +298,7 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
             fixtures_analyzed=len(matches),
             tickets_ready=len(tickets),
             target_tickets=TARGET_TICKETS,
+            market_analysis=True,
             api_requests=client.request_count,
             message=message,
         )
@@ -271,7 +313,7 @@ def run(target_date: str, max_candidates: int, max_odds_pages: int) -> int:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="InvestBet same-day football ticket analyzer")
+    parser = argparse.ArgumentParser(description="InvestBet same-day multi-market football analyzer")
     parser.add_argument("--date", help="Data YYYY-MM-DD. Padrão: hoje em America/Sao_Paulo")
     parser.add_argument("--max-candidates", type=int, default=int(os.getenv("FOOTBALL_MAX_CANDIDATES", "14")))
     parser.add_argument("--max-odds-pages", type=int, default=int(os.getenv("FOOTBALL_MAX_ODDS_PAGES", "6")))
