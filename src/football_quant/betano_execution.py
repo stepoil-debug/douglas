@@ -15,6 +15,7 @@ MIN_ODD = 1.50
 MAX_ODD = 2.00
 TARGET = 3
 TARGET_CENTER = 1.72
+FAMILY_BONUS = {"GOALS": 3.5, "CORNERS": 3.0, "CARDS": 2.0, "SHOTS": 1.5, "RESULT": 0.0}
 
 
 def _load(path: Path) -> dict[str, Any]:
@@ -50,6 +51,22 @@ def _execution_leg(leg: dict[str, Any]) -> dict[str, Any] | None:
     return copy
 
 
+def _family(leg: dict[str, Any]) -> str:
+    explicit = str(leg.get("market_family") or "").upper()
+    if explicit:
+        return explicit
+    market = str(leg.get("market") or "").casefold()
+    if "gol" in market or "goal" in market or "ambas" in market:
+        return "GOALS"
+    if "escante" in market or "corner" in market:
+        return "CORNERS"
+    if "cart" in market or "card" in market:
+        return "CARDS"
+    if "chute" in market or "shot" in market:
+        return "SHOTS"
+    return "RESULT"
+
+
 def _quality(legs: list[dict[str, Any]], total: float) -> tuple[float, str]:
     probabilities = [float(leg.get("model_probability") or 0) for leg in legs]
     scores = [float(leg.get("score") or 0) for leg in legs]
@@ -63,13 +80,15 @@ def _quality(legs: list[dict[str, Any]], total: float) -> tuple[float, str]:
         tier, bonus = "STRONG", 3.0
     else:
         tier, bonus = "CONSENSUS", 0.0
-    rating = avg_score + combined * 24 + bonus - abs(total - TARGET_CENTER) * 3
+    family_bonus = sum(FAMILY_BONUS.get(_family(leg), 0.0) for leg in legs) / len(legs)
+    rating = avg_score + combined * 24 + bonus + family_bonus - abs(total - TARGET_CENTER) * 3
     return rating, tier
 
 
 def _ticket(ticket_id: int, legs: list[dict[str, Any]], total: float, tier: str) -> dict[str, Any]:
     estimated = math.prod(float(leg.get("model_probability") or 0) for leg in legs)
     score = sum(float(leg.get("score") or 0) for leg in legs) / len(legs)
+    families = sorted({_family(leg) for leg in legs})
     return {
         "ticket_id": f"B{ticket_id}",
         "profile": "CONSERVADOR" if ticket_id == 1 else "EQUILIBRADO" if ticket_id == 2 else "SELETIVO",
@@ -78,9 +97,10 @@ def _ticket(ticket_id: int, legs: list[dict[str, Any]], total: float, tier: str)
         "total_odd": round(total, 2),
         "estimated_probability": round(estimated, 4),
         "score": round(score, 1),
+        "market_families": families,
         "legs": legs,
         "status": "PENDING",
-        "reason": "Bilhete Betano com partidas exclusivas: nenhum fixture pode aparecer em outro bilhete do mesmo dia.",
+        "reason": "Bilhete multimercado Betano com partidas exclusivas; gols, escanteios, cartões, chutes e resultado competem pelo melhor score.",
         "execution": {
             "ready": True,
             "bookmaker": "Betano",
@@ -96,11 +116,6 @@ def _signature(legs: list[dict[str, Any]]) -> tuple[tuple[Any, str, str], ...]:
 
 
 def _portfolio_has_unique_fixtures(tickets: list[dict[str, Any]]) -> bool:
-    """Return True only when every fixture is used by at most one ticket.
-
-    This validates both generated portfolios and previously locked daily portfolios.
-    A missing fixture_id is considered invalid because it cannot be safely de-duplicated.
-    """
     used: set[Any] = set()
     for ticket in tickets:
         legs = ticket.get("legs") or []
@@ -111,7 +126,6 @@ def _portfolio_has_unique_fixtures(tickets: list[dict[str, Any]]) -> bool:
             fixture_id = leg.get("fixture_id")
             if fixture_id is None:
                 return False
-            # A single ticket should not contain two markets from the same fixture either.
             if fixture_id in local:
                 return False
             local.add(fixture_id)
@@ -148,8 +162,7 @@ def build_betano_tickets(payload: dict[str, Any]) -> list[dict[str, Any]]:
             rating, tier = _quality([leg], total)
             candidates.append((rating, [leg], total, tier))
 
-    for left, right in itertools.combinations(legs[:40], 2):
-        # A multiple cannot contain two selections from the same match.
+    for left, right in itertools.combinations(legs[:48], 2):
         if left.get("fixture_id") == right.get("fixture_id"):
             continue
         min_probability = min(float(left.get("model_probability") or 0), float(right.get("model_probability") or 0))
@@ -167,8 +180,6 @@ def build_betano_tickets(payload: dict[str, Any]) -> list[dict[str, Any]]:
     seen: set[tuple[tuple[Any, str, str], ...]] = set()
     used_fixtures: set[Any] = set()
 
-    # Absolute portfolio rule: a fixture used by B1 is unavailable to B2/B3,
-    # and so on. This rule is never relaxed to force three tickets.
     for _, candidate_legs, total, tier in candidates:
         sig = _signature(candidate_legs)
         if sig in seen:
@@ -184,8 +195,6 @@ def build_betano_tickets(payload: dict[str, Any]) -> list[dict[str, Any]]:
         if len(selected) >= TARGET:
             break
 
-    # Do not add a fallback that reuses fixtures. If the slate cannot provide
-    # three independent tickets, publish fewer tickets instead of correlating risk.
     assert _portfolio_has_unique_fixtures(selected), "Betano ticket portfolio contains repeated fixture"
     return selected
 
@@ -202,14 +211,11 @@ def main() -> int:
         tickets = existing
     else:
         if lock.get("locked") and not existing_valid:
-            # Older versions allowed repeated fixtures in the Betano post-processing
-            # stage. Invalidate that lock and rebuild today's portfolio safely.
             payload["ticket_lock"] = {
                 "locked": False,
                 "invalidated_at": datetime.now(timezone.utc).isoformat(),
                 "reason": "Lock invalidado: havia fixture repetido entre bilhetes. Regeração obrigatória com partidas exclusivas.",
             }
-            lock = payload["ticket_lock"]
         tickets = build_betano_tickets(payload)
 
     payload["tickets"] = tickets
@@ -228,14 +234,20 @@ def main() -> int:
     }
     payload["board_status"] = "READY" if len(tickets) == TARGET else ("PARTIAL" if tickets else "NO_TICKETS")
     payload["strict_tickets"] = sum(1 for ticket in tickets if ticket.get("quality_tier") == "STRICT")
-    payload["model_version"] = "football-3tickets-betano-v3-exclusive"
+    payload["model_version"] = "football-multimarket-betano-v4-exclusive"
+    market_analysis = payload.setdefault("market_analysis", {})
+    market_analysis["execution_bookmaker"] = "Betano"
+    market_analysis["selected_families"] = {
+        family: sum(1 for ticket in tickets for leg in (ticket.get("legs") or []) if _family(leg) == family)
+        for family in ("GOALS", "CORNERS", "CARDS", "SHOTS", "RESULT")
+    }
 
     current_lock = payload.get("ticket_lock") or {}
     if len(tickets) == TARGET and not current_lock.get("locked"):
         payload["ticket_lock"] = {
             "locked": True,
             "locked_at": datetime.now(timezone.utc).isoformat(),
-            "reason": "3 bilhetes oficiais do dia congelados; fixtures exclusivos entre B1/B2/B3 para auditoria e settlement.",
+            "reason": "3 bilhetes oficiais multimercado congelados; fixtures exclusivos entre B1/B2/B3 para auditoria e settlement.",
         }
 
     _dump(data_path, payload)
@@ -250,18 +262,19 @@ def main() -> int:
     status["execution_bookmaker"] = "Betano"
     status["execution_ready"] = len(tickets) == TARGET
     status["fixture_exclusivity"] = bool(payload["fixture_exclusivity"]["valid"])
+    status["multi_market"] = True
     status["ticket_lock"] = bool((payload.get("ticket_lock") or {}).get("locked"))
     if len(tickets) == TARGET:
         status["status"] = "SUCCESS"
-        status["message"] = "3 bilhetes Betano oficiais publicados; nenhum jogo se repete entre B1, B2 e B3."
+        status["message"] = "3 bilhetes multimercado Betano publicados; nenhum jogo se repete entre B1, B2 e B3."
     elif tickets:
-        status["message"] = f"{len(tickets)}/3 bilhetes independentes atingiram os filtros; jogos não são repetidos para completar a meta."
+        status["message"] = f"{len(tickets)}/3 bilhetes multimercado independentes atingiram os filtros; jogos não são repetidos para completar a meta."
     else:
-        status["message"] = "Nenhuma combinação independente na Betano atingiu os filtros e a faixa de odd."
+        status["message"] = "Nenhuma combinação multimercado independente na Betano atingiu os filtros e a faixa de odd."
     _dump(status_path, status)
 
     print(
-        f"Betano execution tickets: {len(tickets)}/{TARGET}; "
+        f"Betano multi-market tickets: {len(tickets)}/{TARGET}; "
         f"exclusive={status['fixture_exclusivity']}; locked={status['ticket_lock']}"
     )
     return 0
