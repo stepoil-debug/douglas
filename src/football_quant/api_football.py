@@ -46,6 +46,7 @@ class ApiFootballClient:
             or os.getenv("API_SPORTS_KEY", "").strip()
             or os.getenv("FOOTBALL_API_KEY", "").strip()
             or os.getenv("APISPORTS_KEY", "").strip()
+            or os.getenv("EFOOTBAL", "").strip()
         )
         return cls(key)
 
@@ -75,7 +76,7 @@ class ApiFootballClient:
                 headers={
                     "x-apisports-key": self.api_key,
                     "Accept": "application/json",
-                    "User-Agent": "InvestBet-Football/2.2",
+                    "User-Agent": "InvestBet-Football/4.0",
                 },
             )
             try:
@@ -135,6 +136,14 @@ class ApiFootballClient:
     def prediction_for_fixture(self, fixture_id: int) -> dict[str, Any] | None:
         rows = list(self._get("/predictions", {"fixture": fixture_id}).get("response") or [])
         return rows[0] if rows else None
+
+    def fixture_statistics(self, fixture_id: int) -> list[dict[str, Any]]:
+        """Return final/in-play team statistics for a fixture.
+
+        Used by settlement only for selected tickets, keeping API usage bounded.
+        Typical fields include Corner Kicks, Yellow Cards, Total Shots and Shots on Goal.
+        """
+        return list(self._get("/fixtures/statistics", {"fixture": fixture_id}).get("response") or [])
 
     def head_to_head(self, home_team_id: int, away_team_id: int, last: int = 5) -> list[dict[str, Any]]:
         return list(
