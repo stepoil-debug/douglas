@@ -26,14 +26,14 @@ concurrency:
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: 18
+    timeout-minutes: 20
     env:
       KEY_PRIMARY: ${{ secrets.API_FOOTBALL_KEY }}
       KEY_ALIAS_1: ${{ secrets.API_SPORTS_KEY }}
       KEY_ALIAS_2: ${{ secrets.FOOTBALL_API_KEY }}
       KEY_ALIAS_3: ${{ secrets.APISPORTS_KEY }}
       KEY_ALIAS_4: ${{ secrets.EFOOTBAL }}
-      FOOTBALL_MAX_CANDIDATES: '14'
+      FOOTBALL_MAX_CANDIDATES: '18'
       FOOTBALL_MAX_ODDS_PAGES: '6'
       API_FOOTBALL_MIN_INTERVAL: '6.2'
       INPUT_DATE: ${{ github.event.inputs.date || '' }}
@@ -119,7 +119,7 @@ jobs:
           if git diff --cached --quiet; then
             echo 'No data changes to commit.'
           else
-            git commit -m 'data: update exclusive Betano tickets, results and bankroll'
+            git commit -m 'data: update multi-market Betano tickets, results and bankroll'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
