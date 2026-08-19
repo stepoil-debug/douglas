@@ -97,6 +97,46 @@ jobs:
           assert len(ids) == len(set(ids)), tickets
           print('Betano B1/B2/B3 use exclusive fixtures OK')
           PY
+      - name: Multi-market generation smoke test
+        env:
+          PYTHONPATH: .
+        run: |
+          python - <<'PY'
+          from src.football_quant.multi_market import build_multi_market_legs, family_counts
+
+          fixture = {
+              'fixture': {'id': 500, 'date': '2026-08-19T20:00:00-03:00'},
+              'teams': {'home': {'name': 'Time A'}, 'away': {'name': 'Time B'}},
+              'league': {'name': 'Liga Teste', 'country': 'Brazil'},
+          }
+          odds = {
+              'fixture': {'id': 500},
+              'bookmakers': [
+                  {'name': 'Betano', 'bets': [
+                      {'name': 'Corners Over/Under', 'values': [{'value': 'Over 7.5', 'odd': '1.28'}]},
+                      {'name': 'Yellow Cards Over/Under', 'values': [{'value': 'Over 2.5', 'odd': '1.30'}]},
+                      {'name': 'Shots on Target Over/Under', 'values': [{'value': 'Over 5.5', 'odd': '1.27'}]},
+                  ]},
+                  {'name': 'Book A', 'bets': [
+                      {'name': 'Corners Over/Under', 'values': [{'value': 'Over 7.5', 'odd': '1.27'}]},
+                      {'name': 'Yellow Cards Over/Under', 'values': [{'value': 'Over 2.5', 'odd': '1.29'}]},
+                      {'name': 'Shots on Target Over/Under', 'values': [{'value': 'Over 5.5', 'odd': '1.26'}]},
+                  ]},
+                  {'name': 'Book B', 'bets': [
+                      {'name': 'Corners Over/Under', 'values': [{'value': 'Over 7.5', 'odd': '1.29'}]},
+                      {'name': 'Yellow Cards Over/Under', 'values': [{'value': 'Over 2.5', 'odd': '1.31'}]},
+                      {'name': 'Shots on Target Over/Under', 'values': [{'value': 'Over 5.5', 'odd': '1.28'}]},
+                  ]},
+              ],
+          }
+          legs = build_multi_market_legs(fixture, odds)
+          counts = family_counts(legs)
+          assert counts['CORNERS'] >= 1, legs
+          assert counts['CARDS'] >= 1, legs
+          assert counts['SHOTS'] >= 1, legs
+          assert all(leg.get('settlement_metric') for leg in legs)
+          print('corners/cards/shots generation OK', counts)
+          PY
       - name: GREEN RED verifier smoke test
         env:
           PYTHONPATH: .
@@ -130,10 +170,35 @@ jobs:
               'market': 'Total de gols',
               'selection': 'Mais de 1.5 gols',
           }
+          stats = {
+              'home': {'corner_kicks': 5, 'yellow_cards': 2, 'shots_on_goal': 4, 'total_shots': 11},
+              'away': {'corner_kicks': 4, 'yellow_cards': 3, 'shots_on_goal': 3, 'total_shots': 9},
+          }
+          corners = {
+              'fixture_id': 99, 'home_team': 'Time A', 'away_team': 'Time B',
+              'market': 'Escanteios', 'selection': 'Mais de 7.5 escanteios',
+              'settlement_metric': 'corner_kicks', 'settlement_scope': 'match',
+              'settlement_operator': 'over', 'settlement_line': 7.5,
+          }
+          cards = {
+              'fixture_id': 99, 'home_team': 'Time A', 'away_team': 'Time B',
+              'market': 'Cartões amarelos', 'selection': 'Mais de 2.5 cartões amarelos',
+              'settlement_metric': 'yellow_cards', 'settlement_scope': 'match',
+              'settlement_operator': 'over', 'settlement_line': 2.5,
+          }
+          shots = {
+              'fixture_id': 99, 'home_team': 'Time A', 'away_team': 'Time B',
+              'market': 'Chutes no alvo', 'selection': 'Mais de 5.5 chutes no alvo',
+              'settlement_metric': 'shots_on_goal', 'settlement_scope': 'match',
+              'settlement_operator': 'over', 'settlement_line': 5.5,
+          }
           assert settle_leg(green, fixture)['status'] == 'GREEN'
           assert settle_leg(red, fixture)['status'] == 'RED'
           assert settle_leg(over, fixture)['status'] == 'GREEN'
+          assert settle_leg(corners, fixture, stats)['status'] == 'GREEN'
+          assert settle_leg(cards, fixture, stats)['status'] == 'GREEN'
+          assert settle_leg(shots, fixture, stats)['status'] == 'GREEN'
           ticket = {'legs': [green, red], 'status': 'PENDING'}
           assert settle_ticket(ticket, {99: fixture})['status'] == 'RED'
-          print('GREEN RED verifier OK')
+          print('GREEN RED verifier including multi-market stats OK')
           PY
