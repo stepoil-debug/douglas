@@ -2233,6 +2233,20 @@
   "fixtures_with_markets": 59,
   "history_summary": {
     "accuracy": 0.6666666666666666,
+    "by_market": {
+      "GOALS": {
+        "accuracy": null,
+        "green": 0,
+        "red": 0,
+        "resolved": 0
+      },
+      "RESULT": {
+        "accuracy": 0.6666666666666666,
+        "green": 4,
+        "red": 2,
+        "resolved": 6
+      }
+    },
     "hits": 4,
     "misses": 2,
     "resolved": 6,
@@ -2248,11 +2262,12 @@
   "predictions_available": 10,
   "rejected": [],
   "settlement": {
-    "checked_at": "2026-08-19T12:02:05.437157-03:00",
+    "checked_at": "2026-08-19T12:03:44.082932-03:00",
     "complete": false,
     "green": 0,
     "pending": 3,
-    "red": 0
+    "red": 0,
+    "statistics_fixtures_checked": 0
   },
   "sport": "football",
   "strict_tickets": 0,

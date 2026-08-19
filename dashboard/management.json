@@ -53,8 +53,8 @@
   "initial_bankroll": 100.0,
   "notes": [
     "Simulação educacional; não executa apostas nem movimenta dinheiro real.",
-    "GREEN/RED usa o placar regulamentar retornado pela API-Football para os mercados suportados.",
-    "Mercados sem regra automática ficam MANUAL e não entram no resultado da banca até conferência."
+    "GREEN/RED usa placar e estatísticas oficiais da API-Football para os mercados suportados.",
+    "Gols, escanteios, cartões amarelos, chutes e chutes no alvo possuem conferência automática quando a API fornece a estatística final."
   ],
   "strategies": {
     "all_three": {
@@ -176,5 +176,5 @@
       "roi": 53.0
     }
   },
-  "updated_at": "2026-08-19T12:02:05.450609-03:00"
+  "updated_at": "2026-08-19T12:03:44.099883-03:00"
 }
