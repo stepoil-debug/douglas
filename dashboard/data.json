@@ -13992,7 +13992,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1551317,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Vendsyssel FF",
           "implied_probability": 0.8547,
           "kickoff_iso": "2026-08-20T14:00:00-03:00",
@@ -14005,16 +14005,18 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 4.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 1; linha under 4.5.",
+          "result_score": "1-0",
           "risk_flags": [],
           "score": 85.4,
           "selection": "Menos de 4.5 gols",
+          "settled_at": "2026-08-20T15:55:31.881609-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Mirassol",
@@ -14268,7 +14270,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1561327,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "Arlanda",
           "implied_probability": 0.8197,
           "kickoff_iso": "2026-08-20T13:30:00-03:00",
@@ -14281,16 +14283,18 @@
           "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 80%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 3; linha over 1.5.",
+          "result_score": "1-2",
           "risk_flags": [],
           "score": 82.3,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-20T15:55:31.881787-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -14356,13 +14360,13 @@
   "fixtures_ranked": 18,
   "fixtures_with_markets": 60,
   "history_summary": {
-    "accuracy": 0.6666666666666666,
+    "accuracy": 0.7142857142857143,
     "by_market": {
       "GOALS": {
         "accuracy": 1.0,
-        "green": 1,
+        "green": 3,
         "red": 0,
-        "resolved": 1
+        "resolved": 3
       },
       "RESULT": {
         "accuracy": 0.6363636363636364,
@@ -14371,9 +14375,9 @@
         "resolved": 11
       }
     },
-    "hits": 8,
+    "hits": 10,
     "misses": 4,
-    "resolved": 12,
+    "resolved": 14,
     "ticket_accuracy": 0.3333333333333333,
     "tickets_hit": 2,
     "tickets_miss": 4,
@@ -14420,7 +14424,7 @@
   "predictions_available": 17,
   "rejected": [],
   "settlement": {
-    "checked_at": "2026-08-20T13:56:37.981245-03:00",
+    "checked_at": "2026-08-20T15:55:31.881817-03:00",
     "complete": false,
     "green": 0,
     "pending": 3,
@@ -14468,7 +14472,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1551317,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Vendsyssel FF",
           "implied_probability": 0.8547,
           "kickoff_iso": "2026-08-20T14:00:00-03:00",
@@ -14481,16 +14485,18 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 4.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 1; linha under 4.5.",
+          "result_score": "1-0",
           "risk_flags": [],
           "score": 85.4,
           "selection": "Menos de 4.5 gols",
+          "settled_at": "2026-08-20T15:55:31.881609-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Mirassol",
@@ -14744,7 +14750,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1561327,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "Arlanda",
           "implied_probability": 0.8197,
           "kickoff_iso": "2026-08-20T13:30:00-03:00",
@@ -14757,16 +14763,18 @@
           "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 80%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 3; linha over 1.5.",
+          "result_score": "1-2",
           "risk_flags": [],
           "score": 82.3,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-20T15:55:31.881787-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
