@@ -3,8 +3,9 @@ name: InvestBet Football - Settle Results
 on:
   workflow_dispatch:
   schedule:
-    # A cada 2 horas. Mantém GREEN/RED e a gestão simulada atualizados sem consumo excessivo da API.
-    - cron: '25 */2 * * *'
+    # De hora em hora entre 07:35 e 23:35 em Brasilia (UTC-3).
+    # Mantem GREEN/RED e o historico por data atualizados sem gastar quota na madrugada.
+    - cron: '35 0-2,10-23 * * *'
 
 permissions:
   contents: write
@@ -16,7 +17,7 @@ concurrency:
 jobs:
   settle:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 14
     env:
       KEY_PRIMARY: ${{ secrets.API_FOOTBALL_KEY }}
       KEY_ALIAS_1: ${{ secrets.API_SPORTS_KEY }}
@@ -50,7 +51,7 @@ jobs:
           fi
 
       - name: Verify pending tickets
-        run: python -m src.football_quant.settlement --max-dates 3
+        run: python -m src.football_quant.settlement --max-dates 7
 
       - name: Persist results and bankroll simulation
         shell: bash
