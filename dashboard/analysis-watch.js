@@ -72,7 +72,7 @@
     const hero = document.querySelector('.hero h1');
     if (hero) hero.textContent = `3 bilhetes para ${suffix}`;
     const nav = document.querySelector('.nav a:first-child span');
-    if (nav) nav.textContent = `3 bilhetes de ${suffix}`;
+    if (nav) nav.textContent = `Bilhetes de ${suffix}`;
     const board = $('boardDate');
     if (board) board.textContent = formatDate(boardDate);
     document.querySelectorAll('.panel li').forEach(li => {
@@ -161,6 +161,94 @@
     loop();
   }
 
+  function money(value) {
+    return new Intl.NumberFormat('pt-BR', { style:'currency', currency:'BRL' }).format(Number(value || 0));
+  }
+
+  function signedMoney(value) {
+    const n = Number(value || 0);
+    return `${n > 0 ? '+' : ''}${money(n)}`;
+  }
+
+  function signedPercent(value) {
+    const n = Number(value || 0);
+    return `${n > 0 ? '+' : ''}${n.toFixed(2).replace('.', ',')}%`;
+  }
+
+  function ensureBankrollStyles() {
+    if ($('investbetBankrollStyles')) return;
+    const style = document.createElement('style');
+    style.id = 'investbetBankrollStyles';
+    style.textContent = `
+      .bankroll-summary{margin:0 0 30px;border:1px solid rgba(216,168,47,.18);background:linear-gradient(140deg,rgba(11,31,20,.98),rgba(7,22,15,.98));padding:16px 17px}
+      .bankroll-summary-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:12px}
+      .bankroll-summary-head h2{margin:4px 0 0;font-size:18px}.bankroll-summary-head a{font-size:10px;color:#9bd9b5;text-decoration:none;font-weight:900}
+      .bankroll-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+      .bankroll-card{border:1px solid rgba(117,157,130,.14);background:#08180f;padding:13px 14px;display:grid;grid-template-columns:1.25fr repeat(4,1fr);gap:10px;align-items:center}
+      .bankroll-card-title small{display:block;color:#6f8877;font-size:8px;text-transform:uppercase;letter-spacing:.08em}.bankroll-card-title b{display:block;font-size:14px;margin-top:3px}
+      .bankroll-metric small{display:block;color:#617a69;font-size:7px;text-transform:uppercase}.bankroll-metric b{display:block;font-size:14px;margin-top:3px}
+      .bankroll-positive{color:#71e3a1!important}.bankroll-negative{color:#ff7b84!important}.bankroll-gold{color:#f2cc62!important}
+      .bankroll-updated{font-size:8px;color:#657d6c;margin-top:9px;text-align:right}
+      @media(max-width:1150px){.bankroll-grid{grid-template-columns:1fr}.bankroll-card{grid-template-columns:1.3fr repeat(4,1fr)}}
+      @media(max-width:720px){.bankroll-card{grid-template-columns:1fr 1fr}.bankroll-card-title{grid-column:1/-1}.bankroll-summary-head{align-items:flex-start}.bankroll-summary-head h2{font-size:16px}}
+    `;
+    document.head.appendChild(style);
+  }
+
+  function strategyCard(strategy, title, subtitle) {
+    const profit = Number(strategy?.profit || 0);
+    const roi = Number(strategy?.roi || 0);
+    const clsProfit = profit > 0 ? 'bankroll-positive' : profit < 0 ? 'bankroll-negative' : '';
+    const clsRoi = roi > 0 ? 'bankroll-positive' : roi < 0 ? 'bankroll-negative' : '';
+    return `
+      <div class="bankroll-card">
+        <div class="bankroll-card-title"><small>${subtitle}</small><b>${title}</b></div>
+        <div class="bankroll-metric"><small>Banca atual</small><b class="bankroll-gold">${money(strategy?.bankroll)}</b></div>
+        <div class="bankroll-metric"><small>Disponível</small><b>${money(strategy?.available_bankroll)}</b></div>
+        <div class="bankroll-metric"><small>Lucro / Prejuízo</small><b class="${clsProfit}">${signedMoney(profit)}</b></div>
+        <div class="bankroll-metric"><small>ROI</small><b class="${clsRoi}">${signedPercent(roi)}</b></div>
+      </div>`;
+  }
+
+  async function loadBankrollSummary() {
+    try {
+      const data = await json(`./management.json?t=${Date.now()}`);
+      const strategies = data?.strategies || {};
+      const all = strategies.all_three || {};
+      const safest = strategies.safest_only || {};
+      ensureBankrollStyles();
+
+      let box = $('bankrollSummary');
+      if (!box) {
+        box = document.createElement('section');
+        box.id = 'bankrollSummary';
+        box.className = 'bankroll-summary';
+        const ticketsSection = $('tickets');
+        const kpis = document.querySelector('.kpis');
+        if (ticketsSection?.parentNode) ticketsSection.parentNode.insertBefore(box, ticketsSection);
+        else if (kpis?.parentNode) kpis.parentNode.insertBefore(box, kpis.nextSibling);
+        else return;
+      }
+
+      const updated = data?.updated_at
+        ? new Intl.DateTimeFormat('pt-BR', { timeZone:'America/Sao_Paulo', day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit', hour12:false }).format(new Date(data.updated_at))
+        : '—';
+      const stake = money(data?.fixed_stake || 10);
+      box.innerHTML = `
+        <div class="bankroll-summary-head">
+          <div><div class="eyebrow">Gestão simulada • banca inicial ${money(data?.initial_bankroll || 100)}</div><h2>Acompanhamento da banca</h2></div>
+          <a href="./gestao.html">Abrir gestão completa →</a>
+        </div>
+        <div class="bankroll-grid">
+          ${strategyCard(all, 'Mão fixa • 3 bilhetes', `${stake} em cada bilhete`)}
+          ${strategyCard(safest, 'Entrada mais segura', `${stake} no bilhete de maior probabilidade`)}
+        </div>
+        <div class="bankroll-updated">Exposição aberta: ${money(all.open_exposure)} / ${money(safest.open_exposure)} • atualizado em ${updated}</div>`;
+    } catch (e) {
+      console.warn('Resumo da banca indisponível:', e);
+    }
+  }
+
   async function boot() {
     const btn = $('analyzeBtn');
     if (!btn) return;
@@ -173,6 +261,7 @@
 
     const current = await publishedStatus();
     if (current?.board_date) updateBoardLabels(current.board_date);
+    loadBankrollSummary();
 
     const saved = readWatch();
     if (saved?.date && Date.now() - Number(saved.startedAt || 0) < MAX_WAIT_MS) {
@@ -194,6 +283,8 @@
         }
       }
     } catch {}
+
+    setInterval(loadBankrollSummary, 60000);
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => setTimeout(boot, 0));
