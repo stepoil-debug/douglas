@@ -15515,7 +15515,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1492751,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Bohemians",
           "implied_probability": 0.7692,
           "kickoff_iso": "2026-08-21T15:45:00-03:00",
@@ -15528,16 +15528,18 @@
           "rationale": "Mercado goals confirmado por 11 bookmaker(s); probabilidade implícita ajustada 75%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 3.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 8; linha under 3.5.",
+          "result_score": "5-3",
           "risk_flags": [],
           "score": 80.0,
           "selection": "Menos de 3.5 gols",
+          "settled_at": "2026-08-21T17:54:52.863815-03:00",
           "settlement_line": 3.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "RED"
         }
       ],
       "market_families": [
@@ -15547,7 +15549,8 @@
       "quality_tier": "STRONG",
       "reason": "Bilhete multimercado Betano com partidas exclusivas; gols, escanteios, cartões, chutes e resultado competem pelo melhor score.",
       "score": 84.0,
-      "status": "PENDING",
+      "settled_at": "2026-08-21T17:54:52.863948-03:00",
+      "status": "RED",
       "ticket_id": "B1",
       "total_odd": 1.5
     },
@@ -15602,7 +15605,7 @@
           "risk_flags": [],
           "score": 87.9,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-08-21T16:51:57.793164-03:00",
+          "settled_at": "2026-08-21T17:54:52.863957-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -15633,7 +15636,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1492752,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Drogheda United",
           "implied_probability": 0.7692,
           "kickoff_iso": "2026-08-21T15:45:00-03:00",
@@ -15646,16 +15649,18 @@
           "rationale": "Mercado goals confirmado por 11 bookmaker(s); probabilidade implícita ajustada 75%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 3.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 2; linha under 3.5.",
+          "result_score": "0-2",
           "risk_flags": [],
           "score": 80.0,
           "selection": "Menos de 3.5 gols",
+          "settled_at": "2026-08-21T17:54:52.863968-03:00",
           "settlement_line": 3.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -15665,7 +15670,8 @@
       "quality_tier": "STRONG",
       "reason": "Bilhete multimercado Betano com partidas exclusivas; gols, escanteios, cartões, chutes e resultado competem pelo melhor score.",
       "score": 84.0,
-      "status": "PENDING",
+      "settled_at": "2026-08-21T17:54:52.863981-03:00",
+      "status": "GREEN",
       "ticket_id": "B2",
       "total_odd": 1.5
     },
@@ -15698,7 +15704,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1499587,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Comunicaciones",
           "implied_probability": 0.905,
           "kickoff_iso": "2026-08-21T15:30:00-03:00",
@@ -15711,16 +15717,18 @@
           "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 3.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 1; linha under 3.5.",
+          "result_score": "1-0",
           "risk_flags": [],
           "score": 86.9,
           "selection": "Menos de 3.5 gols",
+          "settled_at": "2026-08-21T17:54:52.863986-03:00",
           "settlement_line": 3.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Karlshamn",
@@ -15759,7 +15767,7 @@
           "risk_flags": [],
           "score": 79.4,
           "selection": "Menos de 4.5 gols",
-          "settled_at": "2026-08-21T16:51:57.793312-03:00",
+          "settled_at": "2026-08-21T17:54:52.863994-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
@@ -15775,7 +15783,8 @@
       "quality_tier": "STRONG",
       "reason": "Bilhete multimercado Betano com partidas exclusivas; gols, escanteios, cartões, chutes e resultado competem pelo melhor score.",
       "score": 83.2,
-      "status": "PENDING",
+      "settled_at": "2026-08-21T17:54:52.864002-03:00",
+      "status": "GREEN",
       "ticket_id": "B3",
       "total_odd": 1.51
     }
@@ -15831,13 +15840,13 @@
   "fixtures_ranked": 18,
   "fixtures_with_markets": 60,
   "history_summary": {
-    "accuracy": 0.8,
+    "accuracy": 0.782608695652174,
     "by_market": {
       "GOALS": {
-        "accuracy": 1.0,
-        "green": 9,
-        "red": 0,
-        "resolved": 9
+        "accuracy": 0.9166666666666666,
+        "green": 11,
+        "red": 1,
+        "resolved": 12
       },
       "RESULT": {
         "accuracy": 0.6363636363636364,
@@ -15846,13 +15855,13 @@
         "resolved": 11
       }
     },
-    "hits": 16,
-    "misses": 4,
-    "resolved": 20,
-    "ticket_accuracy": 0.5555555555555556,
-    "tickets_hit": 5,
-    "tickets_miss": 4,
-    "tickets_resolved": 9
+    "hits": 18,
+    "misses": 5,
+    "resolved": 23,
+    "ticket_accuracy": 0.5833333333333334,
+    "tickets_hit": 7,
+    "tickets_miss": 5,
+    "tickets_resolved": 12
   },
   "last_run_at": "2026-08-21T07:44:42.499182-03:00",
   "market_analysis": {
@@ -15895,11 +15904,11 @@
   "predictions_available": 18,
   "rejected": [],
   "settlement": {
-    "checked_at": "2026-08-21T16:51:57.793347-03:00",
-    "complete": false,
-    "green": 0,
-    "pending": 3,
-    "red": 0,
+    "checked_at": "2026-08-21T17:54:52.864019-03:00",
+    "complete": true,
+    "green": 2,
+    "pending": 0,
+    "red": 1,
     "statistics_fixtures_checked": 0
   },
   "sport": "football",
@@ -15991,7 +16000,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1492751,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Bohemians",
           "implied_probability": 0.7692,
           "kickoff_iso": "2026-08-21T15:45:00-03:00",
@@ -16004,16 +16013,18 @@
           "rationale": "Mercado goals confirmado por 11 bookmaker(s); probabilidade implícita ajustada 75%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 3.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 8; linha under 3.5.",
+          "result_score": "5-3",
           "risk_flags": [],
           "score": 80.0,
           "selection": "Menos de 3.5 gols",
+          "settled_at": "2026-08-21T17:54:52.863815-03:00",
           "settlement_line": 3.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "RED"
         }
       ],
       "market_families": [
@@ -16023,7 +16034,8 @@
       "quality_tier": "STRONG",
       "reason": "Bilhete multimercado Betano com partidas exclusivas; gols, escanteios, cartões, chutes e resultado competem pelo melhor score.",
       "score": 84.0,
-      "status": "PENDING",
+      "settled_at": "2026-08-21T17:54:52.863948-03:00",
+      "status": "RED",
       "ticket_id": "B1",
       "total_odd": 1.5
     },
@@ -16078,7 +16090,7 @@
           "risk_flags": [],
           "score": 87.9,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-08-21T16:51:57.793164-03:00",
+          "settled_at": "2026-08-21T17:54:52.863957-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -16109,7 +16121,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1492752,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Drogheda United",
           "implied_probability": 0.7692,
           "kickoff_iso": "2026-08-21T15:45:00-03:00",
@@ -16122,16 +16134,18 @@
           "rationale": "Mercado goals confirmado por 11 bookmaker(s); probabilidade implícita ajustada 75%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 3.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 2; linha under 3.5.",
+          "result_score": "0-2",
           "risk_flags": [],
           "score": 80.0,
           "selection": "Menos de 3.5 gols",
+          "settled_at": "2026-08-21T17:54:52.863968-03:00",
           "settlement_line": 3.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -16141,7 +16155,8 @@
       "quality_tier": "STRONG",
       "reason": "Bilhete multimercado Betano com partidas exclusivas; gols, escanteios, cartões, chutes e resultado competem pelo melhor score.",
       "score": 84.0,
-      "status": "PENDING",
+      "settled_at": "2026-08-21T17:54:52.863981-03:00",
+      "status": "GREEN",
       "ticket_id": "B2",
       "total_odd": 1.5
     },
@@ -16174,7 +16189,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1499587,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Comunicaciones",
           "implied_probability": 0.905,
           "kickoff_iso": "2026-08-21T15:30:00-03:00",
@@ -16187,16 +16202,18 @@
           "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 3.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 1; linha under 3.5.",
+          "result_score": "1-0",
           "risk_flags": [],
           "score": 86.9,
           "selection": "Menos de 3.5 gols",
+          "settled_at": "2026-08-21T17:54:52.863986-03:00",
           "settlement_line": 3.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Karlshamn",
@@ -16235,7 +16252,7 @@
           "risk_flags": [],
           "score": 79.4,
           "selection": "Menos de 4.5 gols",
-          "settled_at": "2026-08-21T16:51:57.793312-03:00",
+          "settled_at": "2026-08-21T17:54:52.863994-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
@@ -16251,7 +16268,8 @@
       "quality_tier": "STRONG",
       "reason": "Bilhete multimercado Betano com partidas exclusivas; gols, escanteios, cartões, chutes e resultado competem pelo melhor score.",
       "score": 83.2,
-      "status": "PENDING",
+      "settled_at": "2026-08-21T17:54:52.864002-03:00",
+      "status": "GREEN",
       "ticket_id": "B3",
       "total_odd": 1.51
     }
