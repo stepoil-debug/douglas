@@ -110,16 +110,42 @@
     }, 1500);
   }
 
-  function ensureManagementNav() {
+  function ensureCleanNavigation() {
     const nav = document.querySelector('.nav');
-    if (!nav || nav.querySelector('[data-management-nav]')) return;
-    const link = document.createElement('a');
-    link.href = 'gestao.html';
-    link.dataset.managementNav = '1';
-    link.innerHTML = '📈 <span>Gestão simulada</span>';
-    const second = nav.children[1];
-    if (second) nav.insertBefore(link, second);
-    else nav.appendChild(link);
+    if (!nav) return;
+
+    if (!document.getElementById('investbetNavStyles')) {
+      const style = document.createElement('style');
+      style.id = 'investbetNavStyles';
+      style.textContent = `
+        .nav-config{margin-top:2px;border:1px solid transparent;border-radius:9px;overflow:hidden}
+        .nav-config[open]{border-color:rgba(216,168,47,.12);background:rgba(216,168,47,.025)}
+        .nav-config summary{list-style:none;cursor:pointer;padding:11px 12px;color:#88a08f;font-size:13px;font-weight:850;display:flex;align-items:center;justify-content:space-between;gap:8px;border-radius:9px}
+        .nav-config summary::-webkit-details-marker{display:none}
+        .nav-config summary:hover,.nav-config[open] summary{color:#f4e8c7;background:rgba(216,168,47,.05)}
+        .nav-config summary .chevron{font-size:9px;color:#60796a;transition:transform .16s ease}
+        .nav-config[open] summary .chevron{transform:rotate(180deg)}
+        .nav-sub{display:grid;gap:2px;padding:2px 6px 8px 16px;margin-left:13px;border-left:1px solid rgba(216,168,47,.12)}
+        .nav-sub a{padding:8px 9px!important;font-size:11px!important;font-weight:750!important;color:#718979!important}
+        .nav-sub a:hover{color:#f4e8c7!important}
+        @media(max-width:1150px){.nav-config summary{justify-content:center}.nav-config summary span,.nav-config summary .chevron,.nav-sub{display:none}.nav-config[open] .nav-sub{display:none}}
+      `;
+      document.head.appendChild(style);
+    }
+
+    nav.innerHTML = `
+      <a href="#tickets">🎟️ <span>Bilhetes de hoje</span></a>
+      <a href="./bilhetes.html">📚 <span>Histórico de bilhetes</span></a>
+      <details class="nav-config">
+        <summary>⚙️ <span>Configurações</span><span class="chevron">⌄</span></summary>
+        <div class="nav-sub">
+          <a href="./gestao.html">📈 <span>Gestão simulada</span></a>
+          <a href="#games">⚽ <span>Jogos analisados</span></a>
+          <a href="#method">⌁ <span>Motor de análise</span></a>
+          <a href="#history">◷ <span>Desempenho</span></a>
+        </div>
+      </details>
+    `;
   }
 
   function ensureVerifyButton() {
@@ -346,7 +372,7 @@
       if (!summary.total) {
         showNotice('Ainda não existem bilhetes oficiais para conferir.', 'warn');
       } else if (summary.pending > 0 || summary.manual > 0) {
-        showNotice(`Bilhetes: ${summary.green} GREEN • ${summary.red} RED • ${summary.pending} pendente(s)${summary.manual ? ` • ${summary.manual} manual/void` : ''}${checkedAt}. A conferência automática roda a cada 2 horas.`, 'warn');
+        showNotice(`Bilhetes: ${summary.green} GREEN • ${summary.red} RED • ${summary.pending} pendente(s)${summary.manual ? ` • ${summary.manual} manual/void` : ''}${checkedAt}. A conferência automática roda de hora em hora.`, 'warn');
       } else {
         const type = summary.red > 0 ? 'warn' : 'good';
         showNotice(`Conferência concluída: ${summary.green} GREEN • ${summary.red} RED${checkedAt}. Os placares e o resultado de cada perna estão exibidos nos bilhetes.`, type);
@@ -379,7 +405,7 @@
     }
   }
 
-  ensureManagementNav();
+  ensureCleanNavigation();
   ensureAnalysisDateSelector();
   ensureVerifyButton();
   if (verifyBtn) verifyBtn.onclick = verifyTickets;
