@@ -56,7 +56,7 @@ jobs:
               html = page.read_text(encoding='utf-8')
               for script_name in ('manual-trigger.js', 'analysis-watch.js'):
                   html = re.sub(
-                      rf'{re.escape(script_name)}(?:\?v=[^"\']*)?',
+                      rf'{re.escape(script_name)}(?:\?v[^"\']*)?',
                       f'{script_name}?v={build}',
                       html,
                   )
@@ -69,15 +69,25 @@ jobs:
               else:
                   html = html.replace('</head>', f'<meta name="investbet-build" content="{build}">\n</head>')
 
-              # Static navigation: no observer/timer is needed for these links.
               nav_marker = '<nav class="nav">'
               nav_links = (
-                  '<a href="./bilhetes.html">📚 <span>Bilhetes</span></a>'
+                  '<a href="./bilhetes.html">📚 <span>Bilhetes concluídos</span></a>'
                   '<a href="./gestao.html" data-management-nav="1">📈 <span>Gestão simulada</span></a>'
               )
               if 'href="./bilhetes.html"' not in html and nav_marker in html:
                   html = html.replace(nav_marker, nav_marker + nav_links, 1)
+              else:
+                  html = html.replace('📚 <span>Bilhetes</span>', '📚 <span>Bilhetes concluídos</span>')
               page.write_text(html, encoding='utf-8')
+
+          archive = Path('dashboard/bilhetes.html')
+          if archive.exists():
+              html = archive.read_text(encoding='utf-8')
+              html = html.replace('<title>InvestBet • Histórico de Bilhetes</title>', '<title>InvestBet • Bilhetes concluídos</title>')
+              html = html.replace('📚 <span>Bilhetes</span>', '📚 <span>Bilhetes concluídos</span>')
+              html = html.replace('<div class="title">Bilhetes por data</div>', '<div class="title">Bilhetes concluídos</div>')
+              html = html.replace('<h1>Bilhetes e jogos separados por data</h1>', '<h1>Bilhetes concluídos por data</h1>')
+              archive.write_text(html, encoding='utf-8')
 
           rows = []
           for path in sorted(Path('data/football/history').glob('????-??-??.json'), reverse=True):
@@ -147,7 +157,7 @@ jobs:
             printf '%s' "$V2" | grep -q "analysis-watch.js?v=${BUILD}" && V2_OK=1 || true
             printf '%s' "$V2" | grep -q "manual-trigger.js?v=${BUILD}" && MANUAL_OK=1 || true
             printf '%s' "$V2" | grep -q "investbet-build.*${BUILD}" && BUILD_OK=1 || true
-            printf '%s' "$ARCHIVE" | grep -q 'Bilhetes separados por data' && ARCHIVE_OK=1 || true
+            printf '%s' "$ARCHIVE" | grep -q 'Bilhetes concluídos por data' && ARCHIVE_OK=1 || true
             WATCH_BODY="$(curl -fsSL --retry 2 --retry-delay 2 "${BASE}/analysis-watch.js?v=${BUILD}" || true)"
             printf '%s' "$WATCH_BODY" | grep -q 'POLL_MS = 5000' && WATCH_OK=1 || true
 
