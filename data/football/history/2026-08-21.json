@@ -15584,7 +15584,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1494255,
-          "fixture_status": "1H",
+          "fixture_status": "HT",
           "home_team": "Sirius",
           "implied_probability": 0.8929,
           "kickoff_iso": "2026-08-21T14:00:00-03:00",
@@ -15597,7 +15597,7 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Partida ainda não encerrada (HT).",
           "risk_flags": [],
           "score": 87.9,
           "selection": "Mais de 1.5 gols",
@@ -15739,7 +15739,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1510994,
-          "fixture_status": "HT",
+          "fixture_status": "FT",
           "home_team": "Sölvesborg",
           "implied_probability": 0.7752,
           "kickoff_iso": "2026-08-21T13:00:00-03:00",
@@ -15752,16 +15752,18 @@
           "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 75%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 4.5",
-          "result_reason": "Partida ainda não encerrada (HT).",
+          "result_reason": "Total de gols: 3; linha under 4.5.",
+          "result_score": "2-1",
           "risk_flags": [],
           "score": 79.4,
           "selection": "Menos de 4.5 gols",
+          "settled_at": "2026-08-21T14:59:43.380759-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -15827,13 +15829,13 @@
   "fixtures_ranked": 18,
   "fixtures_with_markets": 60,
   "history_summary": {
-    "accuracy": 0.7777777777777778,
+    "accuracy": 0.7894736842105263,
     "by_market": {
       "GOALS": {
         "accuracy": 1.0,
-        "green": 7,
+        "green": 8,
         "red": 0,
-        "resolved": 7
+        "resolved": 8
       },
       "RESULT": {
         "accuracy": 0.6363636363636364,
@@ -15842,9 +15844,9 @@
         "resolved": 11
       }
     },
-    "hits": 14,
+    "hits": 15,
     "misses": 4,
-    "resolved": 18,
+    "resolved": 19,
     "ticket_accuracy": 0.5555555555555556,
     "tickets_hit": 5,
     "tickets_miss": 4,
@@ -15891,7 +15893,7 @@
   "predictions_available": 18,
   "rejected": [],
   "settlement": {
-    "checked_at": "2026-08-21T14:03:45.528578-03:00",
+    "checked_at": "2026-08-21T14:59:43.380930-03:00",
     "complete": false,
     "green": 0,
     "pending": 3,
@@ -16056,7 +16058,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1494255,
-          "fixture_status": "1H",
+          "fixture_status": "HT",
           "home_team": "Sirius",
           "implied_probability": 0.8929,
           "kickoff_iso": "2026-08-21T14:00:00-03:00",
@@ -16069,7 +16071,7 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Partida ainda não encerrada (HT).",
           "risk_flags": [],
           "score": 87.9,
           "selection": "Mais de 1.5 gols",
@@ -16211,7 +16213,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1510994,
-          "fixture_status": "HT",
+          "fixture_status": "FT",
           "home_team": "Sölvesborg",
           "implied_probability": 0.7752,
           "kickoff_iso": "2026-08-21T13:00:00-03:00",
@@ -16224,16 +16226,18 @@
           "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 75%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 4.5",
-          "result_reason": "Partida ainda não encerrada (HT).",
+          "result_reason": "Total de gols: 3; linha under 4.5.",
+          "result_score": "2-1",
           "risk_flags": [],
           "score": 79.4,
           "selection": "Menos de 4.5 gols",
+          "settled_at": "2026-08-21T14:59:43.380759-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
