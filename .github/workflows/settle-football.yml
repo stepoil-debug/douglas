@@ -6,6 +6,11 @@ on:
     # De hora em hora entre 07:35 e 23:35 em Brasilia (UTC-3).
     # Mantem GREEN/RED e o historico por data atualizados sem gastar quota na madrugada.
     - cron: '35 0-2,10-23 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'src/football_quant/settlement.py'
+      - '.github/workflows/settle-football.yml'
 
 permissions:
   contents: write
