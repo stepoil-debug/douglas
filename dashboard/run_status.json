@@ -1,5 +1,4 @@
 {
-  "api_requests": 25,
   "board_date": "2026-08-21",
   "board_mode": "TODAY",
   "board_status": "READY",
@@ -8,7 +7,6 @@
   "fixture_exclusivity": true,
   "fixtures_analyzed": 18,
   "fixtures_found": 392,
-  "market_analysis": true,
   "message": "3 bilhetes multimercado Betano publicados; nenhum jogo se repete entre B1, B2 e B3.",
   "multi_market": true,
   "sport": "football",
@@ -16,5 +14,5 @@
   "target_tickets": 3,
   "ticket_lock": true,
   "tickets_ready": 3,
-  "updated_at": "2026-08-21T07:44:42.533530-03:00"
+  "updated_at": "2026-08-21T11:49:12.540628-03:00"
 }
