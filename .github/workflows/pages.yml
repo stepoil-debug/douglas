@@ -2,7 +2,7 @@ name: Deploy InvestBet Football dashboard
 
 on:
   workflow_run:
-    workflows: ["InvestBet Football - Analyze"]
+    workflows: ["InvestBet Football - Analyze", "InvestBet Football - Settle Results"]
     types: [completed]
   push:
     branches: [main]
@@ -68,6 +68,15 @@ jobs:
                   )
               else:
                   html = html.replace('</head>', f'<meta name="investbet-build" content="{build}">\n</head>')
+
+              # Static navigation: no observer/timer is needed for these links.
+              nav_marker = '<nav class="nav">'
+              nav_links = (
+                  '<a href="./bilhetes.html">📚 <span>Bilhetes</span></a>'
+                  '<a href="./gestao.html" data-management-nav="1">📈 <span>Gestão simulada</span></a>'
+              )
+              if 'href="./bilhetes.html"' not in html and nav_marker in html:
+                  html = html.replace(nav_marker, nav_marker + nav_links, 1)
               page.write_text(html, encoding='utf-8')
 
           rows = []
@@ -76,10 +85,25 @@ jobs:
                   data = json.loads(path.read_text(encoding='utf-8'))
               except Exception:
                   continue
+              tickets = data.get('tickets') or data.get('approved') or []
+              settlement = data.get('settlement') or {}
+              if not settlement:
+                  green = sum(1 for t in tickets if str(t.get('status') or '').upper() == 'GREEN')
+                  red = sum(1 for t in tickets if str(t.get('status') or '').upper() == 'RED')
+                  pending = sum(1 for t in tickets if str(t.get('status') or 'PENDING').upper() in {'PENDING','MANUAL'})
+                  settlement = {
+                      'green': green,
+                      'red': red,
+                      'pending': pending,
+                      'complete': bool(tickets) and pending == 0,
+                  }
               rows.append({
                   'date': data.get('board_date', path.stem),
                   'last_run_at': data.get('last_run_at'),
+                  'tickets': len(tickets),
                   'approved': len(data.get('approved') or []),
+                  'board_status': data.get('board_status') or '',
+                  'settlement': settlement,
                   'history_summary': data.get('history_summary') or {},
               })
           Path('dashboard/history/index.json').write_text(
@@ -114,18 +138,20 @@ jobs:
             ROOT="$(curl -fsSL --retry 2 --retry-delay 2 "${BASE}/?verify=${GITHUB_SHA}" || true)"
             V2="$(curl -fsSL --retry 2 --retry-delay 2 "${BASE}/v2.html?verify=${GITHUB_SHA}" || true)"
             STATUS="$(curl -fsSL --retry 2 --retry-delay 2 "${BASE}/run_status.json?verify=${GITHUB_SHA}" || true)"
+            ARCHIVE="$(curl -fsSL --retry 2 --retry-delay 2 "${BASE}/bilhetes.html?verify=${GITHUB_SHA}" || true)"
             PUBLIC_DATE="$(printf '%s' "$STATUS" | jq -r '.board_date // empty' 2>/dev/null || true)"
             PUBLIC_STATUS="$(printf '%s' "$STATUS" | jq -r '.status // empty' 2>/dev/null || true)"
 
-            ROOT_OK=0; V2_OK=0; WATCH_OK=0; MANUAL_OK=0; BUILD_OK=0
+            ROOT_OK=0; V2_OK=0; WATCH_OK=0; MANUAL_OK=0; BUILD_OK=0; ARCHIVE_OK=0
             printf '%s' "$ROOT" | grep -q "analysis-watch.js?v=${BUILD}" && ROOT_OK=1 || true
             printf '%s' "$V2" | grep -q "analysis-watch.js?v=${BUILD}" && V2_OK=1 || true
             printf '%s' "$V2" | grep -q "manual-trigger.js?v=${BUILD}" && MANUAL_OK=1 || true
             printf '%s' "$V2" | grep -q "investbet-build.*${BUILD}" && BUILD_OK=1 || true
+            printf '%s' "$ARCHIVE" | grep -q 'Bilhetes separados por data' && ARCHIVE_OK=1 || true
             WATCH_BODY="$(curl -fsSL --retry 2 --retry-delay 2 "${BASE}/analysis-watch.js?v=${BUILD}" || true)"
             printf '%s' "$WATCH_BODY" | grep -q 'POLL_MS = 5000' && WATCH_OK=1 || true
 
-            if [ "$ROOT_OK" = 1 ] && [ "$V2_OK" = 1 ] && [ "$WATCH_OK" = 1 ] && [ "$MANUAL_OK" = 1 ] && [ "$BUILD_OK" = 1 ] \
+            if [ "$ROOT_OK" = 1 ] && [ "$V2_OK" = 1 ] && [ "$WATCH_OK" = 1 ] && [ "$MANUAL_OK" = 1 ] && [ "$BUILD_OK" = 1 ] && [ "$ARCHIVE_OK" = 1 ] \
                && [ "$PUBLIC_DATE" = "$EXPECTED_DATE" ] && [ "$PUBLIC_STATUS" = "$EXPECTED_STATUS" ]; then
               OK=1
               break
