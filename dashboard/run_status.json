@@ -1,12 +1,14 @@
 {
-  "board_date": "2026-08-21",
+  "api_requests": 17,
+  "board_date": "2026-08-22",
   "board_mode": "TODAY",
   "board_status": "READY",
   "execution_bookmaker": "Betano",
   "execution_ready": true,
   "fixture_exclusivity": true,
-  "fixtures_analyzed": 18,
-  "fixtures_found": 392,
+  "fixtures_analyzed": 10,
+  "fixtures_found": 1347,
+  "market_analysis": true,
   "message": "3 bilhetes multimercado Betano publicados; nenhum jogo se repete entre B1, B2 e B3.",
   "multi_market": true,
   "sport": "football",
@@ -14,5 +16,5 @@
   "target_tickets": 3,
   "ticket_lock": true,
   "tickets_ready": 3,
-  "updated_at": "2026-08-21T19:36:36.503160-03:00"
+  "updated_at": "2026-08-22T07:36:49.042490-03:00"
 }

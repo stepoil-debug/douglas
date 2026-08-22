@@ -95,6 +95,30 @@
           "ticket_id": "B3"
         }
       ]
+    },
+    {
+      "date": "2026-08-22",
+      "safest_ticket_id": "B3",
+      "tickets": [
+        {
+          "odd": 1.51,
+          "probability": 0.6603,
+          "status": "PENDING",
+          "ticket_id": "B1"
+        },
+        {
+          "odd": 1.5,
+          "probability": 0.6481,
+          "status": "PENDING",
+          "ticket_id": "B2"
+        },
+        {
+          "odd": 1.5,
+          "probability": 0.6831,
+          "status": "PENDING",
+          "ticket_id": "B3"
+        }
+      ]
     }
   ],
   "fixed_stake": 10.0,
@@ -107,9 +131,9 @@
   "strategies": {
     "all_three": {
       "accuracy": 58.33,
-      "available_bankroll": 85.7,
+      "available_bankroll": 55.7,
       "bankroll": 85.7,
-      "bets": 12,
+      "bets": 15,
       "description": "R$10 em cada um dos 3 bilhetes oficiais do dia. Exposição diária máxima: R$30.",
       "fixed_stake": 10.0,
       "greens": 7,
@@ -233,12 +257,42 @@
           "stake": 10.0,
           "status": "GREEN",
           "ticket_id": "B3"
+        },
+        {
+          "date": "2026-08-22",
+          "estimated_probability": 0.6603,
+          "label": "Todos os 3",
+          "odd": 1.51,
+          "profit": null,
+          "stake": 10.0,
+          "status": "PENDING",
+          "ticket_id": "B1"
+        },
+        {
+          "date": "2026-08-22",
+          "estimated_probability": 0.6481,
+          "label": "Todos os 3",
+          "odd": 1.5,
+          "profit": null,
+          "stake": 10.0,
+          "status": "PENDING",
+          "ticket_id": "B2"
+        },
+        {
+          "date": "2026-08-22",
+          "estimated_probability": 0.6831,
+          "label": "Todos os 3",
+          "odd": 1.5,
+          "profit": null,
+          "stake": 10.0,
+          "status": "PENDING",
+          "ticket_id": "B3"
         }
       ],
       "initial_bankroll": 100.0,
       "name": "Mão fixa • 3 bilhetes",
-      "open_exposure": 0.0,
-      "pending": 0,
+      "open_exposure": 30.0,
+      "pending": 3,
       "profit": -14.3,
       "reds": 5,
       "resolved": 12,
@@ -246,9 +300,9 @@
     },
     "safest_only": {
       "accuracy": 75.0,
-      "available_bankroll": 105.5,
+      "available_bankroll": 95.5,
       "bankroll": 105.5,
-      "bets": 4,
+      "bets": 5,
       "description": "R$10 somente no bilhete com maior probabilidade estimada do dia. Exposição diária máxima: R$10.",
       "fixed_stake": 10.0,
       "greens": 3,
@@ -292,17 +346,27 @@
           "stake": 10.0,
           "status": "GREEN",
           "ticket_id": "B3"
+        },
+        {
+          "date": "2026-08-22",
+          "estimated_probability": 0.6831,
+          "label": "Mais segura",
+          "odd": 1.5,
+          "profit": null,
+          "stake": 10.0,
+          "status": "PENDING",
+          "ticket_id": "B3"
         }
       ],
       "initial_bankroll": 100.0,
       "name": "Entrada mais segura",
-      "open_exposure": 0.0,
-      "pending": 0,
+      "open_exposure": 10.0,
+      "pending": 1,
       "profit": 5.5,
       "reds": 1,
       "resolved": 4,
       "roi": 13.75
     }
   },
-  "updated_at": "2026-08-22T00:23:07.492169-03:00"
+  "updated_at": "2026-08-22T07:36:49.638148-03:00"
 }
