@@ -17083,7 +17083,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1495532,
-          "fixture_status": "HT",
+          "fixture_status": "FT",
           "home_team": "Häcken W",
           "implied_probability": 0.7042,
           "kickoff_iso": "2026-08-23T08:00:00-03:00",
@@ -17096,16 +17096,18 @@
           "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 68%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 2.5",
-          "result_reason": "Partida ainda não encerrada (HT).",
+          "result_reason": "Total de gols: 5; linha over 2.5.",
+          "result_score": "4-1",
           "risk_flags": [],
           "score": 74.9,
           "selection": "Mais de 2.5 gols",
+          "settled_at": "2026-08-23T10:16:28.614860-03:00",
           "settlement_line": 2.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -17115,7 +17117,8 @@
       "quality_tier": "CONSENSUS",
       "reason": "Bilhete multimercado Betano com partidas exclusivas; gols, escanteios, cartões, chutes e resultado competem pelo melhor score.",
       "score": 74.9,
-      "status": "PENDING",
+      "settled_at": "2026-08-23T10:16:28.614998-03:00",
+      "status": "GREEN",
       "ticket_id": "B1",
       "total_odd": 1.57
     },
@@ -17236,13 +17239,13 @@
   "fixtures_ranked": 18,
   "fixtures_with_markets": 60,
   "history_summary": {
-    "accuracy": 0.7777777777777778,
+    "accuracy": 0.7857142857142857,
     "by_market": {
       "GOALS": {
-        "accuracy": 0.875,
-        "green": 14,
+        "accuracy": 0.8823529411764706,
+        "green": 15,
         "red": 2,
-        "resolved": 16
+        "resolved": 17
       },
       "RESULT": {
         "accuracy": 0.6363636363636364,
@@ -17251,13 +17254,13 @@
         "resolved": 11
       }
     },
-    "hits": 21,
+    "hits": 22,
     "misses": 6,
-    "resolved": 27,
-    "ticket_accuracy": 0.5714285714285714,
-    "tickets_hit": 8,
+    "resolved": 28,
+    "ticket_accuracy": 0.6,
+    "tickets_hit": 9,
     "tickets_miss": 6,
-    "tickets_resolved": 14
+    "tickets_resolved": 15
   },
   "last_run_at": "2026-08-23T07:38:03.043288-03:00",
   "market_analysis": {
@@ -17300,10 +17303,10 @@
   "predictions_available": 17,
   "rejected": [],
   "settlement": {
-    "checked_at": "2026-08-23T08:52:15.566734-03:00",
+    "checked_at": "2026-08-23T10:16:28.615020-03:00",
     "complete": false,
-    "green": 0,
-    "pending": 2,
+    "green": 1,
+    "pending": 1,
     "red": 0,
     "statistics_fixtures_checked": 0
   },
@@ -17341,7 +17344,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1495532,
-          "fixture_status": "HT",
+          "fixture_status": "FT",
           "home_team": "Häcken W",
           "implied_probability": 0.7042,
           "kickoff_iso": "2026-08-23T08:00:00-03:00",
@@ -17354,16 +17357,18 @@
           "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 68%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 2.5",
-          "result_reason": "Partida ainda não encerrada (HT).",
+          "result_reason": "Total de gols: 5; linha over 2.5.",
+          "result_score": "4-1",
           "risk_flags": [],
           "score": 74.9,
           "selection": "Mais de 2.5 gols",
+          "settled_at": "2026-08-23T10:16:28.614860-03:00",
           "settlement_line": 2.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -17373,7 +17378,8 @@
       "quality_tier": "CONSENSUS",
       "reason": "Bilhete multimercado Betano com partidas exclusivas; gols, escanteios, cartões, chutes e resultado competem pelo melhor score.",
       "score": 74.9,
-      "status": "PENDING",
+      "settled_at": "2026-08-23T10:16:28.614998-03:00",
+      "status": "GREEN",
       "ticket_id": "B1",
       "total_odd": 1.57
     },
