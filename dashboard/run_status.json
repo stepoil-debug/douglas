@@ -1,20 +1,20 @@
 {
-  "api_requests": 24,
+  "api_requests": 25,
   "board_date": "2026-08-23",
   "board_mode": "TODAY",
   "board_status": "PARTIAL",
   "execution_bookmaker": "Betano",
   "execution_ready": false,
   "fixture_exclusivity": true,
-  "fixtures_analyzed": 17,
-  "fixtures_found": 735,
+  "fixtures_analyzed": 18,
+  "fixtures_found": 734,
   "market_analysis": true,
-  "message": "2/3 bilhetes multimercado independentes atingiram os filtros; jogos não são repetidos para completar a meta.",
+  "message": "1/3 bilhetes multimercado independentes atingiram os filtros; jogos não são repetidos para completar a meta.",
   "multi_market": true,
   "sport": "football",
   "status": "SUCCESS",
   "target_tickets": 3,
   "ticket_lock": false,
-  "tickets_ready": 2,
-  "updated_at": "2026-08-23T07:38:03.074845-03:00"
+  "tickets_ready": 1,
+  "updated_at": "2026-08-23T11:37:44.489142-03:00"
 }
