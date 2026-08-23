@@ -13204,7 +13204,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1492349,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Vitoria",
           "implied_probability": 0.6803,
           "kickoff_iso": "2026-08-23T16:00:00-03:00",
@@ -13214,14 +13214,16 @@
           "model_probability": 0.7439,
           "odd": 1.5,
           "rationale": "Vitória/empate do lado mais forte soma 90% no modelo; confiança calibrada pelo consenso real das casas.",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Dupla chance conferida no placar 0-2.",
+          "result_score": "0-2",
           "risk_flags": [
             "MODEL_MARKET_DISAGREEMENT"
           ],
           "score": 69.1,
           "selection": "Bahia ou empate",
+          "settled_at": "2026-08-23T18:51:18.104642-03:00",
           "signal_source": "MODEL+MARKET",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -13231,7 +13233,8 @@
       "quality_tier": "STRICT",
       "reason": "Bilhete multimercado Betano com partidas exclusivas; gols, escanteios, cartões, chutes e resultado competem pelo melhor score.",
       "score": 69.1,
-      "status": "PENDING",
+      "settled_at": "2026-08-23T18:51:18.104794-03:00",
+      "status": "GREEN",
       "ticket_id": "B1",
       "total_odd": 1.5
     },
@@ -13269,7 +13272,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1498755,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Temperley",
           "implied_probability": 0.6667,
           "kickoff_iso": "2026-08-23T16:00:00-03:00",
@@ -13279,14 +13282,16 @@
           "model_probability": 0.7353,
           "odd": 1.57,
           "rationale": "Vitória/empate do lado mais forte soma 90% no modelo; confiança calibrada pelo consenso real das casas.",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Dupla chance conferida no placar 2-1.",
+          "result_score": "2-1",
           "risk_flags": [
             "MODEL_MARKET_DISAGREEMENT"
           ],
           "score": 65.9,
           "selection": "Midland ou empate",
+          "settled_at": "2026-08-23T18:51:18.104806-03:00",
           "signal_source": "MODEL+MARKET",
-          "status": "PENDING"
+          "status": "RED"
         }
       ],
       "market_families": [
@@ -13296,7 +13301,8 @@
       "quality_tier": "STRICT",
       "reason": "Bilhete multimercado Betano com partidas exclusivas; gols, escanteios, cartões, chutes e resultado competem pelo melhor score.",
       "score": 65.9,
-      "status": "PENDING",
+      "settled_at": "2026-08-23T18:51:18.104823-03:00",
+      "status": "RED",
       "ticket_id": "B2",
       "total_odd": 1.57
     }
@@ -13352,7 +13358,7 @@
   "fixtures_ranked": 11,
   "fixtures_with_markets": 60,
   "history_summary": {
-    "accuracy": 0.7777777777777778,
+    "accuracy": 0.7586206896551724,
     "by_market": {
       "GOALS": {
         "accuracy": 0.875,
@@ -13361,19 +13367,19 @@
         "resolved": 16
       },
       "RESULT": {
-        "accuracy": 0.6363636363636364,
-        "green": 7,
-        "red": 4,
-        "resolved": 11
+        "accuracy": 0.6153846153846154,
+        "green": 8,
+        "red": 5,
+        "resolved": 13
       }
     },
-    "hits": 21,
-    "misses": 6,
-    "resolved": 27,
-    "ticket_accuracy": 0.5714285714285714,
-    "tickets_hit": 8,
-    "tickets_miss": 6,
-    "tickets_resolved": 14
+    "hits": 22,
+    "misses": 7,
+    "resolved": 29,
+    "ticket_accuracy": 0.5625,
+    "tickets_hit": 9,
+    "tickets_miss": 7,
+    "tickets_resolved": 16
   },
   "last_run_at": "2026-08-23T15:46:26.449276-03:00",
   "market_analysis": {
@@ -13416,11 +13422,11 @@
   "predictions_available": 11,
   "rejected": [],
   "settlement": {
-    "checked_at": "2026-08-23T17:54:06.359301-03:00",
-    "complete": false,
-    "green": 0,
-    "pending": 2,
-    "red": 0,
+    "checked_at": "2026-08-23T18:51:18.104832-03:00",
+    "complete": true,
+    "green": 1,
+    "pending": 0,
+    "red": 1,
     "statistics_fixtures_checked": 0
   },
   "sport": "football",
@@ -13461,7 +13467,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1492349,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Vitoria",
           "implied_probability": 0.6803,
           "kickoff_iso": "2026-08-23T16:00:00-03:00",
@@ -13471,14 +13477,16 @@
           "model_probability": 0.7439,
           "odd": 1.5,
           "rationale": "Vitória/empate do lado mais forte soma 90% no modelo; confiança calibrada pelo consenso real das casas.",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Dupla chance conferida no placar 0-2.",
+          "result_score": "0-2",
           "risk_flags": [
             "MODEL_MARKET_DISAGREEMENT"
           ],
           "score": 69.1,
           "selection": "Bahia ou empate",
+          "settled_at": "2026-08-23T18:51:18.104642-03:00",
           "signal_source": "MODEL+MARKET",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -13488,7 +13496,8 @@
       "quality_tier": "STRICT",
       "reason": "Bilhete multimercado Betano com partidas exclusivas; gols, escanteios, cartões, chutes e resultado competem pelo melhor score.",
       "score": 69.1,
-      "status": "PENDING",
+      "settled_at": "2026-08-23T18:51:18.104794-03:00",
+      "status": "GREEN",
       "ticket_id": "B1",
       "total_odd": 1.5
     },
@@ -13526,7 +13535,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1498755,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Temperley",
           "implied_probability": 0.6667,
           "kickoff_iso": "2026-08-23T16:00:00-03:00",
@@ -13536,14 +13545,16 @@
           "model_probability": 0.7353,
           "odd": 1.57,
           "rationale": "Vitória/empate do lado mais forte soma 90% no modelo; confiança calibrada pelo consenso real das casas.",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Dupla chance conferida no placar 2-1.",
+          "result_score": "2-1",
           "risk_flags": [
             "MODEL_MARKET_DISAGREEMENT"
           ],
           "score": 65.9,
           "selection": "Midland ou empate",
+          "settled_at": "2026-08-23T18:51:18.104806-03:00",
           "signal_source": "MODEL+MARKET",
-          "status": "PENDING"
+          "status": "RED"
         }
       ],
       "market_families": [
@@ -13553,7 +13564,8 @@
       "quality_tier": "STRICT",
       "reason": "Bilhete multimercado Betano com partidas exclusivas; gols, escanteios, cartões, chutes e resultado competem pelo melhor score.",
       "score": 65.9,
-      "status": "PENDING",
+      "settled_at": "2026-08-23T18:51:18.104823-03:00",
+      "status": "RED",
       "ticket_id": "B2",
       "total_odd": 1.57
     }
