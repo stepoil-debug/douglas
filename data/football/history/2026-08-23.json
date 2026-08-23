@@ -13204,7 +13204,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1492349,
-          "fixture_status": "HT",
+          "fixture_status": "2H",
           "home_team": "Vitoria",
           "implied_probability": 0.6803,
           "kickoff_iso": "2026-08-23T16:00:00-03:00",
@@ -13214,7 +13214,7 @@
           "model_probability": 0.7439,
           "odd": 1.5,
           "rationale": "Vitória/empate do lado mais forte soma 90% no modelo; confiança calibrada pelo consenso real das casas.",
-          "result_reason": "Partida ainda não encerrada (HT).",
+          "result_reason": "Partida ainda não encerrada (2H).",
           "risk_flags": [
             "MODEL_MARKET_DISAGREEMENT"
           ],
@@ -13269,7 +13269,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1498755,
-          "fixture_status": "1H",
+          "fixture_status": "2H",
           "home_team": "Temperley",
           "implied_probability": 0.6667,
           "kickoff_iso": "2026-08-23T16:00:00-03:00",
@@ -13279,7 +13279,7 @@
           "model_probability": 0.7353,
           "odd": 1.57,
           "rationale": "Vitória/empate do lado mais forte soma 90% no modelo; confiança calibrada pelo consenso real das casas.",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Partida ainda não encerrada (2H).",
           "risk_flags": [
             "MODEL_MARKET_DISAGREEMENT"
           ],
@@ -13416,7 +13416,7 @@
   "predictions_available": 11,
   "rejected": [],
   "settlement": {
-    "checked_at": "2026-08-23T16:50:12.231626-03:00",
+    "checked_at": "2026-08-23T17:54:06.359301-03:00",
     "complete": false,
     "green": 0,
     "pending": 2,
@@ -13461,7 +13461,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1492349,
-          "fixture_status": "HT",
+          "fixture_status": "2H",
           "home_team": "Vitoria",
           "implied_probability": 0.6803,
           "kickoff_iso": "2026-08-23T16:00:00-03:00",
@@ -13471,7 +13471,7 @@
           "model_probability": 0.7439,
           "odd": 1.5,
           "rationale": "Vitória/empate do lado mais forte soma 90% no modelo; confiança calibrada pelo consenso real das casas.",
-          "result_reason": "Partida ainda não encerrada (HT).",
+          "result_reason": "Partida ainda não encerrada (2H).",
           "risk_flags": [
             "MODEL_MARKET_DISAGREEMENT"
           ],
@@ -13526,7 +13526,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1498755,
-          "fixture_status": "1H",
+          "fixture_status": "2H",
           "home_team": "Temperley",
           "implied_probability": 0.6667,
           "kickoff_iso": "2026-08-23T16:00:00-03:00",
@@ -13536,7 +13536,7 @@
           "model_probability": 0.7353,
           "odd": 1.57,
           "rationale": "Vitória/empate do lado mais forte soma 90% no modelo; confiança calibrada pelo consenso real das casas.",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Partida ainda não encerrada (2H).",
           "risk_flags": [
             "MODEL_MARKET_DISAGREEMENT"
           ],
