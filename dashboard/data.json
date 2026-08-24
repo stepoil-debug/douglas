@@ -17219,10 +17219,10 @@
     "hits": 21,
     "misses": 6,
     "resolved": 27,
-    "ticket_accuracy": 0.5714285714285714,
-    "tickets_hit": 8,
+    "ticket_accuracy": 0.6,
+    "tickets_hit": 9,
     "tickets_miss": 6,
-    "tickets_resolved": 14
+    "tickets_resolved": 15
   },
   "last_run_at": "2026-08-24T07:51:54.664853-03:00",
   "market_analysis": {
@@ -17265,7 +17265,7 @@
   "predictions_available": 18,
   "rejected": [],
   "settlement": {
-    "checked_at": "2026-08-24T10:08:15.858584-03:00",
+    "checked_at": "2026-08-24T10:33:07.792691-03:00",
     "complete": false,
     "green": 0,
     "pending": 3,
