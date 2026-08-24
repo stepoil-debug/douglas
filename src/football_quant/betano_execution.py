@@ -15,6 +15,8 @@ MIN_ODD = 1.50
 MAX_ODD = 2.00
 TARGET = 3
 TARGET_CENTER = 1.72
+MIN_KICKOFF_GAP_SECONDS = 2 * 60 * 60
+MAX_LEGS_PER_FIXTURE_IN_PAIR_POOL = 5
 FAMILY_BONUS = {"GOALS": 3.5, "CORNERS": 3.0, "CARDS": 2.0, "SHOTS": 1.5, "RESULT": 0.0}
 
 
@@ -67,6 +69,53 @@ def _family(leg: dict[str, Any]) -> str:
     return "RESULT"
 
 
+def _kickoff_timestamp(leg: dict[str, Any]) -> float | None:
+    raw = str(leg.get("kickoff_iso") or "").strip()
+    if not raw:
+        return None
+    try:
+        dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.timestamp()
+
+
+def _unique_fixture_times(legs: list[dict[str, Any]]) -> list[float] | None:
+    by_fixture: dict[Any, float] = {}
+    for leg in legs:
+        fixture_id = leg.get("fixture_id")
+        if fixture_id is None:
+            return None
+        ts = _kickoff_timestamp(leg)
+        if ts is None:
+            return None
+        previous = by_fixture.get(fixture_id)
+        if previous is not None and abs(previous - ts) > 60:
+            return None
+        by_fixture[fixture_id] = ts
+    return list(by_fixture.values())
+
+
+def _times_are_spaced(times: list[float], extra_times: list[float] | None = None) -> bool:
+    values = list(times) + list(extra_times or [])
+    for left, right in itertools.combinations(values, 2):
+        if abs(left - right) < MIN_KICKOFF_GAP_SECONDS:
+            return False
+    return True
+
+
+def _legs_have_required_spacing(legs: list[dict[str, Any]], used_times: list[float] | None = None) -> bool:
+    times = _unique_fixture_times(legs)
+    return times is not None and _times_are_spaced(times, used_times)
+
+
+def _portfolio_has_required_spacing(tickets: list[dict[str, Any]]) -> bool:
+    all_legs = [leg for ticket in tickets for leg in (ticket.get("legs") or [])]
+    return bool(all_legs) and _legs_have_required_spacing(all_legs)
+
+
 def _quality(legs: list[dict[str, Any]], total: float) -> tuple[float, str]:
     probabilities = [float(leg.get("model_probability") or 0) for leg in legs]
     scores = [float(leg.get("score") or 0) for leg in legs]
@@ -100,7 +149,7 @@ def _ticket(ticket_id: int, legs: list[dict[str, Any]], total: float, tier: str)
         "market_families": families,
         "legs": legs,
         "status": "PENDING",
-        "reason": "Bilhete multimercado Betano com partidas exclusivas; gols, escanteios, cartões, chutes e resultado competem pelo melhor score.",
+        "reason": "Bilhete multimercado Betano com partidas exclusivas e intervalo mínimo de 2 horas entre todos os jogos selecionados no board.",
         "execution": {
             "ready": True,
             "bookmaker": "Betano",
@@ -135,6 +184,19 @@ def _portfolio_has_unique_fixtures(tickets: list[dict[str, Any]]) -> bool:
     return True
 
 
+def _pair_pool(legs: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    pool: list[dict[str, Any]] = []
+    counts: dict[Any, int] = {}
+    for leg in legs:
+        fixture_id = leg.get("fixture_id")
+        current = counts.get(fixture_id, 0)
+        if current >= MAX_LEGS_PER_FIXTURE_IN_PAIR_POOL:
+            continue
+        counts[fixture_id] = current + 1
+        pool.append(leg)
+    return pool
+
+
 def build_betano_tickets(payload: dict[str, Any]) -> list[dict[str, Any]]:
     legs: list[dict[str, Any]] = []
     seen_legs: set[tuple[Any, str, str]] = set()
@@ -162,8 +224,11 @@ def build_betano_tickets(payload: dict[str, Any]) -> list[dict[str, Any]]:
             rating, tier = _quality([leg], total)
             candidates.append((rating, [leg], total, tier))
 
-    for left, right in itertools.combinations(legs[:48], 2):
+    pair_pool = _pair_pool(legs)
+    for left, right in itertools.combinations(pair_pool, 2):
         if left.get("fixture_id") == right.get("fixture_id"):
+            continue
+        if not _legs_have_required_spacing([left, right]):
             continue
         min_probability = min(float(left.get("model_probability") or 0), float(right.get("model_probability") or 0))
         avg_score = (float(left.get("score") or 0) + float(right.get("score") or 0)) / 2
@@ -179,6 +244,7 @@ def build_betano_tickets(payload: dict[str, Any]) -> list[dict[str, Any]]:
     selected: list[dict[str, Any]] = []
     seen: set[tuple[tuple[Any, str, str], ...]] = set()
     used_fixtures: set[Any] = set()
+    used_kickoff_times: list[float] = []
 
     for _, candidate_legs, total, tier in candidates:
         sig = _signature(candidate_legs)
@@ -189,13 +255,21 @@ def build_betano_tickets(payload: dict[str, Any]) -> list[dict[str, Any]]:
             continue
         if fixtures & used_fixtures:
             continue
+        if not _legs_have_required_spacing(candidate_legs, used_kickoff_times):
+            continue
+        candidate_times = _unique_fixture_times(candidate_legs)
+        if candidate_times is None:
+            continue
         selected.append(_ticket(len(selected) + 1, candidate_legs, total, tier))
         seen.add(sig)
         used_fixtures.update(fixtures)
+        used_kickoff_times.extend(candidate_times)
         if len(selected) >= TARGET:
             break
 
     assert _portfolio_has_unique_fixtures(selected), "Betano ticket portfolio contains repeated fixture"
+    if selected:
+        assert _portfolio_has_required_spacing(selected), "Betano ticket portfolio violates 2h kickoff spacing"
     return selected
 
 
@@ -205,12 +279,14 @@ def main() -> int:
     payload = _load(data_path)
     lock = payload.get("ticket_lock") or {}
     existing = payload.get("tickets") or []
-    existing_valid = len(existing) >= TARGET and _portfolio_has_unique_fixtures(existing)
+    existing_unique = len(existing) >= TARGET and _portfolio_has_unique_fixtures(existing)
 
-    if lock.get("locked") and existing_valid:
+    # Existing official boards remain immutable. The new 2h rule applies when
+    # a new portfolio is generated; it never rewrites an already locked board.
+    if lock.get("locked") and existing_unique:
         tickets = existing
     else:
-        if lock.get("locked") and not existing_valid:
+        if lock.get("locked") and not existing_unique:
             payload["ticket_lock"] = {
                 "locked": False,
                 "invalidated_at": datetime.now(timezone.utc).isoformat(),
@@ -232,9 +308,18 @@ def main() -> int:
         "valid": _portfolio_has_unique_fixtures(tickets),
         "unique_fixtures": len({leg.get("fixture_id") for ticket in tickets for leg in (ticket.get("legs") or [])}),
     }
+    spacing_valid = _portfolio_has_required_spacing(tickets) if tickets else True
+    payload["kickoff_spacing"] = {
+        "enabled": True,
+        "minimum_minutes": 120,
+        "rule": "Every selected fixture in a newly generated daily portfolio must start at least 120 minutes apart from every other selected fixture.",
+        "valid": spacing_valid,
+        "applies_to_new_boards": True,
+        "current_board_preserved_if_already_locked": True,
+    }
     payload["board_status"] = "READY" if len(tickets) == TARGET else ("PARTIAL" if tickets else "NO_TICKETS")
     payload["strict_tickets"] = sum(1 for ticket in tickets if ticket.get("quality_tier") == "STRICT")
-    payload["model_version"] = "football-multimarket-betano-v4-exclusive"
+    payload["model_version"] = "football-multimarket-betano-v5-exclusive-2h"
     market_analysis = payload.setdefault("market_analysis", {})
     market_analysis["execution_bookmaker"] = "Betano"
     market_analysis["selected_families"] = {
@@ -247,7 +332,7 @@ def main() -> int:
         payload["ticket_lock"] = {
             "locked": True,
             "locked_at": datetime.now(timezone.utc).isoformat(),
-            "reason": "3 bilhetes oficiais multimercado congelados; fixtures exclusivos entre B1/B2/B3 para auditoria e settlement.",
+            "reason": "3 bilhetes oficiais multimercado congelados; fixtures exclusivos e espaçados por no mínimo 2 horas para auditoria e settlement.",
         }
 
     _dump(data_path, payload)
@@ -262,20 +347,22 @@ def main() -> int:
     status["execution_bookmaker"] = "Betano"
     status["execution_ready"] = len(tickets) == TARGET
     status["fixture_exclusivity"] = bool(payload["fixture_exclusivity"]["valid"])
+    status["kickoff_spacing_minutes"] = 120
+    status["kickoff_spacing_valid"] = bool(spacing_valid)
     status["multi_market"] = True
     status["ticket_lock"] = bool((payload.get("ticket_lock") or {}).get("locked"))
     if len(tickets) == TARGET:
         status["status"] = "SUCCESS"
-        status["message"] = "3 bilhetes multimercado Betano publicados; nenhum jogo se repete entre B1, B2 e B3."
+        status["message"] = "3 bilhetes multimercado Betano publicados; fixtures exclusivos e, para novos boards, jogos separados por no mínimo 2 horas."
     elif tickets:
-        status["message"] = f"{len(tickets)}/3 bilhetes multimercado independentes atingiram os filtros; jogos não são repetidos para completar a meta."
+        status["message"] = f"{len(tickets)}/3 bilhetes atingiram qualidade, exclusividade, odd e espaçamento mínimo de 2 horas; o motor não força a meta."
     else:
-        status["message"] = "Nenhuma combinação multimercado independente na Betano atingiu os filtros e a faixa de odd."
+        status["message"] = "Nenhuma combinação independente atingiu os filtros, a faixa de odd e o espaçamento mínimo de 2 horas."
     _dump(status_path, status)
 
     print(
         f"Betano multi-market tickets: {len(tickets)}/{TARGET}; "
-        f"exclusive={status['fixture_exclusivity']}; locked={status['ticket_lock']}"
+        f"exclusive={status['fixture_exclusivity']}; spacing2h={status['kickoff_spacing_valid']}; locked={status['ticket_lock']}"
     )
     return 0
 
