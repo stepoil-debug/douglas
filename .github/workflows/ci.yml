@@ -60,16 +60,22 @@ jobs:
           assert len(fixture_ids) == len(set(fixture_ids)), tickets
           print('3 executable tickets with exclusive fixtures OK')
           PY
-      - name: Betano portfolio fixture exclusivity test
+      - name: Betano portfolio fixture exclusivity and 2h spacing test
         env:
           PYTHONPATH: .
         run: |
           python - <<'PY'
-          from src.football_quant.betano_execution import build_betano_tickets, _portfolio_has_unique_fixtures
+          from datetime import datetime
+          from src.football_quant.betano_execution import (
+              build_betano_tickets,
+              _portfolio_has_unique_fixtures,
+              _portfolio_has_required_spacing,
+          )
 
-          def leg(fid, odd, probability, score, selection):
+          def leg(fid, hour, odd, probability, score, selection):
               return {
                   'fixture_id': fid,
+                  'kickoff_iso': f'2026-08-25T{hour:02d}:00:00-03:00',
                   'market': 'Dupla chance',
                   'selection': selection,
                   'odd': odd,
@@ -80,22 +86,32 @@ jobs:
               }
 
           payload = {'all_matches': []}
-          for fid, odd, probability, score in [
-              (1, 1.24, .86, 88), (2, 1.28, .84, 86),
-              (3, 1.25, .83, 85), (4, 1.29, .82, 84),
-              (5, 1.26, .81, 83), (6, 1.30, .80, 82),
-              (7, 1.27, .79, 81), (8, 1.31, .78, 80),
+          for fid, hour, odd, probability, score in [
+              (1, 8, 1.24, .86, 88), (2, 10, 1.28, .84, 86),
+              (3, 12, 1.25, .83, 85), (4, 14, 1.29, .82, 84),
+              (5, 16, 1.26, .81, 83), (6, 18, 1.30, .80, 82),
+              (7, 20, 1.27, .79, 81), (8, 22, 1.31, .78, 80),
           ]:
               payload['all_matches'].append({
-                  'eligible_legs': [leg(fid, odd, probability, score, f'Time {fid} ou empate')]
+                  'eligible_legs': [leg(fid, hour, odd, probability, score, f'Time {fid} ou empate')]
               })
 
           tickets = build_betano_tickets(payload)
           assert len(tickets) == 3, tickets
           assert _portfolio_has_unique_fixtures(tickets), tickets
+          assert _portfolio_has_required_spacing(tickets), tickets
           ids = [leg['fixture_id'] for ticket in tickets for leg in ticket['legs']]
           assert len(ids) == len(set(ids)), tickets
-          print('Betano B1/B2/B3 use exclusive fixtures OK')
+          times = sorted(datetime.fromisoformat(leg['kickoff_iso']).timestamp() for ticket in tickets for leg in ticket['legs'])
+          assert all((b - a) >= 7200 for a, b in zip(times, times[1:])), tickets
+
+          close_payload = {'all_matches': [
+              {'eligible_legs': [leg(20, 12, 1.24, .86, 88, 'A')]},
+              {'eligible_legs': [dict(leg(21, 13, 1.28, .84, 86, 'B'), kickoff_iso='2026-08-25T13:00:00-03:00')]},
+          ]}
+          close_tickets = build_betano_tickets(close_payload)
+          assert all(len(t['legs']) == 1 for t in close_tickets), close_tickets
+          print('Betano portfolio exclusivity + minimum 2h kickoff spacing OK')
           PY
       - name: Multi-market generation smoke test
         env:
