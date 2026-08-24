@@ -10,6 +10,7 @@ on:
     branches: [main]
     paths:
       - 'src/football_quant/settlement.py'
+      - 'src/football_quant/void_reconciliation.py'
       - '.github/workflows/settle-football.yml'
 
 permissions:
@@ -57,6 +58,9 @@ jobs:
 
       - name: Verify pending tickets
         run: python -m src.football_quant.settlement --max-dates 7
+
+      - name: Reconcile postponed and cancelled past-day legs
+        run: python -m src.football_quant.void_reconciliation
 
       - name: Persist results and bankroll simulation
         shell: bash
