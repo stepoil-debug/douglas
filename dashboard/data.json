@@ -17224,6 +17224,14 @@
     "tickets_miss": 6,
     "tickets_resolved": 15
   },
+  "kickoff_spacing": {
+    "applies_to_new_boards": true,
+    "current_board_preserved_if_already_locked": true,
+    "enabled": true,
+    "minimum_minutes": 120,
+    "rule": "Every selected fixture in a newly generated daily portfolio must start at least 120 minutes apart from every other selected fixture.",
+    "valid": false
+  },
   "last_run_at": "2026-08-24T07:51:54.664853-03:00",
   "market_analysis": {
     "correlation_guard": "same fixture cannot be repeated across tickets",
@@ -17260,12 +17268,12 @@
     "settlement": "automatic for supported full-time totals"
   },
   "matches_with_odds": 60,
-  "model_version": "football-multimarket-betano-v4-exclusive",
+  "model_version": "football-multimarket-betano-v5-exclusive-2h",
   "operational_date": "2026-08-24",
   "predictions_available": 18,
   "rejected": [],
   "settlement": {
-    "checked_at": "2026-08-24T10:33:07.792691-03:00",
+    "checked_at": "2026-08-24T11:15:28.450697-03:00",
     "complete": false,
     "green": 0,
     "pending": 3,
