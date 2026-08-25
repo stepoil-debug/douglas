@@ -15,963 +15,6 @@
   },
   "all_matches": [
     {
-      "advice": "Winner : Alfreton Town",
-      "away_probability": 0.1,
-      "away_team": "Hyde United",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1596397,
-      "home_probability": 0.45,
-      "home_team": "Alfreton Town",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Alfreton Town x Hyde United",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=100%",
-              "recent_5plus=0%"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4 gols"
-          }
-        ],
-        "rejected_legs": 12
-      },
-      "recent_form": {
-        "avg_total_goals": 2.25,
-        "five_plus_rate": 0.0,
-        "max_total_goals": 4,
-        "over_1_5_rate": 0.6667,
-        "over_2_5_rate": 0.5833,
-        "sample": 12,
-        "under_2_5_rate": 0.4167,
-        "under_3_5_rate": 0.9167,
-        "under_4_5_rate": 1.0
-      },
-      "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Winner : Ashton United",
-      "away_probability": 0.1,
-      "away_team": "Ilkeston Town",
-      "best_market": {
-        "away_team": "Ilkeston Town",
-        "bookmaker": "Betano",
-        "bookmaker_count": 6,
-        "bookmaker_quotes": {
-          "1xBet": 1.15,
-          "BetVictor": 1.14,
-          "Betano": 1.2,
-          "Betfair": 1.17,
-          "Marathonbet": 1.15,
-          "Superbet": 1.16
-        },
-        "consensus_odd": 1.16,
-        "country": "England",
-        "edge": -0.026,
-        "fixture_id": 1596398,
-        "home_team": "Ashton United",
-        "implied_probability": 0.8658,
-        "individual_score_band": "STRONG_84_TO_87_9",
-        "kickoff_iso": "2026-08-25T15:45:00-03:00",
-        "league": "Non League Premier - Northern",
-        "market": "Total de gols",
-        "market_family": "GOALS",
-        "match": "Ashton United x Ilkeston Town",
-        "model_probability": 0.8398,
-        "odd": 1.2,
-        "pre_guard_score": 84.3,
-        "quality_guard": {
-          "accepted": true,
-          "elite_score": 88.0,
-          "min_probability": 0.8,
-          "min_score": 84.0,
-          "raw_score_floor": 84.0,
-          "reasons": [
-            "selection_history=100%/6",
-            "family_history=78%/23",
-            "source_history=77%/22",
-            "recent_over15=75%"
-          ],
-          "recent_sample": 12
-        },
-        "quality_score": 91.3,
-        "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 84%; seleção full-time com regra automática de conferência.",
-        "raw_market": "Goals Over/Under",
-        "raw_selection": "Over 1.5",
-        "risk_flags": [],
-        "score": 84.3,
-        "selection": "Mais de 1.5 gols",
-        "settlement_line": 1.5,
-        "settlement_metric": "goals",
-        "settlement_operator": "over",
-        "settlement_scope": "match",
-        "signal_source": "MULTI_MARKET_CONSENSUS"
-      },
-      "country": "England",
-      "decision": "USABLE",
-      "draw_probability": 0.45,
-      "eligible_legs": [
-        {
-          "away_team": "Ilkeston Town",
-          "bookmaker": "Betano",
-          "bookmaker_count": 6,
-          "bookmaker_quotes": {
-            "1xBet": 1.15,
-            "BetVictor": 1.14,
-            "Betano": 1.2,
-            "Betfair": 1.17,
-            "Marathonbet": 1.15,
-            "Superbet": 1.16
-          },
-          "consensus_odd": 1.16,
-          "country": "England",
-          "edge": -0.026,
-          "fixture_id": 1596398,
-          "home_team": "Ashton United",
-          "implied_probability": 0.8658,
-          "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T15:45:00-03:00",
-          "league": "Non League Premier - Northern",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Ashton United x Ilkeston Town",
-          "model_probability": 0.8398,
-          "odd": 1.2,
-          "pre_guard_score": 84.3,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.8,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "selection_history=100%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "recent_over15=75%"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 91.3,
-          "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 84%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Over 1.5",
-          "risk_flags": [],
-          "score": 84.3,
-          "selection": "Mais de 1.5 gols",
-          "settlement_line": 1.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        }
-      ],
-      "fixture_id": 1596398,
-      "home_probability": 0.45,
-      "home_team": "Ashton United",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 1,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Ashton United x Ilkeston Town",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 1,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "recent_under45=83%",
-              "recent_5plus=17%",
-              "recent_under45_not_stable",
-              "probability_below_86%"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Dupla chance",
-            "reasons": [
-              "family_history=64%/11",
-              "source_history=80%/5",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Home/Draw"
-          }
-        ],
-        "rejected_legs": 10
-      },
-      "recent_form": {
-        "avg_total_goals": 2.583,
-        "five_plus_rate": 0.1667,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.75,
-        "over_2_5_rate": 0.5,
-        "sample": 12,
-        "under_2_5_rate": 0.5,
-        "under_3_5_rate": 0.8333,
-        "under_4_5_rate": 0.8333
-      },
-      "score": 84.3,
-      "under_over": ""
-    },
-    {
-      "advice": "Combo Winner : Bury and +1.5 goals",
-      "away_probability": 0.1,
-      "away_team": "Lancaster City",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1596400,
-      "home_probability": 0.45,
-      "home_team": "Bury",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Bury x Lancaster City",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5"
-            ],
-            "selection": "Menos de 5.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=75%",
-              "recent_5plus=25%",
-              "recent_under45_not_stable",
-              "score_below_85"
-            ],
-            "selection": "Menos de 4.5 gols"
-          }
-        ],
-        "rejected_legs": 13
-      },
-      "recent_form": {
-        "avg_total_goals": 3.083,
-        "five_plus_rate": 0.25,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.6667,
-        "over_2_5_rate": 0.6667,
-        "sample": 12,
-        "under_2_5_rate": 0.3333,
-        "under_3_5_rate": 0.4167,
-        "under_4_5_rate": 0.75
-      },
-      "score": 0,
-      "under_over": "+1.5"
-    },
-    {
-      "advice": "Winner : Cleethorpes Town",
-      "away_probability": 0.1,
-      "away_team": "Whitby Town",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1596401,
-      "home_probability": 0.45,
-      "home_team": "Cleethorpes Town",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Cleethorpes Town x Whitby Town",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=83%",
-              "recent_5plus=17%",
-              "recent_under45_not_stable"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Dupla chance",
-            "reasons": [
-              "family_history=64%/11",
-              "source_history=80%/5",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Home/Draw"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 1.25 gols"
-          }
-        ],
-        "rejected_legs": 12
-      },
-      "recent_form": {
-        "avg_total_goals": 3.083,
-        "five_plus_rate": 0.1667,
-        "max_total_goals": 5,
-        "over_1_5_rate": 1.0,
-        "over_2_5_rate": 0.5833,
-        "sample": 12,
-        "under_2_5_rate": 0.4167,
-        "under_3_5_rate": 0.6667,
-        "under_4_5_rate": 0.8333
-      },
-      "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Winner : Gainsborough Trinity",
-      "away_probability": 0.5,
-      "away_team": "Gainsborough Trinity",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.5,
-      "eligible_legs": [],
-      "fixture_id": 1596403,
-      "home_probability": 0.0,
-      "home_team": "Quorn",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Quorn x Gainsborough Trinity",
-      "prediction_available": true,
-      "prediction_risk_flags": [
-        "EXTREME_PROBABILITY",
-        "COARSE_PROBABILITY"
-      ],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=83%",
-              "recent_5plus=17%",
-              "recent_under45_not_stable"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4 gols"
-          }
-        ],
-        "rejected_legs": 12
-      },
-      "recent_form": {
-        "avg_total_goals": 2.583,
-        "five_plus_rate": 0.1667,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.75,
-        "over_2_5_rate": 0.5,
-        "sample": 12,
-        "under_2_5_rate": 0.5,
-        "under_3_5_rate": 0.75,
-        "under_4_5_rate": 0.8333
-      },
-      "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Combo Double chance : Redcar Athletic or draw and -3.5 goals",
-      "away_probability": 0.3,
-      "away_team": "AFC Emley",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.35,
-      "eligible_legs": [],
-      "fixture_id": 1596404,
-      "home_probability": 0.35,
-      "home_team": "Redcar Athletic",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Redcar Athletic x AFC Emley",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5"
-            ],
-            "selection": "Menos de 5.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4.5 gols"
-          }
-        ],
-        "rejected_legs": 12
-      },
-      "recent_form": {
-        "avg_total_goals": 2.182,
-        "five_plus_rate": 0.0909,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.6364,
-        "over_2_5_rate": 0.4545,
-        "sample": 11,
-        "under_2_5_rate": 0.5455,
-        "under_3_5_rate": 0.8182,
-        "under_4_5_rate": 0.9091
-      },
-      "score": 0,
-      "under_over": "-3.5"
-    },
-    {
-      "advice": "Winner : Warrington Town",
-      "away_probability": 0.1,
-      "away_team": "Curzon Ashton",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1596405,
-      "home_probability": 0.45,
-      "home_team": "Warrington Town",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Warrington Town x Curzon Ashton",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=83%",
-              "recent_5plus=17%",
-              "recent_under45_not_stable"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 1.25 gols"
-          }
-        ],
-        "rejected_legs": 13
-      },
-      "recent_form": {
-        "avg_total_goals": 3.0,
-        "five_plus_rate": 0.1667,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.8333,
-        "over_2_5_rate": 0.75,
-        "sample": 12,
-        "under_2_5_rate": 0.25,
-        "under_3_5_rate": 0.75,
-        "under_4_5_rate": 0.8333
-      },
-      "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Double chance : Bamber Bridge or draw",
-      "away_probability": 0.1,
-      "away_team": "United of Manchester",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1596399,
-      "home_probability": 0.45,
-      "home_team": "Bamber Bridge",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Bamber Bridge x United of Manchester",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5"
-            ],
-            "selection": "Menos de 5.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=83%",
-              "recent_5plus=17%",
-              "recent_under45_not_stable",
-              "score_below_85"
-            ],
-            "selection": "Menos de 4.5 gols"
-          }
-        ],
-        "rejected_legs": 14
-      },
-      "recent_form": {
-        "avg_total_goals": 3.083,
-        "five_plus_rate": 0.1667,
-        "max_total_goals": 7,
-        "over_1_5_rate": 0.8333,
-        "over_2_5_rate": 0.5833,
-        "sample": 12,
-        "under_2_5_rate": 0.4167,
-        "under_3_5_rate": 0.6667,
-        "under_4_5_rate": 0.8333
-      },
-      "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Winner : Guiseley AFC",
-      "away_probability": 0.1,
-      "away_team": "Stockton Town",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1596402,
-      "home_probability": 0.45,
-      "home_team": "Guiseley AFC",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Guiseley AFC x Stockton Town",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=83%",
-              "recent_5plus=17%",
-              "recent_under45_not_stable"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 1.25 gols"
-          }
-        ],
-        "rejected_legs": 14
-      },
-      "recent_form": {
-        "avg_total_goals": 2.833,
-        "five_plus_rate": 0.1667,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.8333,
-        "over_2_5_rate": 0.5,
-        "sample": 12,
-        "under_2_5_rate": 0.5,
-        "under_3_5_rate": 0.6667,
-        "under_4_5_rate": 0.8333
-      },
-      "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Combo Double chance : draw or Rylands and -3.5 goals",
-      "away_probability": 0.45,
-      "away_team": "Rylands",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1596406,
-      "home_probability": 0.1,
-      "home_team": "Workington",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Workington x Rylands",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=83%",
-              "recent_5plus=17%",
-              "recent_under45_not_stable"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 1.25 gols"
-          }
-        ],
-        "rejected_legs": 14
-      },
-      "recent_form": {
-        "avg_total_goals": 2.5,
-        "five_plus_rate": 0.1667,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.6667,
-        "over_2_5_rate": 0.4167,
-        "sample": 12,
-        "under_2_5_rate": 0.5833,
-        "under_3_5_rate": 0.75,
-        "under_4_5_rate": 0.8333
-      },
-      "score": 0,
-      "under_over": "-3.5"
-    },
-    {
       "advice": "Combo Double chance : draw or Real Betis and -2.5 goals",
       "away_probability": 0.45,
       "away_team": "Real Betis",
@@ -981,31 +24,31 @@
         "bookmaker_count": 10,
         "bookmaker_quotes": {
           "10Bet": 1.06,
-          "1xBet": 1.01,
+          "1xBet": 1.02,
           "888Sport": 1.06,
           "Bet365": 1.07,
-          "BetVictor": 1.04,
-          "Betano": 1.08,
-          "Betfair": 1.06,
-          "Marathonbet": 1.01,
+          "BetVictor": 1.05,
+          "Betano": 1.09,
+          "Betfair": 1.03,
+          "Marathonbet": 1.02,
           "Superbet": 1.07,
-          "Unibet": 1.04
+          "Unibet": 1.05
         },
-        "consensus_odd": 1.06,
+        "consensus_odd": 1.05,
         "country": "Spain",
-        "edge": -0.0283,
+        "edge": -0.0284,
         "fixture_id": 1570342,
         "home_team": "Valencia",
-        "implied_probability": 0.9434,
+        "implied_probability": 0.9479,
         "individual_score_band": "ELITE_88_PLUS",
         "kickoff_iso": "2026-08-25T16:00:00-03:00",
         "league": "La Liga",
         "market": "Total de gols",
         "market_family": "GOALS",
         "match": "Valencia x Real Betis",
-        "model_probability": 0.9151,
-        "odd": 1.08,
-        "pre_guard_score": 91.1,
+        "model_probability": 0.9194,
+        "odd": 1.09,
+        "pre_guard_score": 91.4,
         "quality_guard": {
           "accepted": true,
           "elite_score": 88.0,
@@ -1013,17 +56,17 @@
           "min_score": 84.0,
           "raw_score_floor": 84.0,
           "reasons": [
-            "family_history=78%/23",
-            "source_history=77%/22"
+            "family_history=79%/24",
+            "source_history=78%/23"
           ],
           "recent_sample": 12
         },
-        "quality_score": 92.6,
+        "quality_score": 93.9,
         "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
         "raw_market": "Goals Over/Under",
         "raw_selection": "Over 0.5",
         "risk_flags": [],
-        "score": 91.1,
+        "score": 91.4,
         "selection": "Mais de 0.5 gols",
         "settlement_line": 0.5,
         "settlement_metric": "goals",
@@ -1041,31 +84,31 @@
           "bookmaker_count": 10,
           "bookmaker_quotes": {
             "10Bet": 1.06,
-            "1xBet": 1.01,
+            "1xBet": 1.02,
             "888Sport": 1.06,
             "Bet365": 1.07,
-            "BetVictor": 1.04,
-            "Betano": 1.08,
-            "Betfair": 1.06,
-            "Marathonbet": 1.01,
+            "BetVictor": 1.05,
+            "Betano": 1.09,
+            "Betfair": 1.03,
+            "Marathonbet": 1.02,
             "Superbet": 1.07,
-            "Unibet": 1.04
+            "Unibet": 1.05
           },
-          "consensus_odd": 1.06,
+          "consensus_odd": 1.05,
           "country": "Spain",
-          "edge": -0.0283,
+          "edge": -0.0284,
           "fixture_id": 1570342,
           "home_team": "Valencia",
-          "implied_probability": 0.9434,
+          "implied_probability": 0.9479,
           "individual_score_band": "ELITE_88_PLUS",
           "kickoff_iso": "2026-08-25T16:00:00-03:00",
           "league": "La Liga",
           "market": "Total de gols",
           "market_family": "GOALS",
           "match": "Valencia x Real Betis",
-          "model_probability": 0.9151,
-          "odd": 1.08,
-          "pre_guard_score": 91.1,
+          "model_probability": 0.9194,
+          "odd": 1.09,
+          "pre_guard_score": 91.4,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -1073,17 +116,17 @@
             "min_score": 84.0,
             "raw_score_floor": 84.0,
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22"
+              "family_history=79%/24",
+              "source_history=78%/23"
             ],
             "recent_sample": 12
           },
-          "quality_score": 92.6,
+          "quality_score": 93.9,
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
           "risk_flags": [],
-          "score": 91.1,
+          "score": 91.4,
           "selection": "Mais de 0.5 gols",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
@@ -1096,53 +139,53 @@
           "bookmaker": "Betano",
           "bookmaker_count": 10,
           "bookmaker_quotes": {
-            "10Bet": 1.07,
-            "1xBet": 1.04,
+            "10Bet": 1.08,
+            "1xBet": 1.03,
             "888Sport": 1.08,
             "Bet365": 1.08,
-            "BetVictor": 1.06,
+            "BetVictor": 1.05,
             "Betano": 1.1,
-            "Betfair": 1.07,
-            "Marathonbet": 1.04,
-            "Superbet": 1.09,
-            "Unibet": 1.09
+            "Betfair": 1.05,
+            "Marathonbet": 1.03,
+            "Superbet": 1.08,
+            "Unibet": 1.06
           },
           "consensus_odd": 1.07,
           "country": "Spain",
-          "edge": -0.0279,
+          "edge": -0.028,
           "fixture_id": 1570342,
           "home_team": "Valencia",
-          "implied_probability": 0.9302,
+          "implied_probability": 0.9346,
           "individual_score_band": "ELITE_88_PLUS",
           "kickoff_iso": "2026-08-25T16:00:00-03:00",
           "league": "La Liga",
           "market": "Total de gols",
           "market_family": "GOALS",
           "match": "Valencia x Real Betis",
-          "model_probability": 0.9023,
+          "model_probability": 0.9065,
           "odd": 1.1,
-          "pre_guard_score": 90.3,
+          "pre_guard_score": 90.6,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
-            "min_probability": 0.86,
-            "min_score": 85.0,
+            "min_probability": 0.84,
+            "min_score": 84.0,
             "raw_score_floor": 84.0,
             "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
+              "selection_history=71%/7",
+              "family_history=79%/24",
+              "source_history=78%/23",
               "recent_under45=100%",
               "recent_5plus=0%"
             ],
             "recent_sample": 12
           },
-          "quality_score": 88.3,
-          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
+          "quality_score": 94.6,
+          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 91%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 4.5",
           "risk_flags": [],
-          "score": 90.3,
+          "score": 90.6,
           "selection": "Menos de 4.5 gols",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
@@ -1183,11 +226,11 @@
             "min_score": 84.0,
             "raw_score_floor": 84.0,
             "reasons": [
-              "source_history=77%/22"
+              "source_history=78%/23"
             ],
             "recent_sample": 12
           },
-          "quality_score": 87.9,
+          "quality_score": 88.9,
           "rationale": "Mercado corners confirmado por 5 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
           "raw_market": "Corners Over Under",
           "raw_selection": "Over 5.5",
@@ -1207,26 +250,26 @@
           "bookmaker_quotes": {
             "1xBet": 1.07,
             "Betano": 1.1,
-            "Betfair": 1.06,
+            "Betfair": 1.07,
             "Marathonbet": 1.05,
             "Superbet": 1.14,
-            "Unibet": 1.11
+            "Unibet": 1.09
           },
           "consensus_odd": 1.08,
           "country": "Spain",
-          "edge": -0.0276,
+          "edge": -0.0278,
           "fixture_id": 1570342,
           "home_team": "Valencia",
-          "implied_probability": 0.9217,
+          "implied_probability": 0.9259,
           "individual_score_band": "STRONG_84_TO_87_9",
           "kickoff_iso": "2026-08-25T16:00:00-03:00",
           "league": "La Liga",
           "market": "Escanteios",
           "market_family": "CORNERS",
           "match": "Valencia x Real Betis",
-          "model_probability": 0.894,
+          "model_probability": 0.8981,
           "odd": 1.14,
-          "pre_guard_score": 86.8,
+          "pre_guard_score": 87.1,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -1234,16 +277,16 @@
             "min_score": 84.0,
             "raw_score_floor": 84.0,
             "reasons": [
-              "source_history=77%/22"
+              "source_history=78%/23"
             ],
             "recent_sample": 12
           },
-          "quality_score": 86.8,
-          "rationale": "Mercado corners confirmado por 6 bookmaker(s); probabilidade implícita ajustada 89%; seleção full-time com regra automática de conferência.",
+          "quality_score": 88.1,
+          "rationale": "Mercado corners confirmado por 6 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
           "raw_market": "Corners Over Under",
           "raw_selection": "Under 13.5",
           "risk_flags": [],
-          "score": 86.8,
+          "score": 87.1,
           "selection": "Menos de 13.5 escanteios",
           "settlement_line": 13.5,
           "settlement_metric": "corner_kicks",
@@ -1258,26 +301,26 @@
           "bookmaker_quotes": {
             "1xBet": 1.13,
             "Betano": 1.14,
-            "Betfair": 1.13,
+            "Betfair": 1.11,
             "Marathonbet": 1.11,
             "Superbet": 1.19,
-            "Unibet": 1.13
+            "Unibet": 1.16
           },
-          "consensus_odd": 1.13,
+          "consensus_odd": 1.14,
           "country": "Spain",
-          "edge": -0.0265,
+          "edge": -0.0264,
           "fixture_id": 1570342,
           "home_team": "Valencia",
-          "implied_probability": 0.885,
+          "implied_probability": 0.8811,
           "individual_score_band": "STRONG_84_TO_87_9",
           "kickoff_iso": "2026-08-25T16:00:00-03:00",
           "league": "La Liga",
           "market": "Escanteios",
           "market_family": "CORNERS",
           "match": "Valencia x Real Betis",
-          "model_probability": 0.8584,
+          "model_probability": 0.8546,
           "odd": 1.19,
-          "pre_guard_score": 84.5,
+          "pre_guard_score": 84.2,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -1285,16 +328,16 @@
             "min_score": 84.0,
             "raw_score_floor": 84.0,
             "reasons": [
-              "source_history=77%/22"
+              "source_history=78%/23"
             ],
             "recent_sample": 12
           },
-          "quality_score": 84.5,
-          "rationale": "Mercado corners confirmado por 6 bookmaker(s); probabilidade implícita ajustada 86%; seleção full-time com regra automática de conferência.",
+          "quality_score": 85.2,
+          "rationale": "Mercado corners confirmado por 6 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
           "raw_market": "Corners Over Under",
           "raw_selection": "Over 6.5",
           "risk_flags": [],
-          "score": 84.5,
+          "score": 84.2,
           "selection": "Mais de 6.5 escanteios",
           "settlement_line": 6.5,
           "settlement_metric": "corner_kicks",
@@ -1324,7 +367,7 @@
           {
             "market": "Escanteios",
             "reasons": [
-              "source_history=77%/22",
+              "source_history=78%/23",
               "bookmakers<5"
             ],
             "selection": "Menos de 14.5 escanteios"
@@ -1332,7 +375,7 @@
           {
             "market": "Escanteios da equipe",
             "reasons": [
-              "source_history=77%/22",
+              "source_history=78%/23",
               "bookmakers<5"
             ],
             "selection": "Mandante: Menos de 9.5 escanteios"
@@ -1340,8 +383,8 @@
           {
             "market": "Total de gols",
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
+              "family_history=79%/24",
+              "source_history=78%/23",
               "non_half_line_rejected"
             ],
             "selection": "Mais de 1 gols"
@@ -1349,14 +392,14 @@
           {
             "market": "Total de gols",
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
+              "family_history=79%/24",
+              "source_history=78%/23",
               "non_half_line_rejected"
             ],
-            "selection": "Menos de 4.25 gols"
+            "selection": "Menos de 4 gols"
           }
         ],
-        "rejected_legs": 39
+        "rejected_legs": 40
       },
       "recent_form": {
         "avg_total_goals": 2.25,
@@ -1369,647 +412,37 @@
         "under_3_5_rate": 0.75,
         "under_4_5_rate": 1.0
       },
-      "score": 91.1,
+      "score": 91.4,
       "under_over": "-2.5"
     },
     {
-      "advice": "Double chance : Osters IF or draw",
-      "away_probability": 0.0,
-      "away_team": "GIF Sundsvall",
-      "best_market": {
-        "away_team": "GIF Sundsvall",
-        "bookmaker": "Pinnacle",
-        "bookmaker_count": 10,
-        "bookmaker_quotes": {
-          "10Bet": 1.08,
-          "1xBet": 1.02,
-          "Bet365": 1.07,
-          "BetVictor": 1.04,
-          "Betano": 1.1,
-          "Betfair": 1.06,
-          "Marathonbet": 1.02,
-          "Pinnacle": 1.1,
-          "Superbet": 1.06,
-          "Unibet": 1.06
-        },
-        "consensus_odd": 1.06,
-        "country": "Sweden",
-        "edge": -0.0283,
-        "fixture_id": 1497670,
-        "home_team": "Osters IF",
-        "implied_probability": 0.9434,
-        "individual_score_band": "ELITE_88_PLUS",
-        "kickoff_iso": "2026-08-25T14:00:00-03:00",
-        "league": "Superettan",
-        "market": "Total de gols",
-        "market_family": "GOALS",
-        "match": "Osters IF x GIF Sundsvall",
-        "model_probability": 0.9151,
-        "odd": 1.1,
-        "pre_guard_score": 91.1,
-        "quality_guard": {
-          "accepted": true,
-          "elite_score": 88.0,
-          "min_probability": 0.84,
-          "min_score": 84.0,
-          "raw_score_floor": 84.0,
-          "reasons": [
-            "family_history=78%/23",
-            "source_history=77%/22"
-          ],
-          "recent_sample": 12
-        },
-        "quality_score": 92.6,
-        "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
-        "raw_market": "Goals Over/Under",
-        "raw_selection": "Under 5.5",
-        "risk_flags": [],
-        "score": 91.1,
-        "selection": "Menos de 5.5 gols",
-        "settlement_line": 5.5,
-        "settlement_metric": "goals",
-        "settlement_operator": "under",
-        "settlement_scope": "match",
-        "signal_source": "MULTI_MARKET_CONSENSUS"
-      },
-      "country": "Sweden",
-      "decision": "USABLE",
-      "draw_probability": 0.5,
-      "eligible_legs": [
-        {
-          "away_team": "GIF Sundsvall",
-          "bookmaker": "Pinnacle",
-          "bookmaker_count": 10,
-          "bookmaker_quotes": {
-            "10Bet": 1.08,
-            "1xBet": 1.02,
-            "Bet365": 1.07,
-            "BetVictor": 1.04,
-            "Betano": 1.1,
-            "Betfair": 1.06,
-            "Marathonbet": 1.02,
-            "Pinnacle": 1.1,
-            "Superbet": 1.06,
-            "Unibet": 1.06
-          },
-          "consensus_odd": 1.06,
-          "country": "Sweden",
-          "edge": -0.0283,
-          "fixture_id": 1497670,
-          "home_team": "Osters IF",
-          "implied_probability": 0.9434,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T14:00:00-03:00",
-          "league": "Superettan",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Osters IF x GIF Sundsvall",
-          "model_probability": 0.9151,
-          "odd": 1.1,
-          "pre_guard_score": 91.1,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 92.6,
-          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Under 5.5",
-          "risk_flags": [],
-          "score": 91.1,
-          "selection": "Menos de 5.5 gols",
-          "settlement_line": 5.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "under",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        }
-      ],
-      "fixture_id": 1497670,
-      "home_probability": 0.5,
-      "home_team": "Osters IF",
-      "kickoff_iso": "2026-08-25T14:00:00-03:00",
-      "league": "Superettan",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 1,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Osters IF x GIF Sundsvall",
-      "prediction_available": true,
-      "prediction_risk_flags": [
-        "EXTREME_PROBABILITY",
-        "COARSE_PROBABILITY"
-      ],
-      "quality_guard": {
-        "accepted_legs": 1,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=100%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "recent_over15=67%",
-              "recent_over15_below_70"
-            ],
-            "selection": "Mais de 1.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "recent_under45=75%",
-              "recent_5plus=25%",
-              "recent_under45_not_stable",
-              "probability_below_86%",
-              "score_below_85"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 5 escanteios"
-          }
-        ],
-        "rejected_legs": 32
-      },
-      "recent_form": {
-        "avg_total_goals": 2.917,
-        "five_plus_rate": 0.25,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.6667,
-        "over_2_5_rate": 0.5833,
-        "sample": 12,
-        "under_2_5_rate": 0.4167,
-        "under_3_5_rate": 0.5833,
-        "under_4_5_rate": 0.75
-      },
-      "score": 91.1,
-      "under_over": ""
-    },
-    {
-      "advice": "Double chance : draw or Chemnitzer FC",
-      "away_probability": 0.45,
-      "away_team": "Chemnitzer FC",
-      "best_market": null,
-      "country": "Germany",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1586838,
-      "home_probability": 0.1,
-      "home_team": "Lokomotive Leipzig",
-      "kickoff_iso": "2026-08-25T14:00:00-03:00",
-      "league": "Regionalliga - Nordost",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Lokomotive Leipzig x Chemnitzer FC",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=75%",
-              "recent_5plus=25%",
-              "recent_under45_not_stable"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4 gols"
-          }
-        ],
-        "rejected_legs": 10
-      },
-      "recent_form": {
-        "avg_total_goals": 3.583,
-        "five_plus_rate": 0.25,
-        "max_total_goals": 6,
-        "over_1_5_rate": 0.9167,
-        "over_2_5_rate": 0.8333,
-        "sample": 12,
-        "under_2_5_rate": 0.1667,
-        "under_3_5_rate": 0.4167,
-        "under_4_5_rate": 0.75
-      },
-      "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Winner : Magdeburg II",
+      "advice": "Double chance : Excursionistas or draw",
       "away_probability": 0.1,
-      "away_team": "BSG Chemie Leipzig",
-      "best_market": null,
-      "country": "Germany",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1586840,
-      "home_probability": 0.45,
-      "home_team": "Magdeburg II",
-      "kickoff_iso": "2026-08-25T14:00:00-03:00",
-      "league": "Regionalliga - Nordost",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Magdeburg II x BSG Chemie Leipzig",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5"
-            ],
-            "selection": "Menos de 5.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=100%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "recent_over15=64%",
-              "recent_over15_below_70"
-            ],
-            "selection": "Mais de 1.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 1.75 gols"
-          }
-        ],
-        "rejected_legs": 12
-      },
-      "recent_form": {
-        "avg_total_goals": 2.818,
-        "five_plus_rate": 0.2727,
-        "max_total_goals": 6,
-        "over_1_5_rate": 0.6364,
-        "over_2_5_rate": 0.3636,
-        "sample": 11,
-        "under_2_5_rate": 0.6364,
-        "under_3_5_rate": 0.6364,
-        "under_4_5_rate": 0.7273
-      },
-      "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Combo Double chance : Arsenal Sarandi or draw and -3.5 goals",
-      "away_probability": 0.1,
-      "away_team": "Ituzaingó",
+      "away_team": "Argentino de Merlo",
       "best_market": {
-        "away_team": "Ituzaingó",
-        "bookmaker": "Bet365",
-        "bookmaker_count": 5,
-        "bookmaker_quotes": {
-          "1xBet": 1.05,
-          "Bet365": 1.08,
-          "BetVictor": 1.04,
-          "Marathonbet": 1.05,
-          "Superbet": 1.04
-        },
-        "consensus_odd": 1.05,
-        "country": "Argentina",
-        "edge": -0.0286,
-        "fixture_id": 1499595,
-        "home_team": "Arsenal Sarandi",
-        "implied_probability": 0.9524,
-        "individual_score_band": "ELITE_88_PLUS",
-        "kickoff_iso": "2026-08-25T15:00:00-03:00",
-        "league": "Primera B Metropolitana",
-        "market": "Total de gols",
-        "market_family": "GOALS",
-        "match": "Arsenal Sarandi x Ituzaingó",
-        "model_probability": 0.9238,
-        "odd": 1.08,
-        "pre_guard_score": 89.0,
-        "quality_guard": {
-          "accepted": true,
-          "elite_score": 88.0,
-          "min_probability": 0.84,
-          "min_score": 84.0,
-          "raw_score_floor": 84.0,
-          "reasons": [
-            "family_history=78%/23",
-            "source_history=77%/22"
-          ],
-          "recent_sample": 12
-        },
-        "quality_score": 90.5,
-        "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
-        "raw_market": "Goals Over/Under",
-        "raw_selection": "Over 0.5",
-        "risk_flags": [],
-        "score": 89.0,
-        "selection": "Mais de 0.5 gols",
-        "settlement_line": 0.5,
-        "settlement_metric": "goals",
-        "settlement_operator": "over",
-        "settlement_scope": "match",
-        "signal_source": "MULTI_MARKET_CONSENSUS"
-      },
-      "country": "Argentina",
-      "decision": "USABLE",
-      "draw_probability": 0.45,
-      "eligible_legs": [
-        {
-          "away_team": "Ituzaingó",
-          "bookmaker": "Bet365",
-          "bookmaker_count": 5,
-          "bookmaker_quotes": {
-            "1xBet": 1.05,
-            "Bet365": 1.08,
-            "BetVictor": 1.04,
-            "Marathonbet": 1.05,
-            "Superbet": 1.04
-          },
-          "consensus_odd": 1.05,
-          "country": "Argentina",
-          "edge": -0.0286,
-          "fixture_id": 1499595,
-          "home_team": "Arsenal Sarandi",
-          "implied_probability": 0.9524,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T15:00:00-03:00",
-          "league": "Primera B Metropolitana",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Arsenal Sarandi x Ituzaingó",
-          "model_probability": 0.9238,
-          "odd": 1.08,
-          "pre_guard_score": 89.0,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 90.5,
-          "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Over 0.5",
-          "risk_flags": [],
-          "score": 89.0,
-          "selection": "Mais de 0.5 gols",
-          "settlement_line": 0.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        },
-        {
-          "away_team": "Ituzaingó",
-          "bookmaker": "Unibet",
-          "bookmaker_count": 8,
-          "bookmaker_quotes": {
-            "10Bet": 1.2,
-            "1xBet": 1.17,
-            "Bet365": 1.2,
-            "BetVictor": 1.13,
-            "Betano": 1.2,
-            "Marathonbet": 1.17,
-            "Superbet": 1.18,
-            "Unibet": 1.25
-          },
-          "consensus_odd": 1.19,
-          "country": "Argentina",
-          "edge": -0.0252,
-          "fixture_id": 1499595,
-          "home_team": "Arsenal Sarandi",
-          "implied_probability": 0.8403,
-          "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T15:00:00-03:00",
-          "league": "Primera B Metropolitana",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Arsenal Sarandi x Ituzaingó",
-          "model_probability": 0.8151,
-          "odd": 1.25,
-          "pre_guard_score": 84.5,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.8,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "selection_history=78%/9",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "recent_under35=100%",
-              "recent_5plus=0%"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 89.0,
-          "rationale": "Mercado goals confirmado por 8 bookmaker(s); probabilidade implícita ajustada 82%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Under 3.5",
-          "risk_flags": [],
-          "score": 84.5,
-          "selection": "Menos de 3.5 gols",
-          "settlement_line": 3.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "under",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        }
-      ],
-      "fixture_id": 1499595,
-      "home_probability": 0.45,
-      "home_team": "Arsenal Sarandi",
-      "kickoff_iso": "2026-08-25T15:00:00-03:00",
-      "league": "Primera B Metropolitana",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 2,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Arsenal Sarandi x Ituzaingó",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 2,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "under45_requires_8_books",
-              "recent_under45=100%",
-              "recent_5plus=0%"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 0.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 1 gols"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 14 escanteios"
-          }
-        ],
-        "rejected_legs": 22
-      },
-      "recent_form": {
-        "avg_total_goals": 0.917,
-        "five_plus_rate": 0.0,
-        "max_total_goals": 2,
-        "over_1_5_rate": 0.3333,
-        "over_2_5_rate": 0.0,
-        "sample": 12,
-        "under_2_5_rate": 1.0,
-        "under_3_5_rate": 1.0,
-        "under_4_5_rate": 1.0
-      },
-      "score": 89.0,
-      "under_over": "-3.5"
-    },
-    {
-      "advice": "Double chance : Sportivo Italiano or draw",
-      "away_probability": 0.1,
-      "away_team": "Defensores Unidos",
-      "best_market": {
-        "away_team": "Defensores Unidos",
-        "bookmaker": "Bet365",
+        "away_team": "Argentino de Merlo",
+        "bookmaker": "10Bet",
         "bookmaker_count": 6,
         "bookmaker_quotes": {
-          "10Bet": 1.09,
-          "1xBet": 1.05,
+          "10Bet": 1.1,
+          "1xBet": 1.04,
           "Bet365": 1.1,
           "BetVictor": 1.04,
-          "Marathonbet": 1.05,
-          "Superbet": 1.05
+          "Marathonbet": 1.04,
+          "Superbet": 1.06
         },
         "consensus_odd": 1.05,
         "country": "Argentina",
         "edge": -0.0286,
-        "fixture_id": 1499602,
-        "home_team": "Sportivo Italiano",
+        "fixture_id": 1499598,
+        "home_team": "Excursionistas",
         "implied_probability": 0.9524,
         "individual_score_band": "ELITE_88_PLUS",
-        "kickoff_iso": "2026-08-25T15:00:00-03:00",
+        "kickoff_iso": "2026-08-25T20:00:00-03:00",
         "league": "Primera B Metropolitana",
         "market": "Total de gols",
         "market_family": "GOALS",
-        "match": "Sportivo Italiano x Defensores Unidos",
+        "match": "Excursionistas x Argentino de Merlo",
         "model_probability": 0.9238,
         "odd": 1.1,
         "pre_guard_score": 89.9,
@@ -2020,12 +453,12 @@
           "min_score": 84.0,
           "raw_score_floor": 84.0,
           "reasons": [
-            "family_history=78%/23",
-            "source_history=77%/22"
+            "family_history=79%/24",
+            "source_history=78%/23"
           ],
           "recent_sample": 12
         },
-        "quality_score": 91.4,
+        "quality_score": 92.4,
         "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
         "raw_market": "Goals Over/Under",
         "raw_selection": "Over 0.5",
@@ -2043,29 +476,29 @@
       "draw_probability": 0.45,
       "eligible_legs": [
         {
-          "away_team": "Defensores Unidos",
-          "bookmaker": "Bet365",
+          "away_team": "Argentino de Merlo",
+          "bookmaker": "10Bet",
           "bookmaker_count": 6,
           "bookmaker_quotes": {
-            "10Bet": 1.09,
-            "1xBet": 1.05,
+            "10Bet": 1.1,
+            "1xBet": 1.04,
             "Bet365": 1.1,
             "BetVictor": 1.04,
-            "Marathonbet": 1.05,
-            "Superbet": 1.05
+            "Marathonbet": 1.04,
+            "Superbet": 1.06
           },
           "consensus_odd": 1.05,
           "country": "Argentina",
           "edge": -0.0286,
-          "fixture_id": 1499602,
-          "home_team": "Sportivo Italiano",
+          "fixture_id": 1499598,
+          "home_team": "Excursionistas",
           "implied_probability": 0.9524,
           "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T15:00:00-03:00",
+          "kickoff_iso": "2026-08-25T20:00:00-03:00",
           "league": "Primera B Metropolitana",
           "market": "Total de gols",
           "market_family": "GOALS",
-          "match": "Sportivo Italiano x Defensores Unidos",
+          "match": "Excursionistas x Argentino de Merlo",
           "model_probability": 0.9238,
           "odd": 1.1,
           "pre_guard_score": 89.9,
@@ -2076,12 +509,12 @@
             "min_score": 84.0,
             "raw_score_floor": 84.0,
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22"
+              "family_history=79%/24",
+              "source_history=78%/23"
             ],
             "recent_sample": 12
           },
-          "quality_score": 91.4,
+          "quality_score": 92.4,
           "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
@@ -2095,33 +528,33 @@
           "signal_source": "MULTI_MARKET_CONSENSUS"
         },
         {
-          "away_team": "Defensores Unidos",
-          "bookmaker": "Bet365",
+          "away_team": "Argentino de Merlo",
+          "bookmaker": "Betano",
           "bookmaker_count": 7,
           "bookmaker_quotes": {
-            "10Bet": 1.18,
-            "1xBet": 1.16,
-            "Bet365": 1.2,
-            "BetVictor": 1.13,
-            "Betano": 1.19,
-            "Marathonbet": 1.16,
-            "Superbet": 1.15
+            "10Bet": 1.17,
+            "1xBet": 1.13,
+            "Bet365": 1.17,
+            "BetVictor": 1.1,
+            "Betano": 1.18,
+            "Marathonbet": 1.13,
+            "Superbet": 1.14
           },
-          "consensus_odd": 1.16,
+          "consensus_odd": 1.14,
           "country": "Argentina",
-          "edge": -0.0259,
-          "fixture_id": 1499602,
-          "home_team": "Sportivo Italiano",
-          "implied_probability": 0.8621,
+          "edge": -0.0263,
+          "fixture_id": 1499598,
+          "home_team": "Excursionistas",
+          "implied_probability": 0.8772,
           "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T15:00:00-03:00",
+          "kickoff_iso": "2026-08-25T20:00:00-03:00",
           "league": "Primera B Metropolitana",
           "market": "Total de gols",
           "market_family": "GOALS",
-          "match": "Sportivo Italiano x Defensores Unidos",
-          "model_probability": 0.8362,
-          "odd": 1.2,
-          "pre_guard_score": 85.0,
+          "match": "Excursionistas x Argentino de Merlo",
+          "model_probability": 0.8509,
+          "odd": 1.18,
+          "pre_guard_score": 86.0,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -2130,19 +563,19 @@
             "raw_score_floor": 84.0,
             "reasons": [
               "selection_history=78%/9",
-              "family_history=78%/23",
-              "source_history=77%/22",
+              "family_history=79%/24",
+              "source_history=78%/23",
               "recent_under35=75%",
               "recent_5plus=8%"
             ],
             "recent_sample": 12
           },
-          "quality_score": 87.5,
-          "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 84%; seleção full-time com regra automática de conferência.",
+          "quality_score": 89.5,
+          "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 3.5",
           "risk_flags": [],
-          "score": 85.0,
+          "score": 86.0,
           "selection": "Menos de 3.5 gols",
           "settlement_line": 3.5,
           "settlement_metric": "goals",
@@ -2151,10 +584,10 @@
           "signal_source": "MULTI_MARKET_CONSENSUS"
         }
       ],
-      "fixture_id": 1499602,
+      "fixture_id": 1499598,
       "home_probability": 0.45,
-      "home_team": "Sportivo Italiano",
-      "kickoff_iso": "2026-08-25T15:00:00-03:00",
+      "home_team": "Excursionistas",
+      "kickoff_iso": "2026-08-25T20:00:00-03:00",
       "league": "Primera B Metropolitana",
       "market_family_counts": {
         "CARDS": 0,
@@ -2163,7 +596,7 @@
         "RESULT": 0,
         "SHOTS": 0
       },
-      "match": "Sportivo Italiano x Defensores Unidos",
+      "match": "Excursionistas x Argentino de Merlo",
       "prediction_available": true,
       "prediction_risk_flags": [],
       "quality_guard": {
@@ -2172,9 +605,10 @@
           {
             "market": "Total de gols",
             "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
+              "selection_history=71%/7",
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "bookmakers<5",
               "under45_requires_8_books",
               "recent_under45=92%",
               "recent_5plus=8%"
@@ -2184,39 +618,41 @@
           {
             "market": "Total de gols",
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
+              "family_history=79%/24",
+              "source_history=78%/23",
               "non_half_line_rejected"
             ],
             "selection": "Mais de 0.75 gols"
           },
           {
-            "market": "Escanteios",
+            "market": "Total de gols",
             "reasons": [
-              "source_history=77%/22",
+              "family_history=79%/24",
+              "source_history=78%/23",
               "non_half_line_rejected"
             ],
-            "selection": "Menos de 14 escanteios"
+            "selection": "Menos de 3.75 gols"
           },
           {
-            "market": "Escanteios",
+            "market": "Total de gols",
             "reasons": [
-              "source_history=77%/22",
-              "bookmakers<5"
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "non_half_line_rejected"
             ],
-            "selection": "Mais de 5.5 escanteios"
+            "selection": "Mais de 1 gols"
           }
         ],
-        "rejected_legs": 20
+        "rejected_legs": 19
       },
       "recent_form": {
-        "avg_total_goals": 2.25,
+        "avg_total_goals": 2.583,
         "five_plus_rate": 0.0833,
-        "max_total_goals": 5,
+        "max_total_goals": 8,
         "over_1_5_rate": 0.6667,
-        "over_2_5_rate": 0.4167,
+        "over_2_5_rate": 0.5,
         "sample": 12,
-        "under_2_5_rate": 0.5833,
+        "under_2_5_rate": 0.5,
         "under_3_5_rate": 0.75,
         "under_4_5_rate": 0.9167
       },
@@ -2224,35 +660,41 @@
       "under_over": ""
     },
     {
-      "advice": "Combo Double chance : Leones de Rosario or draw and -3.5 goals",
+      "advice": "Double chance : Deportivo Madryn or draw",
       "away_probability": 0.1,
-      "away_team": "Deportivo Muñiz",
+      "away_team": "Godoy Cruz",
       "best_market": {
-        "away_team": "Deportivo Muñiz",
-        "bookmaker": "Bet365",
-        "bookmaker_count": 5,
+        "away_team": "Godoy Cruz",
+        "bookmaker": "Pinnacle",
+        "bookmaker_count": 11,
         "bookmaker_quotes": {
-          "10Bet": 1.1,
-          "1xBet": 1.07,
-          "Bet365": 1.11,
-          "Marathonbet": 1.07,
-          "Superbet": 1.08
+          "10Bet": 1.11,
+          "1xBet": 1.09,
+          "888Sport": 1.13,
+          "Bet365": 1.12,
+          "BetVictor": 1.07,
+          "Betano": 1.12,
+          "Betfair": 1.08,
+          "Marathonbet": 1.09,
+          "Pinnacle": 1.13,
+          "Superbet": 1.11,
+          "Unibet": 1.08
         },
-        "consensus_odd": 1.08,
+        "consensus_odd": 1.11,
         "country": "Argentina",
-        "edge": -0.0278,
-        "fixture_id": 1500184,
-        "home_team": "Leones de Rosario",
-        "implied_probability": 0.9259,
-        "individual_score_band": "STRONG_84_TO_87_9",
-        "kickoff_iso": "2026-08-25T15:00:00-03:00",
-        "league": "Primera C",
+        "edge": -0.027,
+        "fixture_id": 1498659,
+        "home_team": "Deportivo Madryn",
+        "implied_probability": 0.9009,
+        "individual_score_band": "ELITE_88_PLUS",
+        "kickoff_iso": "2026-08-25T19:00:00-03:00",
+        "league": "Primera Nacional",
         "market": "Total de gols",
         "market_family": "GOALS",
-        "match": "Leones de Rosario x Deportivo Muñiz",
-        "model_probability": 0.8981,
-        "odd": 1.11,
-        "pre_guard_score": 87.3,
+        "match": "Deportivo Madryn x Godoy Cruz",
+        "model_probability": 0.8739,
+        "odd": 1.13,
+        "pre_guard_score": 88.4,
         "quality_guard": {
           "accepted": true,
           "elite_score": 88.0,
@@ -2260,17 +702,17 @@
           "min_score": 84.0,
           "raw_score_floor": 84.0,
           "reasons": [
-            "family_history=78%/23",
-            "source_history=77%/22"
+            "family_history=79%/24",
+            "source_history=78%/23"
           ],
           "recent_sample": 12
         },
-        "quality_score": 88.8,
-        "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
+        "quality_score": 90.9,
+        "rationale": "Mercado goals confirmado por 11 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
         "raw_market": "Goals Over/Under",
         "raw_selection": "Over 0.5",
         "risk_flags": [],
-        "score": 87.3,
+        "score": 88.4,
         "selection": "Mais de 0.5 gols",
         "settlement_line": 0.5,
         "settlement_metric": "goals",
@@ -2283,31 +725,37 @@
       "draw_probability": 0.45,
       "eligible_legs": [
         {
-          "away_team": "Deportivo Muñiz",
-          "bookmaker": "Bet365",
-          "bookmaker_count": 5,
+          "away_team": "Godoy Cruz",
+          "bookmaker": "Pinnacle",
+          "bookmaker_count": 11,
           "bookmaker_quotes": {
-            "10Bet": 1.1,
-            "1xBet": 1.07,
-            "Bet365": 1.11,
-            "Marathonbet": 1.07,
-            "Superbet": 1.08
+            "10Bet": 1.11,
+            "1xBet": 1.09,
+            "888Sport": 1.13,
+            "Bet365": 1.12,
+            "BetVictor": 1.07,
+            "Betano": 1.12,
+            "Betfair": 1.08,
+            "Marathonbet": 1.09,
+            "Pinnacle": 1.13,
+            "Superbet": 1.11,
+            "Unibet": 1.08
           },
-          "consensus_odd": 1.08,
+          "consensus_odd": 1.11,
           "country": "Argentina",
-          "edge": -0.0278,
-          "fixture_id": 1500184,
-          "home_team": "Leones de Rosario",
-          "implied_probability": 0.9259,
-          "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T15:00:00-03:00",
-          "league": "Primera C",
+          "edge": -0.027,
+          "fixture_id": 1498659,
+          "home_team": "Deportivo Madryn",
+          "implied_probability": 0.9009,
+          "individual_score_band": "ELITE_88_PLUS",
+          "kickoff_iso": "2026-08-25T19:00:00-03:00",
+          "league": "Primera Nacional",
           "market": "Total de gols",
           "market_family": "GOALS",
-          "match": "Leones de Rosario x Deportivo Muñiz",
-          "model_probability": 0.8981,
-          "odd": 1.11,
-          "pre_guard_score": 87.3,
+          "match": "Deportivo Madryn x Godoy Cruz",
+          "model_probability": 0.8739,
+          "odd": 1.13,
+          "pre_guard_score": 88.4,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -2315,17 +763,17 @@
             "min_score": 84.0,
             "raw_score_floor": 84.0,
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22"
+              "family_history=79%/24",
+              "source_history=78%/23"
             ],
             "recent_sample": 12
           },
-          "quality_score": 88.8,
-          "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
+          "quality_score": 90.9,
+          "rationale": "Mercado goals confirmado por 11 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
           "risk_flags": [],
-          "score": 87.3,
+          "score": 88.4,
           "selection": "Mais de 0.5 gols",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
@@ -2334,11 +782,11 @@
           "signal_source": "MULTI_MARKET_CONSENSUS"
         }
       ],
-      "fixture_id": 1500184,
+      "fixture_id": 1498659,
       "home_probability": 0.45,
-      "home_team": "Leones de Rosario",
-      "kickoff_iso": "2026-08-25T15:00:00-03:00",
-      "league": "Primera C",
+      "home_team": "Deportivo Madryn",
+      "kickoff_iso": "2026-08-25T19:00:00-03:00",
+      "league": "Primera Nacional",
       "market_family_counts": {
         "CARDS": 0,
         "CORNERS": 0,
@@ -2346,7 +794,7 @@
         "RESULT": 0,
         "SHOTS": 0
       },
-      "match": "Leones de Rosario x Deportivo Muñiz",
+      "match": "Deportivo Madryn x Godoy Cruz",
       "prediction_available": true,
       "prediction_risk_flags": [],
       "quality_guard": {
@@ -2355,294 +803,59 @@
           {
             "market": "Total de gols",
             "reasons": [
-              "selection_history=78%/9",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "recent_under35=100%",
+              "selection_history=71%/7",
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "under45_requires_8_books",
+              "recent_under45=100%",
               "recent_5plus=0%"
+            ],
+            "selection": "Menos de 4.5 gols"
+          },
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "selection_history=78%/9",
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "recent_under35=67%",
+              "recent_5plus=0%",
+              "recent_under35_not_stable"
             ],
             "selection": "Menos de 3.5 gols"
           },
           {
             "market": "Total de gols",
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 0.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "non_half_line_rejected"
             ],
             "selection": "Menos de 3.75 gols"
           },
           {
-            "market": "Total de gols",
+            "market": "Escanteios",
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
+              "source_history=78%/23",
+              "non_half_line_rejected"
             ],
-            "selection": "Mais de 1 gols"
+            "selection": "Mais de 6 escanteios"
           }
         ],
-        "rejected_legs": 11
+        "rejected_legs": 24
       },
       "recent_form": {
-        "avg_total_goals": 1.583,
+        "avg_total_goals": 2.5,
         "five_plus_rate": 0.0,
-        "max_total_goals": 3,
-        "over_1_5_rate": 0.5833,
-        "over_2_5_rate": 0.0833,
+        "max_total_goals": 4,
+        "over_1_5_rate": 0.6667,
+        "over_2_5_rate": 0.5833,
         "sample": 12,
-        "under_2_5_rate": 0.9167,
-        "under_3_5_rate": 1.0,
+        "under_2_5_rate": 0.4167,
+        "under_3_5_rate": 0.6667,
         "under_4_5_rate": 1.0
       },
-      "score": 87.3,
-      "under_over": "-3.5"
-    },
-    {
-      "advice": "Double chance : Bristol Rovers or draw",
-      "away_probability": 0.1,
-      "away_team": "Chelsea U21",
-      "best_market": {
-        "away_team": "Chelsea U21",
-        "bookmaker": "Bet365",
-        "bookmaker_count": 6,
-        "bookmaker_quotes": {
-          "1xBet": 1.05,
-          "Bet365": 1.1,
-          "BetVictor": 1.05,
-          "Betfair": 1.07,
-          "Marathonbet": 1.05,
-          "Superbet": 1.08
-        },
-        "consensus_odd": 1.06,
-        "country": "England",
-        "edge": -0.0283,
-        "fixture_id": 1588877,
-        "home_team": "Bristol Rovers",
-        "implied_probability": 0.9434,
-        "individual_score_band": "ELITE_88_PLUS",
-        "kickoff_iso": "2026-08-25T15:00:00-03:00",
-        "league": "EFL Trophy",
-        "market": "Total de gols",
-        "market_family": "GOALS",
-        "match": "Bristol Rovers x Chelsea U21",
-        "model_probability": 0.9151,
-        "odd": 1.1,
-        "pre_guard_score": 89.3,
-        "quality_guard": {
-          "accepted": true,
-          "elite_score": 88.0,
-          "min_probability": 0.84,
-          "min_score": 84.0,
-          "raw_score_floor": 84.0,
-          "reasons": [
-            "family_history=78%/23",
-            "source_history=77%/22"
-          ],
-          "recent_sample": 10
-        },
-        "quality_score": 90.8,
-        "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
-        "raw_market": "Goals Over/Under",
-        "raw_selection": "Under 5.5",
-        "risk_flags": [],
-        "score": 89.3,
-        "selection": "Menos de 5.5 gols",
-        "settlement_line": 5.5,
-        "settlement_metric": "goals",
-        "settlement_operator": "under",
-        "settlement_scope": "match",
-        "signal_source": "MULTI_MARKET_CONSENSUS"
-      },
-      "country": "England",
-      "decision": "USABLE",
-      "draw_probability": 0.45,
-      "eligible_legs": [
-        {
-          "away_team": "Chelsea U21",
-          "bookmaker": "Bet365",
-          "bookmaker_count": 6,
-          "bookmaker_quotes": {
-            "1xBet": 1.05,
-            "Bet365": 1.1,
-            "BetVictor": 1.05,
-            "Betfair": 1.07,
-            "Marathonbet": 1.05,
-            "Superbet": 1.08
-          },
-          "consensus_odd": 1.06,
-          "country": "England",
-          "edge": -0.0283,
-          "fixture_id": 1588877,
-          "home_team": "Bristol Rovers",
-          "implied_probability": 0.9434,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T15:00:00-03:00",
-          "league": "EFL Trophy",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Bristol Rovers x Chelsea U21",
-          "model_probability": 0.9151,
-          "odd": 1.1,
-          "pre_guard_score": 89.3,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22"
-            ],
-            "recent_sample": 10
-          },
-          "quality_score": 90.8,
-          "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Under 5.5",
-          "risk_flags": [],
-          "score": 89.3,
-          "selection": "Menos de 5.5 gols",
-          "settlement_line": 5.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "under",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        },
-        {
-          "away_team": "Chelsea U21",
-          "bookmaker": "10Bet",
-          "bookmaker_count": 7,
-          "bookmaker_quotes": {
-            "10Bet": 1.14,
-            "1xBet": 1.12,
-            "Bet365": 1.14,
-            "BetVictor": 1.13,
-            "Betfair": 1.14,
-            "Marathonbet": 1.12,
-            "Superbet": 1.14
-          },
-          "consensus_odd": 1.14,
-          "country": "England",
-          "edge": -0.0263,
-          "fixture_id": 1588877,
-          "home_team": "Bristol Rovers",
-          "implied_probability": 0.8772,
-          "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T15:00:00-03:00",
-          "league": "EFL Trophy",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Bristol Rovers x Chelsea U21",
-          "model_probability": 0.8509,
-          "odd": 1.14,
-          "pre_guard_score": 86.0,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.8,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "selection_history=100%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "recent_over15=70%"
-            ],
-            "recent_sample": 10
-          },
-          "quality_score": 92.5,
-          "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Over 1.5",
-          "risk_flags": [],
-          "score": 86.0,
-          "selection": "Mais de 1.5 gols",
-          "settlement_line": 1.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        }
-      ],
-      "fixture_id": 1588877,
-      "home_probability": 0.45,
-      "home_team": "Bristol Rovers",
-      "kickoff_iso": "2026-08-25T15:00:00-03:00",
-      "league": "EFL Trophy",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 2,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Bristol Rovers x Chelsea U21",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 2,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 5.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 5 gols"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 15 escanteios"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 12.75 escanteios"
-          }
-        ],
-        "rejected_legs": 28
-      },
-      "recent_form": {
-        "avg_total_goals": 3.1,
-        "five_plus_rate": 0.2,
-        "max_total_goals": 8,
-        "over_1_5_rate": 0.7,
-        "over_2_5_rate": 0.6,
-        "sample": 10,
-        "under_2_5_rate": 0.4,
-        "under_3_5_rate": 0.6,
-        "under_4_5_rate": 0.8
-      },
-      "score": 89.3,
+      "score": 88.4,
       "under_over": ""
     },
     {
@@ -2657,9 +870,9 @@
           "10Bet": 1.05,
           "1xBet": 1.01,
           "Bet365": 1.05,
-          "BetVictor": 1.02,
+          "BetVictor": 1.03,
           "Betano": 1.06,
-          "Betfair": 1.04,
+          "Betfair": 1.05,
           "Marathonbet": 1.01,
           "Superbet": 1.04,
           "Unibet": 1.03
@@ -2682,19 +895,19 @@
         "quality_guard": {
           "accepted": true,
           "elite_score": 88.0,
-          "min_probability": 0.86,
-          "min_score": 85.0,
+          "min_probability": 0.84,
+          "min_score": 84.0,
           "raw_score_floor": 84.0,
           "reasons": [
-            "selection_history=67%/6",
-            "family_history=78%/23",
-            "source_history=77%/22",
+            "selection_history=71%/7",
+            "family_history=79%/24",
+            "source_history=78%/23",
             "recent_under45=92%",
             "recent_5plus=8%"
           ],
           "recent_sample": 12
         },
-        "quality_score": 89.5,
+        "quality_score": 95.5,
         "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 93%; seleção full-time com regra automática de conferência.",
         "raw_market": "Goals Over/Under",
         "raw_selection": "Under 4.5",
@@ -2719,9 +932,9 @@
             "10Bet": 1.05,
             "1xBet": 1.01,
             "Bet365": 1.05,
-            "BetVictor": 1.02,
+            "BetVictor": 1.03,
             "Betano": 1.06,
-            "Betfair": 1.04,
+            "Betfair": 1.05,
             "Marathonbet": 1.01,
             "Superbet": 1.04,
             "Unibet": 1.03
@@ -2744,19 +957,19 @@
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
-            "min_probability": 0.86,
-            "min_score": 85.0,
+            "min_probability": 0.84,
+            "min_score": 84.0,
             "raw_score_floor": 84.0,
             "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
+              "selection_history=71%/7",
+              "family_history=79%/24",
+              "source_history=78%/23",
               "recent_under45=92%",
               "recent_5plus=8%"
             ],
             "recent_sample": 12
           },
-          "quality_score": 89.5,
+          "quality_score": 95.5,
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 93%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 4.5",
@@ -2771,12 +984,12 @@
         },
         {
           "away_team": "Botafogo SP",
-          "bookmaker": "Bet365",
+          "bookmaker": "Pinnacle",
           "bookmaker_count": 10,
           "bookmaker_quotes": {
             "10Bet": 1.1,
             "1xBet": 1.06,
-            "Bet365": 1.11,
+            "Bet365": 1.1,
             "BetVictor": 1.06,
             "Betano": 1.11,
             "Betfair": 1.07,
@@ -2807,12 +1020,12 @@
             "min_score": 84.0,
             "raw_score_floor": 84.0,
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22"
+              "family_history=79%/24",
+              "source_history=78%/23"
             ],
             "recent_sample": 12
           },
-          "quality_score": 91.8,
+          "quality_score": 92.8,
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
@@ -2827,17 +1040,17 @@
         },
         {
           "away_team": "Botafogo SP",
-          "bookmaker": "Betano",
+          "bookmaker": "Betfair",
           "bookmaker_count": 10,
           "bookmaker_quotes": {
             "10Bet": 1.18,
-            "1xBet": 1.13,
+            "1xBet": 1.15,
             "Bet365": 1.17,
-            "BetVictor": 1.14,
+            "BetVictor": 1.15,
             "Betano": 1.19,
-            "Betfair": 1.17,
-            "Marathonbet": 1.13,
-            "Pinnacle": 1.18,
+            "Betfair": 1.2,
+            "Marathonbet": 1.15,
+            "Pinnacle": 1.19,
             "Superbet": 1.17,
             "Unibet": 1.17
           },
@@ -2854,7 +1067,7 @@
           "market_family": "GOALS",
           "match": "Atletico Goianiense x Botafogo SP",
           "model_probability": 0.8291,
-          "odd": 1.19,
+          "odd": 1.2,
           "pre_guard_score": 85.4,
           "quality_guard": {
             "accepted": true,
@@ -2864,14 +1077,14 @@
             "raw_score_floor": 84.0,
             "reasons": [
               "selection_history=78%/9",
-              "family_history=78%/23",
-              "source_history=77%/22",
+              "family_history=79%/24",
+              "source_history=78%/23",
               "recent_under35=83%",
               "recent_5plus=8%"
             ],
             "recent_sample": 12
           },
-          "quality_score": 88.6,
+          "quality_score": 89.6,
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 3.5",
@@ -2906,8 +1119,17 @@
           {
             "market": "Total de gols",
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "non_half_line_rejected"
+            ],
+            "selection": "Mais de 0.75 gols"
+          },
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "family_history=79%/24",
+              "source_history=78%/23",
               "non_half_line_rejected"
             ],
             "selection": "Menos de 3.75 gols"
@@ -2915,27 +1137,18 @@
           {
             "market": "Escanteios",
             "reasons": [
-              "source_history=77%/22",
+              "source_history=78%/23",
               "bookmakers<5"
             ],
             "selection": "Menos de 14.5 escanteios"
           },
           {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 0.75 gols"
-          },
-          {
             "market": "Escanteios",
             "reasons": [
-              "source_history=77%/22",
+              "source_history=78%/23",
               "raw_individual_score_below_84"
             ],
-            "selection": "Menos de 13.75 escanteios"
+            "selection": "Mais de 7.25 escanteios"
           }
         ],
         "rejected_legs": 27
@@ -2955,36 +1168,40 @@
       "under_over": "-3.5"
     },
     {
-      "advice": "Double chance : Excursionistas or draw",
+      "advice": "Combo Double chance : Juventude or draw and -3.5 goals",
       "away_probability": 0.1,
-      "away_team": "Argentino de Merlo",
+      "away_team": "CRB",
       "best_market": {
-        "away_team": "Argentino de Merlo",
-        "bookmaker": "10Bet",
-        "bookmaker_count": 6,
+        "away_team": "CRB",
+        "bookmaker": "Betano",
+        "bookmaker_count": 10,
         "bookmaker_quotes": {
           "10Bet": 1.1,
-          "1xBet": 1.04,
+          "1xBet": 1.05,
           "Bet365": 1.1,
-          "BetVictor": 1.05,
-          "Marathonbet": 1.04,
-          "Superbet": 1.07
+          "BetVictor": 1.06,
+          "Betano": 1.12,
+          "Betfair": 1.07,
+          "Marathonbet": 1.05,
+          "Pinnacle": 1.11,
+          "Superbet": 1.09,
+          "Unibet": 1.07
         },
-        "consensus_odd": 1.06,
-        "country": "Argentina",
-        "edge": -0.0283,
-        "fixture_id": 1499598,
-        "home_team": "Excursionistas",
-        "implied_probability": 0.9434,
+        "consensus_odd": 1.08,
+        "country": "Brazil",
+        "edge": -0.0278,
+        "fixture_id": 1520835,
+        "home_team": "Juventude",
+        "implied_probability": 0.9259,
         "individual_score_band": "ELITE_88_PLUS",
-        "kickoff_iso": "2026-08-25T20:00:00-03:00",
-        "league": "Primera B Metropolitana",
+        "kickoff_iso": "2026-08-25T19:30:00-03:00",
+        "league": "Serie B",
         "market": "Total de gols",
         "market_family": "GOALS",
-        "match": "Excursionistas x Argentino de Merlo",
-        "model_probability": 0.9151,
-        "odd": 1.1,
-        "pre_guard_score": 89.3,
+        "match": "Juventude x CRB",
+        "model_probability": 0.8981,
+        "odd": 1.12,
+        "pre_guard_score": 90.0,
         "quality_guard": {
           "accepted": true,
           "elite_score": 88.0,
@@ -2992,17 +1209,17 @@
           "min_score": 84.0,
           "raw_score_floor": 84.0,
           "reasons": [
-            "family_history=78%/23",
-            "source_history=77%/22"
+            "family_history=79%/24",
+            "source_history=78%/23"
           ],
           "recent_sample": 12
         },
-        "quality_score": 90.8,
-        "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
+        "quality_score": 92.5,
+        "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
         "raw_market": "Goals Over/Under",
         "raw_selection": "Over 0.5",
         "risk_flags": [],
-        "score": 89.3,
+        "score": 90.0,
         "selection": "Mais de 0.5 gols",
         "settlement_line": 0.5,
         "settlement_metric": "goals",
@@ -3010,37 +1227,41 @@
         "settlement_scope": "match",
         "signal_source": "MULTI_MARKET_CONSENSUS"
       },
-      "country": "Argentina",
+      "country": "Brazil",
       "decision": "USABLE",
       "draw_probability": 0.45,
       "eligible_legs": [
         {
-          "away_team": "Argentino de Merlo",
-          "bookmaker": "10Bet",
-          "bookmaker_count": 6,
+          "away_team": "CRB",
+          "bookmaker": "Betano",
+          "bookmaker_count": 10,
           "bookmaker_quotes": {
             "10Bet": 1.1,
-            "1xBet": 1.04,
+            "1xBet": 1.05,
             "Bet365": 1.1,
-            "BetVictor": 1.05,
-            "Marathonbet": 1.04,
-            "Superbet": 1.07
+            "BetVictor": 1.06,
+            "Betano": 1.12,
+            "Betfair": 1.07,
+            "Marathonbet": 1.05,
+            "Pinnacle": 1.11,
+            "Superbet": 1.09,
+            "Unibet": 1.07
           },
-          "consensus_odd": 1.06,
-          "country": "Argentina",
-          "edge": -0.0283,
-          "fixture_id": 1499598,
-          "home_team": "Excursionistas",
-          "implied_probability": 0.9434,
+          "consensus_odd": 1.08,
+          "country": "Brazil",
+          "edge": -0.0278,
+          "fixture_id": 1520835,
+          "home_team": "Juventude",
+          "implied_probability": 0.9259,
           "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T20:00:00-03:00",
-          "league": "Primera B Metropolitana",
+          "kickoff_iso": "2026-08-25T19:30:00-03:00",
+          "league": "Serie B",
           "market": "Total de gols",
           "market_family": "GOALS",
-          "match": "Excursionistas x Argentino de Merlo",
-          "model_probability": 0.9151,
-          "odd": 1.1,
-          "pre_guard_score": 89.3,
+          "match": "Juventude x CRB",
+          "model_probability": 0.8981,
+          "odd": 1.12,
+          "pre_guard_score": 90.0,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -3048,17 +1269,17 @@
             "min_score": 84.0,
             "raw_score_floor": 84.0,
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22"
+              "family_history=79%/24",
+              "source_history=78%/23"
             ],
             "recent_sample": 12
           },
-          "quality_score": 90.8,
-          "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
+          "quality_score": 92.5,
+          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
           "risk_flags": [],
-          "score": 89.3,
+          "score": 90.0,
           "selection": "Mais de 0.5 gols",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
@@ -3067,476 +1288,36 @@
           "signal_source": "MULTI_MARKET_CONSENSUS"
         },
         {
-          "away_team": "Argentino de Merlo",
-          "bookmaker": "10Bet",
-          "bookmaker_count": 7,
-          "bookmaker_quotes": {
-            "10Bet": 1.17,
-            "1xBet": 1.11,
-            "Bet365": 1.17,
-            "BetVictor": 1.09,
-            "Betano": 1.16,
-            "Marathonbet": 1.11,
-            "Superbet": 1.12
-          },
-          "consensus_odd": 1.12,
-          "country": "Argentina",
-          "edge": -0.0268,
-          "fixture_id": 1499598,
-          "home_team": "Excursionistas",
-          "implied_probability": 0.8929,
-          "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T20:00:00-03:00",
-          "league": "Primera B Metropolitana",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Excursionistas x Argentino de Merlo",
-          "model_probability": 0.8661,
-          "odd": 1.17,
-          "pre_guard_score": 87.0,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.8,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "selection_history=78%/9",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "recent_under35=75%",
-              "recent_5plus=8%"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 89.5,
-          "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Under 3.5",
-          "risk_flags": [],
-          "score": 87.0,
-          "selection": "Menos de 3.5 gols",
-          "settlement_line": 3.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "under",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        }
-      ],
-      "fixture_id": 1499598,
-      "home_probability": 0.45,
-      "home_team": "Excursionistas",
-      "kickoff_iso": "2026-08-25T20:00:00-03:00",
-      "league": "Primera B Metropolitana",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 2,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Excursionistas x Argentino de Merlo",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 2,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=92%",
-              "recent_5plus=8%"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 3.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 0.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 1 gols"
-          }
-        ],
-        "rejected_legs": 19
-      },
-      "recent_form": {
-        "avg_total_goals": 2.583,
-        "five_plus_rate": 0.0833,
-        "max_total_goals": 8,
-        "over_1_5_rate": 0.6667,
-        "over_2_5_rate": 0.5,
-        "sample": 12,
-        "under_2_5_rate": 0.5,
-        "under_3_5_rate": 0.75,
-        "under_4_5_rate": 0.9167
-      },
-      "score": 89.3,
-      "under_over": ""
-    },
-    {
-      "advice": "Double chance : draw or Varbergs BoIS FC",
-      "away_probability": 0.45,
-      "away_team": "Varbergs BoIS FC",
-      "best_market": {
-        "away_team": "Varbergs BoIS FC",
-        "bookmaker": "10Bet",
-        "bookmaker_count": 6,
-        "bookmaker_quotes": {
-          "10Bet": 1.05,
-          "Bet365": 1.03,
-          "BetVictor": 1.02,
-          "Betano": 1.04,
-          "Betfair": 1.01,
-          "Superbet": 1.03
-        },
-        "consensus_odd": 1.03,
-        "country": "Sweden",
-        "edge": -0.0291,
-        "fixture_id": 1497669,
-        "home_team": "Orebro SK",
-        "implied_probability": 0.9709,
-        "individual_score_band": "ELITE_88_PLUS",
-        "kickoff_iso": "2026-08-25T14:00:00-03:00",
-        "league": "Superettan",
-        "market": "Total de gols",
-        "market_family": "GOALS",
-        "match": "Orebro SK x Varbergs BoIS FC",
-        "model_probability": 0.9417,
-        "odd": 1.05,
-        "pre_guard_score": 91.1,
-        "quality_guard": {
-          "accepted": true,
-          "elite_score": 88.0,
-          "min_probability": 0.84,
-          "min_score": 84.0,
-          "raw_score_floor": 84.0,
-          "reasons": [
-            "family_history=78%/23",
-            "source_history=77%/22"
-          ],
-          "recent_sample": 12
-        },
-        "quality_score": 92.6,
-        "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 94%; seleção full-time com regra automática de conferência.",
-        "raw_market": "Goals Over/Under",
-        "raw_selection": "Over 0.5",
-        "risk_flags": [],
-        "score": 91.1,
-        "selection": "Mais de 0.5 gols",
-        "settlement_line": 0.5,
-        "settlement_metric": "goals",
-        "settlement_operator": "over",
-        "settlement_scope": "match",
-        "signal_source": "MULTI_MARKET_CONSENSUS"
-      },
-      "country": "Sweden",
-      "decision": "USABLE",
-      "draw_probability": 0.45,
-      "eligible_legs": [
-        {
-          "away_team": "Varbergs BoIS FC",
-          "bookmaker": "10Bet",
-          "bookmaker_count": 6,
-          "bookmaker_quotes": {
-            "10Bet": 1.05,
-            "Bet365": 1.03,
-            "BetVictor": 1.02,
-            "Betano": 1.04,
-            "Betfair": 1.01,
-            "Superbet": 1.03
-          },
-          "consensus_odd": 1.03,
-          "country": "Sweden",
-          "edge": -0.0291,
-          "fixture_id": 1497669,
-          "home_team": "Orebro SK",
-          "implied_probability": 0.9709,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T14:00:00-03:00",
-          "league": "Superettan",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Orebro SK x Varbergs BoIS FC",
-          "model_probability": 0.9417,
-          "odd": 1.05,
-          "pre_guard_score": 91.1,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 92.6,
-          "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 94%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Over 0.5",
-          "risk_flags": [],
-          "score": 91.1,
-          "selection": "Mais de 0.5 gols",
-          "settlement_line": 0.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        },
-        {
-          "away_team": "Varbergs BoIS FC",
+          "away_team": "CRB",
           "bookmaker": "Pinnacle",
           "bookmaker_count": 10,
           "bookmaker_quotes": {
-            "10Bet": 1.22,
-            "1xBet": 1.18,
-            "Bet365": 1.18,
-            "BetVictor": 1.2,
-            "Betano": 1.21,
-            "Betfair": 1.2,
-            "Marathonbet": 1.18,
-            "Pinnacle": 1.24,
-            "Superbet": 1.21,
-            "Unibet": 1.2
-          },
-          "consensus_odd": 1.2,
-          "country": "Sweden",
-          "edge": -0.025,
-          "fixture_id": 1497669,
-          "home_team": "Orebro SK",
-          "implied_probability": 0.8333,
-          "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T14:00:00-03:00",
-          "league": "Superettan",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Orebro SK x Varbergs BoIS FC",
-          "model_probability": 0.8083,
-          "odd": 1.24,
-          "pre_guard_score": 84.1,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.8,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "selection_history=100%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "recent_over15=75%"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 91.1,
-          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 81%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Over 1.5",
-          "risk_flags": [],
-          "score": 84.1,
-          "selection": "Mais de 1.5 gols",
-          "settlement_line": 1.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        }
-      ],
-      "fixture_id": 1497669,
-      "home_probability": 0.1,
-      "home_team": "Orebro SK",
-      "kickoff_iso": "2026-08-25T14:00:00-03:00",
-      "league": "Superettan",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 2,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Orebro SK x Varbergs BoIS FC",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 2,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5"
-            ],
-            "selection": "Menos de 5.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "recent_under45=67%",
-              "recent_5plus=33%",
-              "recent_under45_not_stable",
-              "probability_below_86%"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.75 gols"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=77%/22",
-              "bookmakers<5"
-            ],
-            "selection": "Menos de 13.5 escanteios"
-          }
-        ],
-        "rejected_legs": 30
-      },
-      "recent_form": {
-        "avg_total_goals": 3.25,
-        "five_plus_rate": 0.3333,
-        "max_total_goals": 6,
-        "over_1_5_rate": 0.75,
-        "over_2_5_rate": 0.6667,
-        "sample": 12,
-        "under_2_5_rate": 0.3333,
-        "under_3_5_rate": 0.5,
-        "under_4_5_rate": 0.6667
-      },
-      "score": 91.1,
-      "under_over": ""
-    },
-    {
-      "advice": "Combo Double chance : Real Pilar or draw and -3.5 goals",
-      "away_probability": 0.1,
-      "away_team": "Brown DE Adrogue",
-      "best_market": {
-        "away_team": "Brown DE Adrogue",
-        "bookmaker": "10Bet",
-        "bookmaker_count": 8,
-        "bookmaker_quotes": {
-          "10Bet": 1.17,
-          "1xBet": 1.08,
-          "Bet365": 1.11,
-          "BetVictor": 1.06,
-          "Betano": 1.13,
-          "Marathonbet": 1.08,
-          "Superbet": 1.08,
-          "Unibet": 1.17
-        },
-        "consensus_odd": 1.09,
-        "country": "Argentina",
-        "edge": -0.0274,
-        "fixture_id": 1499600,
-        "home_team": "Real Pilar",
-        "implied_probability": 0.9132,
-        "individual_score_band": "ELITE_88_PLUS",
-        "kickoff_iso": "2026-08-25T15:00:00-03:00",
-        "league": "Primera B Metropolitana",
-        "market": "Total de gols",
-        "market_family": "GOALS",
-        "match": "Real Pilar x Brown DE Adrogue",
-        "model_probability": 0.8858,
-        "odd": 1.17,
-        "pre_guard_score": 89.2,
-        "quality_guard": {
-          "accepted": true,
-          "elite_score": 88.0,
-          "min_probability": 0.8,
-          "min_score": 84.0,
-          "raw_score_floor": 84.0,
-          "reasons": [
-            "selection_history=78%/9",
-            "family_history=78%/23",
-            "source_history=77%/22",
-            "recent_under35=100%",
-            "recent_5plus=0%"
-          ],
-          "recent_sample": 12
-        },
-        "quality_score": 93.7,
-        "rationale": "Mercado goals confirmado por 8 bookmaker(s); probabilidade implícita ajustada 89%; seleção full-time com regra automática de conferência.",
-        "raw_market": "Goals Over/Under",
-        "raw_selection": "Under 3.5",
-        "risk_flags": [],
-        "score": 89.2,
-        "selection": "Menos de 3.5 gols",
-        "settlement_line": 3.5,
-        "settlement_metric": "goals",
-        "settlement_operator": "under",
-        "settlement_scope": "match",
-        "signal_source": "MULTI_MARKET_CONSENSUS"
-      },
-      "country": "Argentina",
-      "decision": "USABLE",
-      "draw_probability": 0.45,
-      "eligible_legs": [
-        {
-          "away_team": "Brown DE Adrogue",
-          "bookmaker": "10Bet",
-          "bookmaker_count": 8,
-          "bookmaker_quotes": {
-            "10Bet": 1.17,
-            "1xBet": 1.08,
-            "Bet365": 1.11,
-            "BetVictor": 1.06,
-            "Betano": 1.13,
-            "Marathonbet": 1.08,
-            "Superbet": 1.08,
+            "10Bet": 1.18,
+            "1xBet": 1.14,
+            "Bet365": 1.17,
+            "BetVictor": 1.14,
+            "Betano": 1.18,
+            "Betfair": 1.17,
+            "Marathonbet": 1.14,
+            "Pinnacle": 1.19,
+            "Superbet": 1.16,
             "Unibet": 1.17
           },
-          "consensus_odd": 1.09,
-          "country": "Argentina",
-          "edge": -0.0274,
-          "fixture_id": 1499600,
-          "home_team": "Real Pilar",
-          "implied_probability": 0.9132,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T15:00:00-03:00",
-          "league": "Primera B Metropolitana",
+          "consensus_odd": 1.17,
+          "country": "Brazil",
+          "edge": -0.0256,
+          "fixture_id": 1520835,
+          "home_team": "Juventude",
+          "implied_probability": 0.8547,
+          "individual_score_band": "STRONG_84_TO_87_9",
+          "kickoff_iso": "2026-08-25T19:30:00-03:00",
+          "league": "Serie B",
           "market": "Total de gols",
           "market_family": "GOALS",
-          "match": "Real Pilar x Brown DE Adrogue",
-          "model_probability": 0.8858,
-          "odd": 1.17,
-          "pre_guard_score": 89.2,
+          "match": "Juventude x CRB",
+          "model_probability": 0.8291,
+          "odd": 1.19,
+          "pre_guard_score": 85.4,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -3545,85 +1326,32 @@
             "raw_score_floor": 84.0,
             "reasons": [
               "selection_history=78%/9",
-              "family_history=78%/23",
-              "source_history=77%/22",
+              "family_history=79%/24",
+              "source_history=78%/23",
               "recent_under35=100%",
               "recent_5plus=0%"
             ],
             "recent_sample": 12
           },
-          "quality_score": 93.7,
-          "rationale": "Mercado goals confirmado por 8 bookmaker(s); probabilidade implícita ajustada 89%; seleção full-time com regra automática de conferência.",
+          "quality_score": 90.9,
+          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 3.5",
           "risk_flags": [],
-          "score": 89.2,
+          "score": 85.4,
           "selection": "Menos de 3.5 gols",
           "settlement_line": 3.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS"
-        },
-        {
-          "away_team": "Brown DE Adrogue",
-          "bookmaker": "Betano",
-          "bookmaker_count": 7,
-          "bookmaker_quotes": {
-            "10Bet": 1.12,
-            "1xBet": 1.09,
-            "Bet365": 1.12,
-            "BetVictor": 1.07,
-            "Betano": 1.13,
-            "Marathonbet": 1.09,
-            "Superbet": 1.1
-          },
-          "consensus_odd": 1.1,
-          "country": "Argentina",
-          "edge": -0.0273,
-          "fixture_id": 1499600,
-          "home_team": "Real Pilar",
-          "implied_probability": 0.9091,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T15:00:00-03:00",
-          "league": "Primera B Metropolitana",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Real Pilar x Brown DE Adrogue",
-          "model_probability": 0.8818,
-          "odd": 1.13,
-          "pre_guard_score": 88.0,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 89.5,
-          "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Over 0.5",
-          "risk_flags": [],
-          "score": 88.0,
-          "selection": "Mais de 0.5 gols",
-          "settlement_line": 0.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
         }
       ],
-      "fixture_id": 1499600,
+      "fixture_id": 1520835,
       "home_probability": 0.45,
-      "home_team": "Real Pilar",
-      "kickoff_iso": "2026-08-25T15:00:00-03:00",
-      "league": "Primera B Metropolitana",
+      "home_team": "Juventude",
+      "kickoff_iso": "2026-08-25T19:30:00-03:00",
+      "league": "Serie B",
       "market_family_counts": {
         "CARDS": 0,
         "CORNERS": 0,
@@ -3631,339 +1359,97 @@
         "RESULT": 0,
         "SHOTS": 0
       },
-      "match": "Real Pilar x Brown DE Adrogue",
+      "match": "Juventude x CRB",
       "prediction_available": true,
       "prediction_risk_flags": [],
       "quality_guard": {
         "accepted_legs": 2,
         "rejected_examples": [
           {
-            "market": "Escanteios",
+            "market": "Total de gols",
             "reasons": [
-              "source_history=77%/22",
-              "non_half_line_rejected"
+              "selection_history=71%/7",
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "under45_requires_8_books",
+              "recent_under45=100%",
+              "recent_5plus=0%"
             ],
-            "selection": "Menos de 14 escanteios"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 5.5 escanteios"
+            "selection": "Menos de 4.5 gols"
           },
           {
             "market": "Total de gols",
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "non_half_line_rejected"
             ],
-            "selection": "Menos de 3.25 gols"
+            "selection": "Mais de 0.75 gols"
+          },
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "non_half_line_rejected"
+            ],
+            "selection": "Menos de 3.75 gols"
           },
           {
             "market": "Escanteios",
             "reasons": [
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
+              "source_history=78%/23",
+              "non_half_line_rejected"
             ],
-            "selection": "Mais de 6 escanteios"
+            "selection": "Mais de 5 escanteios"
           }
         ],
-        "rejected_legs": 21
+        "rejected_legs": 30
       },
       "recent_form": {
-        "avg_total_goals": 1.333,
+        "avg_total_goals": 1.083,
         "five_plus_rate": 0.0,
         "max_total_goals": 3,
-        "over_1_5_rate": 0.3333,
-        "over_2_5_rate": 0.1667,
+        "over_1_5_rate": 0.25,
+        "over_2_5_rate": 0.0833,
         "sample": 12,
-        "under_2_5_rate": 0.8333,
+        "under_2_5_rate": 0.9167,
         "under_3_5_rate": 1.0,
         "under_4_5_rate": 1.0
       },
-      "score": 89.2,
+      "score": 90.0,
       "under_over": "-3.5"
     },
     {
-      "advice": "Combo Double chance : draw or Argentino Quilmes and -3.5 goals",
-      "away_probability": 0.45,
-      "away_team": "Argentino Quilmes",
-      "best_market": {
-        "away_team": "Argentino Quilmes",
-        "bookmaker": "10Bet",
-        "bookmaker_count": 8,
-        "bookmaker_quotes": {
-          "10Bet": 1.17,
-          "1xBet": 1.08,
-          "Bet365": 1.14,
-          "BetVictor": 1.06,
-          "Betano": 1.13,
-          "Marathonbet": 1.08,
-          "Superbet": 1.1,
-          "Unibet": 1.14
-        },
-        "consensus_odd": 1.11,
-        "country": "Argentina",
-        "edge": -0.0269,
-        "fixture_id": 1499601,
-        "home_team": "San Martín Burzaco",
-        "implied_probability": 0.8969,
-        "individual_score_band": "ELITE_88_PLUS",
-        "kickoff_iso": "2026-08-25T15:00:00-03:00",
-        "league": "Primera B Metropolitana",
-        "market": "Total de gols",
-        "market_family": "GOALS",
-        "match": "San Martín Burzaco x Argentino Quilmes",
-        "model_probability": 0.87,
-        "odd": 1.17,
-        "pre_guard_score": 88.1,
-        "quality_guard": {
-          "accepted": true,
-          "elite_score": 88.0,
-          "min_probability": 0.8,
-          "min_score": 84.0,
-          "raw_score_floor": 84.0,
-          "reasons": [
-            "selection_history=78%/9",
-            "family_history=78%/23",
-            "source_history=77%/22",
-            "recent_under35=92%",
-            "recent_5plus=8%"
-          ],
-          "recent_sample": 12
-        },
-        "quality_score": 91.9,
-        "rationale": "Mercado goals confirmado por 8 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
-        "raw_market": "Goals Over/Under",
-        "raw_selection": "Under 3.5",
-        "risk_flags": [],
-        "score": 88.1,
-        "selection": "Menos de 3.5 gols",
-        "settlement_line": 3.5,
-        "settlement_metric": "goals",
-        "settlement_operator": "under",
-        "settlement_scope": "match",
-        "signal_source": "MULTI_MARKET_CONSENSUS"
-      },
-      "country": "Argentina",
-      "decision": "USABLE",
-      "draw_probability": 0.45,
-      "eligible_legs": [
-        {
-          "away_team": "Argentino Quilmes",
-          "bookmaker": "10Bet",
-          "bookmaker_count": 8,
-          "bookmaker_quotes": {
-            "10Bet": 1.17,
-            "1xBet": 1.08,
-            "Bet365": 1.14,
-            "BetVictor": 1.06,
-            "Betano": 1.13,
-            "Marathonbet": 1.08,
-            "Superbet": 1.1,
-            "Unibet": 1.14
-          },
-          "consensus_odd": 1.11,
-          "country": "Argentina",
-          "edge": -0.0269,
-          "fixture_id": 1499601,
-          "home_team": "San Martín Burzaco",
-          "implied_probability": 0.8969,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T15:00:00-03:00",
-          "league": "Primera B Metropolitana",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "San Martín Burzaco x Argentino Quilmes",
-          "model_probability": 0.87,
-          "odd": 1.17,
-          "pre_guard_score": 88.1,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.8,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "selection_history=78%/9",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "recent_under35=92%",
-              "recent_5plus=8%"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 91.9,
-          "rationale": "Mercado goals confirmado por 8 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Under 3.5",
-          "risk_flags": [],
-          "score": 88.1,
-          "selection": "Menos de 3.5 gols",
-          "settlement_line": 3.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "under",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        },
-        {
-          "away_team": "Argentino Quilmes",
-          "bookmaker": "Betano",
-          "bookmaker_count": 7,
-          "bookmaker_quotes": {
-            "10Bet": 1.12,
-            "1xBet": 1.09,
-            "Bet365": 1.12,
-            "BetVictor": 1.06,
-            "Betano": 1.13,
-            "Marathonbet": 1.08,
-            "Superbet": 1.1
-          },
-          "consensus_odd": 1.1,
-          "country": "Argentina",
-          "edge": -0.0273,
-          "fixture_id": 1499601,
-          "home_team": "San Martín Burzaco",
-          "implied_probability": 0.9091,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T15:00:00-03:00",
-          "league": "Primera B Metropolitana",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "San Martín Burzaco x Argentino Quilmes",
-          "model_probability": 0.8818,
-          "odd": 1.13,
-          "pre_guard_score": 88.0,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 89.5,
-          "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Over 0.5",
-          "risk_flags": [],
-          "score": 88.0,
-          "selection": "Mais de 0.5 gols",
-          "settlement_line": 0.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        }
-      ],
-      "fixture_id": 1499601,
-      "home_probability": 0.1,
-      "home_team": "San Martín Burzaco",
-      "kickoff_iso": "2026-08-25T15:00:00-03:00",
-      "league": "Primera B Metropolitana",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 2,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "San Martín Burzaco x Argentino Quilmes",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 2,
-        "rejected_examples": [
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 14 escanteios"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 5.5 escanteios"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 3.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 0.75 gols"
-          }
-        ],
-        "rejected_legs": 21
-      },
-      "recent_form": {
-        "avg_total_goals": 1.417,
-        "five_plus_rate": 0.0833,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.5,
-        "over_2_5_rate": 0.1667,
-        "sample": 12,
-        "under_2_5_rate": 0.8333,
-        "under_3_5_rate": 0.9167,
-        "under_4_5_rate": 0.9167
-      },
-      "score": 88.1,
-      "under_over": "-3.5"
-    },
-    {
-      "advice": "Double chance : UAI Urquiza or draw",
+      "advice": "Combo Double chance : Alianza Atletico or draw and +1.5 goals",
       "away_probability": 0.1,
-      "away_team": "Deportivo Laferrere",
+      "away_team": "UTC Cajamarca",
       "best_market": {
-        "away_team": "Deportivo Laferrere",
+        "away_team": "UTC Cajamarca",
         "bookmaker": "Betano",
-        "bookmaker_count": 7,
+        "bookmaker_count": 5,
         "bookmaker_quotes": {
-          "10Bet": 1.12,
-          "1xBet": 1.09,
-          "Bet365": 1.12,
-          "BetVictor": 1.07,
-          "Betano": 1.13,
-          "Marathonbet": 1.09,
-          "Superbet": 1.1
+          "1xBet": 1.02,
+          "Bet365": 1.06,
+          "BetVictor": 1.03,
+          "Betano": 1.07,
+          "Betfair": 1.02
         },
-        "consensus_odd": 1.1,
-        "country": "Argentina",
-        "edge": -0.0273,
-        "fixture_id": 1499603,
-        "home_team": "UAI Urquiza",
-        "implied_probability": 0.9091,
+        "consensus_odd": 1.03,
+        "country": "Peru",
+        "edge": -0.0291,
+        "fixture_id": 1589394,
+        "home_team": "Alianza Atletico",
+        "implied_probability": 0.9709,
         "individual_score_band": "ELITE_88_PLUS",
-        "kickoff_iso": "2026-08-25T15:00:00-03:00",
-        "league": "Primera B Metropolitana",
+        "kickoff_iso": "2026-08-25T17:00:00-03:00",
+        "league": "Copa De La Liga",
         "market": "Total de gols",
         "market_family": "GOALS",
-        "match": "UAI Urquiza x Deportivo Laferrere",
-        "model_probability": 0.8818,
-        "odd": 1.13,
-        "pre_guard_score": 88.0,
+        "match": "Alianza Atletico x UTC Cajamarca",
+        "model_probability": 0.9417,
+        "odd": 1.07,
+        "pre_guard_score": 90.2,
         "quality_guard": {
           "accepted": true,
           "elite_score": 88.0,
@@ -3971,17 +1457,17 @@
           "min_score": 84.0,
           "raw_score_floor": 84.0,
           "reasons": [
-            "family_history=78%/23",
-            "source_history=77%/22"
+            "family_history=79%/24",
+            "source_history=78%/23"
           ],
           "recent_sample": 12
         },
-        "quality_score": 89.5,
-        "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
+        "quality_score": 92.7,
+        "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 94%; seleção full-time com regra automática de conferência.",
         "raw_market": "Goals Over/Under",
         "raw_selection": "Over 0.5",
         "risk_flags": [],
-        "score": 88.0,
+        "score": 90.2,
         "selection": "Mais de 0.5 gols",
         "settlement_line": 0.5,
         "settlement_metric": "goals",
@@ -3989,38 +1475,36 @@
         "settlement_scope": "match",
         "signal_source": "MULTI_MARKET_CONSENSUS"
       },
-      "country": "Argentina",
+      "country": "Peru",
       "decision": "USABLE",
       "draw_probability": 0.45,
       "eligible_legs": [
         {
-          "away_team": "Deportivo Laferrere",
+          "away_team": "UTC Cajamarca",
           "bookmaker": "Betano",
-          "bookmaker_count": 7,
+          "bookmaker_count": 5,
           "bookmaker_quotes": {
-            "10Bet": 1.12,
-            "1xBet": 1.09,
-            "Bet365": 1.12,
-            "BetVictor": 1.07,
-            "Betano": 1.13,
-            "Marathonbet": 1.09,
-            "Superbet": 1.1
+            "1xBet": 1.02,
+            "Bet365": 1.06,
+            "BetVictor": 1.03,
+            "Betano": 1.07,
+            "Betfair": 1.02
           },
-          "consensus_odd": 1.1,
-          "country": "Argentina",
-          "edge": -0.0273,
-          "fixture_id": 1499603,
-          "home_team": "UAI Urquiza",
-          "implied_probability": 0.9091,
+          "consensus_odd": 1.03,
+          "country": "Peru",
+          "edge": -0.0291,
+          "fixture_id": 1589394,
+          "home_team": "Alianza Atletico",
+          "implied_probability": 0.9709,
           "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T15:00:00-03:00",
-          "league": "Primera B Metropolitana",
+          "kickoff_iso": "2026-08-25T17:00:00-03:00",
+          "league": "Copa De La Liga",
           "market": "Total de gols",
           "market_family": "GOALS",
-          "match": "UAI Urquiza x Deportivo Laferrere",
-          "model_probability": 0.8818,
-          "odd": 1.13,
-          "pre_guard_score": 88.0,
+          "match": "Alianza Atletico x UTC Cajamarca",
+          "model_probability": 0.9417,
+          "odd": 1.07,
+          "pre_guard_score": 90.2,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -4028,17 +1512,284 @@
             "min_score": 84.0,
             "raw_score_floor": 84.0,
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22"
+              "family_history=79%/24",
+              "source_history=78%/23"
             ],
             "recent_sample": 12
           },
-          "quality_score": 89.5,
-          "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
+          "quality_score": 92.7,
+          "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 94%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
           "risk_flags": [],
-          "score": 88.0,
+          "score": 90.2,
+          "selection": "Mais de 0.5 gols",
+          "settlement_line": 0.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS"
+        }
+      ],
+      "fixture_id": 1589394,
+      "home_probability": 0.45,
+      "home_team": "Alianza Atletico",
+      "kickoff_iso": "2026-08-25T17:00:00-03:00",
+      "league": "Copa De La Liga",
+      "market_family_counts": {
+        "CARDS": 0,
+        "CORNERS": 0,
+        "GOALS": 1,
+        "RESULT": 0,
+        "SHOTS": 0
+      },
+      "match": "Alianza Atletico x UTC Cajamarca",
+      "prediction_available": true,
+      "prediction_risk_flags": [],
+      "quality_guard": {
+        "accepted_legs": 1,
+        "rejected_examples": [
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "selection_history=71%/7",
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "under45_requires_8_books",
+              "recent_under45=83%",
+              "recent_5plus=17%",
+              "recent_under45_not_stable"
+            ],
+            "selection": "Menos de 4.5 gols"
+          },
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "non_half_line_rejected"
+            ],
+            "selection": "Menos de 4 gols"
+          },
+          {
+            "market": "Escanteios",
+            "reasons": [
+              "source_history=78%/23",
+              "non_half_line_rejected"
+            ],
+            "selection": "Menos de 14 escanteios"
+          },
+          {
+            "market": "Escanteios",
+            "reasons": [
+              "source_history=78%/23",
+              "raw_individual_score_below_84"
+            ],
+            "selection": "Menos de 11.5 escanteios"
+          }
+        ],
+        "rejected_legs": 28
+      },
+      "recent_form": {
+        "avg_total_goals": 3.0,
+        "five_plus_rate": 0.1667,
+        "max_total_goals": 5,
+        "over_1_5_rate": 0.75,
+        "over_2_5_rate": 0.5833,
+        "sample": 12,
+        "under_2_5_rate": 0.4167,
+        "under_3_5_rate": 0.4167,
+        "under_4_5_rate": 0.8333
+      },
+      "score": 90.2,
+      "under_over": "+1.5"
+    },
+    {
+      "advice": "Combo Double chance : Afturelding or draw and +1.5 goals",
+      "away_probability": 0.1,
+      "away_team": "Grotta",
+      "best_market": null,
+      "country": "Iceland",
+      "decision": "REJECTED",
+      "draw_probability": 0.45,
+      "eligible_legs": [],
+      "fixture_id": 1514238,
+      "home_probability": 0.45,
+      "home_team": "Afturelding",
+      "kickoff_iso": "2026-08-25T16:15:00-03:00",
+      "league": "1. Deild",
+      "market_family_counts": {
+        "CARDS": 0,
+        "CORNERS": 0,
+        "GOALS": 0,
+        "RESULT": 0,
+        "SHOTS": 0
+      },
+      "match": "Afturelding x Grotta",
+      "prediction_available": true,
+      "prediction_risk_flags": [],
+      "quality_guard": {
+        "accepted_legs": 0,
+        "rejected_examples": [
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "bookmakers<5",
+              "recent_over15=92%"
+            ],
+            "selection": "Mais de 1.5 gols"
+          },
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "non_half_line_rejected"
+            ],
+            "selection": "Mais de 2.25 gols"
+          },
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "recent_over25=75%",
+              "probability_below_82%"
+            ],
+            "selection": "Mais de 2.5 gols"
+          },
+          {
+            "market": "Dupla chance",
+            "reasons": [
+              "family_history=64%/11",
+              "source_history=80%/5",
+              "raw_individual_score_below_84"
+            ],
+            "selection": "Home/Draw"
+          }
+        ],
+        "rejected_legs": 8
+      },
+      "recent_form": {
+        "avg_total_goals": 4.167,
+        "five_plus_rate": 0.5,
+        "max_total_goals": 7,
+        "over_1_5_rate": 0.9167,
+        "over_2_5_rate": 0.75,
+        "sample": 12,
+        "under_2_5_rate": 0.25,
+        "under_3_5_rate": 0.3333,
+        "under_4_5_rate": 0.5
+      },
+      "score": 0,
+      "under_over": "+1.5"
+    },
+    {
+      "advice": "Combo Double chance : draw or Bogota FC and -3.5 goals",
+      "away_probability": 0.45,
+      "away_team": "Bogota FC",
+      "best_market": {
+        "away_team": "Bogota FC",
+        "bookmaker": "10Bet",
+        "bookmaker_count": 5,
+        "bookmaker_quotes": {
+          "10Bet": 1.1,
+          "1xBet": 1.06,
+          "Betfair": 1.07,
+          "Marathonbet": 1.06,
+          "Superbet": 1.09
+        },
+        "consensus_odd": 1.07,
+        "country": "Colombia",
+        "edge": -0.028,
+        "fixture_id": 1549603,
+        "home_team": "Popayan",
+        "implied_probability": 0.9346,
+        "individual_score_band": "STRONG_84_TO_87_9",
+        "kickoff_iso": "2026-08-25T17:30:00-03:00",
+        "league": "Primera B",
+        "market": "Total de gols",
+        "market_family": "GOALS",
+        "match": "Popayan x Bogota FC",
+        "model_probability": 0.9065,
+        "odd": 1.1,
+        "pre_guard_score": 87.9,
+        "quality_guard": {
+          "accepted": true,
+          "elite_score": 88.0,
+          "min_probability": 0.84,
+          "min_score": 84.0,
+          "raw_score_floor": 84.0,
+          "reasons": [
+            "family_history=79%/24",
+            "source_history=78%/23"
+          ],
+          "recent_sample": 9
+        },
+        "quality_score": 90.4,
+        "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 91%; seleção full-time com regra automática de conferência.",
+        "raw_market": "Goals Over/Under",
+        "raw_selection": "Over 0.5",
+        "risk_flags": [],
+        "score": 87.9,
+        "selection": "Mais de 0.5 gols",
+        "settlement_line": 0.5,
+        "settlement_metric": "goals",
+        "settlement_operator": "over",
+        "settlement_scope": "match",
+        "signal_source": "MULTI_MARKET_CONSENSUS"
+      },
+      "country": "Colombia",
+      "decision": "USABLE",
+      "draw_probability": 0.45,
+      "eligible_legs": [
+        {
+          "away_team": "Bogota FC",
+          "bookmaker": "10Bet",
+          "bookmaker_count": 5,
+          "bookmaker_quotes": {
+            "10Bet": 1.1,
+            "1xBet": 1.06,
+            "Betfair": 1.07,
+            "Marathonbet": 1.06,
+            "Superbet": 1.09
+          },
+          "consensus_odd": 1.07,
+          "country": "Colombia",
+          "edge": -0.028,
+          "fixture_id": 1549603,
+          "home_team": "Popayan",
+          "implied_probability": 0.9346,
+          "individual_score_band": "STRONG_84_TO_87_9",
+          "kickoff_iso": "2026-08-25T17:30:00-03:00",
+          "league": "Primera B",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Popayan x Bogota FC",
+          "model_probability": 0.9065,
+          "odd": 1.1,
+          "pre_guard_score": 87.9,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.84,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "family_history=79%/24",
+              "source_history=78%/23"
+            ],
+            "recent_sample": 9
+          },
+          "quality_score": 90.4,
+          "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 91%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 0.5",
+          "risk_flags": [],
+          "score": 87.9,
           "selection": "Mais de 0.5 gols",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
@@ -4047,32 +1798,33 @@
           "signal_source": "MULTI_MARKET_CONSENSUS"
         },
         {
-          "away_team": "Deportivo Laferrere",
-          "bookmaker": "Betano",
-          "bookmaker_count": 6,
+          "away_team": "Bogota FC",
+          "bookmaker": "Betfair",
+          "bookmaker_count": 7,
           "bookmaker_quotes": {
-            "1xBet": 1.09,
-            "Bet365": 1.12,
-            "BetVictor": 1.06,
-            "Betano": 1.14,
-            "Marathonbet": 1.09,
-            "Superbet": 1.09
+            "10Bet": 1.15,
+            "1xBet": 1.14,
+            "BetVictor": 1.14,
+            "Betano": 1.17,
+            "Betfair": 1.17,
+            "Marathonbet": 1.14,
+            "Superbet": 1.16
           },
-          "consensus_odd": 1.09,
-          "country": "Argentina",
-          "edge": -0.0275,
-          "fixture_id": 1499603,
-          "home_team": "UAI Urquiza",
-          "implied_probability": 0.9174,
+          "consensus_odd": 1.15,
+          "country": "Colombia",
+          "edge": -0.0261,
+          "fixture_id": 1549603,
+          "home_team": "Popayan",
+          "implied_probability": 0.8696,
           "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T15:00:00-03:00",
-          "league": "Primera B Metropolitana",
+          "kickoff_iso": "2026-08-25T17:30:00-03:00",
+          "league": "Primera B",
           "market": "Total de gols",
           "market_family": "GOALS",
-          "match": "UAI Urquiza x Deportivo Laferrere",
-          "model_probability": 0.8899,
-          "odd": 1.14,
-          "pre_guard_score": 87.7,
+          "match": "Popayan x Bogota FC",
+          "model_probability": 0.8435,
+          "odd": 1.17,
+          "pre_guard_score": 85.5,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -4081,19 +1833,19 @@
             "raw_score_floor": 84.0,
             "reasons": [
               "selection_history=78%/9",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "recent_under35=83%",
-              "recent_5plus=8%"
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "recent_under35=78%",
+              "recent_5plus=11%"
             ],
-            "recent_sample": 12
+            "recent_sample": 9
           },
-          "quality_score": 90.9,
-          "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 89%; seleção full-time com regra automática de conferência.",
+          "quality_score": 89.2,
+          "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 84%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 3.5",
           "risk_flags": [],
-          "score": 87.7,
+          "score": 85.5,
           "selection": "Menos de 3.5 gols",
           "settlement_line": 3.5,
           "settlement_metric": "goals",
@@ -4102,11 +1854,11 @@
           "signal_source": "MULTI_MARKET_CONSENSUS"
         }
       ],
-      "fixture_id": 1499603,
-      "home_probability": 0.45,
-      "home_team": "UAI Urquiza",
-      "kickoff_iso": "2026-08-25T15:00:00-03:00",
-      "league": "Primera B Metropolitana",
+      "fixture_id": 1549603,
+      "home_probability": 0.1,
+      "home_team": "Popayan",
+      "kickoff_iso": "2026-08-25T17:30:00-03:00",
+      "league": "Primera B",
       "market_family_counts": {
         "CARDS": 0,
         "CORNERS": 0,
@@ -4114,7 +1866,7 @@
         "RESULT": 0,
         "SHOTS": 0
       },
-      "match": "UAI Urquiza x Deportivo Laferrere",
+      "match": "Popayan x Bogota FC",
       "prediction_available": true,
       "prediction_risk_flags": [],
       "quality_guard": {
@@ -4123,58 +1875,59 @@
           {
             "market": "Total de gols",
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "non_half_line_rejected"
             ],
-            "selection": "Menos de 3.25 gols"
+            "selection": "Mais de 0.75 gols"
+          },
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "non_half_line_rejected"
+            ],
+            "selection": "Menos de 3.75 gols"
           },
           {
             "market": "Escanteios",
             "reasons": [
-              "source_history=77%/22",
+              "source_history=78%/23",
               "raw_individual_score_below_84"
             ],
-            "selection": "Menos de 13 escanteios"
+            "selection": "Mais de 5.75 escanteios"
           },
           {
             "market": "Escanteios",
             "reasons": [
-              "source_history=77%/22",
+              "source_history=78%/23",
               "raw_individual_score_below_84"
             ],
-            "selection": "Menos de 11.5 escanteios"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 5.5 escanteios"
+            "selection": "Menos de 11.75 escanteios"
           }
         ],
-        "rejected_legs": 18
+        "rejected_legs": 22
       },
       "recent_form": {
-        "avg_total_goals": 2.417,
-        "five_plus_rate": 0.0833,
-        "max_total_goals": 8,
-        "over_1_5_rate": 0.8333,
-        "over_2_5_rate": 0.1667,
-        "sample": 12,
-        "under_2_5_rate": 0.8333,
-        "under_3_5_rate": 0.8333,
-        "under_4_5_rate": 0.9167
+        "avg_total_goals": 1.889,
+        "five_plus_rate": 0.1111,
+        "max_total_goals": 5,
+        "over_1_5_rate": 0.4444,
+        "over_2_5_rate": 0.3333,
+        "sample": 9,
+        "under_2_5_rate": 0.6667,
+        "under_3_5_rate": 0.7778,
+        "under_4_5_rate": 0.8889
       },
-      "score": 88.0,
-      "under_over": ""
+      "score": 87.9,
+      "under_over": "-3.5"
     }
   ],
   "api_minute_limit": 300,
-  "api_minute_remaining": 295,
-  "api_requests": 81,
-  "api_requests_remaining": 7112,
+  "api_minute_remaining": 299,
+  "api_requests": 33,
+  "api_requests_remaining": 7075,
   "approved": [
     {
       "bookmaker": "Betano",
@@ -4254,7 +2007,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1499601,
-          "fixture_status": "NS",
+          "fixture_status": "HT",
           "home_team": "San Martín Burzaco",
           "implied_probability": 0.7299,
           "kickoff_iso": "2026-08-25T15:00:00-03:00",
@@ -4267,7 +2020,7 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 71%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 2.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Partida ainda não encerrada (HT).",
           "risk_flags": [],
           "score": 77.4,
           "selection": "Menos de 2.5 gols",
@@ -4338,7 +2091,7 @@
           "risk_flags": [],
           "score": 80.6,
           "selection": "Menos de 4.5 gols",
-          "settled_at": "2026-08-25T15:00:42.455601-03:00",
+          "settled_at": "2026-08-25T15:57:00.755884-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
@@ -4381,7 +2134,7 @@
           "risk_flags": [],
           "score": 79.2,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-08-25T15:00:42.455738-03:00",
+          "settled_at": "2026-08-25T15:57:00.756021-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -4397,7 +2150,7 @@
       "quality_tier": "STRONG",
       "reason": "Bilhete multimercado Betano com partidas exclusivas e intervalo mínimo de 2 horas entre todos os jogos selecionados no board.",
       "score": 79.9,
-      "settled_at": "2026-08-25T15:00:42.455758-03:00",
+      "settled_at": "2026-08-25T15:57:00.756041-03:00",
       "status": "GREEN",
       "ticket_id": "B2",
       "total_odd": 1.61
@@ -4439,8 +2192,8 @@
     "historical GREEN/RED quality audit",
     "multi-market totals: goals, corners, yellow cards, shots and shots on target"
   ],
-  "deep_analyzed_matches": 24,
-  "eligible_legs": 27,
+  "deep_analyzed_matches": 8,
+  "eligible_legs": 16,
   "execution_bookmaker": "Betano",
   "execution_ready": false,
   "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
@@ -4450,9 +2203,9 @@
     "unique_fixtures": 4,
     "valid": true
   },
-  "fixtures_analyzed": 24,
+  "fixtures_analyzed": 8,
   "fixtures_found": 206,
-  "fixtures_ranked": 24,
+  "fixtures_ranked": 8,
   "fixtures_with_markets": 80,
   "history_summary": {
     "accuracy": 0.7428571428571429,
@@ -4484,13 +2237,13 @@
     "rule": "Every selected fixture must start at least 120 minutes apart from every other selected fixture.",
     "valid": true
   },
-  "last_run_at": "2026-08-25T13:29:29.121264-03:00",
+  "last_run_at": "2026-08-25T15:57:00.384987-03:00",
   "market_analysis": {
     "correlation_guard": "same fixture cannot be repeated across tickets",
     "eligible_by_family": {
       "CARDS": 0,
       "CORNERS": 3,
-      "GOALS": 24,
+      "GOALS": 13,
       "RESULT": 0,
       "SHOTS": 0
     },
@@ -4520,7 +2273,7 @@
     "selected_by_family": {
       "CARDS": 0,
       "CORNERS": 0,
-      "GOALS": 2,
+      "GOALS": 0,
       "RESULT": 0,
       "SHOTS": 0
     },
@@ -4536,7 +2289,7 @@
   "matches_with_odds": 80,
   "model_version": "football-accuracy-betano-v7-score84",
   "operational_date": "2026-08-25",
-  "predictions_available": 24,
+  "predictions_available": 8,
   "previous_published_tickets": [
     {
       "bookmaker": "Betano",
@@ -4682,7 +2435,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1510974,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "Växjö Norra",
           "implied_probability": 0.7937,
           "kickoff_iso": "2026-08-25T13:00:00-03:00",
@@ -4695,16 +2448,18 @@
           "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 77%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 4.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 3; linha under 4.5.",
+          "result_score": "1-2",
           "risk_flags": [],
           "score": 80.6,
           "selection": "Menos de 4.5 gols",
+          "settled_at": "2026-08-25T15:00:42.455601-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Kaisar",
@@ -4741,7 +2496,7 @@
           "risk_flags": [],
           "score": 79.2,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-08-25T13:10:56.126905-03:00",
+          "settled_at": "2026-08-25T15:00:42.455738-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -4757,7 +2512,8 @@
       "quality_tier": "STRONG",
       "reason": "Bilhete multimercado Betano com partidas exclusivas e intervalo mínimo de 2 horas entre todos os jogos selecionados no board.",
       "score": 79.9,
-      "status": "PENDING",
+      "settled_at": "2026-08-25T15:00:42.455758-03:00",
+      "status": "GREEN",
       "ticket_id": "B2",
       "total_odd": 1.61
     }
@@ -4770,22 +2526,22 @@
     ],
     "reason": "Todo bilhete que aparece no painel fica congelado; análises posteriores só podem acrescentar IDs ainda não publicados."
   },
-  "quality_rejected_legs": 436,
+  "quality_rejected_legs": 198,
   "rejected": [
     {
-      "advice": "Winner : Alfreton Town",
+      "advice": "Combo Double chance : Afturelding or draw and +1.5 goals",
       "away_probability": 0.1,
-      "away_team": "Hyde United",
+      "away_team": "Grotta",
       "best_market": null,
-      "country": "England",
+      "country": "Iceland",
       "decision": "REJECTED",
       "draw_probability": 0.45,
       "eligible_legs": [],
-      "fixture_id": 1596397,
+      "fixture_id": 1514238,
       "home_probability": 0.45,
-      "home_team": "Alfreton Town",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
+      "home_team": "Afturelding",
+      "kickoff_iso": "2026-08-25T16:15:00-03:00",
+      "league": "1. Deild",
       "market_family_counts": {
         "CARDS": 0,
         "CORNERS": 0,
@@ -4793,7 +2549,7 @@
         "RESULT": 0,
         "SHOTS": 0
       },
-      "match": "Alfreton Town x Hyde United",
+      "match": "Afturelding x Grotta",
       "prediction_available": true,
       "prediction_risk_flags": [],
       "quality_guard": {
@@ -4802,186 +2558,32 @@
           {
             "market": "Total de gols",
             "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
+              "selection_history=100%/6",
+              "family_history=79%/24",
+              "source_history=78%/23",
               "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=100%",
-              "recent_5plus=0%"
+              "recent_over15=92%"
             ],
-            "selection": "Menos de 4.5 gols"
+            "selection": "Mais de 1.5 gols"
           },
           {
             "market": "Total de gols",
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
+              "family_history=79%/24",
+              "source_history=78%/23",
               "non_half_line_rejected"
             ],
-            "selection": "Menos de 4.25 gols"
+            "selection": "Mais de 2.25 gols"
           },
           {
             "market": "Total de gols",
             "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
+              "family_history=79%/24",
+              "source_history=78%/23",
+              "recent_over25=75%",
+              "probability_below_82%"
             ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4 gols"
-          }
-        ],
-        "rejected_legs": 12
-      },
-      "recent_form": {
-        "avg_total_goals": 2.25,
-        "five_plus_rate": 0.0,
-        "max_total_goals": 4,
-        "over_1_5_rate": 0.6667,
-        "over_2_5_rate": 0.5833,
-        "sample": 12,
-        "under_2_5_rate": 0.4167,
-        "under_3_5_rate": 0.9167,
-        "under_4_5_rate": 1.0
-      },
-      "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Combo Winner : Bury and +1.5 goals",
-      "away_probability": 0.1,
-      "away_team": "Lancaster City",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1596400,
-      "home_probability": 0.45,
-      "home_team": "Bury",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Bury x Lancaster City",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5"
-            ],
-            "selection": "Menos de 5.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=75%",
-              "recent_5plus=25%",
-              "recent_under45_not_stable",
-              "score_below_85"
-            ],
-            "selection": "Menos de 4.5 gols"
-          }
-        ],
-        "rejected_legs": 13
-      },
-      "recent_form": {
-        "avg_total_goals": 3.083,
-        "five_plus_rate": 0.25,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.6667,
-        "over_2_5_rate": 0.6667,
-        "sample": 12,
-        "under_2_5_rate": 0.3333,
-        "under_3_5_rate": 0.4167,
-        "under_4_5_rate": 0.75
-      },
-      "score": 0,
-      "under_over": "+1.5"
-    },
-    {
-      "advice": "Winner : Cleethorpes Town",
-      "away_probability": 0.1,
-      "away_team": "Whitby Town",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1596401,
-      "home_probability": 0.45,
-      "home_team": "Cleethorpes Town",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Cleethorpes Town x Whitby Town",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=83%",
-              "recent_5plus=17%",
-              "recent_under45_not_stable"
-            ],
-            "selection": "Menos de 4.5 gols"
+            "selection": "Mais de 2.5 gols"
           },
           {
             "market": "Dupla chance",
@@ -4991,723 +2593,27 @@
               "raw_individual_score_below_84"
             ],
             "selection": "Home/Draw"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 1.25 gols"
           }
         ],
-        "rejected_legs": 12
+        "rejected_legs": 8
       },
       "recent_form": {
-        "avg_total_goals": 3.083,
-        "five_plus_rate": 0.1667,
-        "max_total_goals": 5,
-        "over_1_5_rate": 1.0,
-        "over_2_5_rate": 0.5833,
-        "sample": 12,
-        "under_2_5_rate": 0.4167,
-        "under_3_5_rate": 0.6667,
-        "under_4_5_rate": 0.8333
-      },
-      "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Winner : Gainsborough Trinity",
-      "away_probability": 0.5,
-      "away_team": "Gainsborough Trinity",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.5,
-      "eligible_legs": [],
-      "fixture_id": 1596403,
-      "home_probability": 0.0,
-      "home_team": "Quorn",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Quorn x Gainsborough Trinity",
-      "prediction_available": true,
-      "prediction_risk_flags": [
-        "EXTREME_PROBABILITY",
-        "COARSE_PROBABILITY"
-      ],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=83%",
-              "recent_5plus=17%",
-              "recent_under45_not_stable"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4 gols"
-          }
-        ],
-        "rejected_legs": 12
-      },
-      "recent_form": {
-        "avg_total_goals": 2.583,
-        "five_plus_rate": 0.1667,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.75,
-        "over_2_5_rate": 0.5,
-        "sample": 12,
-        "under_2_5_rate": 0.5,
-        "under_3_5_rate": 0.75,
-        "under_4_5_rate": 0.8333
-      },
-      "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Combo Double chance : Redcar Athletic or draw and -3.5 goals",
-      "away_probability": 0.3,
-      "away_team": "AFC Emley",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.35,
-      "eligible_legs": [],
-      "fixture_id": 1596404,
-      "home_probability": 0.35,
-      "home_team": "Redcar Athletic",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Redcar Athletic x AFC Emley",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5"
-            ],
-            "selection": "Menos de 5.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4.5 gols"
-          }
-        ],
-        "rejected_legs": 12
-      },
-      "recent_form": {
-        "avg_total_goals": 2.182,
-        "five_plus_rate": 0.0909,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.6364,
-        "over_2_5_rate": 0.4545,
-        "sample": 11,
-        "under_2_5_rate": 0.5455,
-        "under_3_5_rate": 0.8182,
-        "under_4_5_rate": 0.9091
-      },
-      "score": 0,
-      "under_over": "-3.5"
-    },
-    {
-      "advice": "Winner : Warrington Town",
-      "away_probability": 0.1,
-      "away_team": "Curzon Ashton",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1596405,
-      "home_probability": 0.45,
-      "home_team": "Warrington Town",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Warrington Town x Curzon Ashton",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=83%",
-              "recent_5plus=17%",
-              "recent_under45_not_stable"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 1.25 gols"
-          }
-        ],
-        "rejected_legs": 13
-      },
-      "recent_form": {
-        "avg_total_goals": 3.0,
-        "five_plus_rate": 0.1667,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.8333,
+        "avg_total_goals": 4.167,
+        "five_plus_rate": 0.5,
+        "max_total_goals": 7,
+        "over_1_5_rate": 0.9167,
         "over_2_5_rate": 0.75,
         "sample": 12,
         "under_2_5_rate": 0.25,
-        "under_3_5_rate": 0.75,
-        "under_4_5_rate": 0.8333
+        "under_3_5_rate": 0.3333,
+        "under_4_5_rate": 0.5
       },
       "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Double chance : Bamber Bridge or draw",
-      "away_probability": 0.1,
-      "away_team": "United of Manchester",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1596399,
-      "home_probability": 0.45,
-      "home_team": "Bamber Bridge",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Bamber Bridge x United of Manchester",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5"
-            ],
-            "selection": "Menos de 5.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=83%",
-              "recent_5plus=17%",
-              "recent_under45_not_stable",
-              "score_below_85"
-            ],
-            "selection": "Menos de 4.5 gols"
-          }
-        ],
-        "rejected_legs": 14
-      },
-      "recent_form": {
-        "avg_total_goals": 3.083,
-        "five_plus_rate": 0.1667,
-        "max_total_goals": 7,
-        "over_1_5_rate": 0.8333,
-        "over_2_5_rate": 0.5833,
-        "sample": 12,
-        "under_2_5_rate": 0.4167,
-        "under_3_5_rate": 0.6667,
-        "under_4_5_rate": 0.8333
-      },
-      "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Winner : Guiseley AFC",
-      "away_probability": 0.1,
-      "away_team": "Stockton Town",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1596402,
-      "home_probability": 0.45,
-      "home_team": "Guiseley AFC",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Guiseley AFC x Stockton Town",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=83%",
-              "recent_5plus=17%",
-              "recent_under45_not_stable"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 1.25 gols"
-          }
-        ],
-        "rejected_legs": 14
-      },
-      "recent_form": {
-        "avg_total_goals": 2.833,
-        "five_plus_rate": 0.1667,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.8333,
-        "over_2_5_rate": 0.5,
-        "sample": 12,
-        "under_2_5_rate": 0.5,
-        "under_3_5_rate": 0.6667,
-        "under_4_5_rate": 0.8333
-      },
-      "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Combo Double chance : draw or Rylands and -3.5 goals",
-      "away_probability": 0.45,
-      "away_team": "Rylands",
-      "best_market": null,
-      "country": "England",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1596406,
-      "home_probability": 0.1,
-      "home_team": "Workington",
-      "kickoff_iso": "2026-08-25T15:45:00-03:00",
-      "league": "Non League Premier - Northern",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Workington x Rylands",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=83%",
-              "recent_5plus=17%",
-              "recent_under45_not_stable"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 1.25 gols"
-          }
-        ],
-        "rejected_legs": 14
-      },
-      "recent_form": {
-        "avg_total_goals": 2.5,
-        "five_plus_rate": 0.1667,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.6667,
-        "over_2_5_rate": 0.4167,
-        "sample": 12,
-        "under_2_5_rate": 0.5833,
-        "under_3_5_rate": 0.75,
-        "under_4_5_rate": 0.8333
-      },
-      "score": 0,
-      "under_over": "-3.5"
-    },
-    {
-      "advice": "Double chance : draw or Chemnitzer FC",
-      "away_probability": 0.45,
-      "away_team": "Chemnitzer FC",
-      "best_market": null,
-      "country": "Germany",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1586838,
-      "home_probability": 0.1,
-      "home_team": "Lokomotive Leipzig",
-      "kickoff_iso": "2026-08-25T14:00:00-03:00",
-      "league": "Regionalliga - Nordost",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Lokomotive Leipzig x Chemnitzer FC",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=67%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "under45_requires_8_books",
-              "recent_under45=75%",
-              "recent_5plus=25%",
-              "recent_under45_not_stable"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4 gols"
-          }
-        ],
-        "rejected_legs": 10
-      },
-      "recent_form": {
-        "avg_total_goals": 3.583,
-        "five_plus_rate": 0.25,
-        "max_total_goals": 6,
-        "over_1_5_rate": 0.9167,
-        "over_2_5_rate": 0.8333,
-        "sample": 12,
-        "under_2_5_rate": 0.1667,
-        "under_3_5_rate": 0.4167,
-        "under_4_5_rate": 0.75
-      },
-      "score": 0,
-      "under_over": ""
-    },
-    {
-      "advice": "Winner : Magdeburg II",
-      "away_probability": 0.1,
-      "away_team": "BSG Chemie Leipzig",
-      "best_market": null,
-      "country": "Germany",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1586840,
-      "home_probability": 0.45,
-      "home_team": "Magdeburg II",
-      "kickoff_iso": "2026-08-25T14:00:00-03:00",
-      "league": "Regionalliga - Nordost",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Magdeburg II x BSG Chemie Leipzig",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5"
-            ],
-            "selection": "Menos de 5.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=100%/6",
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "bookmakers<5",
-              "recent_over15=64%",
-              "recent_over15_below_70"
-            ],
-            "selection": "Mais de 1.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=78%/23",
-              "source_history=77%/22",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 1.75 gols"
-          }
-        ],
-        "rejected_legs": 12
-      },
-      "recent_form": {
-        "avg_total_goals": 2.818,
-        "five_plus_rate": 0.2727,
-        "max_total_goals": 6,
-        "over_1_5_rate": 0.6364,
-        "over_2_5_rate": 0.3636,
-        "sample": 11,
-        "under_2_5_rate": 0.6364,
-        "under_3_5_rate": 0.6364,
-        "under_4_5_rate": 0.7273
-      },
-      "score": 0,
-      "under_over": ""
+      "under_over": "+1.5"
     }
   ],
   "settlement": {
-    "checked_at": "2026-08-25T15:00:42.455775-03:00",
+    "checked_at": "2026-08-25T15:57:00.756051-03:00",
     "complete": false,
     "green": 1,
     "pending": 1,
@@ -5796,7 +2702,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1499601,
-          "fixture_status": "NS",
+          "fixture_status": "HT",
           "home_team": "San Martín Burzaco",
           "implied_probability": 0.7299,
           "kickoff_iso": "2026-08-25T15:00:00-03:00",
@@ -5809,7 +2715,7 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 71%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 2.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Partida ainda não encerrada (HT).",
           "risk_flags": [],
           "score": 77.4,
           "selection": "Menos de 2.5 gols",
@@ -5880,7 +2786,7 @@
           "risk_flags": [],
           "score": 80.6,
           "selection": "Menos de 4.5 gols",
-          "settled_at": "2026-08-25T15:00:42.455601-03:00",
+          "settled_at": "2026-08-25T15:57:00.755884-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
@@ -5923,7 +2829,7 @@
           "risk_flags": [],
           "score": 79.2,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-08-25T15:00:42.455738-03:00",
+          "settled_at": "2026-08-25T15:57:00.756021-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -5939,7 +2845,7 @@
       "quality_tier": "STRONG",
       "reason": "Bilhete multimercado Betano com partidas exclusivas e intervalo mínimo de 2 horas entre todos os jogos selecionados no board.",
       "score": 79.9,
-      "settled_at": "2026-08-25T15:00:42.455758-03:00",
+      "settled_at": "2026-08-25T15:57:00.756041-03:00",
       "status": "GREEN",
       "ticket_id": "B2",
       "total_odd": 1.61
@@ -5947,5 +2853,5 @@
   ],
   "tickets_ready": 2,
   "top_limit": 3,
-  "usable_matches": 13
+  "usable_matches": 7
 }
