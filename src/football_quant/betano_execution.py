@@ -19,7 +19,9 @@ TARGET_CENTER = 1.68
 MIN_KICKOFF_GAP_SECONDS = 2 * 60 * 60
 MAX_LEGS_PER_FIXTURE_IN_PAIR_POOL = 5
 MIN_NEW_LEG_PROBABILITY = 0.78
-MIN_NEW_LEG_SCORE = 80.0
+# Regra de publicação: toda perna nova precisa ter score bruto individual >= 84.
+MIN_NEW_LEG_SCORE = 84.0
+ELITE_LEG_SCORE = 88.0
 MIN_PAIR_COMBINED_PROBABILITY = 0.68
 MIN_SINGLE_PROBABILITY = 0.70
 MIN_BOOKMAKER_COUNT = 5
@@ -59,15 +61,24 @@ def _execution_leg(leg: dict[str, Any]) -> dict[str, Any] | None:
     if guard and guard.get("accepted") is False:
         return None
     probability = float(leg.get("model_probability") or 0)
-    quality_score = float(leg.get("quality_score") or leg.get("score") or 0)
+    raw_score = float(leg.get("score") or 0)
+    quality_score = float(leg.get("quality_score") or raw_score)
     books = int(leg.get("bookmaker_count") or 0)
-    if probability < MIN_NEW_LEG_PROBABILITY or quality_score < MIN_NEW_LEG_SCORE or books < MIN_BOOKMAKER_COUNT:
+    # O score bonificado nunca substitui o score bruto. Isso impede uma perna
+    # score 82 de ser promovida a 84 por bônus histórico.
+    if (
+        probability < MIN_NEW_LEG_PROBABILITY
+        or raw_score < MIN_NEW_LEG_SCORE
+        or quality_score < MIN_NEW_LEG_SCORE
+        or books < MIN_BOOKMAKER_COUNT
+    ):
         return None
     copy = dict(leg)
     copy["odd"] = round(odd, 2)
     copy["bookmaker"] = "Betano"
     copy["execution_bookmaker"] = "Betano"
     copy["execution_url"] = BETANO_URL
+    copy["individual_score_band"] = "ELITE_88_PLUS" if raw_score >= ELITE_LEG_SCORE else "STRONG_84_TO_87_9"
     copy.setdefault("status", "PENDING")
     return copy
 
@@ -108,18 +119,23 @@ def _quality_score(leg: dict[str, Any]) -> float:
     return float(leg.get("quality_score") or leg.get("score") or 0)
 
 
+def _raw_score(leg: dict[str, Any]) -> float:
+    return float(leg.get("score") or 0)
+
+
 def _quality(legs: list[dict[str, Any]], total: float) -> tuple[float, str]:
     probabilities = [float(leg.get("model_probability") or 0) for leg in legs]
-    scores = [_quality_score(leg) for leg in legs]
+    raw_scores = [_raw_score(leg) for leg in legs]
+    ranking_scores = [_quality_score(leg) for leg in legs]
     min_probability = min(probabilities)
     combined = math.prod(probabilities)
-    avg_score = sum(scores) / len(scores)
-    if min_probability >= 0.84 and min(scores) >= 84:
-        tier, bonus = "STRICT", 7.0
-    elif min_probability >= 0.80 and min(scores) >= 82:
-        tier, bonus = "STRONG", 3.5
+    avg_score = sum(ranking_scores) / len(ranking_scores)
+    if min_probability >= 0.84 and min(raw_scores) >= ELITE_LEG_SCORE:
+        tier, bonus = "ELITE", 10.0
+    elif min_probability >= 0.82 and min(raw_scores) >= MIN_NEW_LEG_SCORE:
+        tier, bonus = "STRICT", 6.0
     else:
-        tier, bonus = "SCREENED", 0.0
+        tier, bonus = "STRONG", 2.0
     family_bonus = sum(FAMILY_BONUS.get(_family(leg), 0.0) for leg in legs) / len(legs)
     cluster_penalty = 2.0 if any(_risk_cluster(leg) == "GOALS_UNDER" for leg in legs) else 0.0
     rating = avg_score + combined * 30 + bonus + family_bonus - abs(total - TARGET_CENTER) * 3 - cluster_penalty
@@ -128,7 +144,7 @@ def _quality(legs: list[dict[str, Any]], total: float) -> tuple[float, str]:
 
 def _ticket(ticket_id: int, legs: list[dict[str, Any]], total: float, tier: str) -> dict[str, Any]:
     estimated = math.prod(float(leg.get("model_probability") or 0) for leg in legs)
-    score = sum(_quality_score(leg) for leg in legs) / len(legs)
+    score = sum(_raw_score(leg) for leg in legs) / len(legs)
     families = sorted({_family(leg) for leg in legs})
     clusters = sorted({_risk_cluster(leg) for leg in legs})
     return {
@@ -139,13 +155,14 @@ def _ticket(ticket_id: int, legs: list[dict[str, Any]], total: float, tier: str)
         "total_odd": round(total, 2),
         "estimated_probability": round(estimated, 4),
         "score": round(score, 1),
+        "min_individual_score": round(min(_raw_score(leg) for leg in legs), 1),
         "market_families": families,
         "risk_clusters": clusters,
         "legs": legs,
         "status": "PENDING",
         "reason": (
-            "Bilhete accuracy-first: pernas filtradas por forma recente, histórico GREEN/RED, "
-            "consenso de casas, score mínimo, diversificação de risco e intervalo mínimo de 2 horas."
+            "Bilhete accuracy-first: cada perna nova possui score bruto >=84, com prioridade para 88+, "
+            "além de forma recente, histórico GREEN/RED, consenso de casas, diversificação e intervalo mínimo de 2 horas."
         ),
         "execution": {
             "ready": True,
@@ -241,7 +258,6 @@ def _pair_pool(legs: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 def _candidate_cluster_ok(candidate_legs: list[dict[str, Any]], portfolio_clusters: Counter[str]) -> bool:
     clusters = [_risk_cluster(leg) for leg in candidate_legs]
-    # The 24/08 failure mode was two independent unders inside the same ticket.
     if clusters.count("GOALS_UNDER") > 1:
         return False
     proposed = portfolio_clusters.copy()
@@ -262,6 +278,10 @@ def _candidate_probability_ok(candidate_legs: list[dict[str, Any]]) -> bool:
     return min(probabilities) >= 0.80 and combined >= MIN_PAIR_COMBINED_PROBABILITY
 
 
+def _candidate_raw_scores_ok(candidate_legs: list[dict[str, Any]]) -> bool:
+    return bool(candidate_legs) and all(_raw_score(leg) >= MIN_NEW_LEG_SCORE for leg in candidate_legs)
+
+
 def build_betano_tickets(payload: dict[str, Any]) -> list[dict[str, Any]]:
     legs: list[dict[str, Any]] = []
     seen_legs: set[tuple[Any, str, str]] = set()
@@ -280,12 +300,23 @@ def build_betano_tickets(payload: dict[str, Any]) -> list[dict[str, Any]]:
             seen_legs.add(key)
             legs.append(execution_leg)
 
-    legs.sort(key=lambda row: (-_quality_score(row), -float(row.get("model_probability") or 0)))
+    legs.sort(
+        key=lambda row: (
+            -int(_raw_score(row) >= ELITE_LEG_SCORE),
+            -_raw_score(row),
+            -_quality_score(row),
+            -float(row.get("model_probability") or 0),
+        )
+    )
     candidates: list[tuple[float, list[dict[str, Any]], float, str]] = []
 
     for leg in legs:
         total = float(leg["odd"])
-        if MIN_ODD <= total <= MAX_ODD and _candidate_probability_ok([leg]) and _quality_score(leg) >= 84:
+        if (
+            MIN_ODD <= total <= MAX_ODD
+            and _candidate_probability_ok([leg])
+            and _candidate_raw_scores_ok([leg])
+        ):
             rating, tier = _quality([leg], total)
             candidates.append((rating, [leg], total, tier))
 
@@ -296,12 +327,11 @@ def build_betano_tickets(payload: dict[str, Any]) -> list[dict[str, Any]]:
         if not _legs_have_required_spacing([left, right]):
             continue
         candidate_legs = [left, right]
+        if not _candidate_raw_scores_ok(candidate_legs):
+            continue
         if not _candidate_probability_ok(candidate_legs):
             continue
         if not _candidate_cluster_ok(candidate_legs, Counter()):
-            continue
-        avg_score = (_quality_score(left) + _quality_score(right)) / 2
-        if avg_score < 82:
             continue
         total = float(left["odd"]) * float(right["odd"])
         if not (MIN_ODD <= total <= MAX_ODD):
@@ -311,8 +341,9 @@ def build_betano_tickets(payload: dict[str, Any]) -> list[dict[str, Any]]:
 
     candidates.sort(key=lambda item: -item[0])
 
-    # Every ticket already shown in a partial board is immutable. The new run
-    # may only append B2/B3; it cannot replace a published ticket.
+    # Every ticket already shown in a partial board is immutable. The score-84
+    # rule applies to new publications only; historical/published tickets are
+    # never rewritten after appearing on screen.
     frozen = [dict(ticket) for ticket in (payload.get("previous_published_tickets") or [])][:TARGET]
     selected: list[dict[str, Any]] = list(frozen)
     seen: set[tuple[tuple[Any, str, str], ...]] = {_signature(ticket.get("legs") or []) for ticket in frozen}
@@ -339,6 +370,8 @@ def build_betano_tickets(payload: dict[str, Any]) -> list[dict[str, Any]]:
             continue
         fixtures = {leg.get("fixture_id") for leg in candidate_legs}
         if None in fixtures or not fixtures or fixtures & used_fixtures:
+            continue
+        if not _candidate_raw_scores_ok(candidate_legs):
             continue
         if not _legs_have_required_spacing(candidate_legs, used_kickoff_times):
             continue
@@ -397,9 +430,11 @@ def main() -> int:
     payload["accuracy_target"] = {
         "daily_goal": "at least 2 GREEN among 3 published tickets",
         "guaranteed": False,
+        "individual_score_rule": "every new ticket leg must have raw score >=84; score >=88 receives portfolio priority",
         "min_new_leg_probability": MIN_NEW_LEG_PROBABILITY,
         "min_pair_combined_probability": MIN_PAIR_COMBINED_PROBABILITY,
         "min_new_leg_score": MIN_NEW_LEG_SCORE,
+        "elite_leg_score": ELITE_LEG_SCORE,
         "min_bookmaker_count": MIN_BOOKMAKER_COUNT,
         "portfolio_cluster_caps": MAX_CLUSTER_LEGS,
     }
@@ -409,10 +444,12 @@ def main() -> int:
         "reason": "Todo bilhete que aparece no painel fica congelado; análises posteriores só podem acrescentar IDs ainda não publicados.",
     }
     payload["board_status"] = "READY" if len(tickets) == TARGET else ("PARTIAL" if tickets else "NO_TICKETS")
-    payload["strict_tickets"] = sum(1 for ticket in tickets if ticket.get("quality_tier") == "STRICT")
-    payload["model_version"] = "football-accuracy-betano-v6"
+    payload["strict_tickets"] = sum(1 for ticket in tickets if ticket.get("quality_tier") in {"STRICT", "ELITE"})
+    payload["model_version"] = "football-accuracy-betano-v7-score84"
     market_analysis = payload.setdefault("market_analysis", {})
     market_analysis["execution_bookmaker"] = "Betano"
+    market_analysis["individual_score_floor"] = MIN_NEW_LEG_SCORE
+    market_analysis["individual_score_priority"] = ELITE_LEG_SCORE
     market_analysis["selected_families"] = {
         family: sum(1 for ticket in tickets for leg in (ticket.get("legs") or []) if _family(leg) == family)
         for family in ("GOALS", "CORNERS", "CARDS", "SHOTS", "RESULT")
@@ -445,21 +482,23 @@ def main() -> int:
     status["kickoff_spacing_valid"] = bool(payload["kickoff_spacing"]["valid"])
     status["multi_market"] = True
     status["accuracy_first"] = True
+    status["min_individual_score"] = MIN_NEW_LEG_SCORE
+    status["elite_individual_score"] = ELITE_LEG_SCORE
     status["ticket_lock"] = bool((payload.get("ticket_lock") or {}).get("locked"))
     status["publication_immutable"] = True
     if len(tickets) == TARGET:
         status["status"] = "SUCCESS"
-        status["message"] = "3 bilhetes publicados com filtros accuracy-first; publicação congelada e meta operacional de 2 GREEN/3 monitorada."
+        status["message"] = "3 bilhetes publicados; toda perna nova tem score bruto >=84, com prioridade 88+, e a publicação permanece congelada."
     elif tickets:
         status["status"] = "SUCCESS"
-        status["message"] = f"{len(tickets)}/3 bilhetes passaram os filtros reforçados; o motor não reduz qualidade para completar a meta."
+        status["message"] = f"{len(tickets)}/3 bilhetes passaram score individual >=84 e demais filtros; o motor não reduz qualidade para completar a meta."
     else:
         status["status"] = "SUCCESS"
-        status["message"] = "Nenhum bilhete atingiu simultaneamente os novos filtros de acurácia, odd, espaçamento e diversificação."
+        status["message"] = "Nenhum bilhete atingiu simultaneamente score individual >=84, acurácia, odd, espaçamento e diversificação."
     _dump(status_path, status)
 
     print(
-        f"Betano accuracy-first tickets: {len(tickets)}/{TARGET}; "
+        f"Betano score84 accuracy-first tickets: {len(tickets)}/{TARGET}; "
         f"exclusive={status['fixture_exclusivity']}; spacing={status['kickoff_spacing_valid']}; locked={status['ticket_lock']}"
     )
     return 0
