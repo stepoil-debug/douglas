@@ -15,407 +15,6 @@
   },
   "all_matches": [
     {
-      "advice": "Combo Double chance : draw or Real Betis and -2.5 goals",
-      "away_probability": 0.45,
-      "away_team": "Real Betis",
-      "best_market": {
-        "away_team": "Real Betis",
-        "bookmaker": "Betano",
-        "bookmaker_count": 10,
-        "bookmaker_quotes": {
-          "10Bet": 1.06,
-          "1xBet": 1.02,
-          "888Sport": 1.06,
-          "Bet365": 1.07,
-          "BetVictor": 1.05,
-          "Betano": 1.09,
-          "Betfair": 1.03,
-          "Marathonbet": 1.02,
-          "Superbet": 1.07,
-          "Unibet": 1.05
-        },
-        "consensus_odd": 1.05,
-        "country": "Spain",
-        "edge": -0.0284,
-        "fixture_id": 1570342,
-        "home_team": "Valencia",
-        "implied_probability": 0.9479,
-        "individual_score_band": "ELITE_88_PLUS",
-        "kickoff_iso": "2026-08-25T16:00:00-03:00",
-        "league": "La Liga",
-        "market": "Total de gols",
-        "market_family": "GOALS",
-        "match": "Valencia x Real Betis",
-        "model_probability": 0.9194,
-        "odd": 1.09,
-        "pre_guard_score": 91.4,
-        "quality_guard": {
-          "accepted": true,
-          "elite_score": 88.0,
-          "min_probability": 0.84,
-          "min_score": 84.0,
-          "raw_score_floor": 84.0,
-          "reasons": [
-            "family_history=79%/24",
-            "source_history=78%/23"
-          ],
-          "recent_sample": 12
-        },
-        "quality_score": 93.9,
-        "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
-        "raw_market": "Goals Over/Under",
-        "raw_selection": "Over 0.5",
-        "risk_flags": [],
-        "score": 91.4,
-        "selection": "Mais de 0.5 gols",
-        "settlement_line": 0.5,
-        "settlement_metric": "goals",
-        "settlement_operator": "over",
-        "settlement_scope": "match",
-        "signal_source": "MULTI_MARKET_CONSENSUS"
-      },
-      "country": "Spain",
-      "decision": "USABLE",
-      "draw_probability": 0.45,
-      "eligible_legs": [
-        {
-          "away_team": "Real Betis",
-          "bookmaker": "Betano",
-          "bookmaker_count": 10,
-          "bookmaker_quotes": {
-            "10Bet": 1.06,
-            "1xBet": 1.02,
-            "888Sport": 1.06,
-            "Bet365": 1.07,
-            "BetVictor": 1.05,
-            "Betano": 1.09,
-            "Betfair": 1.03,
-            "Marathonbet": 1.02,
-            "Superbet": 1.07,
-            "Unibet": 1.05
-          },
-          "consensus_odd": 1.05,
-          "country": "Spain",
-          "edge": -0.0284,
-          "fixture_id": 1570342,
-          "home_team": "Valencia",
-          "implied_probability": 0.9479,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T16:00:00-03:00",
-          "league": "La Liga",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Valencia x Real Betis",
-          "model_probability": 0.9194,
-          "odd": 1.09,
-          "pre_guard_score": 91.4,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 93.9,
-          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Over 0.5",
-          "risk_flags": [],
-          "score": 91.4,
-          "selection": "Mais de 0.5 gols",
-          "settlement_line": 0.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        },
-        {
-          "away_team": "Real Betis",
-          "bookmaker": "Betano",
-          "bookmaker_count": 10,
-          "bookmaker_quotes": {
-            "10Bet": 1.08,
-            "1xBet": 1.03,
-            "888Sport": 1.08,
-            "Bet365": 1.08,
-            "BetVictor": 1.05,
-            "Betano": 1.1,
-            "Betfair": 1.05,
-            "Marathonbet": 1.03,
-            "Superbet": 1.08,
-            "Unibet": 1.06
-          },
-          "consensus_odd": 1.07,
-          "country": "Spain",
-          "edge": -0.028,
-          "fixture_id": 1570342,
-          "home_team": "Valencia",
-          "implied_probability": 0.9346,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T16:00:00-03:00",
-          "league": "La Liga",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Valencia x Real Betis",
-          "model_probability": 0.9065,
-          "odd": 1.1,
-          "pre_guard_score": 90.6,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "selection_history=71%/7",
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "recent_under45=100%",
-              "recent_5plus=0%"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 94.6,
-          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 91%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Under 4.5",
-          "risk_flags": [],
-          "score": 90.6,
-          "selection": "Menos de 4.5 gols",
-          "settlement_line": 4.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "under",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        },
-        {
-          "away_team": "Real Betis",
-          "bookmaker": "Superbet",
-          "bookmaker_count": 5,
-          "bookmaker_quotes": {
-            "1xBet": 1.05,
-            "Betano": 1.07,
-            "Betfair": 1.05,
-            "Marathonbet": 1.02,
-            "Superbet": 1.09
-          },
-          "consensus_odd": 1.05,
-          "country": "Spain",
-          "edge": -0.0286,
-          "fixture_id": 1570342,
-          "home_team": "Valencia",
-          "implied_probability": 0.9524,
-          "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T16:00:00-03:00",
-          "league": "La Liga",
-          "market": "Escanteios",
-          "market_family": "CORNERS",
-          "match": "Valencia x Real Betis",
-          "model_probability": 0.9238,
-          "odd": 1.09,
-          "pre_guard_score": 87.9,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.8,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "source_history=78%/23"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 88.9,
-          "rationale": "Mercado corners confirmado por 5 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Corners Over Under",
-          "raw_selection": "Over 5.5",
-          "risk_flags": [],
-          "score": 87.9,
-          "selection": "Mais de 5.5 escanteios",
-          "settlement_line": 5.5,
-          "settlement_metric": "corner_kicks",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        },
-        {
-          "away_team": "Real Betis",
-          "bookmaker": "Superbet",
-          "bookmaker_count": 6,
-          "bookmaker_quotes": {
-            "1xBet": 1.07,
-            "Betano": 1.1,
-            "Betfair": 1.07,
-            "Marathonbet": 1.05,
-            "Superbet": 1.14,
-            "Unibet": 1.09
-          },
-          "consensus_odd": 1.08,
-          "country": "Spain",
-          "edge": -0.0278,
-          "fixture_id": 1570342,
-          "home_team": "Valencia",
-          "implied_probability": 0.9259,
-          "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T16:00:00-03:00",
-          "league": "La Liga",
-          "market": "Escanteios",
-          "market_family": "CORNERS",
-          "match": "Valencia x Real Betis",
-          "model_probability": 0.8981,
-          "odd": 1.14,
-          "pre_guard_score": 87.1,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.8,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "source_history=78%/23"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 88.1,
-          "rationale": "Mercado corners confirmado por 6 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Corners Over Under",
-          "raw_selection": "Under 13.5",
-          "risk_flags": [],
-          "score": 87.1,
-          "selection": "Menos de 13.5 escanteios",
-          "settlement_line": 13.5,
-          "settlement_metric": "corner_kicks",
-          "settlement_operator": "under",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        },
-        {
-          "away_team": "Real Betis",
-          "bookmaker": "Superbet",
-          "bookmaker_count": 6,
-          "bookmaker_quotes": {
-            "1xBet": 1.13,
-            "Betano": 1.14,
-            "Betfair": 1.11,
-            "Marathonbet": 1.11,
-            "Superbet": 1.19,
-            "Unibet": 1.16
-          },
-          "consensus_odd": 1.14,
-          "country": "Spain",
-          "edge": -0.0264,
-          "fixture_id": 1570342,
-          "home_team": "Valencia",
-          "implied_probability": 0.8811,
-          "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T16:00:00-03:00",
-          "league": "La Liga",
-          "market": "Escanteios",
-          "market_family": "CORNERS",
-          "match": "Valencia x Real Betis",
-          "model_probability": 0.8546,
-          "odd": 1.19,
-          "pre_guard_score": 84.2,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.8,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "source_history=78%/23"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 85.2,
-          "rationale": "Mercado corners confirmado por 6 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Corners Over Under",
-          "raw_selection": "Over 6.5",
-          "risk_flags": [],
-          "score": 84.2,
-          "selection": "Mais de 6.5 escanteios",
-          "settlement_line": 6.5,
-          "settlement_metric": "corner_kicks",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        }
-      ],
-      "fixture_id": 1570342,
-      "home_probability": 0.1,
-      "home_team": "Valencia",
-      "kickoff_iso": "2026-08-25T16:00:00-03:00",
-      "league": "La Liga",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 3,
-        "GOALS": 2,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Valencia x Real Betis",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 5,
-        "rejected_examples": [
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=78%/23",
-              "bookmakers<5"
-            ],
-            "selection": "Menos de 14.5 escanteios"
-          },
-          {
-            "market": "Escanteios da equipe",
-            "reasons": [
-              "source_history=78%/23",
-              "bookmakers<5"
-            ],
-            "selection": "Mandante: Menos de 9.5 escanteios"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 1 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4 gols"
-          }
-        ],
-        "rejected_legs": 40
-      },
-      "recent_form": {
-        "avg_total_goals": 2.25,
-        "five_plus_rate": 0.0,
-        "max_total_goals": 4,
-        "over_1_5_rate": 0.5833,
-        "over_2_5_rate": 0.5,
-        "sample": 12,
-        "under_2_5_rate": 0.5,
-        "under_3_5_rate": 0.75,
-        "under_4_5_rate": 1.0
-      },
-      "score": 91.4,
-      "under_over": "-2.5"
-    },
-    {
       "advice": "Double chance : Excursionistas or draw",
       "away_probability": 0.1,
       "away_team": "Argentino de Merlo",
@@ -427,25 +26,25 @@
           "10Bet": 1.1,
           "1xBet": 1.04,
           "Bet365": 1.1,
-          "BetVictor": 1.04,
+          "BetVictor": 1.05,
           "Marathonbet": 1.04,
-          "Superbet": 1.06
+          "Superbet": 1.07
         },
-        "consensus_odd": 1.05,
+        "consensus_odd": 1.06,
         "country": "Argentina",
-        "edge": -0.0286,
+        "edge": -0.0283,
         "fixture_id": 1499598,
         "home_team": "Excursionistas",
-        "implied_probability": 0.9524,
+        "implied_probability": 0.9434,
         "individual_score_band": "ELITE_88_PLUS",
         "kickoff_iso": "2026-08-25T20:00:00-03:00",
         "league": "Primera B Metropolitana",
         "market": "Total de gols",
         "market_family": "GOALS",
         "match": "Excursionistas x Argentino de Merlo",
-        "model_probability": 0.9238,
+        "model_probability": 0.9151,
         "odd": 1.1,
-        "pre_guard_score": 89.9,
+        "pre_guard_score": 89.3,
         "quality_guard": {
           "accepted": true,
           "elite_score": 88.0,
@@ -453,17 +52,17 @@
           "min_score": 84.0,
           "raw_score_floor": 84.0,
           "reasons": [
-            "family_history=79%/24",
-            "source_history=78%/23"
+            "family_history=76%/25",
+            "source_history=75%/24"
           ],
           "recent_sample": 12
         },
-        "quality_score": 92.4,
+        "quality_score": 89.3,
         "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
         "raw_market": "Goals Over/Under",
         "raw_selection": "Over 0.5",
         "risk_flags": [],
-        "score": 89.9,
+        "score": 89.3,
         "selection": "Mais de 0.5 gols",
         "settlement_line": 0.5,
         "settlement_metric": "goals",
@@ -483,25 +82,25 @@
             "10Bet": 1.1,
             "1xBet": 1.04,
             "Bet365": 1.1,
-            "BetVictor": 1.04,
+            "BetVictor": 1.05,
             "Marathonbet": 1.04,
-            "Superbet": 1.06
+            "Superbet": 1.07
           },
-          "consensus_odd": 1.05,
+          "consensus_odd": 1.06,
           "country": "Argentina",
-          "edge": -0.0286,
+          "edge": -0.0283,
           "fixture_id": 1499598,
           "home_team": "Excursionistas",
-          "implied_probability": 0.9524,
+          "implied_probability": 0.9434,
           "individual_score_band": "ELITE_88_PLUS",
           "kickoff_iso": "2026-08-25T20:00:00-03:00",
           "league": "Primera B Metropolitana",
           "market": "Total de gols",
           "market_family": "GOALS",
           "match": "Excursionistas x Argentino de Merlo",
-          "model_probability": 0.9238,
+          "model_probability": 0.9151,
           "odd": 1.1,
-          "pre_guard_score": 89.9,
+          "pre_guard_score": 89.3,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -509,17 +108,17 @@
             "min_score": 84.0,
             "raw_score_floor": 84.0,
             "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23"
+              "family_history=76%/25",
+              "source_history=75%/24"
             ],
             "recent_sample": 12
           },
-          "quality_score": 92.4,
+          "quality_score": 89.3,
           "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
           "risk_flags": [],
-          "score": 89.9,
+          "score": 89.3,
           "selection": "Mais de 0.5 gols",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
@@ -529,32 +128,32 @@
         },
         {
           "away_team": "Argentino de Merlo",
-          "bookmaker": "Betano",
+          "bookmaker": "10Bet",
           "bookmaker_count": 7,
           "bookmaker_quotes": {
             "10Bet": 1.17,
-            "1xBet": 1.13,
+            "1xBet": 1.11,
             "Bet365": 1.17,
-            "BetVictor": 1.1,
-            "Betano": 1.18,
-            "Marathonbet": 1.13,
-            "Superbet": 1.14
+            "BetVictor": 1.09,
+            "Betano": 1.16,
+            "Marathonbet": 1.12,
+            "Superbet": 1.13
           },
-          "consensus_odd": 1.14,
+          "consensus_odd": 1.13,
           "country": "Argentina",
-          "edge": -0.0263,
+          "edge": -0.0265,
           "fixture_id": 1499598,
           "home_team": "Excursionistas",
-          "implied_probability": 0.8772,
+          "implied_probability": 0.885,
           "individual_score_band": "STRONG_84_TO_87_9",
           "kickoff_iso": "2026-08-25T20:00:00-03:00",
           "league": "Primera B Metropolitana",
           "market": "Total de gols",
           "market_family": "GOALS",
           "match": "Excursionistas x Argentino de Merlo",
-          "model_probability": 0.8509,
-          "odd": 1.18,
-          "pre_guard_score": 86.0,
+          "model_probability": 0.8584,
+          "odd": 1.17,
+          "pre_guard_score": 86.5,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -563,19 +162,19 @@
             "raw_score_floor": 84.0,
             "reasons": [
               "selection_history=78%/9",
-              "family_history=79%/24",
-              "source_history=78%/23",
+              "family_history=76%/25",
+              "source_history=75%/24",
               "recent_under35=75%",
               "recent_5plus=8%"
             ],
             "recent_sample": 12
           },
-          "quality_score": 89.5,
-          "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
+          "quality_score": 87.5,
+          "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 86%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 3.5",
           "risk_flags": [],
-          "score": 86.0,
+          "score": 86.5,
           "selection": "Menos de 3.5 gols",
           "settlement_line": 3.5,
           "settlement_metric": "goals",
@@ -606,8 +205,8 @@
             "market": "Total de gols",
             "reasons": [
               "selection_history=71%/7",
-              "family_history=79%/24",
-              "source_history=78%/23",
+              "family_history=76%/25",
+              "source_history=75%/24",
               "bookmakers<5",
               "under45_requires_8_books",
               "recent_under45=92%",
@@ -618,17 +217,8 @@
           {
             "market": "Total de gols",
             "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 0.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
+              "family_history=76%/25",
+              "source_history=75%/24",
               "non_half_line_rejected"
             ],
             "selection": "Menos de 3.75 gols"
@@ -636,8 +226,17 @@
           {
             "market": "Total de gols",
             "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "non_half_line_rejected"
+            ],
+            "selection": "Mais de 0.75 gols"
+          },
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "family_history=76%/25",
+              "source_history=75%/24",
               "non_half_line_rejected"
             ],
             "selection": "Mais de 1 gols"
@@ -656,1278 +255,14 @@
         "under_3_5_rate": 0.75,
         "under_4_5_rate": 0.9167
       },
-      "score": 89.9,
+      "score": 89.3,
       "under_over": ""
-    },
-    {
-      "advice": "Double chance : Deportivo Madryn or draw",
-      "away_probability": 0.1,
-      "away_team": "Godoy Cruz",
-      "best_market": {
-        "away_team": "Godoy Cruz",
-        "bookmaker": "Pinnacle",
-        "bookmaker_count": 11,
-        "bookmaker_quotes": {
-          "10Bet": 1.11,
-          "1xBet": 1.09,
-          "888Sport": 1.13,
-          "Bet365": 1.12,
-          "BetVictor": 1.07,
-          "Betano": 1.12,
-          "Betfair": 1.08,
-          "Marathonbet": 1.09,
-          "Pinnacle": 1.13,
-          "Superbet": 1.11,
-          "Unibet": 1.08
-        },
-        "consensus_odd": 1.11,
-        "country": "Argentina",
-        "edge": -0.027,
-        "fixture_id": 1498659,
-        "home_team": "Deportivo Madryn",
-        "implied_probability": 0.9009,
-        "individual_score_band": "ELITE_88_PLUS",
-        "kickoff_iso": "2026-08-25T19:00:00-03:00",
-        "league": "Primera Nacional",
-        "market": "Total de gols",
-        "market_family": "GOALS",
-        "match": "Deportivo Madryn x Godoy Cruz",
-        "model_probability": 0.8739,
-        "odd": 1.13,
-        "pre_guard_score": 88.4,
-        "quality_guard": {
-          "accepted": true,
-          "elite_score": 88.0,
-          "min_probability": 0.84,
-          "min_score": 84.0,
-          "raw_score_floor": 84.0,
-          "reasons": [
-            "family_history=79%/24",
-            "source_history=78%/23"
-          ],
-          "recent_sample": 12
-        },
-        "quality_score": 90.9,
-        "rationale": "Mercado goals confirmado por 11 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
-        "raw_market": "Goals Over/Under",
-        "raw_selection": "Over 0.5",
-        "risk_flags": [],
-        "score": 88.4,
-        "selection": "Mais de 0.5 gols",
-        "settlement_line": 0.5,
-        "settlement_metric": "goals",
-        "settlement_operator": "over",
-        "settlement_scope": "match",
-        "signal_source": "MULTI_MARKET_CONSENSUS"
-      },
-      "country": "Argentina",
-      "decision": "USABLE",
-      "draw_probability": 0.45,
-      "eligible_legs": [
-        {
-          "away_team": "Godoy Cruz",
-          "bookmaker": "Pinnacle",
-          "bookmaker_count": 11,
-          "bookmaker_quotes": {
-            "10Bet": 1.11,
-            "1xBet": 1.09,
-            "888Sport": 1.13,
-            "Bet365": 1.12,
-            "BetVictor": 1.07,
-            "Betano": 1.12,
-            "Betfair": 1.08,
-            "Marathonbet": 1.09,
-            "Pinnacle": 1.13,
-            "Superbet": 1.11,
-            "Unibet": 1.08
-          },
-          "consensus_odd": 1.11,
-          "country": "Argentina",
-          "edge": -0.027,
-          "fixture_id": 1498659,
-          "home_team": "Deportivo Madryn",
-          "implied_probability": 0.9009,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T19:00:00-03:00",
-          "league": "Primera Nacional",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Deportivo Madryn x Godoy Cruz",
-          "model_probability": 0.8739,
-          "odd": 1.13,
-          "pre_guard_score": 88.4,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 90.9,
-          "rationale": "Mercado goals confirmado por 11 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Over 0.5",
-          "risk_flags": [],
-          "score": 88.4,
-          "selection": "Mais de 0.5 gols",
-          "settlement_line": 0.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        }
-      ],
-      "fixture_id": 1498659,
-      "home_probability": 0.45,
-      "home_team": "Deportivo Madryn",
-      "kickoff_iso": "2026-08-25T19:00:00-03:00",
-      "league": "Primera Nacional",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 1,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Deportivo Madryn x Godoy Cruz",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 1,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=71%/7",
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "under45_requires_8_books",
-              "recent_under45=100%",
-              "recent_5plus=0%"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=78%/9",
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "recent_under35=67%",
-              "recent_5plus=0%",
-              "recent_under35_not_stable"
-            ],
-            "selection": "Menos de 3.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 3.75 gols"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 6 escanteios"
-          }
-        ],
-        "rejected_legs": 24
-      },
-      "recent_form": {
-        "avg_total_goals": 2.5,
-        "five_plus_rate": 0.0,
-        "max_total_goals": 4,
-        "over_1_5_rate": 0.6667,
-        "over_2_5_rate": 0.5833,
-        "sample": 12,
-        "under_2_5_rate": 0.4167,
-        "under_3_5_rate": 0.6667,
-        "under_4_5_rate": 1.0
-      },
-      "score": 88.4,
-      "under_over": ""
-    },
-    {
-      "advice": "Combo Double chance : draw or Botafogo SP and -3.5 goals",
-      "away_probability": 0.45,
-      "away_team": "Botafogo SP",
-      "best_market": {
-        "away_team": "Botafogo SP",
-        "bookmaker": "Betano",
-        "bookmaker_count": 9,
-        "bookmaker_quotes": {
-          "10Bet": 1.05,
-          "1xBet": 1.01,
-          "Bet365": 1.05,
-          "BetVictor": 1.03,
-          "Betano": 1.06,
-          "Betfair": 1.05,
-          "Marathonbet": 1.01,
-          "Superbet": 1.04,
-          "Unibet": 1.03
-        },
-        "consensus_odd": 1.04,
-        "country": "Brazil",
-        "edge": -0.0288,
-        "fixture_id": 1520831,
-        "home_team": "Atletico Goianiense",
-        "implied_probability": 0.9615,
-        "individual_score_band": "ELITE_88_PLUS",
-        "kickoff_iso": "2026-08-25T19:30:00-03:00",
-        "league": "Serie B",
-        "market": "Total de gols",
-        "market_family": "GOALS",
-        "match": "Atletico Goianiense x Botafogo SP",
-        "model_probability": 0.9327,
-        "odd": 1.06,
-        "pre_guard_score": 92.3,
-        "quality_guard": {
-          "accepted": true,
-          "elite_score": 88.0,
-          "min_probability": 0.84,
-          "min_score": 84.0,
-          "raw_score_floor": 84.0,
-          "reasons": [
-            "selection_history=71%/7",
-            "family_history=79%/24",
-            "source_history=78%/23",
-            "recent_under45=92%",
-            "recent_5plus=8%"
-          ],
-          "recent_sample": 12
-        },
-        "quality_score": 95.5,
-        "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 93%; seleção full-time com regra automática de conferência.",
-        "raw_market": "Goals Over/Under",
-        "raw_selection": "Under 4.5",
-        "risk_flags": [],
-        "score": 92.3,
-        "selection": "Menos de 4.5 gols",
-        "settlement_line": 4.5,
-        "settlement_metric": "goals",
-        "settlement_operator": "under",
-        "settlement_scope": "match",
-        "signal_source": "MULTI_MARKET_CONSENSUS"
-      },
-      "country": "Brazil",
-      "decision": "USABLE",
-      "draw_probability": 0.45,
-      "eligible_legs": [
-        {
-          "away_team": "Botafogo SP",
-          "bookmaker": "Betano",
-          "bookmaker_count": 9,
-          "bookmaker_quotes": {
-            "10Bet": 1.05,
-            "1xBet": 1.01,
-            "Bet365": 1.05,
-            "BetVictor": 1.03,
-            "Betano": 1.06,
-            "Betfair": 1.05,
-            "Marathonbet": 1.01,
-            "Superbet": 1.04,
-            "Unibet": 1.03
-          },
-          "consensus_odd": 1.04,
-          "country": "Brazil",
-          "edge": -0.0288,
-          "fixture_id": 1520831,
-          "home_team": "Atletico Goianiense",
-          "implied_probability": 0.9615,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T19:30:00-03:00",
-          "league": "Serie B",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Atletico Goianiense x Botafogo SP",
-          "model_probability": 0.9327,
-          "odd": 1.06,
-          "pre_guard_score": 92.3,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "selection_history=71%/7",
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "recent_under45=92%",
-              "recent_5plus=8%"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 95.5,
-          "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 93%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Under 4.5",
-          "risk_flags": [],
-          "score": 92.3,
-          "selection": "Menos de 4.5 gols",
-          "settlement_line": 4.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "under",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        },
-        {
-          "away_team": "Botafogo SP",
-          "bookmaker": "Pinnacle",
-          "bookmaker_count": 10,
-          "bookmaker_quotes": {
-            "10Bet": 1.1,
-            "1xBet": 1.06,
-            "Bet365": 1.1,
-            "BetVictor": 1.06,
-            "Betano": 1.11,
-            "Betfair": 1.07,
-            "Marathonbet": 1.06,
-            "Pinnacle": 1.11,
-            "Superbet": 1.08,
-            "Unibet": 1.07
-          },
-          "consensus_odd": 1.07,
-          "country": "Brazil",
-          "edge": -0.0279,
-          "fixture_id": 1520831,
-          "home_team": "Atletico Goianiense",
-          "implied_probability": 0.9302,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T19:30:00-03:00",
-          "league": "Serie B",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Atletico Goianiense x Botafogo SP",
-          "model_probability": 0.9023,
-          "odd": 1.11,
-          "pre_guard_score": 90.3,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 92.8,
-          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Over 0.5",
-          "risk_flags": [],
-          "score": 90.3,
-          "selection": "Mais de 0.5 gols",
-          "settlement_line": 0.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        },
-        {
-          "away_team": "Botafogo SP",
-          "bookmaker": "Betfair",
-          "bookmaker_count": 10,
-          "bookmaker_quotes": {
-            "10Bet": 1.18,
-            "1xBet": 1.15,
-            "Bet365": 1.17,
-            "BetVictor": 1.15,
-            "Betano": 1.19,
-            "Betfair": 1.2,
-            "Marathonbet": 1.15,
-            "Pinnacle": 1.19,
-            "Superbet": 1.17,
-            "Unibet": 1.17
-          },
-          "consensus_odd": 1.17,
-          "country": "Brazil",
-          "edge": -0.0256,
-          "fixture_id": 1520831,
-          "home_team": "Atletico Goianiense",
-          "implied_probability": 0.8547,
-          "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T19:30:00-03:00",
-          "league": "Serie B",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Atletico Goianiense x Botafogo SP",
-          "model_probability": 0.8291,
-          "odd": 1.2,
-          "pre_guard_score": 85.4,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.8,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "selection_history=78%/9",
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "recent_under35=83%",
-              "recent_5plus=8%"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 89.6,
-          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Under 3.5",
-          "risk_flags": [],
-          "score": 85.4,
-          "selection": "Menos de 3.5 gols",
-          "settlement_line": 3.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "under",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        }
-      ],
-      "fixture_id": 1520831,
-      "home_probability": 0.1,
-      "home_team": "Atletico Goianiense",
-      "kickoff_iso": "2026-08-25T19:30:00-03:00",
-      "league": "Serie B",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 3,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Atletico Goianiense x Botafogo SP",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 3,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 0.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 3.75 gols"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=78%/23",
-              "bookmakers<5"
-            ],
-            "selection": "Menos de 14.5 escanteios"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=78%/23",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 7.25 escanteios"
-          }
-        ],
-        "rejected_legs": 27
-      },
-      "recent_form": {
-        "avg_total_goals": 1.833,
-        "five_plus_rate": 0.0833,
-        "max_total_goals": 6,
-        "over_1_5_rate": 0.5,
-        "over_2_5_rate": 0.25,
-        "sample": 12,
-        "under_2_5_rate": 0.75,
-        "under_3_5_rate": 0.8333,
-        "under_4_5_rate": 0.9167
-      },
-      "score": 92.3,
-      "under_over": "-3.5"
-    },
-    {
-      "advice": "Combo Double chance : Juventude or draw and -3.5 goals",
-      "away_probability": 0.1,
-      "away_team": "CRB",
-      "best_market": {
-        "away_team": "CRB",
-        "bookmaker": "Betano",
-        "bookmaker_count": 10,
-        "bookmaker_quotes": {
-          "10Bet": 1.1,
-          "1xBet": 1.05,
-          "Bet365": 1.1,
-          "BetVictor": 1.06,
-          "Betano": 1.12,
-          "Betfair": 1.07,
-          "Marathonbet": 1.05,
-          "Pinnacle": 1.11,
-          "Superbet": 1.09,
-          "Unibet": 1.07
-        },
-        "consensus_odd": 1.08,
-        "country": "Brazil",
-        "edge": -0.0278,
-        "fixture_id": 1520835,
-        "home_team": "Juventude",
-        "implied_probability": 0.9259,
-        "individual_score_band": "ELITE_88_PLUS",
-        "kickoff_iso": "2026-08-25T19:30:00-03:00",
-        "league": "Serie B",
-        "market": "Total de gols",
-        "market_family": "GOALS",
-        "match": "Juventude x CRB",
-        "model_probability": 0.8981,
-        "odd": 1.12,
-        "pre_guard_score": 90.0,
-        "quality_guard": {
-          "accepted": true,
-          "elite_score": 88.0,
-          "min_probability": 0.84,
-          "min_score": 84.0,
-          "raw_score_floor": 84.0,
-          "reasons": [
-            "family_history=79%/24",
-            "source_history=78%/23"
-          ],
-          "recent_sample": 12
-        },
-        "quality_score": 92.5,
-        "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
-        "raw_market": "Goals Over/Under",
-        "raw_selection": "Over 0.5",
-        "risk_flags": [],
-        "score": 90.0,
-        "selection": "Mais de 0.5 gols",
-        "settlement_line": 0.5,
-        "settlement_metric": "goals",
-        "settlement_operator": "over",
-        "settlement_scope": "match",
-        "signal_source": "MULTI_MARKET_CONSENSUS"
-      },
-      "country": "Brazil",
-      "decision": "USABLE",
-      "draw_probability": 0.45,
-      "eligible_legs": [
-        {
-          "away_team": "CRB",
-          "bookmaker": "Betano",
-          "bookmaker_count": 10,
-          "bookmaker_quotes": {
-            "10Bet": 1.1,
-            "1xBet": 1.05,
-            "Bet365": 1.1,
-            "BetVictor": 1.06,
-            "Betano": 1.12,
-            "Betfair": 1.07,
-            "Marathonbet": 1.05,
-            "Pinnacle": 1.11,
-            "Superbet": 1.09,
-            "Unibet": 1.07
-          },
-          "consensus_odd": 1.08,
-          "country": "Brazil",
-          "edge": -0.0278,
-          "fixture_id": 1520835,
-          "home_team": "Juventude",
-          "implied_probability": 0.9259,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T19:30:00-03:00",
-          "league": "Serie B",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Juventude x CRB",
-          "model_probability": 0.8981,
-          "odd": 1.12,
-          "pre_guard_score": 90.0,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 92.5,
-          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Over 0.5",
-          "risk_flags": [],
-          "score": 90.0,
-          "selection": "Mais de 0.5 gols",
-          "settlement_line": 0.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        },
-        {
-          "away_team": "CRB",
-          "bookmaker": "Pinnacle",
-          "bookmaker_count": 10,
-          "bookmaker_quotes": {
-            "10Bet": 1.18,
-            "1xBet": 1.14,
-            "Bet365": 1.17,
-            "BetVictor": 1.14,
-            "Betano": 1.18,
-            "Betfair": 1.17,
-            "Marathonbet": 1.14,
-            "Pinnacle": 1.19,
-            "Superbet": 1.16,
-            "Unibet": 1.17
-          },
-          "consensus_odd": 1.17,
-          "country": "Brazil",
-          "edge": -0.0256,
-          "fixture_id": 1520835,
-          "home_team": "Juventude",
-          "implied_probability": 0.8547,
-          "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T19:30:00-03:00",
-          "league": "Serie B",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Juventude x CRB",
-          "model_probability": 0.8291,
-          "odd": 1.19,
-          "pre_guard_score": 85.4,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.8,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "selection_history=78%/9",
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "recent_under35=100%",
-              "recent_5plus=0%"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 90.9,
-          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Under 3.5",
-          "risk_flags": [],
-          "score": 85.4,
-          "selection": "Menos de 3.5 gols",
-          "settlement_line": 3.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "under",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        }
-      ],
-      "fixture_id": 1520835,
-      "home_probability": 0.45,
-      "home_team": "Juventude",
-      "kickoff_iso": "2026-08-25T19:30:00-03:00",
-      "league": "Serie B",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 2,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Juventude x CRB",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 2,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=71%/7",
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "under45_requires_8_books",
-              "recent_under45=100%",
-              "recent_5plus=0%"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 0.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 3.75 gols"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 5 escanteios"
-          }
-        ],
-        "rejected_legs": 30
-      },
-      "recent_form": {
-        "avg_total_goals": 1.083,
-        "five_plus_rate": 0.0,
-        "max_total_goals": 3,
-        "over_1_5_rate": 0.25,
-        "over_2_5_rate": 0.0833,
-        "sample": 12,
-        "under_2_5_rate": 0.9167,
-        "under_3_5_rate": 1.0,
-        "under_4_5_rate": 1.0
-      },
-      "score": 90.0,
-      "under_over": "-3.5"
-    },
-    {
-      "advice": "Combo Double chance : Alianza Atletico or draw and +1.5 goals",
-      "away_probability": 0.1,
-      "away_team": "UTC Cajamarca",
-      "best_market": {
-        "away_team": "UTC Cajamarca",
-        "bookmaker": "Betano",
-        "bookmaker_count": 5,
-        "bookmaker_quotes": {
-          "1xBet": 1.02,
-          "Bet365": 1.06,
-          "BetVictor": 1.03,
-          "Betano": 1.07,
-          "Betfair": 1.02
-        },
-        "consensus_odd": 1.03,
-        "country": "Peru",
-        "edge": -0.0291,
-        "fixture_id": 1589394,
-        "home_team": "Alianza Atletico",
-        "implied_probability": 0.9709,
-        "individual_score_band": "ELITE_88_PLUS",
-        "kickoff_iso": "2026-08-25T17:00:00-03:00",
-        "league": "Copa De La Liga",
-        "market": "Total de gols",
-        "market_family": "GOALS",
-        "match": "Alianza Atletico x UTC Cajamarca",
-        "model_probability": 0.9417,
-        "odd": 1.07,
-        "pre_guard_score": 90.2,
-        "quality_guard": {
-          "accepted": true,
-          "elite_score": 88.0,
-          "min_probability": 0.84,
-          "min_score": 84.0,
-          "raw_score_floor": 84.0,
-          "reasons": [
-            "family_history=79%/24",
-            "source_history=78%/23"
-          ],
-          "recent_sample": 12
-        },
-        "quality_score": 92.7,
-        "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 94%; seleção full-time com regra automática de conferência.",
-        "raw_market": "Goals Over/Under",
-        "raw_selection": "Over 0.5",
-        "risk_flags": [],
-        "score": 90.2,
-        "selection": "Mais de 0.5 gols",
-        "settlement_line": 0.5,
-        "settlement_metric": "goals",
-        "settlement_operator": "over",
-        "settlement_scope": "match",
-        "signal_source": "MULTI_MARKET_CONSENSUS"
-      },
-      "country": "Peru",
-      "decision": "USABLE",
-      "draw_probability": 0.45,
-      "eligible_legs": [
-        {
-          "away_team": "UTC Cajamarca",
-          "bookmaker": "Betano",
-          "bookmaker_count": 5,
-          "bookmaker_quotes": {
-            "1xBet": 1.02,
-            "Bet365": 1.06,
-            "BetVictor": 1.03,
-            "Betano": 1.07,
-            "Betfair": 1.02
-          },
-          "consensus_odd": 1.03,
-          "country": "Peru",
-          "edge": -0.0291,
-          "fixture_id": 1589394,
-          "home_team": "Alianza Atletico",
-          "implied_probability": 0.9709,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-25T17:00:00-03:00",
-          "league": "Copa De La Liga",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Alianza Atletico x UTC Cajamarca",
-          "model_probability": 0.9417,
-          "odd": 1.07,
-          "pre_guard_score": 90.2,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 92.7,
-          "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 94%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Over 0.5",
-          "risk_flags": [],
-          "score": 90.2,
-          "selection": "Mais de 0.5 gols",
-          "settlement_line": 0.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        }
-      ],
-      "fixture_id": 1589394,
-      "home_probability": 0.45,
-      "home_team": "Alianza Atletico",
-      "kickoff_iso": "2026-08-25T17:00:00-03:00",
-      "league": "Copa De La Liga",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 1,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Alianza Atletico x UTC Cajamarca",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 1,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=71%/7",
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "under45_requires_8_books",
-              "recent_under45=83%",
-              "recent_5plus=17%",
-              "recent_under45_not_stable"
-            ],
-            "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 4 gols"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 14 escanteios"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=78%/23",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 11.5 escanteios"
-          }
-        ],
-        "rejected_legs": 28
-      },
-      "recent_form": {
-        "avg_total_goals": 3.0,
-        "five_plus_rate": 0.1667,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.75,
-        "over_2_5_rate": 0.5833,
-        "sample": 12,
-        "under_2_5_rate": 0.4167,
-        "under_3_5_rate": 0.4167,
-        "under_4_5_rate": 0.8333
-      },
-      "score": 90.2,
-      "under_over": "+1.5"
-    },
-    {
-      "advice": "Combo Double chance : Afturelding or draw and +1.5 goals",
-      "away_probability": 0.1,
-      "away_team": "Grotta",
-      "best_market": null,
-      "country": "Iceland",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1514238,
-      "home_probability": 0.45,
-      "home_team": "Afturelding",
-      "kickoff_iso": "2026-08-25T16:15:00-03:00",
-      "league": "1. Deild",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Afturelding x Grotta",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=100%/6",
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "bookmakers<5",
-              "recent_over15=92%"
-            ],
-            "selection": "Mais de 1.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 2.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "recent_over25=75%",
-              "probability_below_82%"
-            ],
-            "selection": "Mais de 2.5 gols"
-          },
-          {
-            "market": "Dupla chance",
-            "reasons": [
-              "family_history=64%/11",
-              "source_history=80%/5",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Home/Draw"
-          }
-        ],
-        "rejected_legs": 8
-      },
-      "recent_form": {
-        "avg_total_goals": 4.167,
-        "five_plus_rate": 0.5,
-        "max_total_goals": 7,
-        "over_1_5_rate": 0.9167,
-        "over_2_5_rate": 0.75,
-        "sample": 12,
-        "under_2_5_rate": 0.25,
-        "under_3_5_rate": 0.3333,
-        "under_4_5_rate": 0.5
-      },
-      "score": 0,
-      "under_over": "+1.5"
-    },
-    {
-      "advice": "Combo Double chance : draw or Bogota FC and -3.5 goals",
-      "away_probability": 0.45,
-      "away_team": "Bogota FC",
-      "best_market": {
-        "away_team": "Bogota FC",
-        "bookmaker": "10Bet",
-        "bookmaker_count": 5,
-        "bookmaker_quotes": {
-          "10Bet": 1.1,
-          "1xBet": 1.06,
-          "Betfair": 1.07,
-          "Marathonbet": 1.06,
-          "Superbet": 1.09
-        },
-        "consensus_odd": 1.07,
-        "country": "Colombia",
-        "edge": -0.028,
-        "fixture_id": 1549603,
-        "home_team": "Popayan",
-        "implied_probability": 0.9346,
-        "individual_score_band": "STRONG_84_TO_87_9",
-        "kickoff_iso": "2026-08-25T17:30:00-03:00",
-        "league": "Primera B",
-        "market": "Total de gols",
-        "market_family": "GOALS",
-        "match": "Popayan x Bogota FC",
-        "model_probability": 0.9065,
-        "odd": 1.1,
-        "pre_guard_score": 87.9,
-        "quality_guard": {
-          "accepted": true,
-          "elite_score": 88.0,
-          "min_probability": 0.84,
-          "min_score": 84.0,
-          "raw_score_floor": 84.0,
-          "reasons": [
-            "family_history=79%/24",
-            "source_history=78%/23"
-          ],
-          "recent_sample": 9
-        },
-        "quality_score": 90.4,
-        "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 91%; seleção full-time com regra automática de conferência.",
-        "raw_market": "Goals Over/Under",
-        "raw_selection": "Over 0.5",
-        "risk_flags": [],
-        "score": 87.9,
-        "selection": "Mais de 0.5 gols",
-        "settlement_line": 0.5,
-        "settlement_metric": "goals",
-        "settlement_operator": "over",
-        "settlement_scope": "match",
-        "signal_source": "MULTI_MARKET_CONSENSUS"
-      },
-      "country": "Colombia",
-      "decision": "USABLE",
-      "draw_probability": 0.45,
-      "eligible_legs": [
-        {
-          "away_team": "Bogota FC",
-          "bookmaker": "10Bet",
-          "bookmaker_count": 5,
-          "bookmaker_quotes": {
-            "10Bet": 1.1,
-            "1xBet": 1.06,
-            "Betfair": 1.07,
-            "Marathonbet": 1.06,
-            "Superbet": 1.09
-          },
-          "consensus_odd": 1.07,
-          "country": "Colombia",
-          "edge": -0.028,
-          "fixture_id": 1549603,
-          "home_team": "Popayan",
-          "implied_probability": 0.9346,
-          "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T17:30:00-03:00",
-          "league": "Primera B",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Popayan x Bogota FC",
-          "model_probability": 0.9065,
-          "odd": 1.1,
-          "pre_guard_score": 87.9,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23"
-            ],
-            "recent_sample": 9
-          },
-          "quality_score": 90.4,
-          "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 91%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Over 0.5",
-          "risk_flags": [],
-          "score": 87.9,
-          "selection": "Mais de 0.5 gols",
-          "settlement_line": 0.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        },
-        {
-          "away_team": "Bogota FC",
-          "bookmaker": "Betfair",
-          "bookmaker_count": 7,
-          "bookmaker_quotes": {
-            "10Bet": 1.15,
-            "1xBet": 1.14,
-            "BetVictor": 1.14,
-            "Betano": 1.17,
-            "Betfair": 1.17,
-            "Marathonbet": 1.14,
-            "Superbet": 1.16
-          },
-          "consensus_odd": 1.15,
-          "country": "Colombia",
-          "edge": -0.0261,
-          "fixture_id": 1549603,
-          "home_team": "Popayan",
-          "implied_probability": 0.8696,
-          "individual_score_band": "STRONG_84_TO_87_9",
-          "kickoff_iso": "2026-08-25T17:30:00-03:00",
-          "league": "Primera B",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Popayan x Bogota FC",
-          "model_probability": 0.8435,
-          "odd": 1.17,
-          "pre_guard_score": 85.5,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.8,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "selection_history=78%/9",
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "recent_under35=78%",
-              "recent_5plus=11%"
-            ],
-            "recent_sample": 9
-          },
-          "quality_score": 89.2,
-          "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 84%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Under 3.5",
-          "risk_flags": [],
-          "score": 85.5,
-          "selection": "Menos de 3.5 gols",
-          "settlement_line": 3.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "under",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        }
-      ],
-      "fixture_id": 1549603,
-      "home_probability": 0.1,
-      "home_team": "Popayan",
-      "kickoff_iso": "2026-08-25T17:30:00-03:00",
-      "league": "Primera B",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 2,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Popayan x Bogota FC",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 2,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 0.75 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 3.75 gols"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=78%/23",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 5.75 escanteios"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=78%/23",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 11.75 escanteios"
-          }
-        ],
-        "rejected_legs": 22
-      },
-      "recent_form": {
-        "avg_total_goals": 1.889,
-        "five_plus_rate": 0.1111,
-        "max_total_goals": 5,
-        "over_1_5_rate": 0.4444,
-        "over_2_5_rate": 0.3333,
-        "sample": 9,
-        "under_2_5_rate": 0.6667,
-        "under_3_5_rate": 0.7778,
-        "under_4_5_rate": 0.8889
-      },
-      "score": 87.9,
-      "under_over": "-3.5"
     }
   ],
   "api_minute_limit": 300,
-  "api_minute_remaining": 299,
-  "api_requests": 33,
-  "api_requests_remaining": 7075,
+  "api_minute_remaining": 292,
+  "api_requests": 12,
+  "api_requests_remaining": 7050,
   "approved": [
     {
       "bookmaker": "Betano",
@@ -2195,8 +530,8 @@
     "historical GREEN/RED quality audit",
     "multi-market totals: goals, corners, yellow cards, shots and shots on target"
   ],
-  "deep_analyzed_matches": 8,
-  "eligible_legs": 16,
+  "deep_analyzed_matches": 1,
+  "eligible_legs": 2,
   "execution_bookmaker": "Betano",
   "execution_ready": false,
   "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
@@ -2206,9 +541,9 @@
     "unique_fixtures": 4,
     "valid": true
   },
-  "fixtures_analyzed": 8,
+  "fixtures_analyzed": 1,
   "fixtures_found": 206,
-  "fixtures_ranked": 8,
+  "fixtures_ranked": 1,
   "fixtures_with_markets": 80,
   "history_summary": {
     "accuracy": 0.7222222222222222,
@@ -2240,13 +575,13 @@
     "rule": "Every selected fixture must start at least 120 minutes apart from every other selected fixture.",
     "valid": true
   },
-  "last_run_at": "2026-08-25T15:57:00.384987-03:00",
+  "last_run_at": "2026-08-25T19:40:48.649597-03:00",
   "market_analysis": {
     "correlation_guard": "same fixture cannot be repeated across tickets",
     "eligible_by_family": {
       "CARDS": 0,
-      "CORNERS": 3,
-      "GOALS": 13,
+      "CORNERS": 0,
+      "GOALS": 2,
       "RESULT": 0,
       "SHOTS": 0
     },
@@ -2292,7 +627,7 @@
   "matches_with_odds": 80,
   "model_version": "football-accuracy-betano-v7-score84",
   "operational_date": "2026-08-25",
-  "predictions_available": 8,
+  "predictions_available": 1,
   "previous_published_tickets": [
     {
       "bookmaker": "Betano",
@@ -2372,7 +707,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1499601,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "San Martín Burzaco",
           "implied_probability": 0.7299,
           "kickoff_iso": "2026-08-25T15:00:00-03:00",
@@ -2385,16 +720,18 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 71%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 2.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 5; linha under 2.5.",
+          "result_score": "3-2",
           "risk_flags": [],
           "score": 77.4,
           "selection": "Menos de 2.5 gols",
+          "settled_at": "2026-08-25T17:58:42.838805-03:00",
           "settlement_line": 2.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "RED"
         }
       ],
       "market_families": [
@@ -2404,7 +741,8 @@
       "quality_tier": "STRONG",
       "reason": "Bilhete multimercado Betano com partidas exclusivas e intervalo mínimo de 2 horas entre todos os jogos selecionados no board.",
       "score": 83.8,
-      "status": "PENDING",
+      "settled_at": "2026-08-25T17:58:42.838936-03:00",
+      "status": "RED",
       "ticket_id": "B1",
       "total_odd": 1.53
     },
@@ -2456,7 +794,7 @@
           "risk_flags": [],
           "score": 80.6,
           "selection": "Menos de 4.5 gols",
-          "settled_at": "2026-08-25T15:00:42.455601-03:00",
+          "settled_at": "2026-08-25T17:58:42.838944-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
@@ -2499,7 +837,7 @@
           "risk_flags": [],
           "score": 79.2,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-08-25T15:00:42.455738-03:00",
+          "settled_at": "2026-08-25T17:58:42.838955-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -2515,7 +853,7 @@
       "quality_tier": "STRONG",
       "reason": "Bilhete multimercado Betano com partidas exclusivas e intervalo mínimo de 2 horas entre todos os jogos selecionados no board.",
       "score": 79.9,
-      "settled_at": "2026-08-25T15:00:42.455758-03:00",
+      "settled_at": "2026-08-25T17:58:42.838968-03:00",
       "status": "GREEN",
       "ticket_id": "B2",
       "total_odd": 1.61
@@ -2529,100 +867,8 @@
     ],
     "reason": "Todo bilhete que aparece no painel fica congelado; análises posteriores só podem acrescentar IDs ainda não publicados."
   },
-  "quality_rejected_legs": 198,
-  "rejected": [
-    {
-      "advice": "Combo Double chance : Afturelding or draw and +1.5 goals",
-      "away_probability": 0.1,
-      "away_team": "Grotta",
-      "best_market": null,
-      "country": "Iceland",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1514238,
-      "home_probability": 0.45,
-      "home_team": "Afturelding",
-      "kickoff_iso": "2026-08-25T16:15:00-03:00",
-      "league": "1. Deild",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Afturelding x Grotta",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=100%/6",
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "bookmakers<5",
-              "recent_over15=92%"
-            ],
-            "selection": "Mais de 1.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "non_half_line_rejected"
-            ],
-            "selection": "Mais de 2.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=79%/24",
-              "source_history=78%/23",
-              "recent_over25=75%",
-              "probability_below_82%"
-            ],
-            "selection": "Mais de 2.5 gols"
-          },
-          {
-            "market": "Dupla chance",
-            "reasons": [
-              "family_history=64%/11",
-              "source_history=80%/5",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Home/Draw"
-          }
-        ],
-        "rejected_legs": 8
-      },
-      "recent_form": {
-        "avg_total_goals": 4.167,
-        "five_plus_rate": 0.5,
-        "max_total_goals": 7,
-        "over_1_5_rate": 0.9167,
-        "over_2_5_rate": 0.75,
-        "sample": 12,
-        "under_2_5_rate": 0.25,
-        "under_3_5_rate": 0.3333,
-        "under_4_5_rate": 0.5
-      },
-      "score": 0,
-      "under_over": "+1.5"
-    }
-  ],
-  "settlement": {
-    "checked_at": "2026-08-25T17:58:42.838976-03:00",
-    "complete": true,
-    "green": 1,
-    "pending": 0,
-    "red": 1,
-    "statistics_fixtures_checked": 0
-  },
+  "quality_rejected_legs": 19,
+  "rejected": [],
   "sport": "football",
   "strict_tickets": 0,
   "ticket_target": 3,
@@ -2859,5 +1105,5 @@
   ],
   "tickets_ready": 2,
   "top_limit": 3,
-  "usable_matches": 7
+  "usable_matches": 1
 }
