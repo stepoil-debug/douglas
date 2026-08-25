@@ -4277,7 +4277,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1510974,
-          "fixture_status": "NS",
+          "fixture_status": "1H",
           "home_team": "Växjö Norra",
           "implied_probability": 0.7937,
           "kickoff_iso": "2026-08-25T13:00:00-03:00",
@@ -4290,7 +4290,7 @@
           "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 77%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 4.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Partida ainda não encerrada (1H).",
           "risk_flags": [],
           "score": 80.6,
           "selection": "Menos de 4.5 gols",
@@ -4318,7 +4318,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1528057,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "FK Tobol Kostanay",
           "implied_probability": 0.8,
           "kickoff_iso": "2026-08-25T11:00:00-03:00",
@@ -4331,16 +4331,18 @@
           "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 78%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 5; linha over 1.5.",
+          "result_score": "3-2",
           "risk_flags": [],
           "score": 79.2,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-25T13:10:56.126905-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -4407,13 +4409,13 @@
   "fixtures_ranked": 24,
   "fixtures_with_markets": 80,
   "history_summary": {
-    "accuracy": 0.7272727272727273,
+    "accuracy": 0.7352941176470589,
     "by_market": {
       "GOALS": {
-        "accuracy": 0.7727272727272727,
-        "green": 17,
+        "accuracy": 0.782608695652174,
+        "green": 18,
         "red": 5,
-        "resolved": 22
+        "resolved": 23
       },
       "RESULT": {
         "accuracy": 0.6363636363636364,
@@ -4422,9 +4424,9 @@
         "resolved": 11
       }
     },
-    "hits": 24,
+    "hits": 25,
     "misses": 9,
-    "resolved": 33,
+    "resolved": 34,
     "ticket_accuracy": 0.5,
     "tickets_hit": 9,
     "tickets_miss": 9,
@@ -5484,7 +5486,7 @@
     }
   ],
   "settlement": {
-    "checked_at": "2026-08-25T12:25:04.581648-03:00",
+    "checked_at": "2026-08-25T13:10:56.127035-03:00",
     "complete": false,
     "green": 0,
     "pending": 2,
@@ -5639,7 +5641,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1510974,
-          "fixture_status": "NS",
+          "fixture_status": "1H",
           "home_team": "Växjö Norra",
           "implied_probability": 0.7937,
           "kickoff_iso": "2026-08-25T13:00:00-03:00",
@@ -5652,7 +5654,7 @@
           "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 77%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 4.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Partida ainda não encerrada (1H).",
           "risk_flags": [],
           "score": 80.6,
           "selection": "Menos de 4.5 gols",
@@ -5680,7 +5682,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1528057,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "FK Tobol Kostanay",
           "implied_probability": 0.8,
           "kickoff_iso": "2026-08-25T11:00:00-03:00",
@@ -5693,16 +5695,18 @@
           "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 78%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 5; linha over 1.5.",
+          "result_score": "3-2",
           "risk_flags": [],
           "score": 79.2,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-25T13:10:56.126905-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [

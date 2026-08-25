@@ -53,10 +53,10 @@
   "groups": {
     "bookmaker_depth": {
       "5-7": {
-        "accuracy": 0.6667,
-        "green": 4,
+        "accuracy": 0.7143,
+        "green": 5,
         "red": 2,
-        "resolved": 6
+        "resolved": 7
       },
       "8+": {
         "accuracy": 0.7407,
@@ -102,6 +102,12 @@
         "red": 1,
         "resolved": 2
       },
+      "Kazakhstan": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
       "Netherlands": {
         "accuracy": 0.0,
         "green": 0,
@@ -135,10 +141,10 @@
     },
     "family": {
       "GOALS": {
-        "accuracy": 0.7727,
-        "green": 17,
+        "accuracy": 0.7826,
+        "green": 18,
         "red": 5,
-        "resolved": 22
+        "resolved": 23
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -208,6 +214,12 @@
         "red": 1,
         "resolved": 2
       },
+      "Premier League": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
       "Primera B Metropolitana": {
         "accuracy": 1.0,
         "green": 1,
@@ -253,10 +265,10 @@
         "resolved": 3
       },
       "75-80%": {
-        "accuracy": 0.6667,
-        "green": 6,
+        "accuracy": 0.7,
+        "green": 7,
         "red": 3,
-        "resolved": 9
+        "resolved": 10
       },
       "80-85%": {
         "accuracy": 0.8571,
@@ -285,10 +297,10 @@
     },
     "score_bin": {
       "76-80": {
-        "accuracy": 0.6,
-        "green": 6,
+        "accuracy": 0.6364,
+        "green": 7,
         "red": 4,
-        "resolved": 10
+        "resolved": 11
       },
       "80-84": {
         "accuracy": 0.7273,
@@ -348,9 +360,9 @@
       },
       "goals:match:over:1.5": {
         "accuracy": 1.0,
-        "green": 5,
+        "green": 6,
         "red": 0,
-        "resolved": 5
+        "resolved": 6
       },
       "goals:match:under:3": {
         "accuracy": 0.0,
@@ -391,10 +403,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.7619,
-        "green": 16,
+        "accuracy": 0.7727,
+        "green": 17,
         "red": 5,
-        "resolved": 21
+        "resolved": 22
       }
     },
     "ticket_leg_count": {
@@ -624,10 +636,10 @@
     "completed_days": 6,
     "daily_target_rate": 0.5,
     "days_with_at_least_2_green": 3,
-    "leg_accuracy": 0.7273,
-    "legs_green": 24,
+    "leg_accuracy": 0.7353,
+    "legs_green": 25,
     "legs_red": 9,
-    "legs_resolved": 33,
+    "legs_resolved": 34,
     "ticket_accuracy": 0.5,
     "tickets_green": 9,
     "tickets_red": 9,
