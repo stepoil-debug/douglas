@@ -11,6 +11,7 @@ on:
     paths:
       - 'src/football_quant/settlement.py'
       - 'src/football_quant/void_reconciliation.py'
+      - 'src/football_quant/performance_audit.py'
       - '.github/workflows/settle-football.yml'
 
 permissions:
@@ -62,17 +63,20 @@ jobs:
       - name: Reconcile postponed and cancelled past-day legs
         run: python -m src.football_quant.void_reconciliation
 
-      - name: Persist results and bankroll simulation
+      - name: Rebuild performance audit
+        run: python -m src.football_quant.performance_audit
+
+      - name: Persist results, audit and bankroll simulation
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'investbet-result-bot'
           git config user.email 'investbet-result-bot@users.noreply.github.com'
-          git add dashboard/data.json dashboard/management.json data/football/history || true
+          git add dashboard/data.json dashboard/management.json dashboard/performance_audit.json data/football/history data/football/performance_audit.json || true
           if git diff --cached --quiet; then
-            echo 'No settlement changes.'
+            echo 'No settlement/audit changes.'
             exit 0
           fi
-          git commit -m 'data: settle football tickets and update bankroll'
+          git commit -m 'data: settle football tickets and refresh performance audit'
           git pull --rebase origin main
           git push origin HEAD:main
