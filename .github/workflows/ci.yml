@@ -188,8 +188,20 @@ jobs:
               'score': {'fulltime': {'home': 1, 'away': 2}},
               'goals': {'home': 1, 'away': 2},
           }
-          green = {'fixture_id': 99, 'home_team': 'A', 'away_team': 'B', 'market': 'Dupla chance', 'selection': 'B ou empate'}
-          red = {'fixture_id': 99, 'home_team': 'A', 'away_team': 'B', 'market': 'Dupla chance', 'selection': 'A ou empate'}
+          green = {
+              'fixture_id': 99,
+              'home_team': 'Time Azul',
+              'away_team': 'Time Branco',
+              'market': 'Dupla chance',
+              'selection': 'Time Branco ou empate',
+          }
+          red = {
+              'fixture_id': 99,
+              'home_team': 'Time Azul',
+              'away_team': 'Time Branco',
+              'market': 'Dupla chance',
+              'selection': 'Time Azul ou empate',
+          }
           assert settle_leg(green, fixture)['status'] == 'GREEN'
           assert settle_leg(red, fixture)['status'] == 'RED'
           assert settle_ticket({'legs': [green, red]}, {99: fixture})['status'] == 'RED'
