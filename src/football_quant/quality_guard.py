@@ -11,7 +11,11 @@ AUDIT_PATH = ROOT / "data" / "football" / "performance_audit.json"
 FINAL_STATUSES = {"FT", "AET", "PEN"}
 
 BASE_MIN_PROBABILITY = 0.78
-BASE_MIN_SCORE = 80.0
+# Regra operacional: o score bruto individual nunca pode ser inferior a 84.
+# Bônus históricos servem apenas para ranking/penalização e jamais resgatam uma
+# seleção cujo score original esteja abaixo deste piso.
+BASE_MIN_SCORE = 84.0
+ELITE_SCORE = 88.0
 BASE_MIN_BOOKMAKERS = 5
 
 
@@ -107,10 +111,10 @@ def _history_bucket(audit: dict[str, Any], group: str, key: str) -> dict[str, An
 
 
 def _empirical_bonus(audit: dict[str, Any], leg: dict[str, Any]) -> tuple[float, list[str], float, float]:
-    """Return score bonus, notes and stricter probability/score floors.
+    """Return ranking bonus, notes and stricter probability/score floors.
 
-    History is used conservatively: tiny samples can add a small bonus, but only
-    groups with >=5 resolved observations can materially tighten a threshold.
+    History can tighten a threshold or alter ranking, but the raw-score floor of
+    84 is never relaxed. A positive historical bonus cannot make score 82 pass.
     """
     bonus = 0.0
     notes: list[str] = []
@@ -141,7 +145,7 @@ def _empirical_bonus(audit: dict[str, Any], leg: dict[str, Any]) -> tuple[float,
         notes.append(f"family_history={accuracy:.0%}/{fn}")
         if accuracy < 0.67:
             min_probability = max(min_probability, 0.82)
-            min_score = max(min_score, 82.0)
+            min_score = max(min_score, 84.0)
             bonus -= 3.0
         elif accuracy >= 0.78:
             bonus += 1.5
@@ -155,7 +159,7 @@ def _empirical_bonus(audit: dict[str, Any], leg: dict[str, Any]) -> tuple[float,
         notes.append(f"source_history={accuracy:.0%}/{sn}")
         if accuracy < 0.65:
             min_probability = max(min_probability, 0.82)
-            min_score = max(min_score, 82.0)
+            min_score = max(min_score, 84.0)
             bonus -= 3.0
         elif accuracy >= 0.78:
             bonus += 1.0
@@ -234,6 +238,21 @@ def apply_quality_guard(
         bonus, history_notes, min_probability, min_score = _empirical_bonus(audit, leg)
         reasons.extend(history_notes)
 
+        # Hard gate requested for every new individual selection.
+        if score < BASE_MIN_SCORE:
+            leg["pre_guard_score"] = round(score, 1)
+            leg["quality_score"] = round(score + bonus, 1)
+            leg["individual_score_band"] = "REJECTED_BELOW_84"
+            leg["quality_guard"] = {
+                "accepted": False,
+                "min_probability": round(min_probability, 4),
+                "min_score": BASE_MIN_SCORE,
+                "recent_sample": int(recent.get("sample") or 0),
+                "reasons": reasons + ["raw_individual_score_below_84"],
+            }
+            rejected.append(leg)
+            continue
+
         # Standardize totals to half-point lines. Integer/quarter Asian lines
         # create push/half-win semantics and were contaminating GREEN/RED.
         if metric in {"goals", "corner_kicks", "yellow_cards", "total_shots", "shots_on_goal"} and line is not None:
@@ -247,11 +266,11 @@ def apply_quality_guard(
         if risk_flags & {"MODEL_MARKET_DISAGREEMENT", "EXTREME_PROBABILITY", "COARSE_PROBABILITY"}:
             reasons.append("prediction_risk_flag")
 
-        # Result markets were the weakest family in the audit (63.6%). Keep
-        # them only when both probability and score are materially stronger.
+        # Result markets were the weakest family in the audit. They must clear
+        # the same 84 floor and can be tightened further by source/history.
         if family == "RESULT":
             min_probability = max(min_probability, 0.82)
-            min_score = max(min_score, 82.0)
+            min_score = max(min_score, 84.0)
             if source == "MODEL+MARKET":
                 min_probability = max(min_probability, 0.86)
                 min_score = max(min_score, 84.0)
@@ -265,28 +284,28 @@ def apply_quality_guard(
                     reasons.append("under45_requires_8_books")
             elif op == "under" and math.isclose(line_value, 3.5):
                 min_probability = max(min_probability, 0.80)
-                min_score = max(min_score, 82.0)
+                min_score = max(min_score, 84.0)
             elif op == "under" and math.isclose(line_value, 2.5):
                 min_probability = max(min_probability, 0.86)
                 min_score = max(min_score, 85.0)
             elif op == "over" and math.isclose(line_value, 1.5):
                 min_probability = max(min_probability, 0.80)
-                min_score = max(min_score, 80.0)
-                bonus += 2.0  # 5/5 GREEN in deterministic audit sample.
+                min_score = max(min_score, 84.0)
+                bonus += 2.0
             elif op == "over" and math.isclose(line_value, 2.5):
                 min_probability = max(min_probability, 0.82)
-                min_score = max(min_score, 82.0)
+                min_score = max(min_score, 84.0)
             else:
                 min_probability = max(min_probability, 0.84)
                 min_score = max(min_score, 84.0)
 
         if family in {"CORNERS", "CARDS", "SHOTS"}:
             min_probability = max(min_probability, 0.80)
-            min_score = max(min_score, 80.0)
+            min_score = max(min_score, 84.0)
 
         if metric == "btts":
             min_probability = max(min_probability, 0.80)
-            min_score = max(min_score, 82.0)
+            min_score = max(min_score, 84.0)
 
         recent_ok, recent_bonus, recent_notes = _recent_goal_requirements(leg, recent)
         reasons.extend(recent_notes)
@@ -302,10 +321,13 @@ def apply_quality_guard(
         )
         leg["pre_guard_score"] = round(score, 1)
         leg["quality_score"] = round(score + bonus, 1)
+        leg["individual_score_band"] = "ELITE_88_PLUS" if score >= ELITE_SCORE else "STRONG_84_TO_87_9"
         leg["quality_guard"] = {
             "accepted": accepted_flag,
             "min_probability": round(min_probability, 4),
             "min_score": round(min_score, 1),
+            "raw_score_floor": BASE_MIN_SCORE,
+            "elite_score": ELITE_SCORE,
             "recent_sample": int(recent.get("sample") or 0),
             "reasons": reasons,
         }
@@ -318,5 +340,12 @@ def apply_quality_guard(
                 reasons.append(f"score_below_{min_score:g}")
             rejected.append(leg)
 
-    accepted.sort(key=lambda row: (-float(row.get("quality_score") or row.get("score") or 0), -float(row.get("model_probability") or 0)))
+    accepted.sort(
+        key=lambda row: (
+            -int(float(row.get("score") or 0) >= ELITE_SCORE),
+            -float(row.get("score") or 0),
+            -float(row.get("quality_score") or row.get("score") or 0),
+            -float(row.get("model_probability") or 0),
+        )
+    )
     return accepted, rejected
