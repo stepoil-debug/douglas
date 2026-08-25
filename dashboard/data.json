@@ -4320,7 +4320,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1510974,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Växjö Norra",
           "implied_probability": 0.7937,
           "kickoff_iso": "2026-08-25T13:00:00-03:00",
@@ -4333,16 +4333,18 @@
           "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 77%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 4.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 3; linha under 4.5.",
+          "result_score": "1-2",
           "risk_flags": [],
           "score": 80.6,
           "selection": "Menos de 4.5 gols",
+          "settled_at": "2026-08-25T15:00:42.455601-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Kaisar",
@@ -4379,7 +4381,7 @@
           "risk_flags": [],
           "score": 79.2,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-08-25T14:08:23.605579-03:00",
+          "settled_at": "2026-08-25T15:00:42.455738-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -4395,7 +4397,8 @@
       "quality_tier": "STRONG",
       "reason": "Bilhete multimercado Betano com partidas exclusivas e intervalo mínimo de 2 horas entre todos os jogos selecionados no board.",
       "score": 79.9,
-      "status": "PENDING",
+      "settled_at": "2026-08-25T15:00:42.455758-03:00",
+      "status": "GREEN",
       "ticket_id": "B2",
       "total_odd": 1.61
     }
@@ -4452,13 +4455,13 @@
   "fixtures_ranked": 24,
   "fixtures_with_markets": 80,
   "history_summary": {
-    "accuracy": 0.7352941176470589,
+    "accuracy": 0.7428571428571429,
     "by_market": {
       "GOALS": {
-        "accuracy": 0.782608695652174,
-        "green": 18,
+        "accuracy": 0.7916666666666666,
+        "green": 19,
         "red": 5,
-        "resolved": 23
+        "resolved": 24
       },
       "RESULT": {
         "accuracy": 0.6363636363636364,
@@ -4467,13 +4470,13 @@
         "resolved": 11
       }
     },
-    "hits": 25,
+    "hits": 26,
     "misses": 9,
-    "resolved": 34,
-    "ticket_accuracy": 0.5,
-    "tickets_hit": 9,
+    "resolved": 35,
+    "ticket_accuracy": 0.5263157894736842,
+    "tickets_hit": 10,
     "tickets_miss": 9,
-    "tickets_resolved": 18
+    "tickets_resolved": 19
   },
   "kickoff_spacing": {
     "enabled": true,
@@ -5704,10 +5707,10 @@
     }
   ],
   "settlement": {
-    "checked_at": "2026-08-25T14:08:23.605782-03:00",
+    "checked_at": "2026-08-25T15:00:42.455775-03:00",
     "complete": false,
-    "green": 0,
-    "pending": 2,
+    "green": 1,
+    "pending": 1,
     "red": 0,
     "statistics_fixtures_checked": 0
   },
@@ -5859,7 +5862,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1510974,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Växjö Norra",
           "implied_probability": 0.7937,
           "kickoff_iso": "2026-08-25T13:00:00-03:00",
@@ -5872,16 +5875,18 @@
           "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 77%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 4.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 3; linha under 4.5.",
+          "result_score": "1-2",
           "risk_flags": [],
           "score": 80.6,
           "selection": "Menos de 4.5 gols",
+          "settled_at": "2026-08-25T15:00:42.455601-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Kaisar",
@@ -5918,7 +5923,7 @@
           "risk_flags": [],
           "score": 79.2,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-08-25T14:08:23.605579-03:00",
+          "settled_at": "2026-08-25T15:00:42.455738-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -5934,7 +5939,8 @@
       "quality_tier": "STRONG",
       "reason": "Bilhete multimercado Betano com partidas exclusivas e intervalo mínimo de 2 horas entre todos os jogos selecionados no board.",
       "score": 79.9,
-      "status": "PENDING",
+      "settled_at": "2026-08-25T15:00:42.455758-03:00",
+      "status": "GREEN",
       "ticket_id": "B2",
       "total_odd": 1.61
     }
