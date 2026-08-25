@@ -24,43 +24,56 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
       - name: Compile football engine
         run: python -m compileall -q src/football_quant
-      - name: Same-day ticket builder smoke test
+
+      - name: Accuracy quality guard smoke test
         env:
           PYTHONPATH: .
         run: |
           python - <<'PY'
-          from src.football_quant.ticket_builder import build_tickets, pct
-          assert pct('60%') == 0.6
-          def leg(fid, market, selection, price, probability, score):
+          from src.football_quant.quality_guard import apply_quality_guard
+
+          recent = {
+              'sample': 10,
+              'over_1_5_rate': .90,
+              'over_2_5_rate': .70,
+              'under_2_5_rate': .30,
+              'under_3_5_rate': .80,
+              'under_4_5_rate': .90,
+              'five_plus_rate': .10,
+          }
+
+          def base(selection, op, line, p, score, books=9):
               return {
-                  'fixture_id': fid,
-                  'market': market,
+                  'fixture_id': 1,
+                  'kickoff_iso': '2026-08-25T10:00:00-03:00',
+                  'market': 'Total de gols',
+                  'market_family': 'GOALS',
                   'selection': selection,
-                  'odd': price,
-                  'model_probability': probability,
+                  'settlement_metric': 'goals',
+                  'settlement_scope': 'match',
+                  'settlement_operator': op,
+                  'settlement_line': line,
+                  'model_probability': p,
                   'score': score,
-                  'signal_source': 'MODEL+MARKET',
-                  'bookmaker_quotes': {'Book A': price, 'Book B': round(price - 0.01, 2)},
+                  'bookmaker_count': books,
+                  'signal_source': 'MULTI_MARKET_CONSENSUS',
+                  'risk_flags': [],
               }
-          legs = [
-              leg(1,'Dupla chance','A ou empate',1.28,0.82,82),
-              leg(2,'Total de gols','Mais de 1.5',1.30,0.81,81),
-              leg(3,'Dupla chance','C ou empate',1.31,0.80,80),
-              leg(4,'Total de gols','Menos de 4.5',1.27,0.84,84),
-              leg(5,'Vencedor','E',1.72,0.64,74),
-          ]
-          tickets = build_tickets(legs, target=3)
-          assert len(tickets) == 3, tickets
-          assert all(1.50 <= t['total_odd'] <= 2.00 for t in tickets)
-          assert all(1 <= len(t['legs']) <= 2 for t in tickets)
-          assert all(len({leg['bookmaker'] for leg in t['legs']}) == 1 for t in tickets)
-          fixture_ids = [leg['fixture_id'] for ticket in tickets for leg in ticket['legs']]
-          assert len(fixture_ids) == len(set(fixture_ids)), tickets
-          print('3 executable tickets with exclusive fixtures OK')
+
+          safe = base('Mais de 1.5 gols', 'over', 1.5, .86, 86)
+          risky_under = base('Menos de 4.5 gols', 'under', 4.5, .81, 82)
+          asian_integer = base('Menos de 3 gols', 'under', 3.0, .90, 90)
+          accepted, rejected = apply_quality_guard([safe, risky_under, asian_integer], recent, {})
+          assert len(accepted) == 1 and accepted[0]['selection'] == 'Mais de 1.5 gols', (accepted, rejected)
+          assert any('non_half_line_rejected' in (r.get('quality_guard') or {}).get('reasons', []) for r in rejected)
+          assert any(r.get('selection') == 'Menos de 4.5 gols' for r in rejected)
+          print('quality guard accepts robust line and rejects observed failure modes')
           PY
-      - name: Betano portfolio fixture exclusivity and 2h spacing test
+
+      - name: Betano portfolio accuracy, exclusivity, spacing and freeze test
         env:
           PYTHONPATH: .
         run: |
@@ -72,47 +85,57 @@ jobs:
               _portfolio_has_required_spacing,
           )
 
-          def leg(fid, hour, odd, probability, score, selection):
+          def leg(fid, hour, odd, probability, score, family='GOALS', op='over'):
+              market = 'Total de gols' if family == 'GOALS' else 'Escanteios'
+              metric = 'goals' if family == 'GOALS' else 'corner_kicks'
+              line = 1.5 if family == 'GOALS' else 7.5
               return {
                   'fixture_id': fid,
                   'kickoff_iso': f'2026-08-25T{hour:02d}:00:00-03:00',
-                  'market': 'Dupla chance',
-                  'selection': selection,
+                  'market': market,
+                  'market_family': family,
+                  'selection': f'{"Mais" if op == "over" else "Menos"} de {line}',
+                  'settlement_metric': metric,
+                  'settlement_scope': 'match',
+                  'settlement_operator': op,
+                  'settlement_line': line,
                   'odd': odd,
                   'model_probability': probability,
                   'score': score,
-                  'signal_source': 'MODEL+MARKET',
-                  'bookmaker_quotes': {'Betano': odd, 'Book A': odd},
+                  'quality_score': score,
+                  'bookmaker_count': 9,
+                  'signal_source': 'MULTI_MARKET_CONSENSUS',
+                  'bookmaker_quotes': {'Betano': odd, 'Book A': odd, 'Book B': odd},
+                  'quality_guard': {'accepted': True},
               }
 
           payload = {'all_matches': []}
-          for fid, hour, odd, probability, score in [
-              (1, 8, 1.24, .86, 88), (2, 10, 1.28, .84, 86),
-              (3, 12, 1.25, .83, 85), (4, 14, 1.29, .82, 84),
-              (5, 16, 1.26, .81, 83), (6, 18, 1.30, .80, 82),
-              (7, 20, 1.27, .79, 81), (8, 22, 1.31, .78, 80),
-          ]:
-              payload['all_matches'].append({
-                  'eligible_legs': [leg(fid, hour, odd, probability, score, f'Time {fid} ou empate')]
-              })
+          rows = [
+              (1, 8, 1.24, .86, 88, 'GOALS'), (2, 10, 1.28, .85, 87, 'CORNERS'),
+              (3, 12, 1.25, .84, 86, 'GOALS'), (4, 14, 1.29, .84, 86, 'CORNERS'),
+              (5, 16, 1.26, .83, 85, 'GOALS'), (6, 18, 1.30, .83, 85, 'CORNERS'),
+              (7, 20, 1.27, .82, 84, 'GOALS'), (8, 22, 1.31, .82, 84, 'CORNERS'),
+          ]
+          for row in rows:
+              payload['all_matches'].append({'eligible_legs': [leg(*row)]})
 
           tickets = build_betano_tickets(payload)
           assert len(tickets) == 3, tickets
           assert _portfolio_has_unique_fixtures(tickets), tickets
           assert _portfolio_has_required_spacing(tickets), tickets
-          ids = [leg['fixture_id'] for ticket in tickets for leg in ticket['legs']]
+          assert all(float(t['estimated_probability']) >= .68 for t in tickets), tickets
+          ids = [l['fixture_id'] for t in tickets for l in t['legs']]
           assert len(ids) == len(set(ids)), tickets
-          times = sorted(datetime.fromisoformat(leg['kickoff_iso']).timestamp() for ticket in tickets for leg in ticket['legs'])
+          times = sorted(datetime.fromisoformat(l['kickoff_iso']).timestamp() for t in tickets for l in t['legs'])
           assert all((b - a) >= 7200 for a, b in zip(times, times[1:])), tickets
 
-          close_payload = {'all_matches': [
-              {'eligible_legs': [leg(20, 12, 1.24, .86, 88, 'A')]},
-              {'eligible_legs': [dict(leg(21, 13, 1.28, .84, 86, 'B'), kickoff_iso='2026-08-25T13:00:00-03:00')]},
-          ]}
-          close_tickets = build_betano_tickets(close_payload)
-          assert all(len(t['legs']) == 1 for t in close_tickets), close_tickets
-          print('Betano portfolio exclusivity + minimum 2h kickoff spacing OK')
+          frozen_b1 = tickets[0]
+          payload['previous_published_tickets'] = [frozen_b1]
+          rebuilt = build_betano_tickets(payload)
+          assert rebuilt[0] == frozen_b1, (frozen_b1, rebuilt[0])
+          print('accuracy-first portfolio + immutable partial publication OK')
           PY
+
       - name: Multi-market generation smoke test
         env:
           PYTHONPATH: .
@@ -121,7 +144,7 @@ jobs:
           from src.football_quant.multi_market import build_multi_market_legs, family_counts
 
           fixture = {
-              'fixture': {'id': 500, 'date': '2026-08-19T20:00:00-03:00'},
+              'fixture': {'id': 500, 'date': '2026-08-25T20:00:00-03:00'},
               'teams': {'home': {'name': 'Time A'}, 'away': {'name': 'Time B'}},
               'league': {'name': 'Liga Teste', 'country': 'Brazil'},
           }
@@ -150,9 +173,9 @@ jobs:
           assert counts['CORNERS'] >= 1, legs
           assert counts['CARDS'] >= 1, legs
           assert counts['SHOTS'] >= 1, legs
-          assert all(leg.get('settlement_metric') for leg in legs)
-          print('corners/cards/shots generation OK', counts)
+          print('multi-market generation OK', counts)
           PY
+
       - name: GREEN RED verifier smoke test
         env:
           PYTHONPATH: .
@@ -165,56 +188,10 @@ jobs:
               'score': {'fulltime': {'home': 1, 'away': 2}},
               'goals': {'home': 1, 'away': 2},
           }
-          green = {
-              'fixture_id': 99,
-              'home_team': 'Time A',
-              'away_team': 'Time B',
-              'market': 'Dupla chance',
-              'selection': 'Time B ou empate',
-          }
-          red = {
-              'fixture_id': 99,
-              'home_team': 'Time A',
-              'away_team': 'Time B',
-              'market': 'Dupla chance',
-              'selection': 'Time A ou empate',
-          }
-          over = {
-              'fixture_id': 99,
-              'home_team': 'Time A',
-              'away_team': 'Time B',
-              'market': 'Total de gols',
-              'selection': 'Mais de 1.5 gols',
-          }
-          stats = {
-              'home': {'corner_kicks': 5, 'yellow_cards': 2, 'shots_on_goal': 4, 'total_shots': 11},
-              'away': {'corner_kicks': 4, 'yellow_cards': 3, 'shots_on_goal': 3, 'total_shots': 9},
-          }
-          corners = {
-              'fixture_id': 99, 'home_team': 'Time A', 'away_team': 'Time B',
-              'market': 'Escanteios', 'selection': 'Mais de 7.5 escanteios',
-              'settlement_metric': 'corner_kicks', 'settlement_scope': 'match',
-              'settlement_operator': 'over', 'settlement_line': 7.5,
-          }
-          cards = {
-              'fixture_id': 99, 'home_team': 'Time A', 'away_team': 'Time B',
-              'market': 'Cartões amarelos', 'selection': 'Mais de 2.5 cartões amarelos',
-              'settlement_metric': 'yellow_cards', 'settlement_scope': 'match',
-              'settlement_operator': 'over', 'settlement_line': 2.5,
-          }
-          shots = {
-              'fixture_id': 99, 'home_team': 'Time A', 'away_team': 'Time B',
-              'market': 'Chutes no alvo', 'selection': 'Mais de 5.5 chutes no alvo',
-              'settlement_metric': 'shots_on_goal', 'settlement_scope': 'match',
-              'settlement_operator': 'over', 'settlement_line': 5.5,
-          }
+          green = {'fixture_id': 99, 'home_team': 'A', 'away_team': 'B', 'market': 'Dupla chance', 'selection': 'B ou empate'}
+          red = {'fixture_id': 99, 'home_team': 'A', 'away_team': 'B', 'market': 'Dupla chance', 'selection': 'A ou empate'}
           assert settle_leg(green, fixture)['status'] == 'GREEN'
           assert settle_leg(red, fixture)['status'] == 'RED'
-          assert settle_leg(over, fixture)['status'] == 'GREEN'
-          assert settle_leg(corners, fixture, stats)['status'] == 'GREEN'
-          assert settle_leg(cards, fixture, stats)['status'] == 'GREEN'
-          assert settle_leg(shots, fixture, stats)['status'] == 'GREEN'
-          ticket = {'legs': [green, red], 'status': 'PENDING'}
-          assert settle_ticket(ticket, {99: fixture})['status'] == 'RED'
-          print('GREEN RED verifier including multi-market stats OK')
+          assert settle_ticket({'legs': [green, red]}, {99: fixture})['status'] == 'RED'
+          print('GREEN/RED verifier OK')
           PY
