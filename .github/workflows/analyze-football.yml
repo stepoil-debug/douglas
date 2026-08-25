@@ -33,8 +33,8 @@ jobs:
       KEY_ALIAS_2: ${{ secrets.FOOTBALL_API_KEY }}
       KEY_ALIAS_3: ${{ secrets.APISPORTS_KEY }}
       KEY_ALIAS_4: ${{ secrets.EFOOTBAL }}
-      FOOTBALL_MAX_CANDIDATES: '18'
-      FOOTBALL_MAX_ODDS_PAGES: '6'
+      FOOTBALL_MAX_CANDIDATES: '24'
+      FOOTBALL_MAX_ODDS_PAGES: '8'
       API_FOOTBALL_MIN_INTERVAL: '6.2'
       INPUT_DATE: ${{ github.event.inputs.date || '' }}
 
@@ -108,6 +108,10 @@ jobs:
           set -euo pipefail
           python -m src.football_quant.settlement --max-dates 1
 
+      - name: Refresh performance audit
+        if: env.SKIP_ANALYSIS != 'true'
+        run: python -m src.football_quant.performance_audit
+
       - name: Persist dashboard data
         if: env.SKIP_ANALYSIS != 'true'
         shell: bash
@@ -115,11 +119,11 @@ jobs:
           set -euo pipefail
           git config user.name 'investbet-football-bot'
           git config user.email 'investbet-football-bot@users.noreply.github.com'
-          git add dashboard/data.json dashboard/run_status.json dashboard/management.json data/football/history || true
+          git add dashboard/data.json dashboard/run_status.json dashboard/management.json dashboard/performance_audit.json data/football/history data/football/performance_audit.json || true
           if git diff --cached --quiet; then
             echo 'No data changes to commit.'
           else
-            git commit -m 'data: update multi-market Betano tickets, results and bankroll'
+            git commit -m 'data: update accuracy-first tickets, results and audit'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
