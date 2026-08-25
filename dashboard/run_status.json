@@ -15,11 +15,11 @@
   "message": "2/3 bilhetes passaram os filtros reforçados; o motor não reduz qualidade para completar a meta.",
   "multi_market": true,
   "publication_immutable": true,
-  "quality_rejected_legs": 429,
+  "quality_rejected_legs": 409,
   "sport": "football",
   "status": "SUCCESS",
   "target_tickets": 3,
   "ticket_lock": false,
   "tickets_ready": 2,
-  "updated_at": "2026-08-25T10:22:04.039587-03:00"
+  "updated_at": "2026-08-25T12:07:13.592656-03:00"
 }
