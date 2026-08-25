@@ -1,0 +1,636 @@
+{
+  "daily": [
+    {
+      "date": "2026-08-18",
+      "green": 1,
+      "hit_target_2_of_3": false,
+      "pending": 0,
+      "red": 2
+    },
+    {
+      "date": "2026-08-19",
+      "green": 1,
+      "hit_target_2_of_3": false,
+      "pending": 0,
+      "red": 2
+    },
+    {
+      "date": "2026-08-20",
+      "green": 3,
+      "hit_target_2_of_3": true,
+      "pending": 0,
+      "red": 0
+    },
+    {
+      "date": "2026-08-21",
+      "green": 2,
+      "hit_target_2_of_3": true,
+      "pending": 0,
+      "red": 1
+    },
+    {
+      "date": "2026-08-22",
+      "green": 2,
+      "hit_target_2_of_3": true,
+      "pending": 0,
+      "red": 1
+    },
+    {
+      "date": "2026-08-24",
+      "green": 0,
+      "hit_target_2_of_3": false,
+      "pending": 0,
+      "red": 3
+    },
+    {
+      "date": "2026-08-25",
+      "green": 0,
+      "hit_target_2_of_3": false,
+      "pending": 2,
+      "red": 0
+    }
+  ],
+  "groups": {
+    "bookmaker_depth": {
+      "5-7": {
+        "accuracy": 0.6667,
+        "green": 4,
+        "red": 2,
+        "resolved": 6
+      },
+      "8+": {
+        "accuracy": 0.7407,
+        "green": 20,
+        "red": 7,
+        "resolved": 27
+      }
+    },
+    "country": {
+      "Argentina": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
+      "Brazil": {
+        "accuracy": 0.5,
+        "green": 3,
+        "red": 3,
+        "resolved": 6
+      },
+      "Canada": {
+        "accuracy": 1.0,
+        "green": 2,
+        "red": 0,
+        "resolved": 2
+      },
+      "Denmark": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
+      "England": {
+        "accuracy": 1.0,
+        "green": 2,
+        "red": 0,
+        "resolved": 2
+      },
+      "Ireland": {
+        "accuracy": 0.5,
+        "green": 1,
+        "red": 1,
+        "resolved": 2
+      },
+      "Netherlands": {
+        "accuracy": 0.0,
+        "green": 0,
+        "red": 1,
+        "resolved": 1
+      },
+      "Spain": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
+      "Sweden": {
+        "accuracy": 0.8,
+        "green": 8,
+        "red": 2,
+        "resolved": 10
+      },
+      "USA": {
+        "accuracy": 0.6,
+        "green": 3,
+        "red": 2,
+        "resolved": 5
+      },
+      "World": {
+        "accuracy": 1.0,
+        "green": 2,
+        "red": 0,
+        "resolved": 2
+      }
+    },
+    "family": {
+      "GOALS": {
+        "accuracy": 0.7727,
+        "green": 17,
+        "red": 5,
+        "resolved": 22
+      },
+      "RESULT": {
+        "accuracy": 0.6364,
+        "green": 7,
+        "red": 4,
+        "resolved": 11
+      }
+    },
+    "league": {
+      "1. Division": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
+      "Allsvenskan": {
+        "accuracy": 1.0,
+        "green": 2,
+        "red": 0,
+        "resolved": 2
+      },
+      "CONMEBOL Libertadores": {
+        "accuracy": 1.0,
+        "green": 2,
+        "red": 0,
+        "resolved": 2
+      },
+      "Canadian Premier League": {
+        "accuracy": 1.0,
+        "green": 2,
+        "red": 0,
+        "resolved": 2
+      },
+      "Division 2 - Södra Götaland": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
+      "Eerste Divisie": {
+        "accuracy": 0.0,
+        "green": 0,
+        "red": 1,
+        "resolved": 1
+      },
+      "La Liga": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
+      "Major League Soccer": {
+        "accuracy": 0.0,
+        "green": 0,
+        "red": 1,
+        "resolved": 1
+      },
+      "National League - North": {
+        "accuracy": 1.0,
+        "green": 2,
+        "red": 0,
+        "resolved": 2
+      },
+      "Premier Division": {
+        "accuracy": 0.5,
+        "green": 1,
+        "red": 1,
+        "resolved": 2
+      },
+      "Primera B Metropolitana": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
+      "Serie A": {
+        "accuracy": 0.0,
+        "green": 0,
+        "red": 2,
+        "resolved": 2
+      },
+      "Serie B": {
+        "accuracy": 0.75,
+        "green": 3,
+        "red": 1,
+        "resolved": 4
+      },
+      "Superettan": {
+        "accuracy": 1.0,
+        "green": 2,
+        "red": 0,
+        "resolved": 2
+      },
+      "Svenska Cupen": {
+        "accuracy": 0.6,
+        "green": 3,
+        "red": 2,
+        "resolved": 5
+      },
+      "USL Championship": {
+        "accuracy": 0.75,
+        "green": 3,
+        "red": 1,
+        "resolved": 4
+      }
+    },
+    "probability_bin": {
+      "70-75%": {
+        "accuracy": 0.6667,
+        "green": 2,
+        "red": 1,
+        "resolved": 3
+      },
+      "75-80%": {
+        "accuracy": 0.6667,
+        "green": 6,
+        "red": 3,
+        "resolved": 9
+      },
+      "80-85%": {
+        "accuracy": 0.8571,
+        "green": 6,
+        "red": 1,
+        "resolved": 7
+      },
+      "85-90%": {
+        "accuracy": 0.7,
+        "green": 7,
+        "red": 3,
+        "resolved": 10
+      },
+      "<70%": {
+        "accuracy": 0.0,
+        "green": 0,
+        "red": 1,
+        "resolved": 1
+      },
+      ">=90%": {
+        "accuracy": 1.0,
+        "green": 3,
+        "red": 0,
+        "resolved": 3
+      }
+    },
+    "score_bin": {
+      "76-80": {
+        "accuracy": 0.6,
+        "green": 6,
+        "red": 4,
+        "resolved": 10
+      },
+      "80-84": {
+        "accuracy": 0.7273,
+        "green": 8,
+        "red": 3,
+        "resolved": 11
+      },
+      "84-88": {
+        "accuracy": 0.9,
+        "green": 9,
+        "red": 1,
+        "resolved": 10
+      },
+      "<76": {
+        "accuracy": 0.5,
+        "green": 1,
+        "red": 1,
+        "resolved": 2
+      }
+    },
+    "selection": {
+      "dupla chance:columbus crew ou empate": {
+        "accuracy": 0.0,
+        "green": 0,
+        "red": 1,
+        "resolved": 1
+      },
+      "dupla chance:draw/away": {
+        "accuracy": 0.5,
+        "green": 1,
+        "red": 1,
+        "resolved": 2
+      },
+      "dupla chance:home/draw": {
+        "accuracy": 1.0,
+        "green": 2,
+        "red": 0,
+        "resolved": 2
+      },
+      "dupla chance:ik brage ou empate": {
+        "accuracy": 0.0,
+        "green": 0,
+        "red": 2,
+        "resolved": 2
+      },
+      "dupla chance:orebro sk ou empate": {
+        "accuracy": 1.0,
+        "green": 2,
+        "red": 0,
+        "resolved": 2
+      },
+      "dupla chance:south shields ou empate": {
+        "accuracy": 1.0,
+        "green": 2,
+        "red": 0,
+        "resolved": 2
+      },
+      "goals:match:over:1.5": {
+        "accuracy": 1.0,
+        "green": 5,
+        "red": 0,
+        "resolved": 5
+      },
+      "goals:match:under:3": {
+        "accuracy": 0.0,
+        "green": 0,
+        "red": 1,
+        "resolved": 1
+      },
+      "goals:match:under:3.5": {
+        "accuracy": 0.7778,
+        "green": 7,
+        "red": 2,
+        "resolved": 9
+      },
+      "goals:match:under:4.5": {
+        "accuracy": 0.6667,
+        "green": 4,
+        "red": 2,
+        "resolved": 6
+      },
+      "total de gols:mais de 1.5 gols": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      }
+    },
+    "signal_source": {
+      "MARKET_CONSENSUS": {
+        "accuracy": 0.8,
+        "green": 4,
+        "red": 1,
+        "resolved": 5
+      },
+      "MODEL+MARKET": {
+        "accuracy": 0.5714,
+        "green": 4,
+        "red": 3,
+        "resolved": 7
+      },
+      "MULTI_MARKET_CONSENSUS": {
+        "accuracy": 0.7619,
+        "green": 16,
+        "red": 5,
+        "resolved": 21
+      }
+    },
+    "ticket_leg_count": {
+      "1": {
+        "accuracy": 0.0,
+        "green": 0,
+        "red": 1,
+        "resolved": 1
+      },
+      "2": {
+        "accuracy": 0.5294,
+        "green": 9,
+        "red": 8,
+        "resolved": 17
+      }
+    },
+    "ticket_probability_bin": {
+      "70-75%": {
+        "accuracy": 0.0,
+        "green": 0,
+        "red": 1,
+        "resolved": 1
+      },
+      "75-80%": {
+        "accuracy": 0.0,
+        "green": 0,
+        "red": 1,
+        "resolved": 1
+      },
+      "80-85%": {
+        "accuracy": 0.5,
+        "green": 1,
+        "red": 1,
+        "resolved": 2
+      },
+      "<70%": {
+        "accuracy": 0.5714,
+        "green": 8,
+        "red": 6,
+        "resolved": 14
+      }
+    }
+  },
+  "red_legs": [
+    {
+      "bookmaker_count": 10,
+      "country": "Sweden",
+      "date": "2026-08-18",
+      "family": "RESULT",
+      "implied_probability": 0.7576,
+      "league": "Svenska Cupen",
+      "market": "Dupla chance",
+      "match": "Karlberg x IK brage",
+      "model_probability": 0.8855,
+      "odd": 1.32,
+      "result_reason": "Dupla chance conferida no placar 2-0.",
+      "result_score": "2-0",
+      "result_stat_value": null,
+      "score": 78.4,
+      "selection": "IK brage ou empate",
+      "selection_key": "dupla chance:ik brage ou empate",
+      "signal_source": "MODEL+MARKET",
+      "ticket_id": "B2"
+    },
+    {
+      "bookmaker_count": 10,
+      "country": "Sweden",
+      "date": "2026-08-18",
+      "family": "RESULT",
+      "implied_probability": 0.7576,
+      "league": "Svenska Cupen",
+      "market": "Dupla chance",
+      "match": "Karlberg x IK brage",
+      "model_probability": 0.8855,
+      "odd": 1.32,
+      "result_reason": "Dupla chance conferida no placar 2-0.",
+      "result_score": "2-0",
+      "result_stat_value": null,
+      "score": 78.4,
+      "selection": "IK brage ou empate",
+      "selection_key": "dupla chance:ik brage ou empate",
+      "signal_source": "MODEL+MARKET",
+      "ticket_id": "B3"
+    },
+    {
+      "bookmaker_count": 11,
+      "country": "USA",
+      "date": "2026-08-19",
+      "family": "RESULT",
+      "implied_probability": 0.8403,
+      "league": "Major League Soccer",
+      "market": "Dupla chance",
+      "match": "Columbus Crew x CF Montreal",
+      "model_probability": 0.8745,
+      "odd": 1.21,
+      "result_reason": "Dupla chance conferida no placar 1-2.",
+      "result_score": "1-2",
+      "result_stat_value": null,
+      "score": 77.7,
+      "selection": "Columbus Crew ou empate",
+      "selection_key": "dupla chance:columbus crew ou empate",
+      "signal_source": "MODEL+MARKET",
+      "ticket_id": "B1"
+    },
+    {
+      "bookmaker_count": 7,
+      "country": "Brazil",
+      "date": "2026-08-19",
+      "family": "RESULT",
+      "implied_probability": 0.7937,
+      "league": "Serie B",
+      "market": "Dupla chance",
+      "match": "Avai x Sport Recife",
+      "model_probability": 0.7698,
+      "odd": 1.31,
+      "result_reason": "Dupla chance conferida no placar 2-1.",
+      "result_score": "2-1",
+      "result_stat_value": null,
+      "score": 76.3,
+      "selection": "Draw/Away",
+      "selection_key": "dupla chance:draw/away",
+      "signal_source": "MARKET_CONSENSUS",
+      "ticket_id": "B2"
+    },
+    {
+      "bookmaker_count": 11,
+      "country": "Ireland",
+      "date": "2026-08-21",
+      "family": "GOALS",
+      "implied_probability": 0.7692,
+      "league": "Premier Division",
+      "market": "Total de gols",
+      "match": "Bohemians x Derry City",
+      "model_probability": 0.7462,
+      "odd": 1.32,
+      "result_reason": "Total de gols: 8; linha under 3.5.",
+      "result_score": "5-3",
+      "result_stat_value": null,
+      "score": 80.0,
+      "selection": "Menos de 3.5 gols",
+      "selection_key": "goals:match:under:3.5",
+      "signal_source": "MULTI_MARKET_CONSENSUS",
+      "ticket_id": "B1"
+    },
+    {
+      "bookmaker_count": 6,
+      "country": "Brazil",
+      "date": "2026-08-22",
+      "family": "GOALS",
+      "implied_probability": 0.7042,
+      "league": "Serie A",
+      "market": "Total de gols",
+      "match": "Cruzeiro x Flamengo",
+      "model_probability": 0.6831,
+      "odd": 1.5,
+      "result_reason": "Total de gols: 3; linha under 3.",
+      "result_score": "2-1",
+      "result_stat_value": null,
+      "score": 74.0,
+      "selection": "Menos de 3 gols",
+      "selection_key": "goals:match:under:3",
+      "signal_source": "MULTI_MARKET_CONSENSUS",
+      "ticket_id": "B3"
+    },
+    {
+      "bookmaker_count": 10,
+      "country": "Brazil",
+      "date": "2026-08-24",
+      "family": "GOALS",
+      "implied_probability": 0.7937,
+      "league": "Serie A",
+      "market": "Total de gols",
+      "match": "Botafogo x Atletico Paranaense",
+      "model_probability": 0.7698,
+      "odd": 1.3,
+      "result_reason": "Total de gols: 5; linha under 3.5.",
+      "result_score": "2-3",
+      "result_stat_value": null,
+      "score": 81.5,
+      "selection": "Menos de 3.5 gols",
+      "selection_key": "goals:match:under:3.5",
+      "signal_source": "MULTI_MARKET_CONSENSUS",
+      "ticket_id": "B1"
+    },
+    {
+      "bookmaker_count": 8,
+      "country": "USA",
+      "date": "2026-08-24",
+      "family": "GOALS",
+      "implied_probability": 0.8333,
+      "league": "USL Championship",
+      "market": "Total de gols",
+      "match": "Charleston Battery x Miami FC",
+      "model_probability": 0.8083,
+      "odd": 1.23,
+      "result_reason": "Total de gols: 5; linha under 4.5.",
+      "result_score": "5-0",
+      "result_stat_value": null,
+      "score": 84.1,
+      "selection": "Menos de 4.5 gols",
+      "selection_key": "goals:match:under:4.5",
+      "signal_source": "MULTI_MARKET_CONSENSUS",
+      "ticket_id": "B2"
+    },
+    {
+      "bookmaker_count": 10,
+      "country": "Netherlands",
+      "date": "2026-08-24",
+      "family": "GOALS",
+      "implied_probability": 0.7874,
+      "league": "Eerste Divisie",
+      "market": "Total de gols",
+      "match": "Jong Utrecht x Heracles",
+      "model_probability": 0.7638,
+      "odd": 1.31,
+      "result_reason": "Total de gols: 7; linha under 4.5.",
+      "result_score": "1-6",
+      "result_stat_value": null,
+      "score": 81.1,
+      "selection": "Menos de 4.5 gols",
+      "selection_key": "goals:match:under:4.5",
+      "signal_source": "MULTI_MARKET_CONSENSUS",
+      "ticket_id": "B3"
+    }
+  ],
+  "summary": {
+    "completed_days": 6,
+    "daily_target_rate": 0.5,
+    "days_with_at_least_2_green": 3,
+    "leg_accuracy": 0.7273,
+    "legs_green": 24,
+    "legs_red": 9,
+    "legs_resolved": 33,
+    "ticket_accuracy": 0.5,
+    "tickets_green": 9,
+    "tickets_red": 9,
+    "tickets_resolved": 18
+  }
+}
