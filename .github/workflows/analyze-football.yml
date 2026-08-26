@@ -26,16 +26,16 @@ concurrency:
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     env:
       KEY_PRIMARY: ${{ secrets.API_FOOTBALL_KEY }}
       KEY_ALIAS_1: ${{ secrets.API_SPORTS_KEY }}
       KEY_ALIAS_2: ${{ secrets.FOOTBALL_API_KEY }}
       KEY_ALIAS_3: ${{ secrets.APISPORTS_KEY }}
       KEY_ALIAS_4: ${{ secrets.EFOOTBAL }}
-      FOOTBALL_MAX_CANDIDATES: '24'
-      FOOTBALL_MAX_ODDS_PAGES: '8'
-      API_FOOTBALL_MIN_INTERVAL: '6.2'
+      FOOTBALL_MAX_CANDIDATES: '60'
+      FOOTBALL_MAX_ODDS_PAGES: '15'
+      API_FOOTBALL_MIN_INTERVAL: '1.2'
       INPUT_DATE: ${{ github.event.inputs.date || '' }}
 
     steps:
