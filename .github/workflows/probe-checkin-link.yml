@@ -20,59 +20,61 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          URL='https://checkin.step-og.com/'
-          mkdir -p /tmp/checkin-probe
-          curl -L -sS --max-time 30 -D /tmp/checkin-probe/headers.txt -o /tmp/checkin-probe/index.html "$URL"
-
-          {
-            echo "PROBE_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-            echo "URL=$URL"
-            echo "--- RESPONSE HEADERS ---"
-            cat /tmp/checkin-probe/headers.txt
-            echo
-            echo "--- OLD/NEW LINK MATCHES IN HTML ---"
-            grep -Ein 'portal-talentos-step|careers\.step-og\.com|trabalhe.{0,30}conosco' /tmp/checkin-probe/index.html || true
-            echo
-            echo "--- HREFS ---"
-            grep -Eo 'href=["'"'][^"'"']+["'"']' /tmp/checkin-probe/index.html | head -100 || true
-            echo
-            echo "--- SCRIPT SOURCES ---"
-            grep -Eo 'src=["'"'][^"'"']+\.js[^"'"']*["'"']' /tmp/checkin-probe/index.html | head -100 || true
-          } > checkin-live-probe.txt
-
           python3 - <<'PY'
-          import re, pathlib, urllib.parse, urllib.request
+          import urllib.request, urllib.parse, re, hashlib, datetime
           base='https://checkin.step-og.com/'
-          html=pathlib.Path('/tmp/checkin-probe/index.html').read_text(errors='ignore')
-          assets=[]
+          req=urllib.request.Request(base, headers={'User-Agent':'Mozilla/5.0 STEP-Link-Probe'})
+          with urllib.request.urlopen(req, timeout=30) as r:
+              html=r.read().decode('utf-8','ignore')
+              final_url=r.geturl()
+              status=getattr(r,'status',None)
+              headers=dict(r.headers.items())
+          lines=[]
+          lines.append('PROBE_UTC='+datetime.datetime.now(datetime.timezone.utc).isoformat())
+          lines.append('URL='+base)
+          lines.append('FINAL_URL='+str(final_url))
+          lines.append('STATUS='+str(status))
+          lines.append('--- RESPONSE HEADERS ---')
+          for k,v in headers.items(): lines.append(f'{k}: {v}')
+          lines.append('--- HTML LINK MATCHES ---')
+          low=html.lower()
+          for needle in ['portal-talentos-step','careers.step-og.com','trabalhe conosco']:
+              start=0
+              while True:
+                  i=low.find(needle, start)
+                  if i < 0: break
+                  lines.append(html[max(0,i-400):min(len(html),i+900)].replace('\n',' '))
+                  start=i+len(needle)
+          attrs=[]
           for m in re.finditer(r'(?:src|href)=["\']([^"\']+)["\']', html, re.I):
-              u=m.group(1)
+              attrs.append(m.group(1))
+          lines.append('--- HTML ASSET/LINK URLS ---')
+          for u in list(dict.fromkeys(attrs))[:150]: lines.append(u)
+          assets=[]
+          for u in attrs:
               if '.js' in u or '.css' in u:
-                  assets.append(urllib.parse.urljoin(base,u))
-          seen=[]
-          for u in assets:
-              if u not in seen: seen.append(u)
-          with open('checkin-live-probe.txt','a',encoding='utf-8') as out:
-              out.write('\n--- ASSET MATCHES ---\n')
-              for u in seen[:30]:
-                  try:
-                      data=urllib.request.urlopen(u, timeout=20).read().decode('utf-8','ignore')
-                  except Exception as e:
-                      out.write(f'FETCH_ERROR {u}: {e}\n')
-                      continue
-                  hits=[]
-                  for pat in ['portal-talentos-step','careers.step-og.com','Trabalhe Conosco','trabalhe conosco']:
-                      if pat.lower() in data.lower(): hits.append(pat)
-                  if hits:
-                      out.write(f'MATCH {u} => {hits}\n')
-                      low=data.lower()
-                      for needle in ['portal-talentos-step','careers.step-og.com','trabalhe conosco']:
-                          i=low.find(needle.lower())
-                          if i>=0:
-                              out.write(data[max(0,i-500):min(len(data),i+1000)].replace('\n',' ')+'\n')
-              out.write('\n--- HTML SHA256 ---\n')
-              import hashlib
-              out.write(hashlib.sha256(html.encode()).hexdigest()+'\n')
+                  full=urllib.parse.urljoin(base,u)
+                  if full not in assets: assets.append(full)
+          lines.append('--- ASSET MATCHES ---')
+          for u in assets[:50]:
+              try:
+                  areq=urllib.request.Request(u, headers={'User-Agent':'Mozilla/5.0 STEP-Link-Probe'})
+                  with urllib.request.urlopen(areq, timeout=20) as ar:
+                      data=ar.read().decode('utf-8','ignore')
+              except Exception as e:
+                  lines.append(f'FETCH_ERROR {u}: {e}')
+                  continue
+              alow=data.lower()
+              found=False
+              for needle in ['portal-talentos-step','careers.step-og.com','trabalhe conosco']:
+                  i=alow.find(needle)
+                  if i >= 0:
+                      if not found:
+                          lines.append('MATCH_ASSET='+u)
+                          found=True
+                      lines.append(data[max(0,i-500):min(len(data),i+1200)].replace('\n',' '))
+          lines.append('HTML_SHA256='+hashlib.sha256(html.encode()).hexdigest())
+          open('checkin-live-probe.txt','w',encoding='utf-8').write('\n'.join(lines)+'\n')
           PY
 
           git config user.name 'github-actions[bot]'
