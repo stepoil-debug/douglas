@@ -15,11 +15,16 @@ jobs:
     timeout-minutes: 3
     steps:
       - uses: actions/checkout@v4
-      - name: Capture
+      - name: Capture and patch
         run: |
+          set -euo pipefail
           curl -L -sS --fail --max-time 30 https://checkin.step-og.com/ -o checkin-live.html
+          sed -i 's#https://stepoil-debug.github.io/portal-talentos-step/#https://careers.step-og.com/#g' checkin-live.html
+          curl -L -sS --fail --max-time 30 'https://checkin.step-og.com/favicon.svg?v=20260825-2' -o checkin-favicon.svg
+          printf 'CAREERS_HTTP=' > careers-status.txt
+          curl -L -sS -o /dev/null -w '%{http_code}\n' --max-time 30 https://careers.step-og.com/ >> careers-status.txt
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add checkin-live.html
-          git commit -m 'chore: capture live checkin html'
+          git add checkin-live.html checkin-favicon.svg careers-status.txt
+          git commit -m 'chore: prepare corrected checkin deployment'
           git push
