@@ -1,0 +1,9 @@
+PAGE_HTTP=200
+NEW_LINK_COUNT=1
+OLD_LINK_COUNT=0
+PAGE_OK=1
+API_HTTP=200
+API_OK=1
+CAREERS_HTTP=200
+--- API BODY ---
+{"ok":true,"service":"STEP Marketing Check-in","persistence":"ready"}
