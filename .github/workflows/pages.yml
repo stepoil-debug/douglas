@@ -54,12 +54,14 @@ jobs:
           for page_name in ('index.html', 'v2.html'):
               page = Path('dashboard') / page_name
               html = page.read_text(encoding='utf-8')
-              for script_name in ('manual-trigger.js', 'analysis-watch.js'):
+              for script_name in ('manual-trigger.js', 'analysis-watch.js', 'strong-candidates.js'):
                   html = re.sub(
                       rf'{re.escape(script_name)}(?:\?v=[^"\']*)?',
                       f'{script_name}?v={build}',
                       html,
                   )
+              if 'strong-candidates.js' not in html:
+                  html = html.replace('</body>', f'<script src="strong-candidates.js?v={build}"></script>\n</body>')
               if 'name="investbet-build"' in html:
                   html = re.sub(
                       r'<meta name="investbet-build" content="[^"]*">',
@@ -133,16 +135,17 @@ jobs:
             PUBLIC_DATE="$(printf '%s' "$STATUS" | jq -r '.board_date // empty' 2>/dev/null || true)"
             PUBLIC_STATUS="$(printf '%s' "$STATUS" | jq -r '.status // empty' 2>/dev/null || true)"
 
-            ROOT_OK=0; V2_OK=0; WATCH_OK=0; MANUAL_OK=0; BUILD_OK=0; ARCHIVE_OK=0
+            ROOT_OK=0; V2_OK=0; WATCH_OK=0; MANUAL_OK=0; STRONG_OK=0; BUILD_OK=0; ARCHIVE_OK=0
             printf '%s' "$ROOT" | grep -q "analysis-watch.js?v=${BUILD}" && ROOT_OK=1 || true
             printf '%s' "$V2" | grep -q "analysis-watch.js?v=${BUILD}" && V2_OK=1 || true
             printf '%s' "$V2" | grep -q "manual-trigger.js?v=${BUILD}" && MANUAL_OK=1 || true
+            printf '%s' "$V2" | grep -q "strong-candidates.js?v=${BUILD}" && STRONG_OK=1 || true
             printf '%s' "$V2" | grep -q "investbet-build.*${BUILD}" && BUILD_OK=1 || true
             printf '%s' "$ARCHIVE" | grep -q 'Histórico de bilhetes' && ARCHIVE_OK=1 || true
             WATCH_BODY="$(curl -fsSL --retry 2 --retry-delay 2 "${BASE}/analysis-watch.js?v=${BUILD}" || true)"
             printf '%s' "$WATCH_BODY" | grep -q 'POLL_MS = 5000' && WATCH_OK=1 || true
 
-            if [ "$ROOT_OK" = 1 ] && [ "$V2_OK" = 1 ] && [ "$WATCH_OK" = 1 ] && [ "$MANUAL_OK" = 1 ] && [ "$BUILD_OK" = 1 ] && [ "$ARCHIVE_OK" = 1 ] \
+            if [ "$ROOT_OK" = 1 ] && [ "$V2_OK" = 1 ] && [ "$WATCH_OK" = 1 ] && [ "$MANUAL_OK" = 1 ] && [ "$STRONG_OK" = 1 ] && [ "$BUILD_OK" = 1 ] && [ "$ARCHIVE_OK" = 1 ] \
                && [ "$PUBLIC_DATE" = "$EXPECTED_DATE" ] && [ "$PUBLIC_STATUS" = "$EXPECTED_STATUS" ]; then
               OK=1
               break
