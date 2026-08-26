@@ -1,4 +1,4 @@
-name: Verify corrected checkin preview
+name: Verify corrected checkin production
 
 on:
   push:
@@ -12,32 +12,43 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 6
     steps:
       - uses: actions/checkout@v4
-      - name: Verify preview
+      - name: Verify production
         shell: bash
         run: |
-          set +e
-          BASE='https://step-event-checkin-jbwitotm9-douglas-6d4f.vercel.app'
-          code=$(curl -L -sS -o /tmp/page.html -w '%{http_code}' --max-time 30 "$BASE/")
-          new_count=$(grep -Fo 'https://careers.step-og.com/' /tmp/page.html | wc -l)
-          old_count=$(grep -Fo 'https://stepoil-debug.github.io/portal-talentos-step/' /tmp/page.html | wc -l)
+          set -euo pipefail
+          BASE='https://checkin.step-og.com'
+          ok=0
+          for i in $(seq 1 36); do
+            code=$(curl -L -sS -o /tmp/page.html -w '%{http_code}' --max-time 20 "$BASE/") || code=000
+            new_count=$(grep -Fo 'https://careers.step-og.com/' /tmp/page.html 2>/dev/null | wc -l || true)
+            old_count=$(grep -Fo 'https://stepoil-debug.github.io/portal-talentos-step/' /tmp/page.html 2>/dev/null | wc -l || true)
+            if [ "$code" = 200 ] && [ "$new_count" -gt 0 ] && [ "$old_count" -eq 0 ]; then ok=1; break; fi
+            sleep 5
+          done
           api_code=$(curl -L -sS -o /tmp/api.json -w '%{http_code}' --max-time 30 "$BASE/api/checkin")
+          api_ok=0
+          if [ "$api_code" = 200 ] && grep -Fq '"ok":true' /tmp/api.json; then api_ok=1; fi
+          careers_code=$(curl -L -sS -o /dev/null -w '%{http_code}' --max-time 30 https://careers.step-og.com/)
           {
             echo "PAGE_HTTP=$code"
             echo "NEW_LINK_COUNT=$new_count"
             echo "OLD_LINK_COUNT=$old_count"
+            echo "PAGE_OK=$ok"
             echo "API_HTTP=$api_code"
+            echo "API_OK=$api_ok"
+            echo "CAREERS_HTTP=$careers_code"
             echo '--- API BODY ---'
             cat /tmp/api.json
-            echo
-            echo '--- PAGE HEAD ---'
-            head -c 1000 /tmp/page.html
-          } > checkin-preview-status.txt
-          cat checkin-preview-status.txt
+          } > checkin-production-status.txt
+          cat checkin-production-status.txt
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add checkin-preview-status.txt
-          git commit -m 'chore: record corrected checkin preview diagnostics'
+          git add checkin-production-status.txt
+          git commit -m 'chore: record corrected checkin production status'
           git push
+          test "$ok" = 1
+          test "$api_ok" = 1
+          test "$careers_code" = 200
