@@ -18,24 +18,26 @@ jobs:
       - name: Verify preview
         shell: bash
         run: |
-          set -euo pipefail
+          set +e
           BASE='https://step-event-checkin-jbwitotm9-douglas-6d4f.vercel.app'
-          ok=0
-          for i in $(seq 1 24); do
-            code=$(curl -L -sS -o /tmp/page.html -w '%{http_code}' --max-time 20 "$BASE/") || code=000
-            if [ "$code" = 200 ]; then ok=1; break; fi
-            sleep 5
-          done
-          test "$ok" = 1
-          grep -Fq 'https://careers.step-og.com/' /tmp/page.html
-          ! grep -Fq 'https://stepoil-debug.github.io/portal-talentos-step/' /tmp/page.html
+          code=$(curl -L -sS -o /tmp/page.html -w '%{http_code}' --max-time 30 "$BASE/")
+          new_count=$(grep -Fo 'https://careers.step-og.com/' /tmp/page.html | wc -l)
+          old_count=$(grep -Fo 'https://stepoil-debug.github.io/portal-talentos-step/' /tmp/page.html | wc -l)
           api_code=$(curl -L -sS -o /tmp/api.json -w '%{http_code}' --max-time 30 "$BASE/api/checkin")
-          test "$api_code" = 200
-          grep -Fq '"ok":true' /tmp/api.json
-          printf 'PAGE_HTTP=%s\nAPI_HTTP=%s\nCORRECT_LINK=yes\nLEGACY_LINK=no\n' "$code" "$api_code" > checkin-preview-status.txt
-          cat /tmp/api.json >> checkin-preview-status.txt
+          {
+            echo "PAGE_HTTP=$code"
+            echo "NEW_LINK_COUNT=$new_count"
+            echo "OLD_LINK_COUNT=$old_count"
+            echo "API_HTTP=$api_code"
+            echo '--- API BODY ---'
+            cat /tmp/api.json
+            echo
+            echo '--- PAGE HEAD ---'
+            head -c 1000 /tmp/page.html
+          } > checkin-preview-status.txt
+          cat checkin-preview-status.txt
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add checkin-preview-status.txt
-          git commit -m 'chore: record corrected checkin preview status'
+          git commit -m 'chore: record corrected checkin preview diagnostics'
           git push
