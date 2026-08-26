@@ -1,0 +1,36 @@
+PROBE_UTC=2026-08-26T19:09:47.148926+00:00
+URL=https://checkin.step-og.com/
+FINAL_URL=https://checkin.step-og.com/
+STATUS=200
+--- RESPONSE HEADERS ---
+Accept-Ranges: bytes
+Access-Control-Allow-Origin: *
+Age: 4630
+Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0
+Content-Disposition: inline
+Content-Length: 19134
+Content-Type: text/html; charset=utf-8
+Date: Wed, 26 Aug 2026 19:09:47 GMT
+Etag: "a473d6768516858db62e31e4d772f57f"
+Expires: 0
+Last-Modified: Wed, 26 Aug 2026 17:52:36 GMT
+Pragma: no-cache
+Referrer-Policy: strict-origin-when-cross-origin
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Vercel-Cache: HIT
+X-Vercel-Id: sfo1::rznkf-1787771387133-fa5c6b15cddd
+Connection: close
+--- HTML LINK MATCHES ---
+12.png" alt="STEP Oil & Gas"><button class="lang" id="langBtn" data-i18n="lang">Idioma</button></div><div class="hero"><h1><span data-i18n="hero">Bem-vindo à STEP.</span><em data-i18n="accent">Faça seu check-in.</em></h1><p data-i18n="intro">Um cadastro rápido para conhecermos você, sua empresa e os assuntos que podem gerar boas conexões.</p><a class="career" href="https://stepoil-debug.github.io/portal-talentos-step/" target="_blank" rel="noopener noreferrer"><span class="ico">◇</span><span class="copy"><strong data-i18n="career">Trabalhe conosco</strong><small data-i18n="soon">Portal de Talentos</small></span><span class="arr">↗</span></a></div><div class="foot"><a href="https://step-og.com/" target="_blank" rel="noopener">STEP OIL &amp; GAS · Integrated Solutions</a></div></section> <section class="formarea"><div class="shell"><div class="card"><div class="form" id="formWrap"><div class="head"><h2 data-i18n="title">Ficha de inscrição de visitante</h2><p data-i18n="sub">Preencha os dados abaixo. Leva menos de 1 minuto.</p></div><form id="leadForm"><div class="grid"><div class="field full"><label data-i18n="name">Nome</label><input id="name" autocomplete="name" required></div><div class="field"><label data-i18n="email">E-mail</label><input id="email" type="email" autocomplete="e
+n="hero">Bem-vindo à STEP.</span><em data-i18n="accent">Faça seu check-in.</em></h1><p data-i18n="intro">Um cadastro rápido para conhecermos você, sua empresa e os assuntos que podem gerar boas conexões.</p><a class="career" href="https://stepoil-debug.github.io/portal-talentos-step/" target="_blank" rel="noopener noreferrer"><span class="ico">◇</span><span class="copy"><strong data-i18n="career">Trabalhe conosco</strong><small data-i18n="soon">Portal de Talentos</small></span><span class="arr">↗</span></a></div><div class="foot"><a href="https://step-og.com/" target="_blank" rel="noopener">STEP OIL &amp; GAS · Integrated Solutions</a></div></section> <section class="formarea"><div class="shell"><div class="card"><div class="form" id="formWrap"><div class="head"><h2 data-i18n="title">Ficha de inscrição de visitante</h2><p data-i18n="sub">Preencha os dados abaixo. Leva menos de 1 minuto.</p></div><form id="leadForm"><div class="grid"><div class="field full"><label data-i18n="name">Nome</label><input id="name" autocomplete="name" required></div><div class="field"><label data-i18n="email">E-mail</label><input id="email" type="email" autocomplete="email" required></div><div class="field"><label data-i18n="phone">Contato / WhatsApp</label><input id="phone" inputmode="tel" autocomplete
+ark">✓</div><h2 data-i18n="oktitle">Check-in confirmado.</h2><p data-i18n="oktext">Obrigado por visitar a STEP. Seu cadastro foi registrado com sucesso.</p></div></div></div></section></main><script>(()=>{const D={pt:{lang:'Idioma',hero:'Bem-vindo à STEP.',accent:'Faça seu check-in.',intro:'Um cadastro rápido para conhecermos você, sua empresa e os assuntos que podem gerar boas conexões.',career:'Trabalhe conosco',soon:'Portal de Talentos',title:'Ficha de inscrição de visitante',sub:'Preencha os dados abaixo. Leva menos de 1 minuto.',name:'Nome',email:'E-mail',phone:'Contato / WhatsApp',role:'Profissão',company:'Empresa',interests:'Possíveis interesses de contato',help:'Selecione um ou mais assuntos.',solutions:'Soluções e serviços STEP',offshore:'Projetos Offshore / FPSO',procurement:'Fornecimento / Procurement',partnerships:'Parcerias comerciais',networking:'Networking e novidades',other:'Outro interesse (opcional)',newsletter:'Aceita receber a newsletter mensal da STEP?',yes:'Sim',no:'Não',privacy:'Os dados serão usados para registrar sua visita e apoiar contatos profissionais relacionados à STEP.',error:'Preencha os campos obrigatórios, selecione ao menos um interesse e responda sobre a newsletter.',submit:'Concluir check-in',sending:'Registrando...',oktitle:'Check-in confirm
+--- HTML ASSET/LINK URLS ---
+/favicon.svg?v=20260825-2
+https://step-og.com/wp-content/uploads/2025/09/Design-sem-nome-1024x312.png
+https://stepoil-debug.github.io/portal-talentos-step/
+https://step-og.com/
+--- ASSET MATCHES ---
+HTML_SHA256=c54c7c0128f57bbbcc1201a8fc784190b02302ec472b7b5a90f3f084d8030aaf
