@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/diagnose-football-portfolio.yml'
+      - 'scripts/diagnose_football_portfolio.py'
   workflow_dispatch:
 
 permissions:
