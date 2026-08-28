@@ -2131,33 +2131,32 @@
       "away_team": "VfB Stuttgart",
       "best_market": {
         "away_team": "VfB Stuttgart",
-        "bookmaker": "10Bet",
-        "bookmaker_count": 8,
+        "bookmaker": "Betano",
+        "bookmaker_count": 7,
         "bookmaker_quotes": {
-          "10Bet": 1.07,
           "1xBet": 1.05,
-          "888Sport": 1.05,
+          "888Sport": 1.04,
           "Bet365": 1.05,
           "Betano": 1.06,
-          "Betfair": 1.04,
-          "Superbet": 1.05,
+          "Betfair": 1.03,
+          "Superbet": 1.04,
           "Unibet": 1.03
         },
-        "consensus_odd": 1.05,
+        "consensus_odd": 1.04,
         "country": "Germany",
-        "edge": -0.0286,
+        "edge": -0.0288,
         "fixture_id": 1575140,
         "home_team": "Bayern München",
-        "implied_probability": 0.9524,
+        "implied_probability": 0.9615,
         "individual_score_band": "ELITE_88_PLUS",
         "kickoff_iso": "2026-08-28T15:30:00-03:00",
         "league": "Bundesliga",
         "market": "Total de gols",
         "market_family": "GOALS",
         "match": "Bayern München x VfB Stuttgart",
-        "model_probability": 0.9238,
-        "odd": 1.07,
-        "pre_guard_score": 91.7,
+        "model_probability": 0.9327,
+        "odd": 1.06,
+        "pre_guard_score": 91.4,
         "quality_guard": {
           "accepted": true,
           "elite_score": 88.0,
@@ -2172,12 +2171,12 @@
           ],
           "recent_sample": 12
         },
-        "quality_score": 98.9,
-        "rationale": "Mercado goals confirmado por 8 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
+        "quality_score": 98.6,
+        "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 93%; seleção full-time com regra automática de conferência.",
         "raw_market": "Goals Over/Under",
         "raw_selection": "Over 1.5",
         "risk_flags": [],
-        "score": 91.7,
+        "score": 91.4,
         "selection": "Mais de 1.5 gols",
         "settlement_line": 1.5,
         "settlement_metric": "goals",
@@ -2191,33 +2190,32 @@
       "eligible_legs": [
         {
           "away_team": "VfB Stuttgart",
-          "bookmaker": "10Bet",
-          "bookmaker_count": 8,
+          "bookmaker": "Betano",
+          "bookmaker_count": 7,
           "bookmaker_quotes": {
-            "10Bet": 1.07,
             "1xBet": 1.05,
-            "888Sport": 1.05,
+            "888Sport": 1.04,
             "Bet365": 1.05,
             "Betano": 1.06,
-            "Betfair": 1.04,
-            "Superbet": 1.05,
+            "Betfair": 1.03,
+            "Superbet": 1.04,
             "Unibet": 1.03
           },
-          "consensus_odd": 1.05,
+          "consensus_odd": 1.04,
           "country": "Germany",
-          "edge": -0.0286,
+          "edge": -0.0288,
           "fixture_id": 1575140,
           "home_team": "Bayern München",
-          "implied_probability": 0.9524,
+          "implied_probability": 0.9615,
           "individual_score_band": "ELITE_88_PLUS",
           "kickoff_iso": "2026-08-28T15:30:00-03:00",
           "league": "Bundesliga",
           "market": "Total de gols",
           "market_family": "GOALS",
           "match": "Bayern München x VfB Stuttgart",
-          "model_probability": 0.9238,
-          "odd": 1.07,
-          "pre_guard_score": 91.7,
+          "model_probability": 0.9327,
+          "odd": 1.06,
+          "pre_guard_score": 91.4,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -2232,12 +2230,12 @@
             ],
             "recent_sample": 12
           },
-          "quality_score": 98.9,
-          "rationale": "Mercado goals confirmado por 8 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
+          "quality_score": 98.6,
+          "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 93%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
           "risk_flags": [],
-          "score": 91.7,
+          "score": 91.4,
           "selection": "Mais de 1.5 gols",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
@@ -2250,27 +2248,27 @@
           "bookmaker": "Superbet",
           "bookmaker_count": 5,
           "bookmaker_quotes": {
-            "1xBet": 1.07,
-            "Betano": 1.07,
-            "Marathonbet": 1.02,
-            "Superbet": 1.12,
+            "1xBet": 1.09,
+            "Betano": 1.12,
+            "Marathonbet": 1.08,
+            "Superbet": 1.14,
             "Unibet": 1.09
           },
-          "consensus_odd": 1.07,
+          "consensus_odd": 1.09,
           "country": "Germany",
-          "edge": -0.028,
+          "edge": -0.0275,
           "fixture_id": 1575140,
           "home_team": "Bayern München",
-          "implied_probability": 0.9346,
+          "implied_probability": 0.9174,
           "individual_score_band": "STRONG_84_TO_87_9",
           "kickoff_iso": "2026-08-28T15:30:00-03:00",
           "league": "Bundesliga",
           "market": "Escanteios",
           "market_family": "CORNERS",
           "match": "Bayern München x VfB Stuttgart",
-          "model_probability": 0.9065,
-          "odd": 1.12,
-          "pre_guard_score": 86.7,
+          "model_probability": 0.8899,
+          "odd": 1.14,
+          "pre_guard_score": 85.6,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -2282,16 +2280,16 @@
             ],
             "recent_sample": 12
           },
-          "quality_score": 86.7,
-          "rationale": "Mercado corners confirmado por 5 bookmaker(s); probabilidade implícita ajustada 91%; seleção full-time com regra automática de conferência.",
+          "quality_score": 85.6,
+          "rationale": "Mercado corners confirmado por 5 bookmaker(s); probabilidade implícita ajustada 89%; seleção full-time com regra automática de conferência.",
           "raw_market": "Corners Over Under",
-          "raw_selection": "Under 14.5",
+          "raw_selection": "Over 6.5",
           "risk_flags": [],
-          "score": 86.7,
-          "selection": "Menos de 14.5 escanteios",
-          "settlement_line": 14.5,
+          "score": 85.6,
+          "selection": "Mais de 6.5 escanteios",
+          "settlement_line": 6.5,
           "settlement_metric": "corner_kicks",
-          "settlement_operator": "under",
+          "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS"
         },
@@ -2310,7 +2308,7 @@
             "Marathonbet": 1.06,
             "SBO": 1.03,
             "Superbet": 1.07,
-            "Unibet": 1.04,
+            "Unibet": 1.05,
             "William Hill": 1.06
           },
           "consensus_odd": 1.06,
@@ -2348,50 +2346,57 @@
         },
         {
           "away_team": "VfB Stuttgart",
-          "bookmaker": "Superbet",
-          "bookmaker_count": 5,
+          "bookmaker": "10Bet",
+          "bookmaker_count": 10,
           "bookmaker_quotes": {
-            "1xBet": 1.09,
-            "Betano": 1.12,
-            "Marathonbet": 1.08,
-            "Superbet": 1.13,
-            "Unibet": 1.1
+            "10Bet": 1.2,
+            "1xBet": 1.14,
+            "888Sport": 1.17,
+            "Bet365": 1.17,
+            "BetVictor": 1.15,
+            "Betano": 1.2,
+            "Betfair": 1.17,
+            "Marathonbet": 1.14,
+            "Superbet": 1.18,
+            "Unibet": 1.16
           },
-          "consensus_odd": 1.1,
+          "consensus_odd": 1.17,
           "country": "Germany",
-          "edge": -0.0273,
+          "edge": -0.0256,
           "fixture_id": 1575140,
           "home_team": "Bayern München",
-          "implied_probability": 0.9091,
+          "implied_probability": 0.8547,
           "individual_score_band": "STRONG_84_TO_87_9",
           "kickoff_iso": "2026-08-28T15:30:00-03:00",
           "league": "Bundesliga",
-          "market": "Escanteios",
-          "market_family": "CORNERS",
+          "market": "Total de gols",
+          "market_family": "GOALS",
           "match": "Bayern München x VfB Stuttgart",
-          "model_probability": 0.8818,
-          "odd": 1.13,
-          "pre_guard_score": 85.1,
+          "model_probability": 0.8291,
+          "odd": 1.2,
+          "pre_guard_score": 85.4,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
-            "min_probability": 0.8,
+            "min_probability": 0.82,
             "min_score": 84.0,
             "raw_score_floor": 84.0,
             "reasons": [
-              "source_history=75%/24"
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over25=92%"
             ],
             "recent_sample": 12
           },
-          "quality_score": 85.1,
-          "rationale": "Mercado corners confirmado por 5 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Corners Over Under",
-          "raw_selection": "Over 6.5",
+          "quality_score": 87.5,
+          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 2.5",
           "risk_flags": [],
-          "score": 85.1,
-          "selection": "Mais de 6.5 escanteios",
-          "settlement_line": 6.5,
-          "settlement_metric": "corner_kicks",
+          "score": 85.4,
+          "selection": "Mais de 2.5 gols",
+          "settlement_line": 2.5,
+          "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS"
@@ -2404,8 +2409,8 @@
             "1xBet": 1.1,
             "Betano": 1.12,
             "Marathonbet": 1.08,
-            "Superbet": 1.2,
-            "Unibet": 1.17
+            "Superbet": 1.19,
+            "Unibet": 1.18
           },
           "consensus_odd": 1.12,
           "country": "Germany",
@@ -2420,7 +2425,7 @@
           "market_family": "CORNERS",
           "match": "Bayern München x VfB Stuttgart",
           "model_probability": 0.8661,
-          "odd": 1.2,
+          "odd": 1.19,
           "pre_guard_score": 84.1,
           "quality_guard": {
             "accepted": true,
@@ -2454,8 +2459,8 @@
       "league": "Bundesliga",
       "market_family_counts": {
         "CARDS": 0,
-        "CORNERS": 3,
-        "GOALS": 1,
+        "CORNERS": 2,
+        "GOALS": 2,
         "RESULT": 1,
         "SHOTS": 0
       },
@@ -2469,22 +2474,22 @@
         "accepted_legs": 5,
         "rejected_examples": [
           {
-            "market": "Escanteios",
+            "market": "Total de gols",
             "reasons": [
+              "family_history=76%/25",
               "source_history=75%/24",
-              "bookmakers<5"
+              "non_half_line_rejected"
             ],
-            "selection": "Menos de 15.5 escanteios"
+            "selection": "Menos de 5.25 gols"
           },
           {
             "market": "Total de gols",
             "reasons": [
               "family_history=76%/25",
               "source_history=75%/24",
-              "recent_over25=92%",
-              "probability_below_82%"
+              "non_half_line_rejected"
             ],
-            "selection": "Mais de 2.5 gols"
+            "selection": "Menos de 5 gols"
           },
           {
             "market": "Escanteios",
@@ -2492,18 +2497,18 @@
               "source_history=75%/24",
               "bookmakers<5"
             ],
-            "selection": "Mais de 5.5 escanteios"
+            "selection": "Menos de 14.5 escanteios"
           },
           {
-            "market": "Escanteios da equipe",
+            "market": "Escanteios",
             "reasons": [
               "source_history=75%/24",
               "bookmakers<5"
             ],
-            "selection": "Mandante: Menos de 10.5 escanteios"
+            "selection": "Menos de 15.5 escanteios"
           }
         ],
-        "rejected_legs": 33
+        "rejected_legs": 39
       },
       "recent_form": {
         "avg_total_goals": 4.083,
@@ -2516,7 +2521,7 @@
         "under_3_5_rate": 0.4167,
         "under_4_5_rate": 0.75
       },
-      "score": 91.7,
+      "score": 91.4,
       "under_over": ""
     },
     {
@@ -4273,13 +4278,13 @@
       "away_team": "Thisted FC",
       "best_market": {
         "away_team": "Thisted FC",
-        "bookmaker": "Bet365",
+        "bookmaker": "Betfair",
         "bookmaker_count": 5,
         "bookmaker_quotes": {
           "1xBet": 1.01,
-          "Bet365": 1.06,
+          "Bet365": 1.03,
           "BetVictor": 1.03,
-          "Betfair": 1.04,
+          "Betfair": 1.05,
           "Superbet": 1.02
         },
         "consensus_odd": 1.03,
@@ -4295,7 +4300,7 @@
         "market_family": "GOALS",
         "match": "Fremad Amager x Thisted FC",
         "model_probability": 0.9417,
-        "odd": 1.06,
+        "odd": 1.05,
         "pre_guard_score": 90.2,
         "quality_guard": {
           "accepted": true,
@@ -4328,13 +4333,13 @@
       "eligible_legs": [
         {
           "away_team": "Thisted FC",
-          "bookmaker": "Bet365",
+          "bookmaker": "Betfair",
           "bookmaker_count": 5,
           "bookmaker_quotes": {
             "1xBet": 1.01,
-            "Bet365": 1.06,
+            "Bet365": 1.03,
             "BetVictor": 1.03,
-            "Betfair": 1.04,
+            "Betfair": 1.05,
             "Superbet": 1.02
           },
           "consensus_odd": 1.03,
@@ -4350,7 +4355,7 @@
           "market_family": "GOALS",
           "match": "Fremad Amager x Thisted FC",
           "model_probability": 0.9417,
-          "odd": 1.06,
+          "odd": 1.05,
           "pre_guard_score": 90.2,
           "quality_guard": {
             "accepted": true,
@@ -4464,11 +4469,11 @@
         "bookmaker": "Bet365",
         "bookmaker_count": 6,
         "bookmaker_quotes": {
-          "1xBet": 1.04,
-          "Bet365": 1.08,
+          "1xBet": 1.05,
+          "Bet365": 1.1,
           "BetVictor": 1.05,
           "Betfair": 1.07,
-          "Marathonbet": 1.04,
+          "Marathonbet": 1.05,
           "Superbet": 1.05
         },
         "consensus_odd": 1.05,
@@ -4484,7 +4489,7 @@
         "market_family": "GOALS",
         "match": "Nykobing FC x Roskilde",
         "model_probability": 0.9238,
-        "odd": 1.08,
+        "odd": 1.1,
         "pre_guard_score": 89.9,
         "quality_guard": {
           "accepted": true,
@@ -4520,11 +4525,11 @@
           "bookmaker": "Bet365",
           "bookmaker_count": 6,
           "bookmaker_quotes": {
-            "1xBet": 1.04,
-            "Bet365": 1.08,
+            "1xBet": 1.05,
+            "Bet365": 1.1,
             "BetVictor": 1.05,
             "Betfair": 1.07,
-            "Marathonbet": 1.04,
+            "Marathonbet": 1.05,
             "Superbet": 1.05
           },
           "consensus_odd": 1.05,
@@ -4540,7 +4545,7 @@
           "market_family": "GOALS",
           "match": "Nykobing FC x Roskilde",
           "model_probability": 0.9238,
-          "odd": 1.08,
+          "odd": 1.1,
           "pre_guard_score": 89.9,
           "quality_guard": {
             "accepted": true,
@@ -4572,29 +4577,29 @@
           "bookmaker": "Unibet",
           "bookmaker_count": 7,
           "bookmaker_quotes": {
-            "1xBet": 1.13,
-            "Bet365": 1.17,
-            "BetVictor": 1.14,
-            "Betfair": 1.17,
-            "Marathonbet": 1.13,
-            "Superbet": 1.13,
-            "Unibet": 1.19
+            "1xBet": 1.12,
+            "Bet365": 1.14,
+            "BetVictor": 1.13,
+            "Betfair": 1.14,
+            "Marathonbet": 1.12,
+            "Superbet": 1.12,
+            "Unibet": 1.17
           },
-          "consensus_odd": 1.14,
+          "consensus_odd": 1.13,
           "country": "Denmark",
-          "edge": -0.0263,
+          "edge": -0.0265,
           "fixture_id": 1575777,
           "home_team": "Nykobing FC",
-          "implied_probability": 0.8772,
+          "implied_probability": 0.885,
           "individual_score_band": "STRONG_84_TO_87_9",
           "kickoff_iso": "2026-08-28T14:00:00-03:00",
           "league": "2. Division",
           "market": "Total de gols",
           "market_family": "GOALS",
           "match": "Nykobing FC x Roskilde",
-          "model_probability": 0.8509,
-          "odd": 1.19,
-          "pre_guard_score": 86.0,
+          "model_probability": 0.8584,
+          "odd": 1.17,
+          "pre_guard_score": 86.5,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -4609,12 +4614,12 @@
             ],
             "recent_sample": 12
           },
-          "quality_score": 94.0,
-          "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
+          "quality_score": 94.5,
+          "rationale": "Mercado goals confirmado por 7 bookmaker(s); probabilidade implícita ajustada 86%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
           "risk_flags": [],
-          "score": 86.0,
+          "score": 86.5,
           "selection": "Mais de 1.5 gols",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
@@ -4657,6 +4662,15 @@
               "source_history=75%/24",
               "non_half_line_rejected"
             ],
+            "selection": "Menos de 5.25 gols"
+          },
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "non_half_line_rejected"
+            ],
             "selection": "Menos de 5 gols"
           },
           {
@@ -4668,15 +4682,6 @@
               "raw_individual_score_below_84"
             ],
             "selection": "Menos de 4.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=76%/25",
-              "source_history=75%/24",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Menos de 4.75 gols"
           }
         ],
         "rejected_legs": 12
@@ -5255,88 +5260,6 @@
       "under_over": "+1.5"
     },
     {
-      "advice": "Combo Double chance : draw or SV Horn and -3.5 goals",
-      "away_probability": 0.45,
-      "away_team": "SV Horn",
-      "best_market": null,
-      "country": "Austria",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1574076,
-      "home_probability": 0.1,
-      "home_team": "Krems / Rehberg",
-      "kickoff_iso": "2026-08-28T14:30:00-03:00",
-      "league": "Regionalliga - Ost",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Krems / Rehberg x SV Horn",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=76%/25",
-              "source_history=75%/24",
-              "bookmakers<5"
-            ],
-            "selection": "Menos de 5.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=76%/25",
-              "source_history=75%/24",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 5.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=100%/6",
-              "family_history=76%/25",
-              "source_history=75%/24",
-              "bookmakers<5",
-              "recent_over15=75%"
-            ],
-            "selection": "Mais de 1.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=76%/25",
-              "source_history=75%/24",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 5 gols"
-          }
-        ],
-        "rejected_legs": 13
-      },
-      "recent_form": {
-        "avg_total_goals": 2.083,
-        "five_plus_rate": 0.0,
-        "max_total_goals": 4,
-        "over_1_5_rate": 0.75,
-        "over_2_5_rate": 0.3333,
-        "sample": 12,
-        "under_2_5_rate": 0.6667,
-        "under_3_5_rate": 0.8333,
-        "under_4_5_rate": 1.0
-      },
-      "score": 0,
-      "under_over": "-3.5"
-    },
-    {
       "advice": "Combo Winner : Traiskirchen and +2.5 goals",
       "away_probability": 0.45,
       "away_team": "Traiskirchen",
@@ -5400,7 +5323,7 @@
             "selection": "Mais de 2.25 gols"
           }
         ],
-        "rejected_legs": 12
+        "rejected_legs": 13
       },
       "recent_form": {
         "avg_total_goals": 4.5,
@@ -9712,30 +9635,30 @@
       "away_team": "Airbus UK",
       "best_market": {
         "away_team": "Airbus UK",
-        "bookmaker": "Betano",
+        "bookmaker": "Bet365",
         "bookmaker_count": 5,
         "bookmaker_quotes": {
-          "1xBet": 1.04,
-          "Bet365": 1.01,
+          "1xBet": 1.03,
+          "Bet365": 1.05,
           "BetVictor": 1.01,
           "Betano": 1.05,
-          "Betfair": 1.03
+          "Betfair": 1.04
         },
-        "consensus_odd": 1.03,
+        "consensus_odd": 1.04,
         "country": "Wales",
-        "edge": -0.0291,
+        "edge": -0.0288,
         "fixture_id": 1575916,
         "home_team": "Barry Town",
-        "implied_probability": 0.9709,
+        "implied_probability": 0.9615,
         "individual_score_band": "ELITE_88_PLUS",
         "kickoff_iso": "2026-08-28T15:45:00-03:00",
         "league": "Premier League",
         "market": "Total de gols",
         "market_family": "GOALS",
         "match": "Barry Town x Airbus UK",
-        "model_probability": 0.9417,
+        "model_probability": 0.9327,
         "odd": 1.05,
-        "pre_guard_score": 90.2,
+        "pre_guard_score": 89.6,
         "quality_guard": {
           "accepted": true,
           "elite_score": 88.0,
@@ -9748,16 +9671,16 @@
           ],
           "recent_sample": 12
         },
-        "quality_score": 90.2,
-        "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 94%; seleção full-time com regra automática de conferência.",
+        "quality_score": 89.6,
+        "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 93%; seleção full-time com regra automática de conferência.",
         "raw_market": "Goals Over/Under",
-        "raw_selection": "Over 0.5",
+        "raw_selection": "Under 5.5",
         "risk_flags": [],
-        "score": 90.2,
-        "selection": "Mais de 0.5 gols",
-        "settlement_line": 0.5,
+        "score": 89.6,
+        "selection": "Menos de 5.5 gols",
+        "settlement_line": 5.5,
         "settlement_metric": "goals",
-        "settlement_operator": "over",
+        "settlement_operator": "under",
         "settlement_scope": "match",
         "signal_source": "MULTI_MARKET_CONSENSUS"
       },
@@ -9767,64 +9690,13 @@
       "eligible_legs": [
         {
           "away_team": "Airbus UK",
-          "bookmaker": "Betano",
-          "bookmaker_count": 5,
-          "bookmaker_quotes": {
-            "1xBet": 1.04,
-            "Bet365": 1.01,
-            "BetVictor": 1.01,
-            "Betano": 1.05,
-            "Betfair": 1.03
-          },
-          "consensus_odd": 1.03,
-          "country": "Wales",
-          "edge": -0.0291,
-          "fixture_id": 1575916,
-          "home_team": "Barry Town",
-          "implied_probability": 0.9709,
-          "individual_score_band": "ELITE_88_PLUS",
-          "kickoff_iso": "2026-08-28T15:45:00-03:00",
-          "league": "Premier League",
-          "market": "Total de gols",
-          "market_family": "GOALS",
-          "match": "Barry Town x Airbus UK",
-          "model_probability": 0.9417,
-          "odd": 1.05,
-          "pre_guard_score": 90.2,
-          "quality_guard": {
-            "accepted": true,
-            "elite_score": 88.0,
-            "min_probability": 0.84,
-            "min_score": 84.0,
-            "raw_score_floor": 84.0,
-            "reasons": [
-              "family_history=76%/25",
-              "source_history=75%/24"
-            ],
-            "recent_sample": 12
-          },
-          "quality_score": 90.2,
-          "rationale": "Mercado goals confirmado por 5 bookmaker(s); probabilidade implícita ajustada 94%; seleção full-time com regra automática de conferência.",
-          "raw_market": "Goals Over/Under",
-          "raw_selection": "Over 0.5",
-          "risk_flags": [],
-          "score": 90.2,
-          "selection": "Mais de 0.5 gols",
-          "settlement_line": 0.5,
-          "settlement_metric": "goals",
-          "settlement_operator": "over",
-          "settlement_scope": "match",
-          "signal_source": "MULTI_MARKET_CONSENSUS"
-        },
-        {
-          "away_team": "Airbus UK",
-          "bookmaker": "Betano",
+          "bookmaker": "Bet365",
           "bookmaker_count": 5,
           "bookmaker_quotes": {
             "1xBet": 1.03,
-            "Bet365": 1.04,
+            "Bet365": 1.05,
             "BetVictor": 1.01,
-            "Betano": 1.06,
+            "Betano": 1.05,
             "Betfair": 1.04
           },
           "consensus_odd": 1.04,
@@ -9840,7 +9712,7 @@
           "market_family": "GOALS",
           "match": "Barry Town x Airbus UK",
           "model_probability": 0.9327,
-          "odd": 1.06,
+          "odd": 1.05,
           "pre_guard_score": 89.6,
           "quality_guard": {
             "accepted": true,
@@ -9876,7 +9748,7 @@
       "market_family_counts": {
         "CARDS": 0,
         "CORNERS": 0,
-        "GOALS": 2,
+        "GOALS": 1,
         "RESULT": 0,
         "SHOTS": 0
       },
@@ -9884,8 +9756,17 @@
       "prediction_available": true,
       "prediction_risk_flags": [],
       "quality_guard": {
-        "accepted_legs": 2,
+        "accepted_legs": 1,
         "rejected_examples": [
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "bookmakers<5"
+            ],
+            "selection": "Mais de 0.5 gols"
+          },
           {
             "market": "Total de gols",
             "reasons": [
@@ -9909,27 +9790,15 @@
             "selection": "Menos de 4.75 gols"
           },
           {
-            "market": "Total de gols",
+            "market": "Escanteios",
             "reasons": [
-              "family_history=76%/25",
               "source_history=75%/24",
-              "non_half_line_rejected"
+              "raw_individual_score_below_84"
             ],
-            "selection": "Mais de 1.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=100%/6",
-              "family_history=76%/25",
-              "source_history=75%/24",
-              "recent_over15=67%",
-              "recent_over15_below_70"
-            ],
-            "selection": "Mais de 1.5 gols"
+            "selection": "Menos de 12.5 escanteios"
           }
         ],
-        "rejected_legs": 22
+        "rejected_legs": 25
       },
       "recent_form": {
         "avg_total_goals": 2.833,
@@ -9942,7 +9811,7 @@
         "under_3_5_rate": 0.6667,
         "under_4_5_rate": 0.75
       },
-      "score": 90.2,
+      "score": 89.6,
       "under_over": "-3.5"
     },
     {
@@ -9951,31 +9820,31 @@
       "away_team": "Cambrian & Clydach",
       "best_market": {
         "away_team": "Cambrian & Clydach",
-        "bookmaker": "Bet365",
+        "bookmaker": "Betano",
         "bookmaker_count": 6,
         "bookmaker_quotes": {
-          "1xBet": 1.02,
-          "Bet365": 1.08,
+          "1xBet": 1.01,
+          "Bet365": 1.07,
           "BetVictor": 1.03,
-          "Betano": 1.08,
-          "Betfair": 1.07,
-          "Marathonbet": 1.02
+          "Betano": 1.09,
+          "Betfair": 1.06,
+          "Marathonbet": 1.01
         },
-        "consensus_odd": 1.05,
+        "consensus_odd": 1.04,
         "country": "Wales",
-        "edge": -0.0286,
+        "edge": -0.0287,
         "fixture_id": 1575918,
         "home_team": "GAP Connah S Quay FC",
-        "implied_probability": 0.9524,
+        "implied_probability": 0.9569,
         "individual_score_band": "ELITE_88_PLUS",
         "kickoff_iso": "2026-08-28T15:45:00-03:00",
         "league": "Premier League",
         "market": "Total de gols",
         "market_family": "GOALS",
         "match": "GAP Connah S Quay FC x Cambrian & Clydach",
-        "model_probability": 0.9238,
-        "odd": 1.08,
-        "pre_guard_score": 89.9,
+        "model_probability": 0.9282,
+        "odd": 1.09,
+        "pre_guard_score": 90.2,
         "quality_guard": {
           "accepted": true,
           "elite_score": 88.0,
@@ -9988,12 +9857,12 @@
           ],
           "recent_sample": 12
         },
-        "quality_score": 89.9,
-        "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
+        "quality_score": 90.2,
+        "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 93%; seleção full-time com regra automática de conferência.",
         "raw_market": "Goals Over/Under",
         "raw_selection": "Under 5.5",
         "risk_flags": [],
-        "score": 89.9,
+        "score": 90.2,
         "selection": "Menos de 5.5 gols",
         "settlement_line": 5.5,
         "settlement_metric": "goals",
@@ -10007,31 +9876,31 @@
       "eligible_legs": [
         {
           "away_team": "Cambrian & Clydach",
-          "bookmaker": "Bet365",
+          "bookmaker": "Betano",
           "bookmaker_count": 6,
           "bookmaker_quotes": {
-            "1xBet": 1.02,
-            "Bet365": 1.08,
+            "1xBet": 1.01,
+            "Bet365": 1.07,
             "BetVictor": 1.03,
-            "Betano": 1.08,
-            "Betfair": 1.07,
-            "Marathonbet": 1.02
+            "Betano": 1.09,
+            "Betfair": 1.06,
+            "Marathonbet": 1.01
           },
-          "consensus_odd": 1.05,
+          "consensus_odd": 1.04,
           "country": "Wales",
-          "edge": -0.0286,
+          "edge": -0.0287,
           "fixture_id": 1575918,
           "home_team": "GAP Connah S Quay FC",
-          "implied_probability": 0.9524,
+          "implied_probability": 0.9569,
           "individual_score_band": "ELITE_88_PLUS",
           "kickoff_iso": "2026-08-28T15:45:00-03:00",
           "league": "Premier League",
           "market": "Total de gols",
           "market_family": "GOALS",
           "match": "GAP Connah S Quay FC x Cambrian & Clydach",
-          "model_probability": 0.9238,
-          "odd": 1.08,
-          "pre_guard_score": 89.9,
+          "model_probability": 0.9282,
+          "odd": 1.09,
+          "pre_guard_score": 90.2,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -10044,12 +9913,12 @@
             ],
             "recent_sample": 12
           },
-          "quality_score": 89.9,
-          "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
+          "quality_score": 90.2,
+          "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 93%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 5.5",
           "risk_flags": [],
-          "score": 89.9,
+          "score": 90.2,
           "selection": "Menos de 5.5 gols",
           "settlement_line": 5.5,
           "settlement_metric": "goals",
@@ -10063,12 +9932,12 @@
           "bookmaker_count": 8,
           "bookmaker_quotes": {
             "10Bet": 1.17,
-            "1xBet": 1.13,
+            "1xBet": 1.14,
             "Bet365": 1.17,
             "BetVictor": 1.11,
             "Betano": 1.18,
             "Betfair": 1.17,
-            "Marathonbet": 1.13,
+            "Marathonbet": 1.14,
             "Superbet": 1.14
           },
           "consensus_odd": 1.16,
@@ -10173,7 +10042,7 @@
             "selection": "Mais de 6.25 escanteios"
           }
         ],
-        "rejected_legs": 27
+        "rejected_legs": 29
       },
       "recent_form": {
         "avg_total_goals": 3.0,
@@ -10186,7 +10055,7 @@
         "under_3_5_rate": 0.6667,
         "under_4_5_rate": 0.75
       },
-      "score": 89.9,
+      "score": 90.2,
       "under_over": ""
     },
     {
@@ -10195,35 +10064,34 @@
       "away_team": "Sporting CP",
       "best_market": {
         "away_team": "Sporting CP",
-        "bookmaker": "Pinnacle",
-        "bookmaker_count": 10,
+        "bookmaker": "10Bet",
+        "bookmaker_count": 9,
         "bookmaker_quotes": {
           "10Bet": 1.09,
-          "1xBet": 1.03,
-          "Bet365": 1.08,
-          "BetVictor": 1.05,
-          "Betano": 1.1,
+          "1xBet": 1.02,
+          "Bet365": 1.07,
+          "BetVictor": 1.04,
+          "Betano": 1.09,
           "Betfair": 1.07,
-          "Marathonbet": 1.03,
-          "Pinnacle": 1.1,
-          "Superbet": 1.09,
+          "Marathonbet": 1.01,
+          "Superbet": 1.07,
           "Unibet": 1.07
         },
         "consensus_odd": 1.07,
         "country": "Portugal",
-        "edge": -0.0279,
+        "edge": -0.028,
         "fixture_id": 1575481,
         "home_team": "Rio Ave",
-        "implied_probability": 0.9302,
+        "implied_probability": 0.9346,
         "individual_score_band": "ELITE_88_PLUS",
         "kickoff_iso": "2026-08-28T16:15:00-03:00",
         "league": "Primeira Liga",
         "market": "Total de gols",
         "market_family": "GOALS",
         "match": "Rio Ave x Sporting CP",
-        "model_probability": 0.9023,
-        "odd": 1.1,
-        "pre_guard_score": 90.3,
+        "model_probability": 0.9065,
+        "odd": 1.09,
+        "pre_guard_score": 90.6,
         "quality_guard": {
           "accepted": true,
           "elite_score": 88.0,
@@ -10236,12 +10104,12 @@
           ],
           "recent_sample": 11
         },
-        "quality_score": 90.3,
-        "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
+        "quality_score": 90.6,
+        "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 91%; seleção full-time com regra automática de conferência.",
         "raw_market": "Goals Over/Under",
         "raw_selection": "Under 5.5",
         "risk_flags": [],
-        "score": 90.3,
+        "score": 90.6,
         "selection": "Menos de 5.5 gols",
         "settlement_line": 5.5,
         "settlement_metric": "goals",
@@ -10255,35 +10123,34 @@
       "eligible_legs": [
         {
           "away_team": "Sporting CP",
-          "bookmaker": "Pinnacle",
-          "bookmaker_count": 10,
+          "bookmaker": "10Bet",
+          "bookmaker_count": 9,
           "bookmaker_quotes": {
             "10Bet": 1.09,
-            "1xBet": 1.03,
-            "Bet365": 1.08,
-            "BetVictor": 1.05,
-            "Betano": 1.1,
+            "1xBet": 1.02,
+            "Bet365": 1.07,
+            "BetVictor": 1.04,
+            "Betano": 1.09,
             "Betfair": 1.07,
-            "Marathonbet": 1.03,
-            "Pinnacle": 1.1,
-            "Superbet": 1.09,
+            "Marathonbet": 1.01,
+            "Superbet": 1.07,
             "Unibet": 1.07
           },
           "consensus_odd": 1.07,
           "country": "Portugal",
-          "edge": -0.0279,
+          "edge": -0.028,
           "fixture_id": 1575481,
           "home_team": "Rio Ave",
-          "implied_probability": 0.9302,
+          "implied_probability": 0.9346,
           "individual_score_band": "ELITE_88_PLUS",
           "kickoff_iso": "2026-08-28T16:15:00-03:00",
           "league": "Primeira Liga",
           "market": "Total de gols",
           "market_family": "GOALS",
           "match": "Rio Ave x Sporting CP",
-          "model_probability": 0.9023,
-          "odd": 1.1,
-          "pre_guard_score": 90.3,
+          "model_probability": 0.9065,
+          "odd": 1.09,
+          "pre_guard_score": 90.6,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -10296,12 +10163,12 @@
             ],
             "recent_sample": 11
           },
-          "quality_score": 90.3,
-          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
+          "quality_score": 90.6,
+          "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 91%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Under 5.5",
           "risk_flags": [],
-          "score": 90.3,
+          "score": 90.6,
           "selection": "Menos de 5.5 gols",
           "settlement_line": 5.5,
           "settlement_metric": "goals",
@@ -10311,35 +10178,35 @@
         },
         {
           "away_team": "Sporting CP",
-          "bookmaker": "Betano",
+          "bookmaker": "Pinnacle",
           "bookmaker_count": 10,
           "bookmaker_quotes": {
             "10Bet": 1.17,
-            "1xBet": 1.1,
-            "Bet365": 1.17,
-            "BetVictor": 1.13,
-            "Betano": 1.18,
-            "Betfair": 1.14,
-            "Marathonbet": 1.1,
-            "Pinnacle": 1.17,
-            "Superbet": 1.17,
+            "1xBet": 1.13,
+            "Bet365": 1.18,
+            "BetVictor": 1.15,
+            "Betano": 1.2,
+            "Betfair": 1.17,
+            "Marathonbet": 1.15,
+            "Pinnacle": 1.21,
+            "Superbet": 1.19,
             "Unibet": 1.14
           },
-          "consensus_odd": 1.16,
+          "consensus_odd": 1.17,
           "country": "Portugal",
-          "edge": -0.026,
+          "edge": -0.0256,
           "fixture_id": 1575481,
           "home_team": "Rio Ave",
-          "implied_probability": 0.8658,
+          "implied_probability": 0.8547,
           "individual_score_band": "STRONG_84_TO_87_9",
           "kickoff_iso": "2026-08-28T16:15:00-03:00",
           "league": "Primeira Liga",
           "market": "Total de gols",
           "market_family": "GOALS",
           "match": "Rio Ave x Sporting CP",
-          "model_probability": 0.8398,
-          "odd": 1.18,
-          "pre_guard_score": 86.1,
+          "model_probability": 0.8291,
+          "odd": 1.21,
+          "pre_guard_score": 85.4,
           "quality_guard": {
             "accepted": true,
             "elite_score": 88.0,
@@ -10354,12 +10221,12 @@
             ],
             "recent_sample": 11
           },
-          "quality_score": 93.2,
-          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 84%; seleção full-time com regra automática de conferência.",
+          "quality_score": 92.5,
+          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
           "risk_flags": [],
-          "score": 86.1,
+          "score": 85.4,
           "selection": "Mais de 1.5 gols",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
@@ -10393,7 +10260,16 @@
               "source_history=75%/24",
               "non_half_line_rejected"
             ],
-            "selection": "Menos de 5 gols"
+            "selection": "Mais de 1.25 gols"
+          },
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "non_half_line_rejected"
+            ],
+            "selection": "Menos de 4.75 gols"
           },
           {
             "market": "Escanteios",
@@ -10404,23 +10280,20 @@
             "selection": "Mais de 5 escanteios"
           },
           {
-            "market": "Escanteios",
+            "market": "Total de gols",
             "reasons": [
+              "selection_history=71%/7",
+              "family_history=76%/25",
               "source_history=75%/24",
-              "raw_individual_score_below_84"
+              "recent_under45=73%",
+              "recent_5plus=27%",
+              "recent_under45_not_stable",
+              "probability_below_84%"
             ],
-            "selection": "Menos de 14.5 escanteios"
-          },
-          {
-            "market": "Escanteios",
-            "reasons": [
-              "source_history=75%/24",
-              "raw_individual_score_below_84"
-            ],
-            "selection": "Mais de 6.5 escanteios"
+            "selection": "Menos de 4.5 gols"
           }
         ],
-        "rejected_legs": 30
+        "rejected_legs": 31
       },
       "recent_form": {
         "avg_total_goals": 3.636,
@@ -10433,7 +10306,7 @@
         "under_3_5_rate": 0.3636,
         "under_4_5_rate": 0.7273
       },
-      "score": 90.3,
+      "score": 90.6,
       "under_over": ""
     },
     {
@@ -12846,17 +12719,739 @@
       },
       "score": 0,
       "under_over": ""
+    },
+    {
+      "advice": "Double chance : Lindome or draw",
+      "away_probability": 0.1,
+      "away_team": "Västra Frölunda",
+      "best_market": null,
+      "country": "Sweden",
+      "decision": "REJECTED",
+      "draw_probability": 0.45,
+      "eligible_legs": [],
+      "fixture_id": 1511379,
+      "home_probability": 0.45,
+      "home_team": "Lindome",
+      "kickoff_iso": "2026-08-28T14:00:00-03:00",
+      "league": "Division 2 - Västra Götaland",
+      "market_family_counts": {
+        "CARDS": 0,
+        "CORNERS": 0,
+        "GOALS": 0,
+        "RESULT": 0,
+        "SHOTS": 0
+      },
+      "match": "Lindome x Västra Frölunda",
+      "prediction_available": true,
+      "prediction_risk_flags": [],
+      "quality_guard": {
+        "accepted_legs": 0,
+        "rejected_examples": [
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "non_half_line_rejected"
+            ],
+            "selection": "Mais de 2 gols"
+          },
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "bookmakers<5",
+              "recent_over15=92%"
+            ],
+            "selection": "Mais de 1.5 gols"
+          },
+          {
+            "market": "Ambas marcam",
+            "reasons": [
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "raw_individual_score_below_84"
+            ],
+            "selection": "Não"
+          },
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "raw_individual_score_below_84"
+            ],
+            "selection": "Mais de 1.75 gols"
+          }
+        ],
+        "rejected_legs": 14
+      },
+      "recent_form": {
+        "avg_total_goals": 3.667,
+        "five_plus_rate": 0.3333,
+        "max_total_goals": 6,
+        "over_1_5_rate": 0.9167,
+        "over_2_5_rate": 0.75,
+        "sample": 12,
+        "under_2_5_rate": 0.25,
+        "under_3_5_rate": 0.4167,
+        "under_4_5_rate": 0.6667
+      },
+      "score": 0,
+      "under_over": ""
     }
   ],
   "api_minute_limit": 300,
-  "api_minute_remaining": 299,
+  "api_minute_remaining": 260,
   "api_requests": 196,
-  "api_requests_remaining": 7183,
-  "approved": [],
+  "api_requests_remaining": 6923,
+  "approved": [
+    {
+      "bookmaker": "Betano",
+      "estimated_probability": 0.647,
+      "execution": {
+        "bookmaker": "Betano",
+        "mode": "OPEN_AND_COPY",
+        "ready": true,
+        "total_odd": 1.52,
+        "url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/"
+      },
+      "legs": [
+        {
+          "away_team": "FC Liefering",
+          "bookmaker": "Betano",
+          "bookmaker_count": 9,
+          "bookmaker_quotes": {
+            "10Bet": 1.15,
+            "1xBet": 1.07,
+            "Bet365": 1.11,
+            "BetVictor": 1.07,
+            "Betano": 1.12,
+            "Betfair": 1.1,
+            "Marathonbet": 1.07,
+            "Pinnacle": 1.11,
+            "Superbet": 1.1
+          },
+          "consensus_odd": 1.1,
+          "country": "Austria",
+          "edge": -0.0273,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1567892,
+          "fixture_status": "NS",
+          "home_team": "Voitsberg",
+          "implied_probability": 0.9091,
+          "individual_score_band": "ELITE_88_PLUS",
+          "kickoff_iso": "2026-08-28T13:30:00-03:00",
+          "league": "2. Liga",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Voitsberg x FC Liefering",
+          "model_probability": 0.8818,
+          "odd": 1.12,
+          "pre_guard_score": 88.9,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.8,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over15=91%"
+            ],
+            "recent_sample": 11
+          },
+          "quality_score": 96.0,
+          "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 1.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 88.9,
+          "selection": "Mais de 1.5 gols",
+          "settlement_line": 1.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        },
+        {
+          "away_team": "York United",
+          "bookmaker": "Betano",
+          "bookmaker_count": 9,
+          "bookmaker_quotes": {
+            "10Bet": 1.13,
+            "1xBet": 1.09,
+            "Bet365": 1.12,
+            "BetVictor": 1.11,
+            "Betano": 1.15,
+            "Betfair": 1.11,
+            "Marathonbet": 1.09,
+            "Superbet": 1.13,
+            "Unibet": 1.15
+          },
+          "consensus_odd": 1.12,
+          "country": "Canada",
+          "edge": -0.0268,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1517335,
+          "fixture_status": "NS",
+          "home_team": "Atlético Ottawa",
+          "implied_probability": 0.8929,
+          "individual_score_band": "STRONG_84_TO_87_9",
+          "kickoff_iso": "2026-08-28T20:00:00-03:00",
+          "league": "Canadian Premier League",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Atlético Ottawa x York United",
+          "model_probability": 0.8661,
+          "odd": 1.15,
+          "pre_guard_score": 87.9,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.8,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over15=100%"
+            ],
+            "recent_sample": 12
+          },
+          "quality_score": 95.9,
+          "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 1.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 87.9,
+          "selection": "Mais de 1.5 gols",
+          "settlement_line": 1.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        },
+        {
+          "away_team": "SK Beveren",
+          "bookmaker": "Betano",
+          "bookmaker_count": 10,
+          "bookmaker_quotes": {
+            "10Bet": 1.18,
+            "1xBet": 1.12,
+            "Bet365": 1.14,
+            "BetVictor": 1.13,
+            "Betano": 1.18,
+            "Betfair": 1.14,
+            "Marathonbet": 1.11,
+            "Pinnacle": 1.15,
+            "Superbet": 1.17,
+            "Unibet": 1.16
+          },
+          "consensus_odd": 1.15,
+          "country": "Belgium",
+          "edge": -0.0262,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1558608,
+          "fixture_status": "NS",
+          "home_team": "Genk",
+          "implied_probability": 0.8734,
+          "individual_score_band": "STRONG_84_TO_87_9",
+          "kickoff_iso": "2026-08-28T15:45:00-03:00",
+          "league": "Jupiler Pro League",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Genk x SK Beveren",
+          "model_probability": 0.8472,
+          "odd": 1.18,
+          "pre_guard_score": 86.6,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.8,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over15=83%"
+            ],
+            "recent_sample": 12
+          },
+          "quality_score": 92.9,
+          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 1.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 86.6,
+          "selection": "Mais de 1.5 gols",
+          "settlement_line": 1.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        }
+      ],
+      "market_families": [
+        "GOALS"
+      ],
+      "min_individual_score": 86.6,
+      "profile": "CONSERVADOR",
+      "quality_tier": "STRICT",
+      "reason": "Bilhete accuracy-first: cada perna nova possui score bruto >=84, com prioridade para 88+, além de forma recente, histórico GREEN/RED, consenso de casas, diversificação e intervalo mínimo de 2 horas.",
+      "risk_clusters": [
+        "GOALS_OVER"
+      ],
+      "score": 87.8,
+      "status": "PENDING",
+      "ticket_id": "B1",
+      "total_odd": 1.52
+    },
+    {
+      "bookmaker": "Betano",
+      "estimated_probability": 0.6456,
+      "execution": {
+        "bookmaker": "Betano",
+        "mode": "OPEN_AND_COPY",
+        "ready": true,
+        "total_odd": 1.5,
+        "url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/"
+      },
+      "legs": [
+        {
+          "away_team": "Sarmiento Junin",
+          "bookmaker": "Betano",
+          "bookmaker_count": 9,
+          "bookmaker_quotes": {
+            "10Bet": 1.07,
+            "1xBet": 1.03,
+            "Bet365": 1.07,
+            "BetVictor": 1.05,
+            "Betano": 1.09,
+            "Betfair": 1.06,
+            "Marathonbet": 1.03,
+            "Superbet": 1.07,
+            "Unibet": 1.05
+          },
+          "consensus_odd": 1.06,
+          "country": "Argentina",
+          "edge": -0.0283,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1493106,
+          "fixture_status": "NS",
+          "home_team": "Union Santa Fe",
+          "implied_probability": 0.9434,
+          "individual_score_band": "ELITE_88_PLUS",
+          "kickoff_iso": "2026-08-28T19:00:00-03:00",
+          "league": "Liga Profesional Argentina",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Union Santa Fe x Sarmiento Junin",
+          "model_probability": 0.9151,
+          "odd": 1.09,
+          "pre_guard_score": 91.1,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.84,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "family_history=76%/25",
+              "source_history=75%/24"
+            ],
+            "recent_sample": 12
+          },
+          "quality_score": 91.1,
+          "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 0.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 91.1,
+          "selection": "Mais de 0.5 gols",
+          "settlement_line": 0.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        },
+        {
+          "away_team": "FC BW Linz",
+          "bookmaker": "Betano",
+          "bookmaker_count": 9,
+          "bookmaker_quotes": {
+            "10Bet": 1.15,
+            "1xBet": 1.1,
+            "Bet365": 1.14,
+            "BetVictor": 1.13,
+            "Betano": 1.15,
+            "Betfair": 1.14,
+            "Marathonbet": 1.1,
+            "Pinnacle": 1.16,
+            "Superbet": 1.13
+          },
+          "consensus_odd": 1.14,
+          "country": "Austria",
+          "edge": -0.0263,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1567897,
+          "fixture_status": "NS",
+          "home_team": "SV Kapfenberg",
+          "implied_probability": 0.8772,
+          "individual_score_band": "STRONG_84_TO_87_9",
+          "kickoff_iso": "2026-08-28T13:30:00-03:00",
+          "league": "2. Liga",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "SV Kapfenberg x FC BW Linz",
+          "model_probability": 0.8509,
+          "odd": 1.15,
+          "pre_guard_score": 86.9,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.8,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over15=83%"
+            ],
+            "recent_sample": 12
+          },
+          "quality_score": 93.2,
+          "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 1.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 86.9,
+          "selection": "Mais de 1.5 gols",
+          "settlement_line": 1.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        },
+        {
+          "away_team": "Sporting CP",
+          "bookmaker": "Betano",
+          "bookmaker_count": 10,
+          "bookmaker_quotes": {
+            "10Bet": 1.17,
+            "1xBet": 1.13,
+            "Bet365": 1.18,
+            "BetVictor": 1.15,
+            "Betano": 1.2,
+            "Betfair": 1.17,
+            "Marathonbet": 1.15,
+            "Pinnacle": 1.21,
+            "Superbet": 1.19,
+            "Unibet": 1.14
+          },
+          "consensus_odd": 1.17,
+          "country": "Portugal",
+          "edge": -0.0256,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1575481,
+          "fixture_status": "NS",
+          "home_team": "Rio Ave",
+          "implied_probability": 0.8547,
+          "individual_score_band": "STRONG_84_TO_87_9",
+          "kickoff_iso": "2026-08-28T16:15:00-03:00",
+          "league": "Primeira Liga",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Rio Ave x Sporting CP",
+          "model_probability": 0.8291,
+          "odd": 1.2,
+          "pre_guard_score": 85.4,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.8,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over15=91%"
+            ],
+            "recent_sample": 11
+          },
+          "quality_score": 92.5,
+          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 1.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 85.4,
+          "selection": "Mais de 1.5 gols",
+          "settlement_line": 1.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        }
+      ],
+      "market_families": [
+        "GOALS"
+      ],
+      "min_individual_score": 85.4,
+      "profile": "EQUILIBRADO",
+      "quality_tier": "STRICT",
+      "reason": "Bilhete accuracy-first: cada perna nova possui score bruto >=84, com prioridade para 88+, além de forma recente, histórico GREEN/RED, consenso de casas, diversificação e intervalo mínimo de 2 horas.",
+      "risk_clusters": [
+        "GOALS_OVER"
+      ],
+      "score": 87.8,
+      "status": "PENDING",
+      "ticket_id": "B2",
+      "total_odd": 1.5
+    },
+    {
+      "bookmaker": "Betano",
+      "estimated_probability": 0.6442,
+      "execution": {
+        "bookmaker": "Betano",
+        "mode": "OPEN_AND_COPY",
+        "ready": true,
+        "total_odd": 1.51,
+        "url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/"
+      },
+      "legs": [
+        {
+          "away_team": "Forge",
+          "bookmaker": "Betano",
+          "bookmaker_count": 6,
+          "bookmaker_quotes": {
+            "1xBet": 1.04,
+            "Bet365": 1.05,
+            "BetVictor": 1.02,
+            "Betano": 1.06,
+            "Betfair": 1.02,
+            "Superbet": 1.04
+          },
+          "consensus_odd": 1.04,
+          "country": "Canada",
+          "edge": -0.0288,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1517336,
+          "fixture_status": "NS",
+          "home_team": "Supra du Quebec",
+          "implied_probability": 0.9615,
+          "individual_score_band": "ELITE_88_PLUS",
+          "kickoff_iso": "2026-08-28T20:00:00-03:00",
+          "league": "Canadian Premier League",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Supra du Quebec x Forge",
+          "model_probability": 0.9327,
+          "odd": 1.06,
+          "pre_guard_score": 90.5,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.84,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "family_history=76%/25",
+              "source_history=75%/24"
+            ],
+            "recent_sample": 12
+          },
+          "quality_score": 90.5,
+          "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 93%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Under 5.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 90.5,
+          "selection": "Menos de 5.5 gols",
+          "settlement_line": 5.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "under",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        },
+        {
+          "away_team": "Sligo Rovers",
+          "bookmaker": "Betano",
+          "bookmaker_count": 10,
+          "bookmaker_quotes": {
+            "10Bet": 1.18,
+            "1xBet": 1.11,
+            "Bet365": 1.14,
+            "BetVictor": 1.13,
+            "Betano": 1.16,
+            "Betfair": 1.14,
+            "Marathonbet": 1.11,
+            "Pinnacle": 1.16,
+            "Superbet": 1.15,
+            "Unibet": 1.14
+          },
+          "consensus_odd": 1.14,
+          "country": "Ireland",
+          "edge": -0.0263,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1492756,
+          "fixture_status": "NS",
+          "home_team": "Bohemians",
+          "implied_probability": 0.8772,
+          "individual_score_band": "STRONG_84_TO_87_9",
+          "kickoff_iso": "2026-08-28T15:45:00-03:00",
+          "league": "Premier Division",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Bohemians x Sligo Rovers",
+          "model_probability": 0.8509,
+          "odd": 1.16,
+          "pre_guard_score": 86.9,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.8,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over15=92%"
+            ],
+            "recent_sample": 12
+          },
+          "quality_score": 94.1,
+          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 1.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 86.9,
+          "selection": "Mais de 1.5 gols",
+          "settlement_line": 1.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        },
+        {
+          "away_team": "SKU Amstetten",
+          "bookmaker": "Betano",
+          "bookmaker_count": 10,
+          "bookmaker_quotes": {
+            "10Bet": 1.22,
+            "1xBet": 1.17,
+            "Bet365": 1.22,
+            "BetVictor": 1.18,
+            "Betano": 1.23,
+            "Betfair": 1.2,
+            "Marathonbet": 1.17,
+            "Pinnacle": 1.2,
+            "Superbet": 1.19,
+            "Unibet": 1.18
+          },
+          "consensus_odd": 1.2,
+          "country": "Austria",
+          "edge": -0.0251,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1567894,
+          "fixture_status": "NS",
+          "home_team": "First Vienna",
+          "implied_probability": 0.8368,
+          "individual_score_band": "STRONG_84_TO_87_9",
+          "kickoff_iso": "2026-08-28T13:30:00-03:00",
+          "league": "2. Liga",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "First Vienna x SKU Amstetten",
+          "model_probability": 0.8117,
+          "odd": 1.23,
+          "pre_guard_score": 84.3,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.8,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over15=92%"
+            ],
+            "recent_sample": 12
+          },
+          "quality_score": 91.5,
+          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 81%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 1.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 84.3,
+          "selection": "Mais de 1.5 gols",
+          "settlement_line": 1.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        }
+      ],
+      "market_families": [
+        "GOALS"
+      ],
+      "min_individual_score": 84.3,
+      "profile": "SELETIVO",
+      "quality_tier": "STRONG",
+      "reason": "Bilhete accuracy-first: cada perna nova possui score bruto >=84, com prioridade para 88+, além de forma recente, histórico GREEN/RED, consenso de casas, diversificação e intervalo mínimo de 2 horas.",
+      "risk_clusters": [
+        "GOALS_OVER",
+        "GOALS_UNDER"
+      ],
+      "score": 87.2,
+      "status": "PENDING",
+      "ticket_id": "B3",
+      "total_odd": 1.51
+    }
+  ],
   "board_date": "2026-08-28",
   "board_mode": "TODAY",
-  "board_status": "NO_TICKETS",
-  "bookmakers_used": [],
+  "board_status": "READY",
+  "bookmakers_used": [
+    "Betano"
+  ],
   "consensus_tickets": 0,
   "criteria": {
     "markets": [
@@ -12871,7 +13466,7 @@
       "Total de chutes",
       "Total de chutes no alvo"
     ],
-    "max_legs": 2,
+    "max_legs": 3,
     "method": "forma recente + previsão + consenso de bookmakers + aprendizado GREEN/RED + múltiplos mercados full-time + diversificação",
     "same_day_only": true,
     "ticket_odd_range": "1.50-2.00",
@@ -12888,14 +13483,14 @@
     "multi-market totals: goals, corners, yellow cards, shots and shots on target"
   ],
   "deep_analyzed_matches": 60,
-  "eligible_legs": 103,
+  "eligible_legs": 102,
   "execution_bookmaker": "Betano",
-  "execution_ready": false,
+  "execution_ready": true,
   "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
   "fixture_exclusivity": {
     "enabled": true,
     "rule": "A fixture may appear in only one ticket per daily portfolio",
-    "unique_fixtures": 0,
+    "unique_fixtures": 9,
     "valid": true
   },
   "fixtures_analyzed": 60,
@@ -12904,6 +13499,20 @@
   "fixtures_with_markets": 150,
   "history_summary": {
     "accuracy": 0.7222222222222222,
+    "by_market": {
+      "GOALS": {
+        "accuracy": 0.76,
+        "green": 19,
+        "red": 6,
+        "resolved": 25
+      },
+      "RESULT": {
+        "accuracy": 0.6363636363636364,
+        "green": 7,
+        "red": 4,
+        "resolved": 11
+      }
+    },
     "hits": 26,
     "misses": 10,
     "resolved": 36,
@@ -12915,15 +13524,16 @@
   "kickoff_spacing": {
     "enabled": true,
     "minimum_minutes": 120,
-    "rule": "Every selected fixture must start at least 120 minutes apart from every other selected fixture.",
-    "valid": false
+    "rule": "Dentro de cada bilhete, jogos diferentes devem iniciar com pelo menos 120 minutos de diferença; nenhum jogo pode se repetir entre B1/B2/B3.",
+    "scope": "WITHIN_EACH_TICKET",
+    "valid": true
   },
-  "last_run_at": "2026-08-28T09:44:01.000658-03:00",
+  "last_run_at": "2026-08-28T09:55:55.189695-03:00",
   "market_analysis": {
     "correlation_guard": "same fixture cannot be repeated across tickets",
     "eligible_by_family": {
       "CARDS": 0,
-      "CORNERS": 18,
+      "CORNERS": 17,
       "GOALS": 83,
       "RESULT": 2,
       "SHOTS": 0
@@ -12947,7 +13557,10 @@
       "recent_form_required_for_goal_totals": true,
       "standard_half_lines_only": true
     },
-    "risk_cluster_exposure": {},
+    "risk_cluster_exposure": {
+      "GOALS_OVER": 8,
+      "GOALS_UNDER": 1
+    },
     "selected_by_family": {
       "CARDS": 0,
       "CORNERS": 0,
@@ -12958,31 +13571,37 @@
     "selected_families": {
       "CARDS": 0,
       "CORNERS": 0,
-      "GOALS": 0,
+      "GOALS": 9,
       "RESULT": 0,
       "SHOTS": 0
     },
     "settlement": "automatic for supported full-time totals"
   },
   "matches_with_odds": 150,
-  "model_version": "football-accuracy-betano-v8-backtracking-score84",
+  "max_ticket_legs": 3,
+  "model_version": "football-accuracy-betano-v9-three-leg-score84",
   "operational_date": "2026-08-28",
   "portfolio_search": {
-    "fixture_exclusivity": true,
-    "kickoff_spacing_minutes": 120,
-    "max_options": 900,
-    "max_search_visits": 350000,
+    "fixture_exclusivity_across_tickets": true,
+    "kickoff_spacing_minutes_within_ticket": 120,
+    "max_options": 2200,
     "score_floor": 84.0,
-    "strategy": "BACKTRACKING"
+    "strategy": "BACKTRACKING_1_TO_3_LEGS",
+    "triple_combined_probability_floor": 0.64,
+    "triple_min_leg_probability": 0.8
   },
   "predictions_available": 60,
   "previous_published_tickets": [],
   "publication_lock": {
     "immutable": true,
-    "published_ids": [],
+    "published_ids": [
+      "B1",
+      "B2",
+      "B3"
+    ],
     "reason": "Todo bilhete que aparece no painel fica congelado; análises posteriores só podem acrescentar IDs ainda não publicados."
   },
-  "quality_rejected_legs": 1434,
+  "quality_rejected_legs": 1448,
   "rejected": [
     {
       "advice": "Winner : Täby",
@@ -13227,88 +13846,6 @@
       "under_over": "+1.5"
     },
     {
-      "advice": "Combo Double chance : draw or SV Horn and -3.5 goals",
-      "away_probability": 0.45,
-      "away_team": "SV Horn",
-      "best_market": null,
-      "country": "Austria",
-      "decision": "REJECTED",
-      "draw_probability": 0.45,
-      "eligible_legs": [],
-      "fixture_id": 1574076,
-      "home_probability": 0.1,
-      "home_team": "Krems / Rehberg",
-      "kickoff_iso": "2026-08-28T14:30:00-03:00",
-      "league": "Regionalliga - Ost",
-      "market_family_counts": {
-        "CARDS": 0,
-        "CORNERS": 0,
-        "GOALS": 0,
-        "RESULT": 0,
-        "SHOTS": 0
-      },
-      "match": "Krems / Rehberg x SV Horn",
-      "prediction_available": true,
-      "prediction_risk_flags": [],
-      "quality_guard": {
-        "accepted_legs": 0,
-        "rejected_examples": [
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=76%/25",
-              "source_history=75%/24",
-              "bookmakers<5"
-            ],
-            "selection": "Menos de 5.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=76%/25",
-              "source_history=75%/24",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 5.25 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "selection_history=100%/6",
-              "family_history=76%/25",
-              "source_history=75%/24",
-              "bookmakers<5",
-              "recent_over15=75%"
-            ],
-            "selection": "Mais de 1.5 gols"
-          },
-          {
-            "market": "Total de gols",
-            "reasons": [
-              "family_history=76%/25",
-              "source_history=75%/24",
-              "non_half_line_rejected"
-            ],
-            "selection": "Menos de 5 gols"
-          }
-        ],
-        "rejected_legs": 13
-      },
-      "recent_form": {
-        "avg_total_goals": 2.083,
-        "five_plus_rate": 0.0,
-        "max_total_goals": 4,
-        "over_1_5_rate": 0.75,
-        "over_2_5_rate": 0.3333,
-        "sample": 12,
-        "under_2_5_rate": 0.6667,
-        "under_3_5_rate": 0.8333,
-        "under_4_5_rate": 1.0
-      },
-      "score": 0,
-      "under_over": "-3.5"
-    },
-    {
       "advice": "Combo Winner : Traiskirchen and +2.5 goals",
       "away_probability": 0.45,
       "away_team": "Traiskirchen",
@@ -13372,7 +13909,7 @@
             "selection": "Mais de 2.25 gols"
           }
         ],
-        "rejected_legs": 12
+        "rejected_legs": 13
       },
       "recent_form": {
         "avg_total_goals": 4.5,
@@ -14206,13 +14743,747 @@
       },
       "score": 0,
       "under_over": ""
+    },
+    {
+      "advice": "Double chance : Lindome or draw",
+      "away_probability": 0.1,
+      "away_team": "Västra Frölunda",
+      "best_market": null,
+      "country": "Sweden",
+      "decision": "REJECTED",
+      "draw_probability": 0.45,
+      "eligible_legs": [],
+      "fixture_id": 1511379,
+      "home_probability": 0.45,
+      "home_team": "Lindome",
+      "kickoff_iso": "2026-08-28T14:00:00-03:00",
+      "league": "Division 2 - Västra Götaland",
+      "market_family_counts": {
+        "CARDS": 0,
+        "CORNERS": 0,
+        "GOALS": 0,
+        "RESULT": 0,
+        "SHOTS": 0
+      },
+      "match": "Lindome x Västra Frölunda",
+      "prediction_available": true,
+      "prediction_risk_flags": [],
+      "quality_guard": {
+        "accepted_legs": 0,
+        "rejected_examples": [
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "non_half_line_rejected"
+            ],
+            "selection": "Mais de 2 gols"
+          },
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "bookmakers<5",
+              "recent_over15=92%"
+            ],
+            "selection": "Mais de 1.5 gols"
+          },
+          {
+            "market": "Ambas marcam",
+            "reasons": [
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "raw_individual_score_below_84"
+            ],
+            "selection": "Não"
+          },
+          {
+            "market": "Total de gols",
+            "reasons": [
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "raw_individual_score_below_84"
+            ],
+            "selection": "Mais de 1.75 gols"
+          }
+        ],
+        "rejected_legs": 14
+      },
+      "recent_form": {
+        "avg_total_goals": 3.667,
+        "five_plus_rate": 0.3333,
+        "max_total_goals": 6,
+        "over_1_5_rate": 0.9167,
+        "over_2_5_rate": 0.75,
+        "sample": 12,
+        "under_2_5_rate": 0.25,
+        "under_3_5_rate": 0.4167,
+        "under_4_5_rate": 0.6667
+      },
+      "score": 0,
+      "under_over": ""
     }
   ],
+  "settlement": {
+    "checked_at": "2026-08-28T09:55:55.935600-03:00",
+    "complete": false,
+    "green": 0,
+    "pending": 3,
+    "red": 0,
+    "statistics_fixtures_checked": 0
+  },
   "sport": "football",
-  "strict_tickets": 0,
+  "strict_tickets": 2,
+  "ticket_lock": {
+    "locked": true,
+    "locked_at": "2026-08-28T12:55:55.524490+00:00",
+    "reason": "3 bilhetes oficiais accuracy-first congelados para auditoria e settlement."
+  },
   "ticket_target": 3,
-  "tickets": [],
-  "tickets_ready": 0,
+  "tickets": [
+    {
+      "bookmaker": "Betano",
+      "estimated_probability": 0.647,
+      "execution": {
+        "bookmaker": "Betano",
+        "mode": "OPEN_AND_COPY",
+        "ready": true,
+        "total_odd": 1.52,
+        "url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/"
+      },
+      "legs": [
+        {
+          "away_team": "FC Liefering",
+          "bookmaker": "Betano",
+          "bookmaker_count": 9,
+          "bookmaker_quotes": {
+            "10Bet": 1.15,
+            "1xBet": 1.07,
+            "Bet365": 1.11,
+            "BetVictor": 1.07,
+            "Betano": 1.12,
+            "Betfair": 1.1,
+            "Marathonbet": 1.07,
+            "Pinnacle": 1.11,
+            "Superbet": 1.1
+          },
+          "consensus_odd": 1.1,
+          "country": "Austria",
+          "edge": -0.0273,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1567892,
+          "fixture_status": "NS",
+          "home_team": "Voitsberg",
+          "implied_probability": 0.9091,
+          "individual_score_band": "ELITE_88_PLUS",
+          "kickoff_iso": "2026-08-28T13:30:00-03:00",
+          "league": "2. Liga",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Voitsberg x FC Liefering",
+          "model_probability": 0.8818,
+          "odd": 1.12,
+          "pre_guard_score": 88.9,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.8,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over15=91%"
+            ],
+            "recent_sample": 11
+          },
+          "quality_score": 96.0,
+          "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 1.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 88.9,
+          "selection": "Mais de 1.5 gols",
+          "settlement_line": 1.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        },
+        {
+          "away_team": "York United",
+          "bookmaker": "Betano",
+          "bookmaker_count": 9,
+          "bookmaker_quotes": {
+            "10Bet": 1.13,
+            "1xBet": 1.09,
+            "Bet365": 1.12,
+            "BetVictor": 1.11,
+            "Betano": 1.15,
+            "Betfair": 1.11,
+            "Marathonbet": 1.09,
+            "Superbet": 1.13,
+            "Unibet": 1.15
+          },
+          "consensus_odd": 1.12,
+          "country": "Canada",
+          "edge": -0.0268,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1517335,
+          "fixture_status": "NS",
+          "home_team": "Atlético Ottawa",
+          "implied_probability": 0.8929,
+          "individual_score_band": "STRONG_84_TO_87_9",
+          "kickoff_iso": "2026-08-28T20:00:00-03:00",
+          "league": "Canadian Premier League",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Atlético Ottawa x York United",
+          "model_probability": 0.8661,
+          "odd": 1.15,
+          "pre_guard_score": 87.9,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.8,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over15=100%"
+            ],
+            "recent_sample": 12
+          },
+          "quality_score": 95.9,
+          "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 1.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 87.9,
+          "selection": "Mais de 1.5 gols",
+          "settlement_line": 1.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        },
+        {
+          "away_team": "SK Beveren",
+          "bookmaker": "Betano",
+          "bookmaker_count": 10,
+          "bookmaker_quotes": {
+            "10Bet": 1.18,
+            "1xBet": 1.12,
+            "Bet365": 1.14,
+            "BetVictor": 1.13,
+            "Betano": 1.18,
+            "Betfair": 1.14,
+            "Marathonbet": 1.11,
+            "Pinnacle": 1.15,
+            "Superbet": 1.17,
+            "Unibet": 1.16
+          },
+          "consensus_odd": 1.15,
+          "country": "Belgium",
+          "edge": -0.0262,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1558608,
+          "fixture_status": "NS",
+          "home_team": "Genk",
+          "implied_probability": 0.8734,
+          "individual_score_band": "STRONG_84_TO_87_9",
+          "kickoff_iso": "2026-08-28T15:45:00-03:00",
+          "league": "Jupiler Pro League",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Genk x SK Beveren",
+          "model_probability": 0.8472,
+          "odd": 1.18,
+          "pre_guard_score": 86.6,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.8,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over15=83%"
+            ],
+            "recent_sample": 12
+          },
+          "quality_score": 92.9,
+          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 1.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 86.6,
+          "selection": "Mais de 1.5 gols",
+          "settlement_line": 1.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        }
+      ],
+      "market_families": [
+        "GOALS"
+      ],
+      "min_individual_score": 86.6,
+      "profile": "CONSERVADOR",
+      "quality_tier": "STRICT",
+      "reason": "Bilhete accuracy-first: cada perna nova possui score bruto >=84, com prioridade para 88+, além de forma recente, histórico GREEN/RED, consenso de casas, diversificação e intervalo mínimo de 2 horas.",
+      "risk_clusters": [
+        "GOALS_OVER"
+      ],
+      "score": 87.8,
+      "status": "PENDING",
+      "ticket_id": "B1",
+      "total_odd": 1.52
+    },
+    {
+      "bookmaker": "Betano",
+      "estimated_probability": 0.6456,
+      "execution": {
+        "bookmaker": "Betano",
+        "mode": "OPEN_AND_COPY",
+        "ready": true,
+        "total_odd": 1.5,
+        "url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/"
+      },
+      "legs": [
+        {
+          "away_team": "Sarmiento Junin",
+          "bookmaker": "Betano",
+          "bookmaker_count": 9,
+          "bookmaker_quotes": {
+            "10Bet": 1.07,
+            "1xBet": 1.03,
+            "Bet365": 1.07,
+            "BetVictor": 1.05,
+            "Betano": 1.09,
+            "Betfair": 1.06,
+            "Marathonbet": 1.03,
+            "Superbet": 1.07,
+            "Unibet": 1.05
+          },
+          "consensus_odd": 1.06,
+          "country": "Argentina",
+          "edge": -0.0283,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1493106,
+          "fixture_status": "NS",
+          "home_team": "Union Santa Fe",
+          "implied_probability": 0.9434,
+          "individual_score_band": "ELITE_88_PLUS",
+          "kickoff_iso": "2026-08-28T19:00:00-03:00",
+          "league": "Liga Profesional Argentina",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Union Santa Fe x Sarmiento Junin",
+          "model_probability": 0.9151,
+          "odd": 1.09,
+          "pre_guard_score": 91.1,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.84,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "family_history=76%/25",
+              "source_history=75%/24"
+            ],
+            "recent_sample": 12
+          },
+          "quality_score": 91.1,
+          "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 92%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 0.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 91.1,
+          "selection": "Mais de 0.5 gols",
+          "settlement_line": 0.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        },
+        {
+          "away_team": "FC BW Linz",
+          "bookmaker": "Betano",
+          "bookmaker_count": 9,
+          "bookmaker_quotes": {
+            "10Bet": 1.15,
+            "1xBet": 1.1,
+            "Bet365": 1.14,
+            "BetVictor": 1.13,
+            "Betano": 1.15,
+            "Betfair": 1.14,
+            "Marathonbet": 1.1,
+            "Pinnacle": 1.16,
+            "Superbet": 1.13
+          },
+          "consensus_odd": 1.14,
+          "country": "Austria",
+          "edge": -0.0263,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1567897,
+          "fixture_status": "NS",
+          "home_team": "SV Kapfenberg",
+          "implied_probability": 0.8772,
+          "individual_score_band": "STRONG_84_TO_87_9",
+          "kickoff_iso": "2026-08-28T13:30:00-03:00",
+          "league": "2. Liga",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "SV Kapfenberg x FC BW Linz",
+          "model_probability": 0.8509,
+          "odd": 1.15,
+          "pre_guard_score": 86.9,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.8,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over15=83%"
+            ],
+            "recent_sample": 12
+          },
+          "quality_score": 93.2,
+          "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 1.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 86.9,
+          "selection": "Mais de 1.5 gols",
+          "settlement_line": 1.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        },
+        {
+          "away_team": "Sporting CP",
+          "bookmaker": "Betano",
+          "bookmaker_count": 10,
+          "bookmaker_quotes": {
+            "10Bet": 1.17,
+            "1xBet": 1.13,
+            "Bet365": 1.18,
+            "BetVictor": 1.15,
+            "Betano": 1.2,
+            "Betfair": 1.17,
+            "Marathonbet": 1.15,
+            "Pinnacle": 1.21,
+            "Superbet": 1.19,
+            "Unibet": 1.14
+          },
+          "consensus_odd": 1.17,
+          "country": "Portugal",
+          "edge": -0.0256,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1575481,
+          "fixture_status": "NS",
+          "home_team": "Rio Ave",
+          "implied_probability": 0.8547,
+          "individual_score_band": "STRONG_84_TO_87_9",
+          "kickoff_iso": "2026-08-28T16:15:00-03:00",
+          "league": "Primeira Liga",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Rio Ave x Sporting CP",
+          "model_probability": 0.8291,
+          "odd": 1.2,
+          "pre_guard_score": 85.4,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.8,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over15=91%"
+            ],
+            "recent_sample": 11
+          },
+          "quality_score": 92.5,
+          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 1.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 85.4,
+          "selection": "Mais de 1.5 gols",
+          "settlement_line": 1.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        }
+      ],
+      "market_families": [
+        "GOALS"
+      ],
+      "min_individual_score": 85.4,
+      "profile": "EQUILIBRADO",
+      "quality_tier": "STRICT",
+      "reason": "Bilhete accuracy-first: cada perna nova possui score bruto >=84, com prioridade para 88+, além de forma recente, histórico GREEN/RED, consenso de casas, diversificação e intervalo mínimo de 2 horas.",
+      "risk_clusters": [
+        "GOALS_OVER"
+      ],
+      "score": 87.8,
+      "status": "PENDING",
+      "ticket_id": "B2",
+      "total_odd": 1.5
+    },
+    {
+      "bookmaker": "Betano",
+      "estimated_probability": 0.6442,
+      "execution": {
+        "bookmaker": "Betano",
+        "mode": "OPEN_AND_COPY",
+        "ready": true,
+        "total_odd": 1.51,
+        "url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/"
+      },
+      "legs": [
+        {
+          "away_team": "Forge",
+          "bookmaker": "Betano",
+          "bookmaker_count": 6,
+          "bookmaker_quotes": {
+            "1xBet": 1.04,
+            "Bet365": 1.05,
+            "BetVictor": 1.02,
+            "Betano": 1.06,
+            "Betfair": 1.02,
+            "Superbet": 1.04
+          },
+          "consensus_odd": 1.04,
+          "country": "Canada",
+          "edge": -0.0288,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1517336,
+          "fixture_status": "NS",
+          "home_team": "Supra du Quebec",
+          "implied_probability": 0.9615,
+          "individual_score_band": "ELITE_88_PLUS",
+          "kickoff_iso": "2026-08-28T20:00:00-03:00",
+          "league": "Canadian Premier League",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Supra du Quebec x Forge",
+          "model_probability": 0.9327,
+          "odd": 1.06,
+          "pre_guard_score": 90.5,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.84,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "family_history=76%/25",
+              "source_history=75%/24"
+            ],
+            "recent_sample": 12
+          },
+          "quality_score": 90.5,
+          "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 93%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Under 5.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 90.5,
+          "selection": "Menos de 5.5 gols",
+          "settlement_line": 5.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "under",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        },
+        {
+          "away_team": "Sligo Rovers",
+          "bookmaker": "Betano",
+          "bookmaker_count": 10,
+          "bookmaker_quotes": {
+            "10Bet": 1.18,
+            "1xBet": 1.11,
+            "Bet365": 1.14,
+            "BetVictor": 1.13,
+            "Betano": 1.16,
+            "Betfair": 1.14,
+            "Marathonbet": 1.11,
+            "Pinnacle": 1.16,
+            "Superbet": 1.15,
+            "Unibet": 1.14
+          },
+          "consensus_odd": 1.14,
+          "country": "Ireland",
+          "edge": -0.0263,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1492756,
+          "fixture_status": "NS",
+          "home_team": "Bohemians",
+          "implied_probability": 0.8772,
+          "individual_score_band": "STRONG_84_TO_87_9",
+          "kickoff_iso": "2026-08-28T15:45:00-03:00",
+          "league": "Premier Division",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "Bohemians x Sligo Rovers",
+          "model_probability": 0.8509,
+          "odd": 1.16,
+          "pre_guard_score": 86.9,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.8,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over15=92%"
+            ],
+            "recent_sample": 12
+          },
+          "quality_score": 94.1,
+          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 1.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 86.9,
+          "selection": "Mais de 1.5 gols",
+          "settlement_line": 1.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        },
+        {
+          "away_team": "SKU Amstetten",
+          "bookmaker": "Betano",
+          "bookmaker_count": 10,
+          "bookmaker_quotes": {
+            "10Bet": 1.22,
+            "1xBet": 1.17,
+            "Bet365": 1.22,
+            "BetVictor": 1.18,
+            "Betano": 1.23,
+            "Betfair": 1.2,
+            "Marathonbet": 1.17,
+            "Pinnacle": 1.2,
+            "Superbet": 1.19,
+            "Unibet": 1.18
+          },
+          "consensus_odd": 1.2,
+          "country": "Austria",
+          "edge": -0.0251,
+          "execution_bookmaker": "Betano",
+          "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
+          "fixture_id": 1567894,
+          "fixture_status": "NS",
+          "home_team": "First Vienna",
+          "implied_probability": 0.8368,
+          "individual_score_band": "STRONG_84_TO_87_9",
+          "kickoff_iso": "2026-08-28T13:30:00-03:00",
+          "league": "2. Liga",
+          "market": "Total de gols",
+          "market_family": "GOALS",
+          "match": "First Vienna x SKU Amstetten",
+          "model_probability": 0.8117,
+          "odd": 1.23,
+          "pre_guard_score": 84.3,
+          "quality_guard": {
+            "accepted": true,
+            "elite_score": 88.0,
+            "min_probability": 0.8,
+            "min_score": 84.0,
+            "raw_score_floor": 84.0,
+            "reasons": [
+              "selection_history=100%/6",
+              "family_history=76%/25",
+              "source_history=75%/24",
+              "recent_over15=92%"
+            ],
+            "recent_sample": 12
+          },
+          "quality_score": 91.5,
+          "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 81%; seleção full-time com regra automática de conferência.",
+          "raw_market": "Goals Over/Under",
+          "raw_selection": "Over 1.5",
+          "result_reason": "Partida ainda não encerrada (NS).",
+          "risk_flags": [],
+          "score": 84.3,
+          "selection": "Mais de 1.5 gols",
+          "settlement_line": 1.5,
+          "settlement_metric": "goals",
+          "settlement_operator": "over",
+          "settlement_scope": "match",
+          "signal_source": "MULTI_MARKET_CONSENSUS",
+          "status": "PENDING"
+        }
+      ],
+      "market_families": [
+        "GOALS"
+      ],
+      "min_individual_score": 84.3,
+      "profile": "SELETIVO",
+      "quality_tier": "STRONG",
+      "reason": "Bilhete accuracy-first: cada perna nova possui score bruto >=84, com prioridade para 88+, além de forma recente, histórico GREEN/RED, consenso de casas, diversificação e intervalo mínimo de 2 horas.",
+      "risk_clusters": [
+        "GOALS_OVER",
+        "GOALS_UNDER"
+      ],
+      "score": 87.2,
+      "status": "PENDING",
+      "ticket_id": "B3",
+      "total_odd": 1.51
+    }
+  ],
+  "tickets_ready": 3,
   "top_limit": 3,
+  "triple_probability_floor": 0.64,
   "usable_matches": 45
 }
