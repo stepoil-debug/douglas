@@ -12840,7 +12840,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1567892,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Voitsberg",
           "implied_probability": 0.9091,
           "individual_score_band": "ELITE_88_PLUS",
@@ -12870,16 +12870,18 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 5; linha over 1.5.",
+          "result_score": "2-3",
           "risk_flags": [],
           "score": 88.9,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-28T18:13:22.190481-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "York United",
@@ -12965,7 +12967,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1558608,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Genk",
           "implied_probability": 0.8734,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -12995,16 +12997,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 4; linha over 1.5.",
+          "result_score": "4-0",
           "risk_flags": [],
           "score": 86.6,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-28T18:13:22.190622-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -13114,7 +13118,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1567897,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "SV Kapfenberg",
           "implied_probability": 0.8772,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -13144,16 +13148,18 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 3; linha over 1.5.",
+          "result_score": "2-1",
           "risk_flags": [],
           "score": 86.9,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-28T18:13:22.190654-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Sporting CP",
@@ -13177,7 +13183,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1575481,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Rio Ave",
           "implied_probability": 0.8547,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -13207,16 +13213,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 4; linha over 1.5.",
+          "result_score": "0-4",
           "risk_flags": [],
           "score": 85.4,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-28T18:13:22.190668-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -13324,7 +13332,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1492756,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Bohemians",
           "implied_probability": 0.8772,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -13354,16 +13362,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 3; linha over 1.5.",
+          "result_score": "3-0",
           "risk_flags": [],
           "score": 86.9,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-28T18:13:22.190687-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "SKU Amstetten",
@@ -13387,7 +13397,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1567894,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "First Vienna",
           "implied_probability": 0.8368,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -13417,16 +13427,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 81%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 1; linha over 1.5.",
+          "result_score": "1-0",
           "risk_flags": [],
           "score": 84.3,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-28T18:13:22.190699-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "RED"
         }
       ],
       "market_families": [
@@ -13441,7 +13453,8 @@
         "GOALS_UNDER"
       ],
       "score": 87.2,
-      "status": "PENDING",
+      "settled_at": "2026-08-28T18:13:22.190710-03:00",
+      "status": "RED",
       "ticket_id": "B3",
       "total_odd": 1.51
     }
@@ -13498,13 +13511,13 @@
   "fixtures_ranked": 60,
   "fixtures_with_markets": 150,
   "history_summary": {
-    "accuracy": 0.7222222222222222,
+    "accuracy": 0.7380952380952381,
     "by_market": {
       "GOALS": {
-        "accuracy": 0.76,
-        "green": 19,
-        "red": 6,
-        "resolved": 25
+        "accuracy": 0.7741935483870968,
+        "green": 24,
+        "red": 7,
+        "resolved": 31
       },
       "RESULT": {
         "accuracy": 0.6363636363636364,
@@ -13513,13 +13526,13 @@
         "resolved": 11
       }
     },
-    "hits": 26,
-    "misses": 10,
-    "resolved": 36,
-    "ticket_accuracy": 0.5,
+    "hits": 31,
+    "misses": 11,
+    "resolved": 42,
+    "ticket_accuracy": 0.47619047619047616,
     "tickets_hit": 10,
-    "tickets_miss": 10,
-    "tickets_resolved": 20
+    "tickets_miss": 11,
+    "tickets_resolved": 21
   },
   "kickoff_spacing": {
     "enabled": true,
@@ -14828,11 +14841,11 @@
     }
   ],
   "settlement": {
-    "checked_at": "2026-08-28T09:55:55.935600-03:00",
+    "checked_at": "2026-08-28T18:13:22.190740-03:00",
     "complete": false,
     "green": 0,
-    "pending": 3,
-    "red": 0,
+    "pending": 2,
+    "red": 1,
     "statistics_fixtures_checked": 0
   },
   "sport": "football",
@@ -14876,7 +14889,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1567892,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Voitsberg",
           "implied_probability": 0.9091,
           "individual_score_band": "ELITE_88_PLUS",
@@ -14906,16 +14919,18 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 5; linha over 1.5.",
+          "result_score": "2-3",
           "risk_flags": [],
           "score": 88.9,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-28T18:13:22.190481-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "York United",
@@ -15001,7 +15016,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1558608,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Genk",
           "implied_probability": 0.8734,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -15031,16 +15046,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 4; linha over 1.5.",
+          "result_score": "4-0",
           "risk_flags": [],
           "score": 86.6,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-28T18:13:22.190622-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -15150,7 +15167,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1567897,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "SV Kapfenberg",
           "implied_probability": 0.8772,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -15180,16 +15197,18 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 3; linha over 1.5.",
+          "result_score": "2-1",
           "risk_flags": [],
           "score": 86.9,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-28T18:13:22.190654-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Sporting CP",
@@ -15213,7 +15232,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1575481,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Rio Ave",
           "implied_probability": 0.8547,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -15243,16 +15262,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 4; linha over 1.5.",
+          "result_score": "0-4",
           "risk_flags": [],
           "score": 85.4,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-28T18:13:22.190668-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -15360,7 +15381,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1492756,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Bohemians",
           "implied_probability": 0.8772,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -15390,16 +15411,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 3; linha over 1.5.",
+          "result_score": "3-0",
           "risk_flags": [],
           "score": 86.9,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-28T18:13:22.190687-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "SKU Amstetten",
@@ -15423,7 +15446,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1567894,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "First Vienna",
           "implied_probability": 0.8368,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -15453,16 +15476,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 81%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 1; linha over 1.5.",
+          "result_score": "1-0",
           "risk_flags": [],
           "score": 84.3,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-28T18:13:22.190699-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "RED"
         }
       ],
       "market_families": [
@@ -15477,7 +15502,8 @@
         "GOALS_UNDER"
       ],
       "score": 87.2,
-      "status": "PENDING",
+      "settled_at": "2026-08-28T18:13:22.190710-03:00",
+      "status": "RED",
       "ticket_id": "B3",
       "total_odd": 1.51
     }
