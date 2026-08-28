@@ -21,4 +21,6 @@ jobs:
         with:
           python-version: '3.12'
       - name: Diagnose current board
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: python scripts/diagnose_football_portfolio.py
