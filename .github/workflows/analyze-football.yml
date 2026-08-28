@@ -8,7 +8,10 @@ on:
         required: false
         type: string
   schedule:
-    - cron: '5 10,14,18,22 * * *'
+    # 05:05, 07:05, 11:05, 15:05 e 19:05 em America/Sao_Paulo.
+    # O primeiro processamento cedo aumenta a janela de jogos elegíveis e,
+    # depois de publicados, os bilhetes ficam congelados durante o dia.
+    - cron: '5 8,10,14,18,22 * * *'
   push:
     branches: [main]
     paths:
@@ -82,24 +85,24 @@ jobs:
             echo 'No compatible API-Football secret was found.'
           fi
 
-      - name: Analyze football slate
+      - name: Analyze football slate deeply
         if: env.SKIP_ANALYSIS != 'true'
         shell: bash
         run: |
           set -euo pipefail
           if [ -n "$INPUT_DATE" ]; then
             echo "Analyzing selected board date: $INPUT_DATE"
-            python -m src.football_quant.cli --date "$INPUT_DATE"
+            python -m src.football_quant.deep_cli --date "$INPUT_DATE"
           else
-            python -m src.football_quant.cli
+            python -m src.football_quant.deep_cli
           fi
 
-      - name: Build execution-ready Betano tickets
+      - name: Build execution-ready Betano tickets with portfolio search
         if: env.SKIP_ANALYSIS != 'true'
         shell: bash
         run: |
           set -euo pipefail
-          python -m src.football_quant.betano_execution
+          python -m src.football_quant.betano_execution_v8
 
       - name: Verify finished matches and rebuild simulated bankroll
         if: env.SKIP_ANALYSIS != 'true'
