@@ -1,15 +1,15 @@
 {
   "accuracy_first": true,
-  "api_requests": 42,
-  "board_date": "2026-08-27",
+  "api_requests": 106,
+  "board_date": "2026-08-28",
   "board_mode": "TODAY",
   "board_status": "NO_TICKETS",
   "elite_individual_score": 88.0,
   "execution_bookmaker": "Betano",
   "execution_ready": false,
   "fixture_exclusivity": true,
-  "fixtures_analyzed": 10,
-  "fixtures_found": 134,
+  "fixtures_analyzed": 30,
+  "fixtures_found": 455,
   "kickoff_spacing_minutes": 120,
   "kickoff_spacing_valid": false,
   "market_analysis": true,
@@ -17,11 +17,11 @@
   "min_individual_score": 84.0,
   "multi_market": true,
   "publication_immutable": true,
-  "quality_rejected_legs": 226,
+  "quality_rejected_legs": 743,
   "sport": "football",
   "status": "SUCCESS",
   "target_tickets": 3,
   "ticket_lock": false,
   "tickets_ready": 0,
-  "updated_at": "2026-08-27T17:22:08.630200-03:00"
+  "updated_at": "2026-08-28T03:07:06.897620-03:00"
 }

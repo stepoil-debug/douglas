@@ -7337,20 +7337,6 @@
   "fixtures_with_markets": 149,
   "history_summary": {
     "accuracy": 0.7222222222222222,
-    "by_market": {
-      "GOALS": {
-        "accuracy": 0.76,
-        "green": 19,
-        "red": 6,
-        "resolved": 25
-      },
-      "RESULT": {
-        "accuracy": 0.6363636363636364,
-        "green": 7,
-        "red": 4,
-        "resolved": 11
-      }
-    },
     "hits": 26,
     "misses": 10,
     "resolved": 36,
