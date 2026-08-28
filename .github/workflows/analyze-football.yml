@@ -97,12 +97,12 @@ jobs:
             python -m src.football_quant.deep_cli
           fi
 
-      - name: Build execution-ready Betano tickets with portfolio search
+      - name: Build execution-ready Betano tickets with 1 to 3 strong legs
         if: env.SKIP_ANALYSIS != 'true'
         shell: bash
         run: |
           set -euo pipefail
-          python -m src.football_quant.betano_execution_v8
+          python -m src.football_quant.betano_execution_v9
 
       - name: Verify finished matches and rebuild simulated bankroll
         if: env.SKIP_ANALYSIS != 'true'
