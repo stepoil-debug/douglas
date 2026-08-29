@@ -73,18 +73,18 @@
         "resolved": 10
       },
       "8+": {
-        "accuracy": 0.7568,
-        "green": 28,
+        "accuracy": 0.7632,
+        "green": 29,
         "red": 9,
-        "resolved": 37
+        "resolved": 38
       }
     },
     "country": {
       "Argentina": {
-        "accuracy": 0.6667,
-        "green": 2,
+        "accuracy": 0.75,
+        "green": 3,
         "red": 1,
-        "resolved": 3
+        "resolved": 4
       },
       "Austria": {
         "accuracy": 0.6667,
@@ -173,10 +173,10 @@
     },
     "family": {
       "GOALS": {
-        "accuracy": 0.8056,
-        "green": 29,
+        "accuracy": 0.8108,
+        "green": 30,
         "red": 7,
-        "resolved": 36
+        "resolved": 37
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -282,6 +282,12 @@
         "red": 1,
         "resolved": 2
       },
+      "Primera Nacional": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
       "Serie A": {
         "accuracy": 0.0,
         "green": 0,
@@ -333,10 +339,10 @@
         "resolved": 11
       },
       "85-90%": {
-        "accuracy": 0.7857,
-        "green": 11,
+        "accuracy": 0.8,
+        "green": 12,
         "red": 3,
-        "resolved": 14
+        "resolved": 15
       },
       "<70%": {
         "accuracy": 0.0,
@@ -365,10 +371,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.8824,
-        "green": 15,
+        "accuracy": 0.8889,
+        "green": 16,
         "red": 2,
-        "resolved": 17
+        "resolved": 18
       },
       "<76": {
         "accuracy": 0.5,
@@ -422,9 +428,9 @@
       },
       "goals:match:over:0.5": {
         "accuracy": 1.0,
-        "green": 2,
+        "green": 3,
         "red": 0,
-        "resolved": 2
+        "resolved": 3
       },
       "goals:match:over:1.5": {
         "accuracy": 0.9286,
@@ -483,10 +489,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.8,
-        "green": 28,
+        "accuracy": 0.8056,
+        "green": 29,
         "red": 7,
-        "resolved": 35
+        "resolved": 36
       }
     },
     "ticket_leg_count": {
@@ -762,10 +768,10 @@
     "completed_days": 8,
     "daily_target_rate": 0.5,
     "days_with_at_least_2_green": 4,
-    "leg_accuracy": 0.766,
-    "legs_green": 36,
+    "leg_accuracy": 0.7708,
+    "legs_green": 37,
     "legs_red": 11,
-    "legs_resolved": 47,
+    "legs_resolved": 48,
     "ticket_accuracy": 0.5217,
     "tickets_green": 12,
     "tickets_red": 11,
