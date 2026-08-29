@@ -11261,7 +11261,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1494263,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Halmstad",
           "implied_probability": 0.9615,
           "individual_score_band": "ELITE_88_PLUS",
@@ -11289,16 +11289,18 @@
           "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 93%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 1; linha over 0.5.",
+          "result_score": "1-0",
           "risk_flags": [],
           "score": 90.5,
           "selection": "Mais de 0.5 gols",
+          "settled_at": "2026-08-29T14:39:47.156061-03:00",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Chicago Fire",
@@ -11587,7 +11589,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1497677,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "United Nordic",
           "implied_probability": 0.8475,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -11617,16 +11619,18 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 82%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 4; linha over 1.5.",
+          "result_score": "1-3",
           "risk_flags": [],
           "score": 85.0,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-29T14:39:47.156199-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -11905,13 +11909,13 @@
   "fixtures_ranked": 60,
   "fixtures_with_markets": 147,
   "history_summary": {
-    "accuracy": 0.7555555555555555,
+    "accuracy": 0.7659574468085106,
     "by_market": {
       "GOALS": {
-        "accuracy": 0.7941176470588235,
-        "green": 27,
+        "accuracy": 0.8055555555555556,
+        "green": 29,
         "red": 7,
-        "resolved": 34
+        "resolved": 36
       },
       "RESULT": {
         "accuracy": 0.6363636363636364,
@@ -11920,9 +11924,9 @@
         "resolved": 11
       }
     },
-    "hits": 34,
+    "hits": 36,
     "misses": 11,
-    "resolved": 45,
+    "resolved": 47,
     "ticket_accuracy": 0.5217391304347826,
     "tickets_hit": 12,
     "tickets_miss": 11,
@@ -13652,7 +13656,7 @@
     }
   ],
   "settlement": {
-    "checked_at": "2026-08-29T12:16:56.609717-03:00",
+    "checked_at": "2026-08-29T14:39:47.156240-03:00",
     "complete": false,
     "green": 0,
     "pending": 3,
@@ -13697,7 +13701,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1494263,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Halmstad",
           "implied_probability": 0.9615,
           "individual_score_band": "ELITE_88_PLUS",
@@ -13725,16 +13729,18 @@
           "rationale": "Mercado goals confirmado por 6 bookmaker(s); probabilidade implícita ajustada 93%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 1; linha over 0.5.",
+          "result_score": "1-0",
           "risk_flags": [],
           "score": 90.5,
           "selection": "Mais de 0.5 gols",
+          "settled_at": "2026-08-29T14:39:47.156061-03:00",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Chicago Fire",
@@ -14023,7 +14029,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1497677,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "United Nordic",
           "implied_probability": 0.8475,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -14053,16 +14059,18 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 82%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 4; linha over 1.5.",
+          "result_score": "1-3",
           "risk_flags": [],
           "score": 85.0,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-29T14:39:47.156199-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
