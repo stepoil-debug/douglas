@@ -55,6 +55,13 @@
       "hit_target_2_of_3": true,
       "pending": 0,
       "red": 1
+    },
+    {
+      "date": "2026-08-29",
+      "green": 0,
+      "hit_target_2_of_3": false,
+      "pending": 3,
+      "red": 0
     }
   ],
   "groups": {
