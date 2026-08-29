@@ -51,33 +51,33 @@
     },
     {
       "date": "2026-08-28",
-      "green": 0,
-      "hit_target_2_of_3": false,
-      "pending": 2,
+      "green": 2,
+      "hit_target_2_of_3": true,
+      "pending": 0,
       "red": 1
     }
   ],
   "groups": {
     "bookmaker_depth": {
       "5-7": {
-        "accuracy": 0.75,
-        "green": 6,
+        "accuracy": 0.7778,
+        "green": 7,
         "red": 2,
-        "resolved": 8
+        "resolved": 9
       },
       "8+": {
-        "accuracy": 0.7353,
-        "green": 25,
+        "accuracy": 0.75,
+        "green": 27,
         "red": 9,
-        "resolved": 34
+        "resolved": 36
       }
     },
     "country": {
       "Argentina": {
-        "accuracy": 0.5,
-        "green": 1,
+        "accuracy": 0.6667,
+        "green": 2,
         "red": 1,
-        "resolved": 2
+        "resolved": 3
       },
       "Austria": {
         "accuracy": 0.6667,
@@ -99,9 +99,9 @@
       },
       "Canada": {
         "accuracy": 1.0,
-        "green": 2,
+        "green": 4,
         "red": 0,
-        "resolved": 2
+        "resolved": 4
       },
       "Denmark": {
         "accuracy": 1.0,
@@ -166,10 +166,10 @@
     },
     "family": {
       "GOALS": {
-        "accuracy": 0.7742,
-        "green": 24,
+        "accuracy": 0.7941,
+        "green": 27,
         "red": 7,
-        "resolved": 31
+        "resolved": 34
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -205,9 +205,9 @@
       },
       "Canadian Premier League": {
         "accuracy": 1.0,
-        "green": 2,
+        "green": 4,
         "red": 0,
-        "resolved": 2
+        "resolved": 4
       },
       "Division 2 - Södra Götaland": {
         "accuracy": 1.0,
@@ -228,6 +228,12 @@
         "resolved": 1
       },
       "La Liga": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
+      "Liga Profesional Argentina": {
         "accuracy": 1.0,
         "green": 1,
         "red": 0,
@@ -320,10 +326,10 @@
         "resolved": 10
       },
       "85-90%": {
-        "accuracy": 0.7692,
-        "green": 10,
+        "accuracy": 0.7857,
+        "green": 11,
         "red": 3,
-        "resolved": 13
+        "resolved": 14
       },
       "<70%": {
         "accuracy": 0.0,
@@ -333,9 +339,9 @@
       },
       ">=90%": {
         "accuracy": 1.0,
-        "green": 3,
+        "green": 5,
         "red": 0,
-        "resolved": 3
+        "resolved": 5
       }
     },
     "score_bin": {
@@ -352,10 +358,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.8667,
-        "green": 13,
+        "accuracy": 0.875,
+        "green": 14,
         "red": 2,
-        "resolved": 15
+        "resolved": 16
       },
       "<76": {
         "accuracy": 0.5,
@@ -365,9 +371,9 @@
       },
       ">=88": {
         "accuracy": 1.0,
-        "green": 1,
+        "green": 3,
         "red": 0,
-        "resolved": 1
+        "resolved": 3
       }
     },
     "selection": {
@@ -407,11 +413,17 @@
         "red": 0,
         "resolved": 2
       },
+      "goals:match:over:0.5": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
       "goals:match:over:1.5": {
-        "accuracy": 0.9167,
-        "green": 11,
+        "accuracy": 0.9231,
+        "green": 12,
         "red": 1,
-        "resolved": 12
+        "resolved": 13
       },
       "goals:match:under:2.5": {
         "accuracy": 0.0,
@@ -437,6 +449,12 @@
         "red": 2,
         "resolved": 7
       },
+      "goals:match:under:5.5": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
       "total de gols:mais de 1.5 gols": {
         "accuracy": 1.0,
         "green": 1,
@@ -458,10 +476,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.7667,
-        "green": 23,
+        "accuracy": 0.7879,
+        "green": 26,
         "red": 7,
-        "resolved": 30
+        "resolved": 33
       }
     },
     "ticket_leg_count": {
@@ -478,10 +496,10 @@
         "resolved": 19
       },
       "3": {
-        "accuracy": 0.0,
-        "green": 0,
+        "accuracy": 0.6667,
+        "green": 2,
         "red": 1,
-        "resolved": 1
+        "resolved": 3
       }
     },
     "ticket_probability_bin": {
@@ -504,10 +522,10 @@
         "resolved": 2
       },
       "<70%": {
-        "accuracy": 0.5294,
-        "green": 9,
+        "accuracy": 0.5789,
+        "green": 11,
         "red": 8,
-        "resolved": 17
+        "resolved": 19
       }
     }
   },
@@ -734,16 +752,16 @@
     }
   ],
   "summary": {
-    "completed_days": 7,
-    "daily_target_rate": 0.4286,
-    "days_with_at_least_2_green": 3,
-    "leg_accuracy": 0.7381,
-    "legs_green": 31,
+    "completed_days": 8,
+    "daily_target_rate": 0.5,
+    "days_with_at_least_2_green": 4,
+    "leg_accuracy": 0.7556,
+    "legs_green": 34,
     "legs_red": 11,
-    "legs_resolved": 42,
-    "ticket_accuracy": 0.4762,
-    "tickets_green": 10,
+    "legs_resolved": 45,
+    "ticket_accuracy": 0.5217,
+    "tickets_green": 12,
     "tickets_red": 11,
-    "tickets_resolved": 21
+    "tickets_resolved": 23
   }
 }
