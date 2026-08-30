@@ -12660,7 +12660,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1494746,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Valerenga",
           "implied_probability": 0.9259,
           "individual_score_band": "ELITE_88_PLUS",
@@ -12690,16 +12690,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 7; linha over 1.5.",
+          "result_score": "3-4",
           "risk_flags": [],
           "score": 90.0,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-30T15:02:09.993726-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Villa Dalmine",
@@ -12932,7 +12934,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1495933,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Raufoss",
           "implied_probability": 0.8696,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -12962,16 +12964,18 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 84%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 3; linha over 1.5.",
+          "result_score": "0-3",
           "risk_flags": [],
           "score": 86.4,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-30T15:02:09.993848-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Ferro Carril Oeste",
@@ -13209,7 +13213,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1494261,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "IFK Goteborg",
           "implied_probability": 0.8511,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -13239,16 +13243,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 1; linha over 1.5.",
+          "result_score": "1-0",
           "risk_flags": [],
           "score": 85.2,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-30T15:02:09.993877-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "RED"
         }
       ],
       "market_families": [
@@ -13262,7 +13268,8 @@
         "GOALS_OVER"
       ],
       "score": 88.1,
-      "status": "PENDING",
+      "settled_at": "2026-08-30T15:02:09.993891-03:00",
+      "status": "RED",
       "ticket_id": "B3",
       "total_odd": 1.5
     }
@@ -13319,13 +13326,13 @@
   "fixtures_ranked": 60,
   "fixtures_with_markets": 150,
   "history_summary": {
-    "accuracy": 0.7962962962962963,
+    "accuracy": 0.7894736842105263,
     "by_market": {
       "GOALS": {
-        "accuracy": 0.8372093023255814,
-        "green": 36,
-        "red": 7,
-        "resolved": 43
+        "accuracy": 0.8260869565217391,
+        "green": 38,
+        "red": 8,
+        "resolved": 46
       },
       "RESULT": {
         "accuracy": 0.6363636363636364,
@@ -13334,13 +13341,13 @@
         "resolved": 11
       }
     },
-    "hits": 43,
-    "misses": 11,
-    "resolved": 54,
-    "ticket_accuracy": 0.5769230769230769,
+    "hits": 45,
+    "misses": 12,
+    "resolved": 57,
+    "ticket_accuracy": 0.5555555555555556,
     "tickets_hit": 15,
-    "tickets_miss": 11,
-    "tickets_resolved": 26
+    "tickets_miss": 12,
+    "tickets_resolved": 27
   },
   "kickoff_spacing": {
     "enabled": true,
@@ -14327,11 +14334,11 @@
     }
   ],
   "settlement": {
-    "checked_at": "2026-08-30T11:57:05.630854-03:00",
+    "checked_at": "2026-08-30T15:02:09.993906-03:00",
     "complete": false,
     "green": 0,
-    "pending": 3,
-    "red": 0,
+    "pending": 2,
+    "red": 1,
     "statistics_fixtures_checked": 0
   },
   "sport": "football",
@@ -14376,7 +14383,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1494746,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Valerenga",
           "implied_probability": 0.9259,
           "individual_score_band": "ELITE_88_PLUS",
@@ -14406,16 +14413,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 90%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 7; linha over 1.5.",
+          "result_score": "3-4",
           "risk_flags": [],
           "score": 90.0,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-30T15:02:09.993726-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Villa Dalmine",
@@ -14648,7 +14657,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1495933,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Raufoss",
           "implied_probability": 0.8696,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -14678,16 +14687,18 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 84%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Total de gols: 3; linha over 1.5.",
+          "result_score": "0-3",
           "risk_flags": [],
           "score": 86.4,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-30T15:02:09.993848-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Ferro Carril Oeste",
@@ -14925,7 +14936,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1494261,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "IFK Goteborg",
           "implied_probability": 0.8511,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -14955,16 +14966,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 1; linha over 1.5.",
+          "result_score": "1-0",
           "risk_flags": [],
           "score": 85.2,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-08-30T15:02:09.993877-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "RED"
         }
       ],
       "market_families": [
@@ -14978,7 +14991,8 @@
         "GOALS_OVER"
       ],
       "score": 88.1,
-      "status": "PENDING",
+      "settled_at": "2026-08-30T15:02:09.993891-03:00",
+      "status": "RED",
       "ticket_id": "B3",
       "total_odd": 1.5
     }

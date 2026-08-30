@@ -67,8 +67,8 @@
       "date": "2026-08-30",
       "green": 0,
       "hit_target_2_of_3": false,
-      "pending": 3,
-      "red": 0
+      "pending": 2,
+      "red": 1
     }
   ],
   "groups": {
@@ -80,10 +80,10 @@
         "resolved": 12
       },
       "8+": {
-        "accuracy": 0.7857,
-        "green": 33,
-        "red": 9,
-        "resolved": 42
+        "accuracy": 0.7778,
+        "green": 35,
+        "red": 10,
+        "resolved": 45
       }
     },
     "country": {
@@ -147,6 +147,12 @@
         "red": 1,
         "resolved": 1
       },
+      "Norway": {
+        "accuracy": 1.0,
+        "green": 2,
+        "red": 0,
+        "resolved": 2
+      },
       "Portugal": {
         "accuracy": 1.0,
         "green": 1,
@@ -160,10 +166,10 @@
         "resolved": 1
       },
       "Sweden": {
-        "accuracy": 0.8462,
+        "accuracy": 0.7857,
         "green": 11,
-        "red": 2,
-        "resolved": 13
+        "red": 3,
+        "resolved": 14
       },
       "USA": {
         "accuracy": 0.7778,
@@ -180,10 +186,10 @@
     },
     "family": {
       "GOALS": {
-        "accuracy": 0.8372,
-        "green": 36,
-        "red": 7,
-        "resolved": 43
+        "accuracy": 0.8261,
+        "green": 38,
+        "red": 8,
+        "resolved": 46
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -195,9 +201,9 @@
     "league": {
       "1. Division": {
         "accuracy": 1.0,
-        "green": 1,
+        "green": 2,
         "red": 0,
-        "resolved": 1
+        "resolved": 2
       },
       "2. Liga": {
         "accuracy": 0.6667,
@@ -206,10 +212,10 @@
         "resolved": 3
       },
       "Allsvenskan": {
-        "accuracy": 1.0,
+        "accuracy": 0.75,
         "green": 3,
-        "red": 0,
-        "resolved": 3
+        "red": 1,
+        "resolved": 4
       },
       "CONMEBOL Libertadores": {
         "accuracy": 1.0,
@@ -233,6 +239,12 @@
         "accuracy": 0.0,
         "green": 0,
         "red": 1,
+        "resolved": 1
+      },
+      "Eliteserien": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
         "resolved": 1
       },
       "Jupiler Pro League": {
@@ -352,16 +364,16 @@
         "resolved": 11
       },
       "80-85%": {
-        "accuracy": 0.8571,
-        "green": 12,
-        "red": 2,
-        "resolved": 14
-      },
-      "85-90%": {
         "accuracy": 0.8125,
         "green": 13,
         "red": 3,
         "resolved": 16
+      },
+      "85-90%": {
+        "accuracy": 0.8235,
+        "green": 14,
+        "red": 3,
+        "resolved": 17
       },
       "<70%": {
         "accuracy": 0.0,
@@ -390,10 +402,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.9048,
-        "green": 19,
-        "red": 2,
-        "resolved": 21
+        "accuracy": 0.8696,
+        "green": 20,
+        "red": 3,
+        "resolved": 23
       },
       "<76": {
         "accuracy": 0.5,
@@ -403,9 +415,9 @@
       },
       ">=88": {
         "accuracy": 1.0,
-        "green": 7,
+        "green": 8,
         "red": 0,
-        "resolved": 7
+        "resolved": 8
       }
     },
     "selection": {
@@ -452,10 +464,10 @@
         "resolved": 5
       },
       "goals:match:over:1.5": {
-        "accuracy": 0.9444,
-        "green": 17,
-        "red": 1,
-        "resolved": 18
+        "accuracy": 0.9048,
+        "green": 19,
+        "red": 2,
+        "resolved": 21
       },
       "goals:match:under:2.5": {
         "accuracy": 0.0,
@@ -508,10 +520,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.8333,
-        "green": 35,
-        "red": 7,
-        "resolved": 42
+        "accuracy": 0.8222,
+        "green": 37,
+        "red": 8,
+        "resolved": 45
       }
     },
     "ticket_leg_count": {
@@ -528,10 +540,10 @@
         "resolved": 19
       },
       "3": {
-        "accuracy": 0.8333,
+        "accuracy": 0.7143,
         "green": 5,
-        "red": 1,
-        "resolved": 6
+        "red": 2,
+        "resolved": 7
       }
     },
     "ticket_probability_bin": {
@@ -554,10 +566,10 @@
         "resolved": 2
       },
       "<70%": {
-        "accuracy": 0.6364,
+        "accuracy": 0.6087,
         "green": 14,
-        "red": 8,
-        "resolved": 22
+        "red": 9,
+        "resolved": 23
       }
     }
   },
@@ -781,19 +793,39 @@
       "selection_key": "goals:match:over:1.5",
       "signal_source": "MULTI_MARKET_CONSENSUS",
       "ticket_id": "B3"
+    },
+    {
+      "bookmaker_count": 10,
+      "country": "Sweden",
+      "date": "2026-08-30",
+      "family": "GOALS",
+      "implied_probability": 0.8511,
+      "league": "Allsvenskan",
+      "market": "Total de gols",
+      "match": "IFK Goteborg x Orgryte IS",
+      "model_probability": 0.8255,
+      "odd": 1.2,
+      "result_reason": "Total de gols: 1; linha over 1.5.",
+      "result_score": "1-0",
+      "result_stat_value": null,
+      "score": 85.2,
+      "selection": "Mais de 1.5 gols",
+      "selection_key": "goals:match:over:1.5",
+      "signal_source": "MULTI_MARKET_CONSENSUS",
+      "ticket_id": "B3"
     }
   ],
   "summary": {
     "completed_days": 9,
     "daily_target_rate": 0.5556,
     "days_with_at_least_2_green": 5,
-    "leg_accuracy": 0.7963,
-    "legs_green": 43,
-    "legs_red": 11,
-    "legs_resolved": 54,
-    "ticket_accuracy": 0.5769,
+    "leg_accuracy": 0.7895,
+    "legs_green": 45,
+    "legs_red": 12,
+    "legs_resolved": 57,
+    "ticket_accuracy": 0.5556,
     "tickets_green": 15,
-    "tickets_red": 11,
-    "tickets_resolved": 26
+    "tickets_red": 12,
+    "tickets_resolved": 27
   }
 }
