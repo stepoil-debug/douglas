@@ -67,16 +67,16 @@
   "groups": {
     "bookmaker_depth": {
       "5-7": {
-        "accuracy": 0.8,
-        "green": 8,
+        "accuracy": 0.8182,
+        "green": 9,
         "red": 2,
-        "resolved": 10
+        "resolved": 11
       },
       "8+": {
-        "accuracy": 0.7632,
-        "green": 29,
+        "accuracy": 0.775,
+        "green": 31,
         "red": 9,
-        "resolved": 38
+        "resolved": 40
       }
     },
     "country": {
@@ -99,10 +99,10 @@
         "resolved": 1
       },
       "Brazil": {
-        "accuracy": 0.5,
-        "green": 3,
+        "accuracy": 0.625,
+        "green": 5,
         "red": 3,
-        "resolved": 6
+        "resolved": 8
       },
       "Canada": {
         "accuracy": 1.0,
@@ -159,10 +159,10 @@
         "resolved": 13
       },
       "USA": {
-        "accuracy": 0.6,
-        "green": 3,
+        "accuracy": 0.6667,
+        "green": 4,
         "red": 2,
-        "resolved": 5
+        "resolved": 6
       },
       "World": {
         "accuracy": 1.0,
@@ -173,10 +173,10 @@
     },
     "family": {
       "GOALS": {
-        "accuracy": 0.8108,
-        "green": 30,
+        "accuracy": 0.825,
+        "green": 33,
         "red": 7,
-        "resolved": 37
+        "resolved": 40
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -247,10 +247,10 @@
         "resolved": 1
       },
       "Major League Soccer": {
-        "accuracy": 0.0,
-        "green": 0,
+        "accuracy": 0.5,
+        "green": 1,
         "red": 1,
-        "resolved": 1
+        "resolved": 2
       },
       "National League - North": {
         "accuracy": 1.0,
@@ -289,16 +289,22 @@
         "resolved": 1
       },
       "Serie A": {
-        "accuracy": 0.0,
-        "green": 0,
+        "accuracy": 0.3333,
+        "green": 1,
         "red": 2,
-        "resolved": 2
+        "resolved": 3
       },
       "Serie B": {
         "accuracy": 0.75,
         "green": 3,
         "red": 1,
         "resolved": 4
+      },
+      "Serie C": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
       },
       "Superettan": {
         "accuracy": 1.0,
@@ -333,10 +339,10 @@
         "resolved": 11
       },
       "80-85%": {
-        "accuracy": 0.8182,
-        "green": 9,
+        "accuracy": 0.8333,
+        "green": 10,
         "red": 2,
-        "resolved": 11
+        "resolved": 12
       },
       "85-90%": {
         "accuracy": 0.8,
@@ -352,9 +358,9 @@
       },
       ">=90%": {
         "accuracy": 1.0,
-        "green": 6,
+        "green": 8,
         "red": 0,
-        "resolved": 6
+        "resolved": 8
       }
     },
     "score_bin": {
@@ -371,10 +377,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.8889,
-        "green": 16,
+        "accuracy": 0.8947,
+        "green": 17,
         "red": 2,
-        "resolved": 18
+        "resolved": 19
       },
       "<76": {
         "accuracy": 0.5,
@@ -384,9 +390,9 @@
       },
       ">=88": {
         "accuracy": 1.0,
-        "green": 4,
+        "green": 6,
         "red": 0,
-        "resolved": 4
+        "resolved": 6
       }
     },
     "selection": {
@@ -428,15 +434,15 @@
       },
       "goals:match:over:0.5": {
         "accuracy": 1.0,
-        "green": 3,
+        "green": 5,
         "red": 0,
-        "resolved": 3
+        "resolved": 5
       },
       "goals:match:over:1.5": {
-        "accuracy": 0.9286,
-        "green": 13,
+        "accuracy": 0.9333,
+        "green": 14,
         "red": 1,
-        "resolved": 14
+        "resolved": 15
       },
       "goals:match:under:2.5": {
         "accuracy": 0.0,
@@ -489,10 +495,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.8056,
-        "green": 29,
+        "accuracy": 0.8205,
+        "green": 32,
         "red": 7,
-        "resolved": 36
+        "resolved": 39
       }
     },
     "ticket_leg_count": {
@@ -768,10 +774,10 @@
     "completed_days": 8,
     "daily_target_rate": 0.5,
     "days_with_at_least_2_green": 4,
-    "leg_accuracy": 0.7708,
-    "legs_green": 37,
+    "leg_accuracy": 0.7843,
+    "legs_green": 40,
     "legs_red": 11,
-    "legs_resolved": 48,
+    "legs_resolved": 51,
     "ticket_accuracy": 0.5217,
     "tickets_green": 12,
     "tickets_red": 11,
