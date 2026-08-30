@@ -12695,7 +12695,7 @@
           "risk_flags": [],
           "score": 90.0,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-08-30T15:46:56.817195-03:00",
+          "settled_at": "2026-08-30T17:58:50.661596-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -12723,7 +12723,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1499606,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "Argentino de Merlo",
           "implied_probability": 0.9091,
           "individual_score_band": "ELITE_88_PLUS",
@@ -12752,16 +12752,18 @@
           "rationale": "Mercado goals confirmado por 8 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 0; linha over 0.5.",
+          "result_score": "0-0",
           "risk_flags": [],
           "score": 88.9,
           "selection": "Mais de 0.5 gols",
+          "settled_at": "2026-08-30T17:58:50.661743-03:00",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "RED"
         },
         {
           "away_team": "FC Dallas",
@@ -12837,7 +12839,8 @@
         "GOALS_OVER"
       ],
       "score": 88.1,
-      "status": "PENDING",
+      "settled_at": "2026-08-30T17:58:50.661768-03:00",
+      "status": "RED",
       "ticket_id": "B1",
       "total_odd": 1.51
     },
@@ -12969,7 +12972,7 @@
           "risk_flags": [],
           "score": 86.4,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-08-30T15:46:56.817356-03:00",
+          "settled_at": "2026-08-30T17:58:50.661783-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -12999,7 +13002,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1498761,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "CA Estudiantes",
           "implied_probability": 0.8696,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -13028,16 +13031,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 84%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 4; linha over 0.5.",
+          "result_score": "2-2",
           "risk_flags": [],
           "score": 86.4,
           "selection": "Mais de 0.5 gols",
+          "settled_at": "2026-08-30T17:58:50.661797-03:00",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -13151,7 +13156,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1498762,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "Atletico Mitre",
           "implied_probability": 0.9009,
           "individual_score_band": "ELITE_88_PLUS",
@@ -13180,16 +13185,18 @@
           "rationale": "Mercado goals confirmado por 11 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 4; linha over 0.5.",
+          "result_score": "2-2",
           "risk_flags": [],
           "score": 88.4,
           "selection": "Mais de 0.5 gols",
+          "settled_at": "2026-08-30T17:58:50.661818-03:00",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Orgryte IS",
@@ -13248,7 +13255,7 @@
           "risk_flags": [],
           "score": 85.2,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-08-30T15:46:56.817378-03:00",
+          "settled_at": "2026-08-30T17:58:50.661830-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -13268,7 +13275,7 @@
         "GOALS_OVER"
       ],
       "score": 88.1,
-      "settled_at": "2026-08-30T15:46:56.817388-03:00",
+      "settled_at": "2026-08-30T17:58:50.661841-03:00",
       "status": "RED",
       "ticket_id": "B3",
       "total_odd": 1.5
@@ -13326,13 +13333,13 @@
   "fixtures_ranked": 60,
   "fixtures_with_markets": 150,
   "history_summary": {
-    "accuracy": 0.7894736842105263,
+    "accuracy": 0.7833333333333333,
     "by_market": {
       "GOALS": {
-        "accuracy": 0.8260869565217391,
-        "green": 38,
-        "red": 8,
-        "resolved": 46
+        "accuracy": 0.8163265306122449,
+        "green": 40,
+        "red": 9,
+        "resolved": 49
       },
       "RESULT": {
         "accuracy": 0.6363636363636364,
@@ -13341,13 +13348,13 @@
         "resolved": 11
       }
     },
-    "hits": 45,
-    "misses": 12,
-    "resolved": 57,
-    "ticket_accuracy": 0.5555555555555556,
+    "hits": 47,
+    "misses": 13,
+    "resolved": 60,
+    "ticket_accuracy": 0.5357142857142857,
     "tickets_hit": 15,
-    "tickets_miss": 12,
-    "tickets_resolved": 27
+    "tickets_miss": 13,
+    "tickets_resolved": 28
   },
   "kickoff_spacing": {
     "enabled": true,
@@ -14334,11 +14341,11 @@
     }
   ],
   "settlement": {
-    "checked_at": "2026-08-30T15:46:56.817417-03:00",
+    "checked_at": "2026-08-30T17:58:50.661862-03:00",
     "complete": false,
     "green": 0,
-    "pending": 2,
-    "red": 1,
+    "pending": 1,
+    "red": 2,
     "statistics_fixtures_checked": 0
   },
   "sport": "football",
@@ -14418,7 +14425,7 @@
           "risk_flags": [],
           "score": 90.0,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-08-30T15:46:56.817195-03:00",
+          "settled_at": "2026-08-30T17:58:50.661596-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -14446,7 +14453,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1499606,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "Argentino de Merlo",
           "implied_probability": 0.9091,
           "individual_score_band": "ELITE_88_PLUS",
@@ -14475,16 +14482,18 @@
           "rationale": "Mercado goals confirmado por 8 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 0; linha over 0.5.",
+          "result_score": "0-0",
           "risk_flags": [],
           "score": 88.9,
           "selection": "Mais de 0.5 gols",
+          "settled_at": "2026-08-30T17:58:50.661743-03:00",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "RED"
         },
         {
           "away_team": "FC Dallas",
@@ -14560,7 +14569,8 @@
         "GOALS_OVER"
       ],
       "score": 88.1,
-      "status": "PENDING",
+      "settled_at": "2026-08-30T17:58:50.661768-03:00",
+      "status": "RED",
       "ticket_id": "B1",
       "total_odd": 1.51
     },
@@ -14692,7 +14702,7 @@
           "risk_flags": [],
           "score": 86.4,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-08-30T15:46:56.817356-03:00",
+          "settled_at": "2026-08-30T17:58:50.661783-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -14722,7 +14732,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1498761,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "CA Estudiantes",
           "implied_probability": 0.8696,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -14751,16 +14761,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 84%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 4; linha over 0.5.",
+          "result_score": "2-2",
           "risk_flags": [],
           "score": 86.4,
           "selection": "Mais de 0.5 gols",
+          "settled_at": "2026-08-30T17:58:50.661797-03:00",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -14874,7 +14886,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1498762,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "Atletico Mitre",
           "implied_probability": 0.9009,
           "individual_score_band": "ELITE_88_PLUS",
@@ -14903,16 +14915,18 @@
           "rationale": "Mercado goals confirmado por 11 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 4; linha over 0.5.",
+          "result_score": "2-2",
           "risk_flags": [],
           "score": 88.4,
           "selection": "Mais de 0.5 gols",
+          "settled_at": "2026-08-30T17:58:50.661818-03:00",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Orgryte IS",
@@ -14971,7 +14985,7 @@
           "risk_flags": [],
           "score": 85.2,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-08-30T15:46:56.817378-03:00",
+          "settled_at": "2026-08-30T17:58:50.661830-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -14991,7 +15005,7 @@
         "GOALS_OVER"
       ],
       "score": 88.1,
-      "settled_at": "2026-08-30T15:46:56.817388-03:00",
+      "settled_at": "2026-08-30T17:58:50.661841-03:00",
       "status": "RED",
       "ticket_id": "B3",
       "total_odd": 1.5

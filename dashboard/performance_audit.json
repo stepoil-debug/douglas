@@ -67,8 +67,8 @@
       "date": "2026-08-30",
       "green": 0,
       "hit_target_2_of_3": false,
-      "pending": 2,
-      "red": 1
+      "pending": 1,
+      "red": 2
     }
   ],
   "groups": {
@@ -80,18 +80,18 @@
         "resolved": 12
       },
       "8+": {
-        "accuracy": 0.7778,
-        "green": 35,
-        "red": 10,
-        "resolved": 45
+        "accuracy": 0.7708,
+        "green": 37,
+        "red": 11,
+        "resolved": 48
       }
     },
     "country": {
       "Argentina": {
-        "accuracy": 0.75,
-        "green": 3,
-        "red": 1,
-        "resolved": 4
+        "accuracy": 0.7143,
+        "green": 5,
+        "red": 2,
+        "resolved": 7
       },
       "Austria": {
         "accuracy": 0.6667,
@@ -186,10 +186,10 @@
     },
     "family": {
       "GOALS": {
-        "accuracy": 0.8261,
-        "green": 38,
-        "red": 8,
-        "resolved": 46
+        "accuracy": 0.8163,
+        "green": 40,
+        "red": 9,
+        "resolved": 49
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -296,16 +296,16 @@
         "resolved": 1
       },
       "Primera B Metropolitana": {
-        "accuracy": 0.5,
+        "accuracy": 0.3333,
         "green": 1,
-        "red": 1,
-        "resolved": 2
+        "red": 2,
+        "resolved": 3
       },
       "Primera Nacional": {
         "accuracy": 1.0,
-        "green": 1,
+        "green": 3,
         "red": 0,
-        "resolved": 1
+        "resolved": 3
       },
       "Serie A": {
         "accuracy": 0.3333,
@@ -364,16 +364,16 @@
         "resolved": 11
       },
       "80-85%": {
-        "accuracy": 0.8125,
-        "green": 13,
-        "red": 3,
-        "resolved": 16
-      },
-      "85-90%": {
         "accuracy": 0.8235,
         "green": 14,
         "red": 3,
         "resolved": 17
+      },
+      "85-90%": {
+        "accuracy": 0.7895,
+        "green": 15,
+        "red": 4,
+        "resolved": 19
       },
       "<70%": {
         "accuracy": 0.0,
@@ -402,10 +402,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.8696,
-        "green": 20,
+        "accuracy": 0.875,
+        "green": 21,
         "red": 3,
-        "resolved": 23
+        "resolved": 24
       },
       "<76": {
         "accuracy": 0.5,
@@ -414,10 +414,10 @@
         "resolved": 2
       },
       ">=88": {
-        "accuracy": 1.0,
-        "green": 8,
-        "red": 0,
-        "resolved": 8
+        "accuracy": 0.9,
+        "green": 9,
+        "red": 1,
+        "resolved": 10
       }
     },
     "selection": {
@@ -458,10 +458,10 @@
         "resolved": 2
       },
       "goals:match:over:0.5": {
-        "accuracy": 1.0,
-        "green": 5,
-        "red": 0,
-        "resolved": 5
+        "accuracy": 0.875,
+        "green": 7,
+        "red": 1,
+        "resolved": 8
       },
       "goals:match:over:1.5": {
         "accuracy": 0.9048,
@@ -520,10 +520,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.8222,
-        "green": 37,
-        "red": 8,
-        "resolved": 45
+        "accuracy": 0.8125,
+        "green": 39,
+        "red": 9,
+        "resolved": 48
       }
     },
     "ticket_leg_count": {
@@ -540,10 +540,10 @@
         "resolved": 19
       },
       "3": {
-        "accuracy": 0.7143,
+        "accuracy": 0.625,
         "green": 5,
-        "red": 2,
-        "resolved": 7
+        "red": 3,
+        "resolved": 8
       }
     },
     "ticket_probability_bin": {
@@ -566,10 +566,10 @@
         "resolved": 2
       },
       "<70%": {
-        "accuracy": 0.6087,
+        "accuracy": 0.5833,
         "green": 14,
-        "red": 9,
-        "resolved": 23
+        "red": 10,
+        "resolved": 24
       }
     }
   },
@@ -795,6 +795,26 @@
       "ticket_id": "B3"
     },
     {
+      "bookmaker_count": 8,
+      "country": "Argentina",
+      "date": "2026-08-30",
+      "family": "GOALS",
+      "implied_probability": 0.9091,
+      "league": "Primera B Metropolitana",
+      "market": "Total de gols",
+      "match": "Argentino de Merlo x Villa Dalmine",
+      "model_probability": 0.8818,
+      "odd": 1.13,
+      "result_reason": "Total de gols: 0; linha over 0.5.",
+      "result_score": "0-0",
+      "result_stat_value": null,
+      "score": 88.9,
+      "selection": "Mais de 0.5 gols",
+      "selection_key": "goals:match:over:0.5",
+      "signal_source": "MULTI_MARKET_CONSENSUS",
+      "ticket_id": "B1"
+    },
+    {
       "bookmaker_count": 10,
       "country": "Sweden",
       "date": "2026-08-30",
@@ -819,13 +839,13 @@
     "completed_days": 9,
     "daily_target_rate": 0.5556,
     "days_with_at_least_2_green": 5,
-    "leg_accuracy": 0.7895,
-    "legs_green": 45,
-    "legs_red": 12,
-    "legs_resolved": 57,
-    "ticket_accuracy": 0.5556,
+    "leg_accuracy": 0.7833,
+    "legs_green": 47,
+    "legs_red": 13,
+    "legs_resolved": 60,
+    "ticket_accuracy": 0.5357,
     "tickets_green": 15,
-    "tickets_red": 12,
-    "tickets_resolved": 27
+    "tickets_red": 13,
+    "tickets_resolved": 28
   }
 }
