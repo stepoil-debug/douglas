@@ -81,10 +81,10 @@
   "groups": {
     "bookmaker_depth": {
       "5-7": {
-        "accuracy": 0.8462,
-        "green": 11,
+        "accuracy": 0.8333,
+        "green": 10,
         "red": 2,
-        "resolved": 13
+        "resolved": 12
       },
       "8+": {
         "accuracy": 0.7818,
@@ -186,9 +186,9 @@
       },
       "Spain": {
         "accuracy": 1.0,
-        "green": 2,
+        "green": 1,
         "red": 0,
-        "resolved": 2
+        "resolved": 1
       },
       "Sweden": {
         "accuracy": 0.7333,
@@ -210,12 +210,6 @@
       }
     },
     "family": {
-      "CORNERS": {
-        "accuracy": 1.0,
-        "green": 1,
-        "red": 0,
-        "resolved": 1
-      },
       "GOALS": {
         "accuracy": 0.8214,
         "green": 46,
@@ -292,9 +286,9 @@
       },
       "La Liga": {
         "accuracy": 1.0,
-        "green": 2,
+        "green": 1,
         "red": 0,
-        "resolved": 2
+        "resolved": 1
       },
       "Liga Profesional Argentina": {
         "accuracy": 1.0,
@@ -413,10 +407,10 @@
         "resolved": 19
       },
       "85-90%": {
-        "accuracy": 0.7727,
-        "green": 17,
+        "accuracy": 0.7619,
+        "green": 16,
         "red": 5,
-        "resolved": 22
+        "resolved": 21
       },
       "<70%": {
         "accuracy": 0.0,
@@ -445,10 +439,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.8889,
-        "green": 24,
+        "accuracy": 0.8846,
+        "green": 23,
         "red": 3,
-        "resolved": 27
+        "resolved": 26
       },
       "<76": {
         "accuracy": 0.5,
@@ -464,12 +458,6 @@
       }
     },
     "selection": {
-      "corner_kicks:match:over:7.5": {
-        "accuracy": 1.0,
-        "green": 1,
-        "red": 0,
-        "resolved": 1
-      },
       "dupla chance:columbus crew ou empate": {
         "accuracy": 0.0,
         "green": 0,
@@ -569,10 +557,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.8214,
-        "green": 46,
+        "accuracy": 0.8182,
+        "green": 45,
         "red": 10,
-        "resolved": 56
+        "resolved": 55
       }
     },
     "ticket_leg_count": {
@@ -908,10 +896,10 @@
     "completed_days": 10,
     "daily_target_rate": 0.5,
     "days_with_at_least_2_green": 5,
-    "leg_accuracy": 0.7941,
-    "legs_green": 54,
+    "leg_accuracy": 0.791,
+    "legs_green": 53,
     "legs_red": 14,
-    "legs_resolved": 68,
+    "legs_resolved": 67,
     "ticket_accuracy": 0.5333,
     "tickets_green": 16,
     "tickets_red": 14,
