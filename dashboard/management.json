@@ -229,7 +229,7 @@
         {
           "odd": 1.51,
           "probability": 0.6614,
-          "status": "PENDING",
+          "status": "RED",
           "ticket_id": "B2"
         },
         {
@@ -250,9 +250,9 @@
   ],
   "strategies": {
     "all_three": {
-      "accuracy": 55.56,
+      "accuracy": 53.57,
       "available_bankroll": 24.0,
-      "bankroll": 54.0,
+      "bankroll": 44.0,
       "bets": 30,
       "description": "R$10 em cada um dos 3 bilhetes oficiais do dia. Exposição diária máxima: R$30.",
       "fixed_stake": 10.0,
@@ -543,9 +543,9 @@
           "estimated_probability": 0.6614,
           "label": "Todos os 3",
           "odd": 1.51,
-          "profit": null,
+          "profit": -10.0,
           "stake": 10.0,
-          "status": "PENDING",
+          "status": "RED",
           "ticket_id": "B2"
         },
         {
@@ -561,17 +561,17 @@
       ],
       "initial_bankroll": 100.0,
       "name": "Mão fixa • 3 bilhetes",
-      "open_exposure": 30.0,
-      "pending": 3,
-      "profit": -46.0,
-      "reds": 12,
-      "resolved": 27,
-      "roi": -17.04
+      "open_exposure": 20.0,
+      "pending": 2,
+      "profit": -56.0,
+      "reds": 13,
+      "resolved": 28,
+      "roi": -20.0
     },
     "safest_only": {
-      "accuracy": 66.67,
+      "accuracy": 60.0,
       "available_bankroll": 91.0,
-      "bankroll": 101.0,
+      "bankroll": 91.0,
       "bets": 10,
       "description": "R$10 somente no bilhete com maior probabilidade estimada do dia. Exposição diária máxima: R$10.",
       "fixed_stake": 10.0,
@@ -672,21 +672,21 @@
           "estimated_probability": 0.6614,
           "label": "Mais segura",
           "odd": 1.51,
-          "profit": null,
+          "profit": -10.0,
           "stake": 10.0,
-          "status": "PENDING",
+          "status": "RED",
           "ticket_id": "B2"
         }
       ],
       "initial_bankroll": 100.0,
       "name": "Entrada mais segura",
-      "open_exposure": 10.0,
-      "pending": 1,
-      "profit": 1.0,
-      "reds": 3,
-      "resolved": 9,
-      "roi": 1.11
+      "open_exposure": 0.0,
+      "pending": 0,
+      "profit": -9.0,
+      "reds": 4,
+      "resolved": 10,
+      "roi": -9.0
     }
   },
-  "updated_at": "2026-08-31T14:41:56.312407-03:00"
+  "updated_at": "2026-08-31T19:44:48.215620-03:00"
 }

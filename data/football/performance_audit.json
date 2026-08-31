@@ -74,23 +74,23 @@
       "date": "2026-08-31",
       "green": 0,
       "hit_target_2_of_3": false,
-      "pending": 3,
-      "red": 0
+      "pending": 2,
+      "red": 1
     }
   ],
   "groups": {
     "bookmaker_depth": {
       "5-7": {
-        "accuracy": 0.8333,
-        "green": 10,
+        "accuracy": 0.8462,
+        "green": 11,
         "red": 2,
-        "resolved": 12
+        "resolved": 13
       },
       "8+": {
-        "accuracy": 0.78,
-        "green": 39,
-        "red": 11,
-        "resolved": 50
+        "accuracy": 0.7818,
+        "green": 43,
+        "red": 12,
+        "resolved": 55
       }
     },
     "country": {
@@ -124,6 +124,12 @@
         "red": 0,
         "resolved": 4
       },
+      "Croatia": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
       "Denmark": {
         "accuracy": 1.0,
         "green": 1,
@@ -141,6 +147,12 @@
         "green": 2,
         "red": 1,
         "resolved": 3
+      },
+      "Italy": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
       },
       "Kazakhstan": {
         "accuracy": 1.0,
@@ -162,21 +174,27 @@
       },
       "Portugal": {
         "accuracy": 1.0,
+        "green": 2,
+        "red": 0,
+        "resolved": 2
+      },
+      "Serbia": {
+        "accuracy": 1.0,
         "green": 1,
         "red": 0,
         "resolved": 1
       },
       "Spain": {
         "accuracy": 1.0,
-        "green": 1,
+        "green": 2,
         "red": 0,
-        "resolved": 1
+        "resolved": 2
       },
       "Sweden": {
-        "accuracy": 0.7857,
+        "accuracy": 0.7333,
         "green": 11,
-        "red": 3,
-        "resolved": 14
+        "red": 4,
+        "resolved": 15
       },
       "USA": {
         "accuracy": 0.7778,
@@ -192,11 +210,17 @@
       }
     },
     "family": {
+      "CORNERS": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
       "GOALS": {
-        "accuracy": 0.8235,
-        "green": 42,
-        "red": 9,
-        "resolved": 51
+        "accuracy": 0.8214,
+        "green": 46,
+        "red": 10,
+        "resolved": 56
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -219,10 +243,10 @@
         "resolved": 3
       },
       "Allsvenskan": {
-        "accuracy": 0.75,
+        "accuracy": 0.6,
         "green": 3,
-        "red": 1,
-        "resolved": 4
+        "red": 2,
+        "resolved": 5
       },
       "CONMEBOL Libertadores": {
         "accuracy": 1.0,
@@ -254,6 +278,12 @@
         "red": 0,
         "resolved": 1
       },
+      "HNL": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
       "Jupiler Pro League": {
         "accuracy": 1.0,
         "green": 1,
@@ -262,9 +292,9 @@
       },
       "La Liga": {
         "accuracy": 1.0,
-        "green": 1,
+        "green": 2,
         "red": 0,
-        "resolved": 1
+        "resolved": 2
       },
       "Liga Profesional Argentina": {
         "accuracy": 1.0,
@@ -298,9 +328,9 @@
       },
       "Primeira Liga": {
         "accuracy": 1.0,
-        "green": 1,
+        "green": 2,
         "red": 0,
-        "resolved": 1
+        "resolved": 2
       },
       "Primera B Metropolitana": {
         "accuracy": 0.3333,
@@ -315,10 +345,10 @@
         "resolved": 3
       },
       "Serie A": {
-        "accuracy": 0.3333,
-        "green": 1,
+        "accuracy": 0.5,
+        "green": 2,
         "red": 2,
-        "resolved": 3
+        "resolved": 4
       },
       "Serie B": {
         "accuracy": 0.8,
@@ -327,6 +357,12 @@
         "resolved": 5
       },
       "Serie C": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
+      "Super Liga": {
         "accuracy": 1.0,
         "green": 1,
         "red": 0,
@@ -371,16 +407,16 @@
         "resolved": 11
       },
       "80-85%": {
-        "accuracy": 0.8235,
-        "green": 14,
+        "accuracy": 0.8421,
+        "green": 16,
         "red": 3,
-        "resolved": 17
+        "resolved": 19
       },
       "85-90%": {
-        "accuracy": 0.7895,
-        "green": 15,
-        "red": 4,
-        "resolved": 19
+        "accuracy": 0.7727,
+        "green": 17,
+        "red": 5,
+        "resolved": 22
       },
       "<70%": {
         "accuracy": 0.0,
@@ -390,9 +426,9 @@
       },
       ">=90%": {
         "accuracy": 1.0,
-        "green": 10,
+        "green": 11,
         "red": 0,
-        "resolved": 10
+        "resolved": 11
       }
     },
     "score_bin": {
@@ -409,10 +445,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.875,
-        "green": 21,
+        "accuracy": 0.8889,
+        "green": 24,
         "red": 3,
-        "resolved": 24
+        "resolved": 27
       },
       "<76": {
         "accuracy": 0.5,
@@ -421,13 +457,19 @@
         "resolved": 2
       },
       ">=88": {
-        "accuracy": 0.9167,
-        "green": 11,
-        "red": 1,
-        "resolved": 12
+        "accuracy": 0.8667,
+        "green": 13,
+        "red": 2,
+        "resolved": 15
       }
     },
     "selection": {
+      "corner_kicks:match:over:7.5": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
       "dupla chance:columbus crew ou empate": {
         "accuracy": 0.0,
         "green": 0,
@@ -471,10 +513,10 @@
         "resolved": 10
       },
       "goals:match:over:1.5": {
-        "accuracy": 0.9048,
-        "green": 19,
-        "red": 2,
-        "resolved": 21
+        "accuracy": 0.88,
+        "green": 22,
+        "red": 3,
+        "resolved": 25
       },
       "goals:match:under:2.5": {
         "accuracy": 0.0,
@@ -495,10 +537,10 @@
         "resolved": 9
       },
       "goals:match:under:4.5": {
-        "accuracy": 0.7143,
-        "green": 5,
+        "accuracy": 0.75,
+        "green": 6,
         "red": 2,
-        "resolved": 7
+        "resolved": 8
       },
       "goals:match:under:5.5": {
         "accuracy": 1.0,
@@ -527,10 +569,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.82,
-        "green": 41,
-        "red": 9,
-        "resolved": 50
+        "accuracy": 0.8214,
+        "green": 46,
+        "red": 10,
+        "resolved": 56
       }
     },
     "ticket_leg_count": {
@@ -547,10 +589,10 @@
         "resolved": 19
       },
       "3": {
-        "accuracy": 0.6667,
+        "accuracy": 0.6,
         "green": 6,
-        "red": 3,
-        "resolved": 9
+        "red": 4,
+        "resolved": 10
       }
     },
     "ticket_probability_bin": {
@@ -573,10 +615,10 @@
         "resolved": 2
       },
       "<70%": {
-        "accuracy": 0.6,
+        "accuracy": 0.5769,
         "green": 15,
-        "red": 10,
-        "resolved": 25
+        "red": 11,
+        "resolved": 26
       }
     }
   },
@@ -840,19 +882,39 @@
       "selection_key": "goals:match:over:1.5",
       "signal_source": "MULTI_MARKET_CONSENSUS",
       "ticket_id": "B3"
+    },
+    {
+      "bookmaker_count": 10,
+      "country": "Sweden",
+      "date": "2026-08-31",
+      "family": "GOALS",
+      "implied_probability": 0.9009,
+      "league": "Allsvenskan",
+      "market": "Total de gols",
+      "match": "Sirius x Malmo FF",
+      "model_probability": 0.8739,
+      "odd": 1.15,
+      "result_reason": "Total de gols: 1; linha over 1.5.",
+      "result_score": "0-1",
+      "result_stat_value": null,
+      "score": 88.4,
+      "selection": "Mais de 1.5 gols",
+      "selection_key": "goals:match:over:1.5",
+      "signal_source": "MULTI_MARKET_CONSENSUS",
+      "ticket_id": "B2"
     }
   ],
   "summary": {
     "completed_days": 10,
     "daily_target_rate": 0.5,
     "days_with_at_least_2_green": 5,
-    "leg_accuracy": 0.7903,
-    "legs_green": 49,
-    "legs_red": 13,
-    "legs_resolved": 62,
-    "ticket_accuracy": 0.5517,
+    "leg_accuracy": 0.7941,
+    "legs_green": 54,
+    "legs_red": 14,
+    "legs_resolved": 68,
+    "ticket_accuracy": 0.5333,
     "tickets_green": 16,
-    "tickets_red": 13,
-    "tickets_resolved": 29
+    "tickets_red": 14,
+    "tickets_resolved": 30
   }
 }
