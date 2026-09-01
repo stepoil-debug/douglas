@@ -94,10 +94,10 @@
         "resolved": 13
       },
       "8+": {
-        "accuracy": 0.7759,
-        "green": 45,
+        "accuracy": 0.7797,
+        "green": 46,
         "red": 13,
-        "resolved": 58
+        "resolved": 59
       }
     },
     "country": {
@@ -138,6 +138,12 @@
         "resolved": 1
       },
       "Denmark": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
+      "Egypt": {
         "accuracy": 1.0,
         "green": 1,
         "red": 0,
@@ -224,10 +230,10 @@
         "resolved": 1
       },
       "GOALS": {
-        "accuracy": 0.8136,
-        "green": 48,
+        "accuracy": 0.8167,
+        "green": 49,
         "red": 11,
-        "resolved": 59
+        "resolved": 60
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -329,9 +335,9 @@
       },
       "Premier League": {
         "accuracy": 1.0,
-        "green": 1,
+        "green": 2,
         "red": 0,
-        "resolved": 1
+        "resolved": 2
       },
       "Primeira Liga": {
         "accuracy": 1.0,
@@ -420,10 +426,10 @@
         "resolved": 19
       },
       "85-90%": {
-        "accuracy": 0.75,
-        "green": 18,
+        "accuracy": 0.76,
+        "green": 19,
         "red": 6,
-        "resolved": 24
+        "resolved": 25
       },
       "<70%": {
         "accuracy": 0.0,
@@ -452,10 +458,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.8929,
-        "green": 25,
+        "accuracy": 0.8966,
+        "green": 26,
         "red": 3,
-        "resolved": 28
+        "resolved": 29
       },
       "<76": {
         "accuracy": 0.5,
@@ -514,10 +520,10 @@
         "resolved": 2
       },
       "goals:match:over:0.5": {
-        "accuracy": 0.8333,
-        "green": 10,
+        "accuracy": 0.8462,
+        "green": 11,
         "red": 2,
-        "resolved": 12
+        "resolved": 13
       },
       "goals:match:over:1.5": {
         "accuracy": 0.88,
@@ -576,10 +582,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.8136,
-        "green": 48,
+        "accuracy": 0.8167,
+        "green": 49,
         "red": 11,
-        "resolved": 59
+        "resolved": 60
       }
     },
     "ticket_leg_count": {
@@ -935,10 +941,10 @@
     "completed_days": 11,
     "daily_target_rate": 0.5455,
     "days_with_at_least_2_green": 6,
-    "leg_accuracy": 0.7887,
-    "legs_green": 56,
+    "leg_accuracy": 0.7917,
+    "legs_green": 57,
     "legs_red": 15,
-    "legs_resolved": 71,
+    "legs_resolved": 72,
     "ticket_accuracy": 0.5625,
     "tickets_green": 18,
     "tickets_red": 14,
