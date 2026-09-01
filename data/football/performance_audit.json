@@ -81,8 +81,8 @@
       "date": "2026-09-01",
       "green": 0,
       "hit_target_2_of_3": false,
-      "pending": 1,
-      "red": 0
+      "pending": 0,
+      "red": 1
     }
   ],
   "groups": {
@@ -94,10 +94,10 @@
         "resolved": 13
       },
       "8+": {
-        "accuracy": 0.7797,
+        "accuracy": 0.7667,
         "green": 46,
-        "red": 13,
-        "resolved": 59
+        "red": 14,
+        "resolved": 60
       }
     },
     "country": {
@@ -144,10 +144,10 @@
         "resolved": 1
       },
       "Egypt": {
-        "accuracy": 1.0,
+        "accuracy": 0.5,
         "green": 1,
-        "red": 0,
-        "resolved": 1
+        "red": 1,
+        "resolved": 2
       },
       "England": {
         "accuracy": 1.0,
@@ -230,10 +230,10 @@
         "resolved": 1
       },
       "GOALS": {
-        "accuracy": 0.8167,
+        "accuracy": 0.8033,
         "green": 49,
-        "red": 11,
-        "resolved": 60
+        "red": 12,
+        "resolved": 61
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -334,10 +334,10 @@
         "resolved": 3
       },
       "Premier League": {
-        "accuracy": 1.0,
+        "accuracy": 0.6667,
         "green": 2,
-        "red": 0,
-        "resolved": 2
+        "red": 1,
+        "resolved": 3
       },
       "Primeira Liga": {
         "accuracy": 1.0,
@@ -426,10 +426,10 @@
         "resolved": 19
       },
       "85-90%": {
-        "accuracy": 0.76,
+        "accuracy": 0.7308,
         "green": 19,
-        "red": 6,
-        "resolved": 25
+        "red": 7,
+        "resolved": 26
       },
       "<70%": {
         "accuracy": 0.0,
@@ -470,10 +470,10 @@
         "resolved": 2
       },
       ">=88": {
-        "accuracy": 0.8235,
+        "accuracy": 0.7778,
         "green": 14,
-        "red": 3,
-        "resolved": 17
+        "red": 4,
+        "resolved": 18
       }
     },
     "selection": {
@@ -520,10 +520,10 @@
         "resolved": 2
       },
       "goals:match:over:0.5": {
-        "accuracy": 0.8462,
+        "accuracy": 0.7857,
         "green": 11,
-        "red": 2,
-        "resolved": 13
+        "red": 3,
+        "resolved": 14
       },
       "goals:match:over:1.5": {
         "accuracy": 0.88,
@@ -582,10 +582,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.8167,
+        "accuracy": 0.8033,
         "green": 49,
-        "red": 11,
-        "resolved": 60
+        "red": 12,
+        "resolved": 61
       }
     },
     "ticket_leg_count": {
@@ -602,10 +602,10 @@
         "resolved": 19
       },
       "3": {
-        "accuracy": 0.6667,
+        "accuracy": 0.6154,
         "green": 8,
-        "red": 4,
-        "resolved": 12
+        "red": 5,
+        "resolved": 13
       }
     },
     "ticket_probability_bin": {
@@ -628,10 +628,10 @@
         "resolved": 2
       },
       "<70%": {
-        "accuracy": 0.6071,
+        "accuracy": 0.5862,
         "green": 17,
-        "red": 11,
-        "resolved": 28
+        "red": 12,
+        "resolved": 29
       }
     }
   },
@@ -935,19 +935,39 @@
       "selection_key": "goals:match:over:1.5",
       "signal_source": "MULTI_MARKET_CONSENSUS",
       "ticket_id": "B2"
+    },
+    {
+      "bookmaker_count": 10,
+      "country": "Egypt",
+      "date": "2026-09-01",
+      "family": "GOALS",
+      "implied_probability": 0.905,
+      "league": "Premier League",
+      "market": "Total de gols",
+      "match": "Wadi Degla x Olympic El Qanah",
+      "model_probability": 0.8778,
+      "odd": 1.13,
+      "result_reason": "Total de gols: 0; linha over 0.5.",
+      "result_score": "0-0",
+      "result_stat_value": null,
+      "score": 88.7,
+      "selection": "Mais de 0.5 gols",
+      "selection_key": "goals:match:over:0.5",
+      "signal_source": "MULTI_MARKET_CONSENSUS",
+      "ticket_id": "B1"
     }
   ],
   "summary": {
-    "completed_days": 11,
-    "daily_target_rate": 0.5455,
+    "completed_days": 12,
+    "daily_target_rate": 0.5,
     "days_with_at_least_2_green": 6,
-    "leg_accuracy": 0.7917,
+    "leg_accuracy": 0.7808,
     "legs_green": 57,
-    "legs_red": 15,
-    "legs_resolved": 72,
-    "ticket_accuracy": 0.5625,
+    "legs_red": 16,
+    "legs_resolved": 73,
+    "ticket_accuracy": 0.5455,
     "tickets_green": 18,
-    "tickets_red": 14,
-    "tickets_resolved": 32
+    "tickets_red": 15,
+    "tickets_resolved": 33
   }
 }
