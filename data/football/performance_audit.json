@@ -72,33 +72,33 @@
     },
     {
       "date": "2026-08-31",
-      "green": 0,
-      "hit_target_2_of_3": false,
-      "pending": 2,
+      "green": 2,
+      "hit_target_2_of_3": true,
+      "pending": 0,
       "red": 1
     }
   ],
   "groups": {
     "bookmaker_depth": {
       "5-7": {
-        "accuracy": 0.8333,
-        "green": 10,
+        "accuracy": 0.8462,
+        "green": 11,
         "red": 2,
-        "resolved": 12
+        "resolved": 13
       },
       "8+": {
-        "accuracy": 0.7818,
-        "green": 43,
-        "red": 12,
-        "resolved": 55
+        "accuracy": 0.7759,
+        "green": 45,
+        "red": 13,
+        "resolved": 58
       }
     },
     "country": {
       "Argentina": {
-        "accuracy": 0.75,
-        "green": 6,
-        "red": 2,
-        "resolved": 8
+        "accuracy": 0.7,
+        "green": 7,
+        "red": 3,
+        "resolved": 10
       },
       "Austria": {
         "accuracy": 0.6667,
@@ -113,10 +113,10 @@
         "resolved": 1
       },
       "Brazil": {
-        "accuracy": 0.6667,
-        "green": 6,
+        "accuracy": 0.7,
+        "green": 7,
         "red": 3,
-        "resolved": 9
+        "resolved": 10
       },
       "Canada": {
         "accuracy": 1.0,
@@ -186,9 +186,9 @@
       },
       "Spain": {
         "accuracy": 1.0,
-        "green": 1,
+        "green": 2,
         "red": 0,
-        "resolved": 1
+        "resolved": 2
       },
       "Sweden": {
         "accuracy": 0.7333,
@@ -210,11 +210,17 @@
       }
     },
     "family": {
+      "CORNERS": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
       "GOALS": {
-        "accuracy": 0.8214,
-        "green": 46,
-        "red": 10,
-        "resolved": 56
+        "accuracy": 0.8136,
+        "green": 48,
+        "red": 11,
+        "resolved": 59
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -286,15 +292,15 @@
       },
       "La Liga": {
         "accuracy": 1.0,
-        "green": 1,
-        "red": 0,
-        "resolved": 1
-      },
-      "Liga Profesional Argentina": {
-        "accuracy": 1.0,
         "green": 2,
         "red": 0,
         "resolved": 2
+      },
+      "Liga Profesional Argentina": {
+        "accuracy": 1.0,
+        "green": 3,
+        "red": 0,
+        "resolved": 3
       },
       "Major League Soccer": {
         "accuracy": 0.75,
@@ -333,16 +339,16 @@
         "resolved": 3
       },
       "Primera Nacional": {
-        "accuracy": 1.0,
+        "accuracy": 0.75,
         "green": 3,
-        "red": 0,
-        "resolved": 3
+        "red": 1,
+        "resolved": 4
       },
       "Serie A": {
-        "accuracy": 0.5,
-        "green": 2,
+        "accuracy": 0.6,
+        "green": 3,
         "red": 2,
-        "resolved": 4
+        "resolved": 5
       },
       "Serie B": {
         "accuracy": 0.8,
@@ -407,10 +413,10 @@
         "resolved": 19
       },
       "85-90%": {
-        "accuracy": 0.7619,
-        "green": 16,
-        "red": 5,
-        "resolved": 21
+        "accuracy": 0.75,
+        "green": 18,
+        "red": 6,
+        "resolved": 24
       },
       "<70%": {
         "accuracy": 0.0,
@@ -420,9 +426,9 @@
       },
       ">=90%": {
         "accuracy": 1.0,
-        "green": 11,
+        "green": 12,
         "red": 0,
-        "resolved": 11
+        "resolved": 12
       }
     },
     "score_bin": {
@@ -439,10 +445,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.8846,
-        "green": 23,
+        "accuracy": 0.8929,
+        "green": 25,
         "red": 3,
-        "resolved": 26
+        "resolved": 28
       },
       "<76": {
         "accuracy": 0.5,
@@ -451,13 +457,19 @@
         "resolved": 2
       },
       ">=88": {
-        "accuracy": 0.8667,
-        "green": 13,
-        "red": 2,
-        "resolved": 15
+        "accuracy": 0.8235,
+        "green": 14,
+        "red": 3,
+        "resolved": 17
       }
     },
     "selection": {
+      "corner_kicks:match:over:7.5": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
       "dupla chance:columbus crew ou empate": {
         "accuracy": 0.0,
         "green": 0,
@@ -495,10 +507,10 @@
         "resolved": 2
       },
       "goals:match:over:0.5": {
-        "accuracy": 0.9,
-        "green": 9,
-        "red": 1,
-        "resolved": 10
+        "accuracy": 0.8333,
+        "green": 10,
+        "red": 2,
+        "resolved": 12
       },
       "goals:match:over:1.5": {
         "accuracy": 0.88,
@@ -519,10 +531,10 @@
         "resolved": 1
       },
       "goals:match:under:3.5": {
-        "accuracy": 0.7778,
-        "green": 7,
+        "accuracy": 0.8,
+        "green": 8,
         "red": 2,
-        "resolved": 9
+        "resolved": 10
       },
       "goals:match:under:4.5": {
         "accuracy": 0.75,
@@ -557,10 +569,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.8182,
-        "green": 45,
-        "red": 10,
-        "resolved": 55
+        "accuracy": 0.8136,
+        "green": 48,
+        "red": 11,
+        "resolved": 59
       }
     },
     "ticket_leg_count": {
@@ -577,10 +589,10 @@
         "resolved": 19
       },
       "3": {
-        "accuracy": 0.6,
-        "green": 6,
+        "accuracy": 0.6667,
+        "green": 8,
         "red": 4,
-        "resolved": 10
+        "resolved": 12
       }
     },
     "ticket_probability_bin": {
@@ -603,10 +615,10 @@
         "resolved": 2
       },
       "<70%": {
-        "accuracy": 0.5769,
-        "green": 15,
+        "accuracy": 0.6071,
+        "green": 17,
         "red": 11,
-        "resolved": 26
+        "resolved": 28
       }
     }
   },
@@ -873,6 +885,26 @@
     },
     {
       "bookmaker_count": 10,
+      "country": "Argentina",
+      "date": "2026-08-31",
+      "family": "GOALS",
+      "implied_probability": 0.905,
+      "league": "Primera Nacional",
+      "market": "Total de gols",
+      "match": "Los Andes x Acassuso",
+      "model_probability": 0.8778,
+      "odd": 1.13,
+      "result_reason": "Total de gols: 0; linha over 0.5.",
+      "result_score": "0-0",
+      "result_stat_value": null,
+      "score": 88.7,
+      "selection": "Mais de 0.5 gols",
+      "selection_key": "goals:match:over:0.5",
+      "signal_source": "MULTI_MARKET_CONSENSUS",
+      "ticket_id": "B2"
+    },
+    {
+      "bookmaker_count": 10,
       "country": "Sweden",
       "date": "2026-08-31",
       "family": "GOALS",
@@ -893,16 +925,16 @@
     }
   ],
   "summary": {
-    "completed_days": 10,
-    "daily_target_rate": 0.5,
-    "days_with_at_least_2_green": 5,
-    "leg_accuracy": 0.791,
-    "legs_green": 53,
-    "legs_red": 14,
-    "legs_resolved": 67,
-    "ticket_accuracy": 0.5333,
-    "tickets_green": 16,
+    "completed_days": 11,
+    "daily_target_rate": 0.5455,
+    "days_with_at_least_2_green": 6,
+    "leg_accuracy": 0.7887,
+    "legs_green": 56,
+    "legs_red": 15,
+    "legs_resolved": 71,
+    "ticket_accuracy": 0.5625,
+    "tickets_green": 18,
     "tickets_red": 14,
-    "tickets_resolved": 30
+    "tickets_resolved": 32
   }
 }

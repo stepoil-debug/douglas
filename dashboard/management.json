@@ -223,7 +223,7 @@
         {
           "odd": 1.5,
           "probability": 0.6506,
-          "status": "PENDING",
+          "status": "GREEN",
           "ticket_id": "B1"
         },
         {
@@ -235,7 +235,7 @@
         {
           "odd": 1.5,
           "probability": 0.6571,
-          "status": "PENDING",
+          "status": "GREEN",
           "ticket_id": "B3"
         }
       ]
@@ -250,13 +250,13 @@
   ],
   "strategies": {
     "all_three": {
-      "accuracy": 53.57,
-      "available_bankroll": 24.0,
-      "bankroll": 44.0,
+      "accuracy": 56.67,
+      "available_bankroll": 54.0,
+      "bankroll": 54.0,
       "bets": 30,
       "description": "R$10 em cada um dos 3 bilhetes oficiais do dia. Exposição diária máxima: R$30.",
       "fixed_stake": 10.0,
-      "greens": 15,
+      "greens": 17,
       "history": [
         {
           "date": "2026-08-18",
@@ -533,9 +533,9 @@
           "estimated_probability": 0.6506,
           "label": "Todos os 3",
           "odd": 1.5,
-          "profit": null,
+          "profit": 5.0,
           "stake": 10.0,
-          "status": "PENDING",
+          "status": "GREEN",
           "ticket_id": "B1"
         },
         {
@@ -553,20 +553,20 @@
           "estimated_probability": 0.6571,
           "label": "Todos os 3",
           "odd": 1.5,
-          "profit": null,
+          "profit": 5.0,
           "stake": 10.0,
-          "status": "PENDING",
+          "status": "GREEN",
           "ticket_id": "B3"
         }
       ],
       "initial_bankroll": 100.0,
       "name": "Mão fixa • 3 bilhetes",
-      "open_exposure": 20.0,
-      "pending": 2,
-      "profit": -56.0,
+      "open_exposure": 0.0,
+      "pending": 0,
+      "profit": -46.0,
       "reds": 13,
-      "resolved": 28,
-      "roi": -20.0
+      "resolved": 30,
+      "roi": -15.33
     },
     "safest_only": {
       "accuracy": 60.0,
@@ -688,5 +688,5 @@
       "roi": -9.0
     }
   },
-  "updated_at": "2026-08-31T20:00:10.845205-03:00"
+  "updated_at": "2026-08-31T23:01:03.739436-03:00"
 }
