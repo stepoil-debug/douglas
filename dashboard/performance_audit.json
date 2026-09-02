@@ -83,6 +83,13 @@
       "hit_target_2_of_3": false,
       "pending": 0,
       "red": 1
+    },
+    {
+      "date": "2026-09-02",
+      "green": 0,
+      "hit_target_2_of_3": false,
+      "pending": 3,
+      "red": 0
     }
   ],
   "groups": {
