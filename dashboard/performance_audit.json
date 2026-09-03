@@ -108,10 +108,10 @@
         "resolved": 16
       },
       "8+": {
-        "accuracy": 0.7879,
-        "green": 52,
+        "accuracy": 0.7941,
+        "green": 54,
         "red": 14,
-        "resolved": 66
+        "resolved": 68
       }
     },
     "country": {
@@ -217,6 +217,18 @@
         "red": 0,
         "resolved": 2
       },
+      "Qatar": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
+      "Saudi-Arabia": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
       "Serbia": {
         "accuracy": 1.0,
         "green": 1,
@@ -262,10 +274,10 @@
         "resolved": 1
       },
       "GOALS": {
-        "accuracy": 0.8,
-        "green": 56,
+        "accuracy": 0.8056,
+        "green": 58,
         "red": 14,
-        "resolved": 70
+        "resolved": 72
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -401,6 +413,12 @@
         "red": 1,
         "resolved": 4
       },
+      "Pro League": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
       "Serie A": {
         "accuracy": 0.6667,
         "green": 4,
@@ -414,6 +432,12 @@
         "resolved": 5
       },
       "Serie C": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
+      "Stars League": {
         "accuracy": 1.0,
         "green": 1,
         "red": 0,
@@ -476,10 +500,10 @@
         "resolved": 22
       },
       "85-90%": {
-        "accuracy": 0.7586,
-        "green": 22,
+        "accuracy": 0.7742,
+        "green": 24,
         "red": 7,
-        "resolved": 29
+        "resolved": 31
       },
       "<70%": {
         "accuracy": 0.0,
@@ -508,10 +532,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.8824,
-        "green": 30,
+        "accuracy": 0.8857,
+        "green": 31,
         "red": 4,
-        "resolved": 34
+        "resolved": 35
       },
       "<76": {
         "accuracy": 0.5,
@@ -520,10 +544,10 @@
         "resolved": 2
       },
       ">=88": {
-        "accuracy": 0.7727,
-        "green": 17,
+        "accuracy": 0.7826,
+        "green": 18,
         "red": 5,
-        "resolved": 22
+        "resolved": 23
       }
     },
     "selection": {
@@ -576,10 +600,10 @@
         "resolved": 17
       },
       "goals:match:over:1.5": {
-        "accuracy": 0.8667,
-        "green": 26,
+        "accuracy": 0.871,
+        "green": 27,
         "red": 4,
-        "resolved": 30
+        "resolved": 31
       },
       "goals:match:over:2.5": {
         "accuracy": 1.0,
@@ -606,10 +630,10 @@
         "resolved": 10
       },
       "goals:match:under:4.5": {
-        "accuracy": 0.75,
-        "green": 6,
+        "accuracy": 0.7778,
+        "green": 7,
         "red": 2,
-        "resolved": 8
+        "resolved": 9
       },
       "goals:match:under:5.5": {
         "accuracy": 1.0,
@@ -638,10 +662,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.8,
-        "green": 56,
+        "accuracy": 0.8056,
+        "green": 58,
         "red": 14,
-        "resolved": 70
+        "resolved": 72
       }
     },
     "ticket_leg_count": {
@@ -1057,10 +1081,10 @@
     "completed_days": 13,
     "daily_target_rate": 0.4615,
     "days_with_at_least_2_green": 6,
-    "leg_accuracy": 0.7805,
-    "legs_green": 64,
+    "leg_accuracy": 0.7857,
+    "legs_green": 66,
     "legs_red": 18,
-    "legs_resolved": 82,
+    "legs_resolved": 84,
     "ticket_accuracy": 0.5278,
     "tickets_green": 19,
     "tickets_red": 17,
