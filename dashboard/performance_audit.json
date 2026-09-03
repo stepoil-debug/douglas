@@ -86,9 +86,9 @@
     },
     {
       "date": "2026-09-02",
-      "green": 0,
+      "green": 1,
       "hit_target_2_of_3": false,
-      "pending": 2,
+      "pending": 1,
       "red": 1
     }
   ],
@@ -101,10 +101,10 @@
         "resolved": 15
       },
       "8+": {
-        "accuracy": 0.7812,
-        "green": 50,
+        "accuracy": 0.7846,
+        "green": 51,
         "red": 14,
-        "resolved": 64
+        "resolved": 65
       }
     },
     "country": {
@@ -133,10 +133,10 @@
         "resolved": 1
       },
       "Brazil": {
-        "accuracy": 0.7,
-        "green": 7,
+        "accuracy": 0.7273,
+        "green": 8,
         "red": 3,
-        "resolved": 10
+        "resolved": 11
       },
       "Canada": {
         "accuracy": 1.0,
@@ -255,10 +255,10 @@
         "resolved": 1
       },
       "GOALS": {
-        "accuracy": 0.806,
-        "green": 54,
+        "accuracy": 0.8088,
+        "green": 55,
         "red": 13,
-        "resolved": 67
+        "resolved": 68
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -395,10 +395,10 @@
         "resolved": 4
       },
       "Serie A": {
-        "accuracy": 0.6,
-        "green": 3,
+        "accuracy": 0.6667,
+        "green": 4,
         "red": 2,
-        "resolved": 5
+        "resolved": 6
       },
       "Serie B": {
         "accuracy": 0.8,
@@ -463,10 +463,10 @@
         "resolved": 11
       },
       "80-85%": {
-        "accuracy": 0.8421,
-        "green": 16,
+        "accuracy": 0.85,
+        "green": 17,
         "red": 3,
-        "resolved": 19
+        "resolved": 20
       },
       "85-90%": {
         "accuracy": 0.7586,
@@ -501,10 +501,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.9032,
-        "green": 28,
+        "accuracy": 0.9062,
+        "green": 29,
         "red": 3,
-        "resolved": 31
+        "resolved": 32
       },
       "<76": {
         "accuracy": 0.5,
@@ -569,10 +569,10 @@
         "resolved": 17
       },
       "goals:match:over:1.5": {
-        "accuracy": 0.8889,
-        "green": 24,
+        "accuracy": 0.8929,
+        "green": 25,
         "red": 3,
-        "resolved": 27
+        "resolved": 28
       },
       "goals:match:over:2.5": {
         "accuracy": 1.0,
@@ -631,10 +631,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.806,
-        "green": 54,
+        "accuracy": 0.8088,
+        "green": 55,
         "red": 13,
-        "resolved": 67
+        "resolved": 68
       }
     },
     "ticket_leg_count": {
@@ -651,10 +651,10 @@
         "resolved": 19
       },
       "3": {
-        "accuracy": 0.5714,
-        "green": 8,
+        "accuracy": 0.6,
+        "green": 9,
         "red": 6,
-        "resolved": 14
+        "resolved": 15
       }
     },
     "ticket_probability_bin": {
@@ -677,10 +677,10 @@
         "resolved": 2
       },
       "<70%": {
-        "accuracy": 0.5667,
-        "green": 17,
+        "accuracy": 0.5806,
+        "green": 18,
         "red": 13,
-        "resolved": 30
+        "resolved": 31
       }
     }
   },
@@ -1030,13 +1030,13 @@
     "completed_days": 12,
     "daily_target_rate": 0.5,
     "days_with_at_least_2_green": 6,
-    "leg_accuracy": 0.7848,
-    "legs_green": 62,
+    "leg_accuracy": 0.7875,
+    "legs_green": 63,
     "legs_red": 17,
-    "legs_resolved": 79,
-    "ticket_accuracy": 0.5294,
-    "tickets_green": 18,
+    "legs_resolved": 80,
+    "ticket_accuracy": 0.5429,
+    "tickets_green": 19,
     "tickets_red": 16,
-    "tickets_resolved": 34
+    "tickets_resolved": 35
   }
 }
