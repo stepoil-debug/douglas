@@ -88,23 +88,23 @@
       "date": "2026-09-02",
       "green": 1,
       "hit_target_2_of_3": false,
-      "pending": 1,
-      "red": 1
+      "pending": 0,
+      "red": 2
     }
   ],
   "groups": {
     "bookmaker_depth": {
       "5-7": {
-        "accuracy": 0.8,
+        "accuracy": 0.75,
         "green": 12,
-        "red": 3,
-        "resolved": 15
+        "red": 4,
+        "resolved": 16
       },
       "8+": {
-        "accuracy": 0.7846,
-        "green": 51,
+        "accuracy": 0.7879,
+        "green": 52,
         "red": 14,
-        "resolved": 65
+        "resolved": 66
       }
     },
     "country": {
@@ -235,10 +235,10 @@
         "resolved": 1
       },
       "USA": {
-        "accuracy": 0.7778,
-        "green": 7,
-        "red": 2,
-        "resolved": 9
+        "accuracy": 0.7273,
+        "green": 8,
+        "red": 3,
+        "resolved": 11
       },
       "World": {
         "accuracy": 1.0,
@@ -255,10 +255,10 @@
         "resolved": 1
       },
       "GOALS": {
-        "accuracy": 0.8088,
-        "green": 55,
-        "red": 13,
-        "resolved": 68
+        "accuracy": 0.8,
+        "green": 56,
+        "red": 14,
+        "resolved": 70
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -437,16 +437,16 @@
         "resolved": 5
       },
       "USL Championship": {
-        "accuracy": 0.75,
-        "green": 3,
+        "accuracy": 0.8,
+        "green": 4,
         "red": 1,
-        "resolved": 4
+        "resolved": 5
       },
       "USL League One": {
-        "accuracy": 1.0,
+        "accuracy": 0.5,
         "green": 1,
-        "red": 0,
-        "resolved": 1
+        "red": 1,
+        "resolved": 2
       }
     },
     "probability_bin": {
@@ -463,10 +463,10 @@
         "resolved": 11
       },
       "80-85%": {
-        "accuracy": 0.85,
-        "green": 17,
-        "red": 3,
-        "resolved": 20
+        "accuracy": 0.8182,
+        "green": 18,
+        "red": 4,
+        "resolved": 22
       },
       "85-90%": {
         "accuracy": 0.7586,
@@ -501,10 +501,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.9062,
-        "green": 29,
-        "red": 3,
-        "resolved": 32
+        "accuracy": 0.8824,
+        "green": 30,
+        "red": 4,
+        "resolved": 34
       },
       "<76": {
         "accuracy": 0.5,
@@ -569,10 +569,10 @@
         "resolved": 17
       },
       "goals:match:over:1.5": {
-        "accuracy": 0.8929,
-        "green": 25,
-        "red": 3,
-        "resolved": 28
+        "accuracy": 0.8667,
+        "green": 26,
+        "red": 4,
+        "resolved": 30
       },
       "goals:match:over:2.5": {
         "accuracy": 1.0,
@@ -631,10 +631,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.8088,
-        "green": 55,
-        "red": 13,
-        "resolved": 68
+        "accuracy": 0.8,
+        "green": 56,
+        "red": 14,
+        "resolved": 70
       }
     },
     "ticket_leg_count": {
@@ -651,10 +651,10 @@
         "resolved": 19
       },
       "3": {
-        "accuracy": 0.6,
+        "accuracy": 0.5625,
         "green": 9,
-        "red": 6,
-        "resolved": 15
+        "red": 7,
+        "resolved": 16
       }
     },
     "ticket_probability_bin": {
@@ -677,10 +677,10 @@
         "resolved": 2
       },
       "<70%": {
-        "accuracy": 0.5806,
+        "accuracy": 0.5625,
         "green": 18,
-        "red": 13,
-        "resolved": 31
+        "red": 14,
+        "resolved": 32
       }
     }
   },
@@ -1006,6 +1006,26 @@
       "ticket_id": "B1"
     },
     {
+      "bookmaker_count": 7,
+      "country": "USA",
+      "date": "2026-09-02",
+      "family": "GOALS",
+      "implied_probability": 0.8621,
+      "league": "USL League One",
+      "market": "Total de gols",
+      "match": "Westchester SC x Chattanooga Red Wolves",
+      "model_probability": 0.8362,
+      "odd": 1.2,
+      "result_reason": "Total de gols: 1; linha over 1.5.",
+      "result_score": "0-1",
+      "result_stat_value": null,
+      "score": 85.0,
+      "selection": "Mais de 1.5 gols",
+      "selection_key": "goals:match:over:1.5",
+      "signal_source": "MULTI_MARKET_CONSENSUS",
+      "ticket_id": "B2"
+    },
+    {
       "bookmaker_count": 6,
       "country": "Bahrain",
       "date": "2026-09-02",
@@ -1027,16 +1047,16 @@
     }
   ],
   "summary": {
-    "completed_days": 12,
-    "daily_target_rate": 0.5,
+    "completed_days": 13,
+    "daily_target_rate": 0.4615,
     "days_with_at_least_2_green": 6,
-    "leg_accuracy": 0.7875,
-    "legs_green": 63,
-    "legs_red": 17,
-    "legs_resolved": 80,
-    "ticket_accuracy": 0.5429,
+    "leg_accuracy": 0.7805,
+    "legs_green": 64,
+    "legs_red": 18,
+    "legs_resolved": 82,
+    "ticket_accuracy": 0.5278,
     "tickets_green": 19,
-    "tickets_red": 16,
-    "tickets_resolved": 35
+    "tickets_red": 17,
+    "tickets_resolved": 36
   }
 }
