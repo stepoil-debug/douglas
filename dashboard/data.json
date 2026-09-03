@@ -10080,7 +10080,7 @@
           "risk_flags": [],
           "score": 88.4,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-09-03T15:51:02.923686-03:00",
+          "settled_at": "2026-09-03T17:55:17.941177-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -10110,7 +10110,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1555382,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "FC Lugano",
           "implied_probability": 0.8511,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -10140,16 +10140,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 1; linha over 1.5.",
+          "result_score": "1-0",
           "risk_flags": [],
           "score": 85.2,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-09-03T17:55:17.941277-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "RED"
         }
       ],
       "market_families": [
@@ -10163,7 +10165,8 @@
         "GOALS_OVER"
       ],
       "score": 88.0,
-      "status": "PENDING",
+      "settled_at": "2026-09-03T17:55:17.941298-03:00",
+      "status": "RED",
       "ticket_id": "B1",
       "total_odd": 1.5
     },
@@ -10262,7 +10265,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1553140,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "Lech Poznan",
           "implied_probability": 0.905,
           "individual_score_band": "ELITE_88_PLUS",
@@ -10292,16 +10295,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 3; linha over 1.5.",
+          "result_score": "2-1",
           "risk_flags": [],
           "score": 88.7,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-09-03T17:55:17.941311-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Al Khaleej Saihat",
@@ -10361,7 +10366,7 @@
           "risk_flags": [],
           "score": 86.9,
           "selection": "Menos de 4.5 gols",
-          "settled_at": "2026-09-03T15:51:02.923842-03:00",
+          "settled_at": "2026-09-03T17:55:17.941324-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
@@ -10482,7 +10487,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1494190,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Mjallby AIF",
           "implied_probability": 0.8511,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -10512,16 +10517,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 2; linha over 1.5.",
+          "result_score": "0-2",
           "risk_flags": [],
           "score": 85.2,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-09-03T17:55:17.941346-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Hellas Verona",
@@ -10540,7 +10547,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1628956,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Cagliari",
           "implied_probability": 0.9009,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -10567,16 +10574,19 @@
           "rationale": "Mercado corners confirmado por 5 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
           "raw_market": "Corners Over Under",
           "raw_selection": "Over 6.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Escanteios: resultado 8; linha over 6.5.",
+          "result_score": "1-2",
+          "result_stat_value": 8.0,
           "risk_flags": [],
           "score": 84.6,
           "selection": "Mais de 6.5 escanteios",
+          "settled_at": "2026-09-03T17:55:17.941357-03:00",
           "settlement_line": 6.5,
           "settlement_metric": "corner_kicks",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -10650,19 +10660,19 @@
   "fixtures_ranked": 60,
   "fixtures_with_markets": 128,
   "history_summary": {
-    "accuracy": 0.7857142857142857,
+    "accuracy": 0.7840909090909091,
     "by_market": {
       "CORNERS": {
         "accuracy": 1.0,
-        "green": 1,
+        "green": 2,
         "red": 0,
-        "resolved": 1
+        "resolved": 2
       },
       "GOALS": {
-        "accuracy": 0.8055555555555556,
-        "green": 58,
-        "red": 14,
-        "resolved": 72
+        "accuracy": 0.8,
+        "green": 60,
+        "red": 15,
+        "resolved": 75
       },
       "RESULT": {
         "accuracy": 0.6363636363636364,
@@ -10671,13 +10681,13 @@
         "resolved": 11
       }
     },
-    "hits": 66,
-    "misses": 18,
-    "resolved": 84,
-    "ticket_accuracy": 0.5277777777777778,
+    "hits": 69,
+    "misses": 19,
+    "resolved": 88,
+    "ticket_accuracy": 0.5135135135135135,
     "tickets_hit": 19,
-    "tickets_miss": 17,
-    "tickets_resolved": 36
+    "tickets_miss": 18,
+    "tickets_resolved": 37
   },
   "kickoff_spacing": {
     "enabled": true,
@@ -13176,12 +13186,12 @@
     }
   ],
   "settlement": {
-    "checked_at": "2026-09-03T15:51:02.923897-03:00",
+    "checked_at": "2026-09-03T17:55:17.941403-03:00",
     "complete": false,
     "green": 0,
-    "pending": 3,
-    "red": 0,
-    "statistics_fixtures_checked": 0
+    "pending": 2,
+    "red": 1,
+    "statistics_fixtures_checked": 1
   },
   "sport": "football",
   "strict_tickets": 3,
@@ -13319,7 +13329,7 @@
           "risk_flags": [],
           "score": 88.4,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-09-03T15:51:02.923686-03:00",
+          "settled_at": "2026-09-03T17:55:17.941177-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -13349,7 +13359,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1555382,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "FC Lugano",
           "implied_probability": 0.8511,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -13379,16 +13389,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 1; linha over 1.5.",
+          "result_score": "1-0",
           "risk_flags": [],
           "score": 85.2,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-09-03T17:55:17.941277-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "RED"
         }
       ],
       "market_families": [
@@ -13402,7 +13414,8 @@
         "GOALS_OVER"
       ],
       "score": 88.0,
-      "status": "PENDING",
+      "settled_at": "2026-09-03T17:55:17.941298-03:00",
+      "status": "RED",
       "ticket_id": "B1",
       "total_odd": 1.5
     },
@@ -13501,7 +13514,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1553140,
-          "fixture_status": "1H",
+          "fixture_status": "FT",
           "home_team": "Lech Poznan",
           "implied_probability": 0.905,
           "individual_score_band": "ELITE_88_PLUS",
@@ -13531,16 +13544,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (1H).",
+          "result_reason": "Total de gols: 3; linha over 1.5.",
+          "result_score": "2-1",
           "risk_flags": [],
           "score": 88.7,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-09-03T17:55:17.941311-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Al Khaleej Saihat",
@@ -13600,7 +13615,7 @@
           "risk_flags": [],
           "score": 86.9,
           "selection": "Menos de 4.5 gols",
-          "settled_at": "2026-09-03T15:51:02.923842-03:00",
+          "settled_at": "2026-09-03T17:55:17.941324-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
@@ -13721,7 +13736,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1494190,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Mjallby AIF",
           "implied_probability": 0.8511,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -13751,16 +13766,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 83%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 1.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 2; linha over 1.5.",
+          "result_score": "0-2",
           "risk_flags": [],
           "score": 85.2,
           "selection": "Mais de 1.5 gols",
+          "settled_at": "2026-09-03T17:55:17.941346-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Hellas Verona",
@@ -13779,7 +13796,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1628956,
-          "fixture_status": "NS",
+          "fixture_status": "FT",
           "home_team": "Cagliari",
           "implied_probability": 0.9009,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -13806,16 +13823,19 @@
           "rationale": "Mercado corners confirmado por 5 bookmaker(s); probabilidade implícita ajustada 87%; seleção full-time com regra automática de conferência.",
           "raw_market": "Corners Over Under",
           "raw_selection": "Over 6.5",
-          "result_reason": "Partida ainda não encerrada (NS).",
+          "result_reason": "Escanteios: resultado 8; linha over 6.5.",
+          "result_score": "1-2",
+          "result_stat_value": 8.0,
           "risk_flags": [],
           "score": 84.6,
           "selection": "Mais de 6.5 escanteios",
+          "settled_at": "2026-09-03T17:55:17.941357-03:00",
           "settlement_line": 6.5,
           "settlement_metric": "corner_kicks",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
