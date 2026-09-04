@@ -115,10 +115,10 @@
         "resolved": 17
       },
       "8+": {
-        "accuracy": 0.7973,
-        "green": 59,
+        "accuracy": 0.8077,
+        "green": 63,
         "red": 15,
-        "resolved": 74
+        "resolved": 78
       }
     },
     "country": {
@@ -166,9 +166,9 @@
       },
       "Denmark": {
         "accuracy": 1.0,
-        "green": 1,
+        "green": 3,
         "red": 0,
-        "resolved": 1
+        "resolved": 3
       },
       "Ecuador": {
         "accuracy": 1.0,
@@ -213,16 +213,16 @@
         "resolved": 1
       },
       "Netherlands": {
-        "accuracy": 0.0,
-        "green": 0,
+        "accuracy": 0.5,
+        "green": 1,
         "red": 1,
-        "resolved": 1
+        "resolved": 2
       },
       "Norway": {
         "accuracy": 1.0,
-        "green": 2,
+        "green": 3,
         "red": 0,
-        "resolved": 2
+        "resolved": 3
       },
       "Poland": {
         "accuracy": 1.0,
@@ -293,10 +293,10 @@
         "resolved": 2
       },
       "GOALS": {
-        "accuracy": 0.8077,
-        "green": 63,
+        "accuracy": 0.8171,
+        "green": 67,
         "red": 15,
-        "resolved": 78
+        "resolved": 82
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -308,9 +308,9 @@
     "league": {
       "1. Division": {
         "accuracy": 1.0,
-        "green": 2,
+        "green": 4,
         "red": 0,
-        "resolved": 2
+        "resolved": 4
       },
       "2. Liga": {
         "accuracy": 0.6667,
@@ -379,6 +379,12 @@
         "resolved": 1
       },
       "Eliteserien": {
+        "accuracy": 1.0,
+        "green": 2,
+        "red": 0,
+        "resolved": 2
+      },
+      "Eredivisie": {
         "accuracy": 1.0,
         "green": 1,
         "red": 0,
@@ -537,16 +543,16 @@
         "resolved": 11
       },
       "80-85%": {
-        "accuracy": 0.7917,
-        "green": 19,
+        "accuracy": 0.8,
+        "green": 20,
         "red": 5,
-        "resolved": 24
+        "resolved": 25
       },
       "85-90%": {
-        "accuracy": 0.7941,
-        "green": 27,
+        "accuracy": 0.8108,
+        "green": 30,
         "red": 7,
-        "resolved": 34
+        "resolved": 37
       },
       "<70%": {
         "accuracy": 0.0,
@@ -575,10 +581,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.8684,
-        "green": 33,
+        "accuracy": 0.881,
+        "green": 37,
         "red": 5,
-        "resolved": 38
+        "resolved": 42
       },
       "<76": {
         "accuracy": 0.5,
@@ -649,10 +655,10 @@
         "resolved": 19
       },
       "goals:match:over:1.5": {
-        "accuracy": 0.8529,
-        "green": 29,
+        "accuracy": 0.8649,
+        "green": 32,
         "red": 5,
-        "resolved": 34
+        "resolved": 37
       },
       "goals:match:over:2.5": {
         "accuracy": 1.0,
@@ -679,10 +685,10 @@
         "resolved": 10
       },
       "goals:match:under:4.5": {
-        "accuracy": 0.8,
-        "green": 8,
+        "accuracy": 0.8182,
+        "green": 9,
         "red": 2,
-        "resolved": 10
+        "resolved": 11
       },
       "goals:match:under:5.5": {
         "accuracy": 1.0,
@@ -711,10 +717,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.8101,
-        "green": 64,
+        "accuracy": 0.8193,
+        "green": 68,
         "red": 15,
-        "resolved": 79
+        "resolved": 83
       }
     },
     "ticket_leg_count": {
@@ -1150,10 +1156,10 @@
     "completed_days": 14,
     "daily_target_rate": 0.5,
     "days_with_at_least_2_green": 7,
-    "leg_accuracy": 0.7912,
-    "legs_green": 72,
+    "leg_accuracy": 0.8,
+    "legs_green": 76,
     "legs_red": 19,
-    "legs_resolved": 91,
+    "legs_resolved": 95,
     "ticket_accuracy": 0.5385,
     "tickets_green": 21,
     "tickets_red": 18,
