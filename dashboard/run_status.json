@@ -1,6 +1,7 @@
 {
   "accuracy_first": true,
-  "board_date": "2026-09-03",
+  "api_requests": 196,
+  "board_date": "2026-09-04",
   "board_mode": "TODAY",
   "board_status": "READY",
   "elite_individual_score": 88.0,
@@ -8,20 +9,22 @@
   "execution_ready": true,
   "fixture_exclusivity": true,
   "fixtures_analyzed": 60,
-  "fixtures_found": 158,
+  "fixtures_found": 466,
   "kickoff_spacing_minutes": 120,
   "kickoff_spacing_scope": "WITHIN_EACH_TICKET",
   "kickoff_spacing_valid": true,
+  "market_analysis": true,
   "max_ticket_legs": 3,
   "message": "3 bilhetes publicados com 1 a 3 pernas; toda perna tem score bruto >=84, jogos não se repetem entre bilhetes e cada múltipla respeita 120 minutos entre jogos diferentes.",
   "min_individual_score": 84.0,
   "model_version": "football-accuracy-betano-v9-three-leg-score84",
   "multi_market": true,
   "publication_immutable": true,
+  "quality_rejected_legs": 1428,
   "sport": "football",
   "status": "SUCCESS",
   "target_tickets": 3,
   "ticket_lock": true,
   "tickets_ready": 3,
-  "updated_at": "2026-09-03T20:57:26.010039-03:00"
+  "updated_at": "2026-09-04T09:44:52.494960-03:00"
 }
