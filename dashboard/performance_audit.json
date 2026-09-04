@@ -102,10 +102,10 @@
   "groups": {
     "bookmaker_depth": {
       "5-7": {
-        "accuracy": 0.7647,
-        "green": 13,
+        "accuracy": 0.75,
+        "green": 12,
         "red": 4,
-        "resolved": 17
+        "resolved": 16
       },
       "8+": {
         "accuracy": 0.7917,
@@ -195,9 +195,9 @@
       },
       "Italy": {
         "accuracy": 1.0,
-        "green": 2,
+        "green": 1,
         "red": 0,
-        "resolved": 2
+        "resolved": 1
       },
       "Kazakhstan": {
         "accuracy": 1.0,
@@ -281,9 +281,9 @@
     "family": {
       "CORNERS": {
         "accuracy": 1.0,
-        "green": 2,
+        "green": 1,
         "red": 0,
-        "resolved": 2
+        "resolved": 1
       },
       "GOALS": {
         "accuracy": 0.8026,
@@ -334,12 +334,6 @@
         "green": 4,
         "red": 0,
         "resolved": 4
-      },
-      "Coppa Italia": {
-        "accuracy": 1.0,
-        "green": 1,
-        "red": 0,
-        "resolved": 1
       },
       "DFB Pokal": {
         "accuracy": 1.0,
@@ -530,10 +524,10 @@
         "resolved": 24
       },
       "85-90%": {
-        "accuracy": 0.7879,
-        "green": 26,
+        "accuracy": 0.7812,
+        "green": 25,
         "red": 7,
-        "resolved": 33
+        "resolved": 32
       },
       "<70%": {
         "accuracy": 0.0,
@@ -562,10 +556,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.8684,
-        "green": 33,
+        "accuracy": 0.8649,
+        "green": 32,
         "red": 5,
-        "resolved": 38
+        "resolved": 37
       },
       "<76": {
         "accuracy": 0.5,
@@ -581,12 +575,6 @@
       }
     },
     "selection": {
-      "corner_kicks:match:over:6.5": {
-        "accuracy": 1.0,
-        "green": 1,
-        "red": 0,
-        "resolved": 1
-      },
       "corner_kicks:match:over:7.5": {
         "accuracy": 1.0,
         "green": 1,
@@ -698,10 +686,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.8052,
-        "green": 62,
+        "accuracy": 0.8026,
+        "green": 61,
         "red": 15,
-        "resolved": 77
+        "resolved": 76
       }
     },
     "ticket_leg_count": {
@@ -1137,10 +1125,10 @@
     "completed_days": 13,
     "daily_target_rate": 0.4615,
     "days_with_at_least_2_green": 6,
-    "leg_accuracy": 0.7865,
-    "legs_green": 70,
+    "leg_accuracy": 0.7841,
+    "legs_green": 69,
     "legs_red": 19,
-    "legs_resolved": 89,
+    "legs_resolved": 88,
     "ticket_accuracy": 0.5135,
     "tickets_green": 19,
     "tickets_red": 18,
