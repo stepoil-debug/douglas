@@ -93,25 +93,25 @@
     },
     {
       "date": "2026-09-03",
-      "green": 0,
-      "hit_target_2_of_3": false,
-      "pending": 2,
+      "green": 2,
+      "hit_target_2_of_3": true,
+      "pending": 0,
       "red": 1
     }
   ],
   "groups": {
     "bookmaker_depth": {
       "5-7": {
-        "accuracy": 0.75,
-        "green": 12,
+        "accuracy": 0.7647,
+        "green": 13,
         "red": 4,
-        "resolved": 16
+        "resolved": 17
       },
       "8+": {
-        "accuracy": 0.7917,
-        "green": 57,
+        "accuracy": 0.7973,
+        "green": 59,
         "red": 15,
-        "resolved": 72
+        "resolved": 74
       }
     },
     "country": {
@@ -140,10 +140,10 @@
         "resolved": 1
       },
       "Brazil": {
-        "accuracy": 0.7273,
-        "green": 8,
+        "accuracy": 0.7692,
+        "green": 10,
         "red": 3,
-        "resolved": 11
+        "resolved": 13
       },
       "Canada": {
         "accuracy": 1.0,
@@ -195,9 +195,9 @@
       },
       "Italy": {
         "accuracy": 1.0,
-        "green": 1,
+        "green": 2,
         "red": 0,
-        "resolved": 1
+        "resolved": 2
       },
       "Kazakhstan": {
         "accuracy": 1.0,
@@ -281,15 +281,15 @@
     "family": {
       "CORNERS": {
         "accuracy": 1.0,
-        "green": 1,
+        "green": 2,
         "red": 0,
-        "resolved": 1
+        "resolved": 2
       },
       "GOALS": {
-        "accuracy": 0.8026,
-        "green": 61,
+        "accuracy": 0.8077,
+        "green": 63,
         "red": 15,
-        "resolved": 76
+        "resolved": 78
       },
       "RESULT": {
         "accuracy": 0.6364,
@@ -334,6 +334,18 @@
         "green": 4,
         "red": 0,
         "resolved": 4
+      },
+      "Copa Do Brasil": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
+      "Coppa Italia": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
       },
       "DFB Pokal": {
         "accuracy": 1.0,
@@ -450,10 +462,10 @@
         "resolved": 6
       },
       "Serie B": {
-        "accuracy": 0.8,
-        "green": 4,
+        "accuracy": 0.8333,
+        "green": 5,
         "red": 1,
-        "resolved": 5
+        "resolved": 6
       },
       "Serie C": {
         "accuracy": 1.0,
@@ -524,10 +536,10 @@
         "resolved": 24
       },
       "85-90%": {
-        "accuracy": 0.7812,
-        "green": 25,
+        "accuracy": 0.7941,
+        "green": 27,
         "red": 7,
-        "resolved": 32
+        "resolved": 34
       },
       "<70%": {
         "accuracy": 0.0,
@@ -536,10 +548,10 @@
         "resolved": 1
       },
       ">=90%": {
-        "accuracy": 0.9375,
-        "green": 15,
+        "accuracy": 0.9412,
+        "green": 16,
         "red": 1,
-        "resolved": 16
+        "resolved": 17
       }
     },
     "score_bin": {
@@ -556,10 +568,10 @@
         "resolved": 12
       },
       "84-88": {
-        "accuracy": 0.8649,
-        "green": 32,
+        "accuracy": 0.8684,
+        "green": 33,
         "red": 5,
-        "resolved": 37
+        "resolved": 38
       },
       "<76": {
         "accuracy": 0.5,
@@ -568,13 +580,19 @@
         "resolved": 2
       },
       ">=88": {
-        "accuracy": 0.8,
-        "green": 20,
+        "accuracy": 0.8148,
+        "green": 22,
         "red": 5,
-        "resolved": 25
+        "resolved": 27
       }
     },
     "selection": {
+      "corner_kicks:match:over:6.5": {
+        "accuracy": 1.0,
+        "green": 1,
+        "red": 0,
+        "resolved": 1
+      },
       "corner_kicks:match:over:7.5": {
         "accuracy": 1.0,
         "green": 1,
@@ -618,10 +636,10 @@
         "resolved": 2
       },
       "goals:match:over:0.5": {
-        "accuracy": 0.7778,
-        "green": 14,
+        "accuracy": 0.7895,
+        "green": 15,
         "red": 4,
-        "resolved": 18
+        "resolved": 19
       },
       "goals:match:over:1.5": {
         "accuracy": 0.8529,
@@ -654,10 +672,10 @@
         "resolved": 10
       },
       "goals:match:under:4.5": {
-        "accuracy": 0.7778,
-        "green": 7,
+        "accuracy": 0.8,
+        "green": 8,
         "red": 2,
-        "resolved": 9
+        "resolved": 10
       },
       "goals:match:under:5.5": {
         "accuracy": 1.0,
@@ -686,10 +704,10 @@
         "resolved": 7
       },
       "MULTI_MARKET_CONSENSUS": {
-        "accuracy": 0.8026,
-        "green": 61,
+        "accuracy": 0.8101,
+        "green": 64,
         "red": 15,
-        "resolved": 76
+        "resolved": 79
       }
     },
     "ticket_leg_count": {
@@ -706,10 +724,10 @@
         "resolved": 19
       },
       "3": {
-        "accuracy": 0.5294,
-        "green": 9,
+        "accuracy": 0.5789,
+        "green": 11,
         "red": 8,
-        "resolved": 17
+        "resolved": 19
       }
     },
     "ticket_probability_bin": {
@@ -732,10 +750,10 @@
         "resolved": 2
       },
       "<70%": {
-        "accuracy": 0.5455,
-        "green": 18,
+        "accuracy": 0.5714,
+        "green": 20,
         "red": 15,
-        "resolved": 33
+        "resolved": 35
       }
     }
   },
@@ -1122,16 +1140,16 @@
     }
   ],
   "summary": {
-    "completed_days": 13,
-    "daily_target_rate": 0.4615,
-    "days_with_at_least_2_green": 6,
-    "leg_accuracy": 0.7841,
-    "legs_green": 69,
+    "completed_days": 14,
+    "daily_target_rate": 0.5,
+    "days_with_at_least_2_green": 7,
+    "leg_accuracy": 0.7912,
+    "legs_green": 72,
     "legs_red": 19,
-    "legs_resolved": 88,
-    "ticket_accuracy": 0.5135,
-    "tickets_green": 19,
+    "legs_resolved": 91,
+    "ticket_accuracy": 0.5385,
+    "tickets_green": 21,
     "tickets_red": 18,
-    "tickets_resolved": 37
+    "tickets_resolved": 39
   }
 }
