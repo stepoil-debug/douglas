@@ -1,6 +1,6 @@
 {
   "accuracy_first": true,
-  "api_requests": 148,
+  "api_requests": 94,
   "board_date": "2026-09-05",
   "board_mode": "TODAY",
   "board_status": "NO_TICKETS",
@@ -8,7 +8,7 @@
   "execution_bookmaker": "Betano",
   "execution_ready": false,
   "fixture_exclusivity": true,
-  "fixtures_analyzed": 44,
+  "fixtures_analyzed": 26,
   "fixtures_found": 1569,
   "kickoff_spacing_minutes": 120,
   "kickoff_spacing_scope": "WITHIN_EACH_TICKET",
@@ -20,11 +20,11 @@
   "model_version": "football-accuracy-betano-v9-three-leg-score84",
   "multi_market": true,
   "publication_immutable": true,
-  "quality_rejected_legs": 930,
+  "quality_rejected_legs": 590,
   "sport": "football",
   "status": "SUCCESS",
   "target_tickets": 3,
   "ticket_lock": false,
   "tickets_ready": 0,
-  "updated_at": "2026-09-05T13:48:01.058488-03:00"
+  "updated_at": "2026-09-05T17:17:24.695154-03:00"
 }
