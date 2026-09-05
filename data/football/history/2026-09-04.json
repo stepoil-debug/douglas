@@ -12255,7 +12255,7 @@
           "risk_flags": [],
           "score": 88.9,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-09-04T20:56:11.486035-03:00",
+          "settled_at": "2026-09-04T22:20:57.906581-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -12320,7 +12320,7 @@
           "risk_flags": [],
           "score": 87.4,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-09-04T20:56:11.486173-03:00",
+          "settled_at": "2026-09-04T22:20:57.906723-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -12349,7 +12349,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1493109,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Belgrano Cordoba",
           "implied_probability": 0.8772,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -12378,16 +12378,18 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 2; linha over 0.5.",
+          "result_score": "1-1",
           "risk_flags": [],
           "score": 86.9,
           "selection": "Mais de 0.5 gols",
+          "settled_at": "2026-09-04T22:20:57.906740-03:00",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -12401,7 +12403,8 @@
         "GOALS_OVER"
       ],
       "score": 87.7,
-      "status": "PENDING",
+      "settled_at": "2026-09-04T22:20:57.906760-03:00",
+      "status": "GREEN",
       "ticket_id": "B1",
       "total_odd": 1.52
     },
@@ -12438,7 +12441,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1520853,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Criciuma",
           "implied_probability": 0.9091,
           "individual_score_band": "ELITE_88_PLUS",
@@ -12467,16 +12470,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 2; linha over 0.5.",
+          "result_score": "2-0",
           "risk_flags": [],
           "score": 88.9,
           "selection": "Mais de 0.5 gols",
+          "settled_at": "2026-09-04T22:20:57.906767-03:00",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Hvidovre",
@@ -12534,7 +12539,7 @@
           "risk_flags": [],
           "score": 87.6,
           "selection": "Menos de 4.5 gols",
-          "settled_at": "2026-09-04T20:56:11.486209-03:00",
+          "settled_at": "2026-09-04T22:20:57.906777-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
@@ -12599,7 +12604,7 @@
           "risk_flags": [],
           "score": 87.1,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-09-04T20:56:11.486223-03:00",
+          "settled_at": "2026-09-04T22:20:57.906787-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -12620,7 +12625,8 @@
         "GOALS_UNDER"
       ],
       "score": 87.9,
-      "status": "PENDING",
+      "settled_at": "2026-09-04T22:20:57.906800-03:00",
+      "status": "GREEN",
       "ticket_id": "B2",
       "total_odd": 1.51
     },
@@ -12657,7 +12663,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1498786,
-          "fixture_status": "HT",
+          "fixture_status": "FT",
           "home_team": "Ferro Carril Oeste",
           "implied_probability": 0.905,
           "individual_score_band": "ELITE_88_PLUS",
@@ -12686,16 +12692,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
-          "result_reason": "Partida ainda não encerrada (HT).",
+          "result_reason": "Total de gols: 0; linha over 0.5.",
+          "result_score": "0-0",
           "risk_flags": [],
           "score": 88.7,
           "selection": "Mais de 0.5 gols",
+          "settled_at": "2026-09-04T22:20:57.906821-03:00",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "RED"
         },
         {
           "away_team": "Liverpool",
@@ -12751,7 +12759,7 @@
           "risk_flags": [],
           "score": 87.9,
           "selection": "Menos de 5.5 gols",
-          "settled_at": "2026-09-04T20:56:11.486243-03:00",
+          "settled_at": "2026-09-04T22:20:57.906831-03:00",
           "settlement_line": 5.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
@@ -12815,7 +12823,7 @@
           "risk_flags": [],
           "score": 86.4,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-09-04T20:56:11.486255-03:00",
+          "settled_at": "2026-09-04T22:20:57.906841-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -12836,7 +12844,8 @@
         "GOALS_UNDER"
       ],
       "score": 87.7,
-      "status": "PENDING",
+      "settled_at": "2026-09-04T22:20:57.906850-03:00",
+      "status": "RED",
       "ticket_id": "B3",
       "total_odd": 1.53
     }
@@ -12893,7 +12902,7 @@
   "fixtures_ranked": 60,
   "fixtures_with_markets": 150,
   "history_summary": {
-    "accuracy": 0.8041237113402062,
+    "accuracy": 0.8,
     "by_market": {
       "CORNERS": {
         "accuracy": 1.0,
@@ -12902,10 +12911,10 @@
         "resolved": 2
       },
       "GOALS": {
-        "accuracy": 0.8214285714285714,
-        "green": 69,
-        "red": 15,
-        "resolved": 84
+        "accuracy": 0.8160919540229885,
+        "green": 71,
+        "red": 16,
+        "resolved": 87
       },
       "RESULT": {
         "accuracy": 0.6363636363636364,
@@ -12914,13 +12923,13 @@
         "resolved": 11
       }
     },
-    "hits": 78,
-    "misses": 19,
-    "resolved": 97,
-    "ticket_accuracy": 0.5384615384615384,
-    "tickets_hit": 21,
-    "tickets_miss": 18,
-    "tickets_resolved": 39
+    "hits": 80,
+    "misses": 20,
+    "resolved": 100,
+    "ticket_accuracy": 0.5476190476190477,
+    "tickets_hit": 23,
+    "tickets_miss": 19,
+    "tickets_resolved": 42
   },
   "kickoff_spacing": {
     "enabled": true,
@@ -14406,11 +14415,11 @@
     }
   ],
   "settlement": {
-    "checked_at": "2026-09-04T20:56:11.486292-03:00",
-    "complete": false,
-    "green": 0,
-    "pending": 3,
-    "red": 0,
+    "checked_at": "2026-09-04T22:20:57.906878-03:00",
+    "complete": true,
+    "green": 2,
+    "pending": 0,
+    "red": 1,
     "statistics_fixtures_checked": 0
   },
   "sport": "football",
@@ -14489,7 +14498,7 @@
           "risk_flags": [],
           "score": 88.9,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-09-04T20:56:11.486035-03:00",
+          "settled_at": "2026-09-04T22:20:57.906581-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -14554,7 +14563,7 @@
           "risk_flags": [],
           "score": 87.4,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-09-04T20:56:11.486173-03:00",
+          "settled_at": "2026-09-04T22:20:57.906723-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -14583,7 +14592,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1493109,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Belgrano Cordoba",
           "implied_probability": 0.8772,
           "individual_score_band": "STRONG_84_TO_87_9",
@@ -14612,16 +14621,18 @@
           "rationale": "Mercado goals confirmado por 9 bookmaker(s); probabilidade implícita ajustada 85%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 2; linha over 0.5.",
+          "result_score": "1-1",
           "risk_flags": [],
           "score": 86.9,
           "selection": "Mais de 0.5 gols",
+          "settled_at": "2026-09-04T22:20:57.906740-03:00",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         }
       ],
       "market_families": [
@@ -14635,7 +14646,8 @@
         "GOALS_OVER"
       ],
       "score": 87.7,
-      "status": "PENDING",
+      "settled_at": "2026-09-04T22:20:57.906760-03:00",
+      "status": "GREEN",
       "ticket_id": "B1",
       "total_odd": 1.52
     },
@@ -14672,7 +14684,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1520853,
-          "fixture_status": "2H",
+          "fixture_status": "FT",
           "home_team": "Criciuma",
           "implied_probability": 0.9091,
           "individual_score_band": "ELITE_88_PLUS",
@@ -14701,16 +14713,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
-          "result_reason": "Partida ainda não encerrada (2H).",
+          "result_reason": "Total de gols: 2; linha over 0.5.",
+          "result_score": "2-0",
           "risk_flags": [],
           "score": 88.9,
           "selection": "Mais de 0.5 gols",
+          "settled_at": "2026-09-04T22:20:57.906767-03:00",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "GREEN"
         },
         {
           "away_team": "Hvidovre",
@@ -14768,7 +14782,7 @@
           "risk_flags": [],
           "score": 87.6,
           "selection": "Menos de 4.5 gols",
-          "settled_at": "2026-09-04T20:56:11.486209-03:00",
+          "settled_at": "2026-09-04T22:20:57.906777-03:00",
           "settlement_line": 4.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
@@ -14833,7 +14847,7 @@
           "risk_flags": [],
           "score": 87.1,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-09-04T20:56:11.486223-03:00",
+          "settled_at": "2026-09-04T22:20:57.906787-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -14854,7 +14868,8 @@
         "GOALS_UNDER"
       ],
       "score": 87.9,
-      "status": "PENDING",
+      "settled_at": "2026-09-04T22:20:57.906800-03:00",
+      "status": "GREEN",
       "ticket_id": "B2",
       "total_odd": 1.51
     },
@@ -14891,7 +14906,7 @@
           "execution_bookmaker": "Betano",
           "execution_url": "https://www.betano.bet.br/sport/futebol/jogos-de-hoje/",
           "fixture_id": 1498786,
-          "fixture_status": "HT",
+          "fixture_status": "FT",
           "home_team": "Ferro Carril Oeste",
           "implied_probability": 0.905,
           "individual_score_band": "ELITE_88_PLUS",
@@ -14920,16 +14935,18 @@
           "rationale": "Mercado goals confirmado por 10 bookmaker(s); probabilidade implícita ajustada 88%; seleção full-time com regra automática de conferência.",
           "raw_market": "Goals Over/Under",
           "raw_selection": "Over 0.5",
-          "result_reason": "Partida ainda não encerrada (HT).",
+          "result_reason": "Total de gols: 0; linha over 0.5.",
+          "result_score": "0-0",
           "risk_flags": [],
           "score": 88.7,
           "selection": "Mais de 0.5 gols",
+          "settled_at": "2026-09-04T22:20:57.906821-03:00",
           "settlement_line": 0.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
           "settlement_scope": "match",
           "signal_source": "MULTI_MARKET_CONSENSUS",
-          "status": "PENDING"
+          "status": "RED"
         },
         {
           "away_team": "Liverpool",
@@ -14985,7 +15002,7 @@
           "risk_flags": [],
           "score": 87.9,
           "selection": "Menos de 5.5 gols",
-          "settled_at": "2026-09-04T20:56:11.486243-03:00",
+          "settled_at": "2026-09-04T22:20:57.906831-03:00",
           "settlement_line": 5.5,
           "settlement_metric": "goals",
           "settlement_operator": "under",
@@ -15049,7 +15066,7 @@
           "risk_flags": [],
           "score": 86.4,
           "selection": "Mais de 1.5 gols",
-          "settled_at": "2026-09-04T20:56:11.486255-03:00",
+          "settled_at": "2026-09-04T22:20:57.906841-03:00",
           "settlement_line": 1.5,
           "settlement_metric": "goals",
           "settlement_operator": "over",
@@ -15070,7 +15087,8 @@
         "GOALS_UNDER"
       ],
       "score": 87.7,
-      "status": "PENDING",
+      "settled_at": "2026-09-04T22:20:57.906850-03:00",
+      "status": "RED",
       "ticket_id": "B3",
       "total_odd": 1.53
     }
